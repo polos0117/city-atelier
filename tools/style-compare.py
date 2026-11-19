@@ -18,12 +18,12 @@
 
   python3 tools/style-compare.py check [그림 저장소] [--strict]
       열쇠 꼴 · 겹침 · 목록에 적힌 화풍마다 그림이 하나라도 있나. --strict 면 화풍 × 세계 × 갈래가 다 있어야 한다.
-그림 저장소는 기본 옆의 ../element-atelier-img. put · sync 뒤 두 저장소를 따로 올린다(그림 저장소 먼저).
+그림 저장소는 기본 옆의 ../city-atelier-img. put · sync 뒤 두 저장소를 따로 올린다(그림 저장소 먼저).
 """
 import json, os, re, sys, datetime
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, 'data', 'style-compare.json')
-IMG = os.environ.get('SAM_IMG') or os.path.join(os.path.dirname(ROOT), 'element-atelier-img')   # 검사용 — 다른 자리 그림 저장소
+IMG = os.environ.get('SAM_IMG') or os.path.join(os.path.dirname(ROOT), 'city-atelier-img')   # 검사용 — 다른 자리 그림 저장소
 WORLDS, KINDS = ['fantasy', 'steampunk', 'mecha'], ['world', 'casual', 'far']   # casual = 근접 일상컷, far = 원거리 일상컷(2026-11-07 「원거리 일상컷도 있는데」)
 KEY_RE = r'\d{4}-\d{2}-\d{2}(-\d+)?'
 STYLE_ORDER = None

@@ -10,7 +10,7 @@
 | 이 문서 | 규칙과 자리 |
 | `DESIGN.md` | 이 공방의 겉모습 뼈대 — 빈 틀(Task 7 에서 사용자가 시안을 고르면 채운다) |
 | `docs/superpowers/specs/…design.md` · `plans/…city-atelier.md` | 설계 · 계획 |
-| `IMAGE_RULES.md` | 그림 만들기 · 파일 이름 · 기록 · 올리기 — 그림 작업 전에(아직 원소 꼴이 남아 있다, 머리의 안내) |
+| `IMAGE_RULES.md` | 그림 만들기 · 파일 이름 · 기록 · 올리기 — 그림 작업 전에(도시 꼴, Task 5) |
 | `docs/IMAGE_AUTOMATION.md` | GPT 세션 이미지 작업(잠금 · 계획기 · 지시문 묶음) — 원소 꼴, Task 4~5 에서 도시 꼴로 |
 | `docs/PORT_NOTES.md` | 원소에서 가져온 것 · 뺀 것 · 건너뛰게 한 검사 |
 | `docs/PATCH.md` | 무엇을 고쳤나(아래 규칙 5) |

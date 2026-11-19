@@ -1,8 +1,8 @@
-/* 공간 풍경 — 공간마다 배경 그림 한 장(그림 저장소 element-atelier-img/backgrounds/room-<공간>.webp, 도트 공방의 그리기로 받은 가로 그림 1536×1024, 기록 records/backgrounds/)
+/* 공간 풍경 — 공간마다 배경 그림 한 장(그림 저장소 city-atelier-img/backgrounds/room-<공간>.webp, 도트 공방의 그리기로 받은 가로 그림 1536×1024, 기록 records/backgrounds/)
    위에 빛 번짐 한 겹. 그림을 못 받으면 겹 무늬만 남는다. 무늬는 옅게 — 글자는 늘 불투명한 카드 위에 앉는다.
    game-atelier 의 room.css 에서 왔다(2026-10-30, 원소 공간 다섯으로 리뉴얼: 실험실·천문대·연금술 공방·광산·제어실) */
 :root {
-  --room-src:url("https://polos0117.github.io/element-atelier-img/backgrounds/room-sunlit.webp");
+  --room-src:none;
   --room-image:
     linear-gradient(180deg,#f3f6fa00 0,#f3f6fa66 55%,#f3f6fa 100%),
     radial-gradient(circle at 12% 0%,#ffd6e8aa 0,#ffd6e800 36%),
@@ -11,7 +11,7 @@
   --room-position:center 42%;--room-mobile-position:60% 34%;
 }
 :root[data-theme="moonlit"] {
-  --room-src:url("https://polos0117.github.io/element-atelier-img/backgrounds/room-moonlit.webp");
+  --room-src:none;
   --room-image:
     linear-gradient(180deg,#0e102000 0,#0e102088 55%,#0e1020 100%),
     radial-gradient(circle at 80% 10%,#c9a0ff30 0,#c9a0ff00 40%),
@@ -19,7 +19,7 @@
   --room-rgb:14 16 32;
 }
 :root[data-theme="hanok"] {
-  --room-src:url("https://polos0117.github.io/element-atelier-img/backgrounds/room-hanok.webp");
+  --room-src:none;
   --room-image:
     linear-gradient(180deg,#f6eedd00 0,#f6eedd77 55%,#f6eedd 100%),
     radial-gradient(circle at 88% 70%,#ff9a4a33 0,#ff9a4a00 38%),
@@ -27,7 +27,7 @@
   --room-rgb:246 238 221;
 }
 :root[data-theme="forest"] {
-  --room-src:url("https://polos0117.github.io/element-atelier-img/backgrounds/room-forest.webp");
+  --room-src:none;
   --room-image:
     linear-gradient(180deg,#eef0e600 0,#eef0e677 55%,#eef0e6 100%),
     radial-gradient(circle at 70% 40%,#ffd08a33 0,#ffd08a00 36%),
@@ -36,7 +36,7 @@
   --room-position:center 47%;--room-mobile-position:62% 38%;
 }
 :root[data-theme="phosphor"] {
-  --room-src:url("https://polos0117.github.io/element-atelier-img/backgrounds/room-phosphor.webp");
+  --room-src:none;
   --room-image:
     linear-gradient(180deg,#0a121600 0,#0a121688 55%,#0a1216 100%),
     radial-gradient(circle at 20% 8%,#5fe3a32a 0,#5fe3a300 38%),

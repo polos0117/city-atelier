@@ -11,11 +11,11 @@
 | `lib/toolbox.js` · `lib/toolbox.css` | 도구 상자 | 도구 = 화풍 · 프롬프트, 합성 · 땅 · 풍경 걷어 냄, 즐겨찾기 열쇠 `city`, 움직임 열쇠 `city_motion_v1` |
 | `lib/walk-core.js` | 주소 · 층 꼴 | 층 globe · dex · city · card, 열쇠 `tab city card pic w st view` 로 다시 씀. 주기율표 · 나라 · 가문 · 입자 · 땅 · 옛 주소 함수는 걷음. 함수 꼴(readRoute · routeSearch · layerOf · parentOf · ancestors · resolve · validate · worldOf · motionOn · setMotion)은 남김 |
 | `lib/words.js` | 낱말 표 | 합성 · 주기율표 · 땅 낱말 삭제, `app.title` 「도시 공방」, `home.building` 추가. studio · prompt · dex · gallery · fact · cat 낱말은 생성기가 아직 쓸 수 있어 남김(Task 3 · 8 · 9 에서 정리) |
-| `lib/img.js` · `lib/fresh.js` · `lib/look-spec.js` · `lib/patch.js` · `lib/favorites.js` · `lib/casual-tree.js` · `lib/casual-tree-v2.js` · `lib/motion-fx.js` | 공용 · 그림 길 · 새 그림 | 그대로(img.js 의 그림 저장소 주소 · 카드 열쇠는 Task 5) |
+| `lib/img.js` · `lib/fresh.js` · `lib/look-spec.js` · `lib/patch.js` · `lib/favorites.js` · `lib/casual-tree.js` · `lib/casual-tree-v2.js` · `lib/motion-fx.js` | 공용 · 그림 길 · 새 그림 | 그대로(`img.js` 는 Task 5 에서 `BASES` 를 `city-atelier-img` 하나로, 머리 설명만 도시 꼴로) |
 | `lib/city.css`(← `element.css`) · `lib/workspace.css` · `lib/workspace-theme.js` · `lib/room.css` · `lib/material.css` · `lib/studio.css` | 겉모습 | 그대로(공간 다섯 · 원소 배경 경로는 Task 7). `city.css` 에 홀로 효과 규칙이 남아 있다 |
 | `data/casual-tree.json` · `data/casual-tree-v2.json` · `data/casual-own.json`(`cards: {}`) · `data/img.json`(빈 꼴) | 일상컷 트리 · 직업표 · 등록부 | 트리 표는 그대로(Task 4 가 이 공방 것으로), 직업표 · 등록부는 비움 |
-| `tools/*` · `tests/*` · `.github/workflows/register-images.yml` | 도구 · 검사 | 이름 바꿈: `element-design.py` → `city-design.py`, `prompt-element.cjs` → `prompt-city.cjs`, `element.css` → `city.css`. 워크플로는 원소 그림 저장소를 가리킨 채(Task 5 · 10) |
-| `IMAGE_RULES.md` · `docs/IMAGE_AUTOMATION.md` · `docs/CASUAL_TREE_PORT.md` | 규칙 문서 | 머리에 개정 중 안내. 본문은 원소 꼴 그대로 |
+| `tools/*` · `tests/*` · `.github/workflows/register-images.yml` | 도구 · 검사 | 이름 바꿈: `element-design.py` → `city-design.py`, `prompt-element.cjs` → `prompt-city.cjs`, `element.css` → `city.css`. 워크플로는 Task 5 에서 `city-atelier-img` 하나를 받게 고침(`schedule` 은 Task 10) |
+| `IMAGE_RULES.md` · `docs/IMAGE_AUTOMATION.md` · `docs/CASUAL_TREE_PORT.md` | 규칙 문서 | `IMAGE_RULES.md` 는 Task 5 에서 도시 꼴로 다시 씀. `IMAGE_AUTOMATION.md` 는 그림 길 대목만 고치고 머리에 「Task 10 · 11 뒤 다시」, `CASUAL_TREE_PORT.md` 는 머리 안내 그대로 |
 | `AGENTS.md` · `CLAUDE.md` · `README.md` · `DESIGN.md` · `docs/PATCH.md` | 문서 | 도시 공방 것으로 다시 씀(DESIGN 은 빈 틀) |
 | `index.html` | 첫 화면 | 「짓는 중」 껍데기 + 도구 상자 |
 
@@ -28,9 +28,9 @@
 | `lib/walk.js` · `lib/walk.css` · `lib/walk-table.js` · `lib/walk-orbit.js` · `lib/walk-family.js` · `lib/walk-list.js` · `lib/walk-card.js` · `lib/walk-data.js` · `lib/walk-fx.js` | 원소 층 화면(주기율표 · 궤도 · 가문 · 목록 · 한 장) · 껍데기 · 효과 다섯. 한 장 · 자료 읽기 꼴은 Task 8 이 원소 저장소에서 참고해 새로 짠다 |
 | `lib/holo.js` | 한 장의 홀로(Pixi) 효과 — 한 장 층과 함께 쓰임. 판단이 갈려 뺌(Task 8 이 다시 가져올지 정한다) |
 | `tests/walk-orbit|table|family|list|card|shell|world|tools|particles|theme.cjs` · `tests/dex-holo.cjs` · `tests/dex-turn.cjs` | 위 화면의 검사(`walk-theme` 는 땅 · 원소 설계표에 묶여 있어 뺌 — Task 7 이 `tests/theme.cjs` 로 새로) |
-| `tools/seed-elements.py` · `tools/roster.py` | 원소 번호 채우기 · 세 층 카드 읽기. **`tools/register-images.py` 가 `import roster` 라 Task 5 가 도시 꼴 읽기를 새로 넣기 전까지 돌지 않는다**(`tools/city-design.py` 는 Task 2 에서 `roster` 없이 다시 씀) |
+| `tools/seed-elements.py` · `tools/roster.py` | 원소 번호 채우기 · 세 층 카드 읽기. **`tools/register-images.py` 는 Task 5 에서 `roster` 없이 `data/city-design.json` 을 바로 읽게 고쳤다**(`tools/city-design.py` 는 Task 2 에서 `roster` 없이 다시 씀) |
 | `data/element-design.json` · `docs/ELEMENT_CONCEPT.md` · `docs/casual-review-2026-11-13.md` | 원소 설계표 · 기획 · 원소 일상컷 검토 |
-| 원소 공간 다섯의 그림 · 원소 그림 | 저장소에 없던 것(그림 저장소) — 경로를 쓰는 곳은 `lib/room.css` · `lib/material.css` · `lib/img.js`, Task 5 · 7 |
+| 원소 공간 다섯의 그림 · 원소 그림 | 저장소에 없던 것(그림 저장소) — 경로를 쓰던 `lib/img.js` · `lib/room.css` · `lib/material.css` 는 Task 5 에서 걷었다(UI 배경은 Task 7 이 채운다) |
 
 ## 건너뛰게 한 검사 (맨 위 `process.exit(0)` · `sys.exit(0)`)
 
@@ -43,13 +43,20 @@
 | ~~`tests/prompt-pack-screen.cjs`~~ | 되살림(Task 3 · 4) — 서울 세계 그림 셋 + 세계마다 일상 일곱(계획기 · 자유 설계 둘), 폰 344×882 | — |
 | ~~`tests/screen.cjs`~~ | 되살림(Task 3 · 4) — 화풍 비교 · 생성기 도시 판 · 세계 그림 걸음 · **일상컷 걸음**(세계 → 시대 → 서울 생활 장면 → … · 화면 = 조립기 · 해방 · 랜덤 · 여기부터 다시 · 처음부터 · 그 도시의 물건) · 폰 레일/막대/시트/44px. 지구본 · 도감 화면은 **Task 8 · 9** | Task 8 · 9 |
 | ~~`tests/casual-plan.cjs`~~ | 되살림(Task 4, 2026-11-19) — 서울 세 세계 × 씨앗 셋: 일곱 장 · 장면 · 자세 겹침 0 · 시간 · 계절 · 날씨는 서울 표 안 · 금지 낱말 · 직업컷 셋 | — |
-| `tests/image-claim.cjs` · `tests/register-images.py` · `tests/make-thumbs.py` | 그림 잠금 · 등록 · 썸네일 — 원소 카드 열쇠(`fe-steel` …) · `roster` | Task 5 |
+| ~~`tests/image-claim.cjs` · `tests/register-images.py` · `tests/make-thumbs.py`~~ | 되살림(Task 5, 2026-11-19) — 그림 잠금 · 등록 · 썸네일을 도시 꼴로(도시 열쇠 · 세계 셋 · `_f` 만 · 그림 저장소 하나). 건너뛴 검사 표는 이제 비었다 — 남은 건너뜀 없음 | — |
 
 건너뛰지 않은 것: `words` · `patch` · `favorites` · `casual-tree-v2`(공용 모듈 sha256 견주기 포함) · `walk-core`(도시 층으로 다시 씀) · `casual-tree.cjs/.py` · `style-compare.py` · `img-shards.cjs`. `tests/casual-tree-v2.py` 는 `multiprocessing` 의 `fork` 때문에 Windows 에서 돌지 않는다(이 일 전부터의 환경 문제 — 원소 저장소의 같은 파일, 건드리지 않음).
 
 도구 가운데 설계표(`data/city-design.json`, Task 2 가 만든다)를 읽는 것 — `tools/casual-plan.cjs` · `tools/prompt-pack.cjs` · `tools/image-claim.cjs` · `tools/sil-spread.py` · `lib/studio.js` 의 불러오기 — 은 그 표가 생기기 전에는 돌지 않는다.
 
 ## 판단이 갈린 곳
+
+- (Task 5) **파일 이름 꼴**: 계획 Task 5 는 `<city>_<world>_f_<n>.webp` 라 적었으나 원소 꼴에는 화풍 칸이 있고 조립기(`lib/prompt-spec.js` `FILES`)도 이미 화풍을 넣어 이름을 짓는다 — 원소 꼴 그대로 화풍 칸을 두었다: 세계 그림 `<도시>_<세계>_<화풍>_f.webp`, 일상컷 `<도시>_<세계>_<화풍>_f_casual<N>.webp`, 캐릭터만의 컷 N=90. 예: `seoul_fantasy_jp_paint_anime_f.webp` · `seoul_cyberpunk_jp_paint_anime_f.webp` · `seoul_steampunk_jp_paint_anime_f_casual1.webp`. 화풍이 이름에 있어야 Task 11 에서 화풍이 바뀌어도 옛 그림과 이름이 안 겹친다. 등록부 `data/img.json` 꼴은 원소와 같다(도시 > `byStyle` > 화풍 > `byForm` > 세계 > `f` · `casual.f`).
+- (Task 5) **등록기가 받지 않는 것**: 원소의 옛 꼴 — 세계 없는 일상컷(시안) · 특별컷(extra) · 남성 `_m` · 대문자 — 은 도시에 없으므로 이름 꼴 오류로 막는다(`lib/img.js` 는 그 칸을 읽는 코드가 남아 있으나 이 공방은 안 쓴다). 컷 번호 90 은 일상컷과 같은 칸에 든다(`tools/image-claim.cjs` 는 일상 일곱 장 수에 90 을 세지 않는다).
+- (Task 5) **그림 저장소 하나**: `lib/img.js` BASES · `tools/register-images.py` SHARDS · 워크플로 체크아웃이 모두 `city-atelier-img` 하나(`EXTRA_DIRS` 는 빈 배열). `.github/workflows/register-images.yml` 의 `schedule` 은 아직 되살리지 않았다 — Task 10 에서 그림 저장소가 생기면 사용자에게 묻고.
+- (Task 5) **UI 배경 그림**: `lib/material.css`(현판 · 단추 · 장식 틀) · `lib/room.css`(공간 풍경)의 원소 그림 저장소 주소를 모두 `none` 으로 걷었다 — 장식 틀(`border-image`)은 그림 없이 보통 테두리로, 풍경 겹은 빛 번짐 그라디언트만 남는다. 이 공방 것은 **Task 7 이 공간을 지을 때** 그림 저장소 `backgrounds/` 에 채운다(`--ui-*` · `--frame` · `--room-src`).
+- (Task 5) **화풍 비교 자료**: `data/style-compare.json` 의 `base` · `oldBase` 와 `tools/style-compare.py` · `tests/style-compare.py` 의 저장소 이름만 `city-atelier-img` 로 바꿨다(묶음 내용은 원소 것 그대로 — Task 11 이 서울 묶음으로 바꾼다. 주소는 저장소가 생기기 전이라 열리지 않는다).
+- (Task 5) **`tests/image-claim.cjs`**: 설계가 끝난 도시가 서울 하나라 「빈 자리 있는 도시 셋」 시험이 안 선다 — 도구가 환경 변수 `CITY_DATA_ROOT`(data/ 를 읽는 자리, 기본은 이 저장소)를 받게 하고, 검사가 임시 설계표(도쿄 · 베이징에 서울의 세계 셋을 붙인 사본)를 가리킨다. 서울의 실제 빈 자리 스물넷은 실제 자료로 따로 본다. `tests/make-thumbs.py` 는 Windows 경로 구분(`\\`)을 받게 고쳤다.
 
 - (Task 3) **금지 낱말의 자리**: 원소 조립기의 칸 꼴은 「No …」 금지를 5칸 `Avoid:` 한 줄로 모은다 — 이 꼴을 따랐다. 설계표 `banned_en` 낱말은 그 줄에만 나와도 된다(판타지 옷 말투의 「no machinery」 · 화풍 글의 「plastic 3D-render finish」 가 그 줄로 간다). `tests/prompt-city.cjs` (d)는 `sections.negative`(그 줄)를 빼고 본다. 칸 꼴이 아닌 화풍(지금은 없다 — 살아 있는 화풍 넷이 다 칸 꼴)은 금지가 본문에 남으니, Task 11 에서 칸 꼴이 아닌 화풍을 고르면 (d)를 다시 본다.
 - (Task 3) **구조판(mmorpg2d · semireal) · kv 판**: 둘 다 내린 화풍(retired)뿐이라 조립기에서 그 길과 `prompt-spec.js` 의 STRUCT 표를 뺐다. 그 화풍 열쇠를 주면 판의 `text` 로 줄 꼴을 짓는다. Task 11 에서 그런 꼴의 화풍을 고르면 다시 옮긴다.

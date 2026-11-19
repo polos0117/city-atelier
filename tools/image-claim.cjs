@@ -1,33 +1,34 @@
 #!/usr/bin/env node
-/* 이미지 작업 잠금 — GPT 세션이 같은 카드를 둘이 그리지 않게(docs/IMAGE_AUTOMATION.md). 원소는 하루 · 실행마다의 몫이 없다(사용자 2026-10-31 「원소공방 저장소 이미지 저장 제한 없애줘」). game-atelier 와 같은 도구(맨 위 몇 줄만 원소 몫).
+/* 이미지 작업 잠금 — GPT 세션이 같은 카드를 둘이 그리지 않게(docs/IMAGE_AUTOMATION.md). 도시 공방은 하루 · 실행마다의 몫이 없다(원소 공방과 같다 — 사용자 2026-10-31). 원소 공방의 같은 도구에서 왔다(2026-11-19 도시 꼴: 「카드」 = 도시 하나, 몫은 도시 단위).
    pkm-atelier 의 image-runner 가 하는 일 가운데 「누가 무엇을 그리나」 만 — 지시문은 tools/prompt-pack.cjs, 검수 · 올리기는 문서대로 한다.
 
-   잠금은 그림 저장소(옆의 element-atelier-img)의 records/automation/claims/<카드>.json 하나다. 바꿀 때마다 그 파일만 커밋해 일반 push 한다 —
+   잠금은 그림 저장소(옆의 city-atelier-img)의 records/automation/claims/<도시>.json 하나다. 바꿀 때마다 그 파일만 커밋해 일반 push 한다 —
    그 사이 다른 세션이 밀었으면 push 가 거절되고 이 도구는 제 커밋을 되돌린 뒤 멈춘다(다시 받고 처음부터).
 
      node tools/image-claim.cjs status                                   # 잠금 · 오늘 쓴 몫 · 다음 차례
-     node tools/image-claim.cjs next                                     # 다음에 그릴 카드와 빈 자리(읽기만)
-     node tools/image-claim.cjs claim <카드> --execution <실행 ID>        # 잡는다 — 잡힌 카드만 못 잡는다(몫 없음)
-     node tools/image-claim.cjs block <카드> --execution <실행 ID> --reason <까닭>   # 멈춘다(안전 거절 · 도구 오류 …). 잠금은 그대로 남는다
-     node tools/image-claim.cjs done <카드> --execution <실행 ID>         # 끝 — data/img.json 에 빈 자리가 없어야 한다(코드 저장소를 pull 한 뒤).
+     node tools/image-claim.cjs next                                     # 다음에 그릴 도시와 빈 자리(읽기만)
+     node tools/image-claim.cjs claim <도시> --execution <실행 ID>        # 잡는다 — 잡힌 도시만 못 잡는다(몫 없음)
+     node tools/image-claim.cjs block <도시> --execution <실행 ID> --reason <까닭>   # 멈춘다(안전 거절 · 도구 오류 …). 잠금은 그대로 남는다
+     node tools/image-claim.cjs done <도시> --execution <실행 ID>         # 끝 — data/img.json 에 빈 자리가 없어야 한다(코드 저장소를 pull 한 뒤).
                                                                          등록은 늦게 될 수 있어 다음 실행이 끝내도 된다(누가 끝냈는지 남는다)
-     node tools/image-claim.cjs release <카드> --execution <실행 ID> --approval <사용자 말>   # 멈춘 잠금을 푼다 — 사용자가 정한 뒤에만
-   --img <그림 저장소 경로>(기본 ../element-atelier-img) · --no-push(시험용 — 커밋만) */
+     node tools/image-claim.cjs release <도시> --execution <실행 ID> --approval <사용자 말>   # 멈춘 잠금을 푼다 — 사용자가 정한 뒤에만
+   --img <그림 저장소 경로>(기본 ../city-atelier-img) · --no-push(시험용 — 커밋만)
+   환경 변수 CITY_DATA_ROOT — data/ 를 읽는 자리를 바꾼다(검사용, 기본은 이 저장소) */
 'use strict';
 const fs = require('node:fs'), path = require('node:path'), cp = require('node:child_process');
 const ROOT = path.join(__dirname, '..');
-const read = f => JSON.parse(fs.readFileSync(path.join(ROOT, f), 'utf8'));
-/* 몫 — null 이면 없다. game · book 은 하루 12 · 실행마다 1, 원소는 없다(사용자 2026-10-31) */
+const read = f => JSON.parse(fs.readFileSync(path.join(process.env.CITY_DATA_ROOT || ROOT, f), 'utf8'));
+/* 몫 — null 이면 없다. 도시 공방도 원소처럼 없다 */
 const DAILY_MAX = null, EXECUTION_MAX = null, CASUAL_N = 7;   /* 2026-11-11 일곱 장(사용자 「…그럼 일상컷은 총 7장 되는거야」 — 일곱째는 갈래 자유 칸) · 2026-11-09 삼국지와 같이 여섯 장(필수 셋 — 노출 · 나라 안 · 상황 노출) */
 
-/* ── 공방마다 다른 것: 그림 저장소 이름 · 차례 · 한 캐릭터의 빈 자리 ── */
-const IMG_REPO = 'element-atelier-img', WHAT = '카드';
+/* ── 공방마다 다른 것: 그림 저장소 이름 · 차례 · 한 도시의 빈 자리 ── */
+const IMG_REPO = 'city-atelier-img', WHAT = '도시';
 const P = (() => { const vm = require('node:vm'), ctx = { window: {}, console }; vm.createContext(ctx);
   for (const f of ['lib/prompt-spec.js', 'lib/look-spec.js', 'lib/prompt-city.js']) vm.runInContext(fs.readFileSync(path.join(ROOT, f), 'utf8'), ctx);
   return ctx.window.AtelierPrompt; })();
-/* 차례는 도감 차례(나라 → 가문주 → 주민, 설계표 차례) — 나라 하나를 끝까지 그린 뒤 다음 나라로(IMAGE_RULES 2절) */
+/* 차례는 설계표 차례(서울이 처음) — 도시 하나를 끝까지 그린 뒤 다음 도시로(IMAGE_RULES 2절). 설계 미정 도시(worlds 가 빈)는 빈 자리가 없어 건너뛴다 */
 function order() { const D = read('data/city-design.json'); return P.cards(D).map(k => ({ key: k, title: (P.card(D, k) || {}).ko || k })); }
-/* 한 카드의 빈 자리 — 사는 세계마다 세계 그림 + 일상컷 일곱 장(세 세계면 스물넷 — 전엔 스물하나)(세계마다 따로 센다, 번호도 세계마다 — 사용자 2026-10-31) */
+/* 한 도시의 빈 자리 — 세계마다 세계 그림 + 일상컷 일곱 장(세 세계면 스물넷)(세계마다 따로 센다, 번호도 세계마다). 캐릭터만의 컷(casual90)은 일상 장수에 세지 않는다 */
 function missing(key) {
   const D = read('data/city-design.json'), st = read('data/style.json')['default'];
   const by = (((((read('data/img.json').img || {})[key] || {}).byStyle || {})[st]) || {}).byForm || {}, out = [];
@@ -40,11 +41,11 @@ function missing(key) {
 }
 /* 일상컷 — 모자란 장수만큼 비어 있는 가장 작은 번호(1·2·4 가 있으면 3·5) */
 function casualGap(key, st, files, want) {
-  const taken = new Set(files.map(f => Number((/_casual(\d+)\.webp$/.exec(f) || [])[1])).filter(Boolean)), out = [];
+  const taken = new Set(files.map(f => Number((/_casual(\d+)\.webp$/.exec(f) || [])[1])).filter(n => n && n < 90)), out = [];
   for (let n = 1; taken.size + out.length < want; n++) if (!taken.has(n)) out.push(n);
   return out;
 }
-/* ── 여기부터 세 공방(game · book · element)이 같다 ── */
+/* ── 여기부터 다른 공방(game · book · element)과 같다 ── */
 
 function git(repo, ...a) { return cp.execFileSync('git', ['-C', repo, ...a], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }).trim(); }
 const kst = d => new Date(d.getTime() + 9 * 3600e3).toISOString().slice(0, 10);
@@ -131,5 +132,5 @@ function main(argv) {
   console.log(JSON.stringify({ key: o.key, status: last(c).status, commit: sha, missing: last(c).missing }, null, 1));
   return 0;
 }
-module.exports = { missing, order, claims, nextOf, used, DAILY_MAX, EXECUTION_MAX, CASUAL_N };
+module.exports = { missing, order, claims, nextOf, used, casualGap, DAILY_MAX, EXECUTION_MAX, CASUAL_N };
 if (require.main === module) { try { process.exit(main(process.argv.slice(2))); } catch (e) { console.error(e.message); process.exit(1); } }

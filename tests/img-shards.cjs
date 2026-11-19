@@ -1,4 +1,4 @@
-/* 그림 주소·등록기·워크플로·.gitignore 가 같은 저장소 차례를 말하나. game-atelier 의 같은 검사에서 왔다(2026-10-30).
+/* 그림 주소·등록기·워크플로·.gitignore 가 같은 저장소 차례를 말하나. 원소 공방의 같은 검사에서 왔다(2026-10-30 → 도시 꼴 2026-11-19).
    Run: node tests/img-shards.cjs
    - 등록된 파일의 원본·썸네일 주소가 BASES[0] + 파일 이름(where 에 적힌 것만 다른 저장소)
    - lib/img.js 의 BASES · tools/register-images.py 의 SHARDS · 워크플로가 받는 저장소 · .gitignore 가 같은 차례 */
@@ -9,16 +9,16 @@ const ctx = { window: {} }; vm.createContext(ctx);
 vm.runInContext(fs.readFileSync('lib/img.js', 'utf8'), ctx);
 const A = ctx.window.AtelierImg;
 const doc = JSON.parse(fs.readFileSync('data/img.json', 'utf8'));
-// 세계 그림은 byForm 안에 있다(fantasy · steampunk · mecha). 연출컷은 없다
+// 세계 그림은 byForm 안에 있다(fantasy · steampunk · cyberpunk). 연출컷은 없다
 const files = [...new Set(Object.values(doc.img).flatMap(e => A.allShotsOf(e).concat(
   ...Object.values(A.styleMap(e)).flatMap(b => Object.values(A.formMap(b)).flatMap(f => [f.f, f.m]))
 )).filter(Boolean))];
 
-const FIRST = 'https://polos0117.github.io/element-atelier-img/img/';
+const FIRST = 'https://polos0117.github.io/city-atelier-img/img/';
 const enc = f => encodeURIComponent(f).replace(/'/g, '%27');
 A.setShards(doc);
 assert.equal(A.BASE, FIRST);
-for (const f of files.concat(['fe_fantasy_game_keyart_f.webp'])) {
+for (const f of files.concat(['seoul_fantasy_game_keyart_f.webp', 'seoul_cyberpunk_jp_paint_anime_f_casual90.webp'])) {
   if ((doc.where || {})[f]) continue;
   assert.equal(A.imgURL(f), FIRST + enc(f), f);
   assert.equal(A.thumbURL(f), FIRST + 'thumb/' + enc(f), f);

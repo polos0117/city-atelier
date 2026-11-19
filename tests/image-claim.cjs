@@ -1,11 +1,35 @@
-/* Task 5 에서 도시 꼴로 다시 — 지금은 건너뜀 */
-process.exit(0);
-/* 이미지 작업 잠금(tools/image-claim.cjs) — 실제 bare 저장소 둘로: 잡기 · 겹쳐 잡기 거절 · 실행마다 하나 · 멈춤 · 끝은 빈 자리가 없어야 ·
-   다른 세션이 먼저 밀면 push 거절 뒤 제 커밋을 되돌린다 · 하루 몫. node tests/image-claim.cjs */
+/* 이미지 작업 잠금(tools/image-claim.cjs) — 몫은 도시 단위. 실제 bare 저장소 둘로: 잡기 · 겹쳐 잡기 거절 · 실행마다 하나 · 멈춤 · 끝은 빈 자리가 없어야 ·
+   다른 세션이 먼저 밀면 push 거절 뒤 제 커밋을 되돌린다 · 하루 몫. 서울(설계된 유일한 도시)의 빈 자리는 실제 자료로 본다. node tests/image-claim.cjs */
 const assert = require('node:assert/strict');
 const fs = require('node:fs'), path = require('node:path'), os = require('node:os'), cp = require('node:child_process');
 const TOOL = path.join(__dirname, '..', 'tools', 'image-claim.cjs'), K = require(TOOL);
 const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'image-claim-'));
+/* 실제 자료: 설계된 도시는 서울 하나라 빈 자리는 세계 셋 × (세계 그림 1 + 일상컷 7) = 24, 이름은 <도시>_<세계>_<화풍>_f[_casualN].webp */
+{
+  const st = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'style.json'), 'utf8'))['default'];
+  const m = K.missing('seoul');
+  assert.equal(m.length, 24, '서울 빈 자리 24');
+  for (const w of ['fantasy', 'steampunk', 'cyberpunk']) {
+    assert(m.includes(`seoul_${w}_${st}_f.webp`), w + ' 세계 그림');
+    for (let n = 1; n <= 7; n++) assert(m.includes(`seoul_${w}_${st}_f_casual${n}.webp`), `${w} 일상컷 ${n}`);
+  }
+  assert.deepEqual(K.order().map(x => x.key), ['seoul', 'tokyo', 'beijing', 'paris', 'london', 'rome', 'newyork', 'istanbul', 'cairo', 'rio'], '설계표 차례');
+  assert.equal(K.missing('tokyo').length, 0, '설계 미정 도시는 빈 자리 없음(건너뛴다)');
+  assert.equal(K.nextOf({}).key, 'seoul', '다음 차례는 서울');
+  /* 캐릭터만의 컷(casual90)은 일상 일곱에 세지 않는다 */
+  assert.equal(K.casualGap('seoul', st, [`seoul_fantasy_${st}_f_casual90.webp`], 7).length, 7);
+  assert.deepEqual(K.casualGap('seoul', st, ['x_casual1.webp', 'x_casual2.webp', 'x_casual4.webp'], 5), [3, 5]);
+}
+/* 시험 자료 — 빈 자리가 있는 도시가 셋은 있어야 시험이 된다. 설계표 복사본에서 도쿄 · 베이징에도 서울의 세계 셋을 붙인다(검사용, 저장소 자료는 안 건드림) */
+const dataRoot = path.join(tmp, 'root'); fs.mkdirSync(path.join(dataRoot, 'data'), { recursive: true });
+for (const f of ['style.json', 'img.json']) fs.copyFileSync(path.join(__dirname, '..', 'data', f), path.join(dataRoot, 'data', f));
+{
+  const D = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'city-design.json'), 'utf8'));
+  const seoul = D.cities.find(c => c.key === 'seoul');
+  for (const k of ['tokyo', 'beijing']) D.cities.find(c => c.key === k).worlds = JSON.parse(JSON.stringify(seoul.worlds));
+  fs.writeFileSync(path.join(dataRoot, 'data', 'city-design.json'), JSON.stringify(D));
+}
+process.env.CITY_DATA_ROOT = dataRoot;
 const git = (d, ...a) => cp.execFileSync('git', ['-C', d, ...a], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }).trim();
 const run = (img, ...a) => { const r = cp.spawnSync('node', [TOOL, ...a, '--img', img], { encoding: 'utf8' }); return { code: r.status, out: r.stdout + r.stderr }; };
 try {
@@ -17,9 +41,9 @@ try {
   fs.writeFileSync(path.join(a, 'README.md'), 'x\n'); git(a, 'add', '.'); git(a, 'commit', '-q', '-m', 'init'); git(a, 'push', '-q', 'origin', 'main');
   const b = clone('b');
   const todo = K.order().filter(x => K.missing(x.key).length).map(x => x.key);
-  assert(todo.length >= 3, '빈 자리가 있는 캐릭터가 셋은 있어야 시험이 된다');
+  assert(todo.length >= 3, '빈 자리가 있는 도시가 셋은 있어야 시험이 된다');
   const [x, y, z] = todo;
-  assert.equal(JSON.parse(run(a, 'next').out).next, x, 'next — 차례대로 첫 빈 캐릭터');
+  assert.equal(JSON.parse(run(a, 'next').out).next, x, 'next — 차례대로 첫 빈 도시');
 
   let r = run(a, 'claim', x, '--execution', 'e1');
   assert.equal(r.code, 0, r.out);

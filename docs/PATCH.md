@@ -7,6 +7,18 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-19 · claude · 그림 길을 도시 꼴로 — 등록 · 잠금 · 썸네일 · 그림 저장소 city-atelier-img
+- tools/register-images.py — `roster` 를 걷고 `data/city-design.json` · `data/style.json` 을 바로 읽음. 이름 꼴 `<도시>_<세계>_<화풍>_f[_casualN].webp`(세계 fantasy · steampunk · cyberpunk, 일상컷 90 = 캐릭터만의 컷), 남성 · 세계 없는 컷 · 특별컷 · 없는 도시 · 대문자는 저장 안 하고 실패. SHARDS 는 `city-atelier-img` 하나
+- tools/image-claim.cjs — 그림 저장소 `city-atelier-img`, 몫은 도시 단위, 일상컷 빈 자리 셈에서 90번 제외, 환경 변수 `CITY_DATA_ROOT`(검사용)
+- tools/make-thumbs.py · tools/style-compare.py · tests/style-compare.py · data/style-compare.json — 원소 그림 저장소 이름을 `city-atelier-img` 로(말만)
+- lib/img.js — BASES 를 `https://polos0117.github.io/city-atelier-img/img/` 하나로, 머리 설명을 도시 꼴로
+- lib/material.css · lib/room.css — 원소 그림 저장소의 UI 배경 그림 주소를 `none` 으로(장식 틀 · 단추 그림 · 공간 풍경은 Task 7 이 채운다)
+- .github/workflows/register-images.yml — 그림 저장소 하나를 받음, `schedule` 은 아직 되살리지 않음(Task 10)
+- tests/register-images.py · tests/image-claim.cjs · tests/make-thumbs.py · tests/img-shards.cjs — 건너뜀을 걷고 도시 꼴 기대값으로(서울 세 세계 · 일상컷 · 90번 · 틀린 이름 · 서울 빈 자리 24), make-thumbs 는 Windows 경로 구분 허용
+- IMAGE_RULES.md — 본문을 도시 꼴로 다시 씀(세 세계 · 여성 · 시험 그림은 보여 주고 고른 뒤 · 화풍 미정 · 노출 · 상표 · 사실 · 파일 이름 · 그림 저장소), 「개정 중」 머리 걷음
+- docs/IMAGE_AUTOMATION.md — 그림 길 · 원소 전용 대목을 도시로, 머리에 「Task 10 · 11 뒤 다시」
+- docs/PORT_NOTES.md · AGENTS.md — 건너뛴 검사 표가 비었다는 것 · 파일 이름 · 판단 기록
+
 ## 2026-11-19 · claude · 일상컷 검토 고침 — 세계 그림 motif 빼기 · 지금 옷 거르기 · 노출 컷 클로즈업 막기
 - lib/prompt-city.js — 일상컷(casualVars)이 도시 motif(왕관 · 망토 · 견갑)를 싣지 않는다(traits 비움 — 「no crown … regalia」 와 부딪혔다, 도시다움은 장면 · 소품 · 상징 색이). 옷 무게 문구의 「denim」 은 뺀다
 - data/city-design.json — 판타지 · 스팀펑크 banned_en 에 지금 옷 낱말(denim · bomber jacket · cowboy hat · sweatpants · leggings · baseball cap · tracksuit · jogger · track pants · windbreaker · fleece · bodycon). 스팀펑크는 denim · cowboy hat 허용(1900년 무렵에도 있었다)
