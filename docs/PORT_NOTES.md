@@ -80,7 +80,7 @@
 - (Task 7) **장식 영어 · 도시 영어 이름**: 시안 B 의 「SEOUL」 같은 장식 영어 대문자는 뺐고, 도시 영어 이름은 화면에 내지 않기로 DESIGN.md 에 적었다(`tests/theme.cjs` 가 화면 글에 영어 대문자 셋 이상 연달음이 없는지 본다).
 
 ## 남은 것
-- (Task 11 화풍 몫 끝 — 2026-11-19) 화풍은 `painterly_concept` 로 확정(미정 표시 `undecided` 걷음), 미형 · 다른 얼굴 줄과 `people` 칸도 들어갔다. 남은 Task 11 몫은 서울 묶음 화풍 비교(`styles.html` · `data/style-compare.json`)와 나머지 아홉 도시 설계다.
+- (Task 11 화풍 몫 끝 — 2026-11-19) 화풍은 `painterly_concept` 로 확정(미정 표시 `undecided` 걷음), 미형 · 다른 얼굴 줄과 `people` 칸도 들어갔다. 2026-11-20 기본을 삼국지의 `kr_drawn_rim_dewy` 로 바꿨다(「기본화풍도 아까 테스트했던 화풍으로 바꿔줘. 마지막 기준」 — 서울 시험 그림 기준). 판 몫 칸(`worldFace` · `worldStyleAfter` · `casualStyleAfter`)은 조립기가 읽고, 삼국지 몫 `worldHead` · `casualLegacy` 는 옮기지 않았다. 남은 Task 11 몫은 서울 묶음 화풍 비교(`styles.html` · `data/style-compare.json`)와 나머지 아홉 도시 설계다.
 - (전체 검토) `lib/city.css` 에 원소 시절 규칙이 남아 있다 — 정리는 미룸(공용 규칙과 얽혀 있어 화면 검사를 돌리며 한 번에).
 - (전체 검토) `tools/port-look-spec.cjs` 를 다시 돌리면 `lib/look-spec.js` 끝의 core:v6 동기 덩어리(`core/sync.cjs` 가 붙인 것)와 얼굴 어휘 세 줄이 되돌아간다 — 돌린 뒤 `core/sync.cjs` 를 다시 돌리거나 되돌린다. `EXPOSURE_LAYER` 의 `cyberpunk` 는 이제 도구에도 있다.
 - (Task 4 검토) 손으로 고를 때 새는 것 — 노래방 · 네온 밤 같은 지금 장면이 판타지 · 스팀펑크 장면 고르기에서 손으로 고르면 그대로 나온다. 계획기는 거르지만 손으로 고르는 길은 아직 안 막았다. 다음으로 미룸.

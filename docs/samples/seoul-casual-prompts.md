@@ -1,14 +1,14 @@
-# 서울 일상컷 지시문 본보기 (2026-11-19, 계획 Task 4 — 세계 줄은 세계의 결로 다시 뽑음)
+# 서울 일상컷 지시문 본보기 (2026-11-20, 기본 화풍 kr_drawn_rim_dewy 로 다시 뽑음 — Style 줄 다음에 SKIN FINISH)
 
-그 세계의 서울의 하루 — 생활 장면표(`data/city-life.json`) · 세계 소품 사전(`data/world-props.json`)으로 짓는 일상컷 지시문(`lib/prompt-city.js` buildCasual · 짧은 판, 화풍은 기본 `painterly_concept`). 「World:」 줄은 도시의 세계 글(명소 목록)이 아니라 세계마다의 결(설계표 `vocab.casual_world`)과 다음 줄 guard — 사용자 2026-11-19 「일부러 뒷배경은 다 나오게 만든거야?」 → 「응 그렇게 해줘」.
+그 세계의 서울의 하루 — 생활 장면표(`data/city-life.json`) · 세계 소품 사전(`data/world-props.json`)으로 짓는 일상컷 지시문(`lib/prompt-city.js` buildCasual · 짧은 판, 화풍은 기본 `kr_drawn_rim_dewy`). 「World:」 줄은 도시의 세계 글(명소 목록)이 아니라 세계마다의 결(설계표 `vocab.casual_world`)과 다음 줄 guard — 사용자 2026-11-19 「일부러 뒷배경은 다 나오게 만든거야?」 → 「응 그렇게 해줘」.
 세계마다 두 장: **A — 같은 장면 하나(포장마차)를 세 세계로 옮긴 짝**(장면 · 손 · 구도 · 시간 · 계절 · 날씨를 똑같이 두고 세계만 바꿨다 — 세계 줄 · 장소 글 · 소품 · 옷의 결 · 금지 단락이 세계를 탄다), **B — 계획기 묶음의 한 장**(`node tools/casual-plan.cjs seoul --world all --seed 4 --usage none`, 그 세계 묶음의 1번 칸).
-참고 그림은 그 세계의 세계 그림(`seoul_<세계>_painterly_concept_f.webp`) — 얼굴 · 화풍은 그 그림을 따른다. 사람이 읽어 보라고 둔 글이다. 다시 뽑는 법은 이 글을 지은 꼴 그대로: A 는 `PromptCity.build({ kind: 'casual', casual: { scene } })`, B 는 계획기 `--out` 의 1번 칸.
+참고 그림은 그 세계의 세계 그림(`seoul_<세계>_kr_drawn_rim_dewy_f.webp`) — 얼굴 · 화풍은 그 그림을 따른다. 사람이 읽어 보라고 둔 글이다. 다시 뽑는 법은 이 글을 지은 꼴 그대로: A 는 `PromptCity.build({ kind: 'casual', casual: { scene } })`, B 는 계획기 `--out` 의 1번 칸.
 
 ## 판타지 (`fantasy`)
 
 ### A — 포장마차(같은 장면 · 세 세계)
 
-파일 `seoul_fantasy_painterly_concept_f_casual1.webp`(본보기 번호) · 참고 그림 `seoul_fantasy_painterly_concept_f.webp`
+파일 `seoul_fantasy_kr_drawn_rim_dewy_f_casual1.webp`(본보기 번호) · 참고 그림 `seoul_fantasy_kr_drawn_rim_dewy_f.webp`
 
 ```text
 Use the attached image as the reference: the same adult Korean woman — the personification of Seoul — seen off duty in her everyday life. Keep her face, eye colour, hair colour, skin tone and body exactly; change only her clothes, pose and place. Do not reuse earlier conversation images.
@@ -17,7 +17,8 @@ Output: one vertical 2:3 image, 1024×1536.
 
 Face: exactly the attached image's face — the same short midface and face length-to-width ratio; the camera angle, pose, bangs or a headpiece never make her face look longer or her jaw heavier.
 
-Style: Painterly semi-realistic concept art, like a key illustration for a prestige animated feature film: gouache-and-oil texture with visible, confident brushstrokes, clear readable shapes and a strong silhouette, warm-cool colour contrast, rich but controlled detail. Her face is not a doll face and not a photograph. Keep this rendering exactly as in the attached image — the same finish, line, shading, skin and colour treatment.
+Style: Korean MMORPG character artwork. A recognisably drawn face with gently simplified anatomical structure. 2D painting with visible brushwork: layered strokes of colour, soft broken edges, thin coloured linework and a few crisp accents on the face and costume.
+SKIN FINISH: dewy, glass-like highlights on the skin of her shoulders, arms, collarbones and legs — a soft, luminous wet-look sheen that follows the body's forms; her face keeps a soft, natural finish.
 
 She is strikingly beautiful and refined — harmonious features, clear luminous skin, graceful posture — while her own face stays distinct: her face shape, eyes, brows, nose and lips follow the attached image, not a generic pretty face.
 
@@ -51,7 +52,7 @@ Avoid: Nothing from our present day in her world: smartphone, mobile phone, plas
 
 ### B — 계획기 1번 칸: 옥탑방 옥상의 여름밤 · lingerie · 자세 추천 bench_sit · 구도 environmental
 
-파일 `seoul_fantasy_painterly_concept_f_casual1.webp` · 참고 그림 `seoul_fantasy_painterly_concept_f.webp`
+파일 `seoul_fantasy_kr_drawn_rim_dewy_f_casual1.webp` · 참고 그림 `seoul_fantasy_kr_drawn_rim_dewy_f.webp`
 
 ```text
 Use the attached image as the reference: the same adult Korean woman — the personification of Seoul — seen off duty in her everyday life. Keep her face, eye colour, hair colour, skin tone and body exactly; change only her clothes, pose and place. Do not reuse earlier conversation images.
@@ -60,7 +61,8 @@ Output: one vertical 2:3 image, 1024×1536.
 
 Face: exactly the attached image's face — the same short midface and face length-to-width ratio; the camera angle, pose, bangs or a headpiece never make her face look longer or her jaw heavier.
 
-Style: Painterly semi-realistic concept art, like a key illustration for a prestige animated feature film: gouache-and-oil texture with visible, confident brushstrokes, clear readable shapes and a strong silhouette, warm-cool colour contrast, rich but controlled detail. Her face is not a doll face and not a photograph. Keep this rendering exactly as in the attached image — the same finish, line, shading, skin and colour treatment.
+Style: Korean MMORPG character artwork. A recognisably drawn face with gently simplified anatomical structure. 2D painting with visible brushwork: layered strokes of colour, soft broken edges, thin coloured linework and a few crisp accents on the face and costume.
+SKIN FINISH: dewy, glass-like highlights on the skin of her shoulders, arms, collarbones and legs — a soft, luminous wet-look sheen that follows the body's forms; her face keeps a soft, natural finish.
 
 She is strikingly beautiful and refined — harmonious features, clear luminous skin, graceful posture — while her own face stays distinct: her face shape, eyes, brows, nose and lips follow the attached image, not a generic pretty face.
 
@@ -97,7 +99,7 @@ Avoid: Nothing from our present day in her world: smartphone, mobile phone, plas
 
 ### A — 포장마차(같은 장면 · 세 세계)
 
-파일 `seoul_steampunk_painterly_concept_f_casual1.webp`(본보기 번호) · 참고 그림 `seoul_steampunk_painterly_concept_f.webp`
+파일 `seoul_steampunk_kr_drawn_rim_dewy_f_casual1.webp`(본보기 번호) · 참고 그림 `seoul_steampunk_kr_drawn_rim_dewy_f.webp`
 
 ```text
 Use the attached image as the reference: the same adult Korean woman — the personification of Seoul — seen off duty in her everyday life. Keep her face, eye colour, hair colour, skin tone and body exactly; change only her clothes, pose and place. Do not reuse earlier conversation images.
@@ -106,7 +108,8 @@ Output: one vertical 2:3 image, 1024×1536.
 
 Face: exactly the attached image's face — the same short midface and face length-to-width ratio; the camera angle, pose, bangs or a headpiece never make her face look longer or her jaw heavier.
 
-Style: Painterly semi-realistic concept art, like a key illustration for a prestige animated feature film: gouache-and-oil texture with visible, confident brushstrokes, clear readable shapes and a strong silhouette, warm-cool colour contrast, rich but controlled detail. Her face is not a doll face and not a photograph. Keep this rendering exactly as in the attached image — the same finish, line, shading, skin and colour treatment.
+Style: Korean MMORPG character artwork. A recognisably drawn face with gently simplified anatomical structure. 2D painting with visible brushwork: layered strokes of colour, soft broken edges, thin coloured linework and a few crisp accents on the face and costume.
+SKIN FINISH: dewy, glass-like highlights on the skin of her shoulders, arms, collarbones and legs — a soft, luminous wet-look sheen that follows the body's forms; her face keeps a soft, natural finish.
 
 She is strikingly beautiful and refined — harmonious features, clear luminous skin, graceful posture — while her own face stays distinct: her face shape, eyes, brows, nose and lips follow the attached image, not a generic pretty face.
 
@@ -140,7 +143,7 @@ Avoid: Nothing from our present day in her world: smartphone, mobile phone, plas
 
 ### B — 계획기 1번 칸: 한강 야외 수영장 · swimwear · 자세 추천 raise_chest · 구도 chest_up
 
-파일 `seoul_steampunk_painterly_concept_f_casual1.webp` · 참고 그림 `seoul_steampunk_painterly_concept_f.webp`
+파일 `seoul_steampunk_kr_drawn_rim_dewy_f_casual1.webp` · 참고 그림 `seoul_steampunk_kr_drawn_rim_dewy_f.webp`
 
 ```text
 Use the attached image as the reference: the same adult Korean woman — the personification of Seoul — seen off duty in her everyday life. Keep her face, eye colour, hair colour, skin tone and body exactly; change only her clothes, pose and place. Do not reuse earlier conversation images.
@@ -149,7 +152,8 @@ Output: one vertical 2:3 image, 1024×1536.
 
 Face: exactly the attached image's face — the same short midface and face length-to-width ratio; the camera angle, pose, bangs or a headpiece never make her face look longer or her jaw heavier.
 
-Style: Painterly semi-realistic concept art, like a key illustration for a prestige animated feature film: gouache-and-oil texture with visible, confident brushstrokes, clear readable shapes and a strong silhouette, warm-cool colour contrast, rich but controlled detail. Her face is not a doll face and not a photograph. Keep this rendering exactly as in the attached image — the same finish, line, shading, skin and colour treatment.
+Style: Korean MMORPG character artwork. A recognisably drawn face with gently simplified anatomical structure. 2D painting with visible brushwork: layered strokes of colour, soft broken edges, thin coloured linework and a few crisp accents on the face and costume.
+SKIN FINISH: dewy, glass-like highlights on the skin of her shoulders, arms, collarbones and legs — a soft, luminous wet-look sheen that follows the body's forms; her face keeps a soft, natural finish.
 
 She is strikingly beautiful and refined — harmonious features, clear luminous skin, graceful posture — while her own face stays distinct: her face shape, eyes, brows, nose and lips follow the attached image, not a generic pretty face.
 
@@ -185,7 +189,7 @@ Avoid: Nothing from our present day in her world: smartphone, mobile phone, plas
 
 ### A — 포장마차(같은 장면 · 세 세계)
 
-파일 `seoul_cyberpunk_painterly_concept_f_casual1.webp`(본보기 번호) · 참고 그림 `seoul_cyberpunk_painterly_concept_f.webp`
+파일 `seoul_cyberpunk_kr_drawn_rim_dewy_f_casual1.webp`(본보기 번호) · 참고 그림 `seoul_cyberpunk_kr_drawn_rim_dewy_f.webp`
 
 ```text
 Use the attached image as the reference: the same adult Korean woman — the personification of Seoul — seen off duty in her everyday life. Keep her face, eye colour, hair colour, skin tone and body exactly; change only her clothes, pose and place. Do not reuse earlier conversation images.
@@ -194,7 +198,8 @@ Output: one vertical 2:3 image, 1024×1536.
 
 Face: exactly the attached image's face — the same short midface and face length-to-width ratio; the camera angle, pose, bangs or a headpiece never make her face look longer or her jaw heavier.
 
-Style: Painterly semi-realistic concept art, like a key illustration for a prestige animated feature film: gouache-and-oil texture with visible, confident brushstrokes, clear readable shapes and a strong silhouette, warm-cool colour contrast, rich but controlled detail. Her face is not a doll face and not a photograph. Keep this rendering exactly as in the attached image — the same finish, line, shading, skin and colour treatment.
+Style: Korean MMORPG character artwork. A recognisably drawn face with gently simplified anatomical structure. 2D painting with visible brushwork: layered strokes of colour, soft broken edges, thin coloured linework and a few crisp accents on the face and costume.
+SKIN FINISH: dewy, glass-like highlights on the skin of her shoulders, arms, collarbones and legs — a soft, luminous wet-look sheen that follows the body's forms; her face keeps a soft, natural finish.
 
 She is strikingly beautiful and refined — harmonious features, clear luminous skin, graceful posture — while her own face stays distinct: her face shape, eyes, brows, nose and lips follow the attached image, not a generic pretty face.
 
@@ -226,7 +231,7 @@ One figure in focus, natural hands with five fingers, no text, logo or watermark
 
 ### B — 계획기 1번 칸: 야구장 응원석 · roleplay · 자세 추천 reach_waist · 구도 waist_up
 
-파일 `seoul_cyberpunk_painterly_concept_f_casual1.webp` · 참고 그림 `seoul_cyberpunk_painterly_concept_f.webp`
+파일 `seoul_cyberpunk_kr_drawn_rim_dewy_f_casual1.webp` · 참고 그림 `seoul_cyberpunk_kr_drawn_rim_dewy_f.webp`
 
 ```text
 Use the attached image as the reference: the same adult Korean woman — the personification of Seoul — seen off duty in her everyday life. Keep her face, eye colour, hair colour, skin tone and body exactly; change only her clothes, pose and place. Do not reuse earlier conversation images.
@@ -235,7 +240,8 @@ Output: one vertical 2:3 image, 1024×1536.
 
 Face: exactly the attached image's face — the same short midface and face length-to-width ratio; the camera angle, pose, bangs or a headpiece never make her face look longer or her jaw heavier.
 
-Style: Painterly semi-realistic concept art, like a key illustration for a prestige animated feature film: gouache-and-oil texture with visible, confident brushstrokes, clear readable shapes and a strong silhouette, warm-cool colour contrast, rich but controlled detail. Her face is not a doll face and not a photograph. Keep this rendering exactly as in the attached image — the same finish, line, shading, skin and colour treatment.
+Style: Korean MMORPG character artwork. A recognisably drawn face with gently simplified anatomical structure. 2D painting with visible brushwork: layered strokes of colour, soft broken edges, thin coloured linework and a few crisp accents on the face and costume.
+SKIN FINISH: dewy, glass-like highlights on the skin of her shoulders, arms, collarbones and legs — a soft, luminous wet-look sheen that follows the body's forms; her face keeps a soft, natural finish.
 
 She is strikingly beautiful and refined — harmonious features, clear luminous skin, graceful posture — while her own face stays distinct: her face shape, eyes, brows, nose and lips follow the attached image, not a generic pretty face.
 

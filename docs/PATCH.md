@@ -7,6 +7,13 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-20 · claude · 기본 화풍을 kr_drawn_rim_dewy(삼국지 기본 화풍)로
+- 사용자 「기본화풍도 아까 테스트했던 화풍으로 바꿔줘. 마지막 기준」 — 서울 세 세계 · 일상컷 시험을 삼국지 기본 화풍으로 했고 그 지시문이 기준.
+- data/style.json — 삼국지 `kr_drawn_rim_dewy` 를 옮겨(text · casual · worldFace · worldStyleAfter · casualStyleAfter · worldLight · casualLight · avoid · model · source, 삼국지 몫 worldHead · casualLegacy 는 뺌) 기본으로. painterly_concept 는 남김.
+- lib/prompt-city.js — 판의 worldFace 가 있으면 얼굴 비율 줄을 그 글로, worldStyleAfter 는 「Face — her own:」(짧은 판은 「Her:」) 다음 줄, 일상컷 Style 줄은 casualStyleAfter 가 있으면 화풍 글 + 다음 줄 그것(keep 문장 없이 — 시험 꼴). 칸 없는 화풍은 예전 글 그대로. `?v=39`.
+- tests/prompt-city.cjs — 기본 화풍 서울 세 세계 · 일상컷이 시험 꼴과 같은 줄, 실사 문구 없음, 파일 이름에 화풍 열쇠, painterly_concept 는 예전 글. tests/prompt-sections.cjs — 얼굴 비율 줄 기대값, 시간대 빛 줄 검사는 painterly_concept 로.
+- AGENTS.md 규칙 8 · 설계 6-1절 · docs/PORT_NOTES.md — 화풍 바꾼 일. docs/samples 두 개 — 조립기로 다시 뽑음.
+
 ## 2026-11-19 · claude · 서울 사이버펑크 직업컷 — 송신탑 정비사를 궤도 엘리베이터 정비사로
 - 바로 앞 칸(사이버펑크 = 두 세기 뒤의 먼 미래)에서 서울 남산 송신탑이 궤도 엘리베이터 첨탑이 됐는데, 캐릭터만의 컷(90번) 직업 「송신탑 신호 정비사」 의 장소 글은 옛 송신탑 · 네온 도시 그대로였다(그림은 아직 없다). data/casual-own.json 서울 사이버펑크: 직업 「궤도 엘리베이터 신호 정비사」, 장소 — 먼 미래 도시 위 궤도 엘리베이터 첨탑의 정비 발판(빛의 케이블을 따라 오르는 유도등 · 신호 배열 · 아래로 층층의 타워와 공중 다리), 하는 일 글 맞춤. 자세 · 소품 · 옷은 그대로. 검사 casual-tree check · casual-plan · prompt-city 통과.
 

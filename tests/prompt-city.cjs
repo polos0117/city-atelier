@@ -3,7 +3,7 @@
    (d) 그 세계 banned_en 낱말이 하나도 없다 — 금지 줄(sections.negative, 칸 꼴 5칸의 「Avoid:」 한 줄)만 빼고 본다. 금지 낱말을 「no …」 로 적는 곳은 그 줄뿐이다
        (원소 조립기의 칸 꼴이 「No …」 금지를 5칸 Avoid 로 모으는 꼴을 따랐다 — 판타지 옷 말투의 「no machinery」 는 Avoid 로 간다).
    (e) 상표 · 실존 인물 이름(아래 작은 표)이 없다 (f) world 가 mecha(세 세계 밖)면 던진다 (g) 설계 미정 도시는 던지지 않고 { text: '', missing: ['worlds'] }.
-   살아 있는 화풍(retired 아닌 것) 전부로 본다 — 기본 화풍은 painterly_concept(2026-11-19 확정)이지만 임시 화풍도 고르개에 남아 한 화풍에 묶지 않는다.
+   살아 있는 화풍(retired 아닌 것) 전부로 본다 — 기본 화풍은 kr_drawn_rim_dewy(2026-11-20 — 삼국지 기본 화풍을 옮김, 그 전 painterly_concept)이지만 임시 화풍도 고르개에 남아 한 화풍에 묶지 않는다.
    Run: node tests/prompt-city.cjs */
 const fs = require('node:fs'), vm = require('node:vm'), assert = require('node:assert/strict');
 const ctx = { window: {} }; vm.createContext(ctx);
@@ -22,7 +22,7 @@ const NAMES = ['YTN', 'N Seoul Tower', 'Seoul Tower', 'Lotte', 'Samsung', 'Hyund
 assert(same(D.vocab.worlds, ['fantasy', 'steampunk', 'cyberpunk']) && same(T.WORLDS.map(w => w.key), D.vocab.worlds), '세계 열쇠 셋(mecha 없음)');
 assert(same(Object.keys(T.SILHOUETTES), D.vocab.worlds) && same(Object.keys(T.SILHOUETTE_HEAD), D.vocab.worlds) && same(Object.keys(T.WORLD_SHORT.guard), D.vocab.worlds), '실루엣 · 머리 · 가드도 세 세계');
 assert(!/\bmecha\b/i.test(JSON.stringify(T.WORLDS) + JSON.stringify(T.SILHOUETTES) + JSON.stringify(T.EXPOSURE_LAYER)), '표에 mecha 가 남았다');
-assert(!S.undecided && S.default === 'painterly_concept', '화풍 확정 — 기본 painterly_concept, undecided 없음');
+assert(!S.undecided && S.default === 'kr_drawn_rim_dewy', '화풍 확정 — 기본 kr_drawn_rim_dewy, undecided 없음');
 
 const LIVE = Object.keys(S.styles).filter(k => !S.styles[k].retired);
 assert(LIVE.includes(S.default), '기본 화풍이 살아 있다');
@@ -144,6 +144,37 @@ for (const s of LIFE.cities.seoul.scenes) assert.equal(new Set(D.vocab.worlds.ma
 /* 세 세계 밖 · 설계 미정은 세계 그림과 같이 */
 assert.throws(() => cas('mecha', {}), /unknown world/);
 assert(same(PC.build({ design: D, styles: S, city: 'tokyo', world: 'fantasy', kind: 'casual', casual: { tree, tree2, life: LIFE, props: PROPS } }).missing, ['worlds']), '설계 미정 도시 일상컷');
+/* ══ 기본 화풍 kr_drawn_rim_dewy(2026-11-20 — 사용자 「기본화풍도 아까 테스트했던 화풍으로 바꿔줘. 마지막 기준」) ══
+   서울 세 세계 시험(scratchpad style1/build.cjs · casual/swap3.py)을 조립기가 그대로 — 세계 그림: STYLE 칸 화풍 글 · 얼굴 비율 줄 = worldFace ·
+   「Face — her own:」 다음 줄 = worldStyleAfter · 빛 줄 = worldLight · Avoid 에 삼국지 avoid 셋. 일상컷: Style 줄 = casual 글, 다음 줄 = casualStyleAfter. 실사 문구 없음 */
+{
+  const KR = S.styles.kr_drawn_rim_dewy, kv = KR.versions.find(v => v.v === KR.current);
+  assert(kv.model === 'gpt-image-2.6-sunburst' && !('worldHead' in kv), 'kr — 모델 2.6 · 삼국지 머리말(worldHead) 안 옮김');
+  const REAL = /semi-realistic depth|A semi-realistic face|semi-realistic/i;
+  for (const w of D.vocab.worlds) {
+    const t = PC.build({ design: D, styles: S, city: 'seoul', world: w, kind: 'world' }).text, L = t.split('\n'), id = 'kr ' + w;
+    const s1 = t.split('\n\n')[1].split('\n');
+    assert(s1[0] === T.CORE_FRAME.s1 && s1[1] === kv.text && s1[1].startsWith('Korean MMORPG character artwork. A recognisably drawn face '), id + ' STYLE 칸 첫 줄 = 화풍 글');
+    assert(s1.includes(T.WORLD_SHORT.beauty) && s1.includes('Face proportions: ' + kv.worldFace) && !t.includes(T.WORLD_SHORT.face.slice(0, 40)), id + ' 미형 줄 · 얼굴 비율 = worldFace');
+    const fi = L.findIndex(l => l.startsWith('Face — her own: '));
+    assert(fi > 0 && L[fi + 1] === kv.worldStyleAfter && L[fi + 1].startsWith('Skin finish: dewy'), id + ' 「Face — her own:」 다음 줄 = Skin finish');
+    assert.equal(L.filter(l => /^Light: /.test(l)).join(), kv.worldLight, id + ' 빛 줄 = worldLight');
+    const av = L.find(l => /^Avoid: /.test(l));
+    for (const a of kv.avoid) assert(av.includes(a), id + ' Avoid 에 「' + a + '」');
+    assert(t.includes('adult ' + seoul.people.en + ' woman —') && !REAL.test(t), id + ' 그 나라 사람 머리 · 실사 문구 없음');
+    assert.equal(P.fileName('seoul', w, S.default), 'seoul_' + w + '_kr_drawn_rim_dewy_f.webp', id + ' 파일 이름에 화풍 열쇠');
+  }
+  for (const w of D.vocab.worlds) {
+    const t = cas(w, {}).text, L = t.split('\n'), si = L.findIndex(l => l.startsWith('Style: '));
+    assert(L[si] === 'Style: ' + kv.casual && L[si + 1] === kv.casualStyleAfter && L[si + 1].startsWith('SKIN FINISH: '), 'kr 일상컷 ' + w + ' Style 줄 · 다음 줄 SKIN FINISH');
+    assert(!REAL.test(t) && !t.includes(T.CASUAL.short.keep), 'kr 일상컷 ' + w + ' 실사 문구 · keep 문장 없음(시험 꼴)');
+    assert.equal(P.casualFile('seoul', w, S.default, 2), 'seoul_' + w + '_kr_drawn_rim_dewy_f_casual2.webp', 'kr 일상컷 파일 이름');
+  }
+  /* painterly_concept(칸 없는 화풍)는 예전 글 그대로 — 얼굴 비율 줄은 표 글, Skin finish · SKIN FINISH 없음, 일상 Style 줄 끝에 keep */
+  const pt = P.build(D, S, 'seoul', 'steampunk', { style: 'painterly_concept' }), pc = cas('steampunk', {}, 'painterly_concept').text;
+  assert(pt.includes(T.WORLD_SHORT.face.replace('described above', 'described below')) && !/Skin finish|SKIN FINISH|Korean MMORPG/.test(pt + pc) &&
+    pc.includes('Style: ' + S.styles.painterly_concept.versions[0].casual + ' ' + T.CASUAL.short.keep), 'painterly_concept 는 예전 글');
+}
 /* 카드 = 도시 */
 assert(same(P.cards(D), D.cities.map(c => c.key)) && P.card(D, 'seoul').tier === 'city' && same(P.worldsOf(D, 'seoul'), D.vocab.worlds) && P.card(D, 'seoul-x') === null, '카드 = 도시 열쇠');
 const rec = P.record(D, S, 'seoul', 'steampunk', {});

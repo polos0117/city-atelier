@@ -97,6 +97,8 @@
 
 **정해졌다 (사용자 2026-11-19).** 서울 세 장 시험을 보고 「그림체만 우선 이걸로 가보자」 · 「이대로 가자」 — 새 화풍 `painterly_concept`(회화적 콘셉트 아트 — 과슈 · 유화 붓결 · 영화 키 일러스트, 모델 `gpt-image-2.6-sunburst`)가 `data/style.json` 기본이다. 책 공방 literary_fantasy 와 형제지만 선화 · 종이결 대신 붓 칠 · 영화 키 아트다. 함께 정한 것: 「웬만하면 미형으로 가고 · 같은 얼굴은 피하고」 → 조립기가 미형 · 다른 얼굴 한 줄을 싣고 설계표 검사기는 얼굴 칸 다섯 가운데 셋 이상이 세 세계 모두 다를 것을 요구한다. 「도시공방이니까 인종을 각 나라의 사람으로」 → 설계표 도시 줄 `people { ko, en }`, 조립기 머리 줄 「an adult <people> woman」(다인종 도시도 그 나라 사람으로 두고 피부색 · 얼굴은 `look` 이 정한다).
 
+**2026-11-20 기본 화풍을 `kr_drawn_rim_dewy` 로 바꿨다.** 사용자 「기본화풍도 아까 테스트했던 화풍으로 바꿔줘. 마지막 기준」. 그 뒤 서울 세 세계(스팀펑크 가스등 판타지 · 사이버펑크 먼 미래 · 판타지) 세계 그림과 일상컷 시험을 삼국지 공방의 기본 화풍 `kr_drawn_rim_dewy`(그린 얼굴 · 2D 붓 칠 · 림 라이트 · 몸 피부 물광 — 한국 MMORPG, 화풍공방 확정, 모델 `gpt-image-2.6-sunburst`)로 했고, 그 마지막 시험 지시문이 기준이다. 판을 그대로 옮겼다(삼국지 머리말 `worldHead` · 일상컷 옛 꼴 `casualLegacy` 는 삼국지 몫이라 뺐다). 조립기가 판 몫 칸을 싣는다 — 세계 그림은 얼굴 비율 줄을 `worldFace` 로, 「Face — her own:」 다음 줄에 `worldStyleAfter`(Skin finish), 빛 줄 `worldLight`, 5칸 Avoid 에 `avoid` 셋. 일상컷은 Style 줄을 `casual` 글로(keep 문장 없이 — 시험 꼴), 다음 줄에 `casualStyleAfter`(SKIN FINISH). 실사 문구(semi-realistic)는 넣지 않는다. 미형 · 다른 얼굴 줄과 「an adult <people> woman」 머리는 그대로다. `painterly_concept` 는 지우지 않고 고르개에 남는다(칸 없는 화풍은 예전 글 그대로).
+
 ### 바꿀 것
 - 설계표 `data/city-design.json`: 나라 › 가문 › 주민 세 층 → **도시 한 층**. 도시 한 줄 = `key` · `ko` · `en` · `country` · `lat` · `lon`(근거) · `persona`(성격 한 줄) · `symbols`(상징 — 사실, 근거) · `palette`(상징 색 — 6절 끝) · `worlds.<fantasy|steampunk|cyberpunk>` = { 세계의 그 도시 묘사 `ko`/`en`, 장면 `scenes` 셋, **외형 `look` 전부(얼굴 · 머리색 · 체형 · 실루엣 — 세계마다 따로)**, 드는 것 `hold`, 도시 상징을 실은 옷 · 장신구 한 줄 }. 원소는 색 · 체형이 세 세계 공통이었지만 여기는 **완전히 다른 사람**이다.
 - 세계 사전(`vocab.worlds`): `mecha` → `cyberpunk`, 세계마다 **표지 목록**(3절)과 옷 말투.
