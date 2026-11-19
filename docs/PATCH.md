@@ -7,6 +7,17 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-19 · claude · 지시문 조립을 도시 한 층 · 세 세계로 — 서울 세 세계 지시문
+- lib/prompt-city.js — 원소의 나라 › 가문 › 주민 갈래(가문주 · 주민 · 입는 물건 · 돌림 외형)를 걷고 도시 한 층(카드 = 도시 열쇠). 「원소 성질」 자리에 도시 motif + 상징 색 + 세계 표지(vocab.markers.<세계>.en)를 사람에게 싣는 줄, 세계 줄은 장르 이름 없이 그 세계의 서울 + 설계표 옷 말투(vocab.wear) + 빛, 장면은 고르지 않으면 첫 장면, 손에 드는 것(hold). PromptCity.build({ … }) → { text, sections } 를 더함(sections: head · s1~s5 · negative · style_undecided). 세 세계 밖(mecha)은 던지고, 설계 미정 도시는 { text: '', missing: ['worlds'] }. 내린 화풍만 쓰던 구조판 · kv 길은 뺐다. 일상컷은 도시 카드만 읽게(갈래는 Task 4)
+- lib/prompt-spec.js — 세계 mecha → cyberpunk(빛 · 머리 꼬리만, 옷 · 노출은 설계표), CONCEPT · CITY MOTIF · WORLD MARKS · PROP 머리, 글자 금지(원소 기호 · 번호 허용 뺌), 사이버펑크 실루엣 여덟(메카 실루엣 대신), 원소 태그 묶음(SIL_POOLS · SIL_TAGS) · 구조판 표(STRUCT) 삭제, 일상컷 원소 말을 도시로
+- lib/look-spec.js — EXPOSURE_LAYER 의 mecha → cyberpunk
+- data/style.json — 머리에 undecided: true 와 undecided_note(화풍 미정 — Task 11 에서 사용자가 고른다, 지금 default 는 임시). 판 꼴은 그대로
+- lib/studio.js · lib/words.js — 생성기 카드 고르기를 도시 › 갈래로(나라 › 카드 단계 걷음, 설계 미정 도시는 「설계 미정」 으로 못 누름), 주소 · 기억값의 세계가 그 도시 세계가 아니면 버림. 낱말: 도시 판 · world.cyberpunk · 실루엣 안내 · 얼굴 설계 칸 이름(설계 줄 목록에서 없는 낱말 경고가 났다)
+- prompt.html · styles.html · index.html — ?v= 올림, 없는 lib/element.css 를 lib/city.css 로(1단계 이름 바꿈 뒤 남은 링크)
+- tests/prompt-city.cjs · tests/prompt-sections.cjs · tests/prompt-short-look.cjs · tests/prompt-pack-screen.cjs · tests/screen.cjs — 건너뜀 걷어 내고 도시 꼴로 다시 씀(일상컷 걸음 · 일상 자리는 Task 4). tests/look-spec.cjs — 노출 갈래 cyberpunk
+- docs/samples/seoul-world-prompts.md — 새로. 서울 세 세계 세계 그림 지시문 전문
+- docs/PORT_NOTES.md — 건너뛴 검사 표 · 판단이 갈린 곳
+
 ## 2026-11-19 · claude · 도시 설계표와 검사기 — 도시 10곳 · 서울 세 세계
 - data/city-design.json — 새로. 세계 사전(fantasy · steampunk · cyberpunk, 세계 표지 ko/en 10개씩 · 판타지 · 스팀펑크 금지 낱말 · 옷 말투 costume/bold/moderate/low)과 도시 10곳(위도 · 경도 · 상징 3~5개, 모두 위키백과 src). 서울만 세 세계를 끝까지(세 사람 — 머리색 · 체형 · 얼굴형 · 헤어스타일 모두 다름), 나머지 아홉은 worlds {}(설계 미정)
 - tools/city-design.py — 원소 검사기(나라 › 가문 › 주민, roster)를 도시 한 층 검사로 다시 씀

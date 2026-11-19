@@ -10,7 +10,7 @@ for (const k of ['PARAM_DEFS', 'IDENTITY_GROUPS', 'IDENTITY_EXCLUDED', 'FACE_KEY
   assert(S[k] != null, k + ' 가 없다');
 assert(S.PARAM_DEFS.length >= 30 && same(S.IDENTITY_GROUPS, ['base', 'build', 'face', 'hair']), '외형 선택지 네 묶음');
 assert(!JSON.stringify(S.PARAM_DEFS).includes('게임') && !JSON.stringify(S.PARAM_GUIDES).includes('게임'), '게임 말이 남았다');
-for (const w of ['fantasy', 'steampunk', 'mecha']) assert(['outer', 'open'].includes(S.EXPOSURE_LAYER[w]), w + ' 노출 갈래');
+for (const w of ['fantasy', 'steampunk', 'cyberpunk']) assert(['outer', 'open'].includes(S.EXPOSURE_LAYER[w]), w + ' 노출 갈래');
 assert(!JSON.stringify(S.EXPOSURE).includes('FORM'), '노출 문장에 FORM 이 남았다');
 /* 혼자 실려도 표만 든다(tests/words.cjs 가 그렇게 돌린다) */
 assert(load(['lib/look-spec.js']).AtelierSpec.PARAM_DEFS.length === S.PARAM_DEFS.length, '혼자 실리기');

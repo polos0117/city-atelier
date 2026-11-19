@@ -22,7 +22,7 @@
 | 첫 화면 | `index.html` | 「짓는 중」 껍데기 + 도구 상자. 지구본 탭 · 도시 화면 · 전체 도감 탭은 Task 7~9 |
 | 도구 상자 | `lib/toolbox.js` · `lib/toolbox.css` | 구석의 「도구」 단추 → 화풍 · 프롬프트 · 즐겨찾기 · 설정(공간 · 밀도 · 움직임) · 패치 기록. 도구 화면의 머리는 가는 막대 `ToolBar` |
 | 화풍 비교 | `styles.html` · `data/style-compare.json` · `tools/style-compare.py` | 같은 카드를 화풍별로 — 서울 묶음은 Task 11 |
-| 프롬프트 | `prompt.html` · `lib/studio.js` · `lib/prompt-spec.js` · `lib/prompt-city.js` · `lib/casual-tree*.js` | 생성기. 설계표 `data/city-design.json`(Task 2)이 생기고 조립기가 도시 꼴이 되면(Task 3) 다시 돈다 — 그때까지 원소 꼴 그대로 들어 있다 |
+| 프롬프트 | `prompt.html` · `lib/studio.js` · `lib/prompt-spec.js` · `lib/prompt-city.js` · `lib/casual-tree*.js` | 생성기. 도시 › 갈래 › 단계(Task 3). 세계 그림은 도시 꼴(`PromptCity.build` — 도시 motif + 세계 표지, 금지 낱말은 5칸 Avoid 줄만). 일상컷은 아직 원소 트리 표(Task 4). 본보기 지시문 `docs/samples/seoul-world-prompts.md` |
 | 주소 | `lib/walk-core.js` | 순수 함수. `?tab=globe\|dex &city= &card= &pic= &w= &st= &view=` — 층 globe · dex · city · card. Task 7 이 `DESIGN.md` 에 확정 |
 
 ## 지켜야 할 것

@@ -37,10 +37,11 @@
 | 검사 | 까닭 | 되살리는 곳 |
 |---|---|---|
 | ~~`tests/city-design.py`~~ | 되살림(Task 2, 2026-11-19) — 도시 한 층 검사기(`roster` 없이 `data/city-design.json` 을 바로 읽는다) | — |
-| ~~`tests/look-spec.cjs`~~ | 되살림(Task 2, 2026-11-19) — 설계표 `look` 을 도시 × 세계로 어휘와 견준다. 단 `EXPOSURE_LAYER` 줄은 아직 `mecha` 를 본다(`lib/prompt-spec.js` 가 원소 꼴 — Task 3 이 `cyberpunk` 로 바꿀 때 같이) | — |
-| `tests/prompt-city.cjs` | 조립기 — 원소 카드 전부 | Task 3 |
-| `tests/prompt-sections.cjs` · `tests/prompt-short-look.cjs` | 원소 설계표로 지시문 칸 | Task 3 |
-| `tests/prompt-pack-screen.cjs` · `tests/screen.cjs` | 생성기 화면 — 설계표 · 원소 카드 | Task 3(생성기) · 8 |
+| ~~`tests/look-spec.cjs`~~ | 되살림(Task 2, 2026-11-19) — 설계표 `look` 을 도시 × 세계로 어휘와 견준다. `EXPOSURE_LAYER` 줄은 Task 3 에서 `cyberpunk` 로 | — |
+| ~~`tests/prompt-city.cjs`~~ | 되살림(Task 3, 2026-11-19) — 서울 × 세 세계 × 살아 있는 화풍: 표지 셋 이상 · motif · 머리색 · 금지 낱말(Avoid 줄 밖) · 상표 · 사람 이름 · mecha 던짐 · 설계 미정 아홉 | — |
+| ~~`tests/prompt-sections.cjs` · `tests/prompt-short-look.cjs`~~ | 되살림(Task 3) — 칸 꼴 · 짧은 판의 도시 칸 | — |
+| ~~`tests/prompt-pack-screen.cjs`~~ | 되살림(Task 3) — **세계 그림 자리만**(서울 셋, 폰 344×882). 일상 일곱 장 자리(계획기 `tools/casual-plan.cjs` 의 plan)는 **Task 4** 가 더한다 | Task 4(일상 자리) |
+| ~~`tests/screen.cjs`~~ | 되살림(Task 3) — 화풍 비교 · 생성기 도시 판 · 세계 그림 걸음(화면 = 조립기) · 폰 레일/막대/시트/44px. **일상컷 걸음**(시대 → 장소 → … · 해방 · 랜덤 · 여기부터 다시 · 손에 드는 것)은 **Task 4**, 지구본 · 도감 화면은 **Task 8 · 9** | Task 4 · 8 · 9 |
 | `tests/casual-plan.cjs` | 일상컷 계획기 — 원소 카드 · 땅 | Task 4 |
 | `tests/image-claim.cjs` · `tests/register-images.py` · `tests/make-thumbs.py` | 그림 잠금 · 등록 · 썸네일 — 원소 카드 열쇠(`fe-steel` …) · `roster` | Task 5 |
 
@@ -49,6 +50,13 @@
 도구 가운데 설계표(`data/city-design.json`, Task 2 가 만든다)를 읽는 것 — `tools/casual-plan.cjs` · `tools/prompt-pack.cjs` · `tools/image-claim.cjs` · `tools/sil-spread.py` · `lib/studio.js` 의 불러오기 — 은 그 표가 생기기 전에는 돌지 않는다.
 
 ## 판단이 갈린 곳
+
+- (Task 3) **금지 낱말의 자리**: 원소 조립기의 칸 꼴은 「No …」 금지를 5칸 `Avoid:` 한 줄로 모은다 — 이 꼴을 따랐다. 설계표 `banned_en` 낱말은 그 줄에만 나와도 된다(판타지 옷 말투의 「no machinery」 · 화풍 글의 「plastic 3D-render finish」 가 그 줄로 간다). `tests/prompt-city.cjs` (d)는 `sections.negative`(그 줄)를 빼고 본다. 칸 꼴이 아닌 화풍(지금은 없다 — 살아 있는 화풍 넷이 다 칸 꼴)은 금지가 본문에 남으니, Task 11 에서 칸 꼴이 아닌 화풍을 고르면 (d)를 다시 본다.
+- (Task 3) **구조판(mmorpg2d · semireal) · kv 판**: 둘 다 내린 화풍(retired)뿐이라 조립기에서 그 길과 `prompt-spec.js` 의 STRUCT 표를 뺐다. 그 화풍 열쇠를 주면 판의 `text` 로 줄 꼴을 짓는다. Task 11 에서 그런 꼴의 화풍을 고르면 다시 옮긴다.
+- (Task 3) **장면 기본**: 원소는 장면을 안 고르면 세계 글만 실었다 — 「세계 장면을 넣는다」 에 맞춰 안 고르면 설계표 첫 장면을 싣는다(생성기 「설계 첫 장면」).
+- (Task 3) **사이버펑크 실루엣**: 원소의 메카 실루엣 열여덟은 장갑 메카라 맞지 않아 지우고 사이버펑크 여덟을 새로 적었다(시험 그림 전 초안). 도시는 카드마다 실루엣 설계값(`sil`)이 없어 고르지 않으면 실루엣 없이 세계 옷 말투 · motif 대로. `tools/sil-spread.py` 는 원소 태그 묶음(지운 SIL_POOLS · SIL_TAGS)을 읽던 원소 도구라 돌지 않는다 — 도시에서 쓸 일이 생기면 그때 다시.
+- (Task 3) **일상컷**: `buildCasual` 은 도시 카드를 읽게만 했다. 트리 표(`data/casual-tree.json`)의 원소 말(「her element's kingdom」 같은 장소 글)이 일상컷 지시문에 아직 나온다 — Task 4 가 표를 이 공방 것으로 바꾼다. `PromptCity.build({ kind: 'casual' })` 은 Task 4 까지 던진다.
+- (Task 3) **화풍 비교(styles.html)**: 아직 세계 `mecha` 를 쓴다(원소 그림 묶음) — 낱말 `world.mecha` 를 그래서 남겼다. Task 11 에서 서울 묶음으로 바꿀 때 뺀다.
 
 - `dex.html`: 원소 AGENTS 는 「옛 주소 껍데기」, 계획 Task 9 는 「`dex.html` 또는 `index.html` 의 `tab=dex`」 — 껍데기는 뺐고, 도감은 Task 7 이 정한다.
 - `holo.js` · 한 장 층: 도시 한 장에도 쓸 수 있으나 원소 한 장 층(`walk-card`)과 한 몸이라 뺌.

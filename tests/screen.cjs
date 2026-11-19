@@ -1,228 +1,137 @@
-/* Task 3 에서 도시 꼴로 다시 — 지금은 건너뜀 */
-process.exit(0);
-/* 화면 검사 — 화풍 비교·생성기를 브라우저로 연다(전시관 · 도감은 2026-11-12 「들어가는 곳」 층으로 — 원소 층 검사는 걷어 냄). 폰(390)과 PC(1280) — 깊은 흐름은 폰에서만, PC 는 열고 칸 수 · 넘침 · 콘솔 + 생성기 걸음(2026-11-12).
-   생성기(공방 모음 통합 생성기 꼴): 나라 › 카드 › 갈래 › 단계. 세계 그림은 세계 → 덧붙임 → 지시문. 일상컷은 트리 버전2 — 시대 → 장소 → … 한 칸씩,
-   해방(트리 밖 + 까닭), 랜덤(처음부터), 여기부터 다시, 다 골랐다 결과(지시문·파일 이름), 폰은 칩 레일 + 아래 막대 + 시트. 주소 ?card=&o=. 콘솔 오류 없음. 옆으로 넘치지 않음.
-   Run: ESM_DIR=<preact 가 든 node_modules> CHROMIUM_PATH=<chrome> node tests/screen.cjs   (PORT 로 자리 바꾸기, 기본 8794) */
-const assert = require('node:assert/strict'), http = require('node:http'), fs = require('node:fs'), path = require('node:path');
-const { chromium } = require('playwright');
-process.env.ESM_DIR = process.env.ESM_DIR || require('./lib/harness.cjs').ESM_DIR;   /* ESM_DIR 이 비면 공용 손(tests/lib/harness.cjs)의 기본 자리 — 맨 실행으로도 돈다(최종 검토 B12) */
-const ROOT = path.resolve(__dirname, '..'), PORT = +(process.env.PORT || 8794), BASE = 'http://127.0.0.1:' + PORT;
-const MIME = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.mjs': 'text/javascript', '.json': 'application/json', '.css': 'text/css', '.md': 'text/markdown', '.webp': 'image/webp', '.png': 'image/png' };
-const server = http.createServer((q, s) => {
-  const p = decodeURIComponent(new URL(q.url, BASE).pathname), file = path.join(ROOT, p === '/' ? 'index.html' : p);
-  if (!file.startsWith(ROOT) || !fs.existsSync(file) || fs.statSync(file).isDirectory()) { s.writeHead(404); return s.end(); }
-  s.writeHead(200, { 'content-type': MIME[path.extname(file)] || 'application/octet-stream' }); fs.createReadStream(file).pipe(s);
-});
-const ESM = { 'https://esm.sh/preact@10.24.3': 'preact/dist/preact.mjs', 'https://esm.sh/preact@10.24.3/hooks': 'preact/hooks/dist/hooks.mjs' };
-const D = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/city-design.json'), 'utf8'));
-const S = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/style.json'), 'utf8'));
-const IMGJ = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/img.json'), 'utf8'));
-/* 지시문 표 · 조립기(node 쪽) — 생성기는 기본 화풍(짧은 판 — 2026-11-09)으로 짓는다. 구조판 mmorpg2d · semireal 은 2026-11-11 내렸다(그림 없는 화풍) */
-const { T, P } = (() => { const c = { window: {} }; require('node:vm').createContext(c); for (const f of ['lib/prompt-spec.js', 'lib/look-spec.js', 'lib/prompt-city.js']) require('node:vm').runInContext(fs.readFileSync(path.join(ROOT, f), 'utf8'), c); return { T: c.window.AtelierSpec, P: c.window.AtelierPrompt }; })();
-const RETIRED = Object.keys(S.styles).filter(k => S.styles[k].retired), LIVE = Object.keys(S.styles).filter(k => !S.styles[k].retired);
-const lineOf = (txt, head) => (String(txt).split('\n').find(l => l.startsWith(head)) || '');   /* 짧은 판의 줄 하나(단락도 한 줄) */
+/* 화면 검사 — 화풍 비교 · 생성기를 브라우저로 연다. 폴드 덮개(344×882)와 PC(1280).
+   도시 꼴(2026-11-19 Task 3): 생성기는 도시 › 갈래 › 단계. 세계 그림은 세계 → 장면 → 자세 · 표정 → 실루엣 → 설계 줄 → 외형 → 덧붙임 → 다 골랐다 —
+   화면이 지은 지시문이 node 쪽 조립기(lib/prompt-city.js)와 글자 하나 다르지 않다. 도시 판은 열 곳(설계 미정 아홉은 누를 수 없다), 화풍 고르개(내린 화풍 빠짐), 주소 ?card=&o=&world=,
+   폰 칩 레일 · 아래 막대 · 시트, 새로 고쳐도 남음, 옆 넘침 없음, 콘솔 오류 없음.
+   일상컷 걸음(시대 → 장소 → … · 해방 · 랜덤 · 여기부터 다시 · 손에 드는 것)은 Task 4 가 생활 장면표 · 세계 소품 사전과 함께 다시 넣는다(docs/PORT_NOTES.md) — 지금은 갈래를 바꾸면 세계 칸부터 열리는지만.
+   Run: CHROMIUM_PATH=<chrome> NODE_PATH=<playwright 가 든 node_modules> node tests/screen.cjs   (ESM_DIR — preact 사본, 비면 tests/lib/harness.cjs 의 기본 자리 · SHOT_DIR 이 있으면 사진) */
+const assert = require('node:assert/strict'), fs = require('node:fs'), path = require('node:path'), vm = require('node:vm');
+const H = require('./lib/harness.cjs'), ROOT = H.ROOT;
+const read = f => fs.readFileSync(path.join(ROOT, f), 'utf8');
+const D = JSON.parse(read('data/city-design.json')), S = JSON.parse(read('data/style.json'));
+const { T, P } = (() => { const c = { window: {} }; vm.createContext(c); for (const f of ['lib/prompt-spec.js', 'lib/look-spec.js', 'lib/prompt-city.js']) vm.runInContext(read(f), c); return { T: c.window.AtelierSpec, P: c.window.AtelierPrompt }; })();
+const RETIRED = Object.keys(S.styles).filter(k => S.styles[k].retired), LIVE = Object.keys(S.styles).filter(k => !S.styles[k].retired), DEF = S.default;
+const lineOf = (txt, head) => (String(txt).split('\n').find(l => l.startsWith(head)) || '');
 
 (async () => {
-  await new Promise(r => server.listen(PORT, r));
-  const br = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || undefined });
+  const srv = await H.serve(), br = await H.launch();
   let checks = 0;
-  const open = async (url, viewport) => {
-    const ctx = await br.newContext({ viewport });
-    await ctx.route(/^https?:\/\/(?!127\.0\.0\.1)/, r => {
-      const file = process.env.ESM_DIR && ESM[r.request().url().split('?')[0]];
-      if (!file || !fs.existsSync(path.join(process.env.ESM_DIR, file))) return r.abort();
-      return r.fulfill({ status: 200, contentType: 'text/javascript', body: fs.readFileSync(path.join(process.env.ESM_DIR, file), 'utf8').replace(/from"preact"/g, 'from"https://esm.sh/preact@10.24.3"') });
-    });
-    const page = await ctx.newPage(), errors = [];
-    page.on('pageerror', e => errors.push(String(e)));
-    page.on('console', m => { if (m.type() === 'error' && !/ERR_FAILED|net::|Failed to load resource/.test(m.text())) errors.push(m.text()); });
-    await page.goto(BASE + url); return { ctx, page, errors };
-  };
-  const noOverflow = async (page, w) => assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), w + ' 옆으로 넘친다');
-  const state = pg => pg.evaluate(() => window.AtelierStudio.state());
-  const openOf = async pg => (await state(pg)).open;
-  const promptOf = pg => pg.evaluate(() => window.AtelierStudio.prompt());
-  /* 폰은 🎲 메뉴 안, PC 는 판 밑 — 같은 data-* */
-  const menu = async pg => { const m = pg.locator('[data-menu="rand"]'); if (await m.count()) await m.click(); };
-  const randAll = async (pg, k) => { await menu(pg); await pg.click('[data-rand-all="' + k + '"]'); };
-  /* 다 골랐다로 — 「다 골랐다로」 단추가 있으면 그것(PC 판 밑 · 폰 🎲 메뉴), 없으면 남은 칸(골라도 되는 칸)을 다음·건너뛰기로 넘긴다 */
-  const toDone = async pg => {
-    for (let i = 0; i < 12 && (await openOf(pg)) !== 'done'; i++) {
-      if (await pg.locator('#panel [data-open="done"]').count()) { await pg.click('#panel [data-open="done"]'); continue; }
-      const m = pg.locator('[data-menu="rand"]');
-      if (await m.count()) { await m.click(); if (await pg.locator('#hbar .hmenu [data-open="done"]').count()) { await pg.click('#hbar .hmenu [data-open="done"]'); continue; } await m.click(); }
-      const nx = pg.locator('#hbar [data-skip], #hbar [data-next], #panel [data-next]').first();
-      assert(await nx.count(), '넘길 단추가 없다 — ' + (await openOf(pg)));
-      await nx.click();
-    }
-    assert.equal(await openOf(pg), 'done', '다 골랐다에 못 갔다');
-  };
+  try {
+    for (const vp of [H.COVER, H.WIDE]) {
+      const mob = vp.width <= 768, open = url => H.open(br, srv.base, url, { viewport: vp });
+      const state = pg => pg.evaluate(() => window.AtelierStudio.state());
+      const openOf = async pg => (await state(pg)).open;
+      const promptOf = pg => pg.evaluate(() => window.AtelierStudio.prompt());
+      const next = async (pg, k) => { if (mob) await pg.click('#hbar [data-next="' + k + '"]'); else await pg.click('#panel [data-next="' + k + '"]'); };
+      /* 다 골랐다로 — 「다 골랐다로」 단추가 있으면 그것, 없으면 남은 칸을 다음 · 건너뛰기로 */
+      const toDone = async pg => {
+        for (let i = 0; i < 12 && (await openOf(pg)) !== 'done'; i++) {
+          if (await pg.locator('#panel [data-open="done"]').count()) { await pg.click('#panel [data-open="done"]'); continue; }
+          const m = pg.locator('[data-menu="rand"]');
+          if (await m.count()) { await m.click(); if (await pg.locator('#hbar .hmenu [data-open="done"]').count()) { await pg.click('#hbar .hmenu [data-open="done"]'); continue; } await m.click(); }
+          const nx = pg.locator('#hbar [data-skip], #hbar [data-next], #panel [data-next]').first();
+          assert(await nx.count(), '넘길 단추가 없다 — ' + (await openOf(pg)));
+          await nx.click();
+        }
+        assert.equal(await openOf(pg), 'done', '다 골랐다에 못 갔다');
+      };
 
-  for (const vp of [{ width: 390, height: 844 }, { width: 1280, height: 900 }]) {
-    const mob = vp.width <= 768;
-    let v;
-    /* 화풍 비교(2026-11-07 — 삼국지 공방과 같이) — 도구 막대에 화풍(2026-11-12 「들어가는 곳」), 묶음이 없으면 빈 안내, 있으면 화풍마다 칸 */
-    { const SC = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/style-compare.json'), 'utf8')), sv = await open('/styles.html', vp);
-      await sv.page.waitForSelector('.sc-lede');
-      assert.equal(await sv.page.locator('h1.tb-name').textContent(), '화풍', '화풍 도구 막대');
-      if (!SC.rounds.length) assert.equal(await sv.page.locator('.sc-cell').count(), 0, '묶음 없음 — 빈 안내');
-      else { await sv.page.waitForSelector('.sc-cell'); const R0 = SC.rounds.slice().sort((a, b) => a.key < b.key ? 1 : -1)[0]; assert.equal(await sv.page.locator('.sc-style').count(), R0.styles.length, '화풍마다 한 칸'); }
-      await noOverflow(sv.page, vp.width + ' 화풍 비교'); assert.deepEqual(sv.errors, [], '화풍 비교 콘솔'); checks += 4; await sv.ctx.close(); }
-    /* 생성기 화풍 고르개 — 맨 위 기본(''), 고르면 지시문 · 파일 이름이 그 화풍. 내린 화풍(retired — 2026-11-11 그림 없는 화풍)은 목록 · 주소에서 빠진다 */
-    if (mob) { { assert(RETIRED.includes('kv_jp_paint') && RETIRED.includes('mmorpg2d') && LIVE.includes('game_keyart') && LIVE.includes('cinematic_keyart') && LIVE.includes(S.default), '내린 화풍 · 살아 있는 화풍(설계)');
-      const gv = await open('/prompt.html?card=fe&o=world&world=fantasy', vp), gp = gv.page; await gp.waitForSelector('.hchip');
-      const ov = await gp.$$eval('#st-style option', os => os.map(o => o.value));
-      assert.equal(ov[0], '', '화풍 맨 위는 기본'); assert.deepEqual(ov.slice(1).sort(), LIVE.filter(k => k !== S.default).sort(), '화풍 목록 — 살아 있는 화풍만(기본은 맨 위 한 칸)');
-      assert(ov.includes('game_keyart') && ov.includes('cinematic_keyart') && !ov.includes(S.default) && !RETIRED.some(k => ov.includes(k)), '화풍 목록 — 내린 화풍(kv_jp_paint · mmorpg2d …)이 없다');
-      const d0 = await promptOf(gp);
-      assert(d0.startsWith('A full-body vertical 2:3 (1024×1536) character card image of an adult woman — ') && d0.includes('\n1. STYLE\n' + P.splitNo(P.shortStyle(S, S.default)).text + '\n'), '기본 화풍 지시문(칸 꼴 — 2026-11-11 3단계)');
-      await gp.selectOption('#st-style', 'game_keyart'); { const pk = await promptOf(gp); assert(/^A full-body vertical 2:3 \(1024×1536\)/.test(pk) && pk !== d0 && pk.includes('\n1. STYLE\n' + P.splitNo(P.shortStyle(S, 'game_keyart')).text + '\n'), '고른 화풍 지시문(짧은 판 — 2026-11-09, 화풍 단락만 바뀐다)'); }
-      assert.equal(await gp.locator('#st-style').inputValue(), 'game_keyart'); assert.equal((await state(gp)).style, 'game_keyart', '고른 화풍으로 짓는다');
-      await gp.selectOption('#st-style', ''); assert.equal(await promptOf(gp), d0, '기본으로 돌아옴');
-      assert.deepEqual(gv.errors, [], '생성기 화풍 콘솔'); checks += 9; await gv.ctx.close(); }
-    /* 내린 화풍은 주소 ?style= 로도 안 고른다 — 기본으로 */
-    { const rv = await open('/prompt.html?card=fe&o=world&world=fantasy&style=mmorpg2d', vp), rp = rv.page; await rp.waitForSelector('.hchip');
-      assert.equal(await rp.locator('#st-style').inputValue(), '', '내린 화풍 주소 — 고르개는 기본'); assert.equal((await state(rp)).style, S.default, '내린 화풍 주소 — 기본 화풍으로 짓는다');
-      assert((await promptOf(rp)).startsWith('A full-body vertical 2:3 (1024×1536)'), '내린 화풍 주소 — 칸 꼴(구조판 아님)');
-      /* 이 기기에 기억된 고른 화풍이 내린 것이어도 — 기본으로 */
-      await rp.evaluate(() => { const k = 'city_studio_v1', o = JSON.parse(localStorage.getItem(k) || '{}'); o.stylePick = 'kv_jp_paint'; localStorage.setItem(k, JSON.stringify(o)); });
-      await rp.goto(BASE + '/prompt.html?card=fe&o=world&world=fantasy'); await rp.waitForSelector('.hchip');
-      assert.equal(await rp.locator('#st-style').inputValue(), '', '내린 화풍 기억값 — 고르개는 기본'); assert.equal((await state(rp)).style, S.default, '내린 화풍 기억값 — 기본 화풍으로 짓는다');
-      assert.deepEqual(rv.errors, [], '내린 화풍 주소 콘솔'); checks += 6; await rv.ctx.close(); }
-    }
-    /* 생성기 — 세계 그림: 주소대로 카드·세계 → 덧붙임 → 다 골랐다. 기본 화풍(짧은 판 — 2026-11-09)으로 걷는다(구조판 mmorpg2d 는 2026-11-11 내렸다) */
-    const SH = T.WORLD_SHORT, CS = T.CASUAL.short, DEF = S.default, row = (list, k) => list.find(r => r.key === k);
-    v = await open('/prompt.html?card=fe-steel-sword&o=world&world=mecha', vp);
-    const p = v.page; await p.waitForSelector('.hchip'); assert.equal((await state(p)).style, DEF, '생성기는 기본 화풍');
-    assert.equal(await openOf(p), 'world', '처음 밟는 갈래는 첫 단계부터(세계는 주소대로 눌려 있다)');
-    assert.equal(await p.locator('#panel .opt[data-pick="mecha"][aria-pressed="true"]').count(), 1, '주소의 세계가 눌려 있다');
-    await p.click('#panel .opt[data-pick="mecha"]'); assert.equal(await openOf(p), 'scene', '세계 다음 장면');
-    /* 장면 — 세계 글대로 + 설계표 scenes, 시간대 고르개. 자세·표정 — 카드 자세 + 자세 일곱, 표정 고르개 */
-    assert.equal(await p.locator('#panel .opt[data-pick]').count(), 1 + D.nations.find(n => n.key === 'fe').worlds.mecha.scenes.length, '장면 선택지');
-    await p.selectOption('#panel select[data-shot="time"]', 'night');
-    await p.click('#panel .opt[data-pick="foundry"]'); assert.equal(await openOf(p), 'pose', '장면 다음 자세');
-    assert.match(await p.locator('.hchip[data-open="scene"]').textContent(), /궤도 주조소 · 밤/, '장면 칩');
-    await p.selectOption('#panel select[data-shot="expr"]', 'confident');
-    await p.click('#panel .opt[data-pick="stride"]'); assert.equal(await openOf(p), 'sil', '자세 다음 실루엣(2026-11-09)');
-    assert.match(await p.locator('#panel .opt[data-pick=""]').textContent(), /카드 설계값/, '실루엣 첫 선택지는 카드 설계값');
-    await p.click('#panel .opt[data-pick=""]'); assert.equal(await openOf(p), 'design', '실루엣 다음 설계 줄');
-    assert.equal(await p.locator('.hchip[data-open="world"]').count(), 1, '세계 칩');
-    /* 설계 줄 — 실루엣·얼굴 싣기 체크(설계표 look 값 목록), 노출. 얼굴을 끄면 FACE 줄이 빠진다 */
-    assert.equal(await p.locator('#panel [data-lookcheck]').count(), 2, '실루엣·얼굴 싣기');
-    assert((await p.locator('#panel .design-list').first().textContent()).includes('mirror-polished steel-silver'), '설계표 머리색(검 주민 — 물건 재질)이 목록에');
-    await p.selectOption('#panel select[data-exposure]', 'moderate');
-    await p.uncheck('#panel [data-lookcheck="face"]');
-    if (mob) await p.click('#hbar [data-next="design"]'); else await p.click('[data-next="design"]');
-    assert.equal(await openOf(p), 'look', '설계 줄 다음 외형');
-    assert.equal(await p.locator('#panel details.grp').count(), 4, '외형 네 묶음');
-    await p.evaluate(() => { document.querySelector('#panel details.grp[data-grp="hair"]').open = true; });   // 머리 묶음은 접혀 있다
-    await p.selectOption('#panel select[data-param="hair color"]', 'silver');
-    if (mob) await p.click('#hbar [data-next="look"]'); else await p.click('[data-next="look"]');
-    assert.equal(await openOf(p), 'notes', '외형 다음 덧붙임');
-    assert.match(await p.locator('.hchip[data-open="look"]').textContent(), /1칸/, '외형 칩');
-    await p.fill('textarea[data-note="scene"]', 'a windy ridge');
-    if (mob) await p.click('#hbar [data-next="notes"]'); else await p.click('[data-next="notes"]');
-    assert.equal(await openOf(p), 'done');
-    let t0 = await promptOf(p);
-    const first = x => { const i = x.indexOf('. '); return i > 0 ? x.slice(0, i + 1) : x; };
-    assert(t0.startsWith(SH.head.split('{')[0] + 'a citizen of the Iron Nation, of the Steel House.') && t0.includes('\n1. STYLE\n' + P.splitNo(P.shortStyle(S, DEF)).text + '\n') && t0.includes('\n' + SH.face.replace('described above', 'described below') + '\n\n') && t0.includes('\nScene note: a windy ridge\n'), '세계 지시문(칸 꼴) ' + t0.slice(0, 80));
-    assert(t0.includes('\nExposure (moderate): the costume above opens at the collarbone') && !/Exposure \(bold\)/.test(t0) && !lineOf(t0, 'Face — her own: ') && !/first impression/.test(t0) && !t0.includes('tempered-blue') && /\bhair\b/.test(lineOf(t0, 'Body and hair: ')) && /^World: year 2150/.test(lineOf(t0, 'World: ')) && lineOf(t0, 'Costume: ').includes('she is a female mecha personification'), '설계 칸(노출 · 얼굴 끔 · 실루엣 · 메카 설계)이 지시문에 ' + lineOf(t0, 'Body and hair: '));
-    assert(lineOf(t0, 'This card: ').includes('the orbital foundry floor') && t0.includes('\n' + row(T.WORLD_TIMES, 'night').en.replace(/^TIME & WEATHER:/, 'Time & weather:') + '\n') && lineOf(t0, 'Pose: ') === 'Pose: ' + row(T.WORLD_POSES, 'stride').en.replace(/[.;:]+$/, '') + '.' && [T.EXPRESSION_DETAIL.serious, T.EXPRESSION_DETAIL.confident].some(e => lineOf(t0, 'Expression: ').startsWith('Expression: ' + first(e).replace(/\.$/, ''))), '장면·시간대·자세·표정이 지시문에 ' + lineOf(t0, 'Expression: '));
-    assert(t0.includes('\n' + SH.end.replace('{symbol}', 'Fe').replace('{number}', '26').replace('One figure only, natural hands with five fingers; ', 'One figure only; ')) && t0.includes('\n' + SH.composition + '\n') && /\nAvoid: [^\n]+$/.test(t0), '구도 · 끝 줄(기호 · 번호) · Avoid');
-    assert((await p.locator(mob ? '.hres .file' : '#file-name').textContent()).includes('fe-steel-sword_mecha_' + DEF + '_f.webp'), '파일 이름');
-    await p.click('[data-open="world"]'); await p.click('[data-pick="fantasy"]');
-    assert.equal(await openOf(p), 'scene', '다 고른 뒤 고쳐도 바로 다음 칸(건너뛰지 않는다)');
-    await toDone(p); assert.equal(await openOf(p), 'done', '「다 골랐다로」');
-    const tf = await promptOf(p);
-    assert(!tf.includes('plating') && !tf.includes('MECHA DESIGN') && /\beyes\b/.test(lineOf(tf, 'Face — her own: ')) && /^World: a fantasy kingdom/.test(lineOf(tf, 'World: ')) && !tf.includes('hair color: silver') && !tf.includes('\nThis card: ') && !tf.includes('Scene note: ') && lineOf(tf, 'Pose: ').startsWith('Pose: ' + SH.pose + '.') && tf.includes('\nExposure (bold)'), '세계가 바뀌면 외형·장면 칸도 그 세계 것(판타지는 아직 설계표대로) ' + lineOf(tf, 'Pose: '));
-    assert.match(p.url(), /card=fe-steel-sword&o=world&world=fantasy/, '주소에 적힌다');
-    checks += 22;
+      /* 화풍 비교 — 도구 막대에 화풍, 묶음이 없으면 빈 안내(서울 묶음은 Task 11) */
+      { const SC = JSON.parse(read('data/style-compare.json')), sv = await open('/styles.html');
+        await sv.page.waitForSelector('.sc-lede');
+        assert.equal(await sv.page.locator('h1.tb-name').textContent(), '화풍', '화풍 도구 막대');
+        if (!SC.rounds.length) assert.equal(await sv.page.locator('.sc-cell').count(), 0, '묶음 없음 — 빈 안내');
+        assert(await H.noOverflow(sv.page), vp.width + ' 화풍 비교 넘침'); assert.deepEqual(sv.errors, [], '화풍 비교 콘솔'); checks += 4; await sv.ctx.close(); }
 
-    /* 갈래 → 일상컷(버전2): 세계(참고 그림이 되는 세계 그림 — 세계 그림 갈래에서 고른 판타지가 눌려 있다)부터 한 칸씩 */
-    await p.click('[data-open="out"]'); await p.click('[data-out="casual"]');
-    assert.equal(await openOf(p), 'world', '일상컷은 참고 그림의 세계부터');
-    assert.equal(await p.locator('#panel .opt[data-pick="fantasy"][aria-pressed="true"]').count(), 1, '세계 그림 갈래에서 고른 세계가 눌려 있다');
-    assert.match(await p.locator('#panel .note').first().textContent(), /참고 그림/, '세계 칸의 안내가 참고 그림을 말한다');
-    await p.click('#panel .opt[data-pick="mecha"]'); assert.equal(await openOf(p), 'era', '세계 다음 시대');
-    await p.click('[data-pick="now"]'); assert.equal(await openOf(p), 'place', '다음은 장소');
-    assert((await p.locator('#panel .opt[data-pick]').count()) > 20, '장소 목록');
-    const placeKey = await p.locator('#panel .opt[data-pick]:not([data-out])').first().getAttribute('data-pick');
-    await p.click('#panel .opt[data-pick="' + placeKey + '"]'); assert.equal(await openOf(p), 'weather', '다음은 계절·날씨');
-    await p.click('#panel .opt[data-pick=""]'); assert.equal(await openOf(p), 'time', '날씨 다음 시간대');
-    await p.click('#panel .opt[data-pick="neon"]'); assert.equal(await openOf(p), 'ofam');
-    await p.click('#panel .opt[data-pick="everyday"]'); assert.equal(await openOf(p), 'item');
-    await p.click('#panel .opt[data-pick=""]'); assert.equal(await openOf(p), 'color', '옷 다음 옷 색(2026-11-09)');
-    await p.click('#panel .opt[data-pick=""]'); assert.equal(await openOf(p), 'denier', '옷 색 다음 데니어');
-    await p.click('#panel .opt[data-pick=""]'); assert.equal(await openOf(p), 'situ', '데니어 다음 상황');
-    await p.click('#panel .opt[data-pick=""]'); assert.equal(await openOf(p), 'hair', '상황 다음 머리 변화');
-    assert.match(await p.locator('#panel .opt[data-pick=""]').textContent(), /그대로/, '머리 그대로가 첫 선택지');
-    await p.click('#panel .opt[data-pick="tied"]'); assert.equal(await openOf(p), 'preset', '머리 다음 자세 추천');
-    /* 추천 하나 → 몸 쪽이 다 차고 시선으로 뛴다 */
-    const presetKey = await p.locator('#panel .opt[data-pick]:not([data-out])').nth(1).getAttribute('data-pick');
-    await p.click('#panel .opt[data-pick="' + presetKey + '"]');
-    let sc = (await state(p)).scene;
-    assert(sc.posture && sc.support && sc.frame && sc.body && sc.head && sc.camera, '추천이 몸 쪽을 채웠다 ' + JSON.stringify(sc));
-    assert(['gaze', 'legs', 'expr', 'notes', 'use'].includes(await openOf(p)), '추천 뒤 열린 칸 ' + (await openOf(p)));
-    assert.equal(await p.locator('.hchip[data-open="posture"]').count(), 1, '몸 자세 칩이 찼다');
-    /* 해방 — 몸 자세에서 트리 밖이 흐리게, 까닭이 붙는다 */
-    await p.click('[data-open="posture"]');
-    const unlock = p.locator('#unlock'); if (await unlock.count()) { await unlock.check(); assert((await p.locator('#panel .opt.out .why').count()) >= 1, '트리 밖 까닭'); await unlock.uncheck(); }
-    await toDone(p);
-    assert.equal(await openOf(p), 'done');
-    /* 덧붙임 칸의 두 축 — 기본은 고정값(가장 강함·많이), 바꾸면 지시문이 따라오고 칩에 보인다 */
-    await p.click('[data-open="notes"]');
-    assert.equal(await p.locator('#panel select[data-axis]').count(), 2, '전체 강도·피부 노출 고르개');
-    assert.equal(await p.locator('#panel select[data-axis="skin_exposure"]').inputValue(), 'bold', '기본은 고정값');
-    await p.selectOption('#panel select[data-axis="skin_exposure"]', 'moderate');
-    assert.match(await p.locator('.hchip[data-open="notes"]').textContent(), /보통/, '덧붙임 칩에 축');
-    assert(lineOf(await promptOf(p), 'Outfit: ').includes(', ' + CS.expose.moderate + ', ') && !(await promptOf(p)).includes(CS.expose.bold), '바꾼 축이 지시문(옷 줄)에');
-    await p.selectOption('#panel select[data-axis="skin_exposure"]', 'bold');
-    await toDone(p); assert.equal(await openOf(p), 'done');
-    const t1 = await promptOf(p);
-    assert(lineOf(t1, 'POSTURE: ') && lineOf(t1, 'COMPOSITION: ') && t1.includes('\n\n' + CS.output + '\n\n') && lineOf(t1, 'Outfit: ').includes(', ' + CS.expose.bold + ', ' + CS.body + '.') && !/overall_intensity|skin_exposure/.test(t1) && t1.startsWith(CS.input.split('{who}')[0] + 'a citizen of the Iron Nation, a personification of ') && t1.includes('\n\n' + CS.face + '\n\n') && t1.includes('\n\nStyle: ' + P.shortStyle(S, DEF) + ' ' + CS.keep + '\n\n') && t1.endsWith(CS.end), '일상컷 지시문(짧은 판) ' + t1.slice(0, 120));
-    assert(lineOf(t1, 'Time of day: ') === 'Time of day: ' + row(T.CASUAL.times, 'neon').en + '.' && lineOf(t1, 'Hair: ') === 'Hair: ' + row(T.CASUAL.hairs, 'tied').en + '.', '시간대·머리가 일상컷 줄에');
-    assert.match(await p.locator('.hchip[data-open="time"]').textContent(), /네온 밤/, '시간대 칩'); assert.match(await p.locator('.hchip[data-open="hair"]').textContent(), /묶음/, '머리 칩');
-    /* 손에 드는 그 원소의 물건 — 오른손을 「소품 동작」 으로 하면 소품 동작 칸에 「그 물건을 든다」 가 보인다(검의 주민은 검) */
-    await p.click('[data-open="right"]'); await p.click('#panel .opt[data-pick="prop"]'); assert.equal(await openOf(p), 'left', '오른손 다음 왼손');
-    await p.click('#panel .opt[data-pick=""]'); assert.equal(await openOf(p), 'use', '소품 동작 칸');
-    if (!(await p.locator('#panel .opt[data-pick^="sig_"]').count()) && mob) { await p.click('#panel [data-gtab=""]'); }
-    assert((await p.locator('#panel .opt[data-pick^="sig_"]').count()) >= 1, '그 물건을 드는 동작 선택지(컷에 맞는 꼴 — 얼굴 클로즈업이면 얼굴 옆에)');
-    await p.click('#panel .opt[data-pick^="sig_"]'); await toDone(p);
-    assert(/^PROP: with her own right hand she holds a forged/.test(lineOf(await promptOf(p), 'PROP: ')), '검의 주민이 검을 든다 ' + lineOf(await promptOf(p), 'PROP: ').slice(0, 80));
-    assert((await p.locator(mob ? '.hres .file' : '#file-name').textContent()).includes('fe-steel-sword_mecha_' + DEF + '_f_casual1.webp'), '일상컷 파일 이름(세계를 탄다)');
-    const refT = await p.locator(mob ? '.hres .ref' : '#ref .ref').textContent();
-    /* 등록돼 있으면 작은 그림, 없으면 「아직 없다」 — 등록부를 보고 판정한다(그림이 차면 바뀐다) */
-    const refHave = !!((((((IMGJ.img['fe-steel-sword'] || {}).byStyle || {})[DEF] || {}).byForm || {}).mecha || {}).f);
-    assert(refT.includes('fe-steel-sword_mecha_' + DEF + '_f.webp') && /아직 없다/.test(refT) === !refHave, '참고 그림 줄 — 그 세계 그림 이름, 등록 ' + refHave + ' ' + refT);
-    assert.equal(await p.locator((mob ? '.hres' : '#ref') + ' .ref img').count(), refHave ? 1 : 0, '등록된 참고 그림은 작은 그림으로');
-    assert.match(p.url(), /card=fe-steel-sword&o=casual&world=mecha/, '일상컷도 주소에 세계');
-    checks += 28;
-    /* 랜덤 처음부터 — 다 찬다. 여기부터 다시 — 장소를 열면 뒤가 빈다 */
-    await randAll(p, 'world');
-    assert.equal(await openOf(p), 'done', '랜덤 뒤 다 골랐다');
-    sc = (await state(p)).scene; assert(sc.era && sc.place && sc.ofam && sc.posture && sc.frame, '랜덤이 다 채운다');
-    await p.click('[data-open="place"]'); await menu(p); await p.click('[data-restart="place"]');
-    sc = (await state(p)).scene; assert.equal(await openOf(p), 'place'); assert(!sc.posture && !sc.frame && sc.era && sc.place, '뒤 칸을 비웠다 ' + JSON.stringify(sc));
-    assert.match(await p.locator('#status').textContent(), /여기부터 다시/);
-    await randAll(p, 'place'); assert.equal(await openOf(p), 'done');
-    /* 처음부터 다시 — 카드·갈래는 그대로 */
-    await p.click('[data-reset]'); assert.equal(await openOf(p), 'world'); sc = (await state(p)).scene; assert(!sc.place && !sc.posture && !(await state(p)).world, '모든 칸을 비웠다(세계도)');
-    await randAll(p, 'world'); assert((await state(p)).world && (await state(p)).scene.era, '랜덤이 세계도 채운다'); await p.click('[data-reset]'); await randAll(p, 'world');
-    assert.equal((await state(p)).card, 'fe-steel-sword'); assert.equal((await state(p)).out, 'casual');
-    /* 폰 — 레일 한 줄·아래 막대·시트 */
-    if (mob) {
-      await randAll(p, 'world');
-      const mb = await p.evaluate(() => { const hb = document.getElementById('hbar'), r = hb.getBoundingClientRect(); return { rail: document.querySelector('.hrail') ? document.querySelector('.hrail').getBoundingClientRect().height : 0, barIn: !hb.hidden && r.bottom <= innerHeight + 0.5, path: document.querySelectorAll('.hpath .hcrumb').length, hres: !!document.querySelector('.hres') }; });
-      assert(mb.rail > 0 && mb.rail <= 60, '칩 레일 한 줄 ' + mb.rail); assert(mb.barIn, '아래 막대'); assert.equal(mb.path, 3, '경로 나라·카드·갈래'); assert(mb.hres, '결과 상자');
-      await p.click('[data-open="world"]'); await p.click('#hbar [data-act="sheet"]'); assert((await p.locator('#hsheet textarea').inputValue()).length > 200, '시트에 지시문'); await p.click('#hsheet [data-act="sheet-close"]');
+      /* 생성기 화풍 고르개 — 맨 위 기본(''), 내린 화풍은 목록 · 주소 · 기억값에서 빠진다(폰에서만) */
+      if (mob) {
+        const gv = await open('/prompt.html?card=seoul&o=world&world=fantasy'), gp = gv.page; await gp.waitForSelector('.hchip');
+        const ov = await gp.$$eval('#st-style option', os => os.map(o => o.value));
+        assert.equal(ov[0], '', '화풍 맨 위는 기본'); assert.deepEqual(ov.slice(1).sort(), LIVE.filter(k => k !== DEF).sort(), '화풍 목록 — 살아 있는 화풍만');
+        const d0 = await promptOf(gp);
+        assert.equal(d0, P.build(D, S, 'seoul', 'fantasy', { style: DEF }), '주소대로 서울 판타지 — 기본 화풍 지시문');
+        const other = LIVE.find(k => k !== DEF);
+        await gp.selectOption('#st-style', other); assert.equal(await promptOf(gp), P.build(D, S, 'seoul', 'fantasy', { style: other }), '고른 화풍 지시문');
+        await gp.selectOption('#st-style', ''); assert.equal(await promptOf(gp), d0, '기본으로 돌아옴');
+        await gp.goto(srv.base + '/prompt.html?card=seoul&o=world&world=fantasy&style=' + RETIRED[0]); await gp.waitForSelector('.hchip');
+        assert.equal((await state(gp)).style, DEF, '내린 화풍 주소 — 기본 화풍으로 짓는다');
+        /* 옛 세계(mecha)가 주소로 와도 버린다 — 조립기가 던지지 않게 */
+        await gp.goto(srv.base + '/prompt.html?card=seoul&o=world&world=mecha'); await gp.waitForSelector('.hchip');
+        assert.equal((await state(gp)).world, '', '세계 mecha 주소는 버린다'); assert.equal(await openOf(gp), 'world', '세계 칸부터');
+        assert.deepEqual(gv.errors, [], '생성기 화풍 콘솔'); checks += 8; await gv.ctx.close();
+      }
+
+      /* 도시 판 — 처음 오면 도시부터. 열 곳, 설계 미정 아홉은 누를 수 없다 */
+      const v = await open('/prompt.html'), p = v.page;
+      await p.evaluate(() => localStorage.removeItem('city_studio_v1')); await p.reload(); await p.waitForSelector('#panel .opt');
+      assert.equal(await openOf(p), 'city', '처음은 도시 판');
+      assert.equal(await p.locator('#panel .opt[data-city]').count(), D.cities.length, '도시 열 곳');
+      assert.equal(await p.locator('#panel .opt[data-city][disabled]').count(), D.cities.filter(c => !P.worldsOf(D, c.key).length).length, '설계 미정은 누를 수 없다');
+      assert.match(await p.locator('#panel .opt[data-city="tokyo"]').textContent(), /설계 미정/, '설계 미정 표시');
+      await p.click('#panel .opt[data-city="seoul"]'); assert.equal(await openOf(p), 'out', '도시 다음 갈래');
+      await p.click('[data-out="world"]'); assert.equal(await openOf(p), 'world', '갈래 다음 세계');
+      assert.deepEqual(await p.$$eval('#panel .opt[data-pick]', os => os.map(o => o.dataset.pick)), D.vocab.worlds, '세계 셋(mecha 없음)');
+      /* 세계 그림 — 사이버펑크: 장면(설계표 셋 + 고르지 않음) · 시간대 → 자세 · 표정 → 실루엣 → 설계 줄 → 외형 → 덧붙임 */
+      await p.click('#panel .opt[data-pick="cyberpunk"]'); assert.equal(await openOf(p), 'scene', '세계 다음 장면');
+      const cw = D.cities.find(c => c.key === 'seoul').worlds.cyberpunk;
+      assert.equal(await p.locator('#panel .opt[data-pick]').count(), 1 + cw.scenes.length, '장면 선택지');
+      await p.selectOption('#panel select[data-shot="time"]', 'night');
+      await p.click('#panel .opt[data-pick="alley"]'); assert.equal(await openOf(p), 'pose', '장면 다음 자세');
+      assert((await p.locator('.hchip[data-open="scene"]').textContent()).includes(cw.scenes[2].ko), '장면 칩');
+      await p.selectOption('#panel select[data-shot="expr"]', 'confident');
+      await p.click('#panel .opt[data-pick="stride"]'); assert.equal(await openOf(p), 'sil', '자세 다음 실루엣');
+      assert.equal(await p.locator('#panel .opt[data-pick]').count(), 2 + T.SILHOUETTES.cyberpunk.length, '실루엣 — 고르지 않음 · 자유 + 사이버펑크 갈래');
+      await p.click('#panel .opt[data-pick="long_raincoat"]'); assert.equal(await openOf(p), 'design', '실루엣 다음 설계 줄');
+      assert.equal(await p.locator('#panel [data-lookcheck]').count(), 2, '실루엣 · 얼굴 싣기');
+      assert((await p.locator('#panel .design-list').first().textContent()).includes(T.VOCAB_EN.hair_color[cw.look.silhouette.hair_color]), '설계표 머리색이 목록에');
+      assert((await p.locator('#panel .note').first().textContent()).includes(cw.look.why.slice(0, 12)), '왜 이 외형인가 — 그 세계의 why');
+      await p.selectOption('#panel select[data-exposure]', 'moderate');
+      await p.uncheck('#panel [data-lookcheck="face"]');
+      await next(p, 'design'); assert.equal(await openOf(p), 'look', '설계 줄 다음 외형');
+      assert.equal(await p.locator('#panel details.grp').count(), 4, '외형 네 묶음');
+      await p.evaluate(() => { document.querySelector('#panel details.grp[data-grp="hair"]').open = true; });
+      await p.selectOption('#panel select[data-param="hair color"]', 'silver');
+      await next(p, 'look'); assert.equal(await openOf(p), 'notes', '외형 다음 덧붙임');
+      await p.fill('textarea[data-note="scene"]', 'a windy ridge');
+      await next(p, 'notes'); assert.equal(await openOf(p), 'done');
+      const t0 = await promptOf(p);
+      assert.equal(t0, P.build(D, S, 'seoul', 'cyberpunk', { style: DEF, notes: { scene: 'a windy ridge' }, look: { params: { 'hair color': 'silver' }, faceDesignOn: false, silhouetteOn: true, exposure: 'moderate' },
+        shot: { scene: 'alley', time: 'night', pose: 'stride', expr: 'confident', frame: 'long_raincoat' } }), '화면 지시문 = 조립기(고른 칸 전부)');
+      assert(t0.includes(cw.scenes[2].en) && t0.includes(T.SILHOUETTES.cyberpunk[0].en) && /Exposure \(moderate\)/.test(t0) && !lineOf(t0, 'Face — her own: ') && t0.includes('hair color: silver'), '고른 칸이 지시문에');
+      assert((await p.locator(mob ? '.hres .file' : '#file-name').textContent()).includes('seoul_cyberpunk_' + DEF + '_f.webp'), '파일 이름');
+      /* 다 고른 뒤 세계를 바꾸면 바로 다음 칸 — 그 세계 몫 칸은 따로(판타지는 기본) */
+      await p.click('[data-open="world"]'); await p.click('[data-pick="fantasy"]');
+      assert.equal(await openOf(p), 'scene', '다 고른 뒤 고쳐도 바로 다음 칸');
+      await toDone(p);
+      const tf = await promptOf(p), fw = D.cities.find(c => c.key === 'seoul').worlds.fantasy;
+      assert.equal(tf, P.build(D, S, 'seoul', 'fantasy', { style: DEF }), '판타지는 기본 설정 그대로');
+      assert(tf.includes(fw.motif.en) && tf.includes(fw.scenes[0].en), '판타지 motif · 첫 장면');
+      assert.match(p.url(), /card=seoul&o=world&world=fantasy/, '주소에 적힌다');
+      checks += 24;
+      /* 갈래 → 일상컷: 세계 칸부터(일상컷 걸음은 Task 4) */
+      await p.click('[data-open="out"]'); await p.click('[data-out="casual"]');
+      assert.equal(await openOf(p), 'world', '일상컷은 참고 그림의 세계부터');
+      assert.equal(await p.locator('#panel .opt[data-pick="fantasy"][aria-pressed="true"]').count(), 1, '세계 그림 갈래에서 고른 세계가 눌려 있다');
+      await p.click('#panel .opt[data-pick="fantasy"]'); assert.equal(await openOf(p), 'era', '세계 다음 시대');
+      await p.click('[data-open="out"]'); await p.click('[data-out="world"]');
       checks += 3;
+      /* 폰 — 칩 레일 한 줄 · 아래 막대 · 경로(도시 · 갈래) · 시트 */
+      if (mob) {
+        await p.click('[data-open="done"]').catch(() => {});
+        const mb = await p.evaluate(() => { const hb = document.getElementById('hbar'), r = hb.getBoundingClientRect(); return { rail: document.querySelector('.hrail') ? document.querySelector('.hrail').getBoundingClientRect().height : 0, barIn: !hb.hidden && r.bottom <= innerHeight + 0.5, path: document.querySelectorAll('.hpath .hcrumb').length }; });
+        assert(mb.rail > 0 && mb.rail <= 60, '칩 레일 한 줄 ' + mb.rail); assert(mb.barIn, '아래 막대'); assert.equal(mb.path, 2, '경로 도시 · 갈래');
+        await p.click('[data-open="scene"]'); await p.click('#hbar [data-act="sheet"]'); assert((await p.locator('#hsheet textarea').inputValue()).length > 200, '시트에 지시문'); await p.click('#hsheet [data-act="sheet-close"]');
+        /* 누르는 자리 44px — 생성기 판의 선택지 · 아래 막대 단추 */
+        const small = await p.$$eval('#panel .opt, #hbar .btn', bs => bs.filter(b => b.offsetParent).map(b => b.getBoundingClientRect()).filter(r => r.height < 44).length);
+        assert.equal(small, 0, '44px 보다 낮은 단추 ' + small);
+        checks += 5;
+      }
+      /* 새로 고쳐도 남는다 */
+      await p.reload(); await p.waitForSelector('.hchip');
+      assert.equal((await state(p)).card, 'seoul'); assert.equal((await state(p)).world, 'fantasy');
+      assert(await H.noOverflow(p), vp.width + ' 생성기 넘침'); assert.deepEqual(v.errors, [], '생성기 콘솔'); checks += 4;
+      await H.shot(p, 'prompt-' + vp.width);
+      await v.ctx.close();
     }
-    /* 새로 고쳐도 남는다 */
-    await p.reload(); await p.waitForSelector('.hchip');
-    assert.equal((await state(p)).card, 'fe-steel-sword'); assert.equal((await state(p)).out, 'casual');
-    await noOverflow(p, vp.width); assert.deepEqual(v.errors, []); checks += 6; await v.ctx.close();
-  }
-  await br.close(); server.close();
-  console.log('PASS 화면: 화풍 비교 · 생성기(세계 그림·일상컷 버전2 한 칸씩·자세 추천·해방·랜덤·여기부터 다시·처음부터·주소·저장·폰 레일/막대/시트) · 폰·PC — ' + checks + '가지');
-})().catch(e => { console.error(e); server.close(); process.exit(1); });
+  } finally { await br.close(); srv.close(); }
+  console.log('PASS 화면: 화풍 비교 · 생성기(도시 판 · 세계 그림 한 칸씩 · 화면 = 조립기 · 화풍 고르개 · 옛 mecha 주소 · 주소 · 저장 · 폰 레일/막대/시트/44px) · 폴드 덮개 · PC — ' + checks + '가지 · 일상컷 걸음은 Task 4');
+})().catch(e => { console.error(e); process.exit(1); });
