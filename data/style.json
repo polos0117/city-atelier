@@ -1,0 +1,588 @@
+{
+ "version": 1,
+ "note": "화풍 기록 — 설계 지시문 뒤에 붙이는 공통 화풍 블록. 판을 바꾸면 versions 끝에 새 판을 더하고 current 를 옮긴다. 옛 판은 지우지 않는다(그림 기록이 어느 판으로 만들었는지 가리킨다). text 는 근본·가문주·주민 세 세계, casual 은 일상컷에 싣는다. 기본은 mmorpg2d(2026-11-06 — 2D 한국 MMORPG 구조 지시문. semireal 과 같은 구조판이고 1절 작화 고정만 다르다. 사용자 「원소공방도 이그림체로 하자」). 그 전 기본은 semireal(2026-11-04 — 반실사 구조 지시문. 공통 적용 규칙 · 1절 작화 고정은 판의 rules · section1, 일상컷은 casual_rule 을 더 싣고, 2~4절은 카드마다 칸을 채운다. 생성기가 이 틀로 전체본을 짓는다 — lib/prompt-city.js 의 buildStructured · casualStructured, 칸 기본 글은 lib/prompt-spec.js 의 STRUCT, 카드 손글 칸은 설계표 struct. text 는 쓰지 않는다). 그 전 기본은 game_keyart(2026-10-31 — 철나라 열다섯 장을 CGI·2.5D 로 나란히 보고 사용자가 「2.5d 가 낫다, CGI 는 얼굴이 각지고 못생기게 나오는 컷이 있다」). game_cgi(철나라 열여덟 장)·cinematic_keyart(비교 여섯 장)는 그 그림들의 열쇠로 남는다. 일상컷은 세계 그림을 참고 그림으로 붙이므로 그 그림의 화풍을 따른다. 전신 2:3·한 명·손 같은 조건은 여기가 아니라 생성기 문장(lib/prompt-spec.js 의 RULES)에 둔다. retired = 내린 화풍(2026-11-11 — 도감에 그림이 없는 것) — 생성기 화풍 고르개 · ?style= 에서 빠진다.",
+ "default": "jp_paint_anime",
+ "styles": {
+  "mmorpg2d": {
+   "name": "2D MMORPG 구조 지시문",
+   "current": "v1",
+   "versions": [
+    {
+     "v": "v1",
+     "adopted": "2026-11-06",
+     "by": "사용자 채택 — 포켓몬 공방 새 컨셉(프리미엄 2D 한국 MMORPG 공식 캐릭터 일러스트 — 피카츄 · 갸라도스 · 팬텀 · 잠만보 메카 장갑과 일상컷)을 보고 「원소공방도 이그림체로 하자」. 구조판 틀(공통 적용 규칙 · 2~4절 칸 · 카드 손글 칸)은 semireal 그대로, 1절 작화 고정만 이 그림체로",
+     "format": "structured",
+     "rules": "공통 적용 규칙:\n\n각 항목은 자신이 담당하는 요소에만 적용한다. 작화 방식은 1번, 캐릭터의 신체적 특징은 2번, 의상과 장비는 3번, 동작과 화면 연출은 4번을 따른다.\n\n특정 항목을 수정할 때 별도로 지정하지 않은 나머지 항목은 유지한다. 체형의 볼륨이나 굴곡 변경을 얼굴의 성숙도·표정·포즈·카메라·그림체 변화로 확대 해석하지 않는다. 의상은 지정된 디자인과 노출 범위를 유지하면서 변경된 신체 치수에 맞게 착용 형태만 조정한다.",
+     "casual_rule": "첨부한 세계 그림이 이 사람과 그림체의 기준이다(reference image = identity and style lock). 얼굴·눈·머리·피부·체형과 마감·채도·빛의 질감은 첨부 그림 그대로 두고, 옷·자세·표정·구도·장소만 이 문구대로 바꾼다. 첨부 그림의 옷·장갑·장식·배경·포즈·머리 각도·카메라 높이는 가져오지 않는다. 원소는 작은 장신구나 주변 물건으로만 드러내고, 옷의 색·무늬·재단에는 넣지 않는다.",
+     "section1": "1.작화 스타일 — 공통 고정\n\n작화 장비 비교 계열: 한국 MMORPG 공식 캐릭터 일러스트(premium 2D Korean MMORPG official character illustration) — 분명히 손으로 그린 2D 캐릭터 그림(clearly hand-drawn 2D character art)에 섬세한 색 선화(delicate refined coloured linework)와 여러 겹으로 칠한 명암(layered painted shading)을 더한 디지털 일러스트레이션, 화려한 한국 판타지 게임 의상 일러스트의 깔끔하고 정밀한 마감(elaborate Korean fantasy game costume illustration with clean detailed rendering)\n\n01 POSITIVE - 기술 작화\n\n형태 언어: 공들여 설계한 형태(carefully designed shapes), 성인 애니메이션식 미형(elegant adult anime facial design)과 균형 잡힌 자연스러운 성인 비례, 캐릭터마다 지정된 얼굴과 신체 비례를 유지, 얼굴과 몸이 분명히 2D 그림으로 읽히는 표현(face and body visibly illustrated in 2D)\n\n얼굴형: 지정된 얼굴 윤곽과 골격을 가는 색 선과 부드럽게 칠한 명암으로 표현, 이마·볼·턱이 매끄럽게 이어지는 형태, 골격의 거친 굴곡을 덜어 낸 섬세한 조형\n\n눈 구조: 표정이 살아 있는 정밀한 눈(expressive finely detailed eyes), 또렷한 윗눈꺼풀 선과 속눈썹, 옅은 아랫눈꺼풀, 지정된 눈의 크기·형태·배치를 유지\n\n홍채: 지정된 홍채색과 동공 형태를 유지하는 여러 층의 색(layered iris), 위쪽의 깊은 음영과 아래쪽의 밝은 반사, 장면 광원을 비추는 몇 개의 캐치라이트(catchlights)\n\n코: 지정된 콧대·코끝 형태를 짧은 선과 옅은 그림자로 표현(minimal nose, no heavy modelling), 얼굴의 다른 부위와 이어지는 피부색 변화\n\n입과 표정: 지정된 입술 형태와 두께를 가는 색 선과 작은 반사로 표현, 눈꺼풀·눈썹·입꼬리의 변화로 짓는 자연스러운 표정(subtle expression)\n\n선화: 검은 선이 아니라 그 부위의 색을 띤 가늘고 섬세한 선(coloured linework, not black outlines), 바깥 윤곽과 의상 접합부는 조금 더 또렷하게, 깊이와 재질에 따라 달라지는 선의 강약(varied line weight)\n\n머리카락: 지정된 헤어스타일의 큰 덩어리와 흐름을 선과 칠로 나누고 가닥을 골라 묘사(hair drawn in clumps with selective strands), 칠한 하이라이트 띠와 가장자리 빛(rim light), 머리색의 고유색을 지키는 내부 음영\n\n피부: 지정된 피부색 위에 몇 단의 부드러운 칠 명암(soft painted shading in a few tones), 은은한 혈색, 매끈하되 플라스틱 광택 없는 피부, 모공·피부 결 묘사 없음(no pores, no skin texture)\n\n의상 선화/채색: 정교하지만 한눈에 읽히는 의상 구조(intricate yet readable costume design), 접합부(seams)와 장식을 따라 그린 선, 금속에는 칠한 날카로운 반사(painted specular highlights), 직물에는 주름 선과 겹친 명암, 투명 소재에는 겹침과 투과광, 지정되지 않은 소재나 장비를 임의로 추가하지 않는 묘사\n\n손: 자연스러운 손바닥 구조와 다섯 손가락의 연결(anatomically correct hands, five fingers), 동작에 맞는 관절 방향과 손가락 간격, 장갑을 낀 경우에도 설득력 있게 이어지는 손 형태\n\n렌더링/셰이딩: 셀 명암에서 부드러운 칠로 이어지는 여러 겹의 명암(layered cel-to-soft painted shading), 분명한 그림자 모양(clear shadow shapes), 구조물의 선명한 모서리와 접촉 그림자(contact shadows), 붓 자국 대신 깔끔한 디지털 채색(clean digital painting)\n\n광원/색채: 풍부하고 빛나는 색(rich luminous colours), 밝고 맑은 빛(bright clear lighting), 지정된 광원과 팔레트를 따르는 일관된 색온도, 밝은 면에도 남아 있는 색 정보(no blown-out highlights)\n\n디테일/마감: 얼굴·눈·주요 의상의 정밀한 묘사, 배경은 외곽선 없이 부드럽고 자세하게 칠한 붓질(painted background without outlines), 먼 배경의 공기 원근(atmospheric perspective), 공식 캐릭터 키아트 수준의 마감(polished character key art)\n\n02 NEGATIVE - 3D 렌더(3D render), 실사·사진 같은 표현(photorealistic), 반실사 피부 결과 모공(semi-realistic skin texture, pores), 선 없이 덩어리로만 빚은 반실사(lineless semi-real rendering), 굵고 균일한 검은 외곽선(thick uniform black outlines), 납작한 한 단 셀 셰이딩(flat single-tone cel shading), 거친 수채 번짐(watercolor bleed), 두꺼운 유화 붓 자국(impasto), 종이 질감(paper texture), 지정된 얼굴 비례의 임의 변경, 캐릭터마다 반복되는 같은 얼굴(same face), 과도한 화장과 볼 홍조, 과도한 블룸(excessive bloom), 모든 재질에 같은 플라스틱 광택(plastic sheen), 뭉개진 의상 구조, 부정확한 관절, 기형 손(malformed hands), 손가락 누락과 추가(missing or extra fingers), 추가 팔다리(extra limbs), 지정되지 않은 장비와 장식",
+     "sections": [
+      "2.캐릭터 외형 — 캐릭터별 교체",
+      "3. 코디네이션 — 의상별 교체",
+      "4. 장면 — 장면별 교체"
+     ],
+     "text": "A premium 2D Korean MMORPG official character illustration: clearly hand-drawn 2D character art with delicate refined coloured linework, elegant adult anime facial design, expressive finely detailed eyes, carefully designed shapes, rich luminous colours and layered painted shading; elaborate Korean fantasy game costume illustration with clean detailed rendering. The face and body stay visibly illustrated in 2D — no 3D render, no photorealistic appearance."
+    }
+   ],
+   "retired": "2026-11-11",
+   "retired_why": "도감에 그림이 없는 화풍 — 2.5 때 만든 키라 2.6 에서 안 쓴다(사용자 2026-11-11 「도감에 그림 등록이 없는 키들은 빼는게 좋을거 같아」 → 「1,2번 다 내려줘」). 지우지 않고 고르개에서만 뺀다"
+  },
+  "semireal": {
+   "name": "반실사 구조 지시문",
+   "current": "v1",
+   "versions": [
+    {
+     "v": "v1",
+     "adopted": "2026-11-04",
+     "by": "사용자 채택 — 헬륨 · 규소 세 세계와 헬륨 카페 일상컷을 이 틀(공통 적용 규칙 + 1절 작화 고정 + 2~4절 칸 채우기, 1절 그림 용어 영어 병기)로 GPT 세션에서 뽑아 보고 「이런구조로 가자」 · 「이걸 기본화풍으로 처음부터 만들거야」",
+     "format": "structured",
+     "rules": "공통 적용 규칙:\n\n각 항목은 자신이 담당하는 요소에만 적용한다. 작화 방식은 1번, 캐릭터의 신체적 특징은 2번, 의상과 장비는 3번, 동작과 화면 연출은 4번을 따른다.\n\n특정 항목을 수정할 때 별도로 지정하지 않은 나머지 항목은 유지한다. 체형의 볼륨이나 굴곡 변경을 얼굴의 성숙도·표정·포즈·카메라·그림체 변화로 확대 해석하지 않는다. 의상은 지정된 디자인과 노출 범위를 유지하면서 변경된 신체 치수에 맞게 착용 형태만 조정한다.",
+     "casual_rule": "첨부한 세계 그림이 이 사람과 그림체의 기준이다(reference image = identity and style lock). 얼굴·눈·머리·피부·체형과 마감·채도·빛의 질감은 첨부 그림 그대로 두고, 옷·자세·표정·구도·장소만 이 문구대로 바꾼다. 첨부 그림의 옷·장갑·장식·배경·포즈·머리 각도·카메라 높이는 가져오지 않는다. 원소는 작은 장신구나 주변 물건으로만 드러내고, 옷의 색·무늬·재단에는 넣지 않는다.",
+     "section1": "1.작화 스타일 — 공통 고정\n\n작화 장비 비교 계열: 애니메이션식 미형 조형(anime-style idealized features)에 섬세한 반실사 인체 채색(semi-realistic skin rendering)과 정밀한 재질 묘사를 결합한 디지털 일러스트레이션, 고급 3D 캐릭터 렌더를 연상시키는 매끄러운 입체감(high-end 3D character render look), 부드러운 인체 표현과 구조적으로 선명한 사물 표현의 조화, 표면의 고유색(local color)과 재질 차이를 유지하는 정교한 고밀도 마감(high-detail polished finish)\n\n01 POSITIVE - 기술 작화\n\n형태 언어: 애니메이션식 이상화와 설득력 있는 입체 구조의 결합(stylized anime proportions with believable 3D form), 인체의 유기적인 곡면과 의상·소품의 구조를 자연스럽게 연결하는 조형, 캐릭터마다 지정된 얼굴과 신체 비례를 유지하는 반실사 표현(semi-realistic)\n\n얼굴형: 지정된 얼굴 윤곽과 골격을 부드러운 곡면 명암(soft form shading)으로 표현, 이마·볼·턱 사이의 자연스러운 형태 연결, 얼굴의 특징을 유지하면서 골격의 거친 굴곡을 절제한 섬세한 조형\n\n눈 구조: 지정된 눈의 크기와 형태 및 배치를 유지하면서 안구와 눈꺼풀의 입체감을 표현, 섬세한 상안검(upper eyelid)과 속눈썹, 옅은 하안검(lower eyelid)과 부드러운 눈 밑 음영, 얼굴 안에 자연스럽게 자리 잡는 눈 구조\n\n홍채: 지정된 홍채색과 동공 형태를 유지하는 다층 색 표현(layered iris), 상단의 깊은 음영과 하단의 부드러운 반사, 섬세한 내부 색 변화, 장면의 광원을 반영하는 소수의 캐치라이트(catchlights), 촉촉한 각막과 투명한 깊이감\n\n코: 지정된 콧대·코끝·콧방울의 형태를 미세한 명암으로 표현, 강한 외곽선 없이 형성되는 부드러운 입체감(no hard nose outline), 얼굴의 다른 부위와 자연스럽게 연결되는 피부색 변화\n\n입과 표정: 지정된 입술 형태와 두께를 유지하는 섬세한 입체 표현, 부드러운 입술 경계와 작은 표면 반사, 눈꺼풀·눈썹·입꼬리의 미세한 변화로 구현하는 자연스러운 표정(subtle expression)\n\n선화: 독립적인 외곽선보다 색 경계와 명암 및 재질 차이로 형태를 구분(lineless edges, form defined by color and value), 얼굴과 피부에서는 거의 드러나지 않는 윤곽선, 눈·입술 틈·의상 접합부에 집중되는 섬세한 선 표현, 깊이와 재질에 따라 달라지는 경계의 강도(varied edge control)\n\n머리카락: 지정된 헤어스타일의 큰 덩어리와 흐름을 먼저 유지하고 개별 가닥을 선택적으로 묘사(hair rendered in clumps with selective strands), 여러 층으로 겹치는 자연스러운 부피, 얼굴 주변의 섬세한 잔머리(flyaway strands), 광원에 맞춘 가는 반사와 가장자리 빛(rim light), 머리색의 고유색을 유지하는 내부 음영\n\n피부: 지정된 피부색을 바탕으로 한 부드러운 중간톤과 곡면 그라데이션, 부위별로 절제된 혈색, 자연스러운 반투명감(soft subsurface scattering)과 넓고 은은한 확산 하이라이트(broad diffuse highlights), 주변 반사광이 들어와도 피부 고유색이 구분되는 채색\n\n의상 선화/채색: 의상의 실제 구조를 따라 배치되는 경계와 접합부(seams), 소재별로 구분되는 명암과 표면 반응, 금속에는 선택적인 날카로운 반사(specular highlights), 직물에는 조직과 두께를 반영한 부드러운 음영(fabric weave and thickness), 투명 소재에는 투과광과 겹침을 표현, 지정되지 않은 소재나 장비를 임의로 추가하지 않는 묘사\n\n손: 자연스러운 손바닥 구조와 다섯 손가락의 연결(anatomically correct hands, five fingers), 동작에 맞는 관절 방향과 손가락 간격, 부드러운 인체 명암, 장갑을 착용한 경우에도 내부 손 구조가 설득력 있게 이어지는 형태 표현\n\n렌더링/셰이딩: 인체의 연속적인 곡면 그라데이션(smooth gradient shading), 구조물의 선명한 모서리와 접촉 그림자(contact shadows), 재질별로 구분되는 반사 강도와 경계, 눈에 띄는 붓 자국을 절제한 매끄러운 디지털 채색(clean digital painting, no visible brushstrokes), 부드러운 부분과 선명한 부분이 공존하는 입체 표현\n\n광원/색채: 지정된 광원과 팔레트를 따르는 일관된 색온도(consistent color temperature), 표면의 고유색과 조명색의 자연스러운 결합, 피부에서는 완만하고 구조적 접합부에서는 깊어지는 명암, 밝은 면에도 남아 있는 색 정보(no blown-out highlights), 국소적인 반사와 발광의 절제된 표현\n\n디테일/마감: 얼굴과 눈의 섬세한 묘사, 주요 의상과 소품의 정밀한 구조, 초점·거리·재질에 따라 조절되는 묘사 밀도, 가까운 부분의 선명함과 먼 배경의 공기 원근(atmospheric perspective), 화면 전체를 균일하게 흐리거나 반짝이게 만들지 않는 깨끗한 마감\n\n02 NEGATIVE - 굵고 균일한 만화식 외곽선(thick uniform outlines), 납작한 단색 셀 셰이딩(flat cel shading), 거친 수채 번짐(watercolor bleed), 두꺼운 유화 붓 자국(impasto), 종이 질감(paper texture), 지정된 얼굴 비례의 임의 변경, 캐릭터마다 동일하게 반복되는 얼굴(same face), 과도한 화장과 볼 홍조, 고유색이 사라지는 백색 하이라이트, 화면 전체에 덮이는 일괄 색 필터(global color filter), 과도한 블룸(excessive bloom), 모든 재질에 동일한 플라스틱 광택(plastic sheen), 뭉개진 의상 구조, 부정확한 관절, 기형 손(malformed hands), 손가락 누락과 추가(missing or extra fingers), 추가 팔다리(extra limbs), 지정되지 않은 장비와 장식",
+     "sections": [
+      "2.캐릭터 외형 — 캐릭터별 교체",
+      "3. 코디네이션 — 의상별 교체",
+      "4. 장면 — 장면별 교체"
+     ],
+     "text": "Digital illustration that combines anime-style idealized features with delicate semi-realistic skin rendering and precise material detail, a smooth high-end 3D character render look, soft rendering of the body balanced with structurally crisp objects, and a high-detail polished finish that keeps each surface's local color and material distinct."
+    }
+   ],
+   "retired": "2026-11-11",
+   "retired_why": "도감에 그림이 없는 화풍 — 2.5 때 만든 키라 2.6 에서 안 쓴다(사용자 2026-11-11 「도감에 그림 등록이 없는 키들은 빼는게 좋을거 같아」 → 「1,2번 다 내려줘」). 지우지 않고 고르개에서만 뺀다"
+  },
+  "game_cgi": {
+   "name": "게임 시네마틱 CGI",
+   "current": "v1",
+   "versions": [
+    {
+     "v": "v1",
+     "adopted": "2026-10-30",
+     "by": "사용자 채택 — 철 메카 한 장을 2.5D·시네마틱 키아트·CGI 셋으로 나란히 보고 「재질이 테마에 어울린다」",
+     "text": "High-end stylized game CGI with coherent three-dimensional anatomy, physically convincing costume and prop construction, clean materials and dramatic production lighting. Preserve a designed character-art finish rather than live-action texture.",
+     "casual": "High-end stylized game CGI with coherent three-dimensional anatomy, physically convincing fabric and accessory construction, clean materials and natural lighting. Preserve a designed character-art finish rather than live-action texture.",
+     "check": "stylized game CGI rendering with physically convincing materials; the element’s traits carried by costume, ornament and scene — no readable text, one figure.",
+     "why": [
+      "원소 공방의 핵심은 재질(쇠·녹·유리·결정·금박·반투명 붕괴) — 셋 가운데 CGI 가 쇳물·I빔·녹 패티나를 가장 실감나게 그렸다(2026-10-30 철 메카 비교)",
+      "문장은 신화 공방 game_cgi 에서 weapon 만 prop 으로. 일상컷은 같은 결에 옷감·장신구·자연광",
+      "2026-10-31 기본에서 내렸다 — 재질은 좋지만 얼굴이 각지고 거칠게 나오는 컷이 있다(사용자). 철나라 열여덟 장은 이 열쇠로 남아 도감 「다른 화풍」 줄에 보인다"
+     ]
+    }
+   ]
+  },
+  "game_keyart": {
+   "name": "게임 키아트 2.5D",
+   "current": "v2",
+   "versions": [
+    {
+     "v": "v1",
+     "adopted": "2026-10-30",
+     "by": "사용자 채택 — 시안 열두 장(철·오가네손 세계 넷, 주민 넷)을 이 문장으로 뽑아 확인",
+     "text": "Polished 2.5D game key art with clean linework, controlled anime facial design, layered cel-to-soft shading and crisp costume and prop detail. Use a vivid, readable silhouette and campaign-quality lighting.",
+     "casual": "Polished 2.5D game key art with clean linework, controlled anime facial design, layered cel-to-soft shading and crisp fabric and accessory detail. Use a vivid, readable silhouette and natural lighting.",
+     "check": "2.5D game key art rendering with clean linework; the element's traits carried by costume, ornament and scene — no readable text, one figure.",
+     "why": [
+      "myth 공방의 기본 화풍(game_keyart)과 같은 문장이라 여러 공방의 그림이 같은 맛으로 보인다",
+      "시안 열두 장이 이 문장으로 나왔고 사용자가 그대로 채택했다(2026-10-30)",
+      "2026-10-30 기본을 game_cgi 로 바꿨다 — 시안 열두 장은 이 열쇠로 등록돼 있어 그대로 둔다(도감이 화풍별로 보여 준다)",
+      "2026-10-30 사용자가 CGI 로 통일 — 새 그림은 만들지 않는다",
+      "2026-10-31 다시 기본으로 — 철나라 근본·가문주 열다섯 장을 CGI 판과 같은 지시문으로 뽑아 나란히 봤다. CGI 는 얼굴이 각지고 거칠게 나오는 컷이 있었다"
+     ]
+    },
+    {
+     "v": "v2",
+     "adopted": "2026-11-01",
+     "by": "사용자 「얼굴형이나 이목구비를 설계로 나눠놔도 얼굴 느낌이 비슷하게 나오는것 같아」 → 「응 그렇게 진행해줘」 — 얼굴 낱말만 바꿨다",
+     "text": "Polished 2.5D game key art with clean linework, anime facial design that keeps each character's own facial structure, eye proportions and skin tone instead of one house face, layered cel-to-soft shading and crisp costume and prop detail. Use a vivid, readable silhouette and campaign-quality lighting.",
+     "casual": "Polished 2.5D game key art with clean linework, anime facial design that keeps each character's own facial structure, eye proportions and skin tone instead of one house face, layered cel-to-soft shading and crisp fabric and accessory detail. Use a vivid, readable silhouette and natural lighting.",
+     "check": "2.5D game key art rendering with clean linework; the element's traits carried by costume, ornament and scene — no readable text, one figure.",
+     "why": [
+      "v1 의 「controlled anime facial design」 이 모델의 기본 미형 얼굴로 끌어당겼다 — 판타지 열여섯 장이 큰 눈 · 갸름한 턱 · 흰 피부로 같았다(2026-11-01). 나머지 낱말은 v1 그대로"
+     ],
+     "readopted": "2026-11-04 — 사용자 「v2 로 바꿔줘」. v3 · v4d 는 GPT 세션에서도 API 에서도 v2(11-02 금 · 고목 · 헬륨 API v2)만큼 맞지 않았다 — 「v2 를 계속 기준으로 잡았어야되네」(11-03). v3 · v4 · v4c · v4d 는 기록으로 남긴다"
+    },
+    {
+     "v": "v3",
+     "adopted": "2026-11-02",
+     "by": "사용자 「원소 공방 화풍이 2d 식으로 나오는 경우가 가끔 있어서」 → 시험 여섯 장(적혈구 · 성냥 메카 — v2 · 화풍만 v3 · 화풍+얼굴 v3) → 「추천대로 진행해줘」 · 같은 날 「2번은 넣어주고」 — 놀람 표정 낮추기와 얼굴 줄 끝 한 마디(성냥 v3b 시험) · 같은 날 「1번으로 진행해줘」 — 물건 대표 모양을 굵게(연필 세계 그림 세 장에서 연필촉이 다 빠졌다)",
+     "text": "Polished 2.5D game key art — painterly semi-realistic rendering with soft volumetric light. Her face is modelled with gentle three-dimensional shading on the nose bridge, cheekbones, lips and jawline, drawn with thin soft-coloured contour lines instead of dark ink outlines; glossy layered hair with depth; she keeps her own facial structure, eye proportions and skin tone instead of one house face. Even in a bright, high-key scene her face keeps soft form shadows. Crisp costume and prop detail, a vivid, readable silhouette and campaign-quality lighting. Not flat cel-shaded 2D anime, the image itself is not a sketch or line drawing, not photoreal.",
+     "casual": "Polished 2.5D game key art — painterly semi-realistic rendering with soft volumetric light. Her face is modelled with gentle three-dimensional shading on the nose bridge, cheekbones, lips and jawline, drawn with thin soft-coloured contour lines instead of dark ink outlines; glossy layered hair with depth; she keeps her own facial structure, eye proportions and skin tone instead of one house face. Even in a bright, high-key scene her face keeps soft form shadows. Crisp fabric and accessory detail, a vivid, readable silhouette and natural lighting. Not flat cel-shaded 2D anime, the image itself is not a sketch or line drawing, not photoreal.",
+     "check": "2.5D game key art rendering with clean linework; the element's traits carried by costume, ornament and scene — no readable text, one figure.",
+     "face": {
+      "impression.cute": "a warm, bright-eyed sweetness",
+      "eye_size.large": "large expressive eyes kept in natural proportion, not oversized anime eyes",
+      "eyes.round_large": "round eyes",
+      "nose.small_button": "a small button nose shaped by soft shading",
+      "nose.upturned": "a small upturned nose shaped by soft shading",
+      "mark.blush": "a faint rosy flush on the cheeks"
+     },
+     "why": [
+      "v2 의 「clean linework · anime facial design · layered cel-to-soft shading」 에 얼굴 설계의 어리고 귀여운 낱말(귀여움 · 큰 눈 · 단추코 · 들창코 · 홍조 · 20대 초반)이 겹치면 평면 셀 2D 애니 얼굴로 넘어갔다 — 적혈구 · 성냥 · 나트륨 · 연필 · 피 · 화성 녹. 같은 날 같은 세션의 심장(글래머 · 보통 눈)은 2.5D 였다(2026-11-02)",
+      "윤곽선은 옅은 색선, 얼굴은 코 · 광대 · 입술 · 턱 입체 명암, 밝은 장면에서도 얼굴 그림자, 「평면 2D 애니 · 스케치 아님」. face 는 지시문으로 옮길 때만 바꿔 적는 얼굴 낱말(설계표 값은 그대로) — 열쇠는 「칸.값」",
+      "시험: 적혈구 메카는 화풍만으로 2.5D 쪽, 화풍+얼굴이 가장 나았다. 성냥 메카(놀람 표정 · 쌍갈래)는 조금만 나아졌다",
+      "v3b(같은 날, 그림 없이 v3 에 더했다): 놀람의 「동그랗게 벌린 입 · 흰자 보이게 큰 눈」 이 애니 쪽 신호라 「입술만 살짝 벌림」 으로(expr — 세계 그림 기본 표정 · 일상컷 표정 둘 다), FACE 줄 끝에 face_tail(「치비 · 모에 애니 얼굴 아님」). 성냥 메카 시험에서 v3 보다 눈이 줄고 입이 작아졌다",
+      "v3c(같은 날, 그림 없이 v3 에 더했다): 연필 세계 그림 셋을 v3 로 뽑으니 얼굴은 2.5D 가 됐는데 연필촉 머리장식 · 삼나무 몸통이 다 빠졌다(v2 로는 셋 다 있었다) — 세미리얼 쪽이 옷을 현실 의상으로 끌어 물건 모양을 줄인 듯. 세계 그림 문장에 「물건의 대표 모양은 머리장식 · 옷에서 굵고 또렷하게」 를 더하고, 「스케치 아님」 은 그림 자체의 마감이라는 뜻으로 고쳤다(연필 · 흑연처럼 그리는 도구가 주제인 카드에서 연필 요소까지 누를 수 있다). 일상컷은 물건이 작은 장신구로만 나오므로 넣지 않았다 — 그 한 마디로 다시 뽑아도(2차) 연필촉이 안 돌아와 걷었다. 예전 v2 그림의 연필촉은 지시문에 있던 게 아니라 모델이 즉흥으로 얹은 것이라, 어디에 무엇을 둘지는 카드 설계(주민 notes)에 적는다(연필 — 사용자 「1,2 하고 세계 이미지 다시 만들어보자」). 「스케치 아님 = 그림 마감」 고침은 남겼다"
+     ],
+     "expr": {
+      "surprised": "brows lifted, eyes a little wider, lips just parted in surprise"
+     },
+     "face_tail": "semi-realistic game-illustration facial proportions, not a chibi or moe anime face"
+    },
+    {
+     "v": "v4",
+     "adopted": "2026-11-03",
+     "by": "시험 — 사용자 「지금은 3d 쪽 실사로 많이 치우친 것 같아. 헬륨이 그 예」 → v2 문장 + v3 얼굴 고침만 — 채택 안 함(시험 판)",
+     "text": "Polished 2.5D game key art with clean linework, anime facial design that keeps each character's own facial structure, eye proportions and skin tone instead of one house face, layered cel-to-soft shading and crisp costume and prop detail. Use a vivid, readable silhouette and campaign-quality lighting.",
+     "casual": "Polished 2.5D game key art with clean linework, anime facial design that keeps each character's own facial structure, eye proportions and skin tone instead of one house face, layered cel-to-soft shading and crisp fabric and accessory detail. Use a vivid, readable silhouette and natural lighting.",
+     "check": "2.5D game key art rendering with clean linework; the element's traits carried by costume, ornament and scene — no readable text, one figure.",
+     "face": {
+      "impression.cute": "a warm, bright-eyed sweetness",
+      "eye_size.large": "large expressive eyes kept in natural proportion, not oversized anime eyes",
+      "eyes.round_large": "round eyes",
+      "nose.small_button": "a small button nose shaped by soft shading",
+      "nose.upturned": "a small upturned nose shaped by soft shading",
+      "mark.blush": "a faint rosy flush on the cheeks",
+      "eye_size.medium": "moderately sized eyes",
+      "mark.gloss": "softly tinted lips"
+     },
+     "why": [
+      "v3 의 「painterly semi-realistic · volumetric light · 3D shading · not flat 2D」 가 반실사 · 3D 렌더 쪽으로 넘쳤다 — 헬륨(GPT 세션) 세 세계 얼굴이 윤곽선 없이 에어브러시처럼 매끈, 연필(API) · 다이아 드릴(GPT 세션)도 v2 의 금 · 고목보다 실사 쪽(2026-11-03)",
+      "2D 로 넘어간 까닭은 v3 기록대로 얼굴 설계의 어리고 귀여운 낱말이었다 — 그 고침(face 바꿔 적기 · expr · face_tail)만 남기고 화풍 문장은 v2 로",
+      "face_tail 의 「semi-realistic」 도 뺐다(같은 쪽으로 민다) — 「adult game-illustration facial proportions」",
+      "시험 — 얼굴 낱말 「realistically proportioned eyes」 · 「glossy nude lips」 가 실사 쪽으로 당기는지(헬륨 v4 API 가 v3 와 거의 같았다)"
+     ],
+     "expr": {
+      "surprised": "brows lifted, eyes a little wider, lips just parted in surprise"
+     },
+     "face_tail": "adult game-illustration facial proportions, not a chibi or moe anime face"
+    },
+    {
+     "v": "v4c",
+     "adopted": "2026-11-03",
+     "by": "시험 — GPT 세션에서 v3 는 에어브러시 반실사, v2 계열은 평면 2D 로 갈 수 있어 가운데를 글로 잡는다 — 채택 안 함(시험 판)",
+     "text": "Polished 2.5D anime game key art: fine clean linework on the eyes, brows, lips and face outline, with painted cel-to-soft shading that keeps clear shadow shapes on the face, hair and costume. Matte hand-painted skin, not airbrushed, not a glossy 3D render, no soft-focus glow on the face. Anime facial design that keeps each character's own facial structure, eye proportions and skin tone instead of one house face. Crisp costume and prop detail with strong colour contrast, a vivid, readable silhouette and campaign-quality lighting. Not flat 2D cel anime, not semi-realistic.",
+     "casual": "Polished 2.5D anime game key art: fine clean linework on the eyes, brows, lips and face outline, with painted cel-to-soft shading that keeps clear shadow shapes on the face, hair and costume. Matte hand-painted skin, not airbrushed, not a glossy 3D render, no soft-focus glow on the face. Anime facial design that keeps each character's own facial structure, eye proportions and skin tone instead of one house face. Crisp fabric and accessory detail with strong colour contrast, a vivid, readable silhouette and natural lighting. Not flat 2D cel anime, not semi-realistic.",
+     "check": "2.5D game key art rendering with clean linework; the element's traits carried by costume, ornament and scene — no readable text, one figure.",
+     "face": {
+      "impression.cute": "a warm, bright-eyed sweetness",
+      "eye_size.large": "large expressive eyes kept in natural proportion, not oversized anime eyes",
+      "eyes.round_large": "round eyes",
+      "nose.small_button": "a small button nose shaped by soft shading",
+      "nose.upturned": "a small upturned nose shaped by soft shading",
+      "mark.blush": "a faint rosy flush on the cheeks",
+      "eye_size.medium": "moderately sized eyes",
+      "mark.gloss": "softly tinted lips"
+     },
+     "why": [
+      "GPT 세션은 같은 글을 API 와 다르게 그린다 — v3 는 에어브러시 반실사(헬륨), 「clean linework」 계열은 평면 셀 2D(포켓몬 glossy_promo). 그래서 양쪽을 다 막는 말: 얼굴 선은 가늘게 남기고, 칠은 그림자 모양이 보이는 셀-소프트, 피부는 무광 손칠 · 에어브러시 · 3D 렌더 · 얼굴 빛 번짐 아님, 색 대비"
+     ],
+     "expr": {
+      "surprised": "brows lifted, eyes a little wider, lips just parted in surprise"
+     },
+     "face_tail": "adult game-illustration facial proportions, not a chibi or moe anime face"
+    },
+    {
+     "v": "v4d",
+     "adopted": "2026-11-03",
+     "by": "사용자 채택 — 헬륨 판타지를 GPT 세션에서 v3 · v4 · v4c · v4d 로, API 에서 v3 · v4 · v4d 로 그려 금 · 고목(v2, 11-02)과 나란히 보고 「응 올려줘」",
+     "text": "Polished 2.5D anime game key art: very fine, thin linework used only as light accents on the eyes, brows and lips, with the face, body and costume shaped mainly by painted cel-to-soft shading with clear shadow shapes. Matte hand-painted skin, not airbrushed, not a glossy 3D render, no soft-focus glow on the face. Anime facial design that keeps each character's own facial structure, eye proportions and skin tone instead of one house face. Crisp costume and prop detail with strong colour contrast; the background is painted in soft, detailed brushwork without outlines. A vivid, readable silhouette and campaign-quality lighting. Not flat 2D cel anime, not semi-realistic.",
+     "casual": "Polished 2.5D anime game key art: very fine, thin linework used only as light accents on the eyes, brows and lips, with the face, body and clothing shaped mainly by painted cel-to-soft shading with clear shadow shapes. Matte hand-painted skin, not airbrushed, not a glossy 3D render, no soft-focus glow on the face. Anime facial design that keeps each character's own facial structure, eye proportions and skin tone instead of one house face. Crisp fabric and accessory detail with strong colour contrast; the background is painted in soft, detailed brushwork without outlines. A vivid, readable silhouette and natural lighting. Not flat 2D cel anime, not semi-realistic.",
+     "check": "2.5D game key art rendering with clean linework; the element's traits carried by costume, ornament and scene — no readable text, one figure.",
+     "face": {
+      "impression.cute": "a warm, bright-eyed sweetness",
+      "eye_size.large": "large expressive eyes kept in natural proportion, not oversized anime eyes",
+      "eyes.round_large": "round eyes",
+      "nose.small_button": "a small button nose shaped by soft shading",
+      "nose.upturned": "a small upturned nose shaped by soft shading",
+      "mark.blush": "a faint rosy flush on the cheeks",
+      "eye_size.medium": "moderately sized eyes",
+      "mark.gloss": "softly tinted lips"
+     },
+     "why": [
+      "GPT 세션은 같은 글을 API 와 다르게 그린다 — v3 는 에어브러시 반실사(헬륨), 「clean linework」 계열은 평면 셀 2D(포켓몬 glossy_promo). 그래서 양쪽을 다 막는 말: 얼굴 선은 가늘게 남기고, 칠은 그림자 모양이 보이는 셀-소프트, 피부는 무광 손칠 · 에어브러시 · 3D 렌더 · 얼굴 빛 번짐 아님, 색 대비",
+      "v4c(GPT 세션)는 얼굴 · 의상 · 배경 선이 기존보다 굵었다(사용자) — 선은 「아주 가는 · 눈 · 눈썹 · 입술에만 가볍게」, 형태는 칠로, 배경은 「윤곽선 없는 부드러운 붓칠」",
+      "GPT 세션 · API 둘 다 기존(v2) 쪽 — 세션은 대비가 진하고 API 는 연했다. v4 · v4c 는 시험 판(GPT 세션 시험 그림만, 등록 그림 없음)"
+     ],
+     "expr": {
+      "surprised": "brows lifted, eyes a little wider, lips just parted in surprise"
+     },
+     "face_tail": "adult game-illustration facial proportions, not a chibi or moe anime face"
+    }
+   ]
+  },
+  "cinematic_keyart": {
+   "name": "시네마틱 키아트",
+   "current": "v1",
+   "versions": [
+    {
+     "v": "v1",
+     "adopted": "2026-10-30",
+     "by": "사용자 — 철 근본 판타지·스팀펑크가 CGI 와 살짝 안 어울려 비교용으로",
+     "text": "Illustration-first cinematic key art with a clear anime face, saturated campaign color, convincing material volume, strong rim and key light and a crisp readable environment. It reads as authored premium illustration rather than literal CGI.",
+     "casual": "Illustration-first cinematic illustration with a clear anime face, saturated but natural color, convincing fabric and accessory volume, soft key light and a crisp readable environment. It reads as authored premium illustration rather than literal CGI.",
+     "check": "cinematic key-art illustration with a clear anime face; the element’s traits carried by costume, ornament and scene — no readable text, one figure.",
+     "why": [
+      "신화 공방 mecha_cinematic_keyart 문장 그대로(열쇠만 짧게). 철·오가네손 근본 여섯 장을 이 화풍으로 뽑아 CGI·2.5D 와 나란히 봤고, 2026-10-30 사용자가 CGI 로 통일 — 이 열쇠는 그 여섯 장의 것으로만 남는다"
+     ]
+    }
+   ]
+  },
+  "kr_mmorpg": {
+   "name": "한국 MMORPG 프로모",
+   "current": "v4",
+   "versions": [
+    {
+     "v": "v4",
+     "text": "Premium Korean MMORPG promotional character render — an in-engine 3D character model with hand-painted textures, not flat cel shading and not a 2D anime illustration: semi-realistic volumetric forms, porcelain skin with a soft subsurface glow and glossy specular highlights, a small refined face with delicate realistic-anime features, long legs and a narrow waist on a full, curvaceous figure in the body type SILHOUETTE names — soft, rounded volume at the bust, and hips and thighs kept in realistic human proportion: long, shapely legs, never oversized thighs, exaggerated hips or a bottom-heavy figure; never thin, flat or boyishly straight. Polished metal, silk and gems catch sharp highlights. Extremely intricate ornamented costume — filigree metalwork, jewel inlays, layered translucent fabrics and fine embroidery. Character-select-screen lighting: strong rim light, soft key light on the face, drifting light particles, atmospheric depth with a softly blurred background. Luxurious, high-detail finish.",
+     "casual": "Premium Korean MMORPG promotional character render: a semi-realistic, painterly 3D finish with porcelain skin and a soft subsurface glow, a small refined face with delicate realistic-anime features, long legs and a narrow waist on a full, curvaceous figure with soft volume at the bust, and hips and thighs in realistic human proportion — long, shapely legs, never oversized thighs or exaggerated hips. Glossy specular highlights on skin, fabric and jewellery. Refined fabric and accessory rendering with fine jewellery detail. Ethereal rim lighting, drifting light particles and atmospheric depth with a softly blurred background. Luxurious, high-detail, character-select-screen quality.",
+     "check": "semi-realistic Korean MMORPG promo render — porcelain skin, intricate filigree costume, rim light and particles; one figure, no readable text but a single banner character.",
+     "adopted": "2026-11-07",
+     "by": "claude",
+     "why": "삼국지 공방(sam-atelier data/style.json)에서 옮긴 화풍 — 사용자 2026-11-07 「원소공방에도 지금 삼국지 공방에 있는 화풍들추가랑 화풍탭 추가해줘」. 영어 틀 화풍 — 삼국지의 v4 글 그대로(text · casual)."
+    }
+   ],
+   "retired": "2026-11-11",
+   "retired_why": "도감에 그림이 없는 화풍 — 2.5 때 만든 키라 2.6 에서 안 쓴다(사용자 2026-11-11 「도감에 그림 등록이 없는 키들은 빼는게 좋을거 같아」 → 「1,2번 다 내려줘」). 지우지 않고 고르개에서만 뺀다"
+  },
+  "kr_promo_hikey": {
+   "name": "한국 MMORPG 프로모 하이키",
+   "current": "v1",
+   "versions": [
+    {
+     "v": "v1",
+     "adopted": "2026-11-09",
+     "by": "삼국지 공방(sam-atelier data/style.json kr_promo_hikey v2)에서 옮김 — 사용자 2026-11-09 「mmorpg프로모 하이키도 등록해서 화풍 비교 이미지 만들어줘」. 글은 삼국지 v2 그대로(무협 세계 몫만 뺐다)",
+     "text": "Premium Korean MMORPG promotional character render — an in-engine 3D character model with hand-painted textures, not flat cel shading and not a 2D anime illustration: semi-realistic volumetric forms, porcelain skin with a soft subsurface glow and glossy specular highlights, a small refined face with delicate realistic-anime features, long legs and a narrow waist on a full, curvaceous figure in the body type SILHOUETTE names — soft, rounded volume at the bust, and hips and thighs kept in realistic human proportion: long, shapely legs, never oversized thighs, exaggerated hips or a bottom-heavy figure; never thin, flat or boyishly straight. Polished metal, silk and gems catch sharp highlights. Extremely intricate ornamented costume — filigree metalwork, jewel inlays, layered translucent fabrics and fine embroidery. Luxurious, high-detail finish.",
+     "casual": "Premium Korean MMORPG promotional character render: a semi-realistic, painterly 3D finish with porcelain skin and a soft subsurface glow, a small refined face with delicate realistic-anime features, long legs and a narrow waist on a full, curvaceous figure with soft volume at the bust, and hips and thighs in realistic human proportion — long, shapely legs, never oversized thighs or exaggerated hips. Glossy specular highlights on skin, fabric and jewellery. Refined fabric and accessory rendering with fine jewellery detail. Ethereal rim lighting, drifting light particles and atmospheric depth with a softly blurred background. Luxurious, high-detail, character-select-screen quality.",
+     "lead": true,
+     "worlds": {
+      "fantasy": {
+       "costume": "Celestial ornament: feather-and-gold wing-shaped ornaments at the shoulders or back, a translucent gauze overskirt, a jewelled circlet.",
+       "scene": "MOOD: serene celestial key art — pastel sky light, a soft halo of light behind her, floating golden light particles and drifting feathers."
+      },
+      "mecha": {
+       "scene": "MOOD: sleek sci-fi key art — clean reflective plates, glowing light lines, hovering light particles and a soft bloom."
+      }
+     },
+     "check": "semi-realistic Korean MMORPG promo render — porcelain skin, intricate filigree costume, rim light and particles; one figure, no readable text but a single banner character.",
+     "why": "v5 + 세계 그림 — 사용자 2026-11-08 「이렇게 수정해줘」(앞서 「mmorpg 프로모의 세계그림에 시네마틱cgi 에서 화풍을 뺀 다른 문구 옮겨적어서」 · 「부딪치는 두 문장 빼고」): STYLE 의 캐릭터 선택창 조명 문장(강한 림 라이트)과 무협 MOOD 의 high contrast 를 빼고, 지시문 끝에 kv_cgi_hikey 의 SKIN COLOUR AND RENDERING(설계 피부색) · LIGHTING AND COLOUR · CAMERA AND COMPOSITION 칸(worldTail). 일상컷 묶음(casualKit)은 v5 그대로",
+     "casualKit": {
+      "style": "Premium Korean MMORPG promotional character render: a semi-realistic, painterly 3D finish with a soft subsurface glow on the skin and a small refined face with delicate realistic-anime features. Refined fabric and accessory rendering with fine jewellery detail; polished metal, silk and gems catch sharp highlights. Luxurious, high-detail, character-select-screen quality — the same rendering quality as the attached image. No visible outlines or flat cel shading.",
+      "face": "Her designed face, exactly as in the attached image: {face}; {eyes}; {impression}. Keep every one of these features and their proportions — the expression may change only the brows, eyelids and mouth.",
+      "skin": "SKIN: her own skin tone — {skin} — rendered luminous and lifelike: bright, softly glowing diffuse midtones on the face, neck, shoulders, collarbone, arms and every exposed area, not only in the specular highlights; one consistent underlying complexion across the whole body, varying only with light and shadow. Shadows stay clean and warm within her own skin tone — never grey-violet, muddy brown, blue-grey or heavily desaturated. Delicate natural microtexture, lifelike subsurface scattering and smoothly dimensional shading; small localized highlights — any water or sweat only as small droplets and thin trails that do not change the skin colour, never a thick or uniformly glossy coating. Do not whiten or darken her skin tone; no orange, yellow or bronze tint, no chalky whiteness, blown-out highlights or ashen cast.",
+      "light": "LIGHT: a bright, elegant high-key cinematic colour treatment with luminous skin and clean colour separation. Soft bright frontal light gently lifts her face and exposed skin, keeping the midtones bright, translucent and evenly readable, with facial dimension preserved around the eyes, nose, cheeks, lips and jaw and gentle, colour-clean shadows. The scene's own light — daylight, sunset, window light, lamplight or night light — comes from behind and to one side as restrained rim highlights along her hair, shoulders and silhouette, and colours the background and reflections, but never tints her skin orange, yellow, blue, purple or grey. No heavy colour grade, dark crushed contrast, cool desaturation, chalky skin or excessive bloom. The face and nearby hair are sharply resolved; the surroundings fall into gentle shallow depth of field."
+     },
+     "worldTail": "SKIN COLOUR AND RENDERING:\nHer own skin tone — {skin} — rendered luminous and lifelike: bright, softly glowing diffuse midtones on the face, neck, shoulders, arms, hands and exposed legs, not only in the specular highlights; one consistent underlying complexion across the whole body, varying only with light and shadow. Shadows stay clean and warm within her own skin tone — never grey-violet, muddy brown, blue-grey or heavily desaturated. Delicate satin-like highlights, subtle texture, lifelike translucency and softly dimensional shading. Do not whiten or darken her skin tone, do not clip highlights or remove all shadows; no chalky, ashen, waxy or uniformly glossy skin, and the costume or setting never tints her skin.\n\nLIGHTING AND COLOUR:\nA bright, elegant high-key cinematic grade with luminous skin and clean colour separation. Soft bright frontal fill light gently lifts the face and exposed skin, keeping the midtones bright, translucent and evenly readable, with gentle, open, colour-clean shadows around the eyes, nose, lips, neck and limbs. The scene's own light{time} comes from behind and to one side as a restrained rim, tracing hair strands, shoulder edges and fabric. Reflections from the costume, stone, metal or sky never cast a strong blue, purple, grey or orange tint on her skin. No heavy colour grade, dark crushed contrast, muddy shadows or cool desaturation.\n\nCAMERA AND COMPOSITION:\nVertical 2:3 full-body framing with modest headroom and clear space below the boots; the figure occupies most of the image height, and her head, hair ornaments, both hands, her signature item and both boots stay inside the frame. Natural portrait perspective — no wide-angle distortion and no exaggerated low camera angle; facial and body proportions stay balanced. She is sharply resolved from face to boots, the distance falls into gentle optical blur with clear atmospheric depth, and her face keeps enough detail to read her eyes, features and expression. No text, logo or watermark.",
+     "casualShort": true,
+     "casualLight": "Light: the place's own light, with a soft rim light tracing her hair and shoulders and glossy highlights on skin and jewellery — the luxurious promotional glow of the attached image."
+    }
+   ],
+   "retired": "2026-11-11",
+   "retired_why": "도감에 그림이 없는 화풍 — 2.5 때 만든 키라 2.6 에서 안 쓴다(사용자 2026-11-11 「도감에 그림 등록이 없는 키들은 빼는게 좋을거 같아」 → 「1,2번 다 내려줘」). 지우지 않고 고르개에서만 뺀다"
+  },
+  "kr_promo_hikey_oil": {
+   "name": "한국 MMORPG 프로모 하이키 유화",
+   "current": "v2",
+   "versions": [
+    {
+     "v": "v1",
+     "adopted": "2026-11-09",
+     "by": "claude — 사용자 2026-11-09 「프로모 하이키에 유화 채색을 더해서도 하나 만들어줘. 이거는 삼국지랑 원소공방 둘 다」(삼국지와 같은 글, 무협 세계 몫만 뺐다)",
+     "text": "Premium Korean MMORPG promotional character render — an in-engine 3D character model with hand-painted textures, not flat cel shading and not a 2D anime illustration: semi-realistic volumetric forms, porcelain skin with a soft subsurface glow and glossy specular highlights, a small refined face with delicate realistic-anime features, long legs and a narrow waist on a full, curvaceous figure in the body type SILHOUETTE names — soft, rounded volume at the bust, and hips and thighs kept in realistic human proportion: long, shapely legs, never oversized thighs, exaggerated hips or a bottom-heavy figure; never thin, flat or boyishly straight. Polished metal, silk and gems catch sharp highlights. Extremely intricate ornamented costume — filigree metalwork, jewel inlays, layered translucent fabrics and fine embroidery. Oil-paint colouring over the 3D forms: rich oil-painting colour with soft visible brushstrokes in the hair, fabric and background, luminous layered glazes on the skin and warm painterly colour variation instead of flat digital gradients; her face stays crisp and smooth. Luxurious, high-detail finish.",
+     "casual": "Premium Korean MMORPG promotional character render: a semi-realistic, painterly 3D finish with porcelain skin and a soft subsurface glow, a small refined face with delicate realistic-anime features, long legs and a narrow waist on a full, curvaceous figure with soft volume at the bust, and hips and thighs in realistic human proportion — long, shapely legs, never oversized thighs or exaggerated hips. Glossy specular highlights on skin, fabric and jewellery. Refined fabric and accessory rendering with fine jewellery detail. Ethereal rim lighting, drifting light particles and atmospheric depth with a softly blurred background. Oil-paint colouring over the 3D forms: rich oil-painting colour with soft visible brushstrokes in the hair, fabric and background, luminous layered glazes on the skin and warm painterly colour variation instead of flat digital gradients; her face stays crisp and smooth. Luxurious, high-detail, character-select-screen quality.",
+     "lead": true,
+     "worlds": {
+      "fantasy": {
+       "costume": "Celestial ornament: feather-and-gold wing-shaped ornaments at the shoulders or back, a translucent gauze overskirt, a jewelled circlet.",
+       "scene": "MOOD: serene celestial key art — pastel sky light, a soft halo of light behind her, floating golden light particles and drifting feathers."
+      },
+      "mecha": {
+       "scene": "MOOD: sleek sci-fi key art — clean reflective plates, glowing light lines, hovering light particles and a soft bloom."
+      }
+     },
+     "check": "semi-realistic Korean MMORPG promo render — porcelain skin, intricate filigree costume, rim light and particles; one figure, no readable text but a single banner character.",
+     "why": "프로모 하이키(kr_promo_hikey v2) 글 그대로에 유화 채색 한 문장만 더했다 — 세계 글(text) · 일상 글(casual) 끝 마감 문장 앞, 일상 묶음 화풍(casualKit.style — 짧은 판 화풍 단락도 이것) 「No visible outlines」 앞. 조명 · 피부 · 카메라 칸(worldTail · casualKit · casualLight)은 하이키 그대로",
+     "casualKit": {
+      "style": "Premium Korean MMORPG promotional character render: a semi-realistic, painterly 3D finish with a soft subsurface glow on the skin and a small refined face with delicate realistic-anime features. Refined fabric and accessory rendering with fine jewellery detail; polished metal, silk and gems catch sharp highlights. Luxurious, high-detail, character-select-screen quality — the same rendering quality as the attached image. Oil-paint colouring over the 3D forms: rich oil-painting colour with soft visible brushstrokes in the hair, fabric and background, luminous layered glazes on the skin and warm painterly colour variation instead of flat digital gradients; her face stays crisp and smooth. No visible outlines or flat cel shading.",
+      "face": "Her designed face, exactly as in the attached image: {face}; {eyes}; {impression}. Keep every one of these features and their proportions — the expression may change only the brows, eyelids and mouth.",
+      "skin": "SKIN: her own skin tone — {skin} — rendered luminous and lifelike: bright, softly glowing diffuse midtones on the face, neck, shoulders, collarbone, arms and every exposed area, not only in the specular highlights; one consistent underlying complexion across the whole body, varying only with light and shadow. Shadows stay clean and warm within her own skin tone — never grey-violet, muddy brown, blue-grey or heavily desaturated. Delicate natural microtexture, lifelike subsurface scattering and smoothly dimensional shading; small localized highlights — any water or sweat only as small droplets and thin trails that do not change the skin colour, never a thick or uniformly glossy coating. Do not whiten or darken her skin tone; no orange, yellow or bronze tint, no chalky whiteness, blown-out highlights or ashen cast.",
+      "light": "LIGHT: a bright, elegant high-key cinematic colour treatment with luminous skin and clean colour separation. Soft bright frontal light gently lifts her face and exposed skin, keeping the midtones bright, translucent and evenly readable, with facial dimension preserved around the eyes, nose, cheeks, lips and jaw and gentle, colour-clean shadows. The scene's own light — daylight, sunset, window light, lamplight or night light — comes from behind and to one side as restrained rim highlights along her hair, shoulders and silhouette, and colours the background and reflections, but never tints her skin orange, yellow, blue, purple or grey. No heavy colour grade, dark crushed contrast, cool desaturation, chalky skin or excessive bloom. The face and nearby hair are sharply resolved; the surroundings fall into gentle shallow depth of field."
+     },
+     "worldTail": "SKIN COLOUR AND RENDERING:\nHer own skin tone — {skin} — rendered luminous and lifelike: bright, softly glowing diffuse midtones on the face, neck, shoulders, arms, hands and exposed legs, not only in the specular highlights; one consistent underlying complexion across the whole body, varying only with light and shadow. Shadows stay clean and warm within her own skin tone — never grey-violet, muddy brown, blue-grey or heavily desaturated. Delicate satin-like highlights, subtle texture, lifelike translucency and softly dimensional shading. Do not whiten or darken her skin tone, do not clip highlights or remove all shadows; no chalky, ashen, waxy or uniformly glossy skin, and the costume or setting never tints her skin.\n\nLIGHTING AND COLOUR:\nA bright, elegant high-key cinematic grade with luminous skin and clean colour separation. Soft bright frontal fill light gently lifts the face and exposed skin, keeping the midtones bright, translucent and evenly readable, with gentle, open, colour-clean shadows around the eyes, nose, lips, neck and limbs. The scene's own light{time} comes from behind and to one side as a restrained rim, tracing hair strands, shoulder edges and fabric. Reflections from the costume, stone, metal or sky never cast a strong blue, purple, grey or orange tint on her skin. No heavy colour grade, dark crushed contrast, muddy shadows or cool desaturation.\n\nCAMERA AND COMPOSITION:\nVertical 2:3 full-body framing with modest headroom and clear space below the boots; the figure occupies most of the image height, and her head, hair ornaments, both hands, her signature item and both boots stay inside the frame. Natural portrait perspective — no wide-angle distortion and no exaggerated low camera angle; facial and body proportions stay balanced. She is sharply resolved from face to boots, the distance falls into gentle optical blur with clear atmospheric depth, and her face keeps enough detail to read her eyes, features and expression. No text, logo or watermark.",
+     "casualShort": true,
+     "casualLight": "Light: the place's own light, with a soft rim light tracing her hair and shoulders and glossy highlights on skin and jewellery — the luxurious promotional glow of the attached image."
+    },
+    {
+     "v": "v2",
+     "adopted": "2026-11-09",
+     "by": "claude — 사용자 2026-11-09 화풍 글을 직접 주고(「한국 MMORPG 프로모션 키아트, 밝고 우아한 하이키 유화 느낌. 부드럽고 풍부한 밝은 자연광, 은은한 그림자, 밝고 맑은 피부, 색이 씻겨나가지 않는 선명하고 풍성한 중간색. 유화의 섬세한 붓결과 겹겹의 색층, 부드러운 경계와 선택적으로 정교한 얼굴 및 복식 디테일, 비단과 금속의 차별화된 회화적 질감. 고품질 한국 판타지 MMORPG 광고 일러스트의 정제된 아름다움과 빛나는 유화의 표현을 결합」) 「응 v2로 진행해줘」",
+     "text": "Korean MMORPG promotional key art in a bright, elegant high-key oil-painting style. Soft, rich, bright natural light with gentle, subtle shadows; luminous, clear skin; vivid, full-bodied midtones that never wash out. Delicate oil brushwork and layered glazes of colour, soft edges with selectively refined detail on the face and costume, and distinct painterly textures for silk and metal. The refined beauty of a premium Korean fantasy MMORPG advertisement illustration, combined with the glow of a luminous oil painting.",
+     "casual": "Korean MMORPG promotional key art in a bright, elegant high-key oil-painting style. Soft, rich, bright natural light with gentle, subtle shadows; luminous, clear skin; vivid, full-bodied midtones that never wash out. Delicate oil brushwork and layered glazes of colour, soft edges with selectively refined detail on the face and costume, and distinct painterly textures for silk and metal. The refined beauty of a premium Korean fantasy MMORPG advertisement illustration, combined with the glow of a luminous oil painting.",
+     "lead": true,
+     "worlds": {
+      "fantasy": {
+       "costume": "Celestial ornament: feather-and-gold wing-shaped ornaments at the shoulders or back, a translucent gauze overskirt, a jewelled circlet.",
+       "scene": "MOOD: serene celestial key art — pastel sky light, a soft halo of light behind her, floating golden light particles and drifting feathers."
+      },
+      "mecha": {
+       "scene": "MOOD: sleek sci-fi key art — clean reflective plates, glowing light lines, hovering light particles and a soft bloom."
+      }
+     },
+     "check": "bright, elegant high-key oil-painting Korean MMORPG key art — soft natural light, clear luminous skin, vivid midtones, visible brushwork; one figure, no readable text but a single banner character.",
+     "why": "v1 은 하이키 3D 렌더 글(「in-engine 3D character model … not a 2D illustration」 · 촘촘한 장식 · 날카로운 광택)에 유화 문장 하나를 붙인 것이라 수소에선 거의 티가 안 났다 — 화풍 글(text · casual · casualKit.style)을 사용자 글의 영어로 통째로 바꾸고, 빛은 하이키 정면 보조광 · 뒤 테두리 빛 대신 부드럽고 밝은 자연광 · 은은한 그림자 · 씻기지 않는 중간색(worldLight · casualLight · casualKit.light · worldTail 의 LIGHTING AND COLOUR 칸)",
+     "casualKit": {
+      "style": "Korean MMORPG promotional key art in a bright, elegant high-key oil-painting style. Soft, rich, bright natural light with gentle, subtle shadows; luminous, clear skin; vivid, full-bodied midtones that never wash out. Delicate oil brushwork and layered glazes of colour, soft edges with selectively refined detail on the face and costume, and distinct painterly textures for silk and metal. The refined beauty of a premium Korean fantasy MMORPG advertisement illustration, combined with the glow of a luminous oil painting — the same rendering quality as the attached image.",
+      "face": "Her designed face, exactly as in the attached image: {face}; {eyes}; {impression}. Keep every one of these features and their proportions — the expression may change only the brows, eyelids and mouth.",
+      "skin": "SKIN: her own skin tone — {skin} — rendered luminous and lifelike: bright, softly glowing diffuse midtones on the face, neck, shoulders, collarbone, arms and every exposed area, not only in the specular highlights; one consistent underlying complexion across the whole body, varying only with light and shadow. Shadows stay clean and warm within her own skin tone — never grey-violet, muddy brown, blue-grey or heavily desaturated. Delicate natural microtexture, lifelike subsurface scattering and smoothly dimensional shading; small localized highlights — any water or sweat only as small droplets and thin trails that do not change the skin colour, never a thick or uniformly glossy coating. Do not whiten or darken her skin tone; no orange, yellow or bronze tint, no chalky whiteness, blown-out highlights or ashen cast.",
+      "light": "LIGHT: the place's own soft, rich, bright natural light with gentle, subtle shadows; luminous, clear skin and vivid, full-bodied midtones that never wash out. Clean colour separation; the scene's light colours the background but never tints her skin. The face and nearby hair are sharply resolved; the surroundings fall into gentle shallow depth of field."
+     },
+     "worldTail": "SKIN COLOUR AND RENDERING:\nHer own skin tone — {skin} — rendered luminous and lifelike: bright, softly glowing diffuse midtones on the face, neck, shoulders, arms, hands and exposed legs, not only in the specular highlights; one consistent underlying complexion across the whole body, varying only with light and shadow. Shadows stay clean and warm within her own skin tone — never grey-violet, muddy brown, blue-grey or heavily desaturated. Delicate satin-like highlights, subtle texture, lifelike translucency and softly dimensional shading. Do not whiten or darken her skin tone, do not clip highlights or remove all shadows; no chalky, ashen, waxy or uniformly glossy skin, and the costume or setting never tints her skin.\n\nLIGHTING AND COLOUR:\nSoft, rich, bright natural light with gentle, subtle shadows{time}; luminous, clear skin and vivid, full-bodied midtones that never wash out. Clean colour separation, no heavy colour grade, dark crushed contrast, muddy shadows or cool desaturation, and reflections never tint her skin.\n\nCAMERA AND COMPOSITION:\nVertical 2:3 full-body framing with modest headroom and clear space below the boots; the figure occupies most of the image height, and her head, hair ornaments, both hands, her signature item and both boots stay inside the frame. Natural portrait perspective — no wide-angle distortion and no exaggerated low camera angle; facial and body proportions stay balanced. She is sharply resolved from face to boots, the distance falls into gentle optical blur with clear atmospheric depth, and her face keeps enough detail to read her eyes, features and expression. No text, logo or watermark.",
+     "casualShort": true,
+     "casualLight": "Light: the place's own soft, rich, bright natural light with gentle, subtle shadows — luminous, clear skin and vivid, full-bodied midtones that never wash out, as in the attached image.",
+     "worldLight": "Light: soft, rich, bright natural light with gentle, subtle shadows — luminous, clear skin and vivid, full-bodied midtones that never wash out."
+    }
+   ],
+   "retired": "2026-11-11",
+   "retired_why": "도감에 그림이 없는 화풍 — 2.5 때 만든 키라 2.6 에서 안 쓴다(사용자 2026-11-11 「도감에 그림 등록이 없는 키들은 빼는게 좋을거 같아」 → 「1,2번 다 내려줘」). 지우지 않고 고르개에서만 뺀다"
+  },
+  "glossy_kr_game": {
+   "name": "한국형 글로시 게임 일러스트",
+   "current": "v1",
+   "versions": [
+    {
+     "v": "v1",
+     "text": "Glossy Korean mobile-game character art with an elegant anime face, smooth dimensional shading, luminous color accents and refined costume and accessory rendering. Keep highlights selective and the figure sharply readable.",
+     "casual": "Glossy Korean mobile-game character art with an elegant anime face, smooth dimensional shading, luminous color accents and refined fabric and accessory rendering. Keep highlights selective and the figure sharply readable.",
+     "check": "glossy Korean mobile-game rendering with selective highlights; the general's legend carried by costume, signature item and scene — one figure, no readable text but a single banner character.",
+     "adopted": "2026-11-07",
+     "by": "claude",
+     "why": "삼국지 공방(sam-atelier data/style.json)에서 옮긴 화풍 — 사용자 2026-11-07 「원소공방에도 지금 삼국지 공방에 있는 화풍들추가랑 화풍탭 추가해줘」. 영어 틀 화풍 — 삼국지의 v1 글 그대로(text · casual)."
+    }
+   ],
+   "retired": "2026-11-11",
+   "retired_why": "도감에 그림이 없는 화풍 — 2.5 때 만든 키라 2.6 에서 안 쓴다(사용자 2026-11-11 「도감에 그림 등록이 없는 키들은 빼는게 좋을거 같아」 → 「1,2번 다 내려줘」). 지우지 않고 고르개에서만 뺀다"
+  },
+  "glossy_kr_semireal": {
+   "name": "한국형 글로시 반실사",
+   "current": "v1",
+   "versions": [
+    {
+     "v": "v1",
+     "adopted": "2026-11-09",
+     "by": "claude — 사용자 2026-11-09 「한국형 글로시에 반실사 느낌을 더하면 어떨까?」 → 「응 진행해줘」",
+     "text": "Glossy Korean mobile-game character art with a semi-realistic touch: an elegant face with realistic facial structure and proportions — natural eye size, a defined nose bridge, soft cheekbones and full lips — keeping delicate realistic-anime features; skin with a soft subsurface warmth and subtle natural texture; smooth dimensional shading with realistic light falloff on the face, body and fabric; luminous colour accents and refined costume and accessory rendering. Keep highlights selective, the finish a polished illustration rather than a photograph or a 3D render, and the figure sharply readable.",
+     "casual": "Glossy Korean mobile-game character art with a semi-realistic touch: an elegant face with realistic facial structure and proportions — natural eye size, a defined nose bridge, soft cheekbones and full lips — keeping delicate realistic-anime features; skin with a soft subsurface warmth and subtle natural texture; smooth dimensional shading with realistic light falloff on the face, body and fabric; luminous colour accents and refined fabric and accessory rendering. Keep highlights selective, the finish a polished illustration rather than a photograph or a 3D render, and the figure sharply readable.",
+     "check": "glossy Korean mobile-game illustration with a semi-realistic face — realistic facial structure, natural skin texture, selective highlights; a polished illustration, not a photo or 3D render; one figure, no readable text.",
+     "why": "한국형 글로시(glossy_kr_game v1)의 「우아한 애니 얼굴」 을 반실사 얼굴 구조(자연스러운 눈 크기 · 콧대 · 광대 · 입술, 은은한 피부 결 · 피하 온기, 사실적인 빛 감쇠)로 바꾸고 마감은 글로시 일러스트 그대로(사진 · 3D 렌더 아님) — 이미 있는 반실사 3D 렌더 화풍(mmorpg_cg · 프로모 하이키 · kmmo_lock)과 겹치지 않게"
+    }
+   ],
+   "retired": "2026-11-11",
+   "retired_why": "도감에 그림이 없는 화풍 — 2.5 때 만든 키라 2.6 에서 안 쓴다(사용자 2026-11-11 「도감에 그림 등록이 없는 키들은 빼는게 좋을거 같아」 → 「1,2번 다 내려줘」). 지우지 않고 고르개에서만 뺀다"
+  },
+  "kv_kmmo_lock": {
+   "name": "한국 MMORPG 기준 판",
+   "current": "v1",
+   "versions": [
+    {
+     "v": "v1",
+     "format": "kv",
+     "adopted": "2026-11-07",
+     "by": "claude",
+     "why": "삼국지 공방(sam-atelier data/style.json)에서 옮긴 화풍 — 사용자 2026-11-07 「원소공방에도 지금 삼국지 공방에 있는 화풍들추가랑 화풍탭 추가해줘」. 삼국지 kv_kmmo_lock v5 의 머리말 · STYLE(작화) · 끝 줄을 원소 꼴로 — 인물 · 옷 · 세계 · 장면 · 노출은 원소 설계표에서(영어 틀과 같은 줄을 칸으로 묶음).",
+     "head": "Create ONE finished illustration of {name_en} — a character of the {nation_en} Nation, an element personified — as a beautiful adult woman. A single vertical 2:3 full-body character illustration, head to boots fully visible.",
+     "section1": "1. RENDERING STYLE — PREMIUM KOREAN MMORPG ILLUSTRATION (FIXED ACROSS ALL GENRES)\nPremium Korean MMORPG official character illustration with an elegant idealised semi-realistic face, exceptionally refined dimensional modelling and precise material rendering. A polished 2.5D painted game illustration with convincingly three-dimensional forms and delicately finished surfaces. Use rich, clear local colours, deep luminous midtones and selective highlights. Hair has weight, sculpted flowing masses and individual fine wisps. Polished metal has sharp selective reflections; silk has soft directional lustre; leather has quieter broad reflections. The materials must look distinctly different. No visible contour outlines, no flat cel shading, no photographic skin texture, no plastic doll finish, no exaggerated eyeliner, no oily skin or overall glossy sheen. Maintain excellent facial clarity and colour richness without a washed-out veil, muddy shadows, excessive bloom or an overall blue colour cast.\nFACIAL DESIGN LOCK: model the eyelids, eyeballs, nose bridge and nose tip, lips, cheeks and jaw with continuous nuanced shading. The face remains soft and beautiful, with clean matte-satin skin and subtle natural highlights. Preserve the specified face shape, eye shape, skin colour and adult maturity.\nGENRE LOCK: fantasy, steampunk and mecha change only the design of the costume, equipment and setting. The face, skin, hair rendering, eye size, lighting on the face and painting finish stay exactly the same in every genre.",
+     "genre": {
+      "fantasy": "FANTASY",
+      "steampunk": "STEAMPUNK",
+      "mecha": "MECHA"
+     },
+     "text": "Premium Korean MMORPG official character illustration with an elegant idealised semi-realistic face, exceptionally refined dimensional modelling and precise material rendering. A polished 2.5D painted game illustration with convincingly three-dimensional forms and delicately finished surfaces. Use rich, clear local colours, deep luminous midtones and selective highlights. Hair has weight, sculpted flowing masses and individual fine wisps. Polished metal has sharp selective reflections; silk has soft directional lustre; leather has quieter broad reflections. The materials must look distinctly different. No visible contour outlines, no flat cel shading, no photographic skin texture, no plastic doll finish, no exaggerated eyeliner, no oily skin or overall glossy sheen. Maintain excellent facial clarity and colour richness without a washed-out veil, muddy shadows, excessive bloom or an overall blue colour cast. FACIAL DESIGN LOCK: model the eyelids, eyeballs, nose bridge and nose tip, lips, cheeks and jaw with continuous nuanced shading. The face remains soft and beautiful, with clean matte-satin skin and subtle natural highlights. Preserve the specified face shape, eye shape, skin colour and adult maturity.",
+     "casualSkin": "SKIN: dewy, moist, softly glowing skin on every bare area — face, shoulders, chest, arms and legs — with a fresh luminous sheen: soft glossy highlights on the cheekbones, nose bridge, lips, collarbones, shoulders and the curves of the body, modelled by gentle tonal shading; healthy and hydrated rather than oily or sweaty, and never a plastic, airbrushed doll finish."
+    }
+   ],
+   "retired": "2026-11-11",
+   "retired_why": "도감에 그림이 없는 화풍 — 2.5 때 만든 키라 2.6 에서 안 쓴다(사용자 2026-11-11 「도감에 그림 등록이 없는 키들은 빼는게 좋을거 같아」 → 「1,2번 다 내려줘」). 지우지 않고 고르개에서만 뺀다"
+  },
+  "kv_kmmo_23d": {
+   "name": "한국 MMORPG 2.3D",
+   "current": "v1",
+   "versions": [
+    {
+     "v": "v1",
+     "format": "kv",
+     "adopted": "2026-11-07",
+     "by": "claude",
+     "why": "삼국지 공방(sam-atelier data/style.json)에서 옮긴 화풍 — 사용자 2026-11-07 「원소공방에도 지금 삼국지 공방에 있는 화풍들추가랑 화풍탭 추가해줘」. 삼국지 kv_kmmo_23d v1 의 머리말 · STYLE(작화) · 끝 줄을 원소 꼴로 — 인물 · 옷 · 세계 · 장면 · 노출은 원소 설계표에서(영어 틀과 같은 줄을 칸으로 묶음).",
+     "head": "Create ONE finished illustration of {name_en} — a character of the {nation_en} Nation, an element personified — as a beautiful adult woman. A single vertical 2:3 full-body character illustration, head to boots fully visible.",
+     "section1": "STYLE:\nPremium Korean MMORPG official character illustration, approximately 2.3D in appearance. An elegant illustrated face with softly dimensional modelling, refined painted shading, rich colours and precise material rendering. Keep the face recognisably illustrated, with smooth skin and carefully controlled highlights. Detailed metal, embroidered fabric and flowing hair, all rendered consistently in the same polished game illustration style.\nGENRE LOCK: fantasy, steampunk and mecha change only the costume, equipment and setting; the face, skin, hair rendering and this illustration style stay exactly the same in every genre.",
+     "genre": {
+      "fantasy": "FANTASY",
+      "steampunk": "STEAMPUNK",
+      "mecha": "MECHA"
+     },
+     "text": "Premium Korean MMORPG official character illustration, approximately 2.3D in appearance. An elegant illustrated face with softly dimensional modelling, refined painted shading, rich colours and precise material rendering. Keep the face recognisably illustrated, with smooth skin and carefully controlled highlights. Detailed metal, embroidered fabric and flowing hair, all rendered consistently in the same polished game illustration style.",
+     "casualSkin": "SKIN: dewy, moist, softly glowing skin on every bare area — face, shoulders, chest, arms and legs — with a fresh luminous sheen: soft glossy highlights on the cheekbones, nose bridge, lips, collarbones, shoulders and the curves of the body, modelled by gentle tonal shading; healthy and hydrated rather than oily or sweaty, and never a plastic, airbrushed doll finish."
+    }
+   ],
+   "retired": "2026-11-11",
+   "retired_why": "도감에 그림이 없는 화풍 — 2.5 때 만든 키라 2.6 에서 안 쓴다(사용자 2026-11-11 「도감에 그림 등록이 없는 키들은 빼는게 좋을거 같아」 → 「1,2번 다 내려줘」). 지우지 않고 고르개에서만 뺀다"
+  },
+  "kv_jp_mobile": {
+   "name": "일본 모바일게임 리얼 CG",
+   "current": "v1",
+   "versions": [
+    {
+     "v": "v1",
+     "format": "kv",
+     "adopted": "2026-11-07",
+     "by": "claude",
+     "why": "삼국지 공방(sam-atelier data/style.json)에서 옮긴 화풍 — 사용자 2026-11-07 「원소공방에도 지금 삼국지 공방에 있는 화풍들추가랑 화풍탭 추가해줘」. 삼국지 kv_jp_mobile v1 의 머리말 · STYLE(작화) · 끝 줄을 원소 꼴로 — 인물 · 옷 · 세계 · 장면 · 노출은 원소 설계표에서(영어 틀과 같은 줄을 칸으로 묶음).",
+     "head": "Use case: stylized-concept. Create ONE finished illustration of {name_en} — a character of the {nation_en} Nation, an element personified — as a beautiful adult human woman, in a high-quality Japanese realistic mobile-game character art style. Brand-new image from text only.",
+     "section1": "STYLE: Premium Japanese fantasy mobile-game promotional key visual with refined realistic CG-like dimensional modelling and polished painterly finishing. An elegant idealised East Asian adult face with natural-size expressive eyes, a softly sculpted nose, naturally shaped lips, a compact oval face and softly defined jaw. Convincing facial depth, beautifully controlled skin shading, subtle matte-satin skin, realistic hair volume and precisely differentiated metal, silk and leather. Rich clear colours, crisp focal detail and cinematic lighting. Avoid flat anime cel shading, oversized anime eyes, a plastic doll face, exaggerated makeup and photographic live-action appearance.",
+     "genre": {
+      "fantasy": "FANTASY",
+      "steampunk": "STEAMPUNK",
+      "mecha": "MECHA"
+     },
+     "text": "Premium Japanese fantasy mobile-game promotional key visual with refined realistic CG-like dimensional modelling and polished painterly finishing. An elegant idealised East Asian adult face with natural-size expressive eyes, a softly sculpted nose, naturally shaped lips, a compact oval face and softly defined jaw. Convincing facial depth, beautifully controlled skin shading, subtle matte-satin skin, realistic hair volume and precisely differentiated metal, silk and leather. Rich clear colours, crisp focal detail and cinematic lighting. Avoid flat anime cel shading, oversized anime eyes, a plastic doll face, exaggerated makeup and photographic live-action appearance.",
+     "tail": "FINISH: convincing armour construction and weight with sharp selective metallic reflections, soft silk lustre and restrained leather details. Cool daylight and restrained warm reflected light reveal her face and the costume clearly.\n\nANATOMY: Exactly one head, two arms, two natural human hands, five fingers on each hand, two legs. Both hands visible and correctly connected. No extra or missing limbs. No other characters. No logos, borders, interface or watermark; no writing except the chemical symbol and atomic number the rules above allow.",
+     "casualSkin": "SKIN: dewy, moist, softly glowing skin on every bare area — face, shoulders, chest, arms and legs — with a fresh luminous sheen: soft glossy highlights on the cheekbones, nose bridge, lips, collarbones, shoulders and the curves of the body, modelled by gentle tonal shading; healthy and hydrated rather than oily or sweaty, and never a plastic, airbrushed doll finish."
+    }
+   ],
+   "retired": "2026-11-11",
+   "retired_why": "도감에 그림이 없는 화풍 — 2.5 때 만든 키라 2.6 에서 안 쓴다(사용자 2026-11-11 「도감에 그림 등록이 없는 키들은 빼는게 좋을거 같아」 → 「1,2번 다 내려줘」). 지우지 않고 고르개에서만 뺀다"
+  },
+  "kv_jp_paint": {
+   "name": "일본 유화풍 게임 일러스트",
+   "current": "v1",
+   "versions": [
+    {
+     "v": "v1",
+     "format": "kv",
+     "adopted": "2026-11-07",
+     "by": "claude",
+     "why": "삼국지 공방(sam-atelier data/style.json)에서 옮긴 화풍 — 사용자 2026-11-07 「원소공방에도 지금 삼국지 공방에 있는 화풍들추가랑 화풍탭 추가해줘」. 삼국지 kv_jp_paint v1 의 머리말 · STYLE(작화) · 끝 줄을 원소 꼴로 — 인물 · 옷 · 세계 · 장면 · 노출은 원소 설계표에서(영어 틀과 같은 줄을 칸으로 묶음).",
+     "head": "Use case: stylized-concept. Create ONE finished illustration of {name_en} — a character of the {nation_en} Nation, an element personified — as a beautiful adult human woman. Brand-new image from text only.",
+     "section1": "STYLE: High-quality Japanese painterly fantasy game character illustration, an exquisite finished promotional key visual. Refined Japanese illustrated character design with richly layered painterly colour, subtle visible brushwork, beautifully modelled light and shadow, delicate edge control and crisp focal details. An elegant adult face with expressive almond-shaped eyes, a compact oval face, softly defined jaw, delicately sculpted nose and natural lips. Luminous, rich colours and cinematic depth; finely painted skin and hair, convincing metal and fabric. Keep the entire image coherent as a polished painting. No flat cel shading, photographic appearance or plastic 3D-render finish.",
+     "genre": {
+      "fantasy": "FANTASY",
+      "steampunk": "STEAMPUNK",
+      "mecha": "MECHA"
+     },
+     "text": "High-quality Japanese painterly fantasy game character illustration, an exquisite finished promotional key visual. Refined Japanese illustrated character design with richly layered painterly colour, subtle visible brushwork, beautifully modelled light and shadow, delicate edge control and crisp focal details. An elegant adult face with expressive almond-shaped eyes, a compact oval face, softly defined jaw, delicately sculpted nose and natural lips. Luminous, rich colours and cinematic depth; finely painted skin and hair, convincing metal and fabric. Keep the entire image coherent as a polished painting. No flat cel shading, photographic appearance or plastic 3D-render finish.",
+     "tail": "FINISH: the armour has beautifully painted metallic reflections, while the silk has a softer lustre. Clear directional light brings out the face, the costume and hair, with restrained atmospheric glow; the setting is softly painted and gives atmospheric depth without competing with her face and silhouette.\n\nANATOMY AND FINISH: One head, exactly two arms and two legs. Both natural human hands visible, five fingers on each hand, anatomically correct grip and clear wrists. No extra limbs, missing hands or cropped weapon. No other characters, logos, watermark, border or UI; no text except the chemical symbol and atomic number the rules above allow.",
+     "casualSkin": "SKIN: dewy, moist, softly glowing skin on every bare area — face, shoulders, chest, arms and legs — with a fresh luminous sheen: soft glossy highlights on the cheekbones, nose bridge, lips, collarbones, shoulders and the curves of the body, modelled by gentle tonal shading; healthy and hydrated rather than oily or sweaty, and never a plastic, airbrushed doll finish."
+    }
+   ],
+   "retired": "2026-11-11",
+   "retired_why": "도감에 그림이 없는 화풍 — 2.5 때 만든 키라 2.6 에서 안 쓴다(사용자 2026-11-11 「도감에 그림 등록이 없는 키들은 빼는게 좋을거 같아」 → 「1,2번 다 내려줘」). 지우지 않고 고르개에서만 뺀다"
+  },
+  "jp_paint_anime": {
+   "name": "일본 유화 애니",
+   "current": "v1",
+   "versions": [
+    {
+     "v": "v1",
+     "adopted": "2026-11-09",
+     "by": "claude — 사용자 2026-11-09 「일본 유화풍에 애니메이션은 어떨까?」 → 「응 원소만 진행해줘」",
+     "why": "일본 유화풍(kv_jp_paint)의 「평면 셀 금지 · 그림 전체를 완성된 회화로」 가 얼굴을 성숙한 회화 쪽으로 끌었다 — 일본 애니 키비주얼처럼 역할을 나눴다: 인물은 애니 얼굴(크고 표정 있는 눈 · 작은 코 · 입) · 가는 색선 · 셀에서 부드러운 칠로 이어지는 명암, 머리 · 옷엔 칠한 하이라이트, 배경은 겹친 색층 · 은은한 붓 터치 · 공기 원근 · 영화 같은 깊이. 금지는 「한 단짜리 납작한 셀」 로 좁혔다. 밝은 2D 유화(하이키 파스텔 · 전체 붓결)와 달리 진하고 깊은 색, 배경이 유화의 주인공",
+     "text": "A Japanese anime key visual with a painterly finish: an anime-style character with an elegant adult anime face, large expressive eyes, a small nose and mouth, fine coloured linework and soft cel-to-painted shading with painted highlights in the hair and fabric. Behind her, a richly painted background with layered painterly colour, subtle visible brushwork, atmospheric perspective and cinematic depth. Luminous, rich colours; crisp focal details on the face and costume, softer painted edges toward the distance. No flat single-tone cel shading, photographic appearance, semi-realistic face or plastic 3D-render finish.",
+     "casual": "A Japanese anime key visual with a painterly finish: an anime-style character with an elegant adult anime face, large expressive eyes, a small nose and mouth, fine coloured linework and soft cel-to-painted shading with painted highlights in the hair and fabric. Behind her, a richly painted background with layered painterly colour, subtle visible brushwork, atmospheric perspective and cinematic depth. Luminous, rich colours; crisp focal details on the face and costume, softer painted edges toward the distance. No flat single-tone cel shading, photographic appearance, semi-realistic face or plastic 3D-render finish.",
+     "casualShort": true,
+     "check": "Japanese anime key visual with a painterly background — anime face, fine coloured linework, soft cel-to-painted shading, rich painted background with cinematic depth; one figure."
+    }
+   ]
+  },
+  "kv_anime_gloss": {
+   "name": "애니 광택(포켓몬 공방)",
+   "current": "v1",
+   "versions": [
+    {
+     "v": "v1",
+     "format": "kv",
+     "adopted": "2026-11-07",
+     "by": "claude",
+     "why": "삼국지 공방(sam-atelier data/style.json)에서 옮긴 화풍 — 사용자 2026-11-07 「원소공방에도 지금 삼국지 공방에 있는 화풍들추가랑 화풍탭 추가해줘」. 삼국지 kv_anime_gloss v1 의 머리말 · STYLE(작화) · 끝 줄을 원소 꼴로 — 인물 · 옷 · 세계 · 장면 · 노출은 원소 설계표에서(영어 틀과 같은 줄을 칸으로 묶음).",
+     "head": "Use case: stylized-concept. Create ONE finished illustration of {name_en} — a character of the {nation_en} Nation, an element personified — as a beautiful adult human woman, in a polished glossy 2D anime gacha character illustration style. Brand-new image from text only.",
+     "section1": "STYLE: Polished Japanese-anime gacha character illustration in clean 2D: crisp thin dark linework, large finely detailed glossy eyes with layered highlights and a soft blush, very fine detailed hair rendered as many thin strands with sparkling highlights along every lock, soft airy cel-to-gradient shading with a natural sunlit sheen — soft, broad highlights from real outdoor daylight on her skin, gloves, stockings and armor, never wet, oily or plastic-looking, and a bright high-key look where the highlights glow toward white while the darkest accents stay deep and clean. A low-saturation pastel palette dominated by white, silver and soft light tones, with one deep accent colour; gentle bloom and small sparkle particles in the air. Keep the face and body visibly illustrated in 2D; no 3D render or photorealistic appearance.",
+     "genre": {
+      "fantasy": "FANTASY",
+      "steampunk": "STEAMPUNK",
+      "mecha": "MECHA"
+     },
+     "text": "Polished Japanese-anime gacha character illustration in clean 2D: crisp thin dark linework, large finely detailed glossy eyes with layered highlights and a soft blush, very fine detailed hair rendered as many thin strands with sparkling highlights along every lock, soft airy cel-to-gradient shading with a natural sunlit sheen — soft, broad highlights from real outdoor daylight on her skin, gloves, stockings and armor, never wet, oily or plastic-looking, and a bright high-key look where the highlights glow toward white while the darkest accents stay deep and clean. A low-saturation pastel palette dominated by white, silver and soft light tones, with one deep accent colour; gentle bloom and small sparkle particles in the air. Keep the face and body visibly illustrated in 2D; no 3D render or photorealistic appearance.",
+     "tail": "FINISH: her colours rendered within a low-saturation white-and-silver pastel palette, the deepest of them as the single deep accent colour; armour, cloth and leather carry a soft, broad natural sunlit sheen, never wet, oily or plastic-looking. Bright high-key daylight with soft bloom and small sparkles; glossy 2D anime gacha character illustration.\n\nANATOMY AND FINISH: One head, exactly two arms and two legs. Both natural human hands visible, five fingers on each hand, anatomically correct grip and clear wrists. No extra limbs, missing hands or cropped weapon. No other characters, logos, watermark, border or UI; no text except the chemical symbol and atomic number the rules above allow.",
+     "casualSkin": "SKIN: softly luminous skin on every bare area with a gentle satin sheen — subtle highlights on the cheekbones, nose bridge, lips, collarbones and shoulders, modelled by gentle tonal shading; fresh and natural, never oily, sweaty or wet-looking, and never a plastic, airbrushed doll finish."
+    }
+   ],
+   "retired": "2026-11-11",
+   "retired_why": "도감에 그림이 없는 화풍 — 2.5 때 만든 키라 2.6 에서 안 쓴다(사용자 2026-11-11 「도감에 그림 등록이 없는 키들은 빼는게 좋을거 같아」 → 「1,2번 다 내려줘」). 지우지 않고 고르개에서만 뺀다"
+  },
+  "mmorpg_cg": {
+   "name": "MMORPG CG",
+   "current": "v1",
+   "versions": [
+    {
+     "v": "v1",
+     "adopted": "2026-11-08",
+     "by": "삼국지 공방에서 옮김(사용자 2026-11-09 「element 쪽도 생성기 구조 sam 쪽에 맞추자. 간결버전에 일상컷도 간결, 갈래추가」) — 사용자 2026-11-08 「화풍문구는 지금처럼 축소판으로 가고 mmorpg cg만 추가해서 공방의 화풍비교 메뉴에 올려줘」 — 짧은 지시문 시험(게임 키아트 3D 네 갈래)의 한국 MMORPG CG 단락",
+     "text": "Korean MMORPG 3D key art — a semi-realistic 3D beauty with a small refined face and delicate realistic-anime features, porcelain skin with a soft glow, extremely ornate engraved armour and jewellery with glossy highlights, a strong rim light and drifting light particles, a luxurious promotional finish.",
+     "casual": "Korean MMORPG 3D key art — a semi-realistic 3D beauty with a small refined face and delicate realistic-anime features, porcelain skin with a soft glow, extremely ornate engraved armour and jewellery with glossy highlights, a strong rim light and drifting light particles, a luxurious promotional finish.",
+     "casualShort": true,
+     "casualLight": "Light: the place's own light, with a strong soft rim light tracing her hair and shoulders, glossy highlights on skin and jewellery and drifting light particles — a luxurious promotional glow.",
+     "worldLight": "Light: a strong soft rim light tracing her hair, shoulders and armour, glossy highlights on metal, skin and jewellery, drifting light particles and a luxurious promotional glow."
+    }
+   ],
+   "retired": "2026-11-11",
+   "retired_why": "도감에 그림이 없는 화풍 — 2.5 때 만든 키라 2.6 에서 안 쓴다(사용자 2026-11-11 「도감에 그림 등록이 없는 키들은 빼는게 좋을거 같아」 → 「1,2번 다 내려줘」). 지우지 않고 고르개에서만 뺀다"
+  },
+  "bright_2d_oil": {
+   "name": "밝은 2D 유화",
+   "current": "v3",
+   "versions": [
+    {
+     "v": "v1",
+     "adopted": "2026-11-09",
+     "by": "claude — 사용자 2026-11-09 「원소공방 분위기에는 글로시 반실사는 아닌거 같고. 약간 2d에서 2d 초반느낌에 밝으면서도 유화 질감이 더해지면 괜찮지 않을까」 → 「응 진행해줘」",
+     "why": "원소 공방만의 화풍 — 2D 에 살짝 2.5D(3D 렌더 음영 아님, 붓으로 칠한 부드러운 입체), 눈 · 얼굴 · 큰 윤곽에만 옅은 색선, 밝고 가벼운 자연광 · 옅은 그림자 · 맑은 피부 · 씻기지 않는 중간색, 머리 · 옷 · 배경에 유화 붓결과 겹친 색층(얼굴 · 중심 장식만 또렷), 애니 영향의 우아한 얼굴(반실사 · 평면 셀 아님). mmorpg2d(예전 원소 기본)의 맑은 2D 에 유화 v2 의 빛 · 붓결",
+     "text": "Bright 2D Korean fantasy game illustration with a light 2.5D touch, finished like a luminous oil painting. Fine, soft coloured linework only around the eyes, face and key contours; forms built with gentle painted volume rather than 3D-render shading. Bright, airy high-key natural light with soft, subtle shadows; clear, luminous skin and fresh, vivid midtones that never wash out. Delicate visible oil brushwork and layered glazes of colour in the hair, fabric and background, with soft edges and crisp detail only on the face and focal ornaments. An elegant anime-influenced face with natural proportions — not a 3D render, not semi-realistic, not flat cel shading.",
+     "casual": "Bright 2D Korean fantasy game illustration with a light 2.5D touch, finished like a luminous oil painting. Fine, soft coloured linework only around the eyes, face and key contours; forms built with gentle painted volume rather than 3D-render shading. Bright, airy high-key natural light with soft, subtle shadows; clear, luminous skin and fresh, vivid midtones that never wash out. Delicate visible oil brushwork and layered glazes of colour in the hair, fabric and background, with soft edges and crisp detail only on the face and focal ornaments. An elegant anime-influenced face with natural proportions — not a 3D render, not semi-realistic, not flat cel shading.",
+     "casualShort": true,
+     "worldLight": "Light: bright, airy natural light with soft, subtle shadows — clear, luminous skin and fresh, vivid midtones that never wash out.",
+     "casualLight": "Light: the place's own bright, airy natural light with soft, subtle shadows — clear, luminous skin and fresh, vivid midtones that never wash out, as in the attached image.",
+     "check": "bright 2D-to-light-2.5D Korean fantasy game illustration with luminous oil-paint texture — soft coloured linework, airy natural light, clear skin, visible brushwork; not a 3D render or semi-realistic; one figure."
+    },
+    {
+     "v": "v2",
+     "adopted": "2026-11-09",
+     "by": "claude — 사용자 2026-11-09 「구조판으로 만들어서 다시 해줘」",
+     "format": "structured",
+     "rules": "공통 적용 규칙:\n\n각 항목은 자신이 담당하는 요소에만 적용한다. 작화 방식은 1번, 캐릭터의 신체적 특징은 2번, 의상과 장비는 3번, 동작과 화면 연출은 4번을 따른다.\n\n특정 항목을 수정할 때 별도로 지정하지 않은 나머지 항목은 유지한다. 체형의 볼륨이나 굴곡 변경을 얼굴의 성숙도·표정·포즈·카메라·그림체 변화로 확대 해석하지 않는다. 의상은 지정된 디자인과 노출 범위를 유지하면서 변경된 신체 치수에 맞게 착용 형태만 조정한다.",
+     "casual_rule": "첨부한 세계 그림이 이 사람과 그림체의 기준이다(reference image = identity and style lock). 얼굴·눈·머리·피부·체형과 마감·채도·빛의 질감은 첨부 그림 그대로 두고, 옷·자세·표정·구도·장소만 이 문구대로 바꾼다. 첨부 그림의 옷·장갑·장식·배경·포즈·머리 각도·카메라 높이는 가져오지 않는다. 원소는 작은 장신구나 주변 물건으로만 드러내고, 옷의 색·무늬·재단에는 넣지 않는다.",
+     "section1": "1.작화 스타일 — 공통 고정\n\n작화 장비 비교 계열: 밝은 2D 한국 판타지 게임 일러스트에 살짝 2.5D, 빛나는 유화로 마감(bright 2D Korean fantasy game illustration with a light 2.5D touch, finished like a luminous oil painting) — 분명히 손으로 그린 2D 캐릭터 그림(clearly hand-drawn 2D character art)에 가늘고 옅은 색 선화(fine, soft coloured linework)와 붓으로 칠한 부드러운 입체(gentle painted volume), 섬세한 유화 붓결과 겹친 색층(delicate visible oil brushwork and layered glazes of colour)\n\n01 POSITIVE - 기술 작화\n\n형태 언어: 공들여 설계한 형태(carefully designed shapes), 성인 애니메이션식 미형(elegant adult anime facial design)과 균형 잡힌 자연스러운 성인 비례, 캐릭터마다 지정된 얼굴과 신체 비례를 유지, 얼굴과 몸이 분명히 2D 그림으로 읽히는 표현(face and body visibly illustrated in 2D)\n\n얼굴형: 지정된 얼굴 윤곽과 골격을 가는 색 선과 부드럽게 칠한 명암으로 표현, 이마·볼·턱이 매끄럽게 이어지는 형태, 골격의 거친 굴곡을 덜어 낸 섬세한 조형\n\n눈 구조: 표정이 살아 있는 정밀한 눈(expressive finely detailed eyes), 또렷한 윗눈꺼풀 선과 속눈썹, 옅은 아랫눈꺼풀, 지정된 눈의 크기·형태·배치를 유지\n\n홍채: 지정된 홍채색과 동공 형태를 유지하는 여러 층의 색(layered iris), 위쪽의 깊은 음영과 아래쪽의 밝은 반사, 장면 광원을 비추는 몇 개의 캐치라이트(catchlights)\n\n코: 지정된 콧대·코끝 형태를 짧은 선과 옅은 그림자로 표현(minimal nose, no heavy modelling), 얼굴의 다른 부위와 이어지는 피부색 변화\n\n입과 표정: 지정된 입술 형태와 두께를 가는 색 선과 작은 반사로 표현, 눈꺼풀·눈썹·입꼬리의 변화로 짓는 자연스러운 표정(subtle expression)\n\n선화: 검은 선이 아니라 그 부위의 색을 띤 가늘고 옅은 선(fine, soft coloured linework, not black outlines) — 눈·얼굴·큰 윤곽에 주로 쓰고, 머리·옷·배경 안쪽은 선 대신 칠의 경계로 나눈다(soft painted edges), 깊이와 재질에 따라 달라지는 선의 강약(varied line weight)\n\n머리카락: 지정된 헤어스타일의 큰 덩어리와 흐름을 선과 칠로 나누고 가닥을 골라 묘사(hair drawn in clumps with selective strands), 칠한 하이라이트 띠와 가장자리 빛(rim light), 머리색의 고유색을 지키는 내부 음영\n\n피부: 지정된 피부색 위에 옅은 유화 글레이즈로 겹친 부드러운 칠 명암(soft painted shading in thin luminous glazes), 밝고 맑게 빛나는 피부(clear, luminous skin), 은은한 혈색, 플라스틱 광택 없음, 모공·피부 결 묘사 없음(no pores, no skin texture)\n\n의상 선화/채색: 정교하지만 한눈에 읽히는 의상 구조(intricate yet readable costume design), 접합부(seams)와 장식을 따라 그린 선, 금속에는 칠한 날카로운 반사(painted specular highlights), 직물에는 주름 선과 겹친 명암, 투명 소재에는 겹침과 투과광, 지정되지 않은 소재나 장비를 임의로 추가하지 않는 묘사\n\n손: 자연스러운 손바닥 구조와 다섯 손가락의 연결(anatomically correct hands, five fingers), 동작에 맞는 관절 방향과 손가락 간격, 장갑을 낀 경우에도 설득력 있게 이어지는 손 형태\n\n렌더링/셰이딩: 부드러운 칠로 이어지는 여러 겹의 명암(layered soft painted shading), 3D 렌더 음영이 아니라 붓으로 칠한 부드러운 입체(gentle painted volume rather than 3D-render shading), 머리·옷·배경에 보이는 섬세한 유화 붓결과 겹친 색층(delicate visible oil brushwork and layered glazes of colour), 은은한 그림자(soft, subtle shadows)와 접촉 그림자(contact shadows)\n\n광원/색채: 밝고 가벼운 하이키 자연광(bright, airy high-key natural light)과 은은한 그림자, 씻기지 않는 선명하고 풍성한 중간색(fresh, vivid, full-bodied midtones that never wash out), 지정된 광원과 팔레트를 따르는 일관된 색온도, 밝은 면에도 남아 있는 색 정보(no blown-out highlights)\n\n디테일/마감: 얼굴·눈·중심 장식만 또렷하게, 그 밖은 부드러운 경계(soft edges with crisp detail only on the face and focal ornaments), 배경은 외곽선 없는 유화 붓칠(oil-painted background without outlines), 먼 배경의 공기 원근(atmospheric perspective), 빛나는 유화 마감의 공식 키아트(polished key art finished like a luminous oil painting)\n\n02 NEGATIVE - 3D 렌더(3D render), 실사·사진 같은 표현(photorealistic), 반실사 얼굴과 피부 결 · 모공(semi-realistic face, skin texture, pores), 선 없이 덩어리로만 빚은 반실사(lineless semi-real rendering), 굵고 균일한 검은 외곽선(thick uniform black outlines), 납작한 한 단 셀 셰이딩(flat single-tone cel shading), 거친 수채 번짐(watercolor bleed), 두꺼운 유화 붓 자국(impasto), 종이 질감(paper texture), 지정된 얼굴 비례의 임의 변경, 캐릭터마다 반복되는 같은 얼굴(same face), 과도한 화장과 볼 홍조, 과도한 블룸(excessive bloom), 모든 재질에 같은 플라스틱 광택(plastic sheen), 글로시 3D 광택 렌더(glossy 3D render finish), 뭉개진 의상 구조, 부정확한 관절, 기형 손(malformed hands), 손가락 누락과 추가(missing or extra fingers), 추가 팔다리(extra limbs), 지정되지 않은 장비와 장식",
+     "sections": [
+      "2.캐릭터 외형 — 캐릭터별 교체",
+      "3. 코디네이션 — 의상별 교체",
+      "4. 장면 — 장면별 교체"
+     ],
+     "text": "Bright 2D Korean fantasy game illustration with a light 2.5D touch, finished like a luminous oil painting. Fine, soft coloured linework only around the eyes, face and key contours; forms built with gentle painted volume rather than 3D-render shading. Bright, airy high-key natural light with soft, subtle shadows; clear, luminous skin and fresh, vivid midtones that never wash out. Delicate visible oil brushwork and layered glazes of colour in the hair, fabric and background, with soft edges and crisp detail only on the face and focal ornaments. An elegant anime-influenced face with natural proportions — not a 3D render, not semi-realistic, not flat cel shading.",
+     "why": "v1(짧은 판 화풍 단락 하나)은 작게 보면 하이키 유화와 비슷했고 mmorpg2d 의 또렷한 2D 까지 못 갔다 — mmorpg2d v1 구조판(공통 규칙 · 1절 작화 고정 · 2~4절 칸 · 일상 규칙) 그대로에 1절만 바꿨다: 계열(밝은 2D + 살짝 2.5D, 유화 마감) · 선화(눈 · 얼굴 · 큰 윤곽에 옅은 색선, 안쪽은 칠 경계) · 피부(옅은 유화 글레이즈, 맑게 빛남) · 셰이딩(붓으로 칠한 입체, 유화 붓결 · 겹친 색층, 「붓 자국 대신 깔끔한 디지털 채색」 뺌) · 광원(밝은 하이키 자연광 · 씻기지 않는 중간색) · 마감(얼굴 · 중심 장식만 또렷, 유화 붓칠 배경) · 금지에 반실사 얼굴 · 글로시 3D 광택. 두꺼운 임파스토 금지는 그대로"
+    },
+    {
+     "v": "v3",
+     "adopted": "2026-11-09",
+     "by": "claude — 사용자 2026-11-09 「그러면 구조판 말고 아까 말한 화풍단락만 수정해서는?」 → 「응 진행해줘」",
+     "why": "v1(짧은 판)의 「light 2.5D touch」 · 「finished like a luminous oil painting」 이 그림 전체를 하이키 유화 렌더 쪽으로 끌었다 — 둘을 빼고 mmorpg2d 의 2D 를 붙잡던 말(clearly hand-drawn 2D character art · elegant adult anime facial design · clear shadow shapes · visibly illustrated in 2D)을 앞에, 유화 붓결 · 색층은 머리 · 옷 · 배경에만. 빛 줄은 v1 그대로. v2(구조판)는 기록 판",
+     "text": "A premium bright 2D Korean fantasy game illustration: clearly hand-drawn 2D character art with fine, soft coloured linework, elegant adult anime facial design and expressive, finely detailed eyes; layered soft painted shading with clear shadow shapes, never 3D-render shading. Bright, airy high-key natural light with soft, subtle shadows; clear, luminous skin and fresh, vivid midtones that never wash out. Delicate visible oil brushwork and layered glazes of colour in the hair, fabric and background, with crisp detail only on the face and focal ornaments. The face and body stay visibly illustrated in 2D — no 3D render, no semi-realistic face, no glossy plastic sheen, no flat single-tone cel shading.",
+     "casual": "A premium bright 2D Korean fantasy game illustration: clearly hand-drawn 2D character art with fine, soft coloured linework, elegant adult anime facial design and expressive, finely detailed eyes; layered soft painted shading with clear shadow shapes, never 3D-render shading. Bright, airy high-key natural light with soft, subtle shadows; clear, luminous skin and fresh, vivid midtones that never wash out. Delicate visible oil brushwork and layered glazes of colour in the hair, fabric and background, with crisp detail only on the face and focal ornaments. The face and body stay visibly illustrated in 2D — no 3D render, no semi-realistic face, no glossy plastic sheen, no flat single-tone cel shading.",
+     "casualShort": true,
+     "worldLight": "Light: bright, airy natural light with soft, subtle shadows — clear, luminous skin and fresh, vivid midtones that never wash out.",
+     "casualLight": "Light: the place's own bright, airy natural light with soft, subtle shadows — clear, luminous skin and fresh, vivid midtones that never wash out, as in the attached image.",
+     "check": "bright 2D-to-light-2.5D Korean fantasy game illustration with luminous oil-paint texture — soft coloured linework, airy natural light, clear skin, visible brushwork; not a 3D render or semi-realistic; one figure."
+    }
+   ],
+   "retired": "2026-11-11",
+   "retired_why": "도감에 그림이 없는 화풍 — 2.5 때 만든 키라 2.6 에서 안 쓴다(사용자 2026-11-11 「도감에 그림 등록이 없는 키들은 빼는게 좋을거 같아」 → 「1,2번 다 내려줘」). 지우지 않고 고르개에서만 뺀다"
+  }
+ },
+ "worldShort": true,
+ "worldSections": true
+}

@@ -1,0 +1,81 @@
+# 작업 지침
+
+**도시 공방(city-atelier)** — 실제 도시를 세 세계(판타지 · 스팀펑크 · 사이버펑크)의 여성 셋으로 의인화하는 도감 공방. 지금은 **뼈대 단계**(2026-11-19, Task 1)다: 원소 공방(`element-atelier`)을 복제해 원소 전용을 걷어 냈고, 도시 설계표 · 조립기 · 지구본 화면은 이어지는 일(계획 Task 2~11)이다.
+설계: `docs/superpowers/specs/2026-11-19-city-atelier-design.md` · 계획: `docs/superpowers/plans/2026-11-19-city-atelier.md` — 일하기 전에 둘 다 읽는다. 무엇을 원소에서 가져오고 뺐는지는 `docs/PORT_NOTES.md`.
+
+## 먼저 읽을 것
+
+| 문서 | 무엇 |
+|---|---|
+| 이 문서 | 규칙과 자리 |
+| `DESIGN.md` | 이 공방의 겉모습 뼈대 — 빈 틀(Task 7 에서 사용자가 시안을 고르면 채운다) |
+| `docs/superpowers/specs/…design.md` · `plans/…city-atelier.md` | 설계 · 계획 |
+| `IMAGE_RULES.md` | 그림 만들기 · 파일 이름 · 기록 · 올리기 — 그림 작업 전에(아직 원소 꼴이 남아 있다, 머리의 안내) |
+| `docs/IMAGE_AUTOMATION.md` | GPT 세션 이미지 작업(잠금 · 계획기 · 지시문 묶음) — 원소 꼴, Task 4~5 에서 도시 꼴로 |
+| `docs/PORT_NOTES.md` | 원소에서 가져온 것 · 뺀 것 · 건너뛰게 한 검사 |
+| `docs/PATCH.md` | 무엇을 고쳤나(아래 규칙 5) |
+
+## 화면 (지금)
+
+| 화면 | 파일 | 무엇 |
+|---|---|---|
+| 첫 화면 | `index.html` | 「짓는 중」 껍데기 + 도구 상자. 지구본 탭 · 도시 화면 · 전체 도감 탭은 Task 7~9 |
+| 도구 상자 | `lib/toolbox.js` · `lib/toolbox.css` | 구석의 「도구」 단추 → 화풍 · 프롬프트 · 즐겨찾기 · 설정(공간 · 밀도 · 움직임) · 패치 기록. 도구 화면의 머리는 가는 막대 `ToolBar` |
+| 화풍 비교 | `styles.html` · `data/style-compare.json` · `tools/style-compare.py` | 같은 카드를 화풍별로 — 서울 묶음은 Task 11 |
+| 프롬프트 | `prompt.html` · `lib/studio.js` · `lib/prompt-spec.js` · `lib/prompt-city.js` · `lib/casual-tree*.js` | 생성기. 설계표 `data/city-design.json`(Task 2)이 생기고 조립기가 도시 꼴이 되면(Task 3) 다시 돈다 — 그때까지 원소 꼴 그대로 들어 있다 |
+| 주소 | `lib/walk-core.js` | 순수 함수. `?tab=globe\|dex &city= &card= &pic= &w= &st= &view=` — 층 globe · dex · city · card. Task 7 이 `DESIGN.md` 에 확정 |
+
+## 지켜야 할 것
+
+### 1. 사람은 모두 여성, 세계는 셋
+세계 열쇠는 정확히 `fantasy` · `steampunk` · `cyberpunk`(`mecha` 없음). 한 도시 = 세계마다 **다른 사람**(얼굴 · 머리색 · 체형 · 실루엣 모두). 세계는 장르 이름이 아니라 **표지**(옷 · 몸 · 소품 · 빛)로 싣는다 — 판타지 웅장 · 화려 / 스팀펑크 증기 · 그을음 · 땀 / 사이버펑크 네온. 주인공은 사람, 배경은 거든다.
+
+### 2. 사실은 지어내지 않는다
+상징 · 위도경도 · 생활 장면마다 근거 `src`(주소). 상표 · 실존 인물 이름은 그림 지시문에 쓰지 않는다. 확신 없는 것은 적지 않는다.
+
+### 3. 일상컷은 그 세계의 그 도시의 하루
+판타지 · 스팀펑크 일상컷에 지금 도구(스마트폰 · 플라스틱 · 전광판)가 나오지 않는다. 일상컷 트리 v2(공용 모듈)는 그대로 쓰고 장소 · 시대 표만 이 공방 것.
+
+### 3-1. 캐릭터만의 컷 — 새 도시를 설계하면 직업도 같이
+새 도시를 설계하면 **그 자리에서** 캐릭터만의 컷(일상컷 90번)의 직업도 같이 설계해 `data/casual-own.json` 에 적는다(원소 공방 1-1-1 규칙을 옮김). 표에 줄이 없는 카드는 계획기가 이 컷을 건너뛰므로 나중으로 미루면 그 카드만 한 장이 빈다. 직업은 도시의 상징 · 명물 · 별명에서, 세계마다 다른 직업(`mode: per_world`) — 동물 · 상표 · 실존 인물은 피하고, 세 세계 자세가 서로 다르게. 줄마다 장소 글 · 하는 일 · 자세 추천 · 도구 · 노출 단계별 의상 글 셋(bold · moderate · low)을 쓰고 `node tools/casual-plan.cjs <도시> --world all` 로 90번이 짜지는지 본다. 그림 작업 중인 카드의 줄은 바꾸기 전에 사용자에게 묻는다.
+
+### 4. 화면에 말을 적지 않는다
+사람이 읽는 말은 전부 `lib/words.js`(`W('home.building')`). 생성기의 영어 문구는 `lib/prompt-spec.js`, 외형 선택지는 `lib/look-spec.js`. `node tests/words.cjs`. `<title>` 은 `app.title` 과 같아야 한다. 설계표의 글은 자료라서 화면이 그대로 읽는다.
+
+### 5. 고쳤으면 적는다
+파일을 고쳤으면 `docs/PATCH.md` 맨 위에 한 칸 적는다. 커밋 메시지로 갈음하지 않는다.
+
+```
+## 2026-11-19 · claude · 무엇을 바꿨나
+- data/foo.json — 왜 고쳤나
+```
+
+날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 맨 위로 간다. `node tests/patch.cjs` 가 모양을 본다. 공용 링크의 `?v=` 는 손으로 올린다.
+
+### 6. 공용 모듈은 고치지 않는다
+`lib/casual-tree.js` · `lib/casual-tree-v2.js` · `lib/favorites.js` 는 원소 · 삼국지 · 포켓몬 공방과 글자 하나 다르지 않게 복사한 공용 모듈이다. 여기서 따로 고치지 않는다(`node tests/casual-tree-v2.cjs` 가 원소 공방 사본과 sha256 으로 견준다 — 저장소가 옆에 없으면 건너뛴다). `lib/motion-fx.js` 도 sam-atelier 와 같이.
+
+### 7. 그림 · 모형은 이 저장소에 두지 않는다
+그림 저장소 `city-atelier-img`(GitHub 저장소는 Task 10 에서 사용자에게 묻고 만든다). `img/` 는 `.gitignore` 에 있다. 원본 PNG 는 올리지 않는다. 그림 규칙은 `IMAGE_RULES.md`. `data/img.json` 은 손으로 고치지 않는다.
+
+### 8. 화풍 기본은 미정
+서울 설계 뒤 Task 11 에서 사용자가 고른다. 시험 그림 · 시안은 보여 주고 고른 뒤에만 쓴다.
+
+### 9. 올리기
+GitHub 저장소 만들기 · push 는 사용자가 「올려줘」 한 뒤에만. 강제 push 와 남의 작업 지우기는 하지 않는다.
+
+### 10. 폴드 덮개 344×882 터치가 먼저
+누르는 자리 44px, 가로 넘침 0, 콘솔 오류 0.
+
+## 검사
+
+```bash
+node tests/words.cjs                 # 낱말 표
+node tests/patch.cjs                 # 패치 기록 모양
+node tests/favorites.cjs             # 즐겨찾기 공용 모듈 = 공방 모음 사본
+node tests/casual-tree-v2.cjs        # 일상컷 트리 v2 + 공용 모듈 동일성(원소 공방 사본)
+node tests/walk-core.cjs             # 주소 순수 함수
+node tests/casual-tree.cjs · python -I -X utf8 tests/casual-tree.py · python -I -X utf8 tests/style-compare.py · node tests/img-shards.cjs
+```
+
+원소 꼴에 묶여 지금은 건너뛰는 검사(맨 위 `process.exit(0)`)는 `docs/PORT_NOTES.md` 표에 — 해당 Task 에서 도시 꼴로 되살린다. 브라우저 검사는 `NODE_PATH`(playwright) · `ESM_DIR`(preact 가 든 node_modules) · `CHROMIUM_PATH` 가 필요하다.

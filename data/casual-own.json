@@ -1,0 +1,12 @@
+{
+ "version": 1,
+ "note": "「캐릭터만의 컷」(2026-11-13 사용자 「직업쪽은 항상 필수로 한장 만들어 지게」 · 「세계마다 한장으로 … 한장 씩 추가로 하고, 단계는 처음엔 높음으로」). 캐릭터마다 뿌리 연상 한 줄(root — from: 실제 쓰임 use · 이름 · 어원 말장난 name · 성질의 비유 trait · 역사 · 일화 story · 뒤집기 flip), 세계마다 그 연상에서 나온 직업(mode: per_world — 세계마다 다른 직업 · same_job — 같은 직업을 세계별로 옮김). 세계 씬: job_ko · base(받침 · 장소 종류를 빌리는 트리 장소) · place(Place 줄 글) · activity(Scene note 줄 글) · preset(자세 추천 — 손 · 구도는 트리 규칙 그대로) · prop(그 직업의 도구 글) · use(그 도구를 드는 꼴 sig_hold · sig_raise · sig_both · sig_low, 또는 트리 소품 동작 — 없어도 됨) · outfit(노출 단계별 의상 글 bold · moderate · low — 옷은 몸에 맞고 단계가 오를수록 조금 더 보인다). 실제 상표 · 작품 · 회사 이름은 쓰지 않는다(「프로게이머」 · 「스타트업 개발자」 같은 일반 말). example: true 는 틀이 도는지 보려고 채운 예시 — 내용 확정이 아니다. 비어 있는 캐릭터는 계획기가 건너뛴다. 번호는 일상컷 90번(<세계>-casual90) — 일상 묶음 장수에는 안 센다",
+ "number": 90,
+ "levels": [
+  "bold",
+  "moderate",
+  "low"
+ ],
+ "tries_per_level": 3,
+ "cards": {}
+}
