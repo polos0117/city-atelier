@@ -8,17 +8,17 @@
     "markers": {
       "fantasy": {
         "ko": ["겹겹의 금실 자수", "보석 박힌 왕관 · 머리 장식", "바닥에 끌리는 망토", "문장 새긴 갑옷 장식", "빛나는 마법 장신구", "두꺼운 비단 금란", "금박 세공", "뒤에 솟은 첨탑 · 성", "깃발과 왕실 예물", "은은히 감도는 마법의 빛"],
-        "en": ["layered gold-thread embroidery", "a jewel-set crown or headdress", "a floor-sweeping cape", "heraldic crests on her armor ornaments", "glowing enchanted jewelry", "heavy silk brocade", "gilded filigree", "towering spires and castle walls behind her", "banners and royal regalia", "a shimmer of magical light"],
-        "banned_en": ["smartphone", "mobile phone", "plastic", "LED screen", "neon sign", "neon", "laptop", "headphones", "earbuds", "sneakers", "hoodie", "jeans", "hologram", "billboard", "car", "machinery", "denim", "bomber jacket", "cowboy hat", "sweatpants", "leggings", "baseball cap", "tracksuit", "jogger", "track pants", "windbreaker", "fleece", "bodycon"]
+        "en": ["layered gold-thread embroidery", "a jewel-set crown or headdress", "a floor-sweeping cape", "guardian-beast emblems on her gilded armor ornaments", "glowing enchanted jewelry", "heavy silk brocade", "gilded filigree", "a jeweled norigae pendant with silk tassels at her waist", "banners and royal regalia", "a shimmer of magical light"],
+        "banned_en": ["smartphone", "mobile phone", "plastic", "LED screen", "neon sign", "neon", "laptop", "headphones", "earbuds", "sneakers", "hoodie", "jeans", "hologram", "billboard", "car", "machinery", "denim", "bomber jacket", "cowboy hat", "sweatpants", "leggings", "baseball cap", "tracksuit", "jogger", "track pants", "windbreaker", "fleece", "bodycon", "broadcast tower", "TV tower", "observation tower", "skyscraper", "Chinese-style palace", "Great Wall", "yellow-glazed roof tiles"]
       },
       "steampunk": {
         "ko": ["그을음 묻은 뺨", "땀에 젖은 셔츠", "기름때 가죽 장갑", "걷어붙인 소매", "몸에 두른 압력계 · 놋쇠 배관", "묵직한 공구 벨트", "피어오르는 증기", "붉은 화로 빛", "리벳 박힌 쇠", "석탄 연기와 때"],
         "en": ["soot-smudged cheeks", "a sweat-damp shirt", "oil-stained leather gloves", "rolled-up sleeves", "pressure gauges and brass pipes strapped to her body", "a heavy tool belt", "billowing steam", "red furnace glow", "riveted iron", "coal smoke and grime"],
-        "banned_en": ["smartphone", "mobile phone", "plastic", "LED screen", "neon sign", "neon", "laptop", "headphones", "earbuds", "sneakers", "hoodie", "hologram", "digital display", "touchscreen", "bomber jacket", "sweatpants", "leggings", "baseball cap", "tracksuit", "jogger", "track pants", "windbreaker", "fleece", "bodycon"]
+        "banned_en": ["smartphone", "mobile phone", "plastic", "LED screen", "neon sign", "neon", "laptop", "headphones", "earbuds", "sneakers", "hoodie", "hologram", "digital display", "touchscreen", "bomber jacket", "sweatpants", "leggings", "baseball cap", "tracksuit", "jogger", "track pants", "windbreaker", "fleece", "bodycon", "broadcast tower", "TV tower", "observation tower", "skyscraper", "Chinese-style palace", "Great Wall", "yellow-glazed roof tiles"]
       },
       "cyberpunk": {
         "ko": ["빛나는 네온 문신", "의체 · 이식 장치", "비에 젖어 반사되는 비옷", "얼굴에 비친 간판 빛", "홀로그램 장신구", "광섬유처럼 빛나는 머리 가닥", "크롬과 번들거리는 비닐", "마젠타 · 시안 빛", "비 젖은 네온 골목", "발광 선이 흐르는 테크웨어"],
-        "en": ["glowing neon tattoos", "cybernetic implants", "a reflective rain-slick raincoat", "sign light reflected on her face", "holographic jewelry", "fiber-optic glowing hair strands", "chrome and glossy vinyl", "magenta and cyan glow", "a rain-soaked neon alley behind her", "techwear traced with glowing light lines"],
+        "en": ["glowing neon tattoos", "cybernetic implants", "a reflective rain-slick raincoat", "sign light reflected on her face", "holographic jewelry", "fiber-optic glowing hair strands", "chrome and glossy vinyl", "magenta and cyan glow", "rain beading on her skin and coat", "techwear traced with glowing light lines"],
         "banned_en": []
       }
     },
@@ -69,10 +69,10 @@
       "worlds": {
         "fantasy": {
           "ko": "왕도 서울 — 북악 · 인왕 · 남산 · 낙산을 성벽으로 이어 감싼 금빛 궁궐의 도읍, 남산 봉수대에 불이 오르고 한강이 은빛 해자처럼 남쪽을 돈다",
-          "en": "a grand royal capital ringed by four mountains joined by a great stone wall: golden-roofed palace halls with painted dancheong eaves stacked beneath the northern peak, beacon fires burning on the southern mountain, the wide silver river curving past like a moat, banners and lanterns along the processional road",
+          "en": "a grand royal capital ringed by four mountains, a low granite fortress wall following their ridges: Joseon-style Korean palace halls with gently upswept charcoal-tiled roofs, gilded ridge ornaments and painted dancheong eaves stacked beneath the northern peak, only beacon fires burning on the summit of the southern mountain, the wide silver river curving past like a moat, banners and lanterns along the processional road",
           "scenes": [
             { "key": "throne", "ko": "정전 앞 박석 마당", "en": "on the stone-paved courtyard before the great throne hall, painted dancheong eaves and rows of rank stones leading to the stairs" },
-            { "key": "wall", "ko": "산등성이 성곽 위", "en": "on the stone city wall winding along the mountain ridge above the capital, golden palace roofs below at dusk" },
+            { "key": "wall", "ko": "산등성이 성곽 위", "en": "on the stone city wall winding along the mountain ridge above the capital, dark-tiled palace roofs with gilded ridges below at dusk" },
             { "key": "beacon", "ko": "남산 봉수대", "en": "beside the beacon fires on the southern mountain, the whole walled capital and the silver river spread below" }
           ],
           "look": {
@@ -83,7 +83,7 @@
           "hold": { "en": "a small golden seal topped with a carved haechi guardian beast" },
           "motif": {
             "ko": "단청 문양을 금실로 수놓은 바닥까지 끌리는 서울 빨강 비단 망토, 해치를 새긴 금 견갑, 성곽으로 이은 네 산봉우리 모양의 보석 왕관",
-            "en": "a floor-sweeping Seoul-red silk cape embroidered in gold thread with dancheong temple-eave patterns, gilded pauldrons engraved with a haechi guardian beast, and a jeweled crown shaped like four mountain peaks linked by a city wall"
+            "en": "a floor-sweeping Seoul-red silk cape embroidered in gold thread with dancheong temple-eave patterns, gilded pauldrons engraved with a haechi guardian beast, and a gold crown whose rim rises into four low mountain peaks, joined by a thin band shaped like a granite city wall"
           },
           "card_ko": { "look": "남빛 긴 생머리 · 키 큰 몸", "motif": "단청 금실 망토 · 네 봉우리 왕관" }
         },

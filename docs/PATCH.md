@@ -7,6 +7,12 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-19 · claude · 서울 시험 그림에서 새어 나온 것 고침 — 판타지 궁궐 · 송신탑 · 배경 표지
+- 사용자 「이번엔 판타지 옮겨줘. 위에 잘못된 문장들 고쳐서」. 삼국지 기본 화풍 시험 세 장(판타지 · 스팀펑크 · 사이버펑크)에서 본 것: 판타지 · 스팀펑크 배경에 지금의 남산 송신탑이 섰고, 판타지 궁궐 · 성벽이 중국식(노란 기와 · 만리장성)으로 읽혔고, 네 봉우리 왕관이 흐렸다.
+- data/city-design.json — 판타지 세계 글: 「a great stone wall · golden-roofed palace halls」 → 산등성이를 따르는 낮은 화강암 성벽 · 조선식 궁궐(살짝 들린 짙은 기와지붕 · 금빛 용마루 장식 · 단청 처마) · 남산 꼭대기엔 봉수대 불만. 판타지 장면 둘째 「golden palace roofs」 → 금빛 용마루의 짙은 기와지붕. 판타지 motif 왕관 → 테두리가 낮은 네 봉우리로 솟고 화강암 성벽 모양 띠로 이어진 금관.
+- 세계 표지 가운데 배경 표지를 사람 표지로(검토 지적): 판타지 「towering spires and castle walls behind her」 → 허리의 보석 노리개 · 비단 술, 「heraldic crests」(서양 문장) → 금 갑옷 장식의 해치류 수호수 문양, 사이버펑크 「a rain-soaked neon alley behind her」 → 피부와 비옷에 맺힌 빗방울.
+- 금지 낱말(판타지 · 스팀펑크 banned_en)에 broadcast tower · TV tower · observation tower · skyscraper · Chinese-style palace · Great Wall · yellow-glazed roof tiles — Avoid 줄로만 나간다. 검사 city-design · prompt-city · casual-plan · prompt-sections 통과. docs/samples 의 서울 지시문 본보기는 이 고침 전 것이다.
+
 ## 2026-11-19 · claude · 전체 검토 고침 — 한 장의 세계 · 원소 화풍 묶음 · 원소 낱말 · 검사 목록 · 주소 검증
 - lib/city-view.js — 한 장의 세계 읽기를 실제 파일 이름(`<도시>_<세계>_<화풍>_f.webp`)에 맞춤(늘 빈 값이던 것), 등록부에 없는 그림 확인 `known` 추가
 - index.html · lib/dex-view.js — 한 장 주소의 그림이 등록부에 없으면 도시 무대로, city-view `?v=2` · walk-core `?v=8` · img.js `?v=12` · words `?v=34` · dex-view `?v=2`
