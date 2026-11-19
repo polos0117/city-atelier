@@ -28,7 +28,7 @@
 | `lib/walk.js` · `lib/walk.css` · `lib/walk-table.js` · `lib/walk-orbit.js` · `lib/walk-family.js` · `lib/walk-list.js` · `lib/walk-card.js` · `lib/walk-data.js` · `lib/walk-fx.js` | 원소 층 화면(주기율표 · 궤도 · 가문 · 목록 · 한 장) · 껍데기 · 효과 다섯. 한 장 · 자료 읽기 꼴은 Task 8 이 원소 저장소에서 참고해 새로 짠다 |
 | `lib/holo.js` | 한 장의 홀로(Pixi) 효과 — 한 장 층과 함께 쓰임. 판단이 갈려 뺌(Task 8 이 다시 가져올지 정한다) |
 | `tests/walk-orbit|table|family|list|card|shell|world|tools|particles|theme.cjs` · `tests/dex-holo.cjs` · `tests/dex-turn.cjs` | 위 화면의 검사(`walk-theme` 는 땅 · 원소 설계표에 묶여 있어 뺌 — Task 7 이 `tests/theme.cjs` 로 새로) |
-| `tools/seed-elements.py` · `tools/roster.py` | 원소 번호 채우기 · 세 층 카드 읽기. **`tools/register-images.py` · `tools/city-design.py` 가 `import roster` 라 Task 5 · 2 가 도시 꼴 읽기를 새로 넣기 전까지 돌지 않는다** |
+| `tools/seed-elements.py` · `tools/roster.py` | 원소 번호 채우기 · 세 층 카드 읽기. **`tools/register-images.py` 가 `import roster` 라 Task 5 가 도시 꼴 읽기를 새로 넣기 전까지 돌지 않는다**(`tools/city-design.py` 는 Task 2 에서 `roster` 없이 다시 씀) |
 | `data/element-design.json` · `docs/ELEMENT_CONCEPT.md` · `docs/casual-review-2026-11-13.md` | 원소 설계표 · 기획 · 원소 일상컷 검토 |
 | 원소 공간 다섯의 그림 · 원소 그림 | 저장소에 없던 것(그림 저장소) — 경로를 쓰는 곳은 `lib/room.css` · `lib/material.css` · `lib/img.js`, Task 5 · 7 |
 
@@ -36,8 +36,8 @@
 
 | 검사 | 까닭 | 되살리는 곳 |
 |---|---|---|
-| `tests/city-design.py` | 설계표 검사기 — 원소 표 · `roster` | Task 2 |
-| `tests/look-spec.cjs` | 설계표 `look` 와 어휘 견주기 | Task 2 |
+| ~~`tests/city-design.py`~~ | 되살림(Task 2, 2026-11-19) — 도시 한 층 검사기(`roster` 없이 `data/city-design.json` 을 바로 읽는다) | — |
+| ~~`tests/look-spec.cjs`~~ | 되살림(Task 2, 2026-11-19) — 설계표 `look` 을 도시 × 세계로 어휘와 견준다. 단 `EXPOSURE_LAYER` 줄은 아직 `mecha` 를 본다(`lib/prompt-spec.js` 가 원소 꼴 — Task 3 이 `cyberpunk` 로 바꿀 때 같이) | — |
 | `tests/prompt-city.cjs` | 조립기 — 원소 카드 전부 | Task 3 |
 | `tests/prompt-sections.cjs` · `tests/prompt-short-look.cjs` | 원소 설계표로 지시문 칸 | Task 3 |
 | `tests/prompt-pack-screen.cjs` · `tests/screen.cjs` | 생성기 화면 — 설계표 · 원소 카드 | Task 3(생성기) · 8 |

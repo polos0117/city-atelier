@@ -1,326 +1,202 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""원소 설계표 검사. game-atelier 의 tools/game-design.py 의 자리에 해당한다 — 세 층 구조에 맞춰 새로 썼다.
+"""도시 설계표 검사 — 원소 검사기(나라 › 가문 › 주민)를 도시 한 층으로 줄였다.
 
-    python3 tools/city-design.py check     # 빈칸·열쇠 꼴·세계·가문의 원소·겹치는 가문·사실 칸
+    python -I -X utf8 tools/city-design.py check
 
-규칙(docs/ELEMENT_CONCEPT.md):
-- 나라 열쇠는 elements 의 key(기호 소문자)와 같다. 가문·주민 열쇠는 소문자·숫자만(하이픈·밑줄 없음 — 카드 열쇠를 하이픈으로 잇는다).
-- 나라는 persona · traits.ko(둘 이상) · traits.en · palette.en · worlds 셋(fantasy·steampunk·mecha — 각 en, mecha 는 design 도).
-- 가문은 ko·en·persona·traits.en·elements(나라 자신을 포함, 전부 아는 원소)·citizens(비어 있어도 된다).
-- 주민은 ko·en·object.en·worlds(비지 않고 전부 아는 세계). notes 의 세계도 아는 세계.
-- 나라는 worlds.<세계>.scenes(그 세계 안 장소 변주 둘 이상 — key·ko·en) 과 hold.en(일상컷에서 손에 드는 그 원소의 물건). 가문은 hold.en, scenes 는 세계 글을 덮어썼을 때만.
-- 나라는 look(face 여섯: face_shape·eyes·brows·nose·lips·eye_color + silhouette 셋: body·hair·hair_color, 값은 lib/look-spec.js VOCAB_EN 의 열쇠 — 어휘 대조는 tests/prompt-city.cjs).
-  가문주·주민은 근본을 따라가지 않고 그 물질·물건에서 떠오르는 외형을 다 적는다(2026-11-01) — face 의 brows·nose·lips, silhouette 의 body·hair_color
-  (가문주는 eye_color 도, 주민 눈 색은 가문 핏줄), worlds 에 사는 세계마다 hair·face_shape·eyes(세계끼리 서로 다르게). 팔레트 색이 머리·눈 색이 된다(2026-10-30).
-- 얼굴 설계(2026-11-01, 근본 · 가문주 · 주민 모두): face 에 age·impression·skin_tone·eye_size·eye_tilt·mark·expr, 사는 세계마다 silhouette.bangs. 물려받지 않는다.
-- 성질·세계 문장에 한국어가 섞이지 않는다(en 칸). 시각 언어 한 줄이 비어 있으면 그림이 흔들린다 — en 칸은 40자 이상.
-- 구조판 손글 칸(2026-11-04, 화풍 semireal) — 나라 · 가문 · 주민의 struct.<사는 세계>."2"·"3"·"4"(세계 그림 2~4절) · "c2"(일상컷 2절)에 칸 이름 → 글.
-  칸 이름은 lib/prompt-spec.js 의 STRUCT 와 같다(여기 STRUCT_FIELDS — tests/prompt-city.cjs 가 둘을 견준다). 빈 글 · 모르는 칸 · 모르는 절 · 안 사는 세계는 오류.
-- 가문이 여러 나라에 걸치면(elements 둘 이상) 그 나라들 모두에 같은 열쇠의 가문이 있어야 하는 것은 아니다 — 있으면 도감이 잇는다. 다만 elements 에 적힌 원소는 전부 있어야 한다.
+규칙(docs/superpowers/specs/2026-11-19-city-atelier-design.md 3 · 6절, 계획 Task 2):
+- vocab.worlds 는 정확히 fantasy · steampunk · cyberpunk. world_ko · markers · wear 가 세계마다.
+- markers.<세계> = { ko, en(8~12, 같은 수), banned_en } — 판타지 · 스팀펑크는 금지 낱말 10개 이상(스팀펑크는 neon 포함), 사이버펑크는 빈 배열.
+- wear.<세계> = { costume, bold, moderate, low } — 영어 옷 말투(원소 prompt-spec 의 COSTUME · EXPOSURE 꼴).
+- cities 열쇠는 CITY_KEYS 와 같은 열 개 같은 차례. 도시마다 ko · en · country · persona, lat · lon(범위 안, 소수 둘째 자리까지) · latlon_src(주소),
+  palette { en, hex 2~3개 #RRGGBB }, symbols 3~5개(ko · en · src 주소).
+- worlds 가 {} 면 설계 미정. 채우면 세 세계 다: ko · en(40자 이상, 한국어 없음) · scenes 셋(key · ko · en) ·
+  look { face 여섯, silhouette 셋, why } · hold.en · motif { ko, en }. 세 세계는 다른 사람 — 머리색 · 체형 · 얼굴형 · 헤어스타일이 세계끼리 모두 다르다.
+- 판타지 · 스팀펑크의 글(en · scenes · hold · motif)에 그 세계 banned_en 낱말이 없다.
+- look 값은 소문자 열쇠까지만 본다 — 어휘 대조는 tests/look-spec.cjs(lib/look-spec.js VOCAB_EN · FACE_DESIGN).
 """
+import json
+import os
 import re
 import sys
-import os
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import roster  # noqa: E402
-
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+WORLDS = ["fantasy", "steampunk", "cyberpunk"]
+CITY_KEYS = ["seoul", "tokyo", "beijing", "paris", "london", "rome", "newyork", "istanbul", "cairo", "rio"]
 KEY = re.compile(r"^[a-z0-9]+$")
+HEX = re.compile(r"^#[0-9A-Fa-f]{6}$")
+URL = re.compile(r"^https?://\S+$")
+HANGUL = re.compile(r"[가-힣]")
 LOOK = {"face": ("face_shape", "eyes", "brows", "nose", "lips", "eye_color"), "silhouette": ("body", "hair", "hair_color")}
-# 얼굴 설계 칸(2026-11-01 — 얼굴 느낌이 비슷하게 나왔다) — 있으면 본다. 값 대조는 tests/prompt-city.cjs(lib/prompt-spec.js FACE_DESIGN)
-# 구조판 칸 이름 — lib/prompt-spec.js STRUCT 의 s2 · s3 · s4(체형 머리 줄은 값이 없다). 일상컷 2절(c2)은 2절 칸
-STRUCT_FIELDS = {
-    "2": ("캐릭터/콘셉트", "성별·나이대", "얼굴 크기", "얼굴형", "이목구비 배치", "눈 형태", "눈색", "동공", "코", "입술", "피부색", "머리색", "헤어스타일",
-          "전체 골격·비례", "목·어깨", "가슴", "허리", "골반·엉덩이", "허벅지", "팔·종아리", "전체 실루엣"),
-    "3": ("철학", "주요 색상", "주요 소재", "상의", "하의", "신발", "액세서리", "장비·소품", "부가 요소"),
-    "4": ("액션", "손동작", "표정", "시선", "머리카락·의상 움직임", "구도", "카메라", "광원", "장면 팔레트", "배경", "환경 효과"),
-}
-STRUCT_FIELDS["c2"] = STRUCT_FIELDS["2"]
-
-
-def check_struct(where, st, lives, errs):
-    """구조판 손글 칸 — {세계: {절: {칸: 글}}}. 없으면 그만."""
-    if st is None:
-        return
-    if not isinstance(st, dict):
-        errs.append(where + " struct 는 {세계: {절: {칸: 글}}}"); return
-    for w, secs in st.items():
-        if w not in lives:
-            errs.append("%s struct 의 %r 는 사는 세계가 아니다" % (where, w)); continue
-        if not isinstance(secs, dict):
-            errs.append("%s struct.%s 는 {절: {칸: 글}}" % (where, w)); continue
-        for s, rows in secs.items():
-            if s not in STRUCT_FIELDS:
-                errs.append("%s struct.%s 의 %r 는 모르는 절(2 · 3 · 4 · c2)" % (where, w, s)); continue
-            if not isinstance(rows, dict):
-                errs.append("%s struct.%s.%s 는 {칸: 글}" % (where, w, s)); continue
-            for k, v in rows.items():
-                if k not in STRUCT_FIELDS[s]:
-                    errs.append("%s struct.%s.%s 의 %r 는 모르는 칸" % (where, w, s, k))
-                elif not isinstance(v, str) or not v.strip():
-                    errs.append("%s struct.%s.%s.%s 가 비었다" % (where, w, s, k))
-                elif "[" in v or "]" in v:
-                    errs.append("%s struct.%s.%s.%s 에 [ ] 를 넣지 않는다(칸 괄호는 조립부가 친다)" % (where, w, s, k))
-
-
 FACE_DESIGN = {"face": ("age", "impression", "skin_tone", "eye_size", "eye_tilt", "mark", "expr"), "silhouette": ("bangs",)}
+DIFFER = (("silhouette", "hair_color"), ("silhouette", "body"), ("face", "face_shape"), ("silhouette", "hair"))
+WEAR = ("costume", "bold", "moderate", "low")
 
 
-def check_scenes(where, scenes, need, errs):
-    """세계 안 장소 변주 — 나라는 둘 이상(need), 가문은 있으면 본다. key 는 소문자 열쇠, ko 와 en(12자 이상)"""
-    if scenes is None:
-        if need:
-            errs.append(where + " scenes 가 없다")
-        return
-    if not isinstance(scenes, list) or (need and len(scenes) < 2):
-        errs.append(where + " scenes 는 둘 이상의 목록"); return
-    seen = set()
-    for r in scenes:
-        k = (r or {}).get("key")
-        if not k or not KEY.match(k):
-            errs.append(where + " scenes 열쇠는 소문자·숫자만 — %r" % k)
-        if k in seen:
-            errs.append(where + " scenes 열쇠 %r 가 두 번" % k)
-        seen.add(k)
-        if not (r.get("ko") or "").strip():
-            errs.append(where + " scenes.%s ko 가 비었다" % k)
-        en_ = (r.get("en") or "").strip()
-        if len(en_) < 12 or re.search(r"[가-힣]", en_):
-            errs.append(where + " scenes.%s en 이 짧거나 한국어" % k)
-
-
-def check_look(where, look, full, errs):
-    """나라는 아홉 칸이 다 차야 하고(full), 가문은 아는 칸만 덮어쓴다. 값은 소문자 열쇠(어휘 대조는 node 검사)."""
-    if not isinstance(look, dict):
-        errs.append(where + " look 이 없다" if full else where + " look 은 dict"); return
-    for grp, keys in LOOK.items():
-        box = look.get(grp)
-        if box is None:
-            if full:
-                errs.append("%s look.%s 가 없다" % (where, grp))
-            continue
-        for k, v in box.items():
-            if k not in keys and k not in FACE_DESIGN[grp]:
-                errs.append("%s look.%s 의 %r 는 모르는 칸" % (where, grp, k))
-            elif not isinstance(v, str) or not KEY.match(v.replace("_", "")):
-                errs.append("%s look.%s.%s 값은 소문자 열쇠 — %r" % (where, grp, k, v))
-        if full:
-            for k in keys:
-                if not box.get(k):
-                    errs.append("%s look.%s.%s 가 비었다" % (where, grp, k))
-    for k in look:
-        if k not in ("face", "silhouette", "why", "worlds"):
-            errs.append("%s look 의 %r 는 모르는 칸" % (where, k))
-    # 세계마다 다른 사람(2026-10-30) — 나라는 세 세계 다, 머리·얼굴형·눈이 차고 세 세계가 서로 다르다. 가문은 있으면 본다
-    ws = look.get("worlds")
-    if ws is None:
-        if full:
-            errs.append(where + " look.worlds 가 없다(세계마다 머리·얼굴형·눈)")
-        return
-    for w, sub in ws.items():
-        if w not in ("fantasy", "steampunk", "mecha"):
-            errs.append("%s look.worlds 의 %r 는 아는 세계가 아니다" % (where, w)); continue
-        check_look(where + " look.worlds." + w, sub, False, errs)
-        if full and not ((sub.get("silhouette") or {}).get("hair") and (sub.get("face") or {}).get("face_shape") and (sub.get("face") or {}).get("eyes")):
-            errs.append("%s look.worlds.%s 에 머리·얼굴형·눈이 다 있어야 한다" % (where, w))
-    if full:
-        sig = [((ws.get(w) or {}).get("silhouette") or {}).get("hair", "") + "/" + ((ws.get(w) or {}).get("face") or {}).get("face_shape", "") + "/" + ((ws.get(w) or {}).get("face") or {}).get("eyes", "") for w in ("fantasy", "steampunk", "mecha")]
-        if len(set(sig)) < 3:
-            errs.append(where + " look.worlds — 두 세계가 같은 사람(머리·얼굴형·눈): %s" % sig)
-
-
-def check_face_design(where, look, lived, errs):
-    """얼굴 설계 칸이 다 찼는지(2026-11-01 — 얼굴 느낌이 비슷하게 나왔다): 나이감 · 인상 · 피부 · 눈 크기 · 눈꼬리 · 표식 · 표정, 사는 세계마다 앞머리"""
-    if not isinstance(look, dict):
-        return
-    for k in FACE_DESIGN["face"]:
-        if not (look.get("face") or {}).get(k):
-            errs.append("%s look.face.%s 가 비었다(얼굴 설계)" % (where, k))
-    for w in lived:
-        if not (((look.get("worlds") or {}).get(w) or {}).get("silhouette") or {}).get("bangs"):
-            errs.append("%s look.worlds.%s.silhouette.bangs 가 비었다(앞머리)" % (where, w))
-
-
-def check_designed(where, look, lived, eye, errs):
-    """가문주·주민 외형 — 근본을 따라가지 않고 제 물질·물건에서 다 적는다(사용자 2026-11-01). lived 는 사는 세계, eye 는 눈 색까지 적어야 하는지(가문주)"""
-    if not isinstance(look, dict):
-        errs.append(where + " look 이 없다(제 물질·물건에서 떠오르는 외형)"); return
-    check_look(where, look, False, errs)
-    check_face_design(where, look, lived, errs)
-    need = {"face": ["brows", "nose", "lips"] + (["eye_color"] if eye else []), "silhouette": ["body", "hair_color"]}
-    for grp, keys in need.items():
-        for k in keys:
-            if not (look.get(grp) or {}).get(k):
-                errs.append("%s look.%s.%s 가 비었다" % (where, grp, k))
-    ws = look.get("worlds") or {}
-    sig = []
-    for w in lived:
-        sub = ws.get(w) or {}
-        hair, fs, ey = (sub.get("silhouette") or {}).get("hair"), (sub.get("face") or {}).get("face_shape"), (sub.get("face") or {}).get("eyes")
-        if not (hair and fs and ey):
-            errs.append("%s look.worlds.%s 에 머리·얼굴형·눈이 다 있어야 한다" % (where, w))
-        if w == "steampunk" and hair == "updo_bun":
-            errs.append(where + " look.worlds.steampunk 는 올림머리로 두지 않는다(사용자 2026-10-31 「스팀펑크 쪽은 위로 묶은 머리가 너무 많아」)")
-        sig.append("%s/%s/%s" % (hair, fs, ey))
-    if len(set(sig)) < len(sig):
-        errs.append(where + " look.worlds — 두 세계가 같은 사람(머리·얼굴형·눈): %s" % sig)
-    for w in ws:
-        if w not in lived:
-            errs.append("%s look.worlds 의 %r 는 사는 세계가 아니다" % (where, w))
+def banned_in(text, banned):
+    return [b for b in banned if re.search(r"\b" + re.escape(b.lower()) + r"\b", (text or "").lower())]
 
 
 def check(doc):
     errs, warns = [], []
-    v = doc.get("vocab") or {}
-    worlds = v.get("worlds") or []
-    if worlds != ["fantasy", "steampunk", "mecha"]:
-        errs.append("vocab.worlds 는 fantasy·steampunk·mecha 셋 — %r" % (worlds,))
-    els = {e["key"]: e for e in doc.get("elements") or []}
-    if len(els) != 118:
-        errs.append("elements 가 118 이 아니다: %d" % len(els))
-    nums = sorted(e["number"] for e in els.values())
-    if nums != list(range(1, 119)):
-        errs.append("원소 번호가 1~118 이 아니다")
-    for e in els.values():
-        for k in ("symbol", "ko", "en", "category", "period", "state"):
-            if e.get(k) in (None, ""):
-                errs.append("원소 %s 의 %s 가 비었다" % (e["key"], k))
-        if e["key"] != e["symbol"].lower():
-            errs.append("원소 %s 의 key 는 기호 소문자" % e["symbol"])
 
     def en(where, s, least=40):
-        s = (s or "").strip()
+        s = (s or "").strip() if isinstance(s, str) else ""
         if len(s) < least:
-            errs.append("%s — 영어 문장이 짧다(%d자)" % (where, len(s)))
-        if re.search(r"[가-힣]", s):
+            errs.append("%s — 영어 글이 짧다(%d자, %d자 이상)" % (where, len(s), least))
+        if HANGUL.search(s):
             errs.append("%s — 영어 칸에 한국어" % where)
 
-    seen_nation = set()
-    for n in doc.get("nations") or []:
-        k = n.get("key")
-        if k not in els:
-            errs.append("나라 %r 는 아는 원소가 아니다" % k); continue
-        if k in seen_nation:
-            errs.append("나라 %s 가 두 번" % k)
-        seen_nation.add(k)
-        here = "나라 " + k
-        if not (n.get("persona") or "").strip():
-            errs.append(here + " persona 가 비었다")
-        tr = n.get("traits") or {}
-        if len(tr.get("ko") or []) < 2:
-            errs.append(here + " traits.ko 는 둘 이상")
-        en(here + " traits.en", tr.get("en"))
-        en(here + " palette.en", (n.get("palette") or {}).get("en"), 10)
-        check_look(here, n.get("look"), True, errs)
-        check_face_design(here, n.get("look"), ("fantasy", "steampunk", "mecha"), errs)
-        ws = n.get("worlds") or {}
-        for w in worlds:
-            if w not in ws:
-                errs.append(here + " worlds 에 %s 가 없다" % w); continue
-            en(here + " worlds." + w, ws[w].get("en"))
-            if w == "mecha":
-                en(here + " worlds.mecha.design", ws[w].get("design"))
-            check_scenes(here + " worlds." + w, ws[w].get("scenes"), True, errs)
-        en(here + " hold.en", (n.get("hold") or {}).get("en"), 12)
-        check_struct(here, n.get("struct"), ("fantasy", "steampunk", "mecha"), errs)
-        seen_f = set()
-        for f in n.get("families") or []:
-            fk = f.get("key")
-            fhere = here + " 가문 %r" % fk
-            if not fk or not KEY.match(fk):
-                errs.append(fhere + " 열쇠는 소문자·숫자만")
-            if fk in seen_f:
-                errs.append(fhere + " 가 두 번")
-            seen_f.add(fk)
-            for c in ("ko", "en", "persona"):
-                if not (f.get(c) or "").strip():
-                    errs.append(fhere + " %s 가 비었다" % c)
-            en(fhere + " traits.en", (f.get("traits") or {}).get("en"))
-            check_designed(fhere, f.get("look"), ("fantasy", "steampunk", "mecha"), True, errs)
-            fe = f.get("elements") or []
-            if k not in fe:
-                errs.append(fhere + " elements 에 제 나라 %s 가 없다" % k)
-            for x in fe:
-                if x not in els:
-                    errs.append(fhere + " elements 의 %r 는 아는 원소가 아니다" % x)
-            for w, body in (f.get("worlds") or {}).items():
-                if w not in worlds:
-                    errs.append(fhere + " worlds 의 %r 는 아는 세계가 아니다" % w)
-                else:
-                    en(fhere + " worlds." + w, body.get("en"))
-                    check_scenes(fhere + " worlds." + w, body.get("scenes"), False, errs)
-            en(fhere + " hold.en", (f.get("hold") or {}).get("en"), 12)
-            check_struct(fhere, f.get("struct"), ("fantasy", "steampunk", "mecha"), errs)
-            seen_c = set()
-            for c in f.get("citizens") or []:
-                ck = c.get("key")
-                chere = fhere + " 주민 %r" % ck
-                if not ck or not KEY.match(ck):
-                    errs.append(chere + " 열쇠는 소문자·숫자만")
-                if ck in seen_c:
-                    errs.append(chere + " 가 두 번")
-                seen_c.add(ck)
-                for col in ("ko", "en"):
-                    if not (c.get(col) or "").strip():
-                        errs.append(chere + " %s 가 비었다" % col)
-                # 주민도 제 물건에서 떠오르는 외형을 다 적는다(2026-11-01) — 눈 색만 가문 핏줄
-                check_designed(chere, c.get("look"), [w for w in ("fantasy", "steampunk", "mecha") if w in (c.get("worlds") or [])], False, errs)
-                en(chere + " object.en", (c.get("object") or {}).get("en"), 12)
-                cw = c.get("worlds") or []
-                check_struct(chere, c.get("struct"), cw, errs)
-                if not cw:
-                    errs.append(chere + " worlds 가 비었다")
-                for w in cw:
-                    if w not in worlds:
-                        errs.append(chere + " worlds 의 %r 는 아는 세계가 아니다" % w)
-                for w, body in (c.get("notes") or {}).items():
-                    if w not in worlds:
-                        errs.append(chere + " notes 의 %r 는 아는 세계가 아니다" % w)
-                    elif w not in cw:
-                        warns.append(chere + " notes.%s 가 있는데 그 세계에 살지 않는다" % w)
-                    else:
-                        en(chere + " notes." + w, body.get("en"), 12)
-            if not f.get("citizens"):
-                warns.append(fhere + " 에 주민이 없다")
-        if not n.get("families") and not els[k].get("synthetic"):
-            warns.append(here + " 에 가문이 없다")
-    # 겹치는 가문 — 같은 열쇠의 가문이 둘 이상의 나라에 있으면 elements 가 서로를 가리키는지
-    fam_at = {}
-    for n in doc.get("nations") or []:
-        for f in n.get("families") or []:
-            fam_at.setdefault(f["key"], []).append((n["key"], set(f.get("elements") or [])))
-    for fk, where in fam_at.items():
-        if len(where) > 1:
-            for nk, fe in where:
-                others = [o for o, _ in where if o != nk]
-                for o in others:
-                    if o not in fe:
-                        warns.append("가문 %s — %s 나라의 elements 에 %s 가 없어 도감이 잇지 못한다" % (fk, nk, o))
-    # 같은 물질의 가문은 나라마다 다른 주민 — 그 원소가 그 물질에서 맡는 몫의 물건(사용자 2026-11-01 「수소쪽에는 물 밑에 물병, 우물, 비가 있는데, 산소쪽은 다른 주민을 편성하는 구조로」)
-    cit_at = {}
-    for n in doc.get("nations") or []:
-        for f in n.get("families") or []:
-            for c in f.get("citizens") or []:
-                cit_at.setdefault((f["key"], c.get("key")), []).append(n["key"])
-    for (fk, ck), ns in cit_at.items():
-        if len(ns) > 1:
-            errs.append("가문 %s 의 주민 %r 가 %s 나라에 다 있다 — 같은 물질도 나라마다 다른 주민" % (fk, ck, "·".join(ns)))
+    v = doc.get("vocab") or {}
+    if v.get("worlds") != WORLDS:
+        errs.append("vocab.worlds 는 fantasy · steampunk · cyberpunk 셋 — %r" % (v.get("worlds"),))
+    markers, wear, wko = v.get("markers") or {}, v.get("wear") or {}, v.get("world_ko") or {}
+    for w in WORLDS:
+        if not (wko.get(w) or "").strip():
+            errs.append("vocab.world_ko.%s 가 비었다" % w)
+        m = markers.get(w) or {}
+        ko, ens, ban = m.get("ko") or [], m.get("en") or [], m.get("banned_en")
+        if not 8 <= len(ens) <= 12:
+            errs.append("vocab.markers.%s.en 은 8~12개 — %d" % (w, len(ens)))
+        if len(ko) != len(ens):
+            errs.append("vocab.markers.%s ko(%d) · en(%d) 수가 다르다" % (w, len(ko), len(ens)))
+        for s in ens:
+            en("vocab.markers.%s.en %r" % (w, s), s, 3)
+        if not isinstance(ban, list):
+            errs.append("vocab.markers.%s.banned_en 이 목록이 아니다" % w)
+            ban = []
+        if w == "cyberpunk":
+            if ban:
+                errs.append("vocab.markers.cyberpunk.banned_en 은 빈 배열")
+        elif len(ban) < 10:
+            errs.append("vocab.markers.%s.banned_en 은 10개 이상 — %d" % (w, len(ban)))
+        if w == "steampunk" and not any("neon" in b for b in ban):
+            errs.append("vocab.markers.steampunk.banned_en 에 neon 이 없다")
+        for s in ens:
+            if banned_in(s, ban):
+                errs.append("vocab.markers.%s 표지 %r 에 금지 낱말" % (w, s))
+        wr = wear.get(w) or {}
+        for k in WEAR:
+            en("vocab.wear.%s.%s" % (w, k), wr.get(k), 30)
+    for w in list(markers) + list(wear):
+        if w not in WORLDS:
+            errs.append("vocab 의 %r 는 아는 세계가 아니다" % w)
+
+    cities = doc.get("cities") or []
+    keys = [c.get("key") for c in cities]
+    if keys != CITY_KEYS:
+        errs.append("cities 열쇠가 계획 목록과 다르다 — %r" % keys)
+    undecided = 0
+    for c in cities:
+        k = c.get("key")
+        here = "도시 %r" % k
+        if not k or not KEY.match(k):
+            errs.append(here + " 열쇠는 소문자 · 숫자만")
+        for col in ("ko", "en", "country", "persona"):
+            if not (c.get(col) or "").strip():
+                errs.append(here + " %s 가 비었다" % col)
+        for col, lim in (("lat", 90), ("lon", 180)):
+            x = c.get(col)
+            if not isinstance(x, (int, float)) or isinstance(x, bool) or not -lim <= x <= lim:
+                errs.append(here + " %s 가 범위 밖 — %r" % (col, x))
+            elif round(x, 2) != x:
+                errs.append(here + " %s 는 소수 둘째 자리까지 — %r" % (col, x))
+        if not URL.match(c.get("latlon_src") or ""):
+            errs.append(here + " latlon_src 가 주소가 아니다")
+        pal = c.get("palette") or {}
+        if not (pal.get("en") or "").strip() or HANGUL.search(pal.get("en") or ""):
+            errs.append(here + " palette.en 이 비었거나 한국어")
+        hx = pal.get("hex") or []
+        if not 2 <= len(hx) <= 3 or not all(isinstance(h, str) and HEX.match(h) for h in hx):
+            errs.append(here + " palette.hex 는 #RRGGBB 2~3개 — %r" % (hx,))
+        sy = c.get("symbols") or []
+        if not 3 <= len(sy) <= 5:
+            errs.append(here + " symbols 는 3~5개 — %d" % len(sy))
+        for i, s in enumerate(sy):
+            if not (s.get("ko") or "").strip():
+                errs.append(here + " symbols[%d].ko 가 비었다" % i)
+            en(here + " symbols[%d].en" % i, s.get("en"), 3)
+            if not URL.match(s.get("src") or ""):
+                errs.append(here + " symbols[%d].src 가 주소가 아니다" % i)
+        ws = c.get("worlds")
+        if not isinstance(ws, dict):
+            errs.append(here + " worlds 는 {}(미정) 이거나 세 세계")
+            continue
+        if not ws:
+            undecided += 1
+            continue
+        if sorted(ws) != sorted(WORLDS):
+            errs.append(here + " worlds 는 세 세계 다 — %r" % sorted(ws))
+        for w, body in ws.items():
+            if w not in WORLDS:
+                continue
+            wh = here + " " + w
+            if not (body.get("ko") or "").strip():
+                errs.append(wh + " ko 가 비었다")
+            en(wh + " en", body.get("en"))
+            sc = body.get("scenes")
+            if not isinstance(sc, list) or len(sc) != 3:
+                errs.append(wh + " scenes 는 셋")
+                sc = sc if isinstance(sc, list) else []
+            seen = set()
+            for r in sc:
+                rk = (r or {}).get("key")
+                if not rk or not KEY.match(rk) or rk in seen:
+                    errs.append(wh + " scenes 열쇠 %r 가 꼴이 아니거나 겹친다" % rk)
+                seen.add(rk)
+                if not (r.get("ko") or "").strip():
+                    errs.append(wh + " scenes.%s ko 가 비었다" % rk)
+                en(wh + " scenes.%s en" % rk, r.get("en"), 12)
+            lk = body.get("look") or {}
+            for grp, need in LOOK.items():
+                box = lk.get(grp) or {}
+                for f in need:
+                    if not box.get(f):
+                        errs.append("%s look.%s.%s 가 비었다" % (wh, grp, f))
+                for f, val in box.items():
+                    if f not in need and f not in FACE_DESIGN[grp]:
+                        errs.append("%s look.%s 의 %r 는 모르는 칸" % (wh, grp, f))
+                    elif not isinstance(val, str) or not KEY.match(val.replace("_", "")):
+                        errs.append("%s look.%s.%s 값은 소문자 열쇠 — %r" % (wh, grp, f, val))
+            if not (lk.get("why") or "").strip():
+                errs.append(wh + " look.why 가 비었다")
+            en(wh + " hold.en", (body.get("hold") or {}).get("en"), 12)
+            mo = body.get("motif")
+            if not isinstance(mo, dict) or not (mo.get("ko") or "").strip():
+                errs.append(wh + " motif 가 없다(도시 상징을 실은 옷 · 장신구 한 줄)")
+            en(wh + " motif.en", (mo or {}).get("en"), 30)
+            ban = (markers.get(w) or {}).get("banned_en") or []
+            texts = [body.get("en"), (body.get("hold") or {}).get("en"), (mo or {}).get("en")] + [(r or {}).get("en") for r in sc]
+            for t in texts:
+                hit = banned_in(t, ban)
+                if hit:
+                    errs.append("%s 글에 그 세계 금지 낱말 %s" % (wh, hit))
+        for grp, f in DIFFER:
+            vals = [(((ws.get(w) or {}).get("look") or {}).get(grp) or {}).get(f) for w in WORLDS]
+            if len(set(vals)) < len(vals):
+                errs.append("%s 세 세계가 다른 사람이 아니다 — look.%s.%s %r" % (here, grp, f, vals))
+    if undecided:
+        warns.append("설계 미정(worlds {}) 도시 %d곳" % undecided)
     return errs, warns
+
+
+def load():
+    with open(os.path.join(ROOT, "data", "city-design.json"), encoding="utf-8") as f:
+        return json.load(f)
 
 
 def main(argv):
     if len(argv) < 2 or argv[1] != "check":
-        print(__doc__); return 2
-    doc = roster.design()
+        print(__doc__)
+        return 2
+    doc = load()
     errs, warns = check(doc)
-    cards = roster.cards()
-    tiers = {t: sum(1 for c in cards.values() if c["tier"] == t) for t in ("root", "lord", "citizen")}
     for w in warns:
-        print("경고:", w)
+        print("알림:", w)
     for e in errs:
         print("오류:", e)
-    print("나라 %d · 가문주 %d · 주민 %d · 카드 %d · 경고 %d · 오류 %d" % (tiers["root"], tiers["lord"], tiers["citizen"], len(cards), len(warns), len(errs)))
+    cities = doc.get("cities") or []
+    print("도시 %d · 설계 %d · 오류 %d" % (len(cities), sum(1 for c in cities if c.get("worlds")), len(errs)))
     return 1 if errs else 0
 
 

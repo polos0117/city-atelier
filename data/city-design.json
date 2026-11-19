@@ -1,0 +1,293 @@
+{
+  "version": 1,
+  "note": "도시 공방 설계표(2026-11-19, 계획 Task 2). 한 층 — 도시 한 줄 = 한 사람이 세 세계에서 각각 다른 여성으로 선다. 사실(위도 · 경도 · 상징)은 src 주소와 함께, 지어내지 않는다. worlds 가 {} 인 도시는 설계 미정 — 서울을 본보기로 다음 일에 채운다. 검사: python -I -X utf8 tools/city-design.py check · tests/city-design.py · node tests/look-spec.cjs",
+  "vocab": {
+    "worlds": ["fantasy", "steampunk", "cyberpunk"],
+    "world_ko": { "fantasy": "판타지", "steampunk": "스팀펑크", "cyberpunk": "사이버펑크" },
+    "markers_note": "세계마다 반드시 사람에게(옷 · 몸 · 소품 · 빛) 실리는 표지(설계 3절). 장르 이름이 아니라 이 낱말을 싣는다. banned_en = 그 세계 지시문에 나오면 안 되는 지금 물건 · 기술(판타지 · 스팀펑크만, 낱말 경계로 대소문자 없이 본다). 최종 낱말은 시험 그림으로 다듬는다.",
+    "markers": {
+      "fantasy": {
+        "ko": ["겹겹의 금실 자수", "보석 박힌 왕관 · 머리 장식", "바닥에 끌리는 망토", "문장 새긴 갑옷 장식", "빛나는 마법 장신구", "두꺼운 비단 금란", "금박 세공", "뒤에 솟은 첨탑 · 성", "깃발과 왕실 예물", "은은히 감도는 마법의 빛"],
+        "en": ["layered gold-thread embroidery", "a jewel-set crown or headdress", "a floor-sweeping cape", "heraldic crests on her armor ornaments", "glowing enchanted jewelry", "heavy silk brocade", "gilded filigree", "towering spires and castle walls behind her", "banners and royal regalia", "a shimmer of magical light"],
+        "banned_en": ["smartphone", "mobile phone", "plastic", "LED screen", "neon sign", "neon", "laptop", "headphones", "earbuds", "sneakers", "hoodie", "jeans", "hologram", "billboard", "car", "machinery"]
+      },
+      "steampunk": {
+        "ko": ["그을음 묻은 뺨", "땀에 젖은 셔츠", "기름때 가죽 장갑", "걷어붙인 소매", "몸에 두른 압력계 · 놋쇠 배관", "묵직한 공구 벨트", "피어오르는 증기", "붉은 화로 빛", "리벳 박힌 쇠", "석탄 연기와 때"],
+        "en": ["soot-smudged cheeks", "a sweat-damp shirt", "oil-stained leather gloves", "rolled-up sleeves", "pressure gauges and brass pipes strapped to her body", "a heavy tool belt", "billowing steam", "red furnace glow", "riveted iron", "coal smoke and grime"],
+        "banned_en": ["smartphone", "mobile phone", "plastic", "LED screen", "neon sign", "neon", "laptop", "headphones", "earbuds", "sneakers", "hoodie", "hologram", "digital display", "touchscreen"]
+      },
+      "cyberpunk": {
+        "ko": ["빛나는 네온 문신", "의체 · 이식 장치", "비에 젖어 반사되는 비옷", "얼굴에 비친 간판 빛", "홀로그램 장신구", "광섬유처럼 빛나는 머리 가닥", "크롬과 번들거리는 비닐", "마젠타 · 시안 빛", "비 젖은 네온 골목", "발광 선이 흐르는 테크웨어"],
+        "en": ["glowing neon tattoos", "cybernetic implants", "a reflective rain-slick raincoat", "sign light reflected on her face", "holographic jewelry", "fiber-optic glowing hair strands", "chrome and glossy vinyl", "magenta and cyan glow", "a rain-soaked neon alley behind her", "techwear traced with glowing light lines"],
+        "banned_en": []
+      }
+    },
+    "wear_note": "세계마다 옷 말투 — costume 은 세계 옷의 뼈대 한 줄, bold · moderate · low 는 노출 단계별 말투(원소 lib/prompt-spec.js 의 COSTUME · EXPOSURE · casual-own 의 outfit 단계 꼴). 조립기(Task 3)가 읽는다.",
+    "wear": {
+      "fantasy": {
+        "costume": "COSTUME (fantasy): grand, opulent regalia — layered silk brocade dense with gold-thread embroidery, a jewel-set crown or headdress, heraldic crests on gilded pauldrons or a gorget, a floor-sweeping cape, enchanted jewelry with a soft magical glow; the city's symbol worked into the embroidery and jewels. No corset, no modern material, no machinery.",
+        "bold": "EXPOSURE (bold): her regalia opens to show skin — bare shoulders and arms between gilded pauldron and bracer, a deep open neckline under the jeweled collar with natural cleavage, a high slit in the brocade robe showing the thigh; the ornaments stay on and symmetrical. Chest and pelvis covered.",
+        "moderate": "EXPOSURE (moderate): her regalia shows some skin — bare arms or an open collarbone under the jeweled collar; the brocade robe falls long and closed. Chest and pelvis covered.",
+        "low": "EXPOSURE (low): her regalia covers her — long brocade sleeves, a high jeweled collar and a floor-length robe under the cape."
+      },
+      "steampunk": {
+        "costume": "COSTUME (steampunk): the working dress of a steam city, not clean brass decoration — a sweat-damp shirt with rolled-up sleeves, a scorched leather apron or work harness, oil-stained leather gloves, pressure gauges, tools and brass piping strapped to her body, soot on her cheeks and hands, heavy work boots. No armor plates, no crown, no corset.",
+        "bold": "EXPOSURE (bold): her work clothes open to show skin — the sweat-damp shirt unbuttoned to the sternum or tied up over a bandeau with natural cleavage, bare soot-streaked arms and shoulders, short work breeches or a skirt hitched above the boots; the harness and tools stay on. Chest and pelvis covered.",
+        "moderate": "EXPOSURE (moderate): her work clothes show some skin — rolled-up sleeves baring the forearms, the shirt open at the collarbone, the harness and apron over it. Chest and pelvis covered.",
+        "low": "EXPOSURE (low): her work clothes cover her — a buttoned work shirt with sleeves pushed only to the wrist, a long leather apron, trousers tucked into the boots."
+      },
+      "cyberpunk": {
+        "costume": "COSTUME (cyberpunk): techwear for a neon megacity — a reflective rain-slick coat or cropped jacket over fitted technical layers, straps and buckles, chrome and glossy vinyl, glowing tattoo lines and cybernetic implants on her skin, holographic jewelry; sign light reflected on her face and coat.",
+        "bold": "EXPOSURE (bold): her techwear opens to show skin — a cropped top under the open reflective coat with natural cleavage, bare midriff and shoulders traced with glowing tattoo lines, high-cut shorts or a slit skirt over strapped thigh-high boots. Chest and pelvis covered.",
+        "moderate": "EXPOSURE (moderate): her techwear shows some skin — bare arms or a bare collarbone with glowing tattoo lines, the reflective coat worn open over a fitted top. Chest and pelvis covered.",
+        "low": "EXPOSURE (low): her techwear covers her — the reflective raincoat zipped to the throat, fitted technical trousers and gloves, light only from the glowing seams and implants."
+      }
+    },
+    "look_note": "worlds.<세계>.look = 그 세계의 그 사람 외형 전부 — face 여섯(face_shape · eyes · brows · nose · lips · eye_color) + 얼굴 설계(age · impression · skin_tone · eye_size · eye_tilt · mark · expr) + silhouette 셋(body · hair · hair_color) + bangs. 어휘는 lib/look-spec.js VOCAB_EN · FACE_DESIGN. 원소와 달리 세 세계가 완전히 다른 사람이라 공통 칸이 없다 — 머리색 · 체형 · 얼굴형 · 헤어스타일이 세계끼리 모두 달라야 한다(검사). palette 는 머리 · 눈 색이 아니라 상징 색 — 지도 · 도감 색과 세 사람의 강조색 하나.",
+    "scenes_note": "worlds.<세계>.scenes = 그 세계의 그 도시 안 장소 셋(key · ko · en). hold.en = 손에 드는 그 도시 · 그 세계의 작은 물건. motif = 도시 상징이 그 세계 식으로 사람에게 실린 옷 · 장신구 한 줄."
+  },
+  "cities": [
+    {
+      "key": "seoul",
+      "ko": "서울",
+      "en": "Seoul",
+      "country": "대한민국",
+      "lat": 37.56,
+      "lon": 126.99,
+      "latlon_src": "https://en.wikipedia.org/wiki/Seoul",
+      "persona": "네 산과 큰 강 사이에서 600년 넘게 도읍을 지켜 온 도시 — 부지런하고 빠르며, 옛 궁궐과 밤새 꺼지지 않는 불빛을 한 몸에 겹쳐 입는다.",
+      "palette": { "en": "Seoul red (dancheong red), Namsan pine green, palace gold", "hex": ["#B83A2E", "#2F6B4F", "#D8A93B"] },
+      "symbols": [
+        { "ko": "경복궁 — 조선의 정궁, 단청 처마의 근정전", "en": "Gyeongbokgung, the main royal palace with painted dancheong eaves", "src": "https://ko.wikipedia.org/wiki/경복궁" },
+        { "ko": "한양도성 — 북악 · 인왕 · 남산 · 낙산을 잇는 약 18.6km 성곽과 사대문", "en": "the Seoul City Wall linking four inner mountains, with its four great gates", "src": "https://ko.wikipedia.org/wiki/한양도성" },
+        { "ko": "남산 송신탑(서울타워) — 옛 남산 봉수대 자리의 전파 송신탑", "en": "the Namsan transmission tower, standing where the old beacon fires were", "src": "https://ko.wikipedia.org/wiki/남산서울타워" },
+        { "ko": "한강철교 — 1900년 개통한 한강 최초의 다리, 트러스 철교", "en": "the Hangang Railway Bridge, the first bridge over the Han River (1900), an iron truss bridge", "src": "https://ko.wikipedia.org/wiki/한강철교" },
+        { "ko": "해치 — 서울특별시의 공식 상징물", "en": "the haechi, a mythical guardian beast and the official symbol of Seoul", "src": "https://ko.wikipedia.org/wiki/해치" }
+      ],
+      "design_note": "설계 상태: 시안(claude, 2026-11-19) — 시험 그림 전. 원소 설계표에는 설계 상태 칸이 없어 칸을 만들지 않고 여기 적는다.",
+      "worlds": {
+        "fantasy": {
+          "ko": "왕도 서울 — 북악 · 인왕 · 남산 · 낙산을 성벽으로 이어 감싼 금빛 궁궐의 도읍, 남산 봉수대에 불이 오르고 한강이 은빛 해자처럼 남쪽을 돈다",
+          "en": "a grand royal capital ringed by four mountains joined by a great stone wall: golden-roofed palace halls with painted dancheong eaves stacked beneath the northern peak, beacon fires burning on the southern mountain, the wide silver river curving past like a moat, banners and lanterns along the processional road",
+          "scenes": [
+            { "key": "throne", "ko": "정전 앞 박석 마당", "en": "on the stone-paved courtyard before the great throne hall, painted dancheong eaves and rows of rank stones leading to the stairs" },
+            { "key": "wall", "ko": "산등성이 성곽 위", "en": "on the stone city wall winding along the mountain ridge above the capital, golden palace roofs below at dusk" },
+            { "key": "beacon", "ko": "남산 봉수대", "en": "beside the beacon fires on the southern mountain, the whole walled capital and the silver river spread below" }
+          ],
+          "look": {
+            "face": { "face_shape": "oval", "eyes": "monolid_long", "brows": "arched_thin", "nose": "straight_narrow", "lips": "small_bow", "eye_color": "gold", "age": "early_30s", "impression": "regal", "skin_tone": "fair", "eye_size": "medium", "eye_tilt": "up", "mark": "red_lip", "expr": "proud" },
+            "silhouette": { "body": "tall_statuesque", "hair": "long_straight", "hair_color": "navy", "bangs": "parted" },
+            "why": "왕도의 여왕 — 세로로 긴 사람. 키 큰 체형(tall_statuesque) · 허리까지 곧게 내린 긴 머리 · 바닥에 끌리는 망토 · 높은 왕관으로 실루엣이 위아래로 길게 선 삼각형. 머리색은 단청의 짙은 청(navy, 검정에 가까운 남빛), 눈은 궁궐 금빛(gold). 갸름한 얼굴 · 긴 홑꺼풀 눈 · 올라간 눈꼬리 · 가는 아치 눈썹 · 작은 활 입술로 단정하고 위엄 있게(regal · proud), 30대 초반, 밝은 피부, 붉은 입술. 다른 두 세계와 머리색 · 체형 · 얼굴형 · 헤어스타일이 다 다르다."
+          },
+          "hold": { "en": "a small golden seal topped with a carved haechi guardian beast" },
+          "motif": {
+            "ko": "단청 문양을 금실로 수놓은 바닥까지 끌리는 서울 빨강 비단 망토, 해치를 새긴 금 견갑, 성곽으로 이은 네 산봉우리 모양의 보석 왕관",
+            "en": "a floor-sweeping Seoul-red silk cape embroidered in gold thread with dancheong temple-eave patterns, gilded pauldrons engraved with a haechi guardian beast, and a jeweled crown shaped like four mountain peaks linked by a city wall"
+          }
+        },
+        "steampunk": {
+          "ko": "증기 공업 도시 서울 — 1900년 무렵, 한강을 건너는 리벳 트러스 철교 위로 기관차가 달리고 강변 주물 공장 굴뚝이 그을음을 뿜는다",
+          "en": "a steam-powered industrial Seoul around 1900: locomotives thundering over riveted iron truss bridges across the wide river, riverside foundries and factories pouring coal smoke, steam pipes running past the old stone city gates, workers' alleys lit red by furnace glow",
+          "scenes": [
+            { "key": "bridge", "ko": "한강철교 아래 정비 발판", "en": "on a maintenance catwalk under the riveted truss of the iron railway bridge over the river, a locomotive roaring overhead in steam" },
+            { "key": "foundry", "ko": "강변 주물 공장", "en": "inside a riverside foundry, molten iron pouring from a ladle, sweat, coal smoke and red furnace glow" },
+            { "key": "alley", "ko": "개천가 공구 공방 골목", "en": "a narrow workshop alley along a stone-lined stream, steam valves hissing and tool stalls stacked with gears and pipe fittings" }
+          ],
+          "look": {
+            "face": { "face_shape": "square_soft", "eyes": "almond_wide", "brows": "straight_thick", "nose": "broad_soft", "lips": "wide_smile", "eye_color": "amber", "age": "late_20s", "impression": "rugged", "skin_tone": "golden_tan", "eye_size": "medium", "eye_tilt": "level", "mark": "freckles", "expr": "determined" },
+            "silhouette": { "body": "broad_strong", "hair": "wolf_cut", "hair_color": "copper", "bangs": "choppy" },
+            "why": "철교 정비공 — 가로로 넓은 사람. 넓은 어깨의 힘센 체형(broad_strong) · 짧게 친 거친 울프컷 · 묵직한 공구 벨트와 하네스로 실루엣이 낮고 단단한 사각형(올림머리 아님 — 원소 사용자 2026-10-31 「스팀펑크 쪽은 위로 묶은 머리가 너무 많아」). 머리색은 화로에 달군 구리빛(copper), 눈은 호박색(amber). 각지되 둥근 턱 · 넓은 코 · 굵은 일자 눈썹 · 큰 웃는 입, 햇볕에 그을린 피부에 주근깨(그을음과 섞인다), 20대 후반, 다부진 표정. 판타지 · 사이버펑크와 머리색 · 체형 · 얼굴형 · 헤어스타일이 다 다르다."
+          },
+          "hold": { "en": "a soot-blackened riveting hammer with a worn brass grip" },
+          "motif": {
+            "ko": "한강철교 트러스의 엇갈린 리벳 무늬를 그대로 박은 그을린 가죽 작업 하네스와 해치 머리 모양으로 부어 만든 압력계 버클",
+            "en": "a soot-blackened leather work harness riveted in the crisscross truss pattern of the iron railway bridge over the Han River, fastened with a pressure-gauge buckle cast in the shape of a haechi head"
+          }
+        },
+        "cyberpunk": {
+          "ko": "네온 메가시티 서울 — 남산 송신탑이 붉은 네온 첨탑으로 빛나고, 한강 다리마다 빛줄기가 흐르며, 고층 아파트 숲과 비 젖은 골목에 간판 빛이 넘친다",
+          "en": "a neon megacity Seoul: the transmission tower on the southern mountain glowing as a red neon spire, light streams racing along the many bridges over the wide river, endless high-rise apartment towers, rain-wet alleys stacked with glowing signs and steaming food stalls",
+          "scenes": [
+            { "key": "tower", "ko": "남산 송신탑 전망대 난간", "en": "at the railing of the observation deck of the neon tower on the southern mountain, the glowing city sprawling below in the rain" },
+            { "key": "bridge", "ko": "비 오는 한강 다리 위", "en": "on a bridge over the river in the rain, light streams racing past and the skyline mirrored in the black water" },
+            { "key": "alley", "ko": "비 젖은 구도심 골목", "en": "a rain-soaked old-town alley under stacked neon signs, steam rising from food stalls under plastic awnings" }
+          ],
+          "look": {
+            "face": { "face_shape": "heart", "eyes": "narrow_upturned", "brows": "angled_sharp", "nose": "small_button", "lips": "thin_long", "eye_color": "violet", "age": "early_20s", "impression": "cool", "skin_tone": "porcelain", "eye_size": "medium", "eye_tilt": "up", "mark": "winged_liner", "expr": "cold_smile" },
+            "silhouette": { "body": "lanky", "hair": "asymmetric_bob", "hair_color": "cyan", "bangs": "one_eye" },
+            "why": "네온 골목의 밤 사람 — 가늘고 긴, 비대칭인 사람. 길쭉하고 마른 체형(lanky) · 한쪽만 긴 비대칭 단발 · 한쪽 눈을 가리는 앞머리 · 크게 걸친 반사 비옷으로 실루엣이 한쪽으로 기운 긴 선. 머리색은 네온 시안(cyan), 눈은 옅은 보라(violet) — 서울 빨강은 네온 송신탑 귀걸이로만. 하트형 얼굴 · 가늘게 올라간 눈 · 날 선 눈썹 · 작은 코 · 얇은 입술, 도자기처럼 흰 피부, 날개 아이라인, 20대 초반, 차가운 미소. 판타지 · 스팀펑크와 머리색 · 체형 · 얼굴형 · 헤어스타일이 다 다르다."
+          },
+          "hold": { "en": "a palm-sized hologram projector showing a tiny glowing tower above her hand" },
+          "motif": {
+            "ko": "붉은 네온 남산 송신탑 모양의 긴 귀걸이, 한강 다리 불빛처럼 빛줄이 흐르는 반사 비옷, 손등에 빛나는 해치 문신",
+            "en": "long earrings shaped like the Namsan transmission tower in glowing Seoul-red neon, a reflective raincoat with light strips racing along it like the river bridges at night, and a glowing haechi tattoo on the back of her hand"
+          }
+        }
+      }
+    },
+    {
+      "key": "tokyo",
+      "ko": "도쿄",
+      "en": "Tokyo",
+      "country": "일본",
+      "lat": 35.69,
+      "lon": 139.69,
+      "latlon_src": "https://en.wikipedia.org/wiki/Tokyo",
+      "persona": "옛 에도의 골목과 하늘을 찌르는 탑이 나란한 도시 — 정확하고 차분하지만 축제 날엔 누구보다 들뜬다.",
+      "palette": { "en": "tower vermilion, ginkgo yellow, cherry-blossom pink", "hex": ["#E8452C", "#F2C230", "#F4B6C2"] },
+      "symbols": [
+        { "ko": "도쿄 타워 — 붉은색과 흰색의 격자 철탑", "en": "Tokyo Tower, a red-and-white lattice steel tower", "src": "https://en.wikipedia.org/wiki/Tokyo_Tower" },
+        { "ko": "센소지 가미나리몬 — 큰 붉은 초롱이 걸린 아사쿠사의 절 문", "en": "the Kaminarimon gate of Sensō-ji with its giant red lantern", "src": "https://en.wikipedia.org/wiki/Sens%C5%8D-ji" },
+        { "ko": "도쿄 스카이트리 — 방송 송신탑", "en": "Tokyo Skytree, a broadcasting tower", "src": "https://en.wikipedia.org/wiki/Tokyo_Skytree" },
+        { "ko": "은행나무와 왕벚나무 — 도쿄도의 나무 · 꽃", "en": "the ginkgo tree and the Yoshino cherry, Tokyo's tree and flower", "src": "https://en.wikipedia.org/wiki/Tokyo" }
+      ],
+      "worlds": {}
+    },
+    {
+      "key": "beijing",
+      "ko": "베이징",
+      "en": "Beijing",
+      "country": "중국",
+      "lat": 39.91,
+      "lon": 116.4,
+      "latlon_src": "https://en.wikipedia.org/wiki/Beijing",
+      "persona": "황제의 축선 위에 붉은 담과 노란 기와를 세운 도시 — 느긋하고 위엄 있으며 오래된 질서를 몸에 지닌다.",
+      "palette": { "en": "imperial vermilion, glazed-tile yellow, temple-of-heaven blue", "hex": ["#B22222", "#E6B422", "#2A4D8F"] },
+      "symbols": [
+        { "ko": "자금성 — 붉은 담과 노란 유리기와의 궁궐", "en": "the Forbidden City, a palace of red walls and yellow glazed roof tiles", "src": "https://en.wikipedia.org/wiki/Forbidden_City" },
+        { "ko": "천단 — 푸른 기와 세 겹 지붕의 기년전", "en": "the Temple of Heaven with its triple blue-tiled roof", "src": "https://en.wikipedia.org/wiki/Temple_of_Heaven" },
+        { "ko": "만리장성 바다링 구간", "en": "the Badaling section of the Great Wall", "src": "https://en.wikipedia.org/wiki/Badaling" },
+        { "ko": "이화원 — 호수와 정원의 황실 별궁", "en": "the Summer Palace, an imperial garden of lakes and pavilions", "src": "https://en.wikipedia.org/wiki/Summer_Palace" }
+      ],
+      "worlds": {}
+    },
+    {
+      "key": "paris",
+      "ko": "파리",
+      "en": "Paris",
+      "country": "프랑스",
+      "lat": 48.86,
+      "lon": 2.35,
+      "latlon_src": "https://en.wikipedia.org/wiki/Paris",
+      "persona": "강물에 흔들려도 가라앉지 않는다는 도시 — 멋을 알고 말이 많으며 철과 돌을 함께 다룬다.",
+      "palette": { "en": "zinc-roof blue-grey, wrought-iron bronze, rose-window red", "hex": ["#4A5D7A", "#6B4E3D", "#B03A48"] },
+      "symbols": [
+        { "ko": "에펠탑 — 연철 격자 탑", "en": "the Eiffel Tower, a wrought-iron lattice tower", "src": "https://en.wikipedia.org/wiki/Eiffel_Tower" },
+        { "ko": "노트르담 대성당 — 장미창과 고딕 첨탑", "en": "Notre-Dame de Paris with its rose windows and Gothic spire", "src": "https://en.wikipedia.org/wiki/Notre-Dame_de_Paris" },
+        { "ko": "개선문", "en": "the Arc de Triomphe", "src": "https://en.wikipedia.org/wiki/Arc_de_Triomphe" },
+        { "ko": "센강", "en": "the Seine river", "src": "https://en.wikipedia.org/wiki/Seine" },
+        { "ko": "표어 「Fluctuat nec mergitur」 — 흔들려도 가라앉지 않는다(배 문장)", "en": "the motto Fluctuat nec mergitur, tossed by the waves but never sunk", "src": "https://en.wikipedia.org/wiki/Paris" }
+      ],
+      "worlds": {}
+    },
+    {
+      "key": "london",
+      "ko": "런던",
+      "en": "London",
+      "country": "영국",
+      "lat": 51.51,
+      "lon": -0.13,
+      "latlon_src": "https://en.wikipedia.org/wiki/London",
+      "persona": "안개 낀 강가에서 시계 소리에 맞춰 사는 도시 — 예의 바르고 고집 세며 오래된 것을 버리지 않는다.",
+      "palette": { "en": "postbox red, Thames grey, Portland-stone cream", "hex": ["#C1272D", "#5B6770", "#E8E0CC"] },
+      "symbols": [
+        { "ko": "빅벤 — 웨스트민스터 궁의 시계탑", "en": "Big Ben, the clock tower of the Palace of Westminster", "src": "https://en.wikipedia.org/wiki/Big_Ben" },
+        { "ko": "타워 브리지 — 두 탑의 도개교", "en": "Tower Bridge, a twin-towered bascule bridge", "src": "https://en.wikipedia.org/wiki/Tower_Bridge" },
+        { "ko": "런던 탑", "en": "the Tower of London", "src": "https://en.wikipedia.org/wiki/Tower_of_London" },
+        { "ko": "템스강", "en": "the River Thames", "src": "https://en.wikipedia.org/wiki/River_Thames" }
+      ],
+      "worlds": {}
+    },
+    {
+      "key": "rome",
+      "ko": "로마",
+      "en": "Rome",
+      "country": "이탈리아",
+      "lat": 41.89,
+      "lon": 12.48,
+      "latlon_src": "https://en.wikipedia.org/wiki/Rome",
+      "persona": "돌 위에 돌을 쌓아 이천 년을 버틴 도시 — 당당하고 느긋하며 분수 곁에서 해를 즐긴다.",
+      "palette": { "en": "travertine cream, terracotta, imperial gold", "hex": ["#E9DFC8", "#B5562F", "#C9A227"] },
+      "symbols": [
+        { "ko": "콜로세움 — 원형 투기장", "en": "the Colosseum, the great amphitheatre", "src": "https://en.wikipedia.org/wiki/Colosseum" },
+        { "ko": "판테온 — 둥근 천장의 신전", "en": "the Pantheon with its coffered dome and oculus", "src": "https://en.wikipedia.org/wiki/Pantheon,_Rome" },
+        { "ko": "트레비 분수", "en": "the Trevi Fountain", "src": "https://en.wikipedia.org/wiki/Trevi_Fountain" },
+        { "ko": "SPQR — 로마 원로원과 시민의 표지", "en": "SPQR, the emblem of the Senate and People of Rome", "src": "https://en.wikipedia.org/wiki/Rome" }
+      ],
+      "worlds": {}
+    },
+    {
+      "key": "newyork",
+      "ko": "뉴욕",
+      "en": "New York City",
+      "country": "미국",
+      "lat": 40.71,
+      "lon": -74.01,
+      "latlon_src": "https://en.wikipedia.org/wiki/New_York_City",
+      "persona": "잠들지 않는 도시 — 빠르고 야심 차며 온 세상 사람을 한 섬에 품는다.",
+      "palette": { "en": "liberty verdigris green, taxi yellow, brownstone red", "hex": ["#5FA08E", "#F7B500", "#9C3B2E"] },
+      "symbols": [
+        { "ko": "자유의 여신상 — 구리가 녹청으로 변한 횃불 든 상", "en": "the Statue of Liberty, a torch-bearing copper statue weathered to verdigris", "src": "https://en.wikipedia.org/wiki/Statue_of_Liberty" },
+        { "ko": "엠파이어 스테이트 빌딩 — 아르데코 마천루", "en": "the Empire State Building, an Art Deco skyscraper", "src": "https://en.wikipedia.org/wiki/Empire_State_Building" },
+        { "ko": "브루클린 다리 — 돌탑과 철 케이블의 현수교", "en": "the Brooklyn Bridge, a suspension bridge of stone towers and steel cables", "src": "https://en.wikipedia.org/wiki/Brooklyn_Bridge" },
+        { "ko": "별명 「빅 애플」 · 「잠들지 않는 도시」", "en": "the nicknames the Big Apple and the City That Never Sleeps", "src": "https://en.wikipedia.org/wiki/New_York_City" }
+      ],
+      "worlds": {}
+    },
+    {
+      "key": "istanbul",
+      "ko": "이스탄불",
+      "en": "Istanbul",
+      "country": "튀르키예",
+      "lat": 41.01,
+      "lon": 28.96,
+      "latlon_src": "https://en.wikipedia.org/wiki/Istanbul",
+      "persona": "두 대륙에 걸쳐 해협을 품은 도시 — 다정하고 수다스러우며 여러 제국의 기억을 겹쳐 지닌다.",
+      "palette": { "en": "Iznik turquoise, cobalt blue, Ottoman red", "hex": ["#1F9E9A", "#1E3F8F", "#B3202A"] },
+      "symbols": [
+        { "ko": "아야 소피아 — 거대한 돔의 옛 성당 · 모스크", "en": "Hagia Sophia, the great domed former cathedral and mosque", "src": "https://en.wikipedia.org/wiki/Hagia_Sophia" },
+        { "ko": "술탄 아흐메트 모스크(블루 모스크) — 푸른 이즈니크 타일", "en": "the Sultan Ahmed (Blue) Mosque with its blue Iznik tiles", "src": "https://en.wikipedia.org/wiki/Sultan_Ahmed_Mosque" },
+        { "ko": "보스포루스 해협 — 유럽과 아시아 사이", "en": "the Bosphorus strait between Europe and Asia", "src": "https://en.wikipedia.org/wiki/Bosporus" },
+        { "ko": "갈라타 탑", "en": "the Galata Tower", "src": "https://en.wikipedia.org/wiki/Galata_Tower" }
+      ],
+      "worlds": {}
+    },
+    {
+      "key": "cairo",
+      "ko": "카이로",
+      "en": "Cairo",
+      "country": "이집트",
+      "lat": 30.04,
+      "lon": 31.24,
+      "latlon_src": "https://en.wikipedia.org/wiki/Cairo",
+      "persona": "나일 강가에서 피라미드를 내다보는 천 개 첨탑의 도시 — 시끌벅적하고 끈질기며 시간을 두려워하지 않는다.",
+      "palette": { "en": "sandstone gold, Nile blue, papyrus green", "hex": ["#D4A95A", "#1F5F8B", "#6B8E4E"] },
+      "symbols": [
+        { "ko": "기자 피라미드", "en": "the pyramids of Giza", "src": "https://en.wikipedia.org/wiki/Giza_pyramid_complex" },
+        { "ko": "기자의 대스핑크스", "en": "the Great Sphinx of Giza", "src": "https://en.wikipedia.org/wiki/Great_Sphinx_of_Giza" },
+        { "ko": "나일강", "en": "the Nile", "src": "https://en.wikipedia.org/wiki/Nile" },
+        { "ko": "카이로 성채 — 무함마드 알리 모스크", "en": "the Cairo Citadel and its Mosque of Muhammad Ali", "src": "https://en.wikipedia.org/wiki/Cairo_Citadel" },
+        { "ko": "별명 「천 개 첨탑의 도시」", "en": "the nickname City of a Thousand Minarets", "src": "https://en.wikipedia.org/wiki/Cairo" }
+      ],
+      "worlds": {}
+    },
+    {
+      "key": "rio",
+      "ko": "리우데자네이루",
+      "en": "Rio de Janeiro",
+      "country": "브라질",
+      "lat": -22.91,
+      "lon": -43.21,
+      "latlon_src": "https://en.wikipedia.org/wiki/Rio_de_Janeiro",
+      "persona": "산과 바다가 맞닿은 「경이로운 도시」 — 밝고 뜨거우며 해변과 축제에서 숨을 쉰다.",
+      "palette": { "en": "Atlantic turquoise, rainforest green, sunset orange", "hex": ["#1FB5C4", "#2E8B57", "#F28C28"] },
+      "symbols": [
+        { "ko": "코르코바두 산의 구세주 그리스도상", "en": "the Christ the Redeemer statue on Corcovado", "src": "https://en.wikipedia.org/wiki/Christ_the_Redeemer_(statue)" },
+        { "ko": "빵 산(팡 지 아수카르)", "en": "Sugarloaf Mountain", "src": "https://en.wikipedia.org/wiki/Sugarloaf_Mountain" },
+        { "ko": "코파카바나 — 물결무늬 보도의 해변", "en": "Copacabana beach and its wave-patterned promenade", "src": "https://en.wikipedia.org/wiki/Copacabana,_Rio_de_Janeiro" },
+        { "ko": "별명 「경이로운 도시(Cidade Maravilhosa)」", "en": "the nickname Cidade Maravilhosa, the Marvelous City", "src": "https://en.wikipedia.org/wiki/Rio_de_Janeiro" }
+      ],
+      "worlds": {}
+    }
+  ]
+}
