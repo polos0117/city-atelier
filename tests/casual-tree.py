@@ -16,7 +16,7 @@ def fails(mutate, word):
 
 place = lambda d, k: next(p for p in d['places'] if p['key'] == k)
 act = lambda d, k: next(a for a in d['activities'] if a['key'] == k)
-fails(lambda d: place(d, 'site_lab').update(group='casino'), '묶음 casino')
+fails(lambda d: place(d, 'home_bedroom').update(group='casino'), '묶음 casino')
 fails(lambda d: act(d, 'swim').update(family='fly'), '자세 계열 fly')
 fails(lambda d: act(d, 'swim')['places'].append('moon_base'), '장소 moon_base')
 fails(lambda d: place(d, 'night_taxi').update(en='택시 뒷좌석'), '한글')
@@ -29,18 +29,18 @@ fails(lambda d: [i.update(low=True) for o in d['outfits'] if o['key'] == 'bath' 
 # 길이 끊기면 — 장소에 하는 일이 하나뿐, 하는 일에 옷이 없다
 fails(lambda d: [a['places'].remove('night_taxi') for a in d['activities'] if 'night_taxi' in a['places'] and a['key'] != 'taxi_ride'], '하는 일이 1 개')
 fails(lambda d: place(d, 'night_taxi').update(outfits=['editorial']), '입을 옷 계열이 없다')
-# 필수 갈래 — 환상 무대에서 란제리·수영복·역할극을 다 빼면 닿는 길이 없다
-fails(lambda d: next(e for e in d['eras'] if e['key'] == 'fantasy').update(outfits=['costume', 'editorial', 'evening', 'bridal', 'bath', 'retro']), '필수 갈래')
+# 필수 갈래 — 그 세계의 하루(now)에서 란제리·수영복·역할극을 다 빼면 닿는 길이 없다
+fails(lambda d: next(e for e in d['eras'] if e['key'] == 'now').update(outfits=['costume', 'editorial', 'evening', 'bridal', 'bath', 'retro']), '필수 갈래')
 # 추천 조합·예전 기록 변환 — 트리 위의 길만
 pre = lambda d, k: next(p for p in d['presets'] if p['key'] == k)
 fails(lambda d: pre(d, 'travel_station').update(act='swim'), '하는 일 swim 를 못 고른다')
-fails(lambda d: pre(d, 'travel_station').update(era='fantasy'), '시대가 없다')
+fails(lambda d: pre(d, 'travel_station').update(era='site'), '없는 시대')
 fails(lambda d: pre(d, 'commute_train').update(item='lace_set'), '옷 lace_set')
 fails(lambda d: d['legacy'].update({'x/y': {'preset': 'nope'}}), '추천 조합 nope')
 assert all(('preset' in v) or ('era' in v) for v in doc['legacy'].values())
-# !장소 는 묶음에서 뺀다 — 카페·빨래방에서 거닐기는 없다, 염전에선 앉아 쉬기가 없다
+# !장소 는 묶음에서 뺀다 — 카페·빨래방에서 거닐기는 없다, 사막 길에선 앉아 쉬기가 없다
 assert 'street_cafe' not in T.act_places(doc, act(doc, 'stroll')) and 'street_alley' in T.act_places(doc, act(doc, 'stroll'))
-assert 'site_saltpan' not in T.act_places(doc, act(doc, 'rest_seat')) and 'site_lab' in T.act_places(doc, act(doc, 'rest_seat'))
+assert 'travel_dunes' not in T.act_places(doc, act(doc, 'rest_seat')) and 'travel_lodge' in T.act_places(doc, act(doc, 'rest_seat'))
 fails(lambda d: act(d, 'stroll')['places'].append('!moon_base'), '장소 !moon_base')
 # 고정물 훑기 — 지금 표는 0, 부두 없는 곳에 「부두에서 낚시」 를 쓰면 걸린다
 assert T.audit(doc) == [], T.audit(doc)
@@ -50,16 +50,27 @@ assert any(r[0] == 'fishing' and r[2] == 'travel_coast' for r in T.audit(d2))
 assert set(T.act_places(doc, act(doc, 'warmup'))) >= {p['key'] for p in doc['places'] if p['group'] == 'sports'}
 # 옷 계열 = 시대 ∩ 장소 ∩ 하는 일
 assert T.outfit_families(doc, 'now', 'water_pool', act(doc, 'swim')) == ['swimwear']
-assert 'retro' not in T.outfit_families(doc, 'site', 'site_lab', act(doc, 'rest_seat')) and 'roleplay' in T.outfit_families(doc, 'site', 'site_lab', act(doc, 'rest_seat'))
-# 원소 시대 — now · site · nation · fantasy. 출시 연도가 없으니 since 를 가진 장소가 없다
-assert [e['key'] for e in doc['eras']] == ['now', 'site', 'nation', 'fantasy']
+# 도시 공방 시대 — 하나(now: 그 세계의 하루, 2026-11-19 Task 4 — 세계는 시대 칸이 아니라 참고 그림이 정한다). 원소의 현장 · 나라 안 · 환상 무대 장소가 없다
+assert [e['key'] for e in doc['eras']] == ['now']
 assert not any('since' in p for p in doc['places'])
-# 필수 갈래 — 현장 시대에서 역할극·수영복·란제리풍을, 나라 안 시대에서 세계 안 규칙(required.world)의 옷을 다 빼면 닿는 길이 없다
-era = lambda d, k: next(e for e in d['eras'] if e['key'] == k)
-fails(lambda d: era(d, 'site').update(outfits=['everyday', 'active', 'homewear']), '시대 쓰임의 현장 에서 필수 갈래')
-fails(lambda d: era(d, 'nation').update(outfits=['everyday', 'evening', 'active']), '시대 나라 안 에서 필수 갈래')
-assert T.required_reach(doc, 'nation', 'nation_room', act(doc, 'morning_stretch'), 'homewear') and not T.required_reach(doc, 'now', 'home_bedroom', act(doc, 'morning_stretch'), 'homewear')
-# 나라 안 장소는 나라 안 시대에만, 현장은 지금 현실에도
-assert {p['key'] for p in T.places_in(doc, 'nation')} == {'nation_room', 'nation_market', 'nation_field', 'nation_square', 'nation_bath', 'nation_roof', 'nation_inn', 'nation_forest', 'nation_garden', 'nation_harbor', 'nation_bridge', 'nation_study', 'nation_temple', 'nation_camp', 'nation_kitchen', 'nation_training'}   # 2026-11-09 삼국지에서 아홉
-assert 'site_lab' in {p['key'] for p in T.places_in(doc, 'now')} and 'nation_room' not in {p['key'] for p in T.places_in(doc, 'now')}
-print('PASS 일상컷 트리: 실제 표 · 없는 열쇠·자세 계열·장소·한글·겹침 · 끊긴 길 · 필수 갈래(현장·나라 안) · 추천 조합·예전 기록 · @묶음 · 옷 계열 교집합 · since 없음')
+assert not any(p['key'].split('_')[0] in ('site', 'nation', 'fx') or p['group'] in ('site', 'nation', 'fx') for p in doc['places'])
+assert 'world' not in doc['required']
+# 생활 장면표 · 세계 소품 사전(2026-11-19 Task 4) — 실제 표가 통과하고, 금지 낱말 · 근거 없음 · 없는 소품 · 없는 받침 · 장면 수를 건다
+import json
+J = lambda f: json.load(open(f, encoding='utf-8'))
+LIFE, PROPS, DESIGN, TREE2 = J(T.LIFE), J(T.PROPS), J(T.DESIGN), J(T.TREE2)
+assert T.check_life(doc, LIFE, PROPS, DESIGN, TREE2) == [], T.check_life(doc, LIFE, PROPS, DESIGN, TREE2)
+def life_fails(mutate, word):
+    l, pr = copy.deepcopy(LIFE), copy.deepcopy(PROPS); mutate(l, pr)
+    e = ' | '.join(T.check_life(doc, l, pr, DESIGN, TREE2))
+    assert word in e, (word, e)
+sc0 = lambda l: l['cities']['seoul']['scenes'][0]
+life_fails(lambda l, pr: sc0(l)['worlds']['fantasy'].update(en='a picnic lit by a smartphone'), "fantasy 금지 낱말 'smartphone'")
+life_fails(lambda l, pr: pr['props']['cup']['worlds']['steampunk'].update(en='a plastic cup'), "steampunk 금지 낱말 'plastic'")
+life_fails(lambda l, pr: sc0(l).update(src=[]), '근거 src')
+life_fails(lambda l, pr: sc0(l)['worlds']['cyberpunk']['props'].append('jetpack'), '소품 jetpack')
+life_fails(lambda l, pr: sc0(l).update(base='moon_base'), "받침 장소 'moon_base'")
+life_fails(lambda l, pr: l['cities']['seoul']['scenes'].extend(copy.deepcopy(l['cities']['seoul']['scenes'][:1])), '열쇠가 겹친다')
+life_fails(lambda l, pr: l['cities']['seoul'].update(scenes=l['cities']['seoul']['scenes'][:9]), '10~12')
+life_fails(lambda l, pr: [pr['props'].pop(k) for k in list(pr['props'])[10:]], '15 개 이상')
+print('PASS 일상컷 트리: 실제 표 · 없는 열쇠·자세 계열·장소·한글·겹침 · 끊긴 길 · 필수 갈래 · 추천 조합·예전 기록 · @묶음 · 옷 계열 교집합 · 시대 하나 · 원소 장소 없음 · 생활 장면표 · 세계 소품 사전(금지 낱말 · 근거 · 소품 · 받침 · 장면 수)')

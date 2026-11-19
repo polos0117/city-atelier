@@ -1,0 +1,107 @@
+{
+ "version": 1,
+ "note": "세계 소품 사전(계획 Task 4, 2026-11-19 — 설계 3-1절, 사용자 「소품등도 그냥 현재 사용하는 일상도구랑 차이가 없어서, 이게 판타지인지 스팀펑크인지 메카인지 구분이 잘 안됐거든」). 지금 일상 도구가 그대로 나오지 않게 세계마다 일상 소품을 바꿔 적는다. props.<열쇠>.worlds.<세계>.en — 생활 장면표(data/city-life.json)의 props 열쇠가 일상컷 Around her 줄로, 일상컷 트리의 같은 이름 소품(phone · cup · camera …)은 PROP 줄의 물건 이름으로 바뀐다. not_uses — 그 세계에서 어색한 트리 소품 동작(화면을 보는 · 셀카)은 계획기가 고르지 않는다. clothes.<세계>.en — 일상컷 옷의 결(그 세계의 평상복: 판타지 서민 · 귀족 평상복 / 스팀펑크 노동 · 거리 옷 / 사이버펑크 테크웨어), 옷 갈래 · 노출은 일상컷 트리 그대로. 판타지 · 스팀펑크 글에는 그 세계 banned_en(data/city-design.json) 낱말이 없다(tests/prompt-city.cjs).",
+ "clothes": {
+  "fantasy": { "ko": "그 세계의 평상복 — 서민 · 귀족의 손으로 짠 옷", "en": "Her clothes are her world's everyday dress, not regalia — the chosen outfit keeps its cut, cover and skin, but is made of hand-woven linen, silk, cotton and wool, with laced, tied or hooked closures, embroidered hems and soft leather shoes or boots; nothing synthetic, no zips, no printed logos." },
+  "steampunk": { "ko": "그 세계의 평상복 — 1900년 무렵 증기 도시의 거리 · 노동 옷", "en": "Her clothes are her world's everyday street and working dress of a steam city around 1900 — the chosen outfit keeps its cut, cover and skin, but is made of cotton, wool twill, canvas and leather, with buttons, braces, buckles and hooks, laced boots and a little soot at the cuffs." },
+  "cyberpunk": { "ko": "그 세계의 평상복 — 네온 거대 도시의 테크웨어", "en": "Her clothes are her world's everyday techwear — the chosen outfit keeps its cut, cover and skin, but is made of technical fabrics with reflective panels, glowing seam lines, magnetic clasps and chunky-soled boots." }
+ },
+ "props": {
+  "phone": { "ko": "휴대폰", "worlds": {
+   "fantasy": { "en": "a palm-sized messenger crystal glowing faintly with a waiting message", "not_uses": ["phone_look", "phone_selfie"] },
+   "steampunk": { "en": "a brass pocket telegraph with a folded telegram slip", "not_uses": ["phone_look", "phone_selfie"] },
+   "cyberpunk": { "en": "a holographic phone screen projected from her wrist" } } },
+  "cup": { "ko": "컵", "worlds": {
+   "fantasy": { "en": "a pewter cup" },
+   "steampunk": { "en": "an enamel mug chipped at the rim" },
+   "cyberpunk": { "en": "a self-heating tumbler with a glowing band" } } },
+  "drink_glass": { "ko": "술잔", "worlds": {
+   "fantasy": { "en": "a small celadon wine cup" },
+   "steampunk": { "en": "a thick pressed-glass tumbler" },
+   "cyberpunk": { "en": "a glass of glowing liquor on a lit base" } } },
+  "bag": { "ko": "가방", "worlds": {
+   "fantasy": { "en": "an embroidered silk pouch on a braided cord" },
+   "steampunk": { "en": "a riveted leather satchel with buckled straps" },
+   "cyberpunk": { "en": "a reflective sling bag with a glowing zip line" } } },
+  "umbrella": { "ko": "우산", "worlds": {
+   "fantasy": { "en": "an oiled-paper umbrella painted with flowers" },
+   "steampunk": { "en": "a black waxed-canvas umbrella on a brass-ribbed frame" },
+   "cyberpunk": { "en": "a transparent umbrella with a light-up rim" } } },
+  "lamp": { "ko": "조명", "worlds": {
+   "fantasy": { "en": "lantern-orbs of soft magical light floating overhead" },
+   "steampunk": { "en": "hissing gas lamps behind sooty glass" },
+   "cyberpunk": { "en": "pink and cyan neon tubes and light strips" } } },
+  "ride": { "ko": "탈것", "worlds": {
+   "fantasy": { "en": "a horse-drawn carriage and a small lantern barge" },
+   "steampunk": { "en": "a steam tram rattling past on iron rails" },
+   "cyberpunk": { "en": "a hovering driverless pod-taxi" } } },
+  "sign": { "ko": "간판", "worlds": {
+   "fantasy": { "en": "carved wooden hanging signs painted with pictures, no letters" },
+   "steampunk": { "en": "enamelled tin signs and painted shopfront boards, no readable letters" },
+   "cyberpunk": { "en": "neon and holographic shop signs in abstract shapes, no readable letters" } } },
+  "bowl": { "ko": "음식 그릇", "worlds": {
+   "fantasy": { "en": "earthenware bowls on a wooden tray" },
+   "steampunk": { "en": "dented tin bowls and an iron skillet" },
+   "cyberpunk": { "en": "heat-sealed takeaway trays with glowing lids" } } },
+  "money": { "ko": "돈", "worlds": {
+   "fantasy": { "en": "a few silver and gold coins" },
+   "steampunk": { "en": "copper coins and a folded paper banknote" },
+   "cyberpunk": { "en": "a chip ring tapped on a glowing pay pad" } } },
+  "book": { "ko": "책", "worlds": {
+   "fantasy": { "en": "a leather-bound book with gilt edges" },
+   "steampunk": { "en": "a cloth-bound book with brass corner guards" },
+   "cyberpunk": { "en": "a thin glowing e-paper slate" } } },
+  "watch": { "ko": "시계", "worlds": {
+   "fantasy": { "en": "a small hourglass pendant on a chain" },
+   "steampunk": { "en": "a brass pocket watch on a chain" },
+   "cyberpunk": { "en": "a glowing time display on her wrist implant" } } },
+  "music": { "ko": "이어폰 · 음악", "worlds": {
+   "fantasy": { "en": "a little enchanted music box" },
+   "steampunk": { "en": "a hand-cranked phonograph with a brass horn" },
+   "cyberpunk": { "en": "glowing wireless ear-pieces" } } },
+  "key": { "ko": "열쇠", "worlds": {
+   "fantasy": { "en": "an ornate iron key on a silk cord" },
+   "steampunk": { "en": "a heavy brass key ring with a numbered tag" },
+   "cyberpunk": { "en": "a glowing key chip on a wristband" } } },
+  "shopping_bag": { "ko": "쇼핑봉투", "worlds": {
+   "fantasy": { "en": "a woven willow basket" },
+   "steampunk": { "en": "a brown paper parcel tied with string" },
+   "cyberpunk": { "en": "a glossy shopping bag with a glowing handle" } } },
+  "ticket": { "ko": "표 · 승차권", "worlds": {
+   "fantasy": { "en": "a wax-sealed travel token" },
+   "steampunk": { "en": "a punched cardboard tram ticket" },
+   "cyberpunk": { "en": "a holographic transit pass" } } },
+  "camera": { "ko": "사진기", "worlds": {
+   "fantasy": { "en": "a brass-bound memory glass that keeps a captured image", "not_uses": ["camera_check"] },
+   "steampunk": { "en": "a folding wooden bellows camera", "not_uses": ["camera_check"] },
+   "cyberpunk": { "en": "a palm-sized camera drone" } } },
+  "water_bottle": { "ko": "물병", "worlds": {
+   "fantasy": { "en": "a leather waterskin" },
+   "steampunk": { "en": "a corked glass bottle in a wicker sleeve" },
+   "cyberpunk": { "en": "a smart bottle with a glowing level line" } } },
+  "fan": { "ko": "부채", "worlds": {
+   "fantasy": { "en": "a painted silk folding fan" },
+   "steampunk": { "en": "a pleated paper fan" },
+   "cyberpunk": { "en": "a whirring palm-sized electric fan" } } },
+  "skewer": { "ko": "꼬치", "worlds": {
+   "fantasy": { "en": "skewers roasting over a charcoal brazier" },
+   "steampunk": { "en": "skewers sizzling on a steam-heated iron griddle" },
+   "cyberpunk": { "en": "skewers on an induction grill under a glowing hood" } } },
+  "mat": { "ko": "돗자리", "worlds": {
+   "fantasy": { "en": "a woven rush mat" },
+   "steampunk": { "en": "a waxed canvas groundsheet" },
+   "cyberpunk": { "en": "a glowing self-unrolling mat" } } },
+  "cheer": { "ko": "응원 도구", "worlds": {
+   "fantasy": { "en": "a pair of ribboned wooden clappers" },
+   "steampunk": { "en": "a tin rattle on a wooden handle" },
+   "cyberpunk": { "en": "a pair of glowing inflatable thundersticks" } } },
+  "float_ring": { "ko": "튜브", "worlds": {
+   "fantasy": { "en": "a ring of bundled reeds that floats" },
+   "steampunk": { "en": "a canvas float ring patched with rubber" },
+   "cyberpunk": { "en": "a glowing inflatable ring" } } },
+  "microphone": { "ko": "마이크", "worlds": {
+   "fantasy": { "en": "a carved speaking-shell that carries her voice" },
+   "steampunk": { "en": "a brass-horned voice trumpet" },
+   "cyberpunk": { "en": "a glowing wireless microphone" } } }
+ }
+}

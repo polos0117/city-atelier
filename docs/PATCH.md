@@ -7,6 +7,21 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-19 · claude · 일상컷을 그 세계의 서울의 하루로 — 생활 장면표 · 세계 소품 사전 · 서울 직업
+- data/city-life.json — 새로. 서울 생활 장면 열둘(한강공원 밤 돗자리 · 출근길 지하철 · 포장마차 · 찜질방 · 광장시장 노점 · 익선동 한옥 카페 · 북촌 한옥 마당 · 청계천 · 한양도성 순성길 · 야구장 응원석 · 한강 수영장 · 옥탑방, 장면마다 위키백과 src · 받침 장소 base)과 장면마다 세 세계 글 · 소품, 공용 시간대 · 서울 계절 · 날씨(장마 · 황사 · 가을 안개 · 눈 — 근거 src)
+- data/world-props.json — 새로. 세계 소품 사전 스물넷(휴대폰 · 컵 · 가방 · 우산 · 조명 · 탈것 · 간판 · 그릇 · 돈 · 책 · 시계 · 음악 · 열쇠 · 쇼핑봉투 · 표 …) × 세 세계, 그 세계에서 어색한 소품 동작(not_uses), 일상컷 옷의 결(clothes — 그 세계의 평상복)
+- data/casual-tree.json · data/casual-tree-v2.json — 원소 말 걷음: 시대 넷 → now 하나(그 세계의 하루), 쓰임의 현장 · 나라 안 · 환상 무대 장소 73 · 그 하는 일 · 추천 조합 · 예전 기록, required.world, 땅(lands_of · place_lands), 현장 소품(시험관 · 연습용 검 · 안장 천)과 그 동작. 소품 이름 「그 원소의 물건」 → 「그 도시의 물건」
+- data/casual-own.json — 서울 캐릭터만의 컷(90번) 직업 셋(per_world — 남산 봉수대 → 송신탑: 봉수대 봉화지기 · 전보국 타전수 · 송신탑 신호 정비사, 세 세계 자세 서로 다르게)
+- lib/prompt-city.js — kind 'casual' 구현(PromptCity.build → { text, sections: head · body · negative }). lifeTree(생활 장면 → 트리 장소 <도시>_<장면>, 받침은 base 것, 땅 = 도시), Place 줄 = 그 장면의 그 세계 글, Around her = 그 세계 소품, PROP 물건 · 옷의 결도 그 세계 것, 생활 장면표 시간 · 계절 · 날씨, 그 세계의 서울 줄(World), 화풍 「No …」 + 그 세계 banned_en 은 맨 끝 Avoid 단락으로. 카드 land = 도시 열쇠
+- lib/prompt-spec.js — 일상컷 시대 틀을 now 하나(WORLD 줄)로, life 줄들(world · around · season · weather · avoid)
+- tools/casual-plan.cjs — 도시 꼴: 장면은 그 도시 생활 장면표에서(같은 장면 겹침 0), 시대 몫 · 나라 안 갈래 걷음, 노출 갈래는 세계마다 돌려 가며 정해 둔 칸 한 장, 판타지 · 스팀펑크 금지 낱말 든 옷 · 어색한 소품 동작 안 고름, 시간 · 계절 · 날씨는 생활 장면표, 그림 저장소는 city-atelier-img(없으면 알리고 빈 기록으로)
+- tools/casual-tree.py — check 에 생활 장면표 · 세계 소품 사전 검사(장면 10~12 · src · 받침 · 소품 · 금지 낱말 · 시간 · 계절 · 날씨)
+- tools/prompt-pack.cjs — 일상 기록 · 계획 검사에 생활 장면표 · 세계 소품 사전
+- lib/studio.js · prompt.html — 생성기가 생활 장면표 · 세계 소품 사전을 읽는다(장소 목록에 서울 장면, 시간대에 생활 장면표 시간), 폰 자세 추천 탭의 빈 묶음 낱말 경고(words: frame.) 고침. ?v= 올림
+- tests/casual-plan.cjs · tests/prompt-city.cjs · tests/prompt-pack-screen.cjs · tests/screen.cjs · tests/casual-tree.cjs · tests/casual-tree-v2.cjs · tests/casual-tree.py — 일상컷 검사 되살림 · 도시 꼴로(서울 세 세계 × 씨앗 셋, 장면 × 세계 × 화풍, 생성기 일상컷 걸음 · 일상 일곱 자리)
+- docs/samples/seoul-casual-prompts.md — 새로. 세계마다 두 장(같은 포장마차를 세 세계로 + 계획기 한 장)
+- docs/PORT_NOTES.md · AGENTS.md — 건너뛴 검사 표 · 판단이 갈린 곳 · 일상컷 자리
+
 ## 2026-11-19 · claude · 지시문 조립을 도시 한 층 · 세 세계로 — 서울 세 세계 지시문
 - lib/prompt-city.js — 원소의 나라 › 가문 › 주민 갈래(가문주 · 주민 · 입는 물건 · 돌림 외형)를 걷고 도시 한 층(카드 = 도시 열쇠). 「원소 성질」 자리에 도시 motif + 상징 색 + 세계 표지(vocab.markers.<세계>.en)를 사람에게 싣는 줄, 세계 줄은 장르 이름 없이 그 세계의 서울 + 설계표 옷 말투(vocab.wear) + 빛, 장면은 고르지 않으면 첫 장면, 손에 드는 것(hold). PromptCity.build({ … }) → { text, sections } 를 더함(sections: head · s1~s5 · negative · style_undecided). 세 세계 밖(mecha)은 던지고, 설계 미정 도시는 { text: '', missing: ['worlds'] }. 내린 화풍만 쓰던 구조판 · kv 길은 뺐다. 일상컷은 도시 카드만 읽게(갈래는 Task 4)
 - lib/prompt-spec.js — 세계 mecha → cyberpunk(빛 · 머리 꼬리만, 옷 · 노출은 설계표), CONCEPT · CITY MOTIF · WORLD MARKS · PROP 머리, 글자 금지(원소 기호 · 번호 허용 뺌), 사이버펑크 실루엣 여덟(메카 실루엣 대신), 원소 태그 묶음(SIL_POOLS · SIL_TAGS) · 구조판 표(STRUCT) 삭제, 일상컷 원소 말을 도시로

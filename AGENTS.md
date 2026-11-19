@@ -22,7 +22,7 @@
 | 첫 화면 | `index.html` | 「짓는 중」 껍데기 + 도구 상자. 지구본 탭 · 도시 화면 · 전체 도감 탭은 Task 7~9 |
 | 도구 상자 | `lib/toolbox.js` · `lib/toolbox.css` | 구석의 「도구」 단추 → 화풍 · 프롬프트 · 즐겨찾기 · 설정(공간 · 밀도 · 움직임) · 패치 기록. 도구 화면의 머리는 가는 막대 `ToolBar` |
 | 화풍 비교 | `styles.html` · `data/style-compare.json` · `tools/style-compare.py` | 같은 카드를 화풍별로 — 서울 묶음은 Task 11 |
-| 프롬프트 | `prompt.html` · `lib/studio.js` · `lib/prompt-spec.js` · `lib/prompt-city.js` · `lib/casual-tree*.js` | 생성기. 도시 › 갈래 › 단계(Task 3). 세계 그림은 도시 꼴(`PromptCity.build` — 도시 motif + 세계 표지, 금지 낱말은 5칸 Avoid 줄만). 일상컷은 아직 원소 트리 표(Task 4). 본보기 지시문 `docs/samples/seoul-world-prompts.md` |
+| 프롬프트 | `prompt.html` · `lib/studio.js` · `lib/prompt-spec.js` · `lib/prompt-city.js` · `lib/casual-tree*.js` | 생성기. 도시 › 갈래 › 단계(Task 3). 세계 그림은 도시 꼴(`PromptCity.build` — 도시 motif + 세계 표지, 금지 낱말은 5칸 Avoid 줄만). 일상컷은 그 세계의 그 도시의 하루(Task 4 — 생활 장면표 `data/city-life.json` · 세계 소품 사전 `data/world-props.json`, 계획기 `tools/casual-plan.cjs`). 본보기 지시문 `docs/samples/seoul-world-prompts.md` · `docs/samples/seoul-casual-prompts.md` |
 | 주소 | `lib/walk-core.js` | 순수 함수. `?tab=globe\|dex &city= &card= &pic= &w= &st= &view=` — 층 globe · dex · city · card. Task 7 이 `DESIGN.md` 에 확정 |
 
 ## 지켜야 할 것
@@ -34,7 +34,7 @@
 상징 · 위도경도 · 생활 장면마다 근거 `src`(주소). 상표 · 실존 인물 이름은 그림 지시문에 쓰지 않는다. 확신 없는 것은 적지 않는다.
 
 ### 3. 일상컷은 그 세계의 그 도시의 하루
-판타지 · 스팀펑크 일상컷에 지금 도구(스마트폰 · 플라스틱 · 전광판)가 나오지 않는다. 일상컷 트리 v2(공용 모듈)는 그대로 쓰고 장소 · 시대 표만 이 공방 것.
+판타지 · 스팀펑크 일상컷에 지금 도구(스마트폰 · 플라스틱 · 전광판)가 나오지 않는다. 일상컷 트리 v2(공용 모듈)는 그대로 쓰고 장소 · 시대 표만 이 공방 것. 새 도시를 설계하면 생활 장면표(`data/city-life.json` — 그 도시에 실제로 있는 생활 10~12, 장면마다 src · 받침 base · 세 세계 글 · 소품)와 계절 · 날씨(근거)도 같이 적고 `python -I -X utf8 tools/casual-tree.py check` 로 본다. 소품이 모자라면 세계 소품 사전(`data/world-props.json`)에 세 세계를 함께 더한다.
 
 ### 3-1. 캐릭터만의 컷 — 새 도시를 설계하면 직업도 같이
 새 도시를 설계하면 **그 자리에서** 캐릭터만의 컷(일상컷 90번)의 직업도 같이 설계해 `data/casual-own.json` 에 적는다(원소 공방 1-1-1 규칙을 옮김). 표에 줄이 없는 카드는 계획기가 이 컷을 건너뛰므로 나중으로 미루면 그 카드만 한 장이 빈다. 직업은 도시의 상징 · 명물 · 별명에서, 세계마다 다른 직업(`mode: per_world`) — 동물 · 상표 · 실존 인물은 피하고, 세 세계 자세가 서로 다르게. 줄마다 장소 글 · 하는 일 · 자세 추천 · 도구 · 노출 단계별 의상 글 셋(bold · moderate · low)을 쓰고 `node tools/casual-plan.cjs <도시> --world all` 로 90번이 짜지는지 본다. 그림 작업 중인 카드의 줄은 바꾸기 전에 사용자에게 묻는다.

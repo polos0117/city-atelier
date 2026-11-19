@@ -1,11 +1,11 @@
 {
  "version": 1,
- "note": "원소의 공방 일상컷 트리 — 시대 → 장소 → 하는 일 → 의상 → 구도·소품 → 분위기. 앞에서 고른 것이 뒤 선택지를 거른다(game-atelier 에서 옮김, 2026-10-30). 시대 넷: now(지금 현실) · site(쓰임의 현장 — 실험실·용광로·광산·염전·정유소·제어실·조폐소·천문대·충전소·공방) · nation(나라 안 — 그 원소 나라의 방·시장·들판·광장·목욕탕·지붕·여관) · fantasy(무대·환상). 출시 연도가 없어 since 를 쓰는 장소가 없다. 장소의 eras·outfits, 하는 일의 places(@묶음 = 그 묶음의 모든 장소, !장소 = 뺀다)·family·outfits, 시대의 outfits 가 허용 관계다. 검사는 python3 tools/casual-tree.py check. 모듈 lib/casual-tree.js 는 game 이 원본(같은 파일).",
+ "note": "도시 공방 일상컷 트리(버전1 몫 — 시대 · 장소 · 의상). 원소 공방 표에서 옮겨 원소 말을 걷었다(2026-11-19 계획 Task 4): 쓰임의 현장(site) · 나라 안(nation) · 무대·환상(fx) 장소와 시대, 원소 분류 갈래. 시대는 하나 — now(그 세계의 하루). 세 세계는 시대 칸이 아니라 참고 그림의 세계(일상컷 지시문의 World 줄)가 정한다. 도시의 장소는 생활 장면표(data/city-life.json)가 조립기에서 트리 장소로 더해진다(lib/prompt-city.js lifeTree) — 여기 남은 장소는 그 장면의 받침(base)이자 생성기에서 손으로 고르는 일반 장소다. 앞에서 고른 것이 뒤 선택지를 거른다(game-atelier 꼴).",
  "eras": [
   {
    "key": "now",
-   "ko": "지금 현실",
-   "en": "present-day real world",
+   "ko": "그 세계의 하루",
+   "en": "an ordinary day of her own world — her city as it lives in her world, not our present day",
    "outfits": [
     "everyday",
     "homewear",
@@ -26,66 +26,6 @@
     "drape",
     "resort",
     "workwear"
-   ]
-  },
-  {
-   "key": "site",
-   "ko": "쓰임의 현장",
-   "en": "the present-day place where her element is actually made or used — a laboratory, furnace, mine, salt pan, refinery, power plant, mint, observatory, filling station or kiln",
-   "outfits": [
-    "everyday",
-    "homewear",
-    "active",
-    "roleplay",
-    "lingerie",
-    "swimwear",
-    "bath",
-    "evening",
-    "traditional",
-    "subculture",
-    "costume",
-    "dongtan",
-    "workwear"
-   ]
-  },
-  {
-   "key": "nation",
-   "ko": "나라 안",
-   "en": "inside her element's own kingdom — its fantasy, steampunk or mecha world — as if she simply lives there",
-   "outfits": [
-    "everyday",
-    "homewear",
-    "lingerie",
-    "swimwear",
-    "bath",
-    "evening",
-    "active",
-    "dongtan",
-    "adventure",
-    "resort",
-    "workwear"
-   ]
-  },
-  {
-   "key": "fantasy",
-   "ko": "무대·환상",
-   "en": "a stylised stage, editorial or fantasy setting not bound to a real year",
-   "outfits": [
-    "costume",
-    "editorial",
-    "evening",
-    "bridal",
-    "lingerie",
-    "swimwear",
-    "bath",
-    "retro",
-    "traditional",
-    "subculture",
-    "roleplay",
-    "halloween",
-    "adventure",
-    "drape",
-    "resort"
    ]
   }
  ],
@@ -97,10 +37,6 @@
   {
    "key": "street",
    "ko": "거리·도시"
-  },
-  {
-   "key": "site",
-   "ko": "원소의 현장"
   },
   {
    "key": "studio",
@@ -133,14 +69,6 @@
   {
    "key": "travel",
    "ko": "여행지"
-  },
-  {
-   "key": "nation",
-   "ko": "나라 안"
-  },
-  {
-   "key": "fx",
-   "ko": "환상 무대"
   }
  ],
  "places": [
@@ -403,157 +331,6 @@
     "traditional",
     "active",
     "dongtan"
-   ]
-  },
-  {
-   "key": "site_lab",
-   "group": "site",
-   "ko": "화학 실험실",
-   "en": "a chemistry laboratory with a long worktable of glass flasks, a fume hood and shelves of labelled reagent bottles",
-   "eras": [
-    "now",
-    "site"
-   ],
-   "outfits": [
-    "everyday",
-    "roleplay",
-    "active"
-   ]
-  },
-  {
-   "key": "site_furnace",
-   "group": "site",
-   "ko": "제철소 용광로",
-   "en": "a steelworks floor beside a glowing blast furnace, sparks and molten metal pouring under a high iron roof",
-   "eras": [
-    "now",
-    "site"
-   ],
-   "outfits": [
-    "everyday",
-    "active",
-    "roleplay"
-   ]
-  },
-  {
-   "key": "site_mine",
-   "group": "site",
-   "ko": "광산 갱도",
-   "en": "a mine gallery of rough rock walls, timber props, an ore cart on its track and a line of hanging lamps",
-   "eras": [
-    "now",
-    "site"
-   ],
-   "outfits": [
-    "everyday",
-    "active"
-   ]
-  },
-  {
-   "key": "site_saltpan",
-   "group": "site",
-   "ko": "염전",
-   "en": "a wide salt pan at low tide, shallow brine mirroring the sky, wooden rakes and heaps of white salt",
-   "eras": [
-    "now",
-    "site"
-   ],
-   "outfits": [
-    "everyday",
-    "active",
-    "swimwear",
-    "traditional"
-   ]
-  },
-  {
-   "key": "site_refinery",
-   "group": "site",
-   "ko": "정유소·탱크",
-   "en": "a refinery yard of silver storage tanks, pipe racks and steel ladders under a wide evening sky",
-   "eras": [
-    "now",
-    "site"
-   ],
-   "outfits": [
-    "everyday",
-    "active",
-    "roleplay"
-   ]
-  },
-  {
-   "key": "site_control",
-   "group": "site",
-   "ko": "발전소 제어실",
-   "en": "a power-plant control room with a curved console of dials, switches and indicator lamps, a waist-high rail along the glass",
-   "eras": [
-    "now",
-    "site"
-   ],
-   "outfits": [
-    "everyday",
-    "roleplay",
-    "active"
-   ]
-  },
-  {
-   "key": "site_mint",
-   "group": "site",
-   "ko": "조폐소·금고",
-   "en": "a mint vault of stacked gold bars, trays of fresh coins and a heavy steel door, warm lamplight on the metal",
-   "eras": [
-    "now",
-    "site"
-   ],
-   "outfits": [
-    "everyday",
-    "evening",
-    "roleplay"
-   ]
-  },
-  {
-   "key": "site_observatory",
-   "group": "site",
-   "ko": "천문대",
-   "en": "a hilltop observatory with its dome open to a clear night sky, a brass-railed platform around the great telescope",
-   "eras": [
-    "now",
-    "site"
-   ],
-   "outfits": [
-    "everyday",
-    "evening",
-    "homewear",
-    "traditional"
-   ]
-  },
-  {
-   "key": "site_hydrogen",
-   "group": "site",
-   "ko": "수소 충전소",
-   "en": "a hydrogen filling station at dusk, white dispensers under a lit canopy and a row of tall gas cylinders",
-   "eras": [
-    "now",
-    "site"
-   ],
-   "outfits": [
-    "everyday",
-    "active",
-    "roleplay"
-   ]
-  },
-  {
-   "key": "site_kiln",
-   "group": "site",
-   "ko": "유리·도자기 공방",
-   "en": "a glass and pottery workshop with a glowing kiln, a wooden workbench and shelves of fired pieces",
-   "eras": [
-    "now",
-    "site"
-   ],
-   "outfits": [
-    "everyday",
-    "homewear",
-    "active"
    ]
   },
   {
@@ -1305,585 +1082,6 @@
    ]
   },
   {
-   "key": "nation_room",
-   "group": "nation",
-   "ko": "나라의 방",
-   "en": "her own room in a house of her element's kingdom, its walls and furniture built from the element's materials and colours, a mirror and a window",
-   "eras": [
-    "nation"
-   ],
-   "outfits": [
-    "homewear",
-    "lingerie",
-    "everyday",
-    "dongtan"
-   ]
-  },
-  {
-   "key": "nation_kitchen",
-   "group": "nation",
-   "ko": "나라의 부엌",
-   "en": "a kitchen or galley in her element's kingdom",
-   "eras": [
-    "nation"
-   ],
-   "outfits": [
-    "homewear",
-    "everyday",
-    "dongtan"
-   ]
-  },
-  {
-   "key": "nation_study",
-   "group": "nation",
-   "ko": "나라의 서재",
-   "en": "a study or library in her element's kingdom",
-   "eras": [
-    "nation"
-   ],
-   "outfits": [
-    "everyday",
-    "dongtan",
-    "homewear",
-    "evening"
-   ]
-  },
-  {
-   "key": "nation_market",
-   "group": "nation",
-   "ko": "나라의 시장",
-   "en": "a market street of her element's kingdom, stalls and awnings made of its materials",
-   "eras": [
-    "nation"
-   ],
-   "outfits": [
-    "everyday",
-    "evening",
-    "dongtan"
-   ]
-  },
-  {
-   "key": "nation_field",
-   "group": "nation",
-   "ko": "나라의 들판",
-   "en": "an open field or grove outside the town of her element's kingdom, the land tinted by the element",
-   "eras": [
-    "nation"
-   ],
-   "outfits": [
-    "everyday",
-    "homewear",
-    "active",
-    "dongtan"
-   ]
-  },
-  {
-   "key": "nation_training",
-   "group": "nation",
-   "ko": "나라의 연무장",
-   "en": "a training yard or simulator room in her element's kingdom, with a bench along the wall",
-   "eras": [
-    "nation"
-   ],
-   "outfits": [
-    "active",
-    "everyday",
-    "dongtan"
-   ]
-  },
-  {
-   "key": "nation_camp",
-   "group": "nation",
-   "ko": "나라의 군영",
-   "en": "a military camp tent or ready room in her element's kingdom",
-   "eras": [
-    "nation"
-   ],
-   "outfits": [
-    "everyday",
-    "dongtan",
-    "active",
-    "homewear"
-   ]
-  },
-  {
-   "key": "nation_garden",
-   "group": "nation",
-   "ko": "나라의 정원 · 연못",
-   "en": "a garden with a pond in her element's kingdom",
-   "eras": [
-    "nation"
-   ],
-   "outfits": [
-    "everyday",
-    "dongtan",
-    "homewear",
-    "active"
-   ]
-  },
-  {
-   "key": "nation_forest",
-   "group": "nation",
-   "ko": "나라의 숲 오솔길",
-   "en": "a forest path in her element's kingdom",
-   "eras": [
-    "nation"
-   ],
-   "outfits": [
-    "everyday",
-    "dongtan",
-    "homewear",
-    "active"
-   ]
-  },
-  {
-   "key": "nation_square",
-   "group": "nation",
-   "ko": "나라의 광장",
-   "en": "the main square of her element's kingdom, its landmark and steps built of the element's materials",
-   "eras": [
-    "nation"
-   ],
-   "outfits": [
-    "everyday",
-    "active",
-    "evening",
-    "dongtan"
-   ]
-  },
-  {
-   "key": "nation_temple",
-   "group": "nation",
-   "ko": "나라의 사당 · 신전",
-   "en": "a temple or shrine in her element's kingdom",
-   "eras": [
-    "nation"
-   ],
-   "outfits": [
-    "everyday",
-    "dongtan",
-    "homewear",
-    "evening"
-   ]
-  },
-  {
-   "key": "nation_bridge",
-   "group": "nation",
-   "ko": "나라의 다리",
-   "en": "a bridge in her element's kingdom",
-   "eras": [
-    "nation"
-   ],
-   "outfits": [
-    "homewear",
-    "swimwear",
-    "everyday",
-    "dongtan"
-   ]
-  },
-  {
-   "key": "nation_harbor",
-   "group": "nation",
-   "ko": "나라의 나루 · 항구",
-   "en": "a harbour or ferry landing in her element's kingdom",
-   "eras": [
-    "nation"
-   ],
-   "outfits": [
-    "everyday",
-    "dongtan",
-    "active",
-    "evening",
-    "swimwear"
-   ]
-  },
-  {
-   "key": "nation_bath",
-   "group": "nation",
-   "ko": "나라의 목욕탕·개울",
-   "en": "an outdoor bath, stream or fountain built in the style of her element's kingdom",
-   "eras": [
-    "nation"
-   ],
-   "outfits": [
-    "bath",
-    "swimwear"
-   ]
-  },
-  {
-   "key": "nation_roof",
-   "group": "nation",
-   "ko": "나라의 지붕·테라스",
-   "en": "a rooftop or terrace above the town of her element's kingdom",
-   "eras": [
-    "nation"
-   ],
-   "outfits": [
-    "homewear",
-    "swimwear",
-    "everyday",
-    "dongtan"
-   ]
-  },
-  {
-   "key": "nation_inn",
-   "group": "nation",
-   "ko": "나라의 여관",
-   "en": "an inn or tavern of her element's kingdom at night, a counter and a fire",
-   "eras": [
-    "nation"
-   ],
-   "outfits": [
-    "everyday",
-    "evening",
-    "homewear",
-    "dongtan"
-   ]
-  },
-  {
-   "key": "fx_studio",
-   "group": "fx",
-   "ko": "화보 스튜디오",
-   "en": "an editorial photo studio with a seamless backdrop and dramatic lights",
-   "eras": [
-    "fantasy"
-   ],
-   "outfits": [
-    "editorial",
-    "costume",
-    "lingerie",
-    "swimwear",
-    "evening",
-    "halloween",
-    "drape",
-    "adventure"
-   ]
-  },
-  {
-   "key": "fx_runway",
-   "group": "fx",
-   "ko": "런웨이",
-   "en": "a fashion runway under white spotlights",
-   "eras": [
-    "fantasy"
-   ],
-   "outfits": [
-    "editorial",
-    "evening",
-    "bridal",
-    "drape"
-   ]
-  },
-  {
-   "key": "fx_ballroom",
-   "group": "fx",
-   "ko": "가면무도회장",
-   "en": "a chandelier ballroom at a masquerade",
-   "eras": [
-    "fantasy"
-   ],
-   "outfits": [
-    "costume",
-    "evening",
-    "retro",
-    "halloween"
-   ]
-  },
-  {
-   "key": "fx_mirror",
-   "group": "fx",
-   "ko": "거울 미궁",
-   "en": "a mirrored labyrinth of endless reflections and soft coloured light",
-   "eras": [
-    "fantasy"
-   ],
-   "outfits": [
-    "costume",
-    "evening",
-    "retro",
-    "halloween"
-   ]
-  },
-  {
-   "key": "fx_starstage",
-   "group": "fx",
-   "ko": "별빛 무대",
-   "en": "a stage under a painted night sky of crystal stars",
-   "eras": [
-    "fantasy"
-   ],
-   "outfits": [
-    "costume",
-    "editorial",
-    "halloween"
-   ]
-  },
-  {
-   "key": "fx_forest",
-   "group": "fx",
-   "ko": "요정 숲 정원",
-   "en": "a misty enchanted garden of moss, ivy and lanterns",
-   "eras": [
-    "fantasy"
-   ],
-   "outfits": [
-    "costume",
-    "bridal",
-    "traditional",
-    "halloween"
-   ]
-  },
-  {
-   "key": "fx_oasis",
-   "group": "fx",
-   "ko": "사막 오아시스",
-   "en": "a desert oasis at golden hour — date palms, a still turquoise pool and silk tents on the dunes",
-   "eras": [
-    "fantasy"
-   ],
-   "outfits": [
-    "adventure",
-    "drape",
-    "costume"
-   ]
-  },
-  {
-   "key": "fx_marble_temple",
-   "group": "fx",
-   "ko": "대리석 신전",
-   "en": "a sunlit white marble temple — tall fluted columns and a terrace above a deep blue sea",
-   "eras": [
-    "fantasy"
-   ],
-   "outfits": [
-    "drape",
-    "costume",
-    "bridal"
-   ]
-  },
-  {
-   "key": "fx_jungle_ruins",
-   "group": "fx",
-   "ko": "정글 유적",
-   "en": "overgrown jungle temple ruins — mossy stone steps, hanging vines and shafts of light through the canopy",
-   "eras": [
-    "fantasy"
-   ],
-   "outfits": [
-    "adventure",
-    "drape",
-    "costume"
-   ]
-  },
-  {
-   "key": "fx_skygarden",
-   "group": "fx",
-   "ko": "공중 정원",
-   "en": "a floating sky garden of hanging vines and flowering terraces above the clouds",
-   "eras": [
-    "fantasy"
-   ],
-   "outfits": [
-    "costume",
-    "bridal",
-    "traditional",
-    "halloween",
-    "drape"
-   ]
-  },
-  {
-   "key": "fx_lanternriver",
-   "group": "fx",
-   "ko": "등불을 띄운 강",
-   "en": "a night river covered with floating paper lanterns, stone steps leading down to the water",
-   "eras": [
-    "fantasy"
-   ],
-   "outfits": [
-    "costume",
-    "bridal",
-    "traditional",
-    "halloween"
-   ]
-  },
-  {
-   "key": "fx_spa",
-   "group": "fx",
-   "ko": "미래풍 스파",
-   "en": "a futuristic spa of white curves and soft light",
-   "eras": [
-    "fantasy"
-   ],
-   "outfits": [
-    "bath",
-    "swimwear"
-   ]
-  },
-  {
-   "key": "fx_marble_bath",
-   "group": "fx",
-   "ko": "대리석 목욕궁",
-   "en": "a Roman marble bath hall — columns, mosaic floors and a wide steaming pool lit from high windows",
-   "eras": [
-    "fantasy"
-   ],
-   "outfits": [
-    "drape",
-    "swimwear"
-   ]
-  },
-  {
-   "key": "fx_moonpond",
-   "group": "fx",
-   "ko": "달빛 연못",
-   "en": "a moonlit lotus pond with stepping stones and glowing fireflies",
-   "eras": [
-    "fantasy"
-   ],
-   "outfits": [
-    "bath",
-    "swimwear"
-   ]
-  },
-  {
-   "key": "fx_observatory",
-   "group": "fx",
-   "ko": "밤 천문대",
-   "en": "a night observatory under an open dome",
-   "eras": [
-    "fantasy"
-   ],
-   "outfits": [
-    "costume",
-    "editorial",
-    "evening",
-    "halloween"
-   ]
-  },
-  {
-   "key": "fx_cloudpavilion",
-   "group": "fx",
-   "ko": "구름 위 정자",
-   "en": "an open pavilion floating above a sea of clouds at sunrise",
-   "eras": [
-    "fantasy"
-   ],
-   "outfits": [
-    "costume",
-    "editorial",
-    "evening",
-    "halloween",
-    "drape"
-   ]
-  },
-  {
-   "key": "fx_circus",
-   "group": "fx",
-   "ko": "서커스 천막",
-   "en": "a circus tent ring under a striped canopy",
-   "eras": [
-    "fantasy"
-   ],
-   "outfits": [
-    "costume",
-    "roleplay",
-    "halloween"
-   ]
-  },
-  {
-   "key": "fx_castle",
-   "group": "fx",
-   "ko": "성 계단",
-   "en": "the grand staircase of an old castle",
-   "eras": [
-    "fantasy"
-   ],
-   "outfits": [
-    "costume",
-    "evening",
-    "bridal",
-    "retro",
-    "halloween"
-   ]
-  },
-  {
-   "key": "fx_pirate_ship",
-   "group": "fx",
-   "ko": "해적선 갑판",
-   "en": "the deck of a tall wooden sailing ship at sea — rigging, a ship's wheel, coiled ropes, wooden stairs up to the quarterdeck and billowing sails",
-   "eras": [
-    "fantasy"
-   ],
-   "outfits": [
-    "adventure",
-    "costume",
-    "halloween"
-   ]
-  },
-  {
-   "key": "fx_underwater",
-   "group": "fx",
-   "ko": "수중 궁전",
-   "en": "an underwater palace hall behind great glass arches, a sweeping coral-stone staircase, rippling blue light and drifting bubbles outside",
-   "eras": [
-    "fantasy"
-   ],
-   "outfits": [
-    "costume",
-    "evening",
-    "bridal",
-    "retro",
-    "halloween"
-   ]
-  },
-  {
-   "key": "fx_library",
-   "group": "fx",
-   "ko": "거대한 서고",
-   "en": "a vast fantasy library of towering shelves, spiral stairs and floating candles",
-   "eras": [
-    "fantasy"
-   ],
-   "outfits": [
-    "costume",
-    "evening",
-    "bridal",
-    "retro",
-    "halloween"
-   ]
-  },
-  {
-   "key": "fx_ice",
-   "group": "fx",
-   "ko": "얼음 궁전",
-   "en": "an ice palace hall of carved crystal pillars, frosted light and a grand frozen staircase",
-   "eras": [
-    "fantasy"
-   ],
-   "outfits": [
-    "costume",
-    "evening",
-    "bridal",
-    "retro",
-    "halloween"
-   ]
-  },
-  {
-   "key": "fx_chapel",
-   "group": "fx",
-   "ko": "촛불 예배당",
-   "en": "an old stone chapel lit by candles",
-   "eras": [
-    "fantasy"
-   ],
-   "outfits": [
-    "costume",
-    "subculture",
-    "bridal",
-    "halloween"
-   ]
-  },
-  {
    "key": "street_grocery",
    "group": "street",
    "ko": "마트·편의점",
@@ -1966,21 +1164,6 @@
    ],
    "outfits": [
     "active"
-   ]
-  },
-  {
-   "key": "fx_retro_home",
-   "group": "fx",
-   "ko": "레트로 퓨처 집",
-   "en": "a retro-futurist home of rounded chrome appliances and soft panels",
-   "eras": [
-    "fantasy"
-   ],
-   "outfits": [
-    "editorial",
-    "retro",
-    "costume",
-    "halloween"
    ]
   }
  ],
@@ -2387,11 +1570,6 @@
     "home_living",
     "home_balcony",
     "evening_hotel",
-    "nation_square",
-    "nation_market",
-    "nation_field",
-    "fx_castle",
-    "fx_forest",
     "stage_festival",
     "sports_gym",
     "sports_court",
@@ -2399,25 +1577,7 @@
     "stage_open_air",
     "stage_show",
     "night_livehouse",
-    "!travel_dunes",
-    "@site",
-    "!site_saltpan",
-    "fx_ice",
-    "fx_lanternriver",
-    "fx_library",
-    "fx_skygarden",
-    "fx_underwater",
-    "fx_jungle_ruins",
-    "fx_marble_temple",
-    "fx_oasis",
-    "fx_pirate_ship",
-    "nation_forest",
-    "nation_garden",
-    "nation_harbor",
-    "nation_bridge",
-    "nation_temple",
-    "nation_camp",
-    "nation_training"
+    "!travel_dunes"
    ],
    "en": "resting on a seat for a moment, catching her breath",
    "seat": [
@@ -2440,17 +1600,8 @@
     "travel_cablecar",
     "travel_lookout",
     "travel_lodge",
-    "nation_room",
-    "nation_roof",
-    "fx_observatory",
     "water_yacht",
-    "water_infinity",
-    "fx_retro_home",
-    "site_observatory",
-    "fx_cloudpavilion",
-    "nation_bridge",
-    "nation_study",
-    "nation_kitchen"
+    "water_infinity"
    ],
    "en": "looking out at the view, one hand resting on the nearest ledge"
   },
@@ -2463,40 +1614,12 @@
     "@travel",
     "water_beach",
     "stage_festival",
-    "nation_square",
-    "nation_market",
-    "nation_field",
-    "fx_forest",
-    "fx_castle",
     "evening_museum",
-    "fx_ballroom",
     "spa_footbath",
     "stage_fireworks",
     "!street_cafe",
     "!street_laundromat",
-    "!travel_cablecar",
-    "site_saltpan",
-    "site_refinery",
-    "site_mine",
-    "site_hydrogen",
-    "site_observatory",
-    "fx_ice",
-    "fx_lanternriver",
-    "fx_library",
-    "fx_mirror",
-    "fx_skygarden",
-    "fx_underwater",
-    "fx_jungle_ruins",
-    "fx_marble_temple",
-    "fx_oasis",
-    "fx_pirate_ship",
-    "nation_forest",
-    "nation_garden",
-    "nation_harbor",
-    "nation_bridge",
-    "nation_temple",
-    "nation_camp",
-    "nation_training"
+    "!travel_cablecar"
    ],
    "en": "strolling through the place at an easy pace",
    "hands": "free"
@@ -2512,24 +1635,7 @@
     "street_park",
     "@travel",
     "water_beach",
-    "stage_festival",
-    "nation_square",
-    "fx_forest",
-    "nation_field",
-    "site_saltpan",
-    "site_observatory",
-    "fx_lanternriver",
-    "fx_skygarden",
-    "fx_jungle_ruins",
-    "fx_marble_temple",
-    "fx_oasis",
-    "nation_forest",
-    "nation_garden",
-    "nation_harbor",
-    "nation_bridge",
-    "nation_temple",
-    "nation_camp",
-    "nation_training"
+    "stage_festival"
    ],
    "en": "taking a photo of the scenery with a small camera"
   },
@@ -2539,7 +1645,6 @@
    "family": "move",
    "places": [
     "home_bedroom",
-    "nation_room",
     "evening_hotel"
    ],
    "en": "stretching her arms overhead by the window just after waking",
@@ -2556,10 +1661,7 @@
     "home_bath",
     "home_bedroom",
     "spa_lounge",
-    "nation_room",
-    "spa_jjimjil",
-    "nation_study",
-    "nation_kitchen"
+    "spa_jjimjil"
    ],
    "en": "drying her damp hair with a towel"
   },
@@ -2571,9 +1673,7 @@
     "home_bath",
     "home_bedroom",
     "night_powder",
-    "nation_room",
-    "spa_lounge",
-    "nation_camp"
+    "spa_lounge"
    ],
    "en": "tying her hair up in front of a mirror"
   },
@@ -2599,10 +1699,7 @@
    "places": [
     "home_kitchen",
     "travel_camp",
-    "nation_inn",
-    "fx_retro_home",
-    "travel_ranch",
-    "nation_kitchen"
+    "travel_ranch"
    ],
    "en": "cooking, chopping and stirring"
   },
@@ -2611,8 +1708,7 @@
    "ko": "늦은 밤 간식",
    "family": "stand",
    "places": [
-    "home_kitchen",
-    "nation_kitchen"
+    "home_kitchen"
    ],
    "en": "making a late-night snack, lit by the open refrigerator",
    "outfits": [
@@ -2640,7 +1736,6 @@
     "evening_hotel",
     "evening_penthouse",
     "spa_lounge",
-    "nation_room",
     "night_club"
    ],
    "en": "lounging back on a sofa or daybed, completely at ease",
@@ -2656,14 +1751,9 @@
     "street_cafe",
     "street_park",
     "travel_lodge",
-    "nation_room",
     "travel_rural_station",
     "street_diner",
-    "street_office",
-    "nation_study",
-    "nation_temple",
-    "nation_camp",
-    "nation_kitchen"
+    "street_office"
    ],
    "en": "reading an unlettered book, one page about to turn"
   },
@@ -2698,8 +1788,7 @@
     "home_entry",
     "sports_gym",
     "sports_rink",
-    "sports_wall",
-    "nation_training"
+    "sports_wall"
    ],
    "en": "sitting on a bench to tie her shoes",
    "seat": [
@@ -2760,7 +1849,6 @@
    "places": [
     "street_market",
     "stage_festival",
-    "nation_market",
     "stage_fireworks"
    ],
    "en": "buying a paper-wrapped snack at a stall"
@@ -2772,10 +1860,7 @@
    "places": [
     "street_shop",
     "street_market",
-    "nation_market",
-    "stage_festival",
-    "nation_study",
-    "nation_temple"
+    "stage_festival"
    ],
    "en": "browsing a shelf and pulling one item out for a closer look"
   },
@@ -2822,11 +1907,7 @@
     "street_alley",
     "street_park",
     "travel_trail",
-    "nation_square",
-    "street_market",
-    "nation_harbor",
-    "nation_bridge",
-    "nation_temple"
+    "street_market"
    ],
    "en": "walking slowly in the rain under an umbrella"
   },
@@ -2836,12 +1917,7 @@
    "family": "stand",
    "places": [
     "street_alley",
-    "nation_square",
-    "nation_market",
-    "travel_rural_station",
-    "nation_harbor",
-    "nation_bridge",
-    "nation_temple"
+    "travel_rural_station"
    ],
    "en": "sheltering from a sudden warm rain under an eave, wringing water from her hair"
   },
@@ -2863,12 +1939,7 @@
    "ko": "별 보기",
    "family": "stand",
    "places": [
-    "street_rooftop",
-    "nation_roof",
-    "fx_observatory",
-    "site_observatory",
-    "fx_cloudpavilion",
-    "nation_bridge"
+    "street_rooftop"
    ],
    "en": "adjusting a small telescope to look at the stars"
   },
@@ -2879,15 +1950,9 @@
    "places": [
     "street_park",
     "travel_lookout",
-    "nation_square",
     "travel_lake",
     "studio_art",
-    "travel_coast",
-    "site_observatory",
-    "nation_harbor",
-    "nation_bridge",
-    "nation_study",
-    "nation_temple"
+    "travel_coast"
    ],
    "en": "sketching the scenery in a small notebook"
   },
@@ -2897,13 +1962,8 @@
    "family": "sit",
    "places": [
     "street_park",
-    "nation_field",
     "travel_lake",
-    "street_rooftop",
-    "nation_forest",
-    "nation_garden",
-    "nation_camp",
-    "nation_training"
+    "street_rooftop"
    ],
    "en": "having a small picnic on a blanket with fruit and a basket",
    "seat": [
@@ -2915,10 +1975,7 @@
    "ko": "야근 커피",
    "family": "sit",
    "places": [
-    "studio_art",
-    "site_control",
-    "site_observatory",
-    "site_lab"
+    "studio_art"
    ],
    "en": "late at night with her feet up on the chair, coffee held in both hands",
    "seat": [
@@ -2948,8 +2005,7 @@
    "ko": "물레 돌리기",
    "family": "sit",
    "places": [
-    "studio_art",
-    "site_kiln"
+    "studio_art"
    ],
    "en": "shaping clay on a pottery wheel, hands wet",
    "seat": [
@@ -2965,7 +2021,6 @@
     "water_river",
     "water_waterfall",
     "water_infinity",
-    "nation_bath",
     "travel_lake"
    ],
    "en": "swimming breaststroke, her head and shoulders above the water",
@@ -2993,9 +2048,7 @@
     "water_resort",
     "water_yacht",
     "water_beach",
-    "water_infinity",
-    "nation_roof",
-    "nation_bridge"
+    "water_infinity"
    ],
    "en": "lying back on a sunbed with a cold drink beside her",
    "hands": "free"
@@ -3109,8 +2162,7 @@
    "places": [
     "water_waterfall",
     "water_pool",
-    "spa_onsen",
-    "nation_bath"
+    "spa_onsen"
    ],
    "en": "pushing her wet hair back with both hands"
   },
@@ -3120,11 +2172,7 @@
    "family": "sit",
    "places": [
     "spa_onsen",
-    "spa_cedar",
-    "nation_bath",
-    "fx_spa",
-    "fx_moonpond",
-    "fx_marble_bath"
+    "spa_cedar"
    ],
    "en": "soaking in the warm water, arms resting on the rim, steam rising",
    "seat": [],
@@ -3139,8 +2187,7 @@
    "family": "sit",
    "places": [
     "spa_onsen",
-    "spa_cedar",
-    "nation_bath"
+    "spa_cedar"
    ],
    "en": "sitting on the edge with her feet in the steaming water",
    "seat": [
@@ -3169,14 +2216,10 @@
    "family": "sit",
    "places": [
     "spa_lounge",
-    "fx_spa",
     "spa_jjimjil",
     "spa_hammam",
     "spa_footbath",
-    "fx_retro_home",
     "street_cafe",
-    "fx_moonpond",
-    "fx_marble_bath",
     "street_diner",
     "street_office"
    ],
@@ -3220,10 +2263,7 @@
    "places": [
     "spa_lounge",
     "home_bath",
-    "fx_spa",
-    "spa_hammam",
-    "fx_moonpond",
-    "fx_marble_bath"
+    "spa_hammam"
    ],
    "en": "resting with a clay mask on her face",
    "hands": "free",
@@ -3252,8 +2292,7 @@
    "ko": "샌드백 연습",
    "family": "move",
    "places": [
-    "sports_gym",
-    "nation_training"
+    "sports_gym"
    ],
    "en": "practising guard and footwork beside a heavy bag",
    "outfits": [
@@ -3380,8 +2419,7 @@
    "places": [
     "@sports",
     "travel_trail",
-    "water_beach",
-    "@site"
+    "water_beach"
    ],
    "en": "catching her breath with a water bottle"
   },
@@ -3392,7 +2430,6 @@
    "places": [
     "night_bar",
     "night_jazz",
-    "nation_inn",
     "water_pool",
     "water_resort",
     "street_cafe",
@@ -3411,9 +2448,7 @@
     "night_club",
     "night_rooftop",
     "stage_festival",
-    "fx_ballroom",
-    "stage_wedding",
-    "fx_mirror"
+    "stage_wedding"
    ],
    "en": "dancing to the beat, one hand raised"
   },
@@ -3471,13 +2506,7 @@
     "evening_penthouse",
     "water_yacht",
     "night_bar",
-    "night_karaoke",
-    "fx_castle",
-    "nation_inn",
-    "fx_ice",
-    "fx_library",
-    "fx_underwater",
-    "fx_pirate_ship"
+    "night_karaoke"
    ],
    "en": "raising a glass in a toast"
   },
@@ -3496,13 +2525,7 @@
    "ko": "등불 사이 걷기",
    "family": "walk",
    "places": [
-    "stage_festival",
-    "fx_forest",
-    "fx_lanternriver",
-    "fx_skygarden",
-    "fx_jungle_ruins",
-    "fx_marble_temple",
-    "fx_oasis"
+    "stage_festival"
    ],
    "en": "walking under strings of paper lanterns with a small snack"
   },
@@ -3530,8 +2553,7 @@
    "ko": "무대 오르기 전 준비",
    "family": "stand",
    "places": [
-    "stage_dance",
-    "fx_starstage"
+    "stage_dance"
    ],
    "en": "adjusting her headset or costume just before going on"
   },
@@ -3541,8 +2563,6 @@
    "family": "move",
    "places": [
     "stage_dance",
-    "fx_starstage",
-    "fx_circus",
     "night_livehouse"
    ],
    "en": "mid-step of a stage dance, fabric flaring",
@@ -3562,8 +2582,7 @@
    "ko": "레드카펫에서 돌아보기",
    "family": "walk",
    "places": [
-    "stage_redcarpet",
-    "fx_runway"
+    "stage_redcarpet"
    ],
    "en": "turning toward the flashes as she walks",
    "hands": "free"
@@ -3589,14 +2608,7 @@
    "ko": "부케 들고 기다리기",
    "family": "stand",
    "places": [
-    "stage_wedding",
-    "fx_forest",
-    "fx_chapel",
-    "fx_lanternriver",
-    "fx_skygarden",
-    "fx_jungle_ruins",
-    "fx_marble_temple",
-    "fx_oasis"
+    "stage_wedding"
    ],
    "en": "holding a bouquet, waiting for her cue",
    "outfits": [
@@ -3626,7 +2638,6 @@
    "places": [
     "stage_convention",
     "stage_event",
-    "fx_studio",
     "stage_redcarpet"
    ],
    "en": "striking a pose for the cameras at a photo zone",
@@ -3647,12 +2658,7 @@
    "family": "walk",
    "places": [
     "evening_opera",
-    "stage_redcarpet",
-    "fx_castle",
-    "fx_ice",
-    "fx_library",
-    "fx_underwater",
-    "fx_pirate_ship"
+    "stage_redcarpet"
    ],
    "en": "climbing a grand staircase, lifting her hem"
   },
@@ -3705,14 +2711,9 @@
     "evening_opera",
     "evening_museum",
     "stage_redcarpet",
-    "fx_castle",
     "night_taxi",
     "stage_wedding",
-    "evening_hotel",
-    "fx_ice",
-    "fx_library",
-    "fx_underwater",
-    "fx_pirate_ship"
+    "evening_hotel"
    ],
    "en": "sitting down after the night out, heels in one hand"
   },
@@ -3723,15 +2724,9 @@
    "places": [
     "travel_trail",
     "travel_dunes",
-    "nation_square",
     "street_station",
     "travel_lookout",
-    "fx_oasis",
-    "travel_airport",
-    "nation_harbor",
-    "nation_bridge",
-    "nation_temple",
-    "nation_camp"
+    "travel_airport"
    ],
    "en": "comparing a folded map with the way ahead"
   },
@@ -3804,10 +2799,7 @@
    "ko": "난롯가에 앉기",
    "family": "sit",
    "places": [
-    "travel_lodge",
-    "nation_inn",
-    "nation_room",
-    "nation_camp"
+    "travel_lodge"
    ],
    "en": "sitting by the fire with a warm cup in both hands"
   },
@@ -3816,185 +2808,30 @@
    "ko": "떠나며 돌아보기",
    "family": "walk",
    "places": [
-    "nation_square",
     "travel_rural_station",
-    "travel_ferry",
-    "nation_harbor",
-    "nation_bridge",
-    "nation_temple"
+    "travel_ferry"
    ],
    "en": "looking back once before leaving, bag on her shoulder",
    "hands": "free"
-  },
-  {
-   "key": "stream_wash",
-   "ko": "개울에서 머리 감기",
-   "family": "low",
-   "places": [
-    "nation_bath"
-   ],
-   "en": "kneeling at clear water to rinse her hair, water running down her shoulders"
-  },
-  {
-   "key": "market_haggle",
-   "ko": "장터 흥정",
-   "family": "stand",
-   "places": [
-    "nation_market"
-   ],
-   "en": "haggling at a stall, holding up a piece of fruit"
-  },
-  {
-   "key": "inn_counter",
-   "ko": "여관 카운터에 기대기",
-   "family": "stand",
-   "places": [
-    "nation_inn"
-   ],
-   "en": "leaning on the counter at night with a warm cup"
-  },
-  {
-   "key": "roof_sun",
-   "ko": "지붕 위 일광욕",
-   "family": "lie",
-   "places": [
-    "nation_roof",
-    "nation_bridge"
-   ],
-   "en": "lying back in the sun with her eyes half closed",
-   "hands": "free",
-   "mood": true
-  },
-  {
-   "key": "mirror_lacing",
-   "ko": "거울 앞 끈 묶기",
-   "family": "stand",
-   "places": [
-    "nation_room"
-   ],
-   "en": "tying the laces of her top in front of a mirror before going out"
   },
   {
    "key": "hammock",
    "ko": "해먹 낮잠",
    "family": "lie",
    "places": [
-    "nation_field",
-    "home_balcony",
-    "nation_forest",
-    "nation_garden",
-    "nation_camp",
-    "nation_training"
+    "home_balcony"
    ],
    "en": "swinging lazily in a hammock, one leg dangling over the side",
    "hands": "free"
-  },
-  {
-   "key": "landmark_steps",
-   "ko": "명소 계단에서 쉬기",
-   "family": "sit",
-   "places": [
-    "nation_square",
-    "nation_harbor",
-    "nation_bridge",
-    "nation_temple"
-   ],
-   "en": "sitting on the steps of the place's landmark, shoes off beside her",
-   "seat": [
-    "edge",
-    "floor"
-   ],
-   "hands": "free"
-  },
-  {
-   "key": "editorial_pose",
-   "ko": "화보 포즈",
-   "family": "stand",
-   "places": [
-    "fx_studio",
-    "fx_runway",
-    "fx_starstage"
-   ],
-   "en": "holding a strong editorial pose that shows the outfit's cut",
-   "hands": "free"
-  },
-  {
-   "key": "runway_walk",
-   "ko": "런웨이 걷기",
-   "family": "walk",
-   "places": [
-    "fx_runway"
-   ],
-   "en": "walking the runway with a steady stride",
-   "hands": "free"
-  },
-  {
-   "key": "masquerade",
-   "ko": "가면 들고 돌기",
-   "family": "move",
-   "places": [
-    "fx_ballroom",
-    "fx_mirror"
-   ],
-   "en": "turning a slow waltz step with a mask raised on a stick"
-  },
-  {
-   "key": "lantern_raise",
-   "ko": "등불 들기",
-   "family": "stand",
-   "places": [
-    "fx_forest",
-    "fx_chapel",
-    "fx_lanternriver",
-    "fx_skygarden",
-    "fx_jungle_ruins",
-    "fx_marble_temple",
-    "fx_oasis"
-   ],
-   "en": "raising a lantern to light the way"
-  },
-  {
-   "key": "telescope",
-   "ko": "망원경 보기",
-   "family": "stand",
-   "places": [
-    "fx_observatory",
-    "site_observatory",
-    "fx_cloudpavilion"
-   ],
-   "en": "looking through a great brass telescope"
   },
   {
    "key": "candle_light",
    "ko": "촛불 켜기",
    "family": "stand",
    "places": [
-    "fx_chapel",
     "evening_hotel"
    ],
    "en": "lighting a row of candles"
-  },
-  {
-   "key": "ringmaster",
-   "ko": "링 가운데서 인사",
-   "family": "stand",
-   "places": [
-    "fx_circus"
-   ],
-   "en": "bowing at the centre of the ring, one arm sweeping out"
-  },
-  {
-   "key": "stair_descend",
-   "ko": "계단 내려오기",
-   "family": "walk",
-   "places": [
-    "fx_castle",
-    "fx_ice",
-    "fx_library",
-    "fx_underwater",
-    "fx_pirate_ship"
-   ],
-   "en": "descending the stairs with her train trailing behind"
   },
   {
    "key": "pick_produce",
@@ -4032,8 +2869,7 @@
    "family": "stand",
    "places": [
     "home_kitchen",
-    "street_shop",
-    "nation_kitchen"
+    "street_shop"
    ],
    "en": "reaching up for a box on a high shelf"
   },
@@ -4090,12 +2926,8 @@
    "ko": "새벽에 도착하기",
    "family": "stand",
    "places": [
-    "nation_square",
     "travel_rural_station",
-    "travel_lookout",
-    "nation_harbor",
-    "nation_bridge",
-    "nation_temple"
+    "travel_lookout"
    ],
    "en": "arriving at first light with a coffee cup, the place slowly lighting up behind her"
   },
@@ -4104,18 +2936,8 @@
    "ko": "밤길 걷기",
    "family": "walk",
    "places": [
-    "nation_square",
     "street_alley",
-    "travel_trail",
-    "fx_forest",
-    "fx_lanternriver",
-    "fx_skygarden",
-    "fx_jungle_ruins",
-    "fx_marble_temple",
-    "fx_oasis",
-    "nation_harbor",
-    "nation_bridge",
-    "nation_temple"
+    "travel_trail"
    ],
    "en": "walking at night with a small lantern, the path glowing softly around her"
   },
@@ -4149,13 +2971,7 @@
    "family": "sit",
    "places": [
     "stage_festival",
-    "street_park",
-    "fx_forest",
-    "fx_lanternriver",
-    "fx_skygarden",
-    "fx_jungle_ruins",
-    "fx_marble_temple",
-    "fx_oasis"
+    "street_park"
    ],
    "en": "weaving a crown of fresh flowers"
   },
@@ -4212,7 +3028,6 @@
     "home_living",
     "street_cafe",
     "travel_lodge",
-    "nation_inn",
     "street_diner",
     "street_office"
    ],
@@ -4256,10 +3071,7 @@
    "places": [
     "home_living",
     "home_bedroom",
-    "travel_lodge",
-    "nation_room",
-    "nation_study",
-    "nation_kitchen"
+    "travel_lodge"
    ],
    "en": "knitting a soft scarf, a ball of yarn in a basket at her side",
    "seat": [
@@ -4289,8 +3101,7 @@
    "ko": "펜싱 자세",
    "family": "move",
    "places": [
-    "sports_gym",
-    "nation_training"
+    "sports_gym"
    ],
    "en": "stepping into an en garde stance, the mask tucked under one arm",
    "outfits": [
@@ -4336,8 +3147,7 @@
    "ko": "에어리얼 실크",
    "family": "move",
    "places": [
-    "sports_studio",
-    "fx_circus"
+    "sports_studio"
    ],
    "en": "wrapped in aerial silks, holding a pose in mid-air",
    "outfits": [
@@ -4355,8 +3165,7 @@
    "family": "sit",
    "places": [
     "evening_hotel",
-    "travel_lodge",
-    "nation_inn"
+    "travel_lodge"
    ],
    "en": "arranging tea cups and utensils with slow, careful hands",
    "seat": [
@@ -4372,7 +3181,6 @@
     "street_cafe",
     "street_park",
     "travel_dunes",
-    "fx_oasis",
     "street_diner",
     "street_office"
    ],
@@ -4427,13 +3235,7 @@
    "ko": "버진로드 걷기",
    "family": "walk",
    "places": [
-    "stage_wedding",
-    "fx_forest",
-    "fx_lanternriver",
-    "fx_skygarden",
-    "fx_jungle_ruins",
-    "fx_marble_temple",
-    "fx_oasis"
+    "stage_wedding"
    ],
    "en": "walking down an aisle under a flower arch, the train trailing"
   },
@@ -4471,142 +3273,6 @@
     "chair"
    ],
    "hands": "free"
-  },
-  {
-   "key": "inspect_sample",
-   "ko": "시료 비춰 보기",
-   "family": "stand",
-   "places": [
-    "site_lab",
-    "site_refinery",
-    "site_saltpan",
-    "site_hydrogen",
-    "site_kiln"
-   ],
-   "en": "holding a small glass vial up to the light to read its colour"
-  },
-  {
-   "key": "log_entry",
-   "ko": "기록장에 적기",
-   "family": "sit",
-   "places": [
-    "site_control",
-    "site_lab",
-    "site_observatory",
-    "site_refinery",
-    "site_mint"
-   ],
-   "en": "writing a reading into a logbook, pen in hand",
-   "seat": [
-    "chair"
-   ]
-  },
-  {
-   "key": "goggles_up",
-   "ko": "보호 안경 올리기",
-   "family": "stand",
-   "places": [
-    "site_lab",
-    "site_furnace",
-    "site_kiln",
-    "site_mine",
-    "site_refinery",
-    "site_hydrogen"
-   ],
-   "en": "pushing her safety goggles up onto her forehead for a moment's rest"
-  },
-  {
-   "key": "dial_watch",
-   "ko": "계기판 읽기",
-   "family": "stand",
-   "places": [
-    "site_control",
-    "site_refinery",
-    "site_hydrogen",
-    "site_lab"
-   ],
-   "en": "leaning in to read a row of dials, one finger on the glass"
-  },
-  {
-   "key": "valve_turn",
-   "ko": "밸브 돌리기",
-   "family": "move",
-   "places": [
-    "site_refinery",
-    "site_hydrogen",
-    "site_control",
-    "site_furnace"
-   ],
-   "en": "turning a large wheel valve with both hands"
-  },
-  {
-   "key": "furnace_watch",
-   "ko": "불꽃 들여다보기",
-   "family": "stand",
-   "places": [
-    "site_furnace",
-    "site_kiln"
-   ],
-   "en": "watching the glowing heat through a dark glass held up to her eyes"
-  },
-  {
-   "key": "wipe_brow",
-   "ko": "이마 땀 닦기",
-   "family": "stand",
-   "places": [
-    "site_furnace",
-    "site_kiln",
-    "site_mine",
-    "site_saltpan"
-   ],
-   "en": "wiping her brow with the back of a glove after the heat"
-  },
-  {
-   "key": "rake_salt",
-   "ko": "소금 긁어 모으기",
-   "family": "stand",
-   "places": [
-    "site_saltpan"
-   ],
-   "en": "raking wet salt crystals into a white heap with a long wooden rake"
-  },
-  {
-   "key": "lamp_check",
-   "ko": "등 들어 살피기",
-   "family": "stand",
-   "places": [
-    "site_mine",
-    "site_kiln",
-    "site_furnace"
-   ],
-   "en": "lifting a hand lamp to look closer at the work in front of her"
-  },
-  {
-   "key": "cart_push",
-   "ko": "광차 밀기",
-   "family": "walk",
-   "places": [
-    "site_mine"
-   ],
-   "en": "pushing an empty ore cart along its track",
-   "outfits": [
-    "everyday",
-    "active"
-   ]
-  },
-  {
-   "key": "coin_count",
-   "ko": "동전 세기",
-   "family": "sit",
-   "places": [
-    "site_mint",
-    "nation_market",
-    "nation_inn"
-   ],
-   "en": "counting fresh coins into a tray, one stack at a time",
-   "seat": [
-    "chair"
-   ]
   }
  ],
  "outfits": [
@@ -6614,30 +5280,7 @@
    "swimwear",
    "roleplay"
   ],
-  "world": {
-   "era": "nation",
-   "places": [
-    "nation_room",
-    "nation_bath",
-    "nation_roof",
-    "nation_inn",
-    "nation_study",
-    "nation_kitchen",
-    "nation_camp",
-    "nation_garden",
-    "nation_bridge",
-    "nation_temple",
-    "nation_forest",
-    "nation_harbor"
-   ],
-   "outfits": [
-    "homewear",
-    "lingerie",
-    "bath",
-    "swimwear"
-   ]
-  },
-  "note": "한 카드 일상컷 묶음에 한 장 이상 — 의상 계열이 란제리풍·수영복·역할극이거나, 나라 안의 방·목욕·지붕·여관에서 홈웨어·란제리·목욕 차림·수영복(나라 안 일상 — 섹시). 모듈은 required.world 를 읽는다(game 의 in_game 자리)"
+  "note": "한 카드 일상컷 묶음에 한 장 이상 — 의상 계열이 란제리풍 · 수영복 · 역할극(도시 공방은 「나라 안」 갈래가 없다 — 시대가 곧 세계라서, 2026-11-19 Task 4)."
  },
  "presets": [
   {
@@ -6668,26 +5311,6 @@
    "place": "stage_festival",
    "act": "buy_food",
    "outfit": "everyday"
-  },
-  {
-   "key": "unexpected_contrast",
-   "ko": "예상 밖 대비 콘셉트",
-   "group": "auto_random",
-   "era": "now",
-   "place": "site_saltpan",
-   "act": "stroll",
-   "outfit": "everyday",
-   "item": "linen_dress"
-  },
-  {
-   "key": "retro_future",
-   "ko": "레트로 퓨처 라이프",
-   "group": "auto_random",
-   "era": "fantasy",
-   "place": "fx_retro_home",
-   "act": "tea_robe",
-   "outfit": "editorial",
-   "item": "retro_jumpsuit"
   },
   {
    "key": "rainy_city",
@@ -7667,26 +6290,6 @@
    "item": "unitard"
   },
   {
-   "key": "couture_gala",
-   "ko": "쿠튀르 갈라 룩",
-   "group": "source_editorial",
-   "era": "fantasy",
-   "place": "fx_studio",
-   "act": "editorial_pose",
-   "outfit": "editorial",
-   "item": "couture_gown"
-  },
-  {
-   "key": "runway",
-   "ko": "런웨이 에디토리얼",
-   "group": "source_editorial",
-   "era": "fantasy",
-   "place": "fx_runway",
-   "act": "runway_walk",
-   "outfit": "editorial",
-   "item": "editorial_tailoring"
-  },
-  {
    "key": "after_bath",
    "ko": "목욕 후 홈웨어",
    "group": "homewear",
@@ -8045,16 +6648,6 @@
    "act": "stroll",
    "outfit": "retro",
    "item": "y2k_lowrise"
-  },
-  {
-   "key": "goth_chapel",
-   "ko": "로맨틱 고스 예배당",
-   "group": "subculture_fashion",
-   "era": "fantasy",
-   "place": "fx_chapel",
-   "act": "candle_light",
-   "outfit": "subculture",
-   "item": "romantic_goth"
   },
   {
    "key": "goth_cafe",
@@ -8483,46 +7076,6 @@
    "item": "towel_wrap"
   },
   {
-   "key": "elf_costume",
-   "ko": "엘프 코스튬",
-   "group": "fantasy_costume",
-   "era": "fantasy",
-   "place": "fx_forest",
-   "act": "lantern_raise",
-   "outfit": "costume",
-   "item": "elf_costume"
-  },
-  {
-   "key": "fairy_wings",
-   "ko": "요정 코스튬",
-   "group": "fantasy_costume",
-   "era": "fantasy",
-   "place": "fx_studio",
-   "act": "editorial_pose",
-   "outfit": "costume",
-   "item": "fairy_wings"
-  },
-  {
-   "key": "angel_devil",
-   "ko": "천사·악마 파티",
-   "group": "fantasy_costume",
-   "era": "fantasy",
-   "place": "fx_ballroom",
-   "act": "club_dance",
-   "outfit": "costume",
-   "item": "angel_devil"
-  },
-  {
-   "key": "sorceress_robe",
-   "ko": "마법사 코스튬",
-   "group": "fantasy_costume",
-   "era": "fantasy",
-   "place": "fx_studio",
-   "act": "editorial_pose",
-   "outfit": "costume",
-   "item": "sorceress_robe"
-  },
-  {
    "key": "cosplay_photozone",
    "ko": "코스프레 포토존",
    "group": "fantasy_costume",
@@ -8530,56 +7083,6 @@
    "place": "stage_convention",
    "act": "photozone_pose",
    "outfit": "costume"
-  },
-  {
-   "key": "forest_spirit",
-   "ko": "숲의 정령",
-   "group": "fantasy_costume",
-   "era": "fantasy",
-   "place": "fx_forest",
-   "act": "stroll",
-   "outfit": "costume",
-   "item": "forest_spirit"
-  },
-  {
-   "key": "star_goddess",
-   "ko": "별의 여신",
-   "group": "fantasy_costume",
-   "era": "fantasy",
-   "place": "fx_starstage",
-   "act": "editorial_pose",
-   "outfit": "costume",
-   "item": "star_goddess"
-  },
-  {
-   "key": "fae_ball",
-   "ko": "요정 가면무도회",
-   "group": "fantasy_costume",
-   "era": "fantasy",
-   "place": "fx_ballroom",
-   "act": "masquerade",
-   "outfit": "costume",
-   "item": "fae_ball"
-  },
-  {
-   "key": "moon_priestess",
-   "ko": "달의 무녀",
-   "group": "fantasy_costume",
-   "era": "fantasy",
-   "place": "fx_chapel",
-   "act": "lantern_raise",
-   "outfit": "costume",
-   "item": "moon_priestess"
-  },
-  {
-   "key": "vampire_gala",
-   "ko": "뱀파이어 백작 부인 코스튬",
-   "group": "fantasy_costume",
-   "era": "fantasy",
-   "place": "fx_castle",
-   "act": "toast",
-   "outfit": "costume",
-   "item": "vampire_gala"
   },
   {
    "key": "gown_fitting",
@@ -8809,26 +7312,6 @@
    "item": "linen_dress"
   },
   {
-   "key": "futuristic_spa",
-   "ko": "퓨처리스틱 스파",
-   "group": "wildcard",
-   "era": "fantasy",
-   "place": "fx_spa",
-   "act": "tea_robe",
-   "outfit": "bath",
-   "item": "spa_robe"
-  },
-  {
-   "key": "observatory_night",
-   "ko": "야간 천문대",
-   "group": "wildcard",
-   "era": "fantasy",
-   "place": "fx_observatory",
-   "act": "telescope",
-   "outfit": "evening",
-   "item": "opera_coat"
-  },
-  {
    "key": "greenhouse_afterdark",
    "ko": "심야 온실",
    "group": "wildcard",
@@ -8867,12 +7350,6 @@
   },
   "auto_random/festival_night": {
    "preset": "festival_night"
-  },
-  "auto_random/unexpected_contrast": {
-   "preset": "unexpected_contrast"
-  },
-  "auto_random/retro_future": {
-   "preset": "retro_future"
   },
   "auto_random/rainy_city": {
    "preset": "rainy_city"
@@ -9514,130 +7991,6 @@
   },
   "active/aerial_silk": {
    "preset": "aerial_silk"
-  },
-  "source_editorial/couture_gala": {
-   "preset": "couture_gala"
-  },
-  "source_editorial/runway": {
-   "preset": "runway"
-  },
-  "source_editorial/aerodynamic_couture": {
-   "era": "fantasy",
-   "place": "fx_studio",
-   "act": "editorial_pose",
-   "outfit": "editorial",
-   "item": "aerodynamic_couture"
-  },
-  "source_editorial/metallic_asymmetry": {
-   "era": "fantasy",
-   "place": "fx_studio",
-   "act": "editorial_pose",
-   "outfit": "editorial",
-   "item": "metallic_asymmetry"
-  },
-  "source_editorial/ceremonial_whitegold": {
-   "era": "fantasy",
-   "place": "fx_studio",
-   "act": "editorial_pose",
-   "outfit": "editorial",
-   "item": "ceremonial_whitegold"
-  },
-  "source_editorial/cyber_street": {
-   "era": "fantasy",
-   "place": "fx_studio",
-   "act": "editorial_pose",
-   "outfit": "editorial",
-   "item": "cyber_street"
-  },
-  "source_editorial/deconstructed_frame": {
-   "era": "fantasy",
-   "place": "fx_studio",
-   "act": "editorial_pose",
-   "outfit": "editorial",
-   "item": "deconstructed_frame"
-  },
-  "source_editorial/floating_panel": {
-   "era": "fantasy",
-   "place": "fx_studio",
-   "act": "editorial_pose",
-   "outfit": "editorial",
-   "item": "floating_panel"
-  },
-  "source_editorial/luminous_circuit": {
-   "era": "fantasy",
-   "place": "fx_studio",
-   "act": "editorial_pose",
-   "outfit": "editorial",
-   "item": "luminous_circuit"
-  },
-  "source_editorial/wing_light": {
-   "era": "fantasy",
-   "place": "fx_studio",
-   "act": "editorial_pose",
-   "outfit": "editorial",
-   "item": "kinetic_layer"
-  },
-  "source_editorial/heavy_architecture": {
-   "era": "fantasy",
-   "place": "fx_studio",
-   "act": "editorial_pose",
-   "outfit": "editorial",
-   "item": "heavy_architecture"
-  },
-  "source_editorial/stealth_monochrome": {
-   "era": "fantasy",
-   "place": "fx_studio",
-   "act": "editorial_pose",
-   "outfit": "editorial",
-   "item": "stealth_monochrome"
-  },
-  "source_editorial/transformation_drape": {
-   "era": "fantasy",
-   "place": "fx_studio",
-   "act": "editorial_pose",
-   "outfit": "editorial",
-   "item": "transformation_drape"
-  },
-  "source_editorial/orbital_ring": {
-   "era": "fantasy",
-   "place": "fx_studio",
-   "act": "editorial_pose",
-   "outfit": "editorial",
-   "item": "orbital_ring"
-  },
-  "source_editorial/thruster_flare": {
-   "era": "fantasy",
-   "place": "fx_studio",
-   "act": "editorial_pose",
-   "outfit": "editorial",
-   "item": "flare_hem"
-  },
-  "source_editorial/cockpit_harness": {
-   "era": "fantasy",
-   "place": "fx_studio",
-   "act": "editorial_pose",
-   "outfit": "editorial",
-   "item": "harness_tailoring"
-  },
-  "source_editorial/camo_couture": {
-   "era": "fantasy",
-   "place": "fx_studio",
-   "act": "editorial_pose",
-   "outfit": "editorial"
-  },
-  "source_editorial/ceramic_plate": {
-   "era": "fantasy",
-   "place": "fx_studio",
-   "act": "editorial_pose",
-   "outfit": "editorial",
-   "item": "ceramic_plate"
-  },
-  "source_editorial/heritage_couture": {
-   "era": "fantasy",
-   "place": "fx_studio",
-   "act": "editorial_pose",
-   "outfit": "editorial",
-   "item": "heritage_couture"
   },
   "homewear/soft_tank_shorts": {
    "era": "now",
@@ -10290,9 +8643,6 @@
   "retro_glamour/y2k_lowrise": {
    "preset": "y2k_lowrise"
   },
-  "subculture_fashion/goth_chapel": {
-   "preset": "goth_chapel"
-  },
   "subculture_fashion/goth_cafe": {
    "preset": "goth_cafe"
   },
@@ -10434,35 +8784,8 @@
   "spa_wellness/sauna_lounge": {
    "preset": "sauna_lounge"
   },
-  "fantasy_costume/elf_costume": {
-   "preset": "elf_costume"
-  },
-  "fantasy_costume/fairy_wings": {
-   "preset": "fairy_wings"
-  },
-  "fantasy_costume/angel_devil": {
-   "preset": "angel_devil"
-  },
-  "fantasy_costume/sorceress_robe": {
-   "preset": "sorceress_robe"
-  },
   "fantasy_costume/cosplay_photozone": {
    "preset": "cosplay_photozone"
-  },
-  "fantasy_costume/forest_spirit": {
-   "preset": "forest_spirit"
-  },
-  "fantasy_costume/star_goddess": {
-   "preset": "star_goddess"
-  },
-  "fantasy_costume/fae_ball": {
-   "preset": "fae_ball"
-  },
-  "fantasy_costume/moon_priestess": {
-   "preset": "moon_priestess"
-  },
-  "fantasy_costume/vampire_gala": {
-   "preset": "vampire_gala"
   },
   "bridal/gown_fitting": {
    "preset": "gown_fitting"
@@ -10536,12 +8859,6 @@
   "wildcard/desert_resort": {
    "preset": "desert_resort"
   },
-  "wildcard/futuristic_spa": {
-   "preset": "futuristic_spa"
-  },
-  "wildcard/observatory_night": {
-   "preset": "observatory_night"
-  },
   "wildcard/greenhouse_afterdark": {
    "preset": "greenhouse_afterdark"
   },
@@ -10596,12 +8913,6 @@
    "act": "warmup",
    "outfit": "active"
   },
-  "source_editorial/": {
-   "era": "fantasy",
-   "place": "fx_studio",
-   "act": "editorial_pose",
-   "outfit": "editorial"
-  },
   "homewear/": {
    "era": "now",
    "place": "home_living",
@@ -10655,12 +8966,6 @@
    "place": "spa_onsen",
    "act": "soak",
    "outfit": "swimwear"
-  },
-  "fantasy_costume/": {
-   "era": "fantasy",
-   "place": "fx_studio",
-   "act": "editorial_pose",
-   "outfit": "costume"
   },
   "bridal/": {
    "era": "now",

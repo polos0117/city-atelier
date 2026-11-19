@@ -221,28 +221,15 @@ assert.equal(C.why(t, fx({ posture: 'kneel', place: 'home_bedroom' }), 'legs', '
 const brush = fx({ frame: 'chest_up', right: 'prop', left: 'hair_tuck', place: 'backstage_dressing' });
 assert(!C.uses(t, brush, 1).some(u => u.key === 'brush_hair'), '머리 넘기는 손이 있으면 빗질 X(머리 주변 공간)');
 
-/* 13. 원소 몫(2026-10-30) — 시대 넷, 현장 · 나라 안 장소와 받침, 원소 소품. 출시 연도 길(year · since)은 비어도 모듈이 멀쩡하다 */
-assert.deepEqual(t.v1.eras.map(e => e.key), ['now', 'site', 'nation', 'fantasy']);
-assert.equal(C.why(t, fx({ era: 'now' }), 'place', 'nation_room').code, 'era', '나라 안은 나라 안 시대에만');
-assert.equal(C.why(t, fx({ era: 'site' }), 'place', 'site_lab'), null); assert.equal(C.why(t, fx({ era: 'site' }), 'place', 'home_living').code, 'era');
-assert.equal(C.why(t, fx({ era: 'now' }), 'place', 'site_lab'), null, '현장은 지금 현실에도');
+/* 13. 도시 몫(2026-11-19 Task 4) — 시대 하나(now: 그 세계의 하루), 원소의 현장 · 나라 안 · 환상 무대 · 땅이 없다. 출시 연도 길(year · since)은 비어도 모듈이 멀쩡하다 */
+assert.deepEqual(t.v1.eras.map(e => e.key), ['now']);
+assert(!C.allPlaces(t).some(p => /^(site|nation|fx)_/.test(p.key) || ['site', 'nation', 'fx'].includes(p.group)) && !('lands_of' in t.v2) && Object.keys(t.v2.place_lands || {}).every(k => k === 'note'), '원소의 현장 · 나라 안 · 환상 무대 · 땅이 없다');
+assert(!t.v2.props.some(p => ['test_tube', 'practice_sword', 'saddle_cloth'].includes(p.key)) && t.v2.prop_uses.every(u => C.prop(t, u.prop)), '원소 현장 소품을 걷었고 소품 동작은 다 있는 소품');
 assert.equal(C.why(t, fx({ era: 'release' }), 'place', 'home_living').code, 'era', '없는 시대(release)는 걸리기만 하고 깨지지 않는다');
-const lab = fx({ era: 'site', place: 'site_lab', posture: 'lean_counter', support: 'none', frame: 'waist_up', right: 'prop', left: 'prop' });
-assert(C.uses(t, lab, 2).some(u => u.key === 'tube_rack') && C.uses(t, lab, 2).some(u => u.key === 'flask_pour'), '실험실 작업대 — 시험관 거치대 · 플라스크 따르기');
-assert(!C.uses(t, Object.assign({}, lab, { place: 'street_park', posture: 'stand' }), 2).some(u => /^(tube|flask)_/.test(u.key)), '공원엔 시험관 · 플라스크가 없다');
-assert(C.uses(t, Object.assign({}, lab, { place: 'site_furnace' }), 2).some(u => u.key === 'hammer_strike') && !C.uses(t, Object.assign({}, lab, { place: 'site_mine', posture: 'stand' }), 2).some(u => u.key === 'hammer_strike'), '망치질은 작업대가 있는 용광로에서, 갱도엔 작업대가 없다');
-assert(C.uses(t, Object.assign({}, lab, { place: 'site_mine', posture: 'stand', left: 'down', frame: 'full_body' }), 1).some(u => u.key === 'hammer_side'), '갱도에선 망치를 옆에 든다(허리 아래 손 — 전신 컷)');
-assert(C.propAt(t, C.prop(t, 'salt_jar'), 'site_saltpan', 'site') && C.propAt(t, C.prop(t, 'salt_jar'), 'nation_inn', 'nation') && !C.propAt(t, C.prop(t, 'phone'), 'nation_room', 'nation'), '소금 항아리는 염전 · 나라의 여관에, 휴대폰은 나라 안에 없다');
-assert.equal(C.why(t, fx({ place: 'site_saltpan' }), 'posture', 'soak').code, 'place', '염전엔 발 담글 물만');
-assert.equal(C.why(t, fx({ place: 'site_saltpan', posture: 'sit_edge', support: 'hip_edge' }), 'legs', 'feet_in_water'), null, '염전 턱에 걸터앉아 발 담그기');
-assert.equal(C.why(t, fx({ place: 'nation_bath' }), 'posture', 'soak'), null, '나라의 목욕탕엔 몸 담글 물(game 의 그 세계의 노천탕 받침 그대로 — 헤엄칠 물은 없다)');
-assert.equal(C.why(t, fx({ place: 'nation_bath' }), 'posture', 'swim').code, 'place');
-assert.equal(C.why(t, fx({ place: 'site_control' }), 'posture', 'lean_rail'), null, '제어실 난간');
-const glass = fx({ era: 'site', place: 'site_mint', frame: 'chest_up', right: 'prop', left: 'down', use: 'glass_look' });
-assert.equal(C.why(t, glass, 'gaze', 'into_prop'), null, '돋보기는 들여다본다');
-for (const k of ['site_lab', 'site_furnace', 'site_mine', 'site_saltpan', 'site_refinery', 'site_control', 'site_mint', 'site_observatory', 'site_hydrogen', 'site_kiln', 'nation_room', 'nation_market', 'nation_field', 'nation_square', 'nation_bath', 'nation_roof', 'nation_inn'])
-  assert(C.place(t, k) && C.placeHas(t, k).length && C.presets(t, { era: C.place(t, k).eras[0], place: k, ofam: 'everyday' }).length, k + ' 받침 · 쓸 수 있는 추천');
+/* 생활 장면표(data/city-life.json)의 받침 장소 — 장면마다 빌려 쓰는 트리 장소에 받침 · 쓸 수 있는 추천이 있다 */
+for (const k of ['home_balcony', 'spa_jjimjil', 'stage_open_air', 'street_bike_path', 'street_cafe', 'street_market', 'street_noodle_stall', 'street_park', 'subway_car', 'travel_lookout', 'water_pool'])
+  assert(C.place(t, k) && C.placeHas(t, k).length && C.presets(t, { era: 'now', place: k, ofam: 'everyday' }).length, k + ' 받침 · 쓸 수 있는 추천');
 const r13 = seeded(13);
-for (let i = 0; i < 300; i++) valid(C.random(t, { era: i % 2 ? 'site' : 'nation' }, null, r13, ['era']), '원소 시대 랜덤 ' + i);
+for (let i = 0; i < 300; i++) valid(C.random(t, { era: 'now' }, null, r13, ['era']), '그 세계의 하루 랜덤 ' + i);
 
-console.log('casual-tree-v2 모듈 ok — 추천×장소', pairs, '· 랜덤 300 · 바꾸기 200 · 현장 · 나라 안 · 원소 소품');
+console.log('casual-tree-v2 모듈 ok — 추천×장소', pairs, '· 랜덤 300 · 바꾸기 200 · 시대 하나 · 원소 장소 · 땅 없음 · 생활 장면 받침');

@@ -1,6 +1,6 @@
 {
  "version": 2,
- "note": "원소의 공방 일상컷 트리 버전2(game-atelier 에서 옮김, 2026-10-30) — 시대·장소·의상은 버전1 표(data/casual-tree.json)를 그대로 읽는다. 하는 일은 없고, 구도가 보이는 부위를 정한 뒤 몸 자세·받침·손(오른손·왼손 — 인물 본인 기준)·소품 동작·다리를 고른다. 자세 추천은 칸을 채울 뿐 지시문 문장을 갖지 않는다. 원소 몫: 현장 열 곳·나라 안 일곱 곳의 받침(has), 소품 시험관·플라스크·나침반·돋보기·망치·소금 항아리와 그 동작. 게임 소품(게임 패드·동전·휴대용 게임기·오락기 조작대·알아볼 거리)은 없다. 모듈 lib/casual-tree-v2.js · 검사기 tools/casual-tree-v2.py 는 game 이 원본(같은 파일).",
+ "note": "도시 공방 일상컷 트리 버전2(원소 공방 표에서 옮겨 원소의 현장 · 나라 안 · 땅을 걷었다, 2026-11-19 Task 4)(game-atelier 에서 옮김, 2026-10-30) — 시대·장소·의상은 버전1 표(data/casual-tree.json)를 그대로 읽는다. 하는 일은 없고, 구도가 보이는 부위를 정한 뒤 몸 자세·받침·손(오른손·왼손 — 인물 본인 기준)·소품 동작·다리를 고른다. 자세 추천은 칸을 채울 뿐 지시문 문장을 갖지 않는다. 원소 몫이던 현장 · 나라 안 장소와 시험관 · 연습용 검 · 안장 천 소품은 걷었다(나침반 · 돋보기 · 망치 · 소금 항아리는 일반 장소에도 쓰여 남김). 게임 소품(게임 패드·동전·휴대용 게임기·오락기 조작대·알아볼 거리)은 없다. 모듈 lib/casual-tree-v2.js · 검사기 tools/casual-tree-v2.py 는 game 이 원본(같은 파일).",
  "base": "data/casual-tree.json",
  "has": {
   "chair": {
@@ -1763,102 +1763,6 @@
    "k_nature",
    "soft"
   ],
-  "site_lab": [
-   "chair",
-   "table",
-   "worktable",
-   "wall",
-   "floor",
-   "rail_waist",
-   "indoor",
-   "window",
-   "shelf_high",
-   "k_work"
-  ],
-  "site_furnace": [
-   "floor",
-   "wall",
-   "rail_waist",
-   "edge",
-   "worktable",
-   "indoor",
-   "k_work"
-  ],
-  "site_mine": [
-   "floor",
-   "wall",
-   "edge",
-   "indoor",
-   "shelf_high",
-   "k_work"
-  ],
-  "site_saltpan": [
-   "floor",
-   "shallow_water",
-   "edge",
-   "sky",
-   "k_work"
-  ],
-  "site_refinery": [
-   "floor",
-   "wall",
-   "rail_waist",
-   "edge",
-   "sky",
-   "timed",
-   "stairs",
-   "k_work"
-  ],
-  "site_control": [
-   "chair",
-   "table",
-   "rail_waist",
-   "wall",
-   "floor",
-   "indoor",
-   "k_work"
-  ],
-  "site_mint": [
-   "table",
-   "chair",
-   "floor",
-   "wall",
-   "rail_waist",
-   "indoor",
-   "doorway",
-   "k_work"
-  ],
-  "site_observatory": [
-   "rail_waist",
-   "chair",
-   "floor",
-   "wall",
-   "edge",
-   "table",
-   "indoor",
-   "window",
-   "night",
-   "k_work"
-  ],
-  "site_hydrogen": [
-   "floor",
-   "wall",
-   "rail_waist",
-   "sky",
-   "timed",
-   "k_work"
-  ],
-  "site_kiln": [
-   "worktable",
-   "chair",
-   "floor",
-   "wall",
-   "edge",
-   "indoor",
-   "shelf_high",
-   "stool",
-   "k_work"
-  ],
   "studio_art": [
    "chair",
    "table",
@@ -2279,148 +2183,6 @@
    "k_water",
    "soft"
   ],
-  "nation_room": [
-   "lie",
-   "chair",
-   "table",
-   "wall",
-   "floor",
-   "indoor",
-   "window",
-   "k_private",
-   "soft"
-  ],
-  "nation_market": [
-   "rail_waist",
-   "wall",
-   "edge",
-   "sky",
-   "shelf_high",
-   "k_street"
-  ],
-  "nation_field": [
-   "floor",
-   "lie",
-   "edge",
-   "wall",
-   "sky",
-   "k_nature",
-   "soft"
-  ],
-  "nation_square": [
-   "wall",
-   "edge",
-   "floor",
-   "sky",
-   "stairs",
-   "k_street"
-  ],
-  "nation_bath": [
-   "water",
-   "edge",
-   "sky",
-   "k_water"
-  ],
-  "nation_roof": [
-   "edge",
-   "lie",
-   "floor",
-   "rail_waist",
-   "sky",
-   "k_private",
-   "soft"
-  ],
-  "nation_inn": [
-   "chair",
-   "table",
-   "rail_waist",
-   "wall",
-   "indoor",
-   "night",
-   "stool",
-   "k_public"
-  ],
-  "fx_studio": [
-   "chair",
-   "floor",
-   "wall",
-   "edge",
-   "lie",
-   "indoor",
-   "k_stage",
-   "soft"
-  ],
-  "fx_runway": [
-   "floor",
-   "indoor",
-   "k_stage",
-   "soft"
-  ],
-  "fx_ballroom": [
-   "chair",
-   "wall",
-   "rail_waist",
-   "indoor",
-   "k_public"
-  ],
-  "fx_starstage": [
-   "floor",
-   "edge",
-   "sky",
-   "night",
-   "k_stage",
-   "soft"
-  ],
-  "fx_forest": [
-   "floor",
-   "lie",
-   "edge",
-   "wall",
-   "sky",
-   "k_nature",
-   "soft"
-  ],
-  "fx_spa": [
-   "water",
-   "lie",
-   "edge",
-   "indoor",
-   "k_water",
-   "soft"
-  ],
-  "fx_observatory": [
-   "rail_waist",
-   "chair",
-   "wall",
-   "indoor",
-   "window",
-   "night",
-   "k_public"
-  ],
-  "fx_circus": [
-   "floor",
-   "edge",
-   "wall",
-   "indoor",
-   "k_stage",
-   "soft"
-  ],
-  "fx_castle": [
-   "edge",
-   "rail_waist",
-   "wall",
-   "indoor",
-   "stairs",
-   "k_public"
-  ],
-  "fx_chapel": [
-   "chair",
-   "wall",
-   "edge",
-   "indoor",
-   "window",
-   "k_public"
-  ],
   "street_grocery": [
    "rail_waist",
    "wall",
@@ -2463,17 +2225,6 @@
    "wall",
    "sky",
    "k_public"
-  ],
-  "fx_retro_home": [
-   "chair",
-   "lie",
-   "table",
-   "wall",
-   "rail_waist",
-   "indoor",
-   "window",
-   "k_stage",
-   "soft"
   ],
   "library_reading": [
    "chair",
@@ -2545,124 +2296,6 @@
    "shelf_high",
    "k_private"
   ],
-  "fx_cloudpavilion": [
-   "rail_waist",
-   "chair",
-   "wall",
-   "sky",
-   "timed",
-   "k_nature"
-  ],
-  "fx_ice": [
-   "edge",
-   "rail_waist",
-   "wall",
-   "indoor",
-   "stairs",
-   "k_stage"
-  ],
-  "fx_lanternriver": [
-   "floor",
-   "lie",
-   "edge",
-   "wall",
-   "sky",
-   "night",
-   "stairs",
-   "k_stage",
-   "soft"
-  ],
-  "fx_library": [
-   "edge",
-   "rail_waist",
-   "wall",
-   "indoor",
-   "shelf_high",
-   "stairs",
-   "k_public"
-  ],
-  "fx_mirror": [
-   "chair",
-   "wall",
-   "rail_waist",
-   "indoor",
-   "k_stage"
-  ],
-  "fx_moonpond": [
-   "water",
-   "lie",
-   "edge",
-   "sky",
-   "night",
-   "stairs",
-   "k_water",
-   "soft"
-  ],
-  "fx_skygarden": [
-   "floor",
-   "lie",
-   "edge",
-   "wall",
-   "sky",
-   "shelf_high",
-   "stairs",
-   "k_nature",
-   "soft"
-  ],
-  "fx_underwater": [
-   "edge",
-   "rail_waist",
-   "wall",
-   "indoor",
-   "window",
-   "stairs",
-   "doorway",
-   "k_water"
-  ],
-  "fx_jungle_ruins": [
-   "floor",
-   "lie",
-   "edge",
-   "wall",
-   "sky",
-   "shelf_high",
-   "stairs",
-   "k_nature",
-   "soft"
-  ],
-  "fx_marble_bath": [
-   "water",
-   "lie",
-   "edge",
-   "indoor",
-   "k_water",
-   "soft"
-  ],
-  "fx_marble_temple": [
-   "floor",
-   "lie",
-   "edge",
-   "wall",
-   "sky",
-   "k_stage",
-   "soft"
-  ],
-  "fx_oasis": [
-   "floor",
-   "lie",
-   "sky",
-   "timed",
-   "k_water",
-   "soft"
-  ],
-  "fx_pirate_ship": [
-   "edge",
-   "rail_waist",
-   "wall",
-   "sky",
-   "stairs",
-   "k_vehicle"
-  ],
   "street_diner": [
    "chair",
    "table",
@@ -2700,87 +2333,6 @@
    "sky",
    "k_nature",
    "soft"
-  ],
-  "nation_forest": [
-   "floor",
-   "lie",
-   "edge",
-   "wall",
-   "sky",
-   "k_nature",
-   "soft"
-  ],
-  "nation_garden": [
-   "floor",
-   "lie",
-   "edge",
-   "wall",
-   "sky",
-   "k_nature",
-   "soft"
-  ],
-  "nation_harbor": [
-   "wall",
-   "edge",
-   "floor",
-   "sky",
-   "k_street"
-  ],
-  "nation_bridge": [
-   "edge",
-   "lie",
-   "floor",
-   "rail_waist",
-   "sky",
-   "k_street",
-   "soft"
-  ],
-  "nation_study": [
-   "chair",
-   "table",
-   "wall",
-   "floor",
-   "indoor",
-   "window",
-   "shelf_high",
-   "k_private",
-   "soft"
-  ],
-  "nation_temple": [
-   "chair",
-   "table",
-   "wall",
-   "floor",
-   "sky",
-   "k_public"
-  ],
-  "nation_camp": [
-   "chair",
-   "table",
-   "wall",
-   "floor",
-   "sky",
-   "fire",
-   "k_nature",
-   "soft"
-  ],
-  "nation_kitchen": [
-   "rail_waist",
-   "chair",
-   "wall",
-   "table",
-   "worktable",
-   "indoor",
-   "shelf_high",
-   "k_private"
-  ],
-  "nation_training": [
-   "wall",
-   "floor",
-   "edge",
-   "sky",
-   "stool",
-   "k_work"
   ],
   "repair_kiosk": [
    "worktable",
@@ -2906,156 +2458,6 @@
    "window",
    "k_water"
   ],
-  "site_shipyard": [
-   "floor",
-   "wall",
-   "edge",
-   "rail_waist",
-   "stairs",
-   "sky",
-   "k_work"
-  ],
-  "site_dam": [
-   "floor",
-   "rail_waist",
-   "edge",
-   "wall",
-   "sky",
-   "k_work"
-  ],
-  "site_pharmacy": [
-   "worktable",
-   "table",
-   "stool",
-   "wall",
-   "floor",
-   "shelf_high",
-   "rail_waist",
-   "indoor",
-   "window",
-   "k_work"
-  ],
-  "site_jeweler": [
-   "worktable",
-   "table",
-   "stool",
-   "chair",
-   "wall",
-   "floor",
-   "indoor",
-   "window",
-   "k_work"
-  ],
-  "site_windfarm": [
-   "floor",
-   "wall",
-   "edge",
-   "stairs",
-   "sky",
-   "k_work"
-  ],
-  "site_darkroom": [
-   "worktable",
-   "table",
-   "stool",
-   "wall",
-   "floor",
-   "shelf_high",
-   "indoor",
-   "timed",
-   "k_work"
-  ],
-  "site_brewery": [
-   "floor",
-   "wall",
-   "rail_waist",
-   "stairs",
-   "edge",
-   "indoor",
-   "k_work"
-  ],
-  "site_quarry": [
-   "floor",
-   "edge",
-   "stairs",
-   "wall",
-   "sky",
-   "k_work"
-  ],
-  "site_perfumery": [
-   "worktable",
-   "table",
-   "chair",
-   "stool",
-   "wall",
-   "floor",
-   "shelf_high",
-   "indoor",
-   "window",
-   "k_work"
-  ],
-  "nation_workshop": [
-   "worktable",
-   "table",
-   "stool",
-   "wall",
-   "floor",
-   "shelf_high",
-   "doorway",
-   "indoor",
-   "window",
-   "k_work"
-  ],
-  "nation_stairs": [
-   "stairs",
-   "edge",
-   "wall",
-   "floor",
-   "rail_waist",
-   "sky",
-   "k_street"
-  ],
-  "nation_laundry": [
-   "floor",
-   "edge",
-   "wall",
-   "shelf_high",
-   "shallow_water",
-   "sky",
-   "k_water"
-  ],
-  "nation_balcony": [
-   "chair",
-   "table",
-   "rail_waist",
-   "wall",
-   "floor",
-   "sky",
-   "k_private",
-   "soft"
-  ],
-  "nation_platform": [
-   "chair",
-   "stool",
-   "edge",
-   "floor",
-   "wall",
-   "rail_waist",
-   "sky",
-   "k_street"
-  ],
-  "nation_greenhouse": [
-   "worktable",
-   "stool",
-   "wall",
-   "floor",
-   "shelf_high",
-   "rail_waist",
-   "indoor",
-   "window",
-   "k_private",
-   "soft"
-  ],
   "car_seat": [
    "chair",
    "wheel",
@@ -3094,88 +2496,6 @@
    "sky",
    "night",
    "k_street"
-  ],
-  "nation_tackroom": [
-   "worktable",
-   "table",
-   "stool",
-   "wall",
-   "floor",
-   "shelf_high",
-   "doorway",
-   "indoor",
-   "window",
-   "k_work"
-  ],
-  "nation_cockpit": [
-   "chair",
-   "wheel",
-   "indoor",
-   "window",
-   "k_vehicle"
-  ],
-  "nation_hangar": [
-   "worktable",
-   "table",
-   "stool",
-   "stairs",
-   "edge",
-   "wall",
-   "floor",
-   "shelf_high",
-   "indoor",
-   "k_work"
-  ],
-  "nation_airship_deck": [
-   "wheel",
-   "rail_waist",
-   "edge",
-   "floor",
-   "wall",
-   "sky",
-   "k_vehicle"
-  ],
-  "nation_clockwork_shop": [
-   "worktable",
-   "table",
-   "stool",
-   "wall",
-   "floor",
-   "shelf_high",
-   "indoor",
-   "window",
-   "k_work"
-  ],
-  "nation_steam_carriage": [
-   "chair",
-   "table",
-   "wall",
-   "shelf_high",
-   "indoor",
-   "window",
-   "k_vehicle"
-  ],
-  "nation_steam_tavern": [
-   "table",
-   "chair",
-   "stool",
-   "rail_waist",
-   "wall",
-   "floor",
-   "indoor",
-   "window",
-   "k_public"
-  ],
-  "site_neon_workshop": [
-   "worktable",
-   "table",
-   "stool",
-   "wall",
-   "floor",
-   "shelf_high",
-   "indoor",
-   "timed",
-   "k_work"
   ]
  },
  "props": [
@@ -3190,35 +2510,16 @@
     "@home",
     "@travel",
     "@studio",
-    "nation_inn",
-    "nation_room",
     "spa_lounge",
     "lodge_terrace",
     "train_sleeper",
     "backstage_dressing",
     "greenhouse",
     "library_reading",
-    "site_control",
-    "site_observatory",
-    "site_mint",
-    "nation_study",
-    "nation_kitchen",
     "home_veranda",
-    "nation_balcony",
-    "nation_workshop",
-    "site_pharmacy",
-    "site_perfumery",
-    "site_jeweler",
-    "site_brewery",
     "car_seat",
     "subway_platform",
-    "street_noodle_stall",
-    "nation_steam_tavern",
-    "nation_steam_carriage",
-    "nation_hangar",
-    "nation_cockpit",
-    "nation_clockwork_shop",
-    "nation_tackroom"
+    "street_noodle_stall"
    ]
   },
   {
@@ -3233,9 +2534,7 @@
     "water_yacht",
     "water_infinity",
     "stage_redcarpet",
-    "stage_wedding",
-    "fx_ballroom",
-    "fx_mirror"
+    "stage_wedding"
    ]
   },
   {
@@ -3273,29 +2572,19 @@
     "travel_lodge",
     "travel_camp",
     "travel_rural_station",
-    "nation_room",
-    "nation_inn",
-    "fx_observatory",
     "evening_hotel",
     "spa_lounge",
     "library_reading",
     "train_sleeper",
     "greenhouse",
-    "site_observatory",
-    "fx_cloudpavilion",
     "street_diner",
     "street_office",
     "travel_ranch",
-    "nation_study",
-    "nation_kitchen",
     "street_bookstall",
     "street_bus_stop",
     "home_veranda",
-    "nation_balcony",
-    "nation_platform",
     "subway_car",
-    "subway_platform",
-    "nation_steam_carriage"
+    "subway_platform"
    ]
   },
   {
@@ -3306,29 +2595,10 @@
     "@street",
     "@travel",
     "@stage",
-    "fx_studio",
     "water_beach",
-    "nation_field",
-    "nation_square",
     "lodge_terrace",
     "greenhouse",
-    "site_observatory",
-    "site_saltpan",
-    "nation_forest",
-    "nation_garden",
-    "nation_harbor",
-    "nation_bridge",
-    "nation_temple",
-    "nation_camp",
-    "nation_training",
     "street_bike_path",
-    "nation_stairs",
-    "nation_platform",
-    "site_shipyard",
-    "site_dam",
-    "site_windfarm",
-    "site_quarry",
-    "nation_airship_deck",
     "subway_platform"
    ]
   },
@@ -3342,14 +2612,8 @@
     "street_market",
     "travel_rural_station",
     "travel_coast",
-    "nation_square",
-    "nation_market",
-    "nation_harbor",
-    "nation_bridge",
-    "nation_temple",
     "street_bus_stop",
-    "street_bike_path",
-    "nation_platform"
+    "street_bike_path"
    ]
   },
   {
@@ -3360,12 +2624,7 @@
     "water_river",
     "water_yacht",
     "travel_lake",
-    "travel_coast",
-    "nation_field",
-    "nation_forest",
-    "nation_garden",
-    "nation_camp",
-    "nation_training"
+    "travel_coast"
    ]
   },
   {
@@ -3390,14 +2649,9 @@
     "sports_court",
     "sports_track",
     "home_bath",
-    "nation_bath",
     "bakery_kitchen",
     "backstage_dressing",
-    "site_furnace",
-    "site_mine",
-    "site_saltpan",
     "water_indoor_pool",
-    "nation_laundry",
     "home_veranda",
     "car_wash"
    ]
@@ -3409,12 +2663,9 @@
    "places": [
     "stage_festival",
     "stage_fireworks",
-    "fx_ballroom",
     "evening_opera",
     "evening_gala",
-    "spa_onsen",
-    "nation_inn",
-    "fx_mirror"
+    "spa_onsen"
    ]
   },
   {
@@ -3424,8 +2675,7 @@
    "places": [
     "night_karaoke",
     "night_livehouse",
-    "stage_event",
-    "fx_starstage"
+    "stage_event"
    ]
   },
   {
@@ -3449,13 +2699,8 @@
    "places": [
     "street_rooftop",
     "night_rooftop",
-    "fx_observatory",
     "travel_lookout",
-    "water_yacht",
-    "nation_roof",
-    "site_observatory",
-    "fx_cloudpavilion",
-    "nation_airship_deck"
+    "water_yacht"
    ]
   },
   {
@@ -3465,17 +2710,9 @@
    "places": [
     "stage_wedding",
     "stage_redcarpet",
-    "fx_chapel",
     "street_market",
-    "fx_forest",
     "greenhouse",
-    "backstage_dressing",
-    "fx_lanternriver",
-    "fx_skygarden",
-    "fx_jungle_ruins",
-    "fx_marble_temple",
-    "fx_oasis",
-    "nation_greenhouse"
+    "backstage_dressing"
    ]
   },
   {
@@ -3506,28 +2743,9 @@
    "ko": "등불",
    "en": "a small hand lantern",
    "places": [
-    "@nation",
     "stage_festival",
     "travel_camp",
-    "fx_forest",
-    "fx_castle",
-    "site_mine",
-    "fx_ice",
-    "fx_lanternriver",
-    "fx_library",
-    "fx_skygarden",
-    "fx_underwater",
-    "fx_jungle_ruins",
-    "fx_marble_temple",
-    "fx_oasis",
-    "fx_pirate_ship",
-    "travel_ranch",
-    "nation_stairs",
-    "nation_workshop",
-    "site_darkroom",
-    "site_brewery",
-    "nation_tackroom",
-    "nation_airship_deck"
+    "travel_ranch"
    ]
   },
   {
@@ -3539,14 +2757,8 @@
     "street_park",
     "travel_lookout",
     "street_cafe",
-    "nation_field",
-    "site_observatory",
     "street_diner",
-    "street_office",
-    "nation_forest",
-    "nation_garden",
-    "nation_camp",
-    "nation_training"
+    "street_office"
    ]
   },
   {
@@ -3557,14 +2769,7 @@
     "@sports",
     "travel_trail",
     "travel_dunes",
-    "site_mine",
-    "site_furnace",
-    "site_saltpan",
-    "site_refinery",
     "street_bike_path",
-    "site_shipyard",
-    "site_quarry",
-    "site_windfarm",
     "water_indoor_pool",
     "car_wash"
    ]
@@ -3601,10 +2806,8 @@
    "ko": "가면",
    "en": "a masquerade mask on a stick",
    "places": [
-    "fx_ballroom",
     "stage_convention",
-    "evening_opera",
-    "fx_mirror"
+    "evening_opera"
    ]
   },
   {
@@ -3618,7 +2821,6 @@
     "travel_lodge",
     "train_sleeper",
     "evening_hotel",
-    "nation_inn",
     "library_reading",
     "street_diner",
     "street_office"
@@ -3635,12 +2837,8 @@
     "home_living",
     "@studio",
     "tailor_room",
-    "@site",
     "street_diner",
     "street_office",
-    "site_pharmacy",
-    "site_perfumery",
-    "site_jeweler",
     "street_bookstall"
    ]
   },
@@ -3650,8 +2848,7 @@
    "en": "a mixing bowl of batter and a whisk",
    "places": [
     "bakery_kitchen",
-    "home_kitchen",
-    "nation_inn"
+    "home_kitchen"
    ]
   },
   {
@@ -3663,7 +2860,6 @@
     "home_balcony",
     "street_park",
     "street_shop",
-    "nation_greenhouse",
     "home_veranda"
    ]
   },
@@ -3701,25 +2897,7 @@
     "home_bath",
     "@spa",
     "evening_hotel",
-    "nation_room",
-    "train_sleeper",
-    "nation_study",
-    "nation_kitchen"
-   ]
-  },
-  {
-   "key": "test_tube",
-   "ko": "시험관",
-   "en": "a glass test tube of coloured liquid",
-   "places": [
-    "site_lab",
-    "site_refinery",
-    "site_hydrogen",
-    "site_saltpan",
-    "site_kiln",
-    "site_pharmacy",
-    "site_perfumery",
-    "site_brewery"
+    "train_sleeper"
    ]
   },
   {
@@ -3727,13 +2905,7 @@
    "ko": "플라스크",
    "en": "a round glass flask",
    "places": [
-    "site_lab",
-    "site_refinery",
-    "site_kiln",
-    "studio_art",
-    "site_pharmacy",
-    "site_perfumery",
-    "site_brewery"
+    "studio_art"
    ]
   },
   {
@@ -3741,29 +2913,9 @@
    "ko": "나침반",
    "en": "a brass compass",
    "places": [
-    "site_mine",
-    "site_observatory",
-    "site_saltpan",
     "travel_dunes",
     "travel_trail",
-    "travel_lookout",
-    "nation_field",
-    "nation_square",
-    "nation_forest",
-    "nation_garden",
-    "nation_harbor",
-    "nation_bridge",
-    "nation_temple",
-    "nation_camp",
-    "nation_training",
-    "site_shipyard",
-    "site_dam",
-    "site_windfarm",
-    "site_quarry",
-    "nation_stairs",
-    "nation_platform",
-    "nation_airship_deck",
-    "nation_cockpit"
+    "travel_lookout"
    ]
   },
   {
@@ -3771,18 +2923,9 @@
    "ko": "돋보기",
    "en": "a magnifying glass",
    "places": [
-    "site_lab",
-    "site_mint",
-    "site_kiln",
-    "site_mine",
     "studio_art",
     "library_reading",
-    "home_living",
-    "site_jeweler",
-    "site_pharmacy",
-    "site_perfumery",
-    "nation_clockwork_shop",
-    "site_neon_workshop"
+    "home_living"
    ]
   },
   {
@@ -3790,10 +2933,6 @@
    "ko": "망치",
    "en": "a small forging hammer",
    "places": [
-    "site_furnace",
-    "site_mine",
-    "site_kiln",
-    "site_mint",
     "studio_art"
    ]
   },
@@ -3802,16 +2941,13 @@
    "ko": "소금 항아리",
    "en": "a small jar of coarse salt",
    "places": [
-    "site_saltpan",
     "home_kitchen",
-    "nation_market",
-    "nation_inn",
     "bakery_kitchen"
    ]
   },
   {
    "key": "signature",
-   "ko": "그 원소의 물건",
+   "ko": "그 도시의 물건",
    "en": "her own object",
    "signature": true,
    "places": [
@@ -3824,7 +2960,6 @@
    "en": "a small screwdriver",
    "places": [
     "@studio",
-    "@site",
     "repair_kiosk",
     "maintenance_shed",
     "museum_workshop",
@@ -3832,18 +2967,7 @@
     "tailor_room",
     "bakery_kitchen",
     "greenhouse",
-    "home_kitchen",
-    "nation_kitchen",
-    "nation_study",
-    "nation_workshop",
-    "site_jeweler",
-    "site_shipyard",
-    "site_darkroom",
-    "nation_hangar",
-    "nation_clockwork_shop",
-    "nation_tackroom",
-    "site_neon_workshop",
-    "nation_airship_deck"
+    "home_kitchen"
    ]
   },
   {
@@ -3853,33 +2977,19 @@
    "places": [
     "@home",
     "@studio",
-    "@site",
     "bakery_kitchen",
     "street_cafe",
     "street_diner",
     "street_shop",
-    "nation_kitchen",
-    "nation_inn",
     "repair_kiosk",
     "maintenance_shed",
     "pool_gear_room",
     "drying_terrace",
     "museum_workshop",
     "stair_landing",
-    "nation_workshop",
-    "nation_laundry",
     "home_veranda",
     "home_closet",
-    "site_pharmacy",
-    "site_jeweler",
-    "site_brewery",
-    "nation_hangar",
-    "nation_clockwork_shop",
-    "nation_tackroom",
-    "car_wash",
-    "site_neon_workshop",
-    "nation_airship_deck",
-    "nation_steam_tavern"
+    "car_wash"
    ]
   },
   {
@@ -3889,21 +2999,14 @@
    "places": [
     "@home",
     "@studio",
-    "@site",
     "greenhouse",
     "bakery_kitchen",
-    "nation_kitchen",
-    "nation_garden",
-    "nation_temple",
     "repair_kiosk",
     "maintenance_shed",
     "pool_gear_room",
     "drying_terrace",
     "museum_workshop",
-    "stair_landing",
-    "nation_workshop",
-    "nation_stairs",
-    "site_quarry"
+    "stair_landing"
    ]
   },
   {
@@ -3914,12 +3017,9 @@
     "drying_terrace",
     "home_balcony",
     "street_laundromat",
-    "nation_roof",
-    "nation_garden",
     "pool_gear_room",
     "spa_lounge",
     "tailor_room",
-    "nation_laundry",
     "home_veranda",
     "home_closet"
    ]
@@ -3931,13 +3031,9 @@
    "places": [
     "@home",
     "@studio",
-    "@site",
     "library_reading",
     "street_shop",
     "street_grocery",
-    "nation_study",
-    "nation_kitchen",
-    "nation_market",
     "repair_kiosk",
     "maintenance_shed",
     "pool_gear_room",
@@ -3945,13 +3041,7 @@
     "museum_workshop",
     "stair_landing",
     "home_closet",
-    "street_bookstall",
-    "nation_workshop",
-    "site_pharmacy",
-    "site_brewery",
-    "nation_hangar",
-    "nation_tackroom",
-    "nation_clockwork_shop"
+    "street_bookstall"
    ]
   },
   {
@@ -3965,11 +3055,6 @@
     "home_kitchen",
     "travel_camp",
     "travel_lodge",
-    "nation_inn",
-    "nation_kitchen",
-    "nation_camp",
-    "nation_steam_tavern",
-    "nation_steam_carriage",
     "night_bar",
     "train_sleeper"
    ]
@@ -3980,31 +3065,6 @@
    "en": "a soapy sponge",
    "places": [
     "car_wash"
-   ]
-  },
-  {
-   "key": "practice_sword",
-   "ko": "연습용 목검",
-   "en": "a wooden practice sword",
-   "eras": [
-    "nation",
-    "fantasy"
-   ],
-   "places": [
-    "nation_training",
-    "nation_camp",
-    "nation_field",
-    "nation_garden",
-    "fx_castle",
-    "fx_forest"
-   ]
-  },
-  {
-   "key": "saddle_cloth",
-   "ko": "안장 닦는 천",
-   "en": "an oiled leather cloth",
-   "places": [
-    "nation_tackroom"
    ]
   }
  ],
@@ -5691,116 +4751,6 @@
    ]
   },
   {
-   "key": "tube_hold",
-   "prop": "test_tube",
-   "kind": "hold",
-   "hands": "one",
-   "zone": "chest",
-   "ko": "시험관을 든다",
-   "en": "holds {prop} upright between her fingers at chest height",
-   "frames": [
-    "face_close",
-    "detail",
-    "chest_up",
-    "waist_up",
-    "three_quarter",
-    "full_body",
-    "environmental"
-   ],
-   "postures": [
-    "stand",
-    "lean_wall",
-    "lean_rail",
-    "walk",
-    "sit_chair",
-    "sit_edge",
-    "sit_floor",
-    "kneel",
-    "squat",
-    "recline",
-    "lie_side",
-    "lie_front",
-    "lean_counter",
-    "sit_lean",
-    "sit_sideways",
-    "half_kneel",
-    "step_up"
-   ]
-  },
-  {
-   "key": "tube_light",
-   "prop": "test_tube",
-   "kind": "raise",
-   "hands": "one",
-   "zone": "face",
-   "ko": "시험관을 빛에 비춰 본다",
-   "en": "lifts {prop} to eye level against the light to read its colour",
-   "frames": [
-    "face_close",
-    "detail",
-    "chest_up",
-    "waist_up",
-    "three_quarter",
-    "full_body",
-    "environmental"
-   ],
-   "postures": [
-    "stand",
-    "lean_wall",
-    "lean_rail",
-    "walk",
-    "sit_chair",
-    "sit_edge",
-    "sit_floor",
-    "kneel",
-    "squat",
-    "lean_counter",
-    "sit_lean",
-    "sit_sideways",
-    "half_kneel",
-    "step_up"
-   ],
-   "gaze": "at_prop"
-  },
-  {
-   "key": "tube_rack",
-   "prop": "test_tube",
-   "kind": "both",
-   "hands": "both",
-   "zone": "chest",
-   "ko": "시험관을 거치대에 꽂는다",
-   "en": "slots {prop} into a rack on the worktable",
-   "grip": {
-    "right": "holds the tube near its lip",
-    "left": "steadies the rack"
-   },
-   "frames": [
-    "face_close",
-    "detail",
-    "chest_up",
-    "waist_up",
-    "three_quarter",
-    "full_body",
-    "environmental"
-   ],
-   "postures": [
-    "sit_chair",
-    "sit_edge",
-    "sit_floor",
-    "kneel",
-    "sit_lean",
-    "stand",
-    "lean_counter",
-    "sit_sideways",
-    "half_kneel"
-   ],
-   "gaze": "at_prop",
-   "needs_any": [
-    "worktable",
-    "table"
-   ]
-  },
-  {
    "key": "flask_hold",
    "prop": "flask",
    "kind": "hold",
@@ -6814,72 +5764,6 @@
     "walk",
     "lean_wall"
    ]
-  },
-  {
-   "key": "sword_low",
-   "prop": "practice_sword",
-   "kind": "hold",
-   "hands": "one",
-   "zone": "hips",
-   "ko": "목검을 옆에 내려 든다",
-   "en": "holds {prop} point-down at her side",
-   "frames": [
-    "three_quarter",
-    "full_body",
-    "environmental"
-   ],
-   "postures": [
-    "stand",
-    "walk",
-    "lean_wall",
-    "step_up"
-   ]
-  },
-  {
-   "key": "sword_guard",
-   "prop": "practice_sword",
-   "kind": "both",
-   "hands": "both",
-   "zone": "chest",
-   "ko": "목검을 두 손으로 겨눈다",
-   "en": "holds {prop} in a ready guard in front of her",
-   "grip": {
-    "right": "grips just under the guard",
-    "left": "grips the end of the hilt"
-   },
-   "frames": [
-    "waist_up",
-    "three_quarter",
-    "full_body",
-    "environmental"
-   ],
-   "postures": [
-    "stand",
-    "step_up"
-   ],
-   "space": "front"
-  },
-  {
-   "key": "saddle_oil",
-   "prop": "saddle_cloth",
-   "kind": "hold",
-   "hands": "one",
-   "zone": "waist",
-   "ko": "거치대의 안장을 닦는다",
-   "en": "rubs the saddle resting on the rack in front of her with {prop}",
-   "frames": [
-    "waist_up",
-    "three_quarter",
-    "full_body",
-    "environmental"
-   ],
-   "postures": [
-    "stand",
-    "lean_counter",
-    "sit_sideways",
-    "half_kneel"
-   ],
-   "gaze": "at_prop"
   }
  ],
  "outfit_features": {
@@ -7163,8 +6047,7 @@
    ],
    "places": [
     "@spa",
-    "@sports",
-    "@site"
+    "@sports"
    ],
    "ko": "웨딩드레스로 목욕·운동·현장"
   },
@@ -7182,10 +6065,6 @@
     "night_taxi",
     "street_station",
     "studio_sound",
-    "site_mine",
-    "site_control",
-    "site_mint",
-    "site_observatory",
     "travel_airport"
    ],
    "ko": "물과 먼 실내·추운 곳에 수영복·목욕 차림"
@@ -7197,8 +6076,7 @@
    "places": [
     "@street",
     "@stage",
-    "@sports",
-    "@site"
+    "@sports"
    ],
    "ko": "목욕 차림으로 바깥·무대·현장"
   },
@@ -7234,7 +6112,6 @@
     "@sports",
     "street_station",
     "street_grocery",
-    "@site",
     "travel_airport"
    ],
    "ko": "란제리풍으로 운동·생활 공간·현장"
@@ -7305,7 +6182,6 @@
     "resort"
    ],
    "places": [
-    "@site",
     "@sports",
     "evening_opera",
     "evening_gala",
@@ -7321,19 +6197,7 @@
     "stair_landing",
     "street_bookstall",
     "street_bus_stop",
-    "home_closet",
-    "site_pharmacy",
-    "site_jeweler",
-    "site_darkroom",
-    "site_brewery",
-    "site_perfumery",
-    "site_shipyard",
-    "site_dam",
-    "site_windfarm",
-    "site_quarry",
-    "nation_workshop",
-    "nation_stairs",
-    "nation_platform"
+    "home_closet"
    ],
    "ko": "휴양지 차림으로 현장 · 운동 · 격식 자리 · 작업 자리"
   },
@@ -7347,8 +6211,7 @@
     "@night",
     "@evening",
     "stage_wedding",
-    "stage_redcarpet",
-    "fx_ballroom"
+    "stage_redcarpet"
    ],
    "ko": "작업복으로 목욕 · 물가 · 격식 자리 · 밤 문화"
   },
@@ -7365,18 +6228,6 @@
     "stair_landing",
     "street_bookstall",
     "street_bus_stop",
-    "site_pharmacy",
-    "site_jeweler",
-    "site_darkroom",
-    "site_brewery",
-    "site_perfumery",
-    "site_shipyard",
-    "site_dam",
-    "site_windfarm",
-    "site_quarry",
-    "nation_workshop",
-    "nation_stairs",
-    "nation_platform",
     "car_seat",
     "car_wash",
     "subway_platform",
@@ -8676,150 +7527,6 @@
    ]
   },
   {
-   "group": "site",
-   "eras": [
-    "now",
-    "site"
-   ],
-   "key": "site_shipyard",
-   "ko": "조선소 선대",
-   "en": "a shipyard slipway beside a half-built steel hull, scaffolding, cranes and coiled cables under an open sky"
-  },
-  {
-   "group": "site",
-   "eras": [
-    "now",
-    "site"
-   ],
-   "key": "site_dam",
-   "ko": "댐 위 통로",
-   "en": "the crest walkway of a hydroelectric dam, a steel railing, spillway gates and a wide reservoir below"
-  },
-  {
-   "group": "site",
-   "eras": [
-    "now",
-    "site"
-   ],
-   "key": "site_pharmacy",
-   "ko": "약국 조제실",
-   "en": "a pharmacy dispensing room with a long wooden counter, drawers of unlabelled glass jars, a brass scale and tall shelves"
-  },
-  {
-   "group": "site",
-   "eras": [
-    "now",
-    "site"
-   ],
-   "key": "site_jeweler",
-   "ko": "보석 세공대",
-   "en": "a jeweller's bench with a loupe lamp, trays of cut stones and fine tools, a shop window behind"
-  },
-  {
-   "group": "site",
-   "eras": [
-    "now",
-    "site"
-   ],
-   "key": "site_windfarm",
-   "ko": "풍력 단지 언덕",
-   "en": "a hillside wind farm, white turbine towers, a service ladder and tall grass moving in the wind"
-  },
-  {
-   "group": "site",
-   "eras": [
-    "now",
-    "site"
-   ],
-   "key": "site_darkroom",
-   "ko": "사진 암실",
-   "en": "a photographic darkroom under red safelight, trays of solution on a wet bench and prints clipped to a line overhead"
-  },
-  {
-   "group": "site",
-   "eras": [
-    "now",
-    "site"
-   ],
-   "key": "site_brewery",
-   "ko": "양조장",
-   "en": "a brewery hall of copper kettles, steel tanks, hoses and a mezzanine stair"
-  },
-  {
-   "group": "site",
-   "eras": [
-    "now",
-    "site"
-   ],
-   "key": "site_quarry",
-   "ko": "대리석 채석장",
-   "en": "a marble quarry of stepped white terraces, cut blocks and a still green pool at the bottom"
-  },
-  {
-   "group": "site",
-   "eras": [
-    "now",
-    "site"
-   ],
-   "key": "site_perfumery",
-   "ko": "조향실",
-   "en": "a perfumer's desk with tiers of small glass bottles, paper blotter strips and a window onto a herb garden"
-  },
-  {
-   "group": "nation",
-   "eras": [
-    "nation"
-   ],
-   "key": "nation_workshop",
-   "ko": "나라의 공방",
-   "en": "a craftsman's workshop of her element's kingdom, a heavy workbench, hanging tools and an open door"
-  },
-  {
-   "group": "nation",
-   "eras": [
-    "nation"
-   ],
-   "key": "nation_stairs",
-   "ko": "나라의 돌계단",
-   "en": "a long outdoor stairway climbing through a town of her element's kingdom, lamps along the steps and rooftops below"
-  },
-  {
-   "group": "nation",
-   "eras": [
-    "nation"
-   ],
-   "key": "nation_laundry",
-   "ko": "나라의 빨래터",
-   "en": "a washing place by a water channel of her element's kingdom, stone basins, drying lines overhead and wet flagstones"
-  },
-  {
-   "group": "nation",
-   "eras": [
-    "nation"
-   ],
-   "key": "nation_balcony",
-   "ko": "나라의 발코니",
-   "en": "a balcony of her own house in a town of her element's kingdom, a balustrade, a small table and the street below"
-  },
-  {
-   "group": "nation",
-   "eras": [
-    "nation"
-   ],
-   "key": "nation_platform",
-   "ko": "나라의 정거장",
-   "en": "a small station or dock platform of her element's kingdom, benches, a signal post and a waiting carriage"
-  },
-  {
-   "key": "nation_greenhouse",
-   "group": "nation",
-   "ko": "나라의 온실",
-   "en": "a glass conservatory of her element's kingdom, raised planting beds, a potting bench and hanging baskets",
-   "eras": [
-    "nation"
-   ]
-  },
-  {
    "key": "car_seat",
    "group": "street",
    "ko": "운전석",
@@ -8863,101 +7570,6 @@
    "eras": [
     "now"
    ]
-  },
-  {
-   "group": "nation",
-   "eras": [
-    "nation"
-   ],
-   "key": "nation_tackroom",
-   "ko": "나라의 마구 창고",
-   "en": "a tack room beside the stables of her element's kingdom — saddles on wooden racks, bridles on pegs, a workbench and an open half-door",
-   "worlds_only": [
-    "fantasy",
-    "steampunk"
-   ]
-  },
-  {
-   "group": "nation",
-   "eras": [
-    "nation"
-   ],
-   "key": "nation_cockpit",
-   "ko": "나라의 조종석",
-   "en": "the cockpit of a small starship of her element's kingdom — a pilot seat, a control yoke in front of her and a wide canopy onto space",
-   "worlds_only": [
-    "mecha"
-   ]
-  },
-  {
-   "group": "nation",
-   "eras": [
-    "nation"
-   ],
-   "key": "nation_hangar",
-   "ko": "나라의 격납고 정비대",
-   "en": "a hangar maintenance bay of her element's kingdom — a parked craft, a steel workbench, a rolling stool, tool racks and a gantry stair",
-   "worlds_only": [
-    "mecha"
-   ]
-  },
-  {
-   "group": "nation",
-   "eras": [
-    "nation"
-   ],
-   "key": "nation_airship_deck",
-   "ko": "비행선 갑판",
-   "en": "the open deck of a brass airship of her element's kingdom, a ship's wheel at the helm, a polished rail, rigging and clouds below",
-   "worlds_only": [
-    "steampunk"
-   ]
-  },
-  {
-   "group": "nation",
-   "eras": [
-    "nation"
-   ],
-   "key": "nation_clockwork_shop",
-   "ko": "태엽 · 기계 의수 공방",
-   "en": "a workshop for clockwork and brass mechanical prosthetic limbs in her element's kingdom — one detached brass mechanical arm lying on the workbench, gears, springs, fine tools and a tall window",
-   "worlds_only": [
-    "steampunk"
-   ]
-  },
-  {
-   "group": "nation",
-   "eras": [
-    "nation"
-   ],
-   "key": "nation_steam_carriage",
-   "ko": "증기 기관차 객차",
-   "en": "a compartment of a steam train in her element's kingdom — velvet bench seats, a brass luggage rack, a small table and steam drifting past the window",
-   "worlds_only": [
-    "steampunk"
-   ]
-  },
-  {
-   "group": "nation",
-   "eras": [
-    "nation"
-   ],
-   "key": "nation_steam_tavern",
-   "ko": "증기 선술집",
-   "en": "a steam-heated tea room and tavern of her element's kingdom — copper pipes along the wall, a long counter with stools, a hissing brass urn",
-   "worlds_only": [
-    "steampunk"
-   ]
-  },
-  {
-   "group": "site",
-   "eras": [
-    "now",
-    "site"
-   ],
-   "key": "site_neon_workshop",
-   "ko": "네온 사인 공방",
-   "en": "a neon sign workshop, glass tubes glowing in many colours on the wall, a bending bench with a ribbon burner and coils of wire"
   }
  ],
  "weather": [
@@ -9351,88 +7963,8 @@
    ]
   }
  },
- "lands_of": {
-  "note": "원소 갈래 → 땅(lib/walk-core.js LAND_OF 와 같은 표 — 그쪽을 바꾸면 여기도). 장소의 lands 는 그 땅의 나라에서만 뽑힌다(없으면 어디서나)",
-  "transition": "metal",
-  "post_transition": "metal",
-  "nonmetal": "breath",
-  "alkali": "salt",
-  "alkaline_earth": "salt",
-  "halogen": "salt",
-  "metalloid": "crystal",
-  "noble_gas": "sky",
-  "lanthanide": "deep",
-  "actinide": "deep"
- },
  "place_lands": {
-  "note": "쓰임의 현장 ↔ 땅(2026-11-13 사용자 「현장 장소 땅에 묶는 것도 같이 넣어줘 … 너무 안어울렸어서」). 적히지 않은 장소(화학 실험실 · 일반 장소)는 어느 땅에서나",
-  "site_saltpan": [
-   "salt"
-  ],
-  "site_furnace": [
-   "metal"
-  ],
-  "site_mine": [
-   "metal",
-   "deep"
-  ],
-  "site_mint": [
-   "metal"
-  ],
-  "site_observatory": [
-   "sky",
-   "deep"
-  ],
-  "site_hydrogen": [
-   "breath",
-   "sky"
-  ],
-  "site_refinery": [
-   "breath"
-  ],
-  "site_kiln": [
-   "crystal"
-  ],
-  "site_control": [
-   "deep",
-   "crystal"
-  ],
-  "site_shipyard": [
-   "metal"
-  ],
-  "site_dam": [
-   "deep",
-   "salt"
-  ],
-  "site_pharmacy": [
-   "salt",
-   "breath"
-  ],
-  "site_jeweler": [
-   "crystal",
-   "metal"
-  ],
-  "site_windfarm": [
-   "breath",
-   "sky"
-  ],
-  "site_darkroom": [
-   "metal",
-   "salt"
-  ],
-  "site_brewery": [
-   "breath"
-  ],
-  "site_quarry": [
-   "salt",
-   "crystal"
-  ],
-  "site_perfumery": [
-   "breath"
-  ],
-  "site_neon_workshop": [
-   "sky"
-  ]
+  "note": "장소 ↔ 땅. 도시 공방의 땅은 도시 열쇠 — 생활 장면표의 장소(<도시>_<장면>)는 조립기가 그 도시에 묶는다(lib/prompt-city.js lifeTree). 적히지 않은 장소는 어느 도시에서나. 원소의 땅(쇠 · 소금 …)은 걷었다(2026-11-19 Task 4)"
  },
  "acts": [
   {

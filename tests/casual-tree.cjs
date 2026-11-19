@@ -64,29 +64,25 @@ assert(!CT.frameOk(t2, 'dress_up', 'face_close', lingerie) && CT.frameOk(t2, 'dr
 assert.equal(CT.repair(t2, { ...lingerie, frame: 'face_close' }, null, CLOSE_FRAMES).frame, '', '필수 갈래로 고치면 클로즈업은 비운다');
 assert(!CT.poses(t2, 'car_lean', 'full_body').includes('hand_on_hip') && CT.poses(tree, 'car_lean', 'full_body').includes('hand_on_hip'), '동료 자세는 동료가 있는 하는 일에서만');
 assert.equal(CT.year(t2, { gen: 1 }), 1996, '세대 → 첫 등장 해(모듈은 그대로 — 원소 표엔 gen_years 가 없다)');
-/* 원소 시대 — now · site(쓰임의 현장) · nation(나라 안) · fantasy. 출시 연도가 없다: year() 는 null, since 를 가진 장소가 없다, 'release' 시대엔 장소가 없어도 모듈이 멀쩡하다 */
-assert.deepEqual(tree.eras.map(e => e.key), ['now', 'site', 'nation', 'fantasy']);
-assert.equal(CT.year(tree, null), null); assert.equal(CT.year(tree, { key: 'fe', facts: {} }), null, '카드에 연도가 없으면 null');
+/* 도시 공방 시대 — 하나(now: 그 세계의 하루, 2026-11-19 Task 4). 출시 연도가 없다: year() 는 null, since 를 가진 장소가 없다, 'release' 시대엔 장소가 없어도 모듈이 멀쩡하다 */
+assert.deepEqual(tree.eras.map(e => e.key), ['now']);
+assert.equal(CT.year(tree, null), null); assert.equal(CT.year(tree, { key: 'seoul', facts: {} }), null, '카드에 연도가 없으면 null');
 assert(!tree.places.some(p => 'since' in p), 'since 를 가진 장소가 없다');
 assert.deepEqual(CT.places(tree, 'release', { facts: { year: 1990 } }), [], '없는 시대엔 장소가 없다(걸리지 않는다)');
-assert(CT.places(tree, 'site', null).some(p => p.key === 'site_lab') && !CT.places(tree, 'site', null).some(p => p.key === 'home_living'), '현장 시대엔 현장만');
-assert(CT.places(tree, 'nation', null).every(p => p.group === 'nation') && CT.places(tree, 'nation', null).length === 16, '나라 안 시대엔 나라 안 열여섯 곳(2026-11-09 삼국지에서 아홉)');
-assert(CT.places(tree, 'now', null).some(p => p.key === 'site_lab') && !CT.places(tree, 'now', null).some(p => p.key === 'nation_room'), '현장은 지금 현실에도, 나라 안은 나라 안에만');
-/* 필수 갈래의 「그 세계 안」 규칙은 required.world(모듈 worldRule — game 의 in_game 자리) */
-assert.equal(CT.worldRule(tree).era, 'nation');
-assert(CT.isRequired(tree, { era: 'nation', place: 'nation_room', ofam: 'homewear' }) && !CT.isRequired(tree, { era: 'now', place: 'home_bedroom', ofam: 'homewear' }) && CT.isRequired(tree, { era: 'now', place: 'home_bedroom', ofam: 'lingerie' }), '나라의 방에서 홈웨어는 필수 갈래, 지금 현실의 침실에선 란제리풍만');
+assert(!tree.places.some(p => /^(site|nation|fx)_/.test(p.key) || ['site', 'nation', 'fx'].includes(p.group)) && CT.places(tree, 'now', null).length === tree.places.length, '원소의 현장 · 나라 안 · 환상 무대가 없고 남은 장소는 다 그 세계의 하루에');
+/* 필수 갈래 — 「그 세계 안」 규칙(required.world)이 없다: 란제리풍 · 수영복 · 역할극만 */
+assert.deepEqual(CT.worldRule(tree), {});
+assert(!CT.isRequired(tree, { era: 'now', place: 'home_bedroom', ofam: 'homewear' }) && CT.isRequired(tree, { era: 'now', place: 'home_bedroom', ofam: 'lingerie' }), '침실의 홈웨어는 필수가 아니고 란제리풍은 필수');
 assert(!CT.screens(tree, 'home_living') && !tree.groups.some(g => g.screens) && !tree.places.some(p => p.screens), '화면(screens) 표시가 없다');
 /* 왜 못 고르나(why) · 해방(unlocked) — 허브 통합 생성기(2026-10-29). 트리 안 값은 null, 밖 값은 까닭 코드. 해방한 칸은 고치지 않는다 */
 {
   const sc = { era: 'now', place: 'street_park', act: 'stroll', ofam: 'everyday', frame: 'full_body' };
   for (const k of ['place', 'act', 'ofam', 'frame', 'pose', 'orient']) for (const v of CT.choices(tree, sc, k, null, CLOSE_FRAMES).concat(k === 'frame' ? ['waist_up'] : []))
     assert.equal(CT.why(tree, sc, k, v, null, CLOSE_FRAMES), null, k + ' ' + v + ' 는 고를 수 있다');
-  assert.equal(CT.why(tree, sc, 'place', 'nation_room').code, 'era');
-  assert.equal(CT.why(tree, { ...sc, era: 'site' }, 'place', 'street_park').code, 'era', '현장 시대에 공원은 없다');
-  assert.equal(CT.why(tree, { ...sc, era: 'site' }, 'place', 'site_lab'), null);
+  assert.equal(CT.why(tree, sc, 'place', 'nation_room').code, 'unknown', '나라 안 장소는 걷었다');
+  assert.equal(CT.why(tree, { ...sc, era: 'site' }, 'era', 'site').code, 'unknown', '현장 시대는 걷었다');
   assert.equal(CT.why(tree, sc, 'act', 'swim').code, 'place');
   assert.equal(CT.why(tree, sc, 'ofam', 'swimwear').code, 'place');
-  assert.equal(CT.why(tree, { ...sc, era: 'site', place: 'site_lab', act: 'rest_seat' }, 'ofam', 'retro').code, 'era', '현장 시대엔 레트로가 없다');
   assert.equal(CT.why(tree, sc, 'frame', 'face_close'), null);
   assert.equal(CT.why(tree, { ...sc, act: 'swim', place: 'water_pool' }, 'frame', 'full_body').code, 'act');
   assert.equal(CT.why(tree, { ...sc, frame: 'face_close' }, 'pose', 'walking').code, 'zone');
@@ -105,4 +101,4 @@ assert(!CT.screens(tree, 'home_living') && !tree.groups.some(g => g.screens) && 
 const leg = CT.fromLegacy(tree, { cat: 'hobbies_leisure', ex: '' });
 assert(leg.place && leg.act && !('cat' in leg), '예전 갈래 → 새 길');
 assert.equal(CT.fromLegacy(tree, { cat: 'game_place', ex: '' }).place, 'street_cafe', '없는(게임) 갈래는 일상 갈래의 기본 길로');
-console.log(`PASS 일상컷 트리 ↔ 모듈: 자세 계열 ${Object.keys(tree.families).length} · 자세 ${used.size} · 시대 ${tree.eras.map(e => e.key).join('·')} · 길 ${paths}(검사기와 같다) · 추천 조합 ${tree.presets.length} · 칸끼리 규칙(앉는 자리·손·보이는 부위·허리 아래 옷·광각·표정) · required.world · since 없음`);
+console.log(`PASS 일상컷 트리 ↔ 모듈: 자세 계열 ${Object.keys(tree.families).length} · 자세 ${used.size} · 시대 ${tree.eras.map(e => e.key).join('·')} · 길 ${paths}(검사기와 같다) · 추천 조합 ${tree.presets.length} · 칸끼리 규칙(앉는 자리·손·보이는 부위·허리 아래 옷·광각·표정) · 시대 하나 · since 없음`);

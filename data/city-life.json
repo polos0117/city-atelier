@@ -1,0 +1,211 @@
+{
+ "version": 1,
+ "note": "생활 장면표(계획 Task 4, 2026-11-19) — 그 도시 사람들이 실제로 보내는 하루의 장면을 세 세계로 옮긴다(설계 3-1절). 장면은 그 도시에 실제로 있는 생활 모습만, 근거 src(위키백과). 장면 한 줄: key · ko · src · base(받침 · 장소 종류 · 자세 추천을 빌리는 일상컷 트리 장소 — data/casual-tree*.json) · indoor(날씨 줄 없음) · times · seasons(되는 시간대 · 계절 — 없으면 다) · outfits(이 장면에서 계획기가 고르는 의상 계열) · en(세계를 타지 않은 장면 이름 — 트리 장소 글, 지시문에는 안 나온다) · worlds.<세계>.en(같은 일상이 그 세계의 시대로 옮겨진 모습 — 일상컷 Place 줄) · props(소품 열쇠 — data/world-props.json, Around her 줄). 조립기(lib/prompt-city.js lifeTree)가 장면마다 트리 장소 <도시>_<장면> 을 만든다(받침은 base 것, 땅 = 도시). times 는 모든 도시가 같이, seasons · weather 는 도시마다(그 도시에 맞는 것만, 근거). 판타지 · 스팀펑크 글에는 그 세계 banned_en(data/city-design.json) 낱말이 없다(tests/prompt-city.cjs).",
+ "times": [
+  { "key": "dawn", "ko": "새벽", "en": "dawn — the first pale light before the city wakes, the last lamps still lit and the streets quiet" },
+  { "key": "commute_am", "ko": "아침 출근길", "en": "the morning rush hour — low clean sunlight and the city's crowd hurrying to work" },
+  { "key": "midday", "ko": "한낮", "en": "midday — bright, even daylight" },
+  { "key": "commute_pm", "ko": "퇴근길", "en": "the evening rush after work — the warm low sun sinking into dusk and lamps coming on along the street" },
+  { "key": "night_out", "ko": "저녁 밤", "en": "evening turning to night — the scene lit by its own lamps and windows under a dark sky" },
+  { "key": "past_midnight", "ko": "한밤", "en": "past midnight — the last lamps still burning and the streets nearly empty" }
+ ],
+ "seasons": {
+  "seoul": [
+   { "key": "spring", "ko": "봄 벚꽃", "en": "spring — cherry blossoms in bloom and petals drifting on the air", "src": "https://en.wikipedia.org/wiki/Yeouido" },
+   { "key": "monsoon", "ko": "장마", "en": "the jangma rainy season of early summer — heavy, humid air under low grey skies", "src": "https://en.wikipedia.org/wiki/Climate_of_Seoul" },
+   { "key": "summer", "ko": "한여름", "en": "high summer — hot, humid air and strong sunlight", "src": "https://en.wikipedia.org/wiki/Seoul" },
+   { "key": "autumn", "ko": "가을", "en": "autumn — cool, clear, dry air and turning leaves", "src": "https://en.wikipedia.org/wiki/Climate_of_Seoul" },
+   { "key": "winter", "ko": "겨울", "en": "winter — cold, dry, frosty air, breath showing in the cold", "src": "https://en.wikipedia.org/wiki/Climate_of_Seoul" }
+  ]
+ },
+ "weather": {
+  "seoul": [
+   { "key": "jangma_rain", "ko": "장맛비", "en": "a jangma downpour — warm, heavy rain and wet ground shining", "seasons": ["monsoon"], "src": "https://en.wikipedia.org/wiki/Climate_of_Seoul" },
+   { "key": "shower", "ko": "지나가는 비", "en": "a passing rain shower — wet streets shining and the air washed clean", "seasons": ["spring", "summer", "autumn"], "src": "https://en.wikipedia.org/wiki/Seoul" },
+   { "key": "muggy", "ko": "후텁지근함", "en": "muggy heat — the air thick and damp, a haze over the distance", "seasons": ["monsoon", "summer"], "src": "https://en.wikipedia.org/wiki/Seoul" },
+   { "key": "yellow_dust", "ko": "황사", "en": "a yellow-dust day — the spring sky veiled in a pale ochre haze", "seasons": ["spring"], "src": "https://en.wikipedia.org/wiki/Climate_of_Seoul" },
+   { "key": "fog", "ko": "가을 아침 안개", "en": "morning fog after a clear, cold night", "seasons": ["autumn"], "times": ["dawn", "commute_am"], "src": "https://en.wikipedia.org/wiki/Climate_of_Seoul" },
+   { "key": "snowfall", "ko": "눈", "en": "light snow falling through the cold, dry air, frost on every edge", "seasons": ["winter"], "src": "https://en.wikipedia.org/wiki/Climate_of_Seoul" }
+  ]
+ },
+ "cities": {
+  "seoul": {
+   "scenes": [
+    {
+     "key": "hangang_picnic",
+     "ko": "한강공원 강변의 밤 돗자리 야식",
+     "src": ["https://ko.wikipedia.org/wiki/한강공원", "https://en.wikipedia.org/wiki/Hangang_Park"],
+     "base": "street_park",
+     "times": ["commute_pm", "night_out"],
+     "seasons": ["spring", "summer", "autumn"],
+     "outfits": ["everyday", "active", "subculture", "dongtan", "retro"],
+     "en": "a riverside park lawn at night with a picnic mat and a late supper",
+     "worlds": {
+      "fantasy": { "en": "the grassy bank of the wide silver river below the royal capital at night — a woven rush mat spread on the grass, a late supper of roasted skewers and rice cakes in lacquered boxes, lantern-boats drifting on the water and the palace lights across the river", "props": ["mat", "bowl", "lamp", "cup"] },
+      "steampunk": { "en": "the cinder-strewn embankment of the wide river at night — a canvas groundsheet on the grass, a late supper of fried chicken in a greased paper parcel and stoneware bottles of beer, the iron truss bridge glowing with gas lamps and a paddle steamer puffing past", "props": ["mat", "bowl", "lamp", "ride"] },
+      "cyberpunk": { "en": "the floodlit river-park lawn at night — a glowing mat on the grass, a late fried-chicken delivery in heat-sealed boxes just dropped by a drone, rows of bridges strung with neon and holographic ads reflected on the black water", "props": ["mat", "bowl", "lamp", "phone"] }
+     }
+    },
+    {
+     "key": "subway_commute",
+     "ko": "출근길 지하철",
+     "src": ["https://en.wikipedia.org/wiki/Seoul_Metropolitan_Subway"],
+     "base": "subway_car",
+     "indoor": true,
+     "times": ["commute_am", "commute_pm"],
+     "outfits": ["everyday", "dongtan", "subculture", "retro", "workwear"],
+     "en": "a crowded subway at rush hour",
+     "worlds": {
+      "fantasy": { "en": "a crowded rune-lit underground carriage gliding through the tunnels beneath the royal capital at rush hour — carved wooden benches along the walls, brass hand-loops swaying overhead, travelers in cloaks reading folded broadsheets", "props": ["ticket", "book", "bag", "lamp"] },
+      "steampunk": { "en": "a packed steam-hauled underground railway carriage at rush hour — slatted wooden benches, leather hand-straps hanging from a brass rail, gas lamps flickering as the smoky tunnel rushes past the windows, clerks in bowler hats reading newspapers", "props": ["ticket", "watch", "bag", "book"] },
+      "cyberpunk": { "en": "a packed driverless maglev subway car at rush hour — chrome grab rails, strip lights, passengers lit by the glow of their wrist screens, holographic route maps flickering over the doors", "props": ["phone", "music", "ticket", "bag"] }
+     }
+    },
+    {
+     "key": "pojangmacha",
+     "ko": "포장마차",
+     "src": ["https://ko.wikipedia.org/wiki/포장마차", "https://en.wikipedia.org/wiki/Pojangmacha"],
+     "base": "street_noodle_stall",
+     "times": ["night_out", "past_midnight"],
+     "outfits": ["everyday", "dongtan", "retro", "subculture", "evening", "workwear"],
+     "en": "a tented street-food stall at night",
+     "worlds": {
+      "fantasy": { "en": "a tented night stall at the edge of the market road under magic lanterns — a canvas awning glowing from within, a charcoal brazier roasting skewers, a simmering iron pot of spicy rice cakes and low wooden stools at a plank counter", "props": ["skewer", "lamp", "cup", "bowl"] },
+      "steampunk": { "en": "a street-food handcart stall at night under a soot-stained tarp — a hissing steam boiler and a hot iron griddle of skewers, gas lamps on poles, a narrow tin counter with stools and clouds of steam", "props": ["skewer", "lamp", "cup", "money"] },
+      "cyberpunk": { "en": "a street-food tent stall at night under a translucent neon-lit awning — a holographic menu board floating over the counter, skewers on an induction grill, steam rising through pink and cyan light", "props": ["skewer", "sign", "cup", "money"] }
+     }
+    },
+    {
+     "key": "jjimjilbang",
+     "ko": "찜질방",
+     "src": ["https://ko.wikipedia.org/wiki/찜질방", "https://en.wikipedia.org/wiki/Jjimjilbang"],
+     "base": "spa_jjimjil",
+     "indoor": true,
+     "times": ["midday", "night_out", "past_midnight"],
+     "outfits": ["bath", "homewear"],
+     "en": "a heated public bathhouse hall with sauna rooms",
+     "worlds": {
+      "fantasy": { "en": "a heated stone bathhouse hall of the capital — warm ondol floors under woven mats, a domed kiln-sauna glowing with enchanted embers, bathers resting on wooden pillows and eggs baking among hot river stones", "props": ["bowl", "cup", "key", "lamp"] },
+      "steampunk": { "en": "a coal-fired public bathhouse hall — a brick kiln-sauna behind a riveted iron door, steam pipes warming the stone floor, bathers lounging on mats under gas lamps and a tea counter with tin cups", "props": ["cup", "key", "watch", "lamp"] },
+      "cyberpunk": { "en": "an all-night heated spa hall — glowing ceramic sleep pods, a kiln-sauna lit amber from inside, wall screens of drifting ocean light and a vending bar of glowing drinks", "props": ["cup", "key", "music", "lamp"] }
+     }
+    },
+    {
+     "key": "market_stall",
+     "ko": "광장시장 빈대떡 노점",
+     "src": ["https://ko.wikipedia.org/wiki/광장시장", "https://en.wikipedia.org/wiki/Gwangjang_Market"],
+     "base": "street_market",
+     "times": ["midday", "commute_pm", "night_out"],
+     "outfits": ["everyday", "traditional", "retro", "dongtan", "subculture", "workwear"],
+     "en": "a covered market with food stalls frying mung-bean pancakes",
+     "worlds": {
+      "fantasy": { "en": "a covered market hall of the royal capital — rows of food stalls under painted beams, mung-bean pancakes frying in a great iron pan over a fire, rolls of rice and greens on wooden boards and merchants calling out under silk banners", "props": ["bowl", "money", "sign", "shopping_bag"] },
+      "steampunk": { "en": "an iron-roofed market arcade — food stalls under riveted girders, mung-bean pancakes sizzling on a coal-heated griddle, gas lamps, enamel signs and steam curling up into the skylights", "props": ["bowl", "money", "sign", "shopping_bag"] },
+      "cyberpunk": { "en": "a crowded night-market arcade — food stalls under stacked neon signs, mung-bean pancakes frying on a robot-arm griddle, holographic prices floating above the steaming trays", "props": ["bowl", "money", "sign", "phone"] }
+     }
+    },
+    {
+     "key": "hanok_cafe",
+     "ko": "익선동 한옥 골목 카페",
+     "src": ["https://ko.wikipedia.org/wiki/익선동", "https://en.wikipedia.org/wiki/Ikseon-dong"],
+     "base": "street_cafe",
+     "times": ["midday", "commute_pm", "night_out"],
+     "outfits": ["everyday", "traditional", "retro", "dongtan", "subculture"],
+     "en": "a cafe in an old tiled-roof house down a narrow lane",
+     "worlds": {
+      "fantasy": { "en": "a tea house in a tiled-roof house down a lane too narrow for a cart — paper lattice doors slid open to a tiny courtyard, a low lacquered table with a celadon teapot and rice cakes on a wooden tray", "props": ["cup", "book", "lamp", "money"] },
+      "steampunk": { "en": "a coffee house in an old tiled-roof house down a narrow lane — a brass siphon coffee apparatus hissing on the counter, glass-paned lattice doors, an iron stove and gaslight on dark wood", "props": ["cup", "book", "watch", "lamp"] },
+      "cyberpunk": { "en": "a cafe in an old tiled-roof house down a narrow lane, gutted and rebuilt inside — glass walls under the curved roof, a robotic barista arm, glowing table tops and neon trim tracing the old beams", "props": ["cup", "phone", "lamp", "music"] }
+     }
+    },
+    {
+     "key": "hanok_yard",
+     "ko": "북촌 한옥 마당의 아침",
+     "src": ["https://ko.wikipedia.org/wiki/북촌_한옥마을", "https://en.wikipedia.org/wiki/Bukchon_Hanok_Village"],
+     "base": "home_balcony",
+     "times": ["dawn", "commute_am", "midday"],
+     "outfits": ["homewear", "everyday", "traditional", "lingerie"],
+     "en": "the courtyard of her own old tiled-roof house on a hillside",
+     "worlds": {
+      "fantasy": { "en": "the stone-paved inner courtyard of her own tiled-roof house on a hillside of the capital — a wooden veranda, crocks of soy and pepper paste, a persimmon tree and the curved roofs of the neighbours stepping down the hill", "props": ["cup", "key", "lamp", "bowl"] },
+      "steampunk": { "en": "the inner courtyard of her tiled-roof house on a hillside of the steam city — a wooden veranda, earthenware crocks, laundry lines, a copper water heater ticking on the wall and factory chimneys smoking beyond the curved roofs", "props": ["cup", "key", "watch", "bowl"] },
+      "cyberpunk": { "en": "the inner courtyard of her old tiled-roof house on a hillside of the megacity — a wooden veranda, earthenware crocks beside a drone landing pad, glowing mesh lanterns and glass towers rising behind the curved roofs", "props": ["cup", "key", "lamp", "phone"] }
+     }
+    },
+    {
+     "key": "stream_walk",
+     "ko": "청계천 산책",
+     "src": ["https://ko.wikipedia.org/wiki/청계천", "https://en.wikipedia.org/wiki/Cheonggyecheon"],
+     "base": "street_bike_path",
+     "times": ["midday", "commute_pm", "night_out"],
+     "outfits": ["everyday", "active", "dongtan", "retro", "subculture"],
+     "en": "a stone-walled stream through the city centre with a walking path",
+     "worlds": {
+      "fantasy": { "en": "the stone-walled stream that runs through the heart of the capital — stepping stones across clear water, willow branches, paper lanterns floating downstream and people strolling along the stone path", "props": ["lamp", "umbrella", "bag", "cup"] },
+      "steampunk": { "en": "the stone-walled canal through the city centre — iron footbridges, gas lamps along the stone path, mill sluices and steam pipes along the walls and workers strolling after their shift", "props": ["lamp", "umbrella", "bag", "watch"] },
+      "cyberpunk": { "en": "the stone-walled stream sunk below the megacity's towers — stepping stones lit from beneath, light-art installations shimmering over the water and people strolling with glowing ear-pieces", "props": ["lamp", "music", "bag", "cup"] }
+     }
+    },
+    {
+     "key": "wall_trail",
+     "ko": "한양도성 순성길",
+     "src": ["https://ko.wikipedia.org/wiki/한양도성", "https://en.wikipedia.org/wiki/Seoul_City_Wall"],
+     "base": "travel_lookout",
+     "times": ["dawn", "midday", "commute_pm"],
+     "outfits": ["everyday", "active", "adventure", "dongtan"],
+     "en": "a walking trail along an old stone city wall on a ridge",
+     "worlds": {
+      "fantasy": { "en": "the trail along the great stone city wall on the ridge above the capital — battlements, pine trees, a gate pavilion ahead and the golden palace roofs far below", "props": ["water_bottle", "bag", "lamp", "cup"] },
+      "steampunk": { "en": "the trail along the old stone city wall on the ridge above the steam city — battlements, pine trees, a riveted signal mast and below a valley of chimneys, rail yards and drifting smoke", "props": ["water_bottle", "bag", "watch", "camera"] },
+      "cyberpunk": { "en": "the trail along the old stone city wall on the ridge above the megacity — battlements and pine trees, a sea of glowing towers below and drone lights drifting at eye level", "props": ["water_bottle", "bag", "phone", "camera"] }
+     }
+    },
+    {
+     "key": "ballpark",
+     "ko": "야구장 응원석",
+     "src": ["https://en.wikipedia.org/wiki/Baseball_cheering_culture_in_South_Korea", "https://en.wikipedia.org/wiki/Jamsil_Baseball_Stadium"],
+     "base": "stage_open_air",
+     "times": ["commute_pm", "night_out"],
+     "seasons": ["spring", "summer", "autumn"],
+     "outfits": ["everyday", "roleplay", "active", "subculture", "dongtan"],
+     "en": "the cheering stands of a ballpark at an evening game",
+     "worlds": {
+      "fantasy": { "en": "the packed stands of a great ball-game arena of the capital at an evening match — rows of fans chanting songs together, pennants waving, lantern light over the field and roasted fowl and wine shared along the benches", "props": ["cheer", "bowl", "cup", "lamp"] },
+      "steampunk": { "en": "the packed timber stands of a ballpark at an evening game — fans singing fight songs in unison, a brass band, tin rattles, gas floodlights on iron towers and fried chicken passed along the rows", "props": ["cheer", "bowl", "cup", "lamp"] },
+      "cyberpunk": { "en": "the packed stands of a domed ballpark at a night game — the crowd singing fight songs, glowing thundersticks, holographic replays over the field and fried chicken delivered to the seats by drone", "props": ["cheer", "bowl", "cup", "sign"] }
+     }
+    },
+    {
+     "key": "river_pool",
+     "ko": "한강 야외 수영장",
+     "src": ["https://en.wikipedia.org/wiki/Hangang_Park"],
+     "base": "water_pool",
+     "times": ["midday", "commute_pm"],
+     "seasons": ["summer"],
+     "outfits": ["swimwear", "active", "resort"],
+     "en": "an open-air riverside swimming pool in summer",
+     "worlds": {
+      "fantasy": { "en": "a riverside bathing pool beside the wide silver river in high summer — clear water in stone basins, striped silk awnings, bathers on the warm stone edge and the palace hills beyond", "props": ["float_ring", "cup", "fan", "umbrella"] },
+      "steampunk": { "en": "a riverside open-air bathing pool in high summer — a riveted iron diving tower, canvas awnings, a steam pump churning fresh water into the basin and the iron railway bridge beyond", "props": ["float_ring", "cup", "fan", "umbrella"] },
+      "cyberpunk": { "en": "a riverside open-air pool in high summer — water glowing turquoise from underwater lights, inflatable rings, a misting fan array over the deck and glass towers across the river", "props": ["float_ring", "cup", "fan", "music"] }
+     }
+    },
+    {
+     "key": "rooftop_room",
+     "ko": "옥탑방 옥상의 여름밤",
+     "src": ["https://ko.wikipedia.org/wiki/옥탑방"],
+     "base": "home_balcony",
+     "times": ["night_out", "past_midnight", "dawn"],
+     "seasons": ["spring", "monsoon", "summer", "autumn"],
+     "outfits": ["homewear", "lingerie", "everyday"],
+     "en": "the roof outside her small rooftop room on a warm night",
+     "worlds": {
+      "fantasy": { "en": "the flat roof outside her little room atop a house in the capital on a warm night — a low wooden bench, potted herbs, laundry on a line and the lantern-lit city with its palace lights spread below", "props": ["cup", "lamp", "fan", "book"] },
+      "steampunk": { "en": "the tarred roof outside her small room atop a tenement on a warm night — a water tank on iron legs, laundry on a line, chimneys all around and the red glow of the foundries across the city", "props": ["cup", "lamp", "fan", "music"] },
+      "cyberpunk": { "en": "the roof outside her tiny rooftop room above an old tenement on a warm night — cheap plastic stools, a humming air-conditioner unit, potted plants and the neon skyline of the megacity filling the sky", "props": ["cup", "lamp", "fan", "phone"] }
+     }
+    }
+   ]
+  }
+ }
+}

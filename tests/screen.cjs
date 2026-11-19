@@ -2,13 +2,16 @@
    도시 꼴(2026-11-19 Task 3): 생성기는 도시 › 갈래 › 단계. 세계 그림은 세계 → 장면 → 자세 · 표정 → 실루엣 → 설계 줄 → 외형 → 덧붙임 → 다 골랐다 —
    화면이 지은 지시문이 node 쪽 조립기(lib/prompt-city.js)와 글자 하나 다르지 않다. 도시 판은 열 곳(설계 미정 아홉은 누를 수 없다), 화풍 고르개(내린 화풍 빠짐), 주소 ?card=&o=&world=,
    폰 칩 레일 · 아래 막대 · 시트, 새로 고쳐도 남음, 옆 넘침 없음, 콘솔 오류 없음.
-   일상컷 걸음(시대 → 장소 → … · 해방 · 랜덤 · 여기부터 다시 · 손에 드는 것)은 Task 4 가 생활 장면표 · 세계 소품 사전과 함께 다시 넣는다(docs/PORT_NOTES.md) — 지금은 갈래를 바꾸면 세계 칸부터 열리는지만.
+   일상컷(Task 4): 세계 → 시대 → 장소(서울 생활 장면) → … 한 칸씩 · 화면 지시문 = 조립기(생활 장면표 · 세계 소품 사전) · 그 세계 장면 글 · 금지 낱말은 Avoid 단락만 ·
+   손에 드는 그 도시의 물건 · 해방 · 랜덤 · 여기부터 다시 · 처음부터 다시 · 파일 이름 · 주소.
    Run: CHROMIUM_PATH=<chrome> NODE_PATH=<playwright 가 든 node_modules> node tests/screen.cjs   (ESM_DIR — preact 사본, 비면 tests/lib/harness.cjs 의 기본 자리 · SHOT_DIR 이 있으면 사진) */
 const assert = require('node:assert/strict'), fs = require('node:fs'), path = require('node:path'), vm = require('node:vm');
 const H = require('./lib/harness.cjs'), ROOT = H.ROOT;
 const read = f => fs.readFileSync(path.join(ROOT, f), 'utf8');
 const D = JSON.parse(read('data/city-design.json')), S = JSON.parse(read('data/style.json'));
-const { T, P } = (() => { const c = { window: {} }; vm.createContext(c); for (const f of ['lib/prompt-spec.js', 'lib/look-spec.js', 'lib/prompt-city.js']) vm.runInContext(read(f), c); return { T: c.window.AtelierSpec, P: c.window.AtelierPrompt }; })();
+const { T, P } = (() => { const c = { window: {} }; vm.createContext(c); for (const f of ['lib/prompt-spec.js', 'lib/look-spec.js', 'lib/casual-tree.js', 'lib/casual-tree-v2.js', 'lib/prompt-city.js']) vm.runInContext(read(f), c); return { T: c.window.AtelierSpec, P: c.window.AtelierPrompt }; })();
+const TREE = JSON.parse(read('data/casual-tree.json')), TREE2 = JSON.parse(read('data/casual-tree-v2.json')), LIFE = JSON.parse(read('data/city-life.json')), PROPS = JSON.parse(read('data/world-props.json'));
+const casualOf = (scene, world) => P.buildCasual(D, S, 'seoul', scene, { world, style: DEF, tree: TREE, tree2: TREE2, life: LIFE, props: PROPS });
 const RETIRED = Object.keys(S.styles).filter(k => S.styles[k].retired), LIVE = Object.keys(S.styles).filter(k => !S.styles[k].retired), DEF = S.default;
 const lineOf = (txt, head) => (String(txt).split('\n').find(l => l.startsWith(head)) || '');
 
@@ -21,6 +24,10 @@ const lineOf = (txt, head) => (String(txt).split('\n').find(l => l.startsWith(he
       const state = pg => pg.evaluate(() => window.AtelierStudio.state());
       const openOf = async pg => (await state(pg)).open;
       const promptOf = pg => pg.evaluate(() => window.AtelierStudio.prompt());
+      const menu = async pg => { const m = pg.locator('[data-menu="rand"]'); if (await m.count()) await m.click(); };
+      const randAll = async (pg, k) => { await menu(pg); await pg.click('[data-rand-all="' + k + '"]'); };
+      /* 고르기 — 폰에서 묶음 탭에 가려져 있으면 「전체」 탭을 누르고 */
+      const pick = async (pg, v) => { const o = pg.locator('#panel .opt[data-pick="' + v + '"]'); if (!(await o.count()) && (await pg.locator('#panel [data-gtab=""]').count())) await pg.click('#panel [data-gtab=""]'); await pg.click('#panel .opt[data-pick="' + v + '"]'); };
       const next = async (pg, k) => { if (mob) await pg.click('#hbar [data-next="' + k + '"]'); else await pg.click('#panel [data-next="' + k + '"]'); };
       /* 다 골랐다로 — 「다 골랐다로」 단추가 있으면 그것, 없으면 남은 칸을 다음 · 건너뛰기로 */
       const toDone = async pg => {
@@ -107,13 +114,63 @@ const lineOf = (txt, head) => (String(txt).split('\n').find(l => l.startsWith(he
       assert(tf.includes(fw.motif.en) && tf.includes(fw.scenes[0].en), '판타지 motif · 첫 장면');
       assert.match(p.url(), /card=seoul&o=world&world=fantasy/, '주소에 적힌다');
       checks += 24;
-      /* 갈래 → 일상컷: 세계 칸부터(일상컷 걸음은 Task 4) */
+      /* 갈래 → 일상컷(버전2, Task 4): 세계(참고 그림이 되는 세계 그림)부터 한 칸씩 — 서울 생활 장면 · 그 세계 소품 */
       await p.click('[data-open="out"]'); await p.click('[data-out="casual"]');
       assert.equal(await openOf(p), 'world', '일상컷은 참고 그림의 세계부터');
       assert.equal(await p.locator('#panel .opt[data-pick="fantasy"][aria-pressed="true"]').count(), 1, '세계 그림 갈래에서 고른 세계가 눌려 있다');
       await p.click('#panel .opt[data-pick="fantasy"]'); assert.equal(await openOf(p), 'era', '세계 다음 시대');
+      assert.equal(await p.locator('#panel .opt[data-pick]').count(), 1, '시대는 하나 — 그 세계의 하루');
+      await p.click('#panel .opt[data-pick="now"]'); assert.equal(await openOf(p), 'place', '다음은 장소');
+      assert((await p.locator('#panel .opt[data-pick]').count()) > 20, '장소 목록');
+      await pick(p, 'seoul_pojangmacha'); assert.equal(await openOf(p), 'weather', '다음은 계절·날씨');
+      await p.click('#panel .opt[data-pick=""]'); assert.equal(await openOf(p), 'time', '날씨 다음 시간대');
+      assert.equal(await p.locator('#panel .opt[data-pick="past_midnight"]').count(), 1, '시간대에 생활 장면표의 시간(한밤)');
+      await p.click('#panel .opt[data-pick="past_midnight"]'); assert.equal(await openOf(p), 'ofam');
+      await pick(p, 'everyday'); assert.equal(await openOf(p), 'item');
+      await p.click('#panel .opt[data-pick=""]'); assert.equal(await openOf(p), 'color', '옷 다음 옷 색');
+      await p.click('#panel .opt[data-pick=""]'); assert.equal(await openOf(p), 'denier', '옷 색 다음 데니어');
+      await p.click('#panel .opt[data-pick=""]'); assert.equal(await openOf(p), 'situ', '데니어 다음 상황');
+      await p.click('#panel .opt[data-pick=""]'); assert.equal(await openOf(p), 'hair', '상황 다음 머리 변화');
+      await p.click('#panel .opt[data-pick="tied"]'); assert.equal(await openOf(p), 'preset', '머리 다음 자세 추천');
+      const presetKey = await p.locator('#panel .opt[data-pick]:not([data-out])').nth(1).getAttribute('data-pick');
+      await p.click('#panel .opt[data-pick="' + presetKey + '"]');
+      let sc = (await state(p)).scene;
+      assert(sc.posture && sc.support && sc.frame && sc.body && sc.head && sc.camera, '추천이 몸 쪽을 채웠다 ' + JSON.stringify(sc));
+      /* 해방 — 몸 자세에서 트리 밖이 흐리게, 까닭이 붙는다 */
+      await p.click('[data-open="posture"]');
+      const unlock = p.locator('#unlock'); if (await unlock.count()) { await unlock.check(); assert((await p.locator('#panel .opt.out .why').count()) >= 1, '트리 밖 까닭'); await unlock.uncheck(); }
+      await toDone(p);
+      sc = (await state(p)).scene;
+      const t1 = await promptOf(p), fwl = LIFE.cities.seoul.scenes.find(x => x.key === 'pojangmacha').worlds.fantasy;
+      assert.equal(t1, casualOf(sc, 'fantasy'), '화면 일상컷 지시문 = 조립기(생활 장면표 · 세계 소품 사전)');
+      assert(t1.includes('\nPlace: ' + fwl.en + '.\n') && fwl.props.every(k => t1.includes(PROPS.props[k].worlds.fantasy.en)) && lineOf(t1, 'Time of day: ') === 'Time of day: ' + LIFE.times.find(x => x.key === 'past_midnight').en + '.', '판타지 포장마차 · 그 세계 소품 · 한밤');
+      const neg = t1.split('\n\n').filter(b => /^Avoid: /.test(b))[0] || '';
+      assert(neg && D.vocab.markers.fantasy.banned_en.every(b => !new RegExp('\\b' + b + '\\b', 'i').test(t1.replace(neg, ''))), '판타지 금지 낱말은 Avoid 단락만');
+      assert.match(await p.locator('.hchip[data-open="time"]').textContent(), /한밤/, '시간대 칩(생활 장면표)');
+      /* 손에 드는 그 도시의 물건 — 오른손을 「소품 동작」 으로 하면 「그 물건을 든다」 */
+      await p.click('[data-open="right"]'); await p.click('#panel .opt[data-pick="prop"]'); assert.equal(await openOf(p), 'left', '오른손 다음 왼손');
+      await p.click('#panel .opt[data-pick=""]'); assert.equal(await openOf(p), 'use', '소품 동작 칸');
+      if (!(await p.locator('#panel .opt[data-pick^="sig_"]').count()) && (await p.locator('#panel [data-gtab=""]').count())) await p.click('#panel [data-gtab=""]');
+      assert((await p.locator('#panel .opt[data-pick^="sig_"]').count()) >= 1, '그 물건을 드는 동작 선택지');
+      await p.click('#panel .opt[data-pick^="sig_"]'); await toDone(p);
+      assert(lineOf(await promptOf(p), 'PROP: ').includes(D.cities.find(c => c.key === 'seoul').worlds.fantasy.hold.en), '서울 판타지의 물건(해치 금 도장)을 든다 ' + lineOf(await promptOf(p), 'PROP: ').slice(0, 90));
+      assert.equal(await promptOf(p), casualOf((await state(p)).scene, 'fantasy'), '소품을 바꿔도 화면 = 조립기');
+      assert((await p.locator(mob ? '.hres .file' : '#file-name').textContent()).includes('seoul_fantasy_' + DEF + '_f_casual1.webp'), '일상컷 파일 이름(세계를 탄다)');
+      assert.match(p.url(), /card=seoul&o=casual&world=fantasy/, '일상컷도 주소에 세계');
+      checks += 22;
+      /* 랜덤 처음부터 — 다 찬다(화면 = 조립기). 여기부터 다시 — 장소를 열면 뒤가 빈다. 처음부터 다시 — 도시 · 갈래는 그대로 */
+      await randAll(p, 'world'); assert.equal(await openOf(p), 'done', '랜덤 뒤 다 골랐다');
+      sc = (await state(p)).scene; assert(sc.era && sc.place && sc.ofam && sc.posture && sc.frame, '랜덤이 다 채운다');
+      assert.equal(await promptOf(p), casualOf(sc, (await state(p)).world), '랜덤 일상컷도 화면 = 조립기');
+      await p.click('[data-open="place"]'); await menu(p); await p.click('[data-restart="place"]');
+      sc = (await state(p)).scene; assert.equal(await openOf(p), 'place'); assert(!sc.posture && !sc.frame && sc.era && sc.place, '뒤 칸을 비웠다 ' + JSON.stringify(sc));
+      await randAll(p, 'place'); assert.equal(await openOf(p), 'done');
+      await p.click('[data-reset]'); assert.equal(await openOf(p), 'world'); sc = (await state(p)).scene; assert(!sc.place && !sc.posture && !(await state(p)).world, '모든 칸을 비웠다(세계도)');
+      await randAll(p, 'world'); assert((await state(p)).world && (await state(p)).scene.era, '랜덤이 세계도 채운다');
+      assert.equal((await state(p)).card, 'seoul'); assert.equal((await state(p)).out, 'casual');
+      checks += 9;
       await p.click('[data-open="out"]'); await p.click('[data-out="world"]');
-      checks += 3;
+      await p.click('[data-open="world"]'); await p.click('#panel .opt[data-pick="fantasy"]');
       /* 폰 — 칩 레일 한 줄 · 아래 막대 · 경로(도시 · 갈래) · 시트 */
       if (mob) {
         await p.click('[data-open="done"]').catch(() => {});
@@ -133,5 +190,5 @@ const lineOf = (txt, head) => (String(txt).split('\n').find(l => l.startsWith(he
       await v.ctx.close();
     }
   } finally { await br.close(); srv.close(); }
-  console.log('PASS 화면: 화풍 비교 · 생성기(도시 판 · 세계 그림 한 칸씩 · 화면 = 조립기 · 화풍 고르개 · 옛 mecha 주소 · 주소 · 저장 · 폰 레일/막대/시트/44px) · 폴드 덮개 · PC — ' + checks + '가지 · 일상컷 걸음은 Task 4');
+  console.log('PASS 화면: 화풍 비교 · 생성기(도시 판 · 세계 그림 한 칸씩 · 화면 = 조립기 · 화풍 고르개 · 옛 mecha 주소 · 일상컷 한 칸씩(서울 생활 장면 · 그 세계 소품 · 화면 = 조립기 · 해방 · 랜덤 · 여기부터 다시 · 처음부터 · 그 도시의 물건) · 주소 · 저장 · 폰 레일/막대/시트/44px) · 폴드 덮개 · PC — ' + checks + '가지');
 })().catch(e => { console.error(e); process.exit(1); });

@@ -90,12 +90,56 @@ for (const c of undesigned) for (const w of D.vocab.worlds) {
   assert(same(P.worldsOf(D, c.key), []), c.key + ' 사는 세계 없음');
 }
 assert.throws(() => PC.build({ design: D, styles: S, city: 'atlantis', world: 'fantasy' }), /unknown city/);
-/* 일상컷 갈래는 Task 4 자리 */
-assert.throws(() => PC.build({ design: D, styles: S, city: 'seoul', world: 'fantasy', kind: 'casual' }), /Task 4/);
+/* ══ 일상컷(kind 'casual', Task 4) — 그 세계의 서울의 하루 ══
+   서울 × 세 세계 × 생활 장면 전부 × 살아 있는 화풍: 그 장면의 그 세계 글(Place) · 그 세계 소품(Around her) · 옷의 결 · 그 세계의 서울 줄,
+   (d) 판타지 · 스팀펑크 금지 낱말은 맨 끝 Avoid 단락(sections.negative) 밖에 없다, 소품 낱말이 그 세계 것(phone → 판타지는 전령 수정, smartphone 없음) */
+const J = f => JSON.parse(fs.readFileSync(f, 'utf8'));
+const tree = J('data/casual-tree.json'), tree2 = J('data/casual-tree-v2.json'), LIFE = J('data/city-life.json'), PROPS = J('data/world-props.json');
+const cas = (w, scene, style) => PC.build({ design: D, styles: S, city: 'seoul', world: w, style, kind: 'casual', casual: { scene, tree, tree2, life: LIFE, props: PROPS } });
+let nc = 0;
+for (const style of LIVE) for (const w of D.vocab.worlds) for (const s of LIFE.cities.seoul.scenes) {
+  const id = 'casual ' + style + ' ' + w + ' ' + s.key, sw = s.worlds[w], mk = D.vocab.markers[w];
+  const r = cas(w, { place: P.lifeKey('seoul', s.key), time: (s.times || [])[0], season: (s.seasons || ['autumn'])[0] }, style), t = r.text;
+  assert(t.length > 1000 && !r.missing, id + ' 지어진다');
+  assert.equal(t, P.buildCasual(D, S, 'seoul', { place: P.lifeKey('seoul', s.key), time: (s.times || [])[0], season: (s.seasons || ['autumn'])[0] }, { world: w, style, tree, tree2, life: LIFE, props: PROPS }), id + ' PromptCity = AtelierPrompt.buildCasual');
+  assert.equal([r.sections.head, r.sections.body, r.sections.negative].filter(Boolean).join('\n\n'), t, id + ' sections 를 이으면 지시문');
+  assert(t.includes('\nPlace: ' + sw.en.replace(/\.$/, '') + '.\n'), id + ' 그 장면의 그 세계 글');
+  for (const k of sw.props) assert(t.includes(PROPS.props[k].worlds[w].en), id + ' 소품 ' + k);
+  assert(t.includes(PROPS.clothes[w].en) && t.includes('World: an ordinary day in Seoul as her world knows it — ' + seoul.worlds[w].en.replace(/\.$/, '')), id + ' 옷의 결 · 그 세계의 서울');
+  for (const o of D.vocab.worlds.filter(x => x !== w)) assert(!t.includes(sw.en === s.worlds[o].en ? '\u0000' : s.worlds[o].en), id + ' 다른 세계 글이 안 샌다');
+  const body = r.sections.negative ? t.replace(r.sections.negative, '') : t;
+  for (const b of mk.banned_en) assert(!word(b, 'i').test(body), id + ' (d) 금지 낱말 「' + b + '」');
+  if (mk.banned_en.length) assert(/^Avoid: /.test(r.sections.negative) && r.sections.negative.includes(mk.banned_en.join(', ')), id + ' 그 세계 금지 낱말은 Avoid 단락에');
+  for (const nm of NAMES) assert(!word(nm).test(t), id + ' (e) 이름 「' + nm + '」');
+  assert(!/[가-힣]/.test(t) && !/\b(?:element|kingdom|atomic|mecha)\b/i.test(t) && !/\bundefined\b/.test(t) && !/\.\./.test(t), id + ' 한국어 · 원소 말 · 찌꺼기');
+  nc++;
+}
+/* 소품 사전 — 트리 소품 동작의 물건도 그 세계 낱말(PROP 줄) */
+for (const w of D.vocab.worlds) {
+  const r = cas(w, { place: 'seoul_subway_commute', frame: 'waist_up', right: 'prop', use: 'phone_look' }), pl = (r.text.match(/^PROP: .*$/m) || [''])[0];
+  assert(pl.includes(PROPS.props.phone.worlds[w].en) && !/\bsmartphone\b/i.test(r.text.replace(r.sections.negative, '')), w + ' 휴대폰 → ' + PROPS.props.phone.worlds[w].en + ' — ' + pl);
+}
+assert(/messenger crystal/.test(PROPS.props.phone.worlds.fantasy.en) && /telegraph/.test(PROPS.props.phone.worlds.steampunk.en) && /holographic/.test(PROPS.props.phone.worlds.cyberpunk.en), '휴대폰 사전');
+/* 같은 장면이 세 세계로 — 세 글이 다 다르다 */
+for (const s of LIFE.cities.seoul.scenes) assert.equal(new Set(D.vocab.worlds.map(w => s.worlds[w].en)).size, 3, s.key + ' 세 세계 글이 서로 다르다');
+/* 생활 장면 → 트리 장소(lifeTree) — 받침은 base 것, 땅은 서울, 다른 도시 카드엔 안 뽑힌다 */
+{
+  const t2 = P.lifeTree(tree2, tree, LIFE), s = LIFE.cities.seoul.scenes[0], k = P.lifeKey('seoul', s.key);
+  assert(t2 !== tree2 && P.lifeTree(tree2, tree, LIFE) === t2 && !tree2.places[k], 'lifeTree — 사본 · 메모 · 원본은 그대로');
+  assert(same(t2.places[k], tree2.places[s.base]), '받침은 base 것');
+  assert(same(t2.place_lands[k], ['seoul']), '땅은 서울');
+  const C2 = ctx.window.AtelierCasualTreeV2, T2 = C2.make(t2, tree);
+  assert(C2.choices(T2, { era: 'now' }, 'place', { land: 'seoul' }).includes(k) && !C2.choices(T2, { era: 'now' }, 'place', { land: 'tokyo' }).includes(k), '서울 카드에만');
+  assert.equal(P.lifeScene(LIFE, k).key, s.key);
+}
+/* 세 세계 밖 · 설계 미정은 세계 그림과 같이 */
+assert.throws(() => cas('mecha', {}), /unknown world/);
+assert(same(PC.build({ design: D, styles: S, city: 'tokyo', world: 'fantasy', kind: 'casual', casual: { tree, tree2, life: LIFE, props: PROPS } }).missing, ['worlds']), '설계 미정 도시 일상컷');
 /* 카드 = 도시 */
 assert(same(P.cards(D), D.cities.map(c => c.key)) && P.card(D, 'seoul').tier === 'city' && same(P.worldsOf(D, 'seoul'), D.vocab.worlds) && P.card(D, 'seoul-x') === null, '카드 = 도시 열쇠');
 const rec = P.record(D, S, 'seoul', 'steampunk', {});
 assert(rec.atelier === 'city' && rec.styleUndecided === true && rec.file === 'seoul_steampunk_' + S.default + '_f.webp' && rec.prompt === P.build(D, S, 'seoul', 'steampunk', {}), '기록');
 /* GPT 임의 설계 주문(tools/prompt-pack.cjs) — 도시 말, 원소 말 없음 */
 for (const w of D.vocab.worlds) { const f = P.buildWorldFree(D, S, 'seoul', w, {}); assert(f.includes(seoul.worlds[w].motif.en.replace(/\.$/, '')) && !/\b(?:element|atomic|mecha)\b/i.test(f), w + ' 임의 설계 주문'); }
-console.log('PASS 지시문 조립: 서울 × 세 세계 × 화풍 ' + LIVE.length + ' = ' + n + '장 — 표지 · motif · 머리색 · 금지 낱말(Avoid 줄 밖) · 이름 · mecha 던짐 · 설계 미정 ' + undesigned.length + '곳 · 노출 · 고른 칸');
+console.log('PASS 지시문 조립: 서울 × 세 세계 × 화풍 ' + LIVE.length + ' = ' + n + '장 — 표지 · motif · 머리색 · 금지 낱말(Avoid 줄 밖) · 이름 · mecha 던짐 · 설계 미정 ' + undesigned.length + '곳 · 노출 · 고른 칸; ' +
+  '일상컷 ' + nc + '장(서울 × 세 세계 × 생활 장면 ' + LIFE.cities.seoul.scenes.length + ' × 화풍) — 그 세계 장면 글 · 소품 · 옷의 결 · 금지 낱말(Avoid 단락 밖) · 휴대폰 사전 · lifeTree');

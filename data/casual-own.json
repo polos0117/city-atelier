@@ -8,5 +8,57 @@
   "low"
  ],
  "tries_per_level": 3,
- "cards": {}
+ "cards": {
+  "seoul": {
+   "root": {
+    "ko": "남산 봉수대 → 남산 송신탑 — 도성의 소식을 불 · 전신 · 전파로 멀리 보내는 사람(옛 봉수대 자리에 선 송신탑, 설계표 상징 · https://ko.wikipedia.org/wiki/남산서울타워). 2026-11-19 Task 4 시안 — 시험 그림 전",
+    "from": "story"
+   },
+   "mode": "per_world",
+   "worlds": {
+    "fantasy": {
+     "job_ko": "봉수대 봉화지기",
+     "base": "travel_lookout",
+     "place": "the beacon terrace on the southern mountain above her world's royal capital at dusk — five round stone fire mounds in a row, stacked pinewood and straw, the walled city and its golden palace roofs spread below",
+     "activity": "she is the beacon keeper, crossing the terrace with her torch to light the evening fire once the far ridge answers",
+     "preset": "stride_prop",
+     "use": "sig_low",
+     "prop": "a long iron fire-striker torch wrapped in oiled cloth",
+     "outfit": {
+      "bold": "a beacon-keeper look fitted to her body — a short quilted hemp jacket tied open over a wrapped linen band top, a short wrap skirt, cloth-bound shins, straw sandals and a sash with a flint pouch",
+      "moderate": "a beacon-keeper look — a sleeveless quilted hemp vest over a fitted linen top, a knee-length wrap skirt, cloth-bound shins and a sash with a flint pouch",
+      "low": "a beacon-keeper look — a long-sleeved quilted hemp jacket over a linen top, wide trousers bound at the shin, a padded headband and a sash with a flint pouch"
+     }
+    },
+    "steampunk": {
+     "job_ko": "전보국 타전수",
+     "base": "repair_kiosk",
+     "place": "the telegraph office of her steam city — a long oak counter of brass telegraph keys and sounders, coiled wire, paper tape spooling from a register, gaslight and a wall of pigeonholes stuffed with message slips",
+     "activity": "she is a telegraph operator tapping out an urgent message on the brass key",
+     "preset": "counter_work",
+     "use": "sig_both",
+     "prop": "a brass telegraph key on a small oak base",
+     "outfit": {
+      "bold": "a telegraph-clerk look fitted to her body — a striped shirt with rolled sleeves unbuttoned low over a lace-edged camisole, a short pleated skirt, sleeve garters, a green eyeshade and laced boots",
+      "moderate": "a telegraph-clerk look — a fitted shirt with rolled sleeves and an open collar under a waistcoat, a knee-length skirt, sleeve garters, a green eyeshade and laced boots",
+      "low": "a telegraph-clerk look — a buttoned high-collared shirt under a waistcoat, an ankle-length skirt, sleeve garters, a green eyeshade and laced boots"
+     }
+    },
+    "cyberpunk": {
+     "job_ko": "송신탑 신호 정비사",
+     "base": "street_rooftop",
+     "place": "a maintenance platform high on the transmission tower above her megacity at night — steel lattice, blinking red aviation lights, humming antenna arrays and the neon city spread far below",
+     "activity": "she is a signal technician re-tuning an antenna array on the transmission tower",
+     "preset": "half_kneel_use",
+     "use": "sig_hold",
+     "prop": "a signal-tuning multitool with a glowing probe",
+     "outfit": {
+      "bold": "a tower-technician look fitted to her body — a reflective work jacket open over a cropped compression top, high-cut utility shorts over glowing-seam tights, a climbing harness and magnetic boots",
+      "moderate": "a tower-technician look — a reflective work jacket unzipped over a fitted tank top, utility trousers, a climbing harness and magnetic boots",
+      "low": "a tower-technician look — a zipped reflective work suit, gloves, a climbing harness and magnetic boots"
+     }
+    }
+   }
+  }
+ }
 }

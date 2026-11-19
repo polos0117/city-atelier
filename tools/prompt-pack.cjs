@@ -109,7 +109,7 @@ function validate(set, card, plans) {
     if (p.style && p.style !== STYLE) errs.push('계획 ' + p.world + ' 의 화풍 ' + p.style + ' 가 기본이 아니다');
     for (const cut of p.cuts) {
       if (cut.sfree) continue;   /* 자유 설계 칸은 장면을 짜지 않는다(2026-11-11) */
-      const { n, ...sc } = cut, fixed = C2.repair(C2.make(tree2, tree), { ...sc }, card.g);
+      const { n, ...sc } = cut, fixed = C2.repair(C2.make(P.lifeTree(tree2, tree, PLAN.LIFE), tree), { ...sc }, card.g);
       for (const k of C2.ORDER) if ((fixed[k] || '') !== (sc[k] || '')) errs.push(`계획 ${p.world} 컷 ${n} 의 ${k}=${sc[k]} 가 트리에 안 맞는다`);
     }
   }
@@ -136,7 +136,7 @@ function recordOf(card, set, s) {
   if (x.color) scene.color = x.color;   /* 옷 색 · 데니어 · 상황(2026-11-09 삼국지에서) */
   if (x.denier === 'none') delete scene.denier; else if (x.denier) scene.denier = x.denier;
   if (x.situ === 'none') { delete scene.situ; delete scene.gsitu; }
-  return { ...P.casualRecord(D, S, card.key, scene, { world: s.world, style: STYLE, tree, tree2 }, n), record: PLAN.recordRel(card.key, s.world, n), storage: storageOf(card, s, x, scene) };
+  return { ...P.casualRecord(D, S, card.key, scene, { world: s.world, style: STYLE, tree, tree2, life: PLAN.LIFE, props: PLAN.PROPS }, n), record: PLAN.recordRel(card.key, s.world, n), storage: storageOf(card, s, x, scene) };
 }
 
 function build(dir) {

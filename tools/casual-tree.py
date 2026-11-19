@@ -15,7 +15,7 @@
   - 안 쓰는 값(banned — pkm)·필수 갈래 컷에 안 쓰는 프레이밍(not_required)·동료 자세(companion)·세대 연도(gen_years)가 맞다
   - 추천 조합(지금 갈래의 장면 예시를 옮긴 것)과 예전 기록 변환표가 다 고를 수 있는 길이다
 
-    python3 tools/casual-tree.py check
+    python3 tools/casual-tree.py check                   # 트리 표 + 생활 장면표(data/city-life.json) · 세계 소품 사전(data/world-props.json)
     python3 tools/casual-tree.py paths <시대> <장소>     # 그 자리에서 고를 수 있는 하는 일·옷 계열
     python3 tools/casual-tree.py audit                   # 하는 일 문장의 고정물(창문·부두·식탁 …)이 장소 문장에 없는 쌍
 """
@@ -97,6 +97,11 @@ def path_errors(doc, p):
     if p.get("item") and p["item"] not in {i["key"] for i in I["outfits"][p["outfit"]]["items"]}:
         return ["옷 %s 가 %s 계열에 없다" % (p["item"], p["outfit"])]
     return []
+
+
+def en(where, text, errs):
+    if not text or HANGUL.search(text):
+        errs.append("%s 의 영어 칸이 비었거나 한글이 있다: %r" % (where, text))
 
 
 def check(doc):
@@ -287,6 +292,93 @@ def audit(doc):
     return out
 
 
+LIFE = os.path.join(ROOT, "data", "city-life.json")
+PROPS = os.path.join(ROOT, "data", "world-props.json")
+DESIGN = os.path.join(ROOT, "data", "city-design.json")
+TREE2 = os.path.join(ROOT, "data", "casual-tree-v2.json")
+
+
+def check_life(doc, life, props, design, tree2):
+    """생활 장면표 · 세계 소품 사전(2026-11-19 Task 4) — 설계한 도시는 장면 10~12(근거 src), 장면마다 받침 장소 · 세 세계 글 · 소품,
+    판타지 · 스팀펑크 글엔 그 세계 금지 낱말(설계표 banned_en)이 없다"""
+    errs = []
+    worlds = design["vocab"]["worlds"]
+    banned = {w: list(design["vocab"]["markers"][w].get("banned_en", [])) for w in worlds}
+    def clean(where, w, text):
+        if not text or HANGUL.search(text):
+            errs.append("%s 의 영어 칸이 비었거나 한글이 있다: %r" % (where, text)); return
+        for b in banned[w]:
+            if re.search(r"\b%ss?\b" % re.escape(b), text, re.I):
+                errs.append("%s 에 %s 금지 낱말 %r" % (where, w, b))
+    P = props.get("props", {})
+    if len(P) < 15:
+        errs.append("세계 소품 사전 소품이 %d 개 — 15 개 이상" % len(P))
+    for k, pr in P.items():
+        if not pr.get("ko"):
+            errs.append("소품 %s 의 ko 가 없다" % k)
+        for w in worlds:
+            clean("소품 %s.%s" % (k, w), w, ((pr.get("worlds") or {}).get(w) or {}).get("en"))
+    for w in worlds:
+        clean("옷의 결 clothes.%s" % w, w, ((props.get("clothes") or {}).get(w) or {}).get("en"))
+    places = {x["key"] for x in doc["places"]} | {x["key"] for x in tree2.get("extra_places", [])}
+    fams = {o["key"] for o in doc["outfits"]}
+    times = {t["key"] for t in life.get("times", [])}
+    for t in life.get("times", []):
+        en("시간대 " + t["key"], t.get("en"), errs)
+    for ck, c in life.get("cities", {}).items():
+        seasons = {x["key"]: x for x in life.get("seasons", {}).get(ck, [])}
+        weather = life.get("weather", {}).get(ck, [])
+        if not seasons:
+            errs.append("%s 계절 표가 없다" % ck)
+        for x in list(seasons.values()) + weather:
+            en("%s 계절·날씨 %s" % (ck, x["key"]), x.get("en"), errs)
+            if not str(x.get("src", "")).startswith("https://"):
+                errs.append("%s 계절·날씨 %s 의 근거 src 가 없다" % (ck, x["key"]))
+            for s_ in x.get("seasons", []):
+                if s_ not in seasons:
+                    errs.append("%s 날씨 %s 의 계절 %s 가 표에 없다" % (ck, x["key"], s_))
+            for t in x.get("times", []):
+                if t not in times:
+                    errs.append("%s 날씨 %s 의 시간대 %s 가 없다" % (ck, x["key"], t))
+        scenes = c.get("scenes", [])
+        if not 10 <= len(scenes) <= 12:
+            errs.append("%s 생활 장면이 %d 개 — 10~12" % (ck, len(scenes)))
+        keys = set()
+        for sc in scenes:
+            k = sc["key"]; where = "장면 %s.%s" % (ck, k)
+            if k in keys:
+                errs.append(where + " 열쇠가 겹친다")
+            keys.add(k)
+            if ck + "_" + k in places:
+                errs.append(where + " 의 트리 장소 열쇠 %s_%s 가 트리 표 장소와 겹친다" % (ck, k))
+            if not sc.get("ko") or not sc.get("src") or not all(str(u).startswith("https://") for u in sc["src"]):
+                errs.append(where + " 의 ko · 근거 src 가 없다")
+            if sc.get("base") not in places:
+                errs.append(where + " 의 받침 장소 %r 가 트리에 없다" % sc.get("base"))
+            en(where, sc.get("en"), errs)
+            for t in sc.get("times", []):
+                if t not in times:
+                    errs.append(where + " 의 시간대 %s 가 없다" % t)
+            for s_ in sc.get("seasons", []):
+                if s_ not in seasons:
+                    errs.append(where + " 의 계절 %s 가 없다" % s_)
+            for f in sc.get("outfits", []):
+                if f not in fams:
+                    errs.append(where + " 의 의상 계열 %s 가 없다" % f)
+            for w in worlds:
+                row = (sc.get("worlds") or {}).get(w) or {}
+                clean(where + "." + w, w, row.get("en"))
+                if not row.get("props"):
+                    errs.append(where + "." + w + " 의 소품이 없다")
+                for pk in row.get("props", []):
+                    if pk not in P:
+                        errs.append(where + "." + w + " 의 소품 %s 가 세계 소품 사전에 없다" % pk)
+    for c in design["cities"]:
+        if c.get("worlds") and c["key"] not in life.get("cities", {}):
+            errs.append("설계한 도시 %s 의 생활 장면표가 없다" % c["key"])
+    return errs
+
+
 def main(argv):
     doc = load()
     if argv[:1] == ["audit"]:
@@ -302,7 +394,9 @@ def main(argv):
         return 0
     if argv[:1] != ["check"]:
         print(__doc__.strip()); return 2
-    errs = check(doc)
+    J = lambda f: json.load(open(f, encoding="utf-8"))
+    life, props = J(LIFE), J(PROPS)
+    errs = check(doc) + check_life(doc, life, props, J(DESIGN), J(TREE2))
     for e in errs:
         print("  X " + e)
     if errs:
@@ -312,6 +406,7 @@ def main(argv):
     print("일상컷 트리 통과 — 시대 %d · 장소 %d · 하는 일 %d · 옷 계열 %d(옷 %d) · 시대·장소·하는 일 길 %d · 추천 조합 %d · 예전 기록 변환 %d"
           % (len(doc["eras"]), len(doc["places"]), len(doc["activities"]), len(doc["outfits"]),
              sum(len(o["items"]) for o in doc["outfits"]), n_paths, len(doc.get("presets", [])), len(doc.get("legacy", {}))))
+    print("생활 장면표 통과 — %s · 세계 소품 %d" % (" · ".join("%s 장면 %d" % (k, len(c["scenes"])) for k, c in life["cities"].items()), len(props["props"])))
     return 0
 
 

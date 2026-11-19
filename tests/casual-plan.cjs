@@ -1,110 +1,130 @@
-/* Task 4 에서 도시 꼴로 다시 — 지금은 건너뜀 */
-process.exit(0);
-/* 일상컷 묶음 계획기(tools/casual-plan.cjs — 2026-11-09 삼국지 공방 계획기를 원소 꼴로) — 대표 카드 넷 × 사는 세계 × 씨앗 하나가 묶음 규칙을 지키고, 기록이 생성기 꼴이다.
-   일곱 장(2026-11-11) · 정해 둔 세 갈래(노출 한 장 · 나라 안 한 장 · 상황 노출 한 장, 서로 다른 컷) · 네 시대 · 옷 색 · 데니어 · 상황 줄 · 짧은 일상컷 ·
-   자유 설계 칸 둘(옷 자유 · 갈래 자유 — FREE DESIGN 덩어리, 갈래 자유는 노출 갈래 컷과 다른 갈래 · 상황 노출 컷과 다른 상황) · 옛 여섯 장 묶음은 그대로 통과하고 일곱째만 짜진다.
-   이미 있는 컷(기록) 위에 모자란 번호만 짜는 것도. node tests/casual-plan.cjs */
+/* 일상컷 묶음 계획기(tools/casual-plan.cjs — 2026-11-19 계획 Task 4, 원소 계획기를 도시 꼴로) — 서울 세 세계 × 씨앗 셋.
+   세계마다 일곱 장(장면 컷 다섯 + 자유 설계 칸 둘 — 옷 자유 · 갈래 자유), 묶음 규칙(check) 통과, 노출 갈래 한 장(세계마다 돌려 가며) · 상황 노출 한 장,
+   장면은 서울 생활 장면표(data/city-life.json)에서 · 한 묶음 안 같은 장면 겹침 0 · 같은 자세 추천 겹침 0(세계끼리도),
+   시간 · 계절 · 날씨는 서울 표 안에서(장면이 받는 것만, 트리 날씨 안 씀), 기록 꼴 · 지시문(그 장면의 그 세계 글 · 그 세계 소품 · 판타지 · 스팀펑크 금지 낱말 없음),
+   캐릭터만의 컷(90번 — 세 세계 자세 서로 다르게), 있는 두 장 위에 세 장, 같은 씨앗 같은 답, 틀린 칸을 잡는다.
+   그림 저장소(city-atelier-img)가 아직 없다 — 쓴 횟수 · 최근 장면은 빈 기록으로(usage 를 주지 않는다). node tests/casual-plan.cjs */
 const assert = require('node:assert/strict'), fs = require('node:fs'), path = require('node:path'), os = require('node:os'), vm = require('node:vm');
 const C = require('../tools/casual-plan.cjs');
 const R = path.join(__dirname, '..');
 const ctx = { window: {}, console }; vm.createContext(ctx);
 for (const f of ['lib/prompt-spec.js', 'lib/look-spec.js', 'lib/casual-tree.js', 'lib/casual-tree-v2.js', 'lib/prompt-city.js']) vm.runInContext(fs.readFileSync(path.join(R, f), 'utf8'), ctx);
 const P = ctx.window.AtelierPrompt, TS = ctx.window.AtelierSpec;
-const D = JSON.parse(fs.readFileSync(path.join(R, 'data/city-design.json'), 'utf8'));
-const SJ = JSON.parse(fs.readFileSync(path.join(R, 'data/style.json'), 'utf8')), SHORT = P.casualShortOn(SJ, C.STYLE);
-/* 대표 카드 넷 × 씨앗 하나(2026-11-12 검사 정리 — 전엔 카드 열 × 씨앗 둘, 52 묶음 40초). 상황 넷(strap · wet · undone · wind) · adventure · drape 계열 · 데니어 비율이 이 넷에서 다 나온다 */
-const keys = P.cards(D), pickKeys = ['fe-magnet', 'h-oil', 'c-graphite', 'c-oil-oillamp'];
-for (const k of pickKeys) assert(keys.includes(k), '대표 카드 ' + k);
-const SIX = [1, 2, 3, 4, 5, 6], SEVEN = [1, 2, 3, 4, 5, 6, 7], FD = TS.FREE_DESIGN;
-let n = 0; const dn = { fit: 0, set: 0 }, situSeen = new Set(), famSeen = new Set();
-for (const key of pickKeys) {
-  const card = C.cardOf(key);
-  for (const w of card.worlds) for (const seed of [3]) {
+const J = f => JSON.parse(fs.readFileSync(path.join(R, f), 'utf8'));
+const D = J('data/city-design.json'), LIFE = J('data/city-life.json'), PROPS = J('data/world-props.json'), FD = TS.FREE_DESIGN;
+const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), word = w => new RegExp('\\b' + esc(w) + '\\b', 'i');
+const SCENES = LIFE.cities.seoul.scenes, byKey = (l, k) => (l || []).find(r => r.key === k);
+const SEVEN = [1, 2, 3, 4, 5, 6, 7];
+
+let n = 0;
+const card = C.cardOf('seoul');
+assert.deepEqual(card.worlds, ['fantasy', 'steampunk', 'cyberpunk'], '서울 세 세계');
+assert(SCENES.length >= 10 && SCENES.length <= 12, '서울 생활 장면 10~12 — ' + SCENES.length);
+for (const seed of [3, 11, 29]) {
+  const planned = [];   /* --world all 처럼 — 앞 세계 묶음이 다음 세계의 겹침 검사(others)에 든다 */
+  const exTypes = [];
+  for (const w of card.worlds) {
     card.world = w;
-    const res = C.plan(card, SEVEN, [], { seed, recent: ['a test place — standing'] });
-    assert.equal(res.cuts.length, 7, key + ' ' + w + ' 일곱 장');
-    assert.deepEqual(C.check(res.cuts, card, []), [], key + ' ' + w + ' 묶음 규칙');
-    const ex = res.cuts.filter(c => C.EXPOSE_TYPES.includes(C.requiredType(c))), inw = res.cuts.filter(c => C.requiredType(c) === 'nation');
-    assert(ex.length && inw.length, key + ' ' + w + ' 정해 둔 갈래 — 노출 한 장 · 나라 안 한 장');
-    const si = res.cuts.filter(c => c.situ);
-    assert.equal(si.length, 1, key + ' ' + w + ' 상황 노출 한 장');
-    assert(!C.requiredType(si[0]) && si[0].frame !== 'face_close' && P.situFits(si[0].situ, C.outfitEn(si[0])), key + ' ' + w + ' 상황 컷');
-    situSeen.add(si[0].situ); res.cuts.forEach(c => famSeen.add(c.ofam));
-    { const fr = res.cuts.filter(c => c.ofree); assert.equal(fr.length, 1, key + ' ' + w + ' 옷 자유 한 장(2026-11-09)');
-      assert(fr[0].sfree && !fr[0].gfree && !fr[0].situ && !fr[0].place && !fr[0].frame && !fr[0].color && !fr[0].denier, key + ' ' + w + ' 옷 자유 컷 — 장면 통째 자유(2026-11-11)'); }
-    { const gf = res.cuts.filter(c => c.gfree); assert.equal(gf.length, 1, key + ' ' + w + ' 갈래 자유 한 장(2026-11-11)');
-      const g = gf[0]; assert(g.sfree && !g.ofree && !g.situ && !g.place && !g.color && C.EXPOSE_TYPES.includes(g.gfree) && g.gsitu === 'free', key + ' ' + w + ' 갈래 자유 컷 — 상황은 열기(2026-11-11 「상황도 열어주자」)');
-      assert(!ex.some(c => c.ofam === g.gfree), key + ' ' + w + ' 갈래 자유는 노출 갈래 컷과 다른 갈래');
-      assert.deepEqual(res.cuts.filter(c => c.sfree).map(c => c.n), [6, 7], '자유 설계 칸은 맨 뒤 번호');
-      assert(g.recent.includes('a test place — standing') && g.recent.length === 6, key + ' 최근 장면 + 같은 묶음 장면 다섯'); }
-    assert.equal(new Set(res.cuts.filter(c => !c.sfree).map(c => c.era)).size, 4, key + ' ' + w + ' 네 시대 다');
-    { const cs = res.cuts.map(c => c.color).filter(Boolean); assert.equal(new Set(cs).size, cs.length, key + ' ' + w + ' 옷 색 갈래가 겹치지 않는다'); }
-    dn.fit += res.cuts.filter(c => P.denierFits(C.outfitEn(c))).length; dn.set += res.cuts.filter(c => c.denier).length;
+    const id = 'seoul ' + w + ' seed ' + seed;
+    const res = C.plan(card, SEVEN, [], { seed: seed + card.worlds.indexOf(w), others: planned, recent: ['a test place — standing'] });
+    assert.equal(res.cuts.length, 7, id + ' 일곱 장');
+    assert.deepEqual(C.check(res.cuts, card, [], planned), [], id + ' 묶음 규칙');
+    const scene = res.cuts.filter(c => !c.sfree), free = res.cuts.filter(c => c.sfree);
+    assert.equal(scene.length, 5, id + ' 장면 컷 다섯');
+    assert.deepEqual(free.map(c => c.n), [6, 7], id + ' 자유 설계 칸은 맨 뒤 번호');
+    assert(free.some(c => c.ofree) && free.some(c => c.gfree && C.EXPOSE_TYPES.includes(c.gfree) && c.gsitu === 'free'), id + ' 옷 자유 · 갈래 자유');
+    /* 정해 둔 갈래 — 노출 한 장(세계마다 다른 갈래) · 상황 노출 한 장(노출 갈래 컷과 다른 컷) */
+    const ex = scene.filter(c => C.EXPOSE_TYPES.includes(C.requiredType(c)));
+    const want = C.EXPOSE_TYPES[card.worlds.indexOf(w) % C.EXPOSE_TYPES.length];   /* 서울은 도시 목록 첫째 — 세계마다 란제리풍 · 수영복 · 역할극 */
+    assert(ex.length === 1 && ex[0].ofam === want, id + ' 노출 갈래 ' + want + ' 한 장'); exTypes.push(want);
+    assert(!free.some(c => ex.some(e => e.ofam === c.gfree)), id + ' 갈래 자유는 노출 갈래 컷과 다른 갈래');
+    const si = scene.filter(c => c.situ);
+    assert(si.length === 1 && !C.requiredType(si[0]) && P.situFits(si[0].situ, C.outfitEn(si[0])), id + ' 상황 노출 한 장');
+    /* 장면 — 서울 생활 장면표에서, 같은 장면 겹침 0 · 같은 자세 추천 겹침 0(세계끼리도) */
+    const ls = scene.map(c => C.lifeOf(c.place));
+    assert(ls.every(s => s && s.city === 'seoul'), id + ' 장면은 서울 생활 장면표');
+    assert.equal(new Set(scene.map(c => c.place)).size, 5, id + ' 같은 장면 겹침 0');
+    assert.equal(new Set(scene.map(c => c.preset)).size, 5, id + ' 같은 자세 추천 겹침 0');
+    assert(!scene.some(c => planned.some(o => o.preset === c.preset)), id + ' 다른 세계와 같은 자세 추천 0');
+    assert(!scene.some(c => planned.some(o => o.place === c.place && o.ofam === c.ofam)), id + ' 다른 세계와 같은 장면 · 같은 옷 계열 0');
+    ls.forEach((s, i) => assert(!s.outfits || s.outfits.includes(scene[i].ofam), id + ' 장면 ' + s.key + ' 의 의상 계열 ' + scene[i].ofam));
+    /* 시간 · 계절 · 날씨 — 서울 표 안, 장면이 받는 것, 트리 날씨 없음 */
+    scene.forEach((c, i) => {
+      const s = ls[i], wx = c.cityWeather && byKey(LIFE.weather.seoul, c.cityWeather);
+      assert(byKey(LIFE.times, c.time) && (!s.times || s.times.includes(c.time)), id + ' 시간대 ' + c.time + ' @ ' + s.key);
+      assert(byKey(LIFE.seasons.seoul, c.season) && (!s.seasons || s.seasons.includes(c.season)), id + ' 계절 ' + c.season + ' @ ' + s.key);
+      if (c.cityWeather) assert(wx && !s.indoor && (!wx.seasons || wx.seasons.includes(c.season)) && (!wx.times || wx.times.includes(c.time)), id + ' 날씨 ' + c.cityWeather);
+      assert(!c.weather, id + ' 트리 날씨는 안 쓴다');
+    });
+    { const cs = scene.map(c => c.color).filter(Boolean); assert.equal(new Set(cs).size, cs.length, id + ' 옷 색 갈래 겹침 0'); }
+    /* 기록 · 지시문 */
+    const mk = D.vocab.markers[w];
     for (const c of res.cuts) {
-      const rec = C.record(card, w, c);
-      assert.equal(rec.file, `${key}_${w}_${C.STYLE}_f_casual${c.n}.webp`);
-      assert.equal(rec.record, `records/${key}/${w}-casual${c.n}.${C.STYLE}-ui.json`);
-      assert.equal(rec.ref, `${key}_${w}_${C.STYLE}_f.webp`, '참고 그림은 그 세계 그림');
-      assert(rec.prompt.length > 500 && rec.treeV === 2 && rec.world === w);
-      if (SHORT) assert(rec.prompt.includes(TS.CASUAL.short.face) && rec.prompt.includes('1024×1536') && /\n\nStyle: /.test(rec.prompt) && rec.prompt.includes(TS.CASUAL.short.headwear) && !/^(?:WARDROBE|ANGLE|OUTPUT|AGE|ANATOMY):/m.test(rec.prompt), '짧은 일상컷');
-      const ol = (rec.prompt.match(/^Outfit: .*$/m) || [''])[0], CL = TS.CASUAL.colors.find(x => x.key === c.color);
-      if (c.sfree) {   /* 자유 설계 덩어리 — 장면 줄 없이, 얼굴 · 화풍 · 몸 줄은 그대로 */
-        assert(rec.prompt.includes(FD.head + '\nRecent scenes to avoid: ' + c.recent.join('; ') + '.\n' + FD.lines.join('\n') + '\n'), key + ' 자유 설계 덩어리');
-        assert(!/^(?:POSTURE|COMPOSITION|PROP|RIGHT HAND|LEFT HAND|BOTH HANDS|EXPRESSION|GAZE|Place: [^…]|Lens)/m.test(rec.prompt), key + ' 장면 줄 없음');
-        assert(rec.scene.sfree && !rec.scene.place && !rec.scene.era, key + ' 기록 장면은 트리로 채우지 않는다');
-        if (c.ofree) assert(ol.startsWith(FD.outfitFree + ', ') && !rec.prompt.includes('Outfit family (required)'), key + ' 옷 자유 Outfit 줄');
-        else {
-          assert(ol.startsWith(FD.outfit + ', '), key + ' 갈래 자유 Outfit 줄');
-          const fam = JSON.parse(fs.readFileSync(path.join(R, 'data/casual-tree.json'), 'utf8')).outfits.find(o => o.key === c.gfree);
-          assert(rec.prompt.includes('\nOutfit family (required): ' + TS.FREE_DESIGN.familyNames[c.gfree] + ' — any ' + TS.FREE_DESIGN.familyNames[c.gfree] + ' outfit; ') && rec.prompt.includes('\n' + FD.situFree + '\nOutfit: ') && rec.prompt.includes('prefer one that is not in it'), key + ' 갈래(큰 범위) · 열린 상황 줄(2026-11-11)');
-        }
-        assert(!/-denier yarn|reads clearly at first glance/.test(ol), key + ' 자유 칸엔 옷 색 · 데니어 없음');
-        continue;
-      }
-      if (P.colorFixed(C.outfitEn(c))) assert(!c.color, key + ' 색이 박힌 옷엔 색 없음'); else assert(CL && ol.includes(CL.en), key + ' 옷 색 줄');
-      if (c.denier) assert(ol.includes(TS.CASUAL.deniers.find(x => x.key === c.denier).top + '-denier yarn'), key + ' 데니어 줄'); else assert(!/-denier yarn/.test(ol));
-      if (c.situ) { const SI = TS.CASUAL.situations.find(x => x.key === c.situ); assert(ol.includes('; right now — ' + SI.en) || (!!SI.enIn && ol.includes('; right now — ' + SI.enIn)), key + ' 상황 줄(실내면 물 튐 글 enIn — 2026-11-13)'); } else assert(!/; right now — /.test(ol));
+      const rec = C.record(card, w, c), t = rec.prompt, neg = (t.split('\n\n').filter(b => /^Avoid: /.test(b))[0] || ''), body = neg ? t.replace(neg, '') : t;
+      assert.equal(rec.file, `seoul_${w}_${C.STYLE}_f_casual${c.n}.webp`, id + ' 파일 이름');
+      assert.equal(rec.record, `records/seoul/${w}-casual${c.n}.${C.STYLE}-ui.json`);
+      assert.equal(rec.ref, `seoul_${w}_${C.STYLE}_f.webp`, '참고 그림은 그 세계 그림');
+      assert(rec.treeV === 2 && rec.world === w && t.length > 500, id + ' 기록 꼴');
+      for (const b of mk.banned_en) assert(!word(b).test(body), id + ' 칸 ' + c.n + ' 금지 낱말 「' + b + '」 (Avoid 단락 밖)');
+      if (mk.banned_en.length) assert(neg.includes(mk.banned_en[0]), id + ' Avoid 단락에 그 세계 금지 낱말');
+      assert(!/\b(?:element|kingdom|mecha|atomic)\b/i.test(t) && !/[가-힣]/.test(t), id + ' 원소 말 · 한국어 없음');
+      assert(t.includes('\n\nWorld: an ordinary day in Seoul as her world knows it — '), id + ' 그 세계의 서울의 하루 줄');
+      if (c.sfree) { assert(t.includes(FD.head) && !/^Place: [^…]/m.test(t), id + ' 자유 설계 덩어리'); continue; }
+      const s = C.lifeOf(c.place), sw = s.worlds[w];
+      assert(t.includes('\nPlace: ' + sw.en.replace(/\.$/, '') + '.\n'), id + ' 그 장면의 그 세계 글');
+      for (const k of sw.props) assert(t.includes(PROPS.props[k].worlds[w].en), id + ' 소품 ' + k + ' 의 그 세계 낱말');
+      assert(t.includes(PROPS.clothes[w].en), id + ' 옷의 결 — 그 세계 평상복');
+      assert(t.includes('Season: ' + byKey(LIFE.seasons.seoul, c.season).en.replace(/\.$/, '') + '.') && t.includes('Time of day: ' + byKey(LIFE.times, c.time).en + '.'), id + ' 계절 · 시간대 줄');
     }
+    planned.push(...res.cuts);
     n++;
   }
+  assert.equal(new Set(exTypes).size, 3, 'seed ' + seed + ' 노출 갈래는 세계마다 다르다 — ' + exTypes);
 }
-assert(situSeen.size >= 4, '상황 넷 넘게(2026-11-13 상황이 늘었다 — 아홉) — ' + [...situSeen]);
-assert(['adventure', 'drape', 'resort', 'workwear'].filter(f => famSeen.has(f)).length >= 2, '새 계열 넷 가운데 둘 넘게(2026-11-13 — 계열이 늘고 장소 종류 조건이 생겨 표본 묶음에 넷이 다 들지는 않는다) — ' + [...famSeen]);
-assert(dn.fit > 5 && dn.set / dn.fit > 0.3 && dn.set / dn.fit < 0.9, '데니어 비율 ' + dn.set + '/' + dn.fit);
-/* 옛 다섯 장 묶음은 상황 없이 맞다 · 상황 컷이 없으면 잡는다 */
-{ const cd = C.cardOf('fe'); cd.world = 'fantasy'; const cuts = C.plan(cd, SIX, [], { seed: 4 }).cuts;
-  assert(C.check(cuts.map(c => { const x = { ...c }; delete x.situ; return x; }), cd, []).some(e => /상황 노출 컷이 없다/.test(e)), '상황 컷이 없으면 잡는다');
-  assert.deepEqual(C.check(cuts.slice(0, 5).map(c => { const x = { ...c }; delete x.situ; return x; }), cd, []).filter(e => /상황/.test(e)), [], '옛 다섯 장 묶음'); }
-/* 옛 여섯 장 묶음(갈래 자유 없이)은 그대로 통과하고, 다음 계획 때 일곱째 칸만 짜진다 · 새 규칙을 잡는다 */
-{ const cd = C.cardOf('au'); cd.world = 'fantasy'; const all = C.plan(cd, SEVEN, [], { seed: 8 }).cuts, six = all.filter(c => !c.gfree);
-  assert.deepEqual(C.check(six, cd, []), [], '옛 여섯 장 묶음 통과');
-  const old = six.map(c => ({ ...c, old: true })), more = C.plan(cd, [7], old, { seed: 2 });
-  assert.equal(more.cuts.length, 1); assert(more.cuts[0].n === 7 && more.cuts[0].gfree && more.cuts[0].sfree, '일곱째 칸만 — 갈래 자유');
-  assert.deepEqual(C.check(more.cuts, cd, old), [], '옛 여섯 장 + 일곱째');
-  const g = all.find(c => c.gfree), ex = all.find(c => C.EXPOSE_TYPES.includes(C.requiredType(c))), su = all.find(c => c.situ);
-  assert(C.check([{ ...g, gfree: ex.ofam }], cd, six).some(e => /노출 갈래 컷과 같다/.test(e)), '같은 갈래를 잡는다');
-  assert(C.check([{ ...g, gsitu: su.situ }], cd, six).some(e => /상황 노출 컷과 같다/.test(e)), '같은 상황을 잡는다');
-  assert(C.check(six.concat([{ ...six[0], n: 7, place: 'x' }]).slice(0, 7).map((c, i) => ({ ...c, n: i + 1 })), cd, []).some(e => /갈래 자유 컷이 없다/.test(e)), '일곱 장에 갈래 자유가 없으면 잡는다');
-  /* 실제 그림 저장소의 여섯 장 묶음 */
-  const img = path.join(R, '../element-atelier-img/records/cl');
-  if (fs.existsSync(img)) { const c2 = C.cardOf('cl'); c2.world = 'fantasy'; const o = C.oldCuts(img, c2, 'fantasy'); if (o.length === 6) { const m = C.plan(c2, [7], o, { seed: 1 }); assert(m.cuts.length === 1 && m.cuts[0].gfree, '그림 저장소의 여섯 장 위에 일곱째'); } }
-  assert.equal(C.freeText('FREE DESIGN: x\nPlace: a rooftop greenhouse.\nActivity: repotting a fern\nPose: …'), 'a rooftop greenhouse — repotting a fern'); assert.equal(C.freeText('Place: …\nActivity: …'), ''); }
+/* 캐릭터만의 컷(90번) — 서울 세 세계, 자세 서로 다르게, 지시문에 그 직업 장소 · 도구 · 의상 단계 */
+{
+  const presets = [];
+  for (const w of card.worlds) {
+    card.world = w;
+    const row = C.ownRow(card, w); assert(row && row.job_ko && row.place && row.activity && row.prop && row.outfit.bold && row.outfit.moderate && row.outfit.low, w + ' 직업 줄');
+    for (const lv of C.OWN_LEVELS) {
+      const oc = C.ownCut(card, w, lv, () => 0.3), rec = C.record(card, w, oc), t = rec.prompt;
+      assert(oc.n === C.OWN_N && oc.preset === row.preset && oc.axes.skin_exposure === lv, w + ' ' + lv + ' 90번');
+      assert(t.includes('Place: ' + row.place) && t.includes(row.outfit[lv]) && t.includes(row.prop), w + ' ' + lv + ' 직업 지시문');
+      const neg = t.split('\n\n').filter(b => /^Avoid: /.test(b))[0] || '', body = t.replace(neg, '');
+      for (const b of D.vocab.markers[w].banned_en) assert(!word(b).test(body), w + ' 90번 금지 낱말 「' + b + '」');
+    }
+    presets.push(row.preset);
+  }
+  assert.equal(new Set(presets).size, 3, '세 세계 직업컷 자세가 서로 다르다 — ' + presets);
+}
 /* 이미 있는 두 장 위에 세 장 */
 const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'casual-plan-'));
 try {
-  const card = C.cardOf(keys[1]); card.world = card.worlds[0];
+  card.world = 'steampunk';
   const first = C.plan(card, [1, 2], [], { seed: 5 });
   for (const c of first.cuts) fs.writeFileSync(path.join(tmp, `${card.world}-casual${c.n}.${C.STYLE}-ui.json`), JSON.stringify(C.record(card, card.world, c)));
   const old = C.oldCuts(tmp, card, card.world);
   assert.equal(old.length, 2);
   const more = C.plan(card, [3, 4, 5], old, { seed: 9 });
   assert.deepEqual(C.check(more.cuts, card, old), []);
-  assert.equal(new Set([...old, ...more.cuts].map(c => c.place)).size, 5, '장소가 있는 컷과도 다르다');
+  assert.equal(new Set([...old, ...more.cuts].map(c => c.place)).size, 5, '장면이 있는 컷과도 다르다');
 } finally { fs.rmSync(tmp, { recursive: true, force: true }); }
-/* 같은 입력 · 씨앗이면 같은 답, 그림 저장소 기록에서 센다 */
-{ const card = C.cardOf('fe'); card.world = 'fantasy';
-  assert.deepEqual(C.plan(card, [1, 2, 3], [], { seed: 7 }).cuts, C.plan(card, [1, 2, 3], [], { seed: 7 }).cuts, '같은 답');
-  const img = path.join(R, '../element-atelier-img/records');
-  if (fs.existsSync(img)) { const u = C.sceneUsage(img, 'fe'); assert(Object.keys(u.place).length > 10 && Object.keys(u.preset).length > 10, '그림 저장소 기록에서 센다');
-    const rc = C.recentScenes(img); assert(rc.length === 8 && rc.every(x => typeof x === 'string' && x.length < 200), '최근 장면 여덟 — ' + rc.join(' | ')); } }
-console.log(`PASS 일상컷 묶음 계획기: ${n} 묶음(카드 ${pickKeys.length} × 세계 × 씨앗 하나)이 일곱 장 · 묶음 규칙 · 정해 둔 세 갈래(노출 · 나라 안 · 상황 노출 — 상황 넷 다) · 자유 설계 칸 둘(옷 자유 · 갈래 자유) · 옛 여섯 장 + 일곱째 · 새 계열 · 네 시대 · 옷 색 · 데니어 · 상황 줄 · 짧은 일상컷 · 기록 꼴, 있는 두 장 위에 세 장 · 같은 씨앗 같은 답`);
+/* 같은 씨앗 같은 답 · 틀린 칸을 잡는다 */
+{
+  card.world = 'fantasy';
+  const a = C.plan(card, SEVEN, [], { seed: 7 }).cuts;
+  assert.deepEqual(a, C.plan(card, SEVEN, [], { seed: 7 }).cuts, '같은 답');
+  const c0 = a.find(c => !c.sfree && !C.requiredType(c) && !c.situ), at = i => a.map((c, j) => (j === i ? { ...c } : c)), i0 = a.indexOf(c0);
+  const bad = (patch, re, why) => { const x = at(i0); Object.assign(x[i0], patch); assert(C.check(x, card, []).some(e => re.test(e)), why); };
+  bad({ place: 'home_bedroom' }, /생활 장면표의 장면이 아니다/, '생활 장면이 아닌 장소');
+  bad({ ofam: 'everyday', item: 'jeans_tee' }, /금지 낱말/, '판타지에 청바지');
+  bad({ season: 'winter', place: 'seoul_river_pool' }, /계절 winter/, '여름 수영장에 겨울');
+  bad({ cityWeather: 'snowfall', season: 'summer' }, /날씨 snowfall/, '여름에 눈');
+  bad({ time: 'night' }, /시간대 night/, '트리 시간대');
+  bad({ weather: 'rain' }, /트리 날씨/, '트리 날씨');
+  card.world = 'steampunk';
+  const ph = C.check([{ ...c0, use: 'phone_selfie' }], card, []);
+  assert(ph.some(e => /phone_selfie 는 steampunk 에서 안 쓴다/.test(e)), '스팀펑크 셀카');
+}
+console.log(`PASS 일상컷 묶음 계획기: 서울 ${n} 묶음(세 세계 × 씨앗 셋)이 일곱 장(장면 다섯 + 자유 설계 둘) · 묶음 규칙 · 노출 갈래(세계마다 다르게) · 상황 노출 · 장면 겹침 0 · 자세 겹침 0(세계끼리도) · 시간 · 계절 · 날씨는 서울 표 안 · 그 세계 장면 글 · 소품 · 옷의 결 · 금지 낱말 0, 직업컷 셋(자세 서로 다르게), 있는 두 장 위에 세 장, 같은 씨앗 같은 답, 틀린 칸 여섯`);
