@@ -7,6 +7,20 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-19 · claude · 지구본 탭 · 도시 무대 · 한 장(Task 8) — SVG 지구본을 끌어 돌리고, 세 사람이 한 무대에
+- lib/globe.js(새) — 회전 무대 위 지구본: d3-geo 정사영 + world-atlas 땅, 세계마다 결(판타지 금 · 남빛 바다 / 스팀펑크 톱니 테 · 그을린 구리 / 사이버펑크 네온 선). 끌면 조명 안 도시가 바뀌고 놓으면 가운데로, 뒷면 점은 숨기고 못 누름, 날짜변경선은 짧은 쪽으로. glb(Task 6)가 그림 저장소에 있고 WebGL 이 되면 three.js 캔버스, 아니면 SVG 그대로
+- lib/globe-math.js(새) — latLonToVec3 · facing · nearestCity · wrapLon · lonDelta · 도시 차례(경도 서 → 동). 좌표 약속은 계획 Task 6 그대로
+- lib/city-view.js(새) — 도시 무대(세 칸 · 그림 없음 자리 · 생성기 길 · 그 도시의 하루) · 한 장(세계 넘기기)
+- index.html — 지구본 탭(전광판 앞 · 뒤 · 설계 전 표지 · 「세 사람 무대로」 막힘 안내) · 도시 무대 · 한 장 층, importmap three, img.js · globe-math.js 불러옴
+- lib/room.css — 지구본 결 변수(--sea --land --land-line --grat, 공간 여섯) · 도시 점 · 전광판 · 도시 무대 · 한 장 · 효과(이름 켜짐 · 세 조명 켜짐 — 움직임 켬일 때만), 지구본 자리 CSS 공은 ::before 로
+- lib/words.js — 지구본 · 도시 무대 · 한 장 · 위도경도 낱말
+- data/city-design.json — 서울 card_ko(상징 한 줄 · 세계마다 머리와 몸 · 무늬 짧은 말 — 화면이 손으로 짓지 않게)
+- tools/city-design.py · tests/city-design.py — card_ko 검사(빈 칸 · 길이 상한 · 상징 한 줄 낱말은 symbols[].ko 머리에서)
+- tests/globe-math.cjs · tests/globe-screen.cjs(새) — 계획 Task 8 (a)~(f) + 끌기 · 앞뒤 · 날짜변경선 · 세계 바꿈 중 끌기 · 두 번 누르기 · WebGL 없음 · glb 404 · CDN 막힘 · 움직임 끔
+- tests/lib/harness.cjs — jsDelivr 판 고정 모듈을 한 번 받아 두는 cdn-cache, 바깥 주소 정해 둔 답(fulfill) · CDN 막기 · 사진용 글꼴 · 브라우저 인자
+- prompt.html · styles.html — 공용 링크 ?v= 올림(words 32 · room 4)
+- DESIGN.md · AGENTS.md · docs/PORT_NOTES.md — 지구본이 지금은 SVG 인 것 · 짧은 말 칸 · three.js 길은 glb 가 오면 할 일
+
 ## 2026-11-19 · claude · 도시 극장 뼈대와 공간 여섯 — 사용자 「B로 해줘」(시안 B · 회전 무대 위 지구본)
 - DESIGN.md — 빈 틀을 이 공방의 뼈대로: 층(지구본 · 도시 무대 · 한 장 · 전체 도감)과 주소, 아래 탭 둘, 위 세계 고르개, 오른쪽 위 도구 단추, 공간 여섯, 막 · 조명 · 전광판 · 무대 · 표 한 장의 선택자(Task 8 · 9 가 그대로 쓴다), 효과와 움직임 끄기, 하지 않는 것, 폴드 덮개 규칙
 - lib/room.css — 원소 공간 다섯을 걷고 공간 여섯(세계 셋 × 객석 불 끔/켬)의 변수 한 곳으로. 판타지 붉은 벨벳 · 밝은 금 / 스팀펑크 쇠 들보 · 구리 리벳 · 화로 주황(금이 아니다) / 사이버펑크 네온 테 · 아래에서 쏘는 빛. 막 · 조명 · 무대 · 전광판 · 아래 탭 · 막 내림을 그림 파일 없이 CSS 로

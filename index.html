@@ -6,37 +6,69 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#1c0810">
 <title>도시 공방</title>
-<!-- 도시 극장 껍데기(Task 7, 2026-11-19 — 시안 B, DESIGN.md). 막 · 조명 · 세계 고르개(위) · 도구 단추(오른쪽 위) · 무대 · 전광판 · 아래 탭 둘(지구본 · 전체 도감).
-     공간 여섯(세계 × 객석 불)은 lib/workspace-theme.js + lib/room.css. 지구본 · 도시 무대 · 도감은 아직 「짓는 중」 — Task 8 · 9 가 같은 선택자를 채운다.
-     주소는 lib/walk-core.js 꼴(?tab=globe|dex &w=). 세계를 바꾸면 주소의 w 를 바꿔 쓰고(역사 안 늘림) 막이 한 번 내려온다(움직임 켬일 때만). -->
+<!-- 도시 극장(시안 B, DESIGN.md). 막 · 조명 · 세계 고르개(위) · 도구 단추(오른쪽 위) · 아래 탭 둘(지구본 · 전체 도감).
+     층: 지구본(첫 화면 — 회전 무대 위 지구본 lib/globe.js + 전광판) · 도시 무대 · 한 장(lib/city-view.js, Task 8) · 전체 도감(Task 9 — 아직 「짓는 중」).
+     공간 여섯(세계 × 객석 불)은 lib/workspace-theme.js + lib/room.css. 주소는 lib/walk-core.js 꼴(?tab=globe|dex &city= &card= &pic= &w=).
+     세계를 바꾸면 주소의 w 를 바꿔 쓰고(역사 안 늘림) 막이 한 번 내려온다(움직임 켬일 때만). 탭 · 도시 · 한 장 들어가기는 역사 한 칸.
+     importmap 'three' — 모형(glb)이 있을 때만 lib/globe.js 가 three.js 를 부른다(GLTFLoader 가 'three' 를 찾는다). -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;700&display=swap" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;700&display=swap"></noscript>
 <link rel="stylesheet" href="lib/workspace.css?v=5">
 <script src="lib/workspace-theme.js?v=4"></script>
-<script src="lib/words.js?v=31"></script>
+<script src="lib/words.js?v=32"></script>
 <script src="lib/favorites.js?v=1"></script>
 <script src="lib/patch.js?v=1"></script>
 <script src="lib/walk-core.js?v=7"></script>
-<link rel="stylesheet" href="lib/room.css?v=3">
+<script src="lib/img.js?v=10"></script>
+<script src="lib/globe-math.js?v=1"></script>
+<link rel="stylesheet" href="lib/room.css?v=4">
 <link rel="stylesheet" href="lib/toolbox.css?v=3">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"}}</script>
 </head>
 <body class="th-page">
 <div id="app"></div>
 <script type="module">
 import {h,render} from 'https://esm.sh/preact@10.24.3';
-import {useState,useEffect,useRef} from 'https://esm.sh/preact@10.24.3/hooks';
+import {useState,useEffect,useRef,useMemo} from 'https://esm.sh/preact@10.24.3/hooks';
 import {Toolbox} from './lib/toolbox.js?v=6';
-const W = window.W, A = window.AtelierAppearance, R = window.AtelierWalk;
+import {mountGlobe} from './lib/globe.js?v=1';
+import {CityStage,CardView,ready,latlon} from './lib/city-view.js?v=1';
+const W = window.W, A = window.AtelierAppearance, R = window.AtelierWalk, GM = window.GlobeMath, IMG = window.AtelierImg;
 const here = () => R.readRoute(location.search);
 const remember = () => { try { sessionStorage.setItem('city_walk_last', location.search); } catch (e) {} };
+const json = u => fetch(u, { cache: 'no-cache' }).then(r => { if (!r.ok) throw new Error(u + ' ' + r.status); return r.json(); });
+/* 자료 — 설계표 · 화풍 판(주소 검증) · 직업표 · 생활 장면표는 꼭, 그림 등록부는 없어도 돈다 */
+const DATA = Promise.all([json('data/city-design.json'), json('data/style.json'), json('data/casual-own.json'), json('data/city-life.json'), IMG.load().catch(() => ({}))])
+  .then(([d, s, own, life, img]) => ({ d, s, own, life, img }));
+let FOCUS = 'seoul';   /* 지구본 조명 안의 도시 — 탭을 오가도 남는다(이 화면 안에서만) */
+
+/* 지구본 자리 — 세계가 바뀌면 지우고 새로 띄운다(늦게 온 응답은 lib/globe.js 가 버린다) */
+function GlobeSlot({ cities, world, focus, onFocus, onPick }) {
+  const ref = useRef(null), ctl = useRef(null), cb = useRef({});
+  cb.current = { onFocus, onPick };
+  useEffect(() => {
+    const c = mountGlobe(ref.current, { cities, world, focus, onFocus: k => cb.current.onFocus(k), onPick: k => cb.current.onPick(k) });
+    ctl.current = c; return () => { ctl.current = null; c.destroy(); };
+  }, [cities, world]);
+  useEffect(() => { if (ctl.current) ctl.current.focus(focus); }, [focus]);
+  return h('div', { class: 'th-slot', ref, 'aria-hidden': 'true' });
+}
 
 function Theater() {
   const [route, setRoute] = useState(here), [look, setLook] = useState(() => A.get()), [drop, setDrop] = useState(0), dropEl = useRef(null);
+  const [data, setData] = useState(null), [fail, setFail] = useState(false), [focus, setFocusState] = useState(FOCUS), [note, setNote] = useState('');
+  const moved = useRef(false);   /* 전광판 이름 켜짐은 도시가 바뀔 때만(처음 그릴 때는 아니다) */
+  const setFocus = k => { FOCUS = k; moved.current = true; setFocusState(k); setNote(''); };
   useEffect(() => {
     const pop = () => setRoute(here()), app = () => setLook(A.get());
     addEventListener('popstate', pop); addEventListener('atelier-appearance', app);
+    DATA.then(x => {
+      setData(x);
+      const ok = R.validate(here(), x);
+      if (R.routeSearch(ok) !== location.search) { try { history.replaceState(history.state, '', location.pathname + R.routeSearch(ok)); } catch (e) {} setRoute(ok); }
+    }, () => setFail(true));
     return () => { removeEventListener('popstate', pop); removeEventListener('atelier-appearance', app); };
   }, []);
   useEffect(remember, [route]);
@@ -46,7 +78,8 @@ function Theater() {
     el.classList.remove('is-on'); void el.offsetWidth; el.classList.add('is-on');
     const t = setTimeout(() => el.classList.remove('is-on'), 800); return () => clearTimeout(t);
   }, [drop]);
-  const layer = R.layerOf(route), tab = layer === 'dex' ? 'dex' : 'globe';
+  const cities = useMemo(() => data ? data.d.cities.map(c => ({ key: c.key, ko: c.ko, lat: c.lat, lon: c.lon, hex: c.palette.hex[0], ready: ready(c) })) : null, [data]);
+  const layer = R.layerOf(route), tab = layer === 'dex' || (layer !== 'globe' && route.tab === 'dex') ? 'dex' : 'globe';
   const pickWorld = k => {
     if (k === look.world) return;
     A.set('world', k);
@@ -54,12 +87,51 @@ function Theater() {
     try { history.replaceState(history.state, '', location.pathname + R.routeSearch(next)); } catch (e) {}
     setRoute(next); setDrop(n => n + 1);
   };
+  /* 들어가기는 역사 한 칸(돌아가기 단추가 history.back 으로 되돌린다), 돌아가기는 그 칸을 걷는다 */
+  const enter = patch => { const next = Object.assign({}, R.EMPTY, { tab: route.tab, w: route.w, st: route.st, view: route.view }, patch); history.pushState({ in: 1 }, '', location.pathname + R.routeSearch(next)); setRoute(here()); scrollTo(0, 0); };
+  const leave = () => {
+    if (history.state && history.state.in) { history.back(); return; }
+    const up = R.parentOf(route) || R.EMPTY;
+    history.replaceState(null, '', location.pathname + R.routeSearch(up)); setRoute(here());
+  };
   const tabHref = k => location.pathname + R.routeSearch(Object.assign({}, R.EMPTY, { tab: k === 'dex' ? 'dex' : '', w: route.w, st: route.st, view: route.view }));
   const goTab = (e, k) => {
     if (e.ctrlKey || e.metaKey || e.shiftKey || e.button) return;
     e.preventDefault(); if (k === tab && layer === tab) return;
     history.pushState(null, '', tabHref(k)); setRoute(here());
   };
+  const cityOf = k => data && data.d.cities.find(c => c.key === k);
+  const goCity = k => { const c = cityOf(k); if (!c) return; if (!ready(c)) { setNote(W('globe.pre.note', { city: c.ko })); return; } enter({ city: k, tab: '' }); };
+
+  let body;
+  if (fail) body = [h('section', { class: 'th-marquee', key: 'm' }, h('p', null, W('walk.fail')))];
+  else if (!data) body = [h('main', { class: 'th-stage', key: 's' }, h('div', { class: 'th-slot', 'aria-hidden': 'true' })), h('section', { class: 'th-marquee', key: 'm' }, h('p', null, W('walk.loading')))];
+  else if (layer === 'city') body = [h(CityStage, { key: 'c', data, city: route.city, world: look.world, st: route.st, from: route.tab, onBack: leave, onCard: pic => enter({ tab: route.tab, city: route.city, card: route.city, pic }) })];
+  else if (layer === 'card') body = [h(CardView, { key: 'k', data, city: route.city, pic: route.pic, st: route.st, onBack: leave,
+    onPic: pic => { const next = Object.assign({}, route, { pic }); history.replaceState(history.state, '', location.pathname + R.routeSearch(next)); setRoute(next); } })];
+  else if (layer === 'dex') body = [
+    h('main', { class: 'th-stage', key: 's' }, h('div', { class: 'th-spot', 'aria-hidden': 'true' }), h('div', { class: 'th-floor', 'aria-hidden': 'true' }), h('div', { class: 'th-slot', 'aria-hidden': 'true' })),
+    h('section', { class: 'th-marquee', 'aria-live': 'polite', key: 'm' }, h('h2', { class: 'th-marquee-name th-disp' }, W('tab.dex')),
+      h('div', { class: 'th-bulbs', 'aria-hidden': 'true' }, h('i'), h('i'), h('i')), h('p', null, W('home.building') + ' — ' + W('home.building.note')))];
+  else {
+    const c = cityOf(focus) || data.d.cities[0], prev = cityOf(GM.step(cities, c.key, -1)), next = cityOf(GM.step(cities, c.key, 1)), on = ready(c);
+    const nav = (cls, x, arrow) => h('button', { type: 'button', class: cls, 'aria-label': W(cls === 'th-mq-prev' ? 'globe.prev' : 'globe.next', { city: x.ko }), onClick: () => setFocus(x.key) },
+      h('b', { 'aria-hidden': 'true' }, arrow), h('span', { 'aria-hidden': 'true' }, x.ko));
+    body = [
+      h('main', { class: 'th-stage', key: 's' }, h('div', { class: 'th-spot', 'aria-hidden': 'true' }), h('div', { class: 'th-floor', 'aria-hidden': 'true' }),
+        h(GlobeSlot, { cities, world: look.world, focus: c.key, onFocus: setFocus, onPick: goCity }),
+        h('p', { class: 'th-hint', 'aria-hidden': 'true' }, W('globe.hint'))),
+      h('section', { class: 'th-marquee', 'aria-live': 'polite', 'data-city': c.key, key: 'm' },
+        h('div', { class: 'th-mq-row' }, nav('th-mq-prev', prev, '◀'),
+          h('div', { class: 'th-mq-mid' }, h('h2', { class: 'th-marquee-name th-disp' + (moved.current ? ' is-flick' : ''), key: c.key, style: 'font-size:' + Math.min(44, Math.floor(168 / c.ko.length)) + 'px' }, c.ko),
+            h('div', { class: 'th-mq-sub' }, h('span', null, c.country), h('span', null, latlon(c)))),
+          nav('th-mq-next', next, '▶')),
+        h('div', { class: 'th-bulbs', 'aria-hidden': 'true' }, c.palette.hex.map(x => h('i', { key: x, style: 'background:' + x + ';color:' + x }))),
+        on ? null : h('span', { class: 'th-pre' }, W('globe.pre')),
+        h('p', { class: 'th-persona' }, c.persona)),
+      h('button', { type: 'button', class: 'th-go th-disp', key: 'g', 'aria-disabled': on ? undefined : 'true', onClick: () => goCity(c.key) }, W('globe.go')),
+      note ? h('p', { class: 'th-go-note', role: 'status', key: 'n' }, note) : null];
+  }
   return h('div', { class: 'th', 'data-layer': layer },
     h('div', { class: 'th-valance', 'aria-hidden': 'true' }), h('div', { class: 'th-side l', 'aria-hidden': 'true' }), h('div', { class: 'th-side r', 'aria-hidden': 'true' }),
     h('header', { class: 'th-head' },
@@ -68,12 +140,7 @@ function Theater() {
       h(Toolbox, {})),
     h('nav', { class: 'th-worlds', 'aria-label': W('world.pick') },
       A.worlds.map(k => h('button', { key: k, type: 'button', 'data-world': k, 'aria-pressed': k === look.world, onClick: () => pickWorld(k) }, W('world.' + k)))),
-    h('main', { class: 'th-stage' },
-      h('div', { class: 'th-spot', 'aria-hidden': 'true' }), h('div', { class: 'th-floor', 'aria-hidden': 'true' }), h('div', { class: 'th-slot', 'aria-hidden': 'true' })),
-    h('section', { class: 'th-marquee', 'aria-live': 'polite' },
-      h('h2', { class: 'th-marquee-name th-disp' }, W('tab.' + tab)),
-      h('div', { class: 'th-bulbs', 'aria-hidden': 'true' }, h('i'), h('i'), h('i')),
-      h('p', null, W('home.building') + ' — ' + W('home.building.note'))),
+    ...body,
     h('nav', { class: 'th-tabs', 'aria-label': W('tab.nav') }, h('div', { class: 'th-tabs-in' },
       ['globe', 'dex'].map(k => h('a', { key: k, class: 'th-tab', 'data-tab': k, href: tabHref(k), 'aria-current': k === tab ? 'page' : undefined, onClick: e => goTab(e, k) }, W('tab.' + k))))),
     h('div', { class: 'th-drop', ref: dropEl, 'aria-hidden': 'true' }));

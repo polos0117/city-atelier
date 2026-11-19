@@ -19,7 +19,7 @@
 
 | 화면 | 파일 | 무엇 |
 |---|---|---|
-| 첫 화면 | `index.html` | 도시 극장 껍데기(막 · 조명 · 세계 고르개 · 도구 단추 · 무대 · 전광판 · 아래 탭 둘) — 지구본 · 도시 무대 · 전체 도감은 「짓는 중」, Task 8 · 9 |
+| 첫 화면 | `index.html` · `lib/globe.js` · `lib/globe-math.js` · `lib/city-view.js` | 도시 극장(막 · 조명 · 세계 고르개 · 도구 단추 · 아래 탭 둘). 지구본 탭 = 회전 무대 위 SVG 지구본(끌어 돌림 — Blender glb 가 오면 three.js, `docs/PORT_NOTES.md` 끝) + 전광판(앞 · 뒤 · 「세 사람 무대로」). 도시 무대 = 세 세계 세 사람(글은 설계표 `card_ko` · 직업표), 한 장. 전체 도감은 「짓는 중」, Task 9 |
 | 공간 | `lib/room.css` · `lib/workspace-theme.js` | 공간 여섯 = 세계 셋 × 객석 불 끔/켬. 세계는 주소 · 고르개를 따라 저절로, 밝기는 도구 상자(`city_room_v1`). 변수는 `room.css` 한 곳 |
 | 도구 상자 | `lib/toolbox.js` · `lib/toolbox.css` | 「도구」 단추(공방은 머리 오른쪽 위) → 화풍 · 프롬프트 · 즐겨찾기 · 설정(객석 불 · 밀도 · 움직임) · 패치 기록. 도구 화면의 머리는 가는 막대 `ToolBar` |
 | 화풍 비교 | `styles.html` · `data/style-compare.json` · `tools/style-compare.py` | 같은 카드를 화풍별로 — 서울 묶음은 Task 11 |
@@ -77,6 +77,8 @@ node tests/favorites.cjs             # 즐겨찾기 공용 모듈 = 공방 모�
 node tests/casual-tree-v2.cjs        # 일상컷 트리 v2 + 공용 모듈 동일성(원소 공방 사본)
 node tests/walk-core.cjs             # 주소 순수 함수
 node tests/theme.cjs                 # 공간 여섯 · 세계 따라감 · 밝기 기억 · 움직임 끔(브라우저)
+node tests/globe-math.cjs            # 지구본 순수 함수(좌표 약속 · 앞면 · 조명 안의 도시 · 날짜변경선)
+node tests/globe-screen.cjs          # 지구본 탭 · 도시 무대 · 한 장(브라우저 — CDN 모듈은 처음 한 번 받아 ESM_DIR 옆 cdn-cache 에)
 node tests/casual-tree.cjs · python -I -X utf8 tests/casual-tree.py · python -I -X utf8 tests/style-compare.py · node tests/img-shards.cjs
 ```
 

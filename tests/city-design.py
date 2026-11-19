@@ -60,6 +60,11 @@ cases = {
     "사이버펑크 금지 낱말 있음": lambda d: d["vocab"]["markers"]["cyberpunk"].__setitem__("banned_en", ["sword"]),
     "표지 다섯": lambda d: d["vocab"]["markers"]["fantasy"].__setitem__("en", d["vocab"]["markers"]["fantasy"]["en"][:5]),
     "표지 ko · en 수 다름": lambda d: d["vocab"]["markers"]["steampunk"]["ko"].pop(),
+    "짧은 말 look 빔": lambda d: sw(d, "fantasy")["card_ko"].__setitem__("look", ""),
+    "짧은 말 칸 없음": lambda d: sw(d, "steampunk").pop("card_ko"),
+    "짧은 말 motif 김": lambda d: sw(d, "cyberpunk")["card_ko"].__setitem__("motif", "네온 송신탑 귀걸이 · 해치 문신 · 빛줄 비옷 · 긴 손톱"),
+    "상징 한 줄 없음": lambda d: city(d, "seoul").pop("card_ko"),
+    "상징 한 줄 지어냄": lambda d: city(d, "seoul")["card_ko"].__setitem__("symbols", "경복궁 · 없는 탑"),
     "옷 말투 빠짐": lambda d: d["vocab"]["wear"]["cyberpunk"].pop("moderate"),
 }
 for name, mut in cases.items():

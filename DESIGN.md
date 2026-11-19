@@ -58,9 +58,9 @@
 ## 5. 겉모습
 
 - **굵은 글씨 · 큰 이름.** 제목 글꼴은 간판 글씨 하나(Black Han Sans, `--display` · 클래스 `.th-disp`), 본문은 IBM Plex Sans KR.
-- **지구본 탭**(Task 8): 회전 무대(`.th-floor`) 위 지구본(`.th-slot` 자리에 three.js 캔버스, 먼저 정지 그림). 지구본 위 도시 점은 **작게**(지름 8~12px, 고른 도시만 테 하나) — **누르는 자리는 전광판**: `.th-mq-prev` · `.th-mq-next`(앞 · 뒤 도시, 56px 둥근 단추, 화살표 + 도시 이름) · `.th-marquee-name`(도시 이름 크게) · `.th-mq-sub`(나라 · 위도경도, 작게) · `.th-bulbs`(도시 `palette.hex` 전구) · `.th-persona`(성격 두 줄) · 그 아래 큰 단추 `.th-go`(「세 사람 무대로」, 52px). 판타지 · 스팀펑크 전광판은 전구 테, 사이버펑크는 네온 테.
-- **도시 무대**(Task 8): `.th-crumb`(`.th-back` 「← 지구본」/「← 전체 도감」) · `.th-city-title`(도시 이름 크게 · 나라 · 상징 한 줄) · `.th-cast`(세 칸 그리드) > `.th-role[data-world]`(`--rc` = 그 세계 배역 색) — `.th-beam`(위 조명) · `.th-fig`(그림, 없으면 「그림 없음」 + 머리색 점) · `.th-plaque`(세계 이름 · 직업 · 외형 한 줄) · `.th-draw`(「그리러 가기」 → `prompt.html?card=<도시>&o=world&world=<세계>`, 44px) · `.th-day`(그 도시의 하루 — 일상컷 수 · 생활 장면). 사람을 누르면 한 장.
-- **한 장**(Task 8): `.th-card` — 막 틀 안에 그림 하나, 위 층으로 돌아가기 · 세계 넘기기.
+- **지구본 탭**(Task 8): 회전 무대(`.th-floor`) 위 지구본(`.th-slot` — `lib/globe.js`). **지금은 SVG 지구본**(d3-geo 정사영 + world-atlas 땅, 세계마다 결: 판타지 남빛 바다 · 금 땅 · 기운 금 고리 / 스팀펑크 그을린 구리 · 톱니 테 · 놋쇠 기둥 / 사이버펑크 네온 해안선 · 주사선 · 빛 고리)을 끌어 돌린다. Blender 모형(Task 6, 그림 저장소 `models/globe/<세계>.glb`)이 있고 WebGL 이 되면 그 자리에 three.js 캔버스(`.gl-canvas`, 도시 점은 그 위 SVG). d3 · 땅을 못 받으면 CSS 공(`.th-slot::before`)이 자리를 지킨다. 지구본 위 도시 점(`.gl-pin`)은 **작게**(지름 10px, 조명 안 도시만 테 하나 · 이름 크게, 가까운 앞면 도시만 작은 이름, 설계 전 도시는 흐리게, 뒷면은 숨기고 못 누름). 점을 누르면 그 도시로 돌고, 조명 안 도시를 한 번 더 누르면 무대로 — 그래도 **누르는 자리는 전광판**: `.th-mq-prev` · `.th-mq-next`(앞 · 뒤 도시 — 경도 서 → 동 차례, 56px 둥근 단추, 화살표 + 도시 이름) · `.th-marquee-name`(도시 이름 크게, 긴 이름은 줄여서) · `.th-mq-sub`(나라 / 위도경도 두 줄, 작게) · `.th-bulbs`(도시 `palette.hex` 전구) · `.th-pre`(설계 전 표지) · `.th-persona`(성격 두 줄) · 그 아래 큰 단추 `.th-go`(「세 사람 무대로」, 52px — 설계 전 도시면 `aria-disabled` 꼴, 누르면 무대 대신 `.th-go-note` 짧은 안내). 무대 아래 `.th-hint`(끌어서 돌린다). 판타지 · 스팀펑크 전광판은 전구 테, 사이버펑크는 네온 테. 지구본 결 변수 `--sea` `--land` `--land-line` `--grat` 도 `lib/room.css` 공간 여섯에.
+- **도시 무대**(Task 8 · `lib/city-view.js`): `.th-crumb`(`.th-back` 「← 지구본」/「← 전체 도감」 · 「{세계}의 무대 · 세 사람」) · `.th-city-title`(도시 이름 크게 · `.th-city-meta` 나라 · 위도경도 · `.th-city-sym` 상징 한 줄) · `.th-cast`(세 칸 그리드) > `.th-role[data-world]`(`--rc` = 그 세계 배역 색) — `.th-beam`(위 조명) · `.th-fig`(그림, 없으면 `.is-empty` 「그림 없음」 + 배역 색 점) · `.th-plaque`(세계 이름 · 직업 · 머리와 몸 짧은 말 · 무늬 짧은 말) · `.th-draw`(「그리러 가기」 → `prompt.html?card=<도시>&o=world&world=<세계>`, 44px) · `.th-day`(그 도시의 하루 — 일상컷 수 · 생활 장면 수와 앞 셋). 그림이 있는 사람을 누르면 한 장. **화면 글은 자료에서만**: 상징 한 줄 = 설계표 도시 `card_ko.symbols`(낱말마다 `symbols[].ko` 머리), 머리 · 몸 · 무늬 짧은 말 = 세계마다 `card_ko.look` · `card_ko.motif`(각 20자 이하 — `tools/city-design.py check` 가 본다), 직업 = `data/casual-own.json` `job_ko`, 생활 장면 = `data/city-life.json`. 설계 전 도시 주소로 바로 오면 제목 + 「설계 전」 한 줄.
+- **한 장**(Task 8): `.th-card` — 막 틀(배역 색 테) 안에 그림 하나, `.th-back`(「← {도시} 무대」) · `.th-card-nav`(앞 · 뒤 세계 — 그림 있는 세계끼리, 주소 `pic` 를 바꿔 쓴다).
 - **전체 도감**(Task 9): `.th-dex` 머리(「전체 도감」 크게) · `.th-stats`(설계된 도시 · 세계 그림 · 일상컷 수) · `.th-legend` · `.th-tickets` > `.th-ticket[data-city]` — 왼쪽 `.th-stub`(도시 색 띠, `palette.hex` 셋) · `.th-tk-name`(도시 이름) · 세 칸 `.th-seat[data-world]`(`.is-empty` 「그림 없음」 → 생성기 길 · `.is-pre` 「설계 전」 · 그림 · 새 그림 `.th-new`) · `.th-count`(일상컷 수). 칸 44px.
 - 도시 `palette` 는 상징 색 — 지구본 점 · 전광판 전구 · 표의 띠에만. 공간 색을 바꾸지 않는다.
 
@@ -70,10 +70,10 @@
 |---|---|---|
 | 막 내림 | 세계를 바꿀 때 — 새 세계의 막이 내려왔다 오른다(0.7s) | `.th-drop.is-on` (지금 있음) |
 | 조명 숨쉬기 | 늘 — 조명이 천천히 밝아졌다 어두워진다 | `.th-spot` (지금 있음) |
-| 조명이 도시를 따라감 | 지구본을 돌리면 조명 안에 든 가장 가까운 도시(`GlobeMath.nearestCity`)가 바뀌고 전광판 이름이 바뀐다 | Task 8 |
-| 세 조명 켜짐 | 도시 무대에 들어오면 세 조명이 차례로 켜진다 | Task 8 |
+| 조명이 도시를 따라감 | 지구본을 끌면 조명 안(화면 가운데)에 가장 가까운 도시(`GlobeMath.nearestCity`)가 바뀌고 전광판 이름이 바뀐다. 놓거나 앞 · 뒤 단추 · 점을 누르면 그 도시가 0.45초 동안 가운데로 돈다(경도는 짧은 쪽 — 날짜변경선을 건너도 튀지 않는다). 이름이 바뀔 때 한 번 켜진다(`.th-marquee-name.is-flick`) | `lib/globe.js` · `.is-flick` |
+| 세 조명 켜짐 | 도시 무대에 들어오면 세 조명(`.th-beam`)이 0.25초 간격으로 켜진다 | `.th-role .th-beam` |
 
-기기의 움직임 줄이기 또는 도구 상자 「움직임 끄기」면 `data-motion="off"` — 효과는 하나도 돌지 않고 바뀐 결과만 곧바로 보인다(판단은 `lib/walk-core.js` `motionOn` 과 같은 열쇠 `city_motion_v1`). 지구본 끌어 돌리기는 효과가 아니라 조작이라 꺼지지 않는다(저절로 도는 것만 멈춘다).
+기기의 움직임 줄이기 또는 도구 상자 「움직임 끄기」면 `data-motion="off"` — 효과는 하나도 돌지 않고 바뀐 결과만 곧바로 보인다(판단은 `lib/walk-core.js` `motionOn` 과 같은 열쇠 `city_motion_v1`). 지구본 끌어 돌리기는 효과가 아니라 조작이라 꺼지지 않는다(도시를 가운데로 돌려 맞추는 것만 곧바로 바뀐다). 지구본은 저절로 돌지 않는다(돌면 전광판 도시가 저절로 바뀐다).
 
 ## 7. 하지 않는 것
 
@@ -94,4 +94,4 @@
 
 ## 9. 검사
 
-`tests/theme.cjs` — 여섯 판 변수 · 서로 다름 · 강조색 색상 차이 · 대비 · 44px · 넘침 · 콘솔 · 장식 영어 대문자 · 세계 따라감 · 밝기 기억 · 탭 둘 · 움직임 끔. 지구본 · 도시 무대는 `tests/globe-screen.cjs`(Task 8), 도감은 `tests/screen.cjs` 도감 부분(Task 9).
+`tests/theme.cjs` — 여섯 판 변수 · 서로 다름 · 강조색 색상 차이 · 대비 · 44px · 넘침 · 콘솔 · 장식 영어 대문자 · 세계 따라감 · 밝기 기억 · 탭 둘 · 움직임 끔. 지구본 · 도시 무대 · 한 장은 `tests/globe-screen.cjs`(Task 8 — 여섯 판 · 끌기 · 앞뒤 · 앞면 = d3 = `GlobeMath` · 뒷면 안 눌림 · 날짜변경선 · 세계 바꿈 중 끌기 · 두 번 누르기 · WebGL 없음 · glb 404 · CDN 막힘 · 모형 길 · 움직임 끔)와 `tests/globe-math.cjs`(순수 함수), 도감은 `tests/screen.cjs` 도감 부분(Task 9).

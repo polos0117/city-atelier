@@ -81,3 +81,19 @@
 ## 남은 것
 - (Task 4 검토) 손으로 고를 때 새는 것 — 노래방 · 네온 밤 같은 지금 장면이 판타지 · 스팀펑크 장면 고르기에서 손으로 고르면 그대로 나온다. 계획기는 거르지만 손으로 고르는 길은 아직 안 막았다. 다음으로 미룸.
 - (Task 4 검토) 역할극 산타 — 판타지 · 스팀펑크 역할극 갈래에 산타 같은 지금 문화 옷이 뽑힐 수 있다. 다음으로 미룸.
+
+## 지구본 three.js 길 — glb 가 오면(Task 6 뒤 할 일, 2026-11-19 Task 8 에서 적음)
+
+Task 8 은 Blender 지구본(Task 6 — 사용자가 클라우드 세션에서 나중에 만들기로 미룸)이 없는 채로 지었다. 지금 첫 화면의 지구본은 **SVG 지구본**(`lib/globe.js` — d3-geo@3.1.1 정사영 + world-atlas@2.0.2 `land-110m` + topojson-client@3.1.0, jsDelivr 판 고정)이고, three.js 길은 자리만 있다:
+`lib/globe.js` 가 SVG 를 띄운 뒤 그림 저장소 `models/globe/<세계>.glb`(주소는 `lib/img.js` `BASE` 의 `img/` 옆)를 HEAD 로 찾아, 있고 WebGL 이 되면 three@0.170.0 + `GLTFLoader` 로 캔버스(`.gl-canvas`)를 SVG 공 자리에 띄운다(도시 점 · 이름표는 그대로 SVG 가 위에 — 같은 정사영 · 같은 가운데). 없거나(404) · WebGL 이 없거나 · 실패하면 SVG 그대로. 지금은 `tests/globe-screen.cjs` 가 노드 `Globe` · `Stand` 만 든 아주 작은 가짜 glb 로 이 길이 도는 것만 본다.
+
+glb 가 오면:
+1. **좌표 약속 맞춰 보기** — 노드 `Globe` 반지름 1 · 경도 0 = +Z · 북극 +Y(계획 Task 6 Interfaces, `lib/globe-math.js` `latLonToVec3`). `lib/globe.js` 는 `Globe.rotation = (lat, −lon, 0, 'XYZ')`(라디안)로 돌리고 정사영 카메라(반지름 1 = SVG 의 r 픽셀)로 본다 — 서울 · 리우 · 날짜변경선 근처 도시 점이 모형의 땅 위에 정확히 앉는지 사진으로 본다. 어긋나면 모형의 텍스처 경도 기준(정방형 도법의 가운데가 경도 0 인지)부터.
+2. **`tests/globe-assets.cjs`**(계획 Task 6 Step 1) — 세 glb ≤ 1.5MB, `Globe` · `Stand`, `Globe` bounding sphere 1±0.02.
+3. **Draco 압축을 쓰면** `DRACOLoader`(three@0.170.0 `examples/jsm/loaders/DRACOLoader.js` + 디코더 경로)를 `lib/globe.js` 에 더한다(지금은 없다 — 압축 없는 glb 만 읽는다).
+4. **빛 · 받침** — 지금은 주변광 + 방향광 하나(`lib/globe.js` `tryModel`). 모형의 재질에 맞춰 세계마다 조정, `Stand` 는 돌지 않는다. SVG 장식(톱니 테 · 금 고리 · 빛 고리 · 받침)은 모형일 때 숨긴다(`.th-slot.is-model .gl-deco`).
+5. **정지 그림** — 계획의 `<world>-still.webp`(정면 렌더)는 지금 쓰지 않는다(SVG 지구본이 곧바로 그 자리를 맡는다). 모형이 무거워 늦으면 SVG → 캔버스 바뀜이 보이니, 바뀔 때 0.3초 겹쳐 사라지기(움직임 켬일 때만)를 더할지 본다.
+6. **그림 저장소에 올리기** — `models/globe/` 는 Task 10(사용자 「올려줘」 뒤). 그 전까지 라이브의 HEAD 는 404(콘솔에 리소스 404 한 줄이 남는다 — 아래 걱정).
+7. 실제 모형으로 `tests/globe-screen.cjs` 의 「모형 길」 칸을 진짜 glb 로도 한 번 돌리고, 344×882 사진을 세계 셋으로 다시 찍는다.
+
+걱정: 그림 저장소에 모형이 없는 동안 라이브 첫 화면은 HEAD 404 를 한 번 부른다(브라우저 콘솔에 「Failed to load resource 404」 한 줄 — 검사 하네스는 이 줄을 오류로 치지 않는다). 거슬리면 `data/img.json` 에 모형 목록을 적어 HEAD 없이 고르는 꼴로 바꾼다.

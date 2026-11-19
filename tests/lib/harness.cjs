@@ -23,10 +23,22 @@ function serve() {
   });
   return new Promise(r => server.listen(0, '127.0.0.1', () => r({ base: 'http://127.0.0.1:' + server.address().port, close: () => server.close() })));
 }
-const launch = () => chromium.launch({ executablePath: process.env.CHROMIUM_PATH || undefined });
+const launch = (args = []) => chromium.launch({ executablePath: process.env.CHROMIUM_PATH || undefined, args });
+/* 지구본(Task 8)이 부르는 jsDelivr 판 고정 모듈 · 자료(d3-geo · d3-array · internmap · topojson-client · world-atlas · three) — 처음 한 번 받아 ESM_DIR 옆 cdn-cache 에 두고 그 뒤로는 거기서 */
+const CDN = /^https:\/\/cdn\.jsdelivr\.net\/npm\/(d3-[a-z]+|internmap|topojson-client|world-atlas|three)@\d[^?#]*$/, CDN_DIR = path.join(ESM_DIR, '..', 'cdn-cache');
+async function cdn(r, u) {
+  const file = path.join(CDN_DIR, u.replace(/^https:\/\//, '').replace(/[^\w.@-]+/g, '_')), type = /\.json$/.test(u) ? 'application/json' : 'text/javascript';
+  if (!fs.existsSync(file)) {
+    const res = await r.fetch().catch(() => null);
+    if (!res || !res.ok()) return r.abort();
+    fs.mkdirSync(CDN_DIR, { recursive: true }); fs.writeFileSync(file, await res.body());
+  }
+  return r.fulfill({ status: 200, contentType: type, headers: { 'Access-Control-Allow-Origin': '*' }, body: fs.readFileSync(file) });
+}
 
+/* fulfill = [{ url: RegExp, status?, body?, contentType? }] — 바깥 주소 하나를 정해 둔 답으로(지구본 glb 있음 · 없음 등) */
 async function open(browser, base, url, opt = {}) {
-  const { viewport = COVER, reduced = false, touch = false, noWebGL = false, blockPixi = false, failURL = null, pref = null, slowImg = 0 } = opt;
+  const { viewport = COVER, reduced = false, touch = false, noWebGL = false, blockPixi = false, failURL = null, pref = null, slowImg = 0, fulfill = [], blockCDN = false, fonts = false } = opt;
   const ctx = await browser.newContext({ viewport, ...(reduced ? { reducedMotion: 'reduce' } : {}), ...(touch ? { hasTouch: true } : {}) });
   if (noWebGL) await ctx.addInitScript(() => {
     const get = HTMLCanvasElement.prototype.getContext;
@@ -39,7 +51,11 @@ async function open(browser, base, url, opt = {}) {
   await ctx.route('**/*', async r => {
     const u = r.request().url(), bare = u.split('?')[0];
     if (failURL && failURL.test(u)) return r.fulfill({ status: 404, body: '' });
+    const fx = fulfill.find(f => f.url.test(u));
+    if (fx) return r.fulfill({ status: fx.status || 200, contentType: fx.contentType || 'application/octet-stream', headers: { 'Access-Control-Allow-Origin': '*' }, body: fx.body || '' });
     if (u.startsWith(base)) return r.continue();
+    if (CDN.test(bare)) return blockCDN ? r.abort() : cdn(r, bare);
+    if (fonts && /^https:\/\/fonts\.(googleapis|gstatic)\.com\//.test(u)) return r.continue();   /* 사진용 — 진짜 글꼴 */
     if (blockPixi && /pixi/.test(u)) return r.abort();
     if (/\.(webp|png)(\?.*)?$/.test(u)) {
       if (slowImg) await new Promise(t => setTimeout(t, slowImg));

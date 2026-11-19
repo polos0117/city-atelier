@@ -65,6 +65,7 @@
         { "ko": "해치 — 서울특별시의 공식 상징물", "en": "the haechi, a mythical guardian beast and the official symbol of Seoul", "src": "https://ko.wikipedia.org/wiki/해치" }
       ],
       "design_note": "설계 상태: 시안(claude, 2026-11-19) — 시험 그림 전. 원소 설계표에는 설계 상태 칸이 없어 칸을 만들지 않고 여기 적는다.",
+      "card_ko": { "symbols": "경복궁 · 한양도성 · 남산 송신탑 · 한강철교 · 해치" },
       "worlds": {
         "fantasy": {
           "ko": "왕도 서울 — 북악 · 인왕 · 남산 · 낙산을 성벽으로 이어 감싼 금빛 궁궐의 도읍, 남산 봉수대에 불이 오르고 한강이 은빛 해자처럼 남쪽을 돈다",
@@ -83,7 +84,8 @@
           "motif": {
             "ko": "단청 문양을 금실로 수놓은 바닥까지 끌리는 서울 빨강 비단 망토, 해치를 새긴 금 견갑, 성곽으로 이은 네 산봉우리 모양의 보석 왕관",
             "en": "a floor-sweeping Seoul-red silk cape embroidered in gold thread with dancheong temple-eave patterns, gilded pauldrons engraved with a haechi guardian beast, and a jeweled crown shaped like four mountain peaks linked by a city wall"
-          }
+          },
+          "card_ko": { "look": "남빛 긴 생머리 · 키 큰 몸", "motif": "단청 금실 망토 · 네 봉우리 왕관" }
         },
         "steampunk": {
           "ko": "증기 공업 도시 서울 — 1900년 무렵, 한강을 건너는 리벳 트러스 철교 위로 기관차가 달리고 강변 주물 공장 굴뚝이 그을음을 뿜는다",
@@ -102,7 +104,8 @@
           "motif": {
             "ko": "한강철교 트러스의 엇갈린 리벳 무늬를 그대로 박은 그을린 가죽 작업 하네스와 해치 머리 모양으로 부어 만든 압력계 버클",
             "en": "a soot-blackened leather work harness riveted in the crisscross truss pattern of the iron railway bridge over the Han River, fastened with a pressure-gauge buckle cast in the shape of a haechi head"
-          }
+          },
+          "card_ko": { "look": "구리빛 울프컷 · 어깨 넓은 몸", "motif": "철교 리벳 하네스 · 해치 압력계" }
         },
         "cyberpunk": {
           "ko": "네온 메가시티 서울 — 남산 송신탑이 붉은 네온 첨탑으로 빛나고, 한강 다리마다 빛줄기가 흐르며, 고층 아파트 숲과 비 젖은 골목에 간판 빛이 넘친다",
@@ -121,7 +124,8 @@
           "motif": {
             "ko": "붉은 네온 남산 송신탑 모양의 긴 귀걸이, 한강 다리 불빛처럼 빛줄이 흐르는 반사 비옷, 손등에 빛나는 해치 문신",
             "en": "long earrings shaped like the Namsan transmission tower in glowing Seoul-red neon, a reflective raincoat with light strips racing along it like the river bridges at night, and a glowing haechi tattoo on the back of her hand"
-          }
+          },
+          "card_ko": { "look": "청록빛 비대칭 단발 · 마른 몸", "motif": "네온 송신탑 귀걸이 · 해치 문신" }
         }
       }
     },

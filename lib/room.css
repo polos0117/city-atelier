@@ -105,10 +105,14 @@ html[data-world="cyberpunk"] .th-side {width:5px;background:linear-gradient(var(
 .th-spot {position:absolute;left:50%;top:-40px;width:340px;max-width:120%;height:calc(100% + 40px);transform:translateX(-50%);pointer-events:none;
   clip-path:polygon(40% 0,60% 0,100% 100%,0 100%);background:linear-gradient(var(--spot),transparent 92%)}
 html[data-world="cyberpunk"] .th-spot {top:auto;bottom:16px;height:100%;clip-path:polygon(0 0,100% 0,62% 100%,38% 100%);background:linear-gradient(0deg,var(--spot),transparent 92%)}
-.th-slot {position:absolute;left:50%;top:44%;width:min(240px,70%);aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;border:1.5px dashed var(--line);
+/* 지구본 자리 — 무대를 덮는다. 지구본(lib/globe.js)이 오기 전 · 못 오면 CSS 공(::before)이 그 자리를 지킨다 */
+.th-slot {position:absolute;inset:0}
+.th-slot::before {content:'';position:absolute;left:50%;top:calc(50% - 26px);width:min(236px,70%);aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;border:1.5px dashed var(--line);
   background:radial-gradient(circle at 38% 32%,var(--card2),var(--card) 60%,var(--bg))}
-html[data-world="cyberpunk"] .th-slot {border-color:var(--accent2);box-shadow:0 0 18px var(--spot),inset 0 0 22px var(--spot)}
-html[data-world="steampunk"] .th-slot {border:6px dotted var(--trim);border-radius:50%}
+.th-slot.is-ready::before {display:none}
+.th-slot.is-ready {touch-action:none}
+html[data-world="cyberpunk"] .th-slot::before {border-color:var(--accent2);box-shadow:0 0 18px var(--spot),inset 0 0 22px var(--spot)}
+html[data-world="steampunk"] .th-slot::before {border:6px dotted var(--trim)}
 .th-floor {position:absolute;left:50%;bottom:10px;width:min(300px,92%);height:50px;transform:translateX(-50%);border-radius:50%;background:var(--floor);border:2px solid var(--accent);
   box-shadow:inset 0 0 0 10px var(--floor),inset 0 0 0 11px var(--line)}
 html[data-world="cyberpunk"] .th-floor {background:transparent;border-color:var(--accent2);box-shadow:0 0 14px var(--accent2),inset 0 0 14px var(--spot)}
@@ -141,6 +145,102 @@ html[data-motion="on"] .th-drop.is-on {animation:th-drop .7s cubic-bezier(.5,0,.
 html[data-motion="on"] .th-worlds button {transition:background-color .25s,color .25s}
 @keyframes th-breathe {from {opacity:.7} to {opacity:1}}
 @keyframes th-drop {0% {transform:translateY(-101%)} 45%,55% {transform:translateY(0)} 100% {transform:translateY(-101%)}}
+
+/* ── 지구본 탭 · 도시 무대 · 한 장(Task 8, DESIGN.md 5 · 6절) ── */
+/* 지구본 결 — 바다 · 땅 · 해안선 · 경위선, 공간마다(판타지 남빛 바다 · 금 땅 / 스팀펑크 그을린 구리 / 사이버펑크 네온 선) */
+:root,html[data-world="fantasy"][data-tone="dark"] {--sea:#17306a;--land:#c9a24a;--land-line:#f3d98a;--grat:rgb(243 217 138 / .3)}
+html[data-world="fantasy"][data-tone="light"] {--sea:#2a4a96;--land:#d8b25a;--land-line:#7a5418;--grat:rgb(122 84 24 / .3)}
+html[data-world="steampunk"][data-tone="dark"] {--sea:#3a2f26;--land:#a27a42;--land-line:#e8b56a;--grat:rgb(232 181 106 / .22)}
+html[data-world="steampunk"][data-tone="light"] {--sea:#8f8270;--land:#5e4a33;--land-line:#2b2015;--grat:rgb(43 32 21 / .25)}
+html[data-world="cyberpunk"][data-tone="dark"] {--sea:#0a091e;--land:rgb(35 230 255 / .08);--land-line:#23e6ff;--grat:rgb(255 63 174 / .3)}
+html[data-world="cyberpunk"][data-tone="light"] {--sea:#f7f9fc;--land:rgb(10 127 153 / .16);--land-line:#0a7f99;--grat:rgb(194 24 122 / .25)}
+.gl-svg,.gl-canvas {position:absolute;inset:0;width:100%;height:100%}
+.gl-svg {touch-action:none;overflow:visible;cursor:grab}
+.th-slot.is-model .gl-ball,.th-slot.is-model .gl-deco {display:none}
+.gl-sea {fill:var(--sea)}
+.gl-land {fill:var(--land);stroke:var(--land-line);stroke-width:.9;stroke-linejoin:round}
+.gl-grat {fill:none;stroke:var(--grat);stroke-width:.6}
+.gl-rim {fill:none;stroke:var(--accent);stroke-width:2}
+.gl-ring {fill:none;stroke:var(--accent);stroke-width:3.5}
+.gl-finial,.gl-post {fill:var(--accent)}
+html[data-world="steampunk"] .gl-land {stroke-dasharray:3 1.5}
+html[data-world="steampunk"] .gl-gear {fill:var(--card2);stroke:var(--accent2);stroke-width:1}
+html[data-world="steampunk"] .gl-post {fill:var(--card2);stroke:var(--accent2)}
+html[data-world="cyberpunk"] .gl-grat {stroke-dasharray:1 3}
+html[data-world="cyberpunk"] .gl-land {stroke-width:1.2}
+html[data-world="cyberpunk"] .gl-rim {stroke:var(--accent2)}
+html[data-world="cyberpunk"] .gl-ring {stroke-width:1.6}
+.gl-scan line {stroke:var(--accent2);stroke-width:.4;opacity:.14}
+.gl-halo-base {fill:none;stroke:var(--accent2);stroke-width:2.5}
+/* 도시 점 — 작게(지름 10px), 조명 안 도시만 테 하나. 뒷면은 보이지도 눌리지도 않는다. 설계 전 도시는 흐리게 */
+.gl-pin {cursor:pointer}
+.gl-hit {fill:transparent}
+.gl-dot {stroke:var(--text);stroke-width:1.3}
+.gl-halo {fill:var(--spot);stroke:var(--accent);stroke-width:1.5;opacity:0}
+.gl-pin.is-on .gl-halo {opacity:1}
+.gl-pin.is-on .gl-dot {r:6px}
+.gl-pin.is-pre .gl-dot,.gl-pin.is-pre .gl-tag {opacity:.5}
+.gl-pin.is-back {visibility:hidden;pointer-events:none}
+.gl-tag {font:800 10.5px 'IBM Plex Sans KR',sans-serif;fill:var(--text);paint-order:stroke;stroke:var(--bg);stroke-width:3px;stroke-linejoin:round;pointer-events:none}
+.gl-pin.is-far .gl-tag {display:none}
+.gl-pin.is-on .gl-tag {display:inline;font:16px var(--display);fill:var(--accent)}
+.th-hint {position:absolute;left:0;right:0;bottom:0;margin:0;text-align:center;font-size:11px;font-weight:700;color:var(--muted);pointer-events:none}
+html[data-layer="globe"] .th-floor {bottom:22px}
+/* 전광판 — 앞 · 뒤 단추(56px) · 이름 · 나라와 위도경도 · 상징 색 전구 · 성격 두 줄. 판타지 · 스팀펑크는 전구 테 */
+html[data-world="fantasy"] .th-marquee::before,html[data-world="steampunk"] .th-marquee::before {content:'';position:absolute;inset:-7px;padding:5px;border-radius:14px;pointer-events:none;
+  background:radial-gradient(circle,var(--trim) 2px,transparent 2.6px) 0 0/14px 14px;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0)}
+.th-mq-row {display:flex;align-items:center;gap:6px}
+.th-mq-mid {flex:1 1 0;min-width:0}
+.th-mq-prev,.th-mq-next {flex:none;width:56px;height:56px;padding:0;border-radius:50%;border:1.5px solid var(--line);background:transparent;color:var(--muted);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;font-family:inherit;font-size:10.5px;font-weight:800;line-height:1.1;overflow:hidden}
+.th-mq-prev b,.th-mq-next b {font-size:15px;color:var(--accent)}
+.th-mq-prev span,.th-mq-next span {max-width:48px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.th-mq-sub {margin-top:4px;font-size:11px;font-weight:700;line-height:1.4;color:var(--muted)}
+.th-mq-sub span {display:block;white-space:nowrap}
+.th-bulbs i[style] {box-shadow:0 0 8px currentColor}
+.th-pre {display:inline-block;margin-top:8px;padding:2px 10px;border-radius:10px;border:1px dashed var(--line);font-size:11px;font-weight:800;color:var(--muted)}
+.th-marquee .th-persona {display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-top:8px;font-size:12.5px;line-height:1.55}
+.th-go {display:block;width:100%;min-height:52px;margin:12px 0 0;border:0;border-radius:26px;background:var(--accent);color:var(--on-accent);font-size:20px;cursor:pointer}
+.th-go[aria-disabled="true"] {background:transparent;color:var(--muted);box-shadow:inset 0 0 0 1.5px var(--line)}
+html[data-world="cyberpunk"] .th-go:not([aria-disabled]) {box-shadow:0 0 18px var(--accent)}
+.th-go-note {margin:8px 0 0;font-size:12.5px;line-height:1.5;text-align:center;color:var(--text)}
+/* 도시 무대 — 세 세계 세 사람이 조명 셋 아래(--rc = 그 세계 배역 색) */
+.th-crumb {display:flex;align-items:center;gap:8px;margin-top:12px}
+.th-back {min-height:44px;padding:0 14px;border-radius:22px;border:1.5px solid var(--line);background:transparent;color:var(--text);font-family:inherit;font-size:14px;font-weight:800;cursor:pointer}
+.th-crumb span {margin-left:auto;font-size:11px;font-weight:700;color:var(--muted);text-align:right}
+.th-city-title h2 {margin:10px 0 0;font-size:56px;line-height:1}
+.th-city-meta {margin:6px 0 0;font-size:11px;font-weight:700;color:var(--muted)}
+.th-city-sym {margin:6px 0 0;font-size:12.5px;line-height:1.55}
+.th-city-sym b {margin-right:6px;color:var(--accent)}
+.th-cast {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-top:16px}
+.th-role {position:relative;min-width:0;display:flex;flex-direction:column}
+.th-beam {position:absolute;left:-10%;right:-10%;top:-14px;height:190px;background:radial-gradient(60% 100% at 50% 0,var(--rc),transparent 75%);opacity:.32;pointer-events:none}
+.th-fig {position:relative;aspect-ratio:3/5;border-radius:48px 48px 6px 6px;border:1.5px dashed var(--rc);display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:6px;
+  padding:0 0 12px;overflow:hidden;font-size:11px;font-weight:700;color:var(--muted);background:transparent}
+button.th-fig {padding:0;border-style:solid;cursor:pointer}
+.th-fig img {width:100%;height:100%;object-fit:cover}
+.th-fig i {width:22px;height:22px;border-radius:50%;background:var(--rc);box-shadow:0 0 10px var(--rc)}
+.th-plaque {display:flex;flex-direction:column;gap:2px;margin-top:8px;padding-top:6px;border-top:3px solid var(--rc);font-size:11px;line-height:1.45;word-break:keep-all}
+.th-plaque .th-disp {font-size:15px;color:var(--rc)}
+.th-job {font-weight:800}
+.th-motif {color:var(--muted)}
+.th-draw {display:flex;align-items:center;justify-content:center;min-height:44px;margin-top:auto;border-radius:22px;border:1.5px solid var(--rc);color:var(--text);font-size:12px;font-weight:800;text-decoration:none}
+.th-plaque {margin-bottom:8px}
+.th-day {margin:16px 0 0;padding:10px 12px;border-radius:10px;background:var(--card);border:1px solid var(--line);font-size:12px;line-height:1.55;color:var(--muted)}
+.th-day b {color:var(--text)}
+/* 한 장 — 막 틀 안에 그림 하나 */
+.th-card figure {margin:12px 0 0;padding:8px;border-radius:12px;background:var(--card2);box-shadow:inset 0 0 0 3px var(--rc),var(--shadow)}
+.th-card img {display:block;width:100%;border-radius:6px}
+.th-card figcaption {margin-top:8px;text-align:center;font-size:12px;font-weight:700;color:var(--text)}
+.th-card-nav {display:flex;gap:8px;margin-top:10px}
+.th-card-nav button {flex:1 1 0;min-height:44px;border-radius:22px;border:1.5px solid var(--line);background:transparent;color:var(--text);font-family:inherit;font-weight:800}
+/* 효과 — 「조명이 도시를 따라감」(전광판 이름이 켜지며 바뀐다) · 「세 조명 켜짐」(차례로). 움직임 끔이면 없음 */
+html[data-motion="on"] .th-marquee-name.is-flick {animation:th-flick .4s ease-out}
+html[data-motion="on"] .th-beam {animation:th-light .5s ease-out both}
+html[data-motion="on"] .th-role:nth-child(2) .th-beam {animation-delay:.25s}
+html[data-motion="on"] .th-role:nth-child(3) .th-beam {animation-delay:.5s}
+@keyframes th-flick {0% {opacity:.25;filter:brightness(1.8)} 100% {opacity:1;filter:none}}
+@keyframes th-light {from {opacity:0} to {opacity:.32}}
 
 @media (min-width:768px) {.th {padding-top:40px} .th-marquee-name {font-size:52px}}
 @media (forced-colors:active) {.th-valance,.th-side,.th-spot,.th-drop {display:none}}

@@ -13,6 +13,8 @@
 - worlds 가 {} 면 설계 미정. 채우면 세 세계 다: ko · en(40자 이상, 한국어 없음) · scenes 셋(key · ko · en) ·
   look { face 여섯, silhouette 셋, why } · hold.en · motif { ko, en }. 세 세계는 다른 사람 — 머리색 · 체형 · 얼굴형 · 헤어스타일이 세계끼리 모두 다르다.
 - 판타지 · 스팀펑크의 글(en · scenes · hold · motif)에 그 세계 banned_en 낱말이 없다.
+- 화면 짧은 말(도시 무대 · Task 8): 설계된 도시는 card_ko.symbols(상징 한 줄, SHORT_SYMBOLS 자 이하 — " · " 로 나눈 낱말마다
+  symbols[].ko 하나의 머리), 세계마다 card_ko { look(머리 · 몸), motif(무늬) } 각 SHORT_WORLD 자 이하. 화면은 이 칸을 그대로 읽는다.
 - look 값은 소문자 열쇠까지만 본다 — 어휘 대조는 tests/look-spec.cjs(lib/look-spec.js VOCAB_EN · FACE_DESIGN).
 """
 import json
@@ -31,6 +33,7 @@ LOOK = {"face": ("face_shape", "eyes", "brows", "nose", "lips", "eye_color"), "s
 FACE_DESIGN = {"face": ("age", "impression", "skin_tone", "eye_size", "eye_tilt", "mark", "expr"), "silhouette": ("bangs",)}
 DIFFER = (("silhouette", "hair_color"), ("silhouette", "body"), ("face", "face_shape"), ("silhouette", "hair"))
 WEAR = ("costume", "bold", "moderate", "low")
+SHORT_SYMBOLS, SHORT_WORLD = 40, 20
 
 
 def banned_in(text, banned):
@@ -125,6 +128,13 @@ def check(doc):
         if not ws:
             undecided += 1
             continue
+        line = (c.get("card_ko") or {}).get("symbols")
+        line = line.strip() if isinstance(line, str) else ""
+        if not line or len(line) > SHORT_SYMBOLS:
+            errs.append(here + " card_ko.symbols(상징 한 줄)가 비었거나 %d자 넘음 — %d자" % (SHORT_SYMBOLS, len(line)))
+        for part in [x.strip() for x in line.split(" · ") if x.strip()]:
+            if not any((s.get("ko") or "").startswith(part) for s in sy):
+                errs.append(here + " card_ko.symbols 의 %r 가 symbols[].ko 머리에 없다(지어내지 않는다)" % part)
         if sorted(ws) != sorted(WORLDS):
             errs.append(here + " worlds 는 세 세계 다 — %r" % sorted(ws))
         for w, body in ws.items():
@@ -165,6 +175,11 @@ def check(doc):
             if not isinstance(mo, dict) or not (mo.get("ko") or "").strip():
                 errs.append(wh + " motif 가 없다(도시 상징을 실은 옷 · 장신구 한 줄)")
             en(wh + " motif.en", (mo or {}).get("en"), 30)
+            ck = body.get("card_ko") or {}
+            for f in ("look", "motif"):
+                t = ck.get(f).strip() if isinstance(ck.get(f), str) else ""
+                if not t or len(t) > SHORT_WORLD:
+                    errs.append("%s card_ko.%s(화면 짧은 말)가 비었거나 %d자 넘음 — %d자" % (wh, f, SHORT_WORLD, len(t)))
             ban = (markers.get(w) or {}).get("banned_en") or []
             texts = [body.get("en"), (body.get("hold") or {}).get("en"), (mo or {}).get("en")] + [(r or {}).get("en") for r in sc]
             for t in texts:
