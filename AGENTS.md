@@ -1,6 +1,6 @@
 # 작업 지침
 
-**도시 공방(city-atelier)** — 실제 도시를 세 세계(판타지 · 스팀펑크 · 사이버펑크)의 여성 셋으로 의인화하는 도감 공방. 지금은 **뼈대 단계**(2026-11-19, Task 1)다: 원소 공방(`element-atelier`)을 복제해 원소 전용을 걷어 냈고, 도시 설계표 · 조립기 · 지구본 화면은 이어지는 일(계획 Task 2~11)이다.
+**도시 공방(city-atelier)** — 실제 도시를 세 세계(판타지 · 스팀펑크 · 사이버펑크)의 여성 셋으로 의인화하는 도감 공방. 지금은 계획 Task 1~5 · 7~9 가 끝났다(설계표 · 조립기 · 일상컷 계획기 · 그림 길 · 공간 여섯 · 지구본/도시 무대/한 장 · 전체 도감). Task 6(Blender 지구본)은 미뤘고, Task 10(올리기) · 11(서울 설계 · 화풍 묶음)이 남았다.
 설계: `docs/superpowers/specs/2026-11-19-city-atelier-design.md` · 계획: `docs/superpowers/plans/2026-11-19-city-atelier.md` — 일하기 전에 둘 다 읽는다. 무엇을 원소에서 가져오고 뺐는지는 `docs/PORT_NOTES.md`.
 
 ## 먼저 읽을 것
@@ -11,7 +11,7 @@
 | `DESIGN.md` | 이 공방의 겉모습 뼈대 — 도시 극장(시안 B): 층 · 주소 · 탭 둘 · 세계 고르개 · 공간 여섯 · 선택자 · 효과 |
 | `docs/superpowers/specs/…design.md` · `plans/…city-atelier.md` | 설계 · 계획 |
 | `IMAGE_RULES.md` | 그림 만들기 · 파일 이름 · 기록 · 올리기 — 그림 작업 전에(도시 꼴, Task 5) |
-| `docs/IMAGE_AUTOMATION.md` | GPT 세션 이미지 작업(잠금 · 계획기 · 지시문 묶음) — 원소 꼴, Task 4~5 에서 도시 꼴로 |
+| `docs/IMAGE_AUTOMATION.md` | GPT 세션 이미지 작업(잠금 · 계획기 · 지시문 묶음) — 도시 꼴(Task 4~5) — 지금 몫 없이 잠금만 |
 | `docs/PORT_NOTES.md` | 원소에서 가져온 것 · 뺀 것 · 건너뛰게 한 검사 |
 | `docs/PATCH.md` | 무엇을 고쳤나(아래 규칙 5) |
 
@@ -76,11 +76,27 @@ node tests/patch.cjs                 # 패치 기록 모양
 node tests/favorites.cjs             # 즐겨찾기 공용 모듈 = 공방 모음 사본
 node tests/casual-tree-v2.cjs        # 일상컷 트리 v2 + 공용 모듈 동일성(원소 공방 사본)
 node tests/walk-core.cjs             # 주소 순수 함수
-node tests/theme.cjs                 # 공간 여섯 · 세계 따라감 · 밝기 기억 · 움직임 끔(브라우저)
+node tests/look-spec.cjs             # 외형 표 = game 표 + 도시 × 세계 어휘
+node tests/prompt-city.cjs           # 서울 × 세 세계 × 화풍 지시문(표지 · 금지 낱말 · 설계 미정)
+node tests/prompt-sections.cjs       # 지시문 칸 꼴
+node tests/prompt-short-look.cjs     # 짧은 판의 도시 칸
+node tests/casual-plan.cjs           # 일상컷 계획기(서울 세 세계 × 씨앗)
+node tests/image-claim.cjs           # 그림 잠금
+node tests/img-shards.cjs            # 그림 저장소 목록 세 곳이 같은지
 node tests/globe-math.cjs            # 지구본 순수 함수(좌표 약속 · 앞면 · 조명 안의 도시 · 날짜변경선)
-node tests/globe-screen.cjs          # 지구본 탭 · 도시 무대 · 한 장(브라우저 — CDN 모듈은 처음 한 번 받아 ESM_DIR 옆 cdn-cache 에)
-node tests/dex-screen.cjs            # 전체 도감(브라우저 — 여섯 판 · 가짜 등록부로 그림 · 새 그림 점, 날짜는 ?today=)
-node tests/casual-tree.cjs · python -I -X utf8 tests/casual-tree.py · python -I -X utf8 tests/style-compare.py · node tests/img-shards.cjs
+# 브라우저 (NODE_PATH · ESM_DIR · CHROMIUM_PATH)
+node tests/theme.cjs                 # 공간 여섯 · 세계 따라감 · 밝기 기억 · 움직임 끔
+node tests/globe-screen.cjs          # 지구본 탭 · 도시 무대 · 한 장(CDN 모듈은 처음 한 번 받아 ESM_DIR 옆 cdn-cache 에)
+node tests/dex-screen.cjs            # 전체 도감(여섯 판 · 가짜 등록부로 그림 · 새 그림 점, 날짜는 ?today=)
+node tests/screen.cjs                # 화풍 비교 · 생성기 도시 판 · 세계 그림 걸음 · 일상컷 걸음
+node tests/prompt-pack-screen.cjs    # 서울 세계 그림 셋 + 일상 일곱 묶음(폰 344×882)
+# 파이썬 (python -I -X utf8)
+python -I -X utf8 tools/city-design.py check     # 설계표 검사기
+python -I -X utf8 tests/city-design.py           # 검사기 자체의 검사
+python -I -X utf8 tests/style-compare.py         # 화풍 비교 묶음
+python -I -X utf8 tests/register-images.py       # 그림 등록기
+python -I -X utf8 tests/make-thumbs.py           # 썸네일 만들기
+node tests/casual-tree.cjs · python -I -X utf8 tests/casual-tree.py   # 공용 트리 v1
 ```
 
-원소 꼴에 묶여 지금은 건너뛰는 검사(맨 위 `process.exit(0)`)는 `docs/PORT_NOTES.md` 표에 — 해당 Task 에서 도시 꼴로 되살린다. 브라우저 검사는 `NODE_PATH`(playwright) · `ESM_DIR`(preact 가 든 node_modules) · `CHROMIUM_PATH` 가 필요하다.
+건너뛰는 검사는 지금 없다(`tests/favorites.cjs` 만 옆에 공방 모음 저장소가 없으면 견주기를 건너뛴다) — 되살린 내력은 `docs/PORT_NOTES.md` 표에. 브라우저 검사는 `NODE_PATH`(playwright) · `ESM_DIR`(preact 가 든 node_modules) · `CHROMIUM_PATH` 가 필요하다.

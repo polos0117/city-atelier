@@ -105,7 +105,7 @@ const out = `/* 외형 표 — game-atelier lib/prompt-spec.js 의 외형 선택
     EXPOSURE_KEYS: ${J(G.FORM_EXPOSURE_KEYS)},
     EXPOSURE_DEFAULT: ${J(G.FORM_EXPOSURE_DEFAULT)},
     /* 세계 → 과감 노출의 갈래(game 은 복식 구조로 골랐다) */
-    EXPOSURE_LAYER: { fantasy: 'outer', steampunk: 'open', mecha: 'outer' },
+    EXPOSURE_LAYER: { fantasy: 'outer', steampunk: 'open', cyberpunk: 'outer' },
     LOOK_LINES: {
       silhouette: ${J(G.GAME_LINES.silhouette)},
       face: ${J(G.GAME_LINES.face)},

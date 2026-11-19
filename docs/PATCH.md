@@ -7,6 +7,17 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-19 · claude · 전체 검토 고침 — 한 장의 세계 · 원소 화풍 묶음 · 원소 낱말 · 검사 목록 · 주소 검증
+- lib/city-view.js — 한 장의 세계 읽기를 실제 파일 이름(`<도시>_<세계>_<화풍>_f.webp`)에 맞춤(늘 빈 값이던 것), 등록부에 없는 그림 확인 `known` 추가
+- index.html · lib/dex-view.js — 한 장 주소의 그림이 등록부에 없으면 도시 무대로, city-view `?v=2` · walk-core `?v=8` · img.js `?v=12` · words `?v=34` · dex-view `?v=2`
+- lib/walk-core.js — validate 가 그 도시의 그림이 아닌 pic 을 비우고 원소 잔재 `w=all` 을 받지 않음
+- data/style-compare.json · styles.html · tools/style-compare.py · tests/style-compare.py · tests/screen.cjs — 원소 화풍 묶음을 비우고 세계를 판타지 · 스팀펑크 · 사이버펑크로, 묶음이 없으면 「화풍 시험 전」 안내
+- lib/words.js — 원소 낱말 49개 지움(gallery · cat · state · fact · tier · dex 근본/가문주/홀로/나라 · prompt 나라/가문주 · world.mecha 등), 시대 · 일상 · 장면 안내를 도시 말로
+- tools/port-look-spec.cjs — EXPOSURE_LAYER 의 mecha 를 cyberpunk 로(다시 돌려도 안 되돌아가게)
+- lib/img.js — 안 쓰는 전시관(hall) 지움, 썸네일 설명을 워크플로 주석과 맞춤 · .gitignore 의 /img-2 지움
+- tests/walk-core.cjs · tests/globe-screen.cjs — 실제 파일 이름 꼴 · 한 장의 세계/이름/테 색 · 다른 도시 그림 · 없는 그림 검사
+- AGENTS.md · README.md · docs/PORT_NOTES.md — 검사 목록을 실제 tests/ · tools/ 에 맞추고 낡은 상태 줄을 지금 기준으로
+
 ## 2026-11-19 · claude · 전체 도감 탭(Task 9) — 도시마다 표 한 장, 그림 없는 칸 · 설계 전 · 새 그림 점
 - lib/dex-view.js(새) — 전체 도감: 도시 10줄(표 한 장 — 도시 상징 색 띠 palette.hex 셋 · 이름 · 나라), 세계 세 칸(그림이 있으면 작은 그림 → 한 장, 없으면 「그림 없음」 → prompt.html?card=<도시>&o=world&world=<세계>), 설계 전 아홉은 「설계 전」, 칸마다 그 세계 일상컷 수 · 줄 끝 일상컷 수, 위 머리(설계된 도시 · 세계 그림 · 일상컷). 줄을 누르면 그 도시 무대, 설계 전이면 그 줄 아래 짧은 안내. 세계 고르개는 그 세계 칸만 강조
 - lib/img.js — 새 그림(today · isNew · markSeen): 오늘 · 어제 등록(added)이고 이 기기에서 안 연 그림, 그 도시(무대 · 한 장)를 열면 꺼짐 — 열쇠 city_seen_v1(어제 이후 등록분만 남김)

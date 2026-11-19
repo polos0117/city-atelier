@@ -17,11 +17,11 @@
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;700&display=swap"></noscript>
 <link rel="stylesheet" href="lib/workspace.css?v=5">
 <script src="lib/workspace-theme.js?v=4"></script>
-<script src="lib/words.js?v=33"></script>
+<script src="lib/words.js?v=34"></script>
 <script src="lib/favorites.js?v=1"></script>
 <script src="lib/patch.js?v=1"></script>
-<script src="lib/walk-core.js?v=7"></script>
-<script src="lib/img.js?v=11"></script>
+<script src="lib/walk-core.js?v=8"></script>
+<script src="lib/img.js?v=12"></script>
 <script src="lib/globe-math.js?v=1"></script>
 <link rel="stylesheet" href="lib/room.css?v=5">
 <link rel="stylesheet" href="lib/toolbox.css?v=4">
@@ -34,8 +34,8 @@ import {h,render} from 'https://esm.sh/preact@10.24.3';
 import {useState,useEffect,useRef,useMemo} from 'https://esm.sh/preact@10.24.3/hooks';
 import {Toolbox} from './lib/toolbox.js?v=7';
 import {mountGlobe} from './lib/globe.js?v=1';
-import {CityStage,CardView,ready,latlon} from './lib/city-view.js?v=1';
-import {DexView,worldFiles,freshFiles} from './lib/dex-view.js?v=1';
+import {CityStage,CardView,ready,latlon,known} from './lib/city-view.js?v=2';
+import {DexView,worldFiles,freshFiles} from './lib/dex-view.js?v=2';
 const W = window.W, A = window.AtelierAppearance, R = window.AtelierWalk, GM = window.GlobeMath, IMG = window.AtelierImg;
 const here = () => R.readRoute(location.search);
 const remember = () => { try { sessionStorage.setItem('city_walk_last', location.search); } catch (e) {} };
@@ -119,7 +119,7 @@ function Theater() {
   let body;
   if (fail) body = [h('section', { class: 'th-marquee', key: 'm' }, h('p', null, W('walk.fail')))];
   else if (!data) body = [h('main', { class: 'th-stage', key: 's' }, h('div', { class: 'th-slot', 'aria-hidden': 'true' })), h('section', { class: 'th-marquee', key: 'm' }, h('p', null, W('walk.loading')))];
-  else if (layer === 'city') body = [h(CityStage, { key: 'c', data, city: route.city, world: look.world, st: route.st, from: route.tab, onBack: leave, onCard: pic => enter({ tab: route.tab, city: route.city, card: route.city, pic }) })];
+  else if (layer === 'city' || (layer === 'card' && !known(data.img, route.city, route.pic))) body = [h(CityStage, { key: 'c', data, city: route.city, world: look.world, st: route.st, from: route.tab, onBack: leave, onCard: pic => enter({ tab: route.tab, city: route.city, card: route.city, pic }) })];
   else if (layer === 'card') body = [h(CardView, { key: 'k', data, city: route.city, pic: route.pic, st: route.st, onBack: leave,
     onPic: pic => { const next = Object.assign({}, route, { pic }); history.replaceState(history.state, '', location.pathname + R.routeSearch(next)); setRoute(next); } })];
   else if (layer === 'dex') body = [h(DexView, { key: 'd', data, world: look.world, st: route.st, day: TODAY, onCity: k => enter({ city: k, tab: 'dex' }),

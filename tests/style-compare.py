@@ -3,7 +3,7 @@
 import json, os, re, subprocess, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 d = json.load(open(os.path.join(ROOT, 'data', 'style-compare.json'), encoding='utf-8'))
-assert d['worlds'] == ['fantasy', 'steampunk', 'mecha'], d['worlds']
+assert d['worlds'] == ['fantasy', 'steampunk', 'cyberpunk'], d['worlds']
 keys = [r['key'] for r in d['rounds']]
 assert len(keys) == len(set(keys)), '묶음 열쇠 겹침'
 assert all(re.fullmatch(r'\d{4}-\d{2}-\d{2}(-\d+)?', k) for k in keys), keys

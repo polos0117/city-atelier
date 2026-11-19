@@ -46,7 +46,8 @@ const lineOf = (txt, head) => (String(txt).split('\n').find(l => l.startsWith(he
       { const SC = JSON.parse(read('data/style-compare.json')), sv = await open('/styles.html');
         await sv.page.waitForSelector('.sc-lede');
         assert.equal(await sv.page.locator('h1.tb-name').textContent(), '화풍', '화풍 도구 막대');
-        if (!SC.rounds.length) assert.equal(await sv.page.locator('.sc-cell').count(), 0, '묶음 없음 — 빈 안내');
+        if (!SC.rounds.length) { assert.equal(await sv.page.locator('.sc-cell').count(), 0, '묶음 없음 — 빈 안내'); assert.match(await sv.page.locator('.sc-lede').innerText(), /화풍 시험 전/, '빈 안내 말'); }
+        assert.deepEqual(SC.worlds, ['fantasy', 'steampunk', 'cyberpunk'], '화풍 비교 세계 셋');
         assert(await H.noOverflow(sv.page), vp.width + ' 화풍 비교 넘침'); assert.deepEqual(sv.errors, [], '화풍 비교 콘솔'); checks += 4; await sv.ctx.close(); }
 
       /* 생성기 화풍 고르개 — 맨 위 기본(''), 내린 화풍은 목록 · 주소 · 기억값에서 빠진다(폰에서만) */

@@ -6,7 +6,7 @@
       다음 묶음 열쇠 — 그 날짜(기본 오늘, KST)에 묶음이 없으면 날짜, 있으면 날짜-2 · 날짜-3 …(목록 · 그림 저장소 폴더 둘 다 본다).
       세션 여럿이 한 묶음을 나눠 그릴 때는 열쇠를 먼저 하나 정해 모두에게 같이 준다.
 
-  python3 tools/style-compare.py put <열쇠> --card <카드 열쇠(예: fe · fe-rust)> --style <화풍> --world <fantasy|steampunk|mecha>
+  python3 tools/style-compare.py put <열쇠> --card <카드 열쇠(예: fe · fe-rust)> --style <화풍> --world <fantasy|steampunk|cyberpunk>
           [--world-img <세계 그림>] [--casual-img <근접 일상컷>] [--far-img <원거리 일상컷>]
           [--casual-note <근접 장면 한 줄>] [--far-note <원거리 장면 한 줄>] [--note <화풍 한 줄>]
       그림을 webp(+ thumb)로 그림 저장소 style-test/compare/<열쇠>/ 에 넣고 목록의 그 묶음을 맞춘다(없으면 만든다).
@@ -24,7 +24,7 @@ import json, os, re, sys, datetime
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, 'data', 'style-compare.json')
 IMG = os.environ.get('SAM_IMG') or os.path.join(os.path.dirname(ROOT), 'city-atelier-img')   # 검사용 — 다른 자리 그림 저장소
-WORLDS, KINDS = ['fantasy', 'steampunk', 'mecha'], ['world', 'casual', 'far']   # casual = 근접 일상컷, far = 원거리 일상컷(2026-11-07 「원거리 일상컷도 있는데」)
+WORLDS, KINDS = ['fantasy', 'steampunk', 'cyberpunk'], ['world', 'casual', 'far']   # casual = 근접 일상컷, far = 원거리 일상컷(2026-11-07 「원거리 일상컷도 있는데」)
 KEY_RE = r'\d{4}-\d{2}-\d{2}(-\d+)?'
 STYLE_ORDER = None
 
@@ -71,7 +71,7 @@ def files_in(key, img=IMG):
     if not os.path.isdir(d):
         return out
     for f in os.listdir(d):
-        m = re.fullmatch(r'(.+)_(fantasy|steampunk|mecha)_(world|casual|far)\.webp', f)
+        m = re.fullmatch(r'(.+)_(fantasy|steampunk|cyberpunk)_(world|casual|far)\.webp', f)
         if m:
             out.setdefault(m.group(1), set()).add((m.group(2), m.group(3)))
     return out
@@ -125,7 +125,7 @@ def put(a):
     if st not in S['styles']:
         sys.exit('없는 화풍: %s — %s' % (st, ' · '.join(S['styles'])))
     if w not in WORLDS:
-        sys.exit('세계는 fantasy · steampunk · mecha')
+        sys.exit('세계는 fantasy · steampunk · cyberpunk')
     pics = [(k, opt.get(k + '_img')) for k in KINDS if opt.get(k + '_img')]
     if not pics:
         sys.exit('--world-img · --casual-img · --far-img 가운데 하나는 있어야 한다')
