@@ -45,10 +45,10 @@
      }
     },
     "cyberpunk": {
-     "job_ko": "송신탑 신호 정비사",
+     "job_ko": "궤도 엘리베이터 신호 정비사",
      "base": "street_rooftop",
-     "place": "a maintenance platform high on the transmission tower above her megacity at night — steel lattice, blinking red aviation lights, humming antenna arrays and the neon city spread far below",
-     "activity": "she is a signal technician re-tuning an antenna array on the transmission tower",
+     "place": "a maintenance platform high on the space-elevator spire above her far-future megacity at night — sleek curved struts, glowing guide lights pulsing up the cable of light, humming signal arrays and the layered city of towers and sky-bridges far below",
+     "activity": "she is a signal technician re-tuning a signal array on the space-elevator spire",
      "preset": "half_kneel_use",
      "use": "sig_hold",
      "prop": "a signal-tuning multitool with a glowing probe",

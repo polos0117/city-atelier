@@ -7,6 +7,9 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-19 · claude · 서울 사이버펑크 직업컷 — 송신탑 정비사를 궤도 엘리베이터 정비사로
+- 바로 앞 칸(사이버펑크 = 두 세기 뒤의 먼 미래)에서 서울 남산 송신탑이 궤도 엘리베이터 첨탑이 됐는데, 캐릭터만의 컷(90번) 직업 「송신탑 신호 정비사」 의 장소 글은 옛 송신탑 · 네온 도시 그대로였다(그림은 아직 없다). data/casual-own.json 서울 사이버펑크: 직업 「궤도 엘리베이터 신호 정비사」, 장소 — 먼 미래 도시 위 궤도 엘리베이터 첨탑의 정비 발판(빛의 케이블을 따라 오르는 유도등 · 신호 배열 · 아래로 층층의 타워와 공중 다리), 하는 일 글 맞춤. 자세 · 소품 · 옷은 그대로. 검사 casual-tree check · casual-plan · prompt-city 통과.
+
 ## 2026-11-19 · claude · 시험 그림으로 정한 세 방향 — 스팀펑크 가스등 판타지 · 사이버펑크 먼 미래 · 일상컷 세계 줄은 결만
 - 사용자 「스팀펑크만 너무 실사쪽으로 가는데 시대를 바꿔볼까?」 → 「1번으로 해줘」 → 「이거는 이렇게 가고」 · 「지금은 그냥 서울에다가 네온사인만 더 한 느낌이라 완전 미래 느낌은 안나거든」 · 「일부러 뒷배경은 다 나오게 만든거야?」 → 「응 그렇게 해줘」(판타지도 「지금 이 느낌으로 가자」). 시험 지시문의 낱말을 가져왔고 화풍은 그대로(painterly_concept).
 - data/city-design.json — `vocab.markers.steampunk` 를 가스등 판타지 표지 열로(놋쇠 단추 · 시계태엽 · 비행 고글 · 회중시계 · 흰 증기 · 가스등 빛 …), banned_en 에 soot · grime · rust · coal smoke · sweat stains · photographic texture. `vocab.wear.steampunk` 를 깔끔하고 우아한 모험가 차림으로(시험의 「rather than soot and rust」 는 금지 낱말이 본문에 나오면 안 되는 규칙 때문에 「never sooty or rusty」). `vocab.markers.cyberpunk` 에 먼 미래 표지 하나. 새 `vocab.casual_world.<세계> = { en, guard_en }`(시험 swap3 의 세계 결 · guard — 스팀펑크 guard 의 「mentions soot, coal, grime or rust」 도 같은 까닭으로 「sounds sooty, smoky, grimy or rusty」). 서울 스팀펑크 세계 글 · 장면 셋(airship · clocktower · pier) · motif(나침반 해치 버클 항해사 하네스 + 단청 안감 망토) · hold(놋쇠 망원경) · card_ko.motif, look.why 머리만. 서울 사이버펑크 세계 글 · 장면 셋(skyterrace · 자기부상 아치 · 아콜로지 아래층 골목). 사람(외형 · 나이 · 얼굴)은 그대로 — 표정 confident 는 core 표(손으로 안 고침)의 「composed, self-assured」 그대로.
