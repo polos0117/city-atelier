@@ -11,7 +11,8 @@
 - cities 열쇠는 CITY_KEYS 와 같은 열 개 같은 차례. 도시마다 ko · en · country · persona, lat · lon(범위 안, 소수 둘째 자리까지) · latlon_src(주소),
   palette { en, hex 2~3개 #RRGGBB }, symbols 3~5개(ko · en · src 주소).
 - worlds 가 {} 면 설계 미정. 채우면 세 세계 다: ko · en(40자 이상, 한국어 없음) · scenes 셋(key · ko · en) ·
-  look { face 여섯, silhouette 셋, why } · hold.en · motif { ko, en }. 세 세계는 다른 사람 — 머리색 · 체형 · 얼굴형 · 헤어스타일이 세계끼리 모두 다르다.
+  look { face 여섯, silhouette 셋, why } · hold.en · motif { ko, en }. 세 세계는 다른 사람 — 머리색 · 체형 · 얼굴형 · 헤어스타일이 세계끼리 모두 다르고, 얼굴 칸(face_shape · eyes · brows · nose · lips) 가운데
+  셋 이상이 세 세계 모두 다르다(미형이되 같은 얼굴은 피한다 — 사용자 2026-11-19). 도시마다 people { ko, en }(그 나라 사람, 조립기 머리 줄 「an adult <en> woman」).
 - 판타지 · 스팀펑크의 글(en · scenes · hold · motif)에 그 세계 banned_en 낱말이 없다.
 - 화면 짧은 말(도시 무대 · Task 8): 설계된 도시는 card_ko.symbols(상징 한 줄, SHORT_SYMBOLS 자 이하 — " · " 로 나눈 낱말마다
   symbols[].ko 하나의 머리), 세계마다 card_ko { look(머리 · 몸), motif(무늬) } 각 SHORT_WORLD 자 이하. 화면은 이 칸을 그대로 읽는다.
@@ -31,6 +32,8 @@ URL = re.compile(r"^https?://\S+$")
 HANGUL = re.compile(r"[가-힣]")
 LOOK = {"face": ("face_shape", "eyes", "brows", "nose", "lips", "eye_color"), "silhouette": ("body", "hair", "hair_color")}
 FACE_DESIGN = {"face": ("age", "impression", "skin_tone", "eye_size", "eye_tilt", "mark", "expr"), "silhouette": ("bangs",)}
+FACE_KEYS = ("face_shape", "eyes", "brows", "nose", "lips")
+FACE_DIFF_MIN = 3
 DIFFER = (("silhouette", "hair_color"), ("silhouette", "body"), ("face", "face_shape"), ("silhouette", "hair"))
 WEAR = ("costume", "bold", "moderate", "low")
 SHORT_SYMBOLS, SHORT_WORLD = 40, 20
@@ -98,6 +101,9 @@ def check(doc):
         for col in ("ko", "en", "country", "persona"):
             if not (c.get(col) or "").strip():
                 errs.append(here + " %s 가 비었다" % col)
+        pp = c.get("people")
+        if not isinstance(pp, dict) or not (pp.get("ko") or "").strip() or not (pp.get("en") or "").strip() or HANGUL.search(pp.get("en") or ""):
+            errs.append(here + " people { ko, en } 이 없거나 비었다(그 나라 사람 — en 은 한국어 없이 한 낱말)")
         for col, lim in (("lat", 90), ("lon", 180)):
             x = c.get(col)
             if not isinstance(x, (int, float)) or isinstance(x, bool) or not -lim <= x <= lim:
@@ -190,6 +196,9 @@ def check(doc):
             vals = [(((ws.get(w) or {}).get("look") or {}).get(grp) or {}).get(f) for w in WORLDS]
             if len(set(vals)) < len(vals):
                 errs.append("%s 세 세계가 다른 사람이 아니다 — look.%s.%s %r" % (here, grp, f, vals))
+        far = [f for f in FACE_KEYS if len({(((ws.get(w) or {}).get("look") or {}).get("face") or {}).get(f) for w in WORLDS}) == len(WORLDS)]
+        if len(far) < FACE_DIFF_MIN:
+            errs.append("%s 세 세계 얼굴 칸 가운데 세계마다 다른 것이 %d개뿐(%d개 이상) — %s" % (here, len(far), FACE_DIFF_MIN, "·".join(far) or "없음"))
     if undecided:
         warns.append("설계 미정(worlds {}) 도시 %d곳" % undecided)
     return errs, warns

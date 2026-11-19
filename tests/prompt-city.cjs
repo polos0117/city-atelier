@@ -3,7 +3,7 @@
    (d) 그 세계 banned_en 낱말이 하나도 없다 — 금지 줄(sections.negative, 칸 꼴 5칸의 「Avoid:」 한 줄)만 빼고 본다. 금지 낱말을 「no …」 로 적는 곳은 그 줄뿐이다
        (원소 조립기의 칸 꼴이 「No …」 금지를 5칸 Avoid 로 모으는 꼴을 따랐다 — 판타지 옷 말투의 「no machinery」 는 Avoid 로 간다).
    (e) 상표 · 실존 인물 이름(아래 작은 표)이 없다 (f) world 가 mecha(세 세계 밖)면 던진다 (g) 설계 미정 도시는 던지지 않고 { text: '', missing: ['worlds'] }.
-   살아 있는 화풍(retired 아닌 것) 전부로 본다 — 기본 화풍은 미정(style.json undecided, Task 11)이라 한 화풍에 묶지 않는다.
+   살아 있는 화풍(retired 아닌 것) 전부로 본다 — 기본 화풍은 painterly_concept(2026-11-19 확정)이지만 임시 화풍도 고르개에 남아 한 화풍에 묶지 않는다.
    Run: node tests/prompt-city.cjs */
 const fs = require('node:fs'), vm = require('node:vm'), assert = require('node:assert/strict');
 const ctx = { window: {} }; vm.createContext(ctx);
@@ -22,7 +22,7 @@ const NAMES = ['YTN', 'N Seoul Tower', 'Seoul Tower', 'Lotte', 'Samsung', 'Hyund
 assert(same(D.vocab.worlds, ['fantasy', 'steampunk', 'cyberpunk']) && same(T.WORLDS.map(w => w.key), D.vocab.worlds), '세계 열쇠 셋(mecha 없음)');
 assert(same(Object.keys(T.SILHOUETTES), D.vocab.worlds) && same(Object.keys(T.SILHOUETTE_HEAD), D.vocab.worlds) && same(Object.keys(T.WORLD_SHORT.guard), D.vocab.worlds), '실루엣 · 머리 · 가드도 세 세계');
 assert(!/\bmecha\b/i.test(JSON.stringify(T.WORLDS) + JSON.stringify(T.SILHOUETTES) + JSON.stringify(T.EXPOSURE_LAYER)), '표에 mecha 가 남았다');
-assert(S.undecided === true, '화풍 판 undecided(Task 11 에서 푼다)');
+assert(!S.undecided && S.default === 'painterly_concept', '화풍 확정 — 기본 painterly_concept, undecided 없음');
 
 const LIVE = Object.keys(S.styles).filter(k => !S.styles[k].retired);
 assert(LIVE.includes(S.default), '기본 화풍이 살아 있다');
@@ -33,7 +33,8 @@ for (const style of LIVE) for (const w of D.vocab.worlds) {
   assert(t.length > 2000 && !r.missing, id + ' 지어진다 ' + t.length);
   assert.equal(t, P.build(D, S, 'seoul', w, { style }), id + ' PromptCity.build = AtelierPrompt.build(생성기가 부르는 것)');
   /* sections — 칸 꼴 이름, 화풍 미정 표시 */
-  assert.equal(r.sections.style_undecided, true, id + ' style_undecided');
+  assert.equal(r.sections.style_undecided, false, id + ' style_undecided');
+  assert(t.includes('adult ' + seoul.people.en + ' woman —') && t.includes(T.WORLD_SHORT.beauty), id + ' 그 나라 사람 · 미형 줄');
   if (P.worldSectionsOn(S, style)) {
     assert(same(Object.keys(r.sections), ['style_undecided', 'head', 's1', 's2', 's3', 's4', 's5', 'negative']), id + ' sections 열쇠 ' + Object.keys(r.sections));
     assert.equal([r.sections.head, r.sections.s1, r.sections.s2, r.sections.s3, r.sections.s4, r.sections.s5].join('\n\n'), t, id + ' sections 를 이으면 지시문');
@@ -103,6 +104,7 @@ for (const style of LIVE) for (const w of D.vocab.worlds) for (const s of LIFE.c
   assert(t.length > 1000 && !r.missing, id + ' 지어진다');
   assert.equal(t, P.buildCasual(D, S, 'seoul', { place: P.lifeKey('seoul', s.key), time: (s.times || [])[0], season: (s.seasons || ['autumn'])[0] }, { world: w, style, tree, tree2, life: LIFE, props: PROPS }), id + ' PromptCity = AtelierPrompt.buildCasual');
   assert.equal([r.sections.head, r.sections.body, r.sections.negative].filter(Boolean).join('\n\n'), t, id + ' sections 를 이으면 지시문');
+  assert(t.includes('the same adult ' + seoul.people.en + ' woman') && t.includes(T.CASUAL.short.beauty), id + ' 일상컷 — 그 나라 사람 · 미형 줄');
   assert(t.includes('\nPlace: ' + sw.en.replace(/\.$/, '') + '.\n'), id + ' 그 장면의 그 세계 글');
   for (const k of sw.props) assert(t.includes(PROPS.props[k].worlds[w].en), id + ' 소품 ' + k);
   assert(t.includes(PROPS.clothes[w].en) && t.includes('World: an ordinary day in Seoul as her world knows it — ' + seoul.worlds[w].en.replace(/\.$/, '')), id + ' 옷의 결 · 그 세계의 서울');
@@ -139,7 +141,7 @@ assert(same(PC.build({ design: D, styles: S, city: 'tokyo', world: 'fantasy', ki
 /* 카드 = 도시 */
 assert(same(P.cards(D), D.cities.map(c => c.key)) && P.card(D, 'seoul').tier === 'city' && same(P.worldsOf(D, 'seoul'), D.vocab.worlds) && P.card(D, 'seoul-x') === null, '카드 = 도시 열쇠');
 const rec = P.record(D, S, 'seoul', 'steampunk', {});
-assert(rec.atelier === 'city' && rec.styleUndecided === true && rec.file === 'seoul_steampunk_' + S.default + '_f.webp' && rec.prompt === P.build(D, S, 'seoul', 'steampunk', {}), '기록');
+assert(rec.atelier === 'city' && rec.styleUndecided === false && rec.file === 'seoul_steampunk_' + S.default + '_f.webp' && rec.prompt === P.build(D, S, 'seoul', 'steampunk', {}), '기록');
 /* GPT 임의 설계 주문(tools/prompt-pack.cjs) — 도시 말, 원소 말 없음 */
 for (const w of D.vocab.worlds) { const f = P.buildWorldFree(D, S, 'seoul', w, {}); assert(f.includes(seoul.worlds[w].motif.en.replace(/\.$/, '')) && !/\b(?:element|atomic|mecha)\b/i.test(f), w + ' 임의 설계 주문'); }
 console.log('PASS 지시문 조립: 서울 × 세 세계 × 화풍 ' + LIVE.length + ' = ' + n + '장 — 표지 · motif · 머리색 · 금지 낱말(Avoid 줄 밖) · 이름 · mecha 던짐 · 설계 미정 ' + undesigned.length + '곳 · 노출 · 고른 칸; ' +

@@ -65,6 +65,11 @@ cases = {
     "짧은 말 motif 김": lambda d: sw(d, "cyberpunk")["card_ko"].__setitem__("motif", "네온 송신탑 귀걸이 · 해치 문신 · 빛줄 비옷 · 긴 손톱"),
     "상징 한 줄 없음": lambda d: city(d, "seoul").pop("card_ko"),
     "상징 한 줄 지어냄": lambda d: city(d, "seoul")["card_ko"].__setitem__("symbols", "경복궁 · 없는 탑"),
+    "도시 people 없음": lambda d: city(d, "tokyo").pop("people"),
+    "도시 people.en 빔": lambda d: city(d, "paris")["people"].__setitem__("en", ""),
+    "도시 people.en 한국어": lambda d: city(d, "rio")["people"].__setitem__("en", "브라질인"),
+    "서울 얼굴 칸 하나만 다름": lambda d: [sw(d, "cyberpunk")["look"]["face"].__setitem__(f, sw(d, "fantasy")["look"]["face"][f]) for f in ("eyes", "brows", "nose", "lips")],
+    "서울 얼굴 칸 둘만 다름": lambda d: [sw(d, "steampunk")["look"]["face"].__setitem__(f, sw(d, "fantasy")["look"]["face"][f]) for f in ("eyes", "nose", "lips")],
     "옷 말투 빠짐": lambda d: d["vocab"]["wear"]["cyberpunk"].pop("moderate"),
 }
 for name, mut in cases.items():

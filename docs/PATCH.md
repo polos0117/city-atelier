@@ -7,6 +7,15 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-19 · claude · 화풍 확정(painterly_concept) · 미형 · 세계마다 다른 얼굴 · 도시 people
+- 사용자 「그림체만 우선 이걸로 가보자」 · 「이대로 가자」 (서울 세 장 시험) · 「웬만하면 미형으로 가고」 · 「같은 얼굴은 피하고」 · 「도시공방 이니까 인종을 각 나라의 사람으로 해보자」.
+- data/style.json — 새 화풍 painterly_concept(회화적 콘셉트 아트, 모델 gpt-image-2.6-sunburst)를 더해 기본으로, undecided · undecided_note 걷음. 옛 임시 화풍은 그대로.
+- data/city-design.json — 도시 열 곳에 people { ko, en }(한국인/Korean … 브라질인/Brazilian). 서울 얼굴 칸 다섯은 세 세계가 이미 다 달라 값은 안 고침.
+- tools/city-design.py · tests/city-design.py — people 검사, 얼굴 칸 다섯 가운데 셋 이상이 세 세계 모두 다를 것(FACE_DIFF_MIN) 검사 · 망가뜨린 경우 다섯 더함(38가지).
+- lib/prompt-spec.js · lib/prompt-city.js — 머리 줄 「an adult <people> woman」(세계 그림 · 임의 설계 · 일상컷), 화풍 줄 뒤 미형 · 다른 얼굴 한 줄(세계 그림 · 일상컷), 카드에 people. prompt.html 의 ?v= 올림.
+- tests/prompt-city.cjs · tests/prompt-sections.cjs — 화풍 확정 · people · 미형 줄 기대값. docs/samples/seoul-world-prompts.md — 조립기로 다시 뽑음.
+- AGENTS.md · docs/superpowers/specs/2026-11-19-city-atelier-design.md · docs/PORT_NOTES.md — 규칙 세 줄 · 6-1절 「정해졌다」 · Task 11 화풍 몫 끝 줄.
+
 ## 2026-11-19 · claude · 서울 판타지 — 동양 궁궐에서 서양 하이판타지 속 한국 결로
 - 사용자 「판타지도 느낌이 지금은 동양쪽 판타지잖아. 이걸 서양판타지 쪽에 들어간 한국 느낌으로 해봤으면 좋겠는데」 — 참고로 든 것은 한 게임의 엘프 수도(지시문에는 게임 · 종족 이름을 쓰지 않는다).
 - data/city-design.json 서울 판타지: 세계 글 → 네 산을 뿌리로 감은 거대한 고목 위의 달빛 엘프풍 수도(옅은 조각 나무 · 월석 아치 궁전, 빛나는 단청 문양의 곡선 처마, 은빛 강 위 살아 있는 나무다리, 빛나는 꽃잎 · 떠다니는 정령 빛, 보랏빛 밤하늘, 남쪽 능선의 달불 봉화). 장면 셋 → 고목 궁전의 달빛 테라스 · 은빛 강 위 나무다리 · 남쪽 능선의 달불 봉화. motif → 서울 빨강 · 달빛 은색 망토 가운(은실 · 금실 단청 문양), 해치 초승달 견갑, 네 봉우리 은빛 관. 손에 든 것 → 은 해치 월석 인장. 짧은 말(card_ko.motif) 맞춤.
