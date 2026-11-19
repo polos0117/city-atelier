@@ -7,6 +7,10 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-19 · claude · 세계 그림 Avoid 줄에도 그 세계 금지 낱말 · 판타지 옷 말투의 서양 문장 낱말
+- 판타지 실사 유화 지시문을 다시 지어 보니 앞 칸(송신탑 · 중국식 궁궐 금지)이 Avoid 에 안 나왔다 — 세계 그림의 5칸 Avoid 는 화풍 · 규칙 금지만 모았고, 설계표 banned_en 은 일상컷 Avoid 에만 실렸다. lib/prompt-city.js 세계 그림 칸 꼴의 Avoid 에 그 세계 banned_en 을 더했다(판타지 · 스팀펑크 — 사이버펑크는 빈 목록). `prompt-city.js?v=36`.
+- data/city-design.json `vocab.wear.fantasy.costume` 의 「heraldic crests on gilded pauldrons」(서양 문장) → 「guardian-beast emblems on gilded pauldrons」. 검사 prompt-city · prompt-sections · prompt-short-look · casual-plan · city-design check 통과.
+
 ## 2026-11-19 · claude · 서울 시험 그림에서 새어 나온 것 고침 — 판타지 궁궐 · 송신탑 · 배경 표지
 - 사용자 「이번엔 판타지 옮겨줘. 위에 잘못된 문장들 고쳐서」. 삼국지 기본 화풍 시험 세 장(판타지 · 스팀펑크 · 사이버펑크)에서 본 것: 판타지 · 스팀펑크 배경에 지금의 남산 송신탑이 섰고, 판타지 궁궐 · 성벽이 중국식(노란 기와 · 만리장성)으로 읽혔고, 네 봉우리 왕관이 흐렸다.
 - data/city-design.json — 판타지 세계 글: 「a great stone wall · golden-roofed palace halls」 → 산등성이를 따르는 낮은 화강암 성벽 · 조선식 궁궐(살짝 들린 짙은 기와지붕 · 금빛 용마루 장식 · 단청 처마) · 남산 꼭대기엔 봉수대 불만. 판타지 장면 둘째 「golden palace roofs」 → 금빛 용마루의 짙은 기와지붕. 판타지 motif 왕관 → 테두리가 낮은 네 봉우리로 솟고 화강암 성벽 모양 띠로 이어진 금관.

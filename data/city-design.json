@@ -25,7 +25,7 @@
     "wear_note": "세계마다 옷 말투 — costume 은 세계 옷의 뼈대 한 줄, bold · moderate · low 는 노출 단계별 말투(원소 lib/prompt-spec.js 의 COSTUME · EXPOSURE · casual-own 의 outfit 단계 꼴). 조립기(Task 3)가 읽는다.",
     "wear": {
       "fantasy": {
-        "costume": "COSTUME (fantasy): grand, opulent regalia — layered silk brocade dense with gold-thread embroidery, a jewel-set crown or headdress, heraldic crests on gilded pauldrons or a gorget, a floor-sweeping cape, enchanted jewelry with a soft magical glow; the city's symbol worked into the embroidery and jewels. No corset, no modern material, no machinery.",
+        "costume": "COSTUME (fantasy): grand, opulent regalia — layered silk brocade dense with gold-thread embroidery, a jewel-set crown or headdress, guardian-beast emblems on gilded pauldrons or a gorget, a floor-sweeping cape, enchanted jewelry with a soft magical glow; the city's symbol worked into the embroidery and jewels. No corset, no modern material, no machinery.",
         "bold": "EXPOSURE (bold): her regalia opens to show skin — bare shoulders and arms between gilded pauldron and bracer, a deep open neckline under the jeweled collar with natural cleavage, a high slit in the brocade robe showing the thigh; the ornaments stay on and symmetrical. Chest and pelvis covered.",
         "moderate": "EXPOSURE (moderate): her regalia shows some skin — bare arms or an open collarbone under the jeweled collar; the brocade robe falls long and closed. Chest and pelvis covered.",
         "low": "EXPOSURE (low): her regalia covers her — long brocade sleeves, a high jeweled collar and a floor-length robe under the cape."
