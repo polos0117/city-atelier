@@ -69,14 +69,14 @@
       "worlds": {
         "fantasy": {
           "ko": "왕도 서울 — 북악 · 인왕 · 남산 · 낙산을 성벽으로 이어 감싼 금빛 궁궐의 도읍, 남산 봉수대에 불이 오르고 한강이 은빛 해자처럼 남쪽을 돈다",
-          "en": "a grand royal capital ringed by four mountains, a low granite fortress wall following their ridges: Joseon-style Korean palace halls with gently upswept charcoal-tiled roofs, gilded ridge ornaments and painted dancheong eaves stacked beneath the northern peak, only beacon fires burning on the summit of the southern mountain, the wide silver river curving past like a moat, banners and lanterns along the processional road",
+          "en": "a grand royal capital ringed by four mountains, a low granite city wall only faintly visible on the distant ridges: Joseon-style Korean palace halls with gently upswept charcoal-tiled roofs, gilded ridge ornaments and painted dancheong eaves stacked beneath the northern peak, only beacon fires burning on the summit of the southern mountain, the wide silver river curving past like a moat, banners and lanterns along the processional road",
           "scenes": [
             { "key": "throne", "ko": "정전 앞 박석 마당", "en": "on the stone-paved courtyard before the great throne hall, painted dancheong eaves and rows of rank stones leading to the stairs" },
             { "key": "wall", "ko": "산등성이 성곽 위", "en": "on the stone city wall winding along the mountain ridge above the capital, dark-tiled palace roofs with gilded ridges below at dusk" },
             { "key": "beacon", "ko": "남산 봉수대", "en": "beside the beacon fires on the southern mountain, the whole walled capital and the silver river spread below" }
           ],
           "look": {
-            "face": { "face_shape": "oval", "eyes": "monolid_long", "brows": "arched_thin", "nose": "straight_narrow", "lips": "small_bow", "eye_color": "gold", "age": "early_30s", "impression": "regal", "skin_tone": "fair", "eye_size": "medium", "eye_tilt": "up", "mark": "red_lip", "expr": "proud" },
+            "face": { "face_shape": "oval", "eyes": "monolid_long", "brows": "arched_thin", "nose": "straight_narrow", "lips": "small_bow", "eye_color": "gold", "age": "late_20s", "impression": "regal", "skin_tone": "fair", "eye_size": "medium", "eye_tilt": "up", "mark": "red_lip", "expr": "proud" },
             "silhouette": { "body": "tall_statuesque", "hair": "long_straight", "hair_color": "navy", "bangs": "parted" },
             "why": "왕도의 여왕 — 세로로 긴 사람. 키 큰 체형(tall_statuesque) · 허리까지 곧게 내린 긴 머리 · 바닥에 끌리는 망토 · 높은 왕관으로 실루엣이 위아래로 길게 선 삼각형. 머리색은 단청의 짙은 청(navy, 검정에 가까운 남빛), 눈은 궁궐 금빛(gold). 갸름한 얼굴 · 긴 홑꺼풀 눈 · 올라간 눈꼬리 · 가는 아치 눈썹 · 작은 활 입술로 단정하고 위엄 있게(regal · proud), 30대 초반, 밝은 피부, 붉은 입술. 다른 두 세계와 머리색 · 체형 · 얼굴형 · 헤어스타일이 다 다르다."
           },

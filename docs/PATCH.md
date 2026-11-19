@@ -7,6 +7,10 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-19 · claude · 서울 판타지 — 나이 서른 초반 → 20대 후반, 성벽은 먼 능선에 희미하게
+- 사용자가 실사 유화 판타지 지시문으로 뽑은 그림을 보고 「얼굴 이거 어쩔거야」 — 이를 드러낸 웃음 · 주름으로 설계보다 나이 들어 보였고, 배경에 만리장성 같은 성벽이 Avoid(Great Wall)에도 또 섰다.
+- data/city-design.json 서울 판타지 `look.face.age` early_30s → late_20s(「no wrinkles, folds or under-eye bags」). 세계 글의 성벽 「a low granite fortress wall following their ridges」 → 「a low granite city wall only faintly visible on the distant ridges」(긍정 문장이 금지 낱말보다 세게 먹었다). 화풍 쪽 얼굴 고침(얼굴도 같은 유화로 · 입 다문 미소)은 화풍 시험 지시문 몫 — 저장소에 화풍을 넣을 때 같이.
+
 ## 2026-11-19 · claude · 세계 그림 Avoid 줄에도 그 세계 금지 낱말 · 판타지 옷 말투의 서양 문장 낱말
 - 판타지 실사 유화 지시문을 다시 지어 보니 앞 칸(송신탑 · 중국식 궁궐 금지)이 Avoid 에 안 나왔다 — 세계 그림의 5칸 Avoid 는 화풍 · 규칙 금지만 모았고, 설계표 banned_en 은 일상컷 Avoid 에만 실렸다. lib/prompt-city.js 세계 그림 칸 꼴의 Avoid 에 그 세계 banned_en 을 더했다(판타지 · 스팀펑크 — 사이버펑크는 빈 목록). `prompt-city.js?v=36`.
 - data/city-design.json `vocab.wear.fantasy.costume` 의 「heraldic crests on gilded pauldrons」(서양 문장) → 「guardian-beast emblems on gilded pauldrons」. 검사 prompt-city · prompt-sections · prompt-short-look · casual-plan · city-design check 통과.
