@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""원소 공방 화풍 비교 묶음(data/style-compare.json · styles.html) 도우미 — 삼국지 공방(sam-atelier)의 같은 도구를 옮겼다(2026-11-07) — 묶음은 더하기만 한다(사용자 2026-11-07 「추가되게」).
-세션이 세계 하나씩(판타지 · 스팀펑크 · 메카) 따로 그려도 같은 묶음 열쇠로 올리면 한 묶음에 합쳐진다(사용자 「세션별로 메카, 판타지, 무협 다 따로 만들었는데」).
+"""도시 공방 화풍 비교 묶음(data/style-compare.json · styles.html) 도우미 — 삼국지 공방(sam-atelier)의 같은 도구를 옮겼다(2026-11-07) — 묶음은 더하기만 한다(사용자 2026-11-07 「추가되게」). 원소 공방을 거쳐 도시 꼴로(2026-11-19).
+세션이 세계 하나씩(판타지 · 스팀펑크 · 사이버펑크) 따로 그려도 같은 묶음 열쇠로 올리면 한 묶음에 합쳐진다(사용자 「세션별로 메카, 판타지, 무협 다 따로 만들었는데」).
 
   python3 tools/style-compare.py next [날짜]
       다음 묶음 열쇠 — 그 날짜(기본 오늘, KST)에 묶음이 없으면 날짜, 있으면 날짜-2 · 날짜-3 …(목록 · 그림 저장소 폴더 둘 다 본다).
       세션 여럿이 한 묶음을 나눠 그릴 때는 열쇠를 먼저 하나 정해 모두에게 같이 준다.
 
-  python3 tools/style-compare.py put <열쇠> --card <카드 열쇠(예: fe · fe-rust)> --style <화풍> --world <fantasy|steampunk|cyberpunk>
+  python3 tools/style-compare.py put <열쇠> --card <도시 열쇠(예: seoul)> --style <화풍> --world <fantasy|steampunk|cyberpunk>
           [--world-img <세계 그림>] [--casual-img <근접 일상컷>] [--far-img <원거리 일상컷>]
           [--casual-note <근접 장면 한 줄>] [--far-note <원거리 장면 한 줄>] [--note <화풍 한 줄>]
       그림을 webp(+ thumb)로 그림 저장소 style-test/compare/<열쇠>/ 에 넣고 목록의 그 묶음을 맞춘다(없으면 만든다).

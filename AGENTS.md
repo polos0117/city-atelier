@@ -1,6 +1,6 @@
 # 작업 지침
 
-**도시 공방(city-atelier)** — 실제 도시를 세 세계(판타지 · 스팀펑크 · 사이버펑크)의 여성 셋으로 의인화하는 도감 공방. 지금은 계획 Task 1~5 · 7~9 가 끝났다(설계표 · 조립기 · 일상컷 계획기 · 그림 길 · 공간 여섯 · 지구본/도시 무대/한 장 · 전체 도감). Task 6(Blender 지구본)은 미뤘고, Task 10(올리기) · 11(서울 설계 · 화풍 묶음)이 남았다.
+**도시 공방(city-atelier)** — 실제 도시를 세 세계(판타지 · 스팀펑크 · 사이버펑크)의 여성 셋으로 의인화하는 도감 공방. 지금은 계획 Task 1~5 · 7~9 가 끝났다(설계표 · 조립기 · 일상컷 계획기 · 그림 길 · 공간 여섯 · 지구본/도시 무대/한 장 · 전체 도감). Task 6(Blender 지구본)은 미뤘고, Task 10(올리기)은 그림 저장소 · 자동 등록까지 준비됐다(2026-11-20 — 그림은 아직 없다), Task 11(화풍 비교 서울 묶음 · 나머지 아홉 도시 설계)이 남았다.
 설계: `docs/superpowers/specs/2026-11-19-city-atelier-design.md` · 계획: `docs/superpowers/plans/2026-11-19-city-atelier.md` — 일하기 전에 둘 다 읽는다. 무엇을 원소에서 가져오고 뺐는지는 `docs/PORT_NOTES.md`.
 
 ## 먼저 읽을 것
@@ -10,8 +10,8 @@
 | 이 문서 | 규칙과 자리 |
 | `DESIGN.md` | 이 공방의 겉모습 뼈대 — 도시 극장(시안 B): 층 · 주소 · 탭 둘 · 세계 고르개 · 공간 여섯 · 선택자 · 효과 |
 | `docs/superpowers/specs/…design.md` · `plans/…city-atelier.md` | 설계 · 계획 |
-| `IMAGE_RULES.md` | 그림 만들기 · 파일 이름 · 기록 · 올리기 — 그림 작업 전에(도시 꼴, Task 5) |
-| `docs/IMAGE_AUTOMATION.md` | GPT 세션 이미지 작업(잠금 · 계획기 · 지시문 묶음) — 도시 꼴(Task 4~5) — 지금 몫 없이 잠금만 |
+| `IMAGE_RULES.md` | 그림 만들기 · 파일 이름 · 기록 · 올리기 — 그림 작업 전에(도시 꼴, 2026-11-20 기본 화풍 · 그림 저장소 반영) |
+| `docs/IMAGE_AUTOMATION.md` | GPT 세션 이미지 작업(세계 그림 네 장 · 잠금 · 계획기 · 지시문 묶음 · 검수) — 도시 꼴(2026-11-20 다시 씀) — 몫 없이 잠금만 |
 | `docs/PORT_NOTES.md` | 원소에서 가져온 것 · 뺀 것 · 건너뛰게 한 검사 |
 | `docs/PATCH.md` | 무엇을 고쳤나(아래 규칙 5) |
 
@@ -57,7 +57,7 @@
 `lib/casual-tree.js` · `lib/casual-tree-v2.js` · `lib/favorites.js` 는 원소 · 삼국지 · 포켓몬 공방과 글자 하나 다르지 않게 복사한 공용 모듈이다. 여기서 따로 고치지 않는다(`node tests/casual-tree-v2.cjs` 가 원소 공방 사본과 sha256 으로 견준다 — 저장소가 옆에 없으면 건너뛴다). `lib/motion-fx.js` 도 sam-atelier 와 같이.
 
 ### 7. 그림 · 모형은 이 저장소에 두지 않는다
-그림 저장소 `city-atelier-img`(GitHub 저장소는 Task 10 에서 사용자에게 묻고 만든다). `img/` 는 `.gitignore` 에 있다. 원본 PNG 는 올리지 않는다. 그림 규칙은 `IMAGE_RULES.md`. `data/img.json` 은 손으로 고치지 않는다.
+그림 저장소 `city-atelier-img`(`polos0117/city-atelier-img` — 2026-11-20 만듦, Pages 켬, 썸네일 워크플로가 Actions 비밀 `CODE_REPO_TOKEN` 으로 이 저장소의 `그림 등록` 을 깨운다 · 뒤받침 한 시간마다). `img/` 는 `.gitignore` 에 있다. 원본 PNG 는 올리지 않는다. 그림 규칙은 `IMAGE_RULES.md`. `data/img.json` 은 손으로 고치지 않는다.
 
 ### 8. 화풍 · 얼굴 · 사람 (사용자 2026-11-19 확정)
 - 화풍은 `kr_drawn_rim_dewy`(`data/style.json` 기본 — 2026-11-20 삼국지 공방 기본 화풍을 그대로 옮김, 사용자 「기본화풍도 아까 테스트했던 화풍으로 바꿔줘. 마지막 기준」, 모델 `gpt-image-2.6-sunburst`). 판 몫 칸 `worldFace` · `worldStyleAfter` · `worldLight` · `avoid` · `casualStyleAfter` 는 조립기가 싣고, 실사 문구는 넣지 않는다. 그 전 기본 `painterly_concept`(2026-11-19)와 옛 임시 화풍은 지우지 않고 고르개에 남긴다. 시험 그림 · 시안은 보여 주고 고른 뒤에만 쓴다.

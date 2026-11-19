@@ -181,5 +181,11 @@ const rec = P.record(D, S, 'seoul', 'steampunk', {});
 assert(rec.atelier === 'city' && rec.styleUndecided === false && rec.file === 'seoul_steampunk_' + S.default + '_f.webp' && rec.prompt === P.build(D, S, 'seoul', 'steampunk', {}), '기록');
 /* GPT 임의 설계 주문(tools/prompt-pack.cjs) — 도시 말, 원소 말 없음 */
 for (const w of D.vocab.worlds) { const f = P.buildWorldFree(D, S, 'seoul', w, {}); assert(f.includes(seoul.worlds[w].motif.en.replace(/\.$/, '')) && !/\b(?:element|atomic|mecha)\b/i.test(f), w + ' 임의 설계 주문'); }
+/* 임의 설계 주문도 도시 꼴(2026-11-20) — 그 나라 사람 · 미형 줄 · 머리색 고정 · 그 세계 금지 낱말(판타지 · 스팀펑크만) */
+for (const w of D.vocab.worlds) {
+  const f = P.buildWorldFree(D, S, 'seoul', w, {}), ban = (D.vocab.markers[w] || {}).banned_en || [];
+  assert(f.includes('adult ' + seoul.people.en + ' woman') && f.includes('strikingly beautiful') && !f.includes('description below') && f.includes('Hair colour (fixed'), w + ' 임의 설계 주문 — 사람 · 미형 · 머리색');
+  assert(ban.length ? f.includes('Keep out of this world (fixed): ' + ban.join(', ')) : !f.includes('Keep out of this world'), w + ' 임의 설계 주문 — 금지 낱말');
+}
 console.log('PASS 지시문 조립: 서울 × 세 세계 × 화풍 ' + LIVE.length + ' = ' + n + '장 — 표지 · motif · 머리색 · 금지 낱말(Avoid 줄 밖) · 이름 · mecha 던짐 · 설계 미정 ' + undesigned.length + '곳 · 노출 · 고른 칸; ' +
   '일상컷 ' + nc + '장(서울 × 세 세계 × 생활 장면 ' + LIFE.cities.seoul.scenes.length + ' × 화풍) — 그 세계 장면 글 · 소품 · 옷의 결 · 금지 낱말(Avoid 단락 밖) · 휴대폰 사전 · lifeTree');

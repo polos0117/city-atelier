@@ -133,7 +133,7 @@ const usageOf = u => {
 const pathKey = (preset, place) => preset + '@' + place;
 
 /* 한 칸 — 시대 · 장소 · 의상 · 옷, 그 장소에서 쓸 수 있는 자세 추천 하나(frame 을 주면 그 프레이밍의 추천만).
-   wantSig 면 소품 동작을 그 원소의 물건으로. 소품 동작은 덜 쓴 소품 쪽으로(무게 1/(1+횟수)², 따로 된 난수 흐름 — game 과 같다).
+   wantSig 면 소품 동작을 그 도시의 물건(설계표 hold)으로. 소품 동작은 덜 쓴 소품 쪽으로(무게 1/(1+횟수)², 따로 된 난수 흐름 — game 과 같다).
    장소 · 옷 · 자세 추천(그 자세) · 표정은 다른 카드에서 안 쓴 · 덜 쓴 쪽으로(lean — 2026-11-01) */
 function slot(r, card, reqType, { frame = '', wantSig = false, usage = {}, rUse = r } = {}) {
   if (EXPOSE_TYPES.includes(reqType) && EXPOSE_NO_FRAME.includes(frame)) return null;   /* 노출 갈래 컷은 얼굴 클로즈업으로 짜지 않는다 — 옷이 안 보인다 */
@@ -453,7 +453,7 @@ function plan(card, slots, old, { seed = Date.now(), required = '', usage = {}, 
     const seen = [...oldScene, ...frames.map(frame => ({ frame }))];
     if (slots.length + oldScene.length >= 3 && (!seen.some(c => FAR.includes(c.frame)) || !seen.some(c => NEAR.includes(c.frame)))) continue;
     const free = slots.length - wants.length, sigAt = needSig && free > 0 ? wants.length + Math.floor(r() * free) : -1, cuts = [];
-    /* 상황 칸 — 정해 둔 칸 뒤, 그 원소의 물건 칸과 다른 칸(빈 칸이 하나뿐이면 같은 칸) */
+    /* 상황 칸 — 정해 둔 칸 뒤, 그 도시의 물건 칸과 다른 칸(빈 칸이 하나뿐이면 같은 칸) */
     let situAt = -1;
     if (needSitu && free > 0) { const pool = []; for (let i = wants.length; i < slots.length; i++) if ((i !== sigAt || free === 1) && !SITU_NO_FRAME.includes(frames[i])) pool.push(i); if (!pool.length) continue; situAt = pool[Math.floor(r() * pool.length)]; }
     for (let i = 0; i < slots.length; i++) {
@@ -524,7 +524,7 @@ function freeSlots(card, world, want = CASUAL_N) {
   for (let n = 1; taken.size + out.length < want; n++) if (!taken.has(n)) out.push(n);
   return out;
 }
-/* 쓴 횟수 — 그림 저장소의 모든 카드 기록에서(그 카드는 빼고): 소품(그 원소의 물건은 빼고) · 장소 · 옷 · 자세 추천 · 자세 · 표정 */
+/* 쓴 횟수 — 그림 저장소의 모든 카드 기록에서(그 카드는 빼고): 소품(그 도시의 물건은 빼고) · 장소 · 옷 · 자세 추천 · 자세 · 표정 */
 function sceneUsage(dir, skip) {
   const out = EMPTY_USAGE();
   if (!dir || !fs.existsSync(dir)) return out;

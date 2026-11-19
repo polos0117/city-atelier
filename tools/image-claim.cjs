@@ -19,7 +19,7 @@ const fs = require('node:fs'), path = require('node:path'), cp = require('node:c
 const ROOT = path.join(__dirname, '..');
 const read = f => JSON.parse(fs.readFileSync(path.join(process.env.CITY_DATA_ROOT || ROOT, f), 'utf8'));
 /* 몫 — null 이면 없다. 도시 공방도 원소처럼 없다 */
-const DAILY_MAX = null, EXECUTION_MAX = null, CASUAL_N = 7;   /* 2026-11-11 일곱 장(사용자 「…그럼 일상컷은 총 7장 되는거야」 — 일곱째는 갈래 자유 칸) · 2026-11-09 삼국지와 같이 여섯 장(필수 셋 — 노출 · 나라 안 · 상황 노출) */
+const DAILY_MAX = null, EXECUTION_MAX = null, CASUAL_N = 7;   /* 2026-11-11 일곱 장(사용자 「…그럼 일상컷은 총 7장 되는거야」 — 일곱째는 갈래 자유 칸) — 장면 컷 다섯(필수 둘 — 노출 갈래 · 상황 노출, 계획기 tools/casual-plan.cjs) + 자유 설계 칸 둘. 원소의 「나라 안」 갈래는 도시에 없다 */
 
 /* ── 공방마다 다른 것: 그림 저장소 이름 · 차례 · 한 도시의 빈 자리 ── */
 const IMG_REPO = 'city-atelier-img', WHAT = '도시';

@@ -7,6 +7,15 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-20 · claude · 그림 생성 규칙 문서 정리 · 그림 저장소 자동 등록 준비
+- 사용자 「정리해줘. 토큰은 넣어놨어」 — 그림 저장소 polos0117/city-atelier-img(Pages 켬 · Actions 비밀 CODE_REPO_TOKEN)가 생겼고, 규칙 문서에 「저장소 없음 · 화풍 미정 · 원소 말투」 가 남아 있었다.
+- IMAGE_RULES.md — 머리말(저장소 있음 · 기본 화풍 kr_drawn_rim_dewy), 1절(그 나라 성인 여성 · 미형이되 세 세계 다른 얼굴 · 세 세계의 결 — 스팀펑크 가스등 판타지 · 사이버펑크 먼 미래 · 판타지 서양 신화 엘프 도시 + 한국 결, 세계 그림 네 장 뽑고 멈춤, 일상컷 세계 줄은 결만, 화풍 결, **젖거나 비치는 옷은 가슴 끝이 비치면 올리지 않고 그 칸만 노출 한 단계 낮춰 다시**), 2절 90번(서울 채워짐) · 필수 둘, 3절 이름 예시 kr_drawn_rim_dewy · 썸네일 크기, 4절 썸네일 → 깨우기 → 등록 · 주기 실행, 화풍 비교 절.
+- docs/IMAGE_AUTOMATION.md — 원소 말투를 걷고 코드 그대로 다시 씀: 0-1 임의 설계 주문이 정하는 것(사람 · 미형 · 도시 상징 · 세계 표지 · 머리색 · 금지 낱말), 계획기 필수 둘(노출 갈래 · 상황 노출), 실행 ID city-…, 4절 검수(화풍 결 · 지금 물건 · 그을음 · 사진 질감 · 일상컷 뒷배경 명소 · 비치는 옷 → 올리지 않고 노출 낮춰 다시), 7절 retries · design 칸.
+- lib/prompt-spec.js · lib/prompt-city.js — 세계 그림 임의 설계 주문(<세계>-free.txt)에 미형 줄과 그 세계 금지 낱말 줄(「Keep out of this world」 — 판타지 · 스팀펑크)을 더함. prompt.html ?v= 올림. tests/prompt-city.cjs — 임의 설계 주문의 사람 · 미형 · 머리색 · 금지 낱말 검사.
+- tools/prompt-pack.cjs INDEX 안내 · tools/casual-plan.cjs · tools/image-claim.cjs · tools/style-compare.py 주석 — 원소 말(주민은 그 물건 · 원소에서 딴 · Her element · 나라 안 · 메카)을 도시 말로.
+- .github/workflows/register-images.yml — schedule(매시 41분, 원소와 같게) 되살림. AGENTS.md · README.md · docs/PORT_NOTES.md — 그림 저장소 있음 · Task 10 남은 일.
+- 그림 저장소(따로 커밋) — 폴더 자리(.gitkeep) · README · .gitignore(*.png) · 썸네일 워크플로(원소 그림 저장소 것을 도시 꼴로, 끝나면 코드 저장소에 images-updated). 검사 register-images · img-shards · image-claim · make-thumbs · style-compare · words · patch · prompt-city · prompt-sections · casual-plan · prompt-pack-screen 통과.
+
 ## 2026-11-20 · claude · 기본 화풍을 kr_drawn_rim_dewy(삼국지 기본 화풍)로
 - 사용자 「기본화풍도 아까 테스트했던 화풍으로 바꿔줘. 마지막 기준」 — 서울 세 세계 · 일상컷 시험을 삼국지 기본 화풍으로 했고 그 지시문이 기준.
 - data/style.json — 삼국지 `kr_drawn_rim_dewy` 를 옮겨(text · casual · worldFace · worldStyleAfter · casualStyleAfter · worldLight · casualLight · avoid · model · source, 삼국지 몫 worldHead · casualLegacy 는 뺌) 기본으로. painterly_concept 는 남김.
