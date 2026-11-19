@@ -45,7 +45,7 @@
     },
     "casual_world_note": "일상컷 「World:」 줄의 세계 결(2026-11-19 사용자 「일부러 뒷배경은 다 나오게 만든거야?」 → 「응 그렇게 해줘」) — 도시의 세계 글(worlds.<세계>.en)은 명소 목록이라 일곱 장 뒷배경이 다 같아졌다. 그래서 일상컷은 세계마다의 재료 · 빛 · 결만 싣고(en — {city_en} 은 도시 이름), guard_en 이 명소를 장소 줄이 말할 때만 나오게 막는다. 조립기 lib/prompt-city.js buildCasual.",
     "casual_world": {
-      "fantasy": { "en": "a moonlit elven city of a Western myth-world: pale carved wood and moonstone, glowing dancheong-like patterns of red, green and gold, silk, lantern-light and drifting spirit lights, blossoms with softly glowing petals", "guard_en": "Let the place itself carry this world through its materials, fittings and objects; do not add the city's landmarks, the great tree, the moon or a skyline unless the place below names them." },
+      "fantasy": { "en": "a moonlit elven city of a Western myth-world: pale carved wood and moonstone, glowing dancheong-like patterns of deep teal-green and indigo with only thin lines of red and gold, silk, lantern-light and drifting spirit lights, blossoms with softly glowing petals", "guard_en": "Let the place itself carry this world through its materials, fittings and objects; do not add the city's landmarks, the great tree, the moon or a skyline unless the place below names them." },
       "steampunk": { "en": "a storybook gaslamp-fantasy city: gleaming brass, polished wood, glass, silk, lace and feathers, clockwork details, warm gaslight and soft white steam — clean, warm and storybook-bright, never sooty, rusty or grimy", "guard_en": "Let the place itself carry this world through its materials, fittings and objects; do not add the city's landmarks, airships or a skyline unless the place below names them. Wherever the place below sounds sooty, smoky, grimy or rusty, show it clean and gleaming instead." },
       "cyberpunk": { "en": "a far-future city two centuries from now: sleek curved architecture, smart glowing materials, holographic interfaces, layered levels of the city and quiet flying vehicles; even an everyday place is rebuilt in that future, not today's {city_en} with neon added", "guard_en": "Let the place itself carry this world through its materials, fittings and objects; do not add the city's landmarks, towers, giant holograms or a skyline unless the place below names them." }
     },
@@ -76,23 +76,24 @@
       "worlds": {
         "fantasy": {
           "ko": "달빛 숲의 왕도 서울 — 네 산을 뿌리로 감은 거대한 고목 위에 지은 서양 하이판타지풍 수도, 빛나는 단청 문양을 새긴 곡선 처마의 나무 · 월석 궁전들, 은빛 한강 위로 살아 있는 나무다리가 놓이고 남산 능선엔 달불 봉화가 탄다",
-          "en": "a moonlit elven capital of a Western myth-world, grown into the branches of a colossal ancient world-tree whose roots grip four mountains: sweeping arched halls of pale carved wood and moonstone with gently upswept, curving eaves painted in glowing dancheong-like patterns of red, green and gold, lantern-lit bridges of living wood arching over a wide silver river, blossoming trees with glowing petals and floating spirit lights under a deep violet night sky, a moonfire beacon burning on the southern ridge",
+          "en": "a moonlit elven capital of a Western myth-world, grown into the branches of a colossal ancient world-tree whose roots grip four mountains: sweeping arched halls of pale carved wood and moonstone with gently upswept, curving eaves painted in glowing dancheong-like patterns of deep teal-green and indigo with only thin lines of red and gold, lantern-lit bridges of living wood arching over a wide silver river, blossoming trees with glowing petals and floating spirit lights under a deep violet night sky, a moonfire beacon burning on the southern ridge",
           "scenes": [
             { "key": "throne", "ko": "고목 궁전의 달빛 테라스", "en": "on a moonlit terrace of the great-tree palace, carved moonstone columns painted with glowing dancheong-like patterns, the silver river far below" },
             { "key": "wall", "ko": "은빛 강 위 나무다리", "en": "on a bridge of living wood arching over the wide silver river, glowing lanterns hanging from its rails, the great-tree city rising behind her" },
             { "key": "beacon", "ko": "남쪽 능선의 달불 봉화", "en": "beside the moonfire beacon on the southern ridge, a great root of the world-tree curving past, the whole glowing tree city spread below" }
           ],
           "look": {
-            "face": { "face_shape": "oval", "eyes": "monolid_long", "brows": "arched_thin", "nose": "straight_narrow", "lips": "small_bow", "eye_color": "gold", "age": "late_20s", "impression": "regal", "skin_tone": "fair", "eye_size": "medium", "eye_tilt": "up", "mark": "red_lip", "expr": "proud" },
+            "face": { "face_shape": "oval", "eyes": "monolid_long", "brows": "arched_thin", "nose": "straight_narrow", "lips": "small_bow", "eye_color": "gold", "age": "late_20s", "impression": "regal", "skin_tone": "fair", "eye_size": "medium", "eye_tilt": "up", "mark": "gloss", "expr": "proud" },
             "silhouette": { "body": "tall_statuesque", "hair": "long_straight", "hair_color": "navy", "bangs": "parted" },
-            "why": "왕도의 여왕 — 세로로 긴 사람. 키 큰 체형(tall_statuesque) · 허리까지 곧게 내린 긴 머리 · 바닥에 끌리는 망토 · 높은 왕관으로 실루엣이 위아래로 길게 선 삼각형. 머리색은 단청의 짙은 청(navy, 검정에 가까운 남빛), 눈은 궁궐 금빛(gold). 갸름한 얼굴 · 긴 홑꺼풀 눈 · 올라간 눈꼬리 · 가는 아치 눈썹 · 작은 활 입술로 단정하고 위엄 있게(regal · proud), 30대 초반, 밝은 피부, 붉은 입술. 다른 두 세계와 머리색 · 체형 · 얼굴형 · 헤어스타일이 다 다르다."
+            "why": "왕도의 여왕 — 세로로 긴 사람. 키 큰 체형(tall_statuesque) · 허리까지 곧게 내린 긴 머리 · 바닥에 끌리는 망토 · 높은 왕관으로 실루엣이 위아래로 길게 선 삼각형. 머리색은 단청의 짙은 청(navy, 검정에 가까운 남빛), 눈은 궁궐 금빛(gold). 갸름한 얼굴 · 긴 홑꺼풀 눈 · 올라간 눈꼬리 · 가는 아치 눈썹 · 작은 활 입술로 단정하고 위엄 있게(regal · proud), 30대 초반, 밝은 피부, 윤기 나는 맨 입술. 다른 두 세계와 머리색 · 체형 · 얼굴형 · 헤어스타일이 다 다르다."
           },
           "hold": { "en": "a small moonstone seal topped with a carved silver haechi guardian beast" },
           "motif": {
-            "ko": "빛나는 단청 문양을 은실 · 금실로 수놓은 바닥까지 끌리는 서울 빨강 · 달빛 은색 망토 가운, 해치를 새긴 초승달 곡선 견갑, 네 산봉우리로 솟은 가는 은빛 관",
-            "en": "a floor-sweeping gown-cape of Seoul red and moon-silver embroidered in silver and gold thread with glowing dancheong-like filigree, crescent-curved pauldrons carved with a haechi guardian beast, and a delicate silver circlet whose rim rises into four low mountain peaks"
+            "ko": "흰 비단 바탕에 빨강 · 파랑이 태극처럼 맞물리는 바닥까지 끌리는 망토 가운 — 단은 검은 한양도성 성곽 선(능선 따라 이어지는 돌담), 치맛단은 은실 한강 물결, 크게 웅크린 은빛 해치로 빚은 초승달 곡선 견갑, 또렷한 네 산봉우리 은관",
+            "en": "a floor-sweeping gown-cape of white, red and blue — a pure white silk base with flowing panels of deep red and deep blue that curl into each other like the taegeuk swirl; its borders trimmed in black with the outline of Seoul's old city wall — a stone wall with crenellations following the ridgelines of mountains; the hem embroidered in silver thread with the shimmering ripples of the wide silver river; large, prominent pauldrons each sculpted as a crouching haechi guardian beast in silver, curving like a crescent; and a clearly visible silver crown whose rim rises into four mountain peaks around her head"
           },
-          "card_ko": { "look": "남빛 긴 생머리 · 키 큰 몸", "motif": "단청빛 은실 망토 · 네 봉우리 관" }
+          "palette": { "en": "white, taegeuk red and taegeuk blue, with black accents", "hex": ["#FFFFFF", "#CD2E3A", "#0047A0", "#000000"], "why": "판타지만 따로 — 서울 빨강 · 금이 겹치면 중국 궁궐로 읽혀서(사용자 2026-11-20 「판타지 쪽 색상이 너무 붉은색이라 중국 느낌」), 의상은 태극기 빛(사용자 2026-11-20 「빨/청에 검정이랑 흰색으로 포인트 — 태극기처럼」 · 괘는 국기 그대로 찍혀서 뺌 · 「서울보다 한국 같다」 해서 서울 것은 무늬가 맡는다 — 검은 단은 한양도성 성곽 선, 치맛단은 한강 물결, 해치 견갑 · 네 봉우리 관을 크게) — 흰 바탕 · 빨강과 파랑을 같이 · 검정 포인트. 배경 단청은 뇌록 청록 바탕, 빨강은 가는 선으로만." },
+          "card_ko": { "look": "남빛 긴 생머리 · 키 큰 몸", "motif": "태극 망토 · 해치 견갑 · 네봉 관" }
         },
         "steampunk": {
           "ko": "가스등 판타지 서울 — 황금빛 하늘 아래 남산 놋쇠 계류탑에 비행선이 매이고, 옛 돌 성문 위로 큰 시계탑이 솟고, 빛나는 한강에 증기 유람선이 미끄러지며, 유리 돔 온실과 가스등 거리에 흰 증기가 구름처럼 떠돈다",
