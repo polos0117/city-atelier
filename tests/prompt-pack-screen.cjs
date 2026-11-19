@@ -47,7 +47,7 @@ const server = http.createServer((q, s) => {
         assert.equal(fs.readFileSync(path.join(dir, s.slot + '-prompt.txt'), 'utf8'), rec.prompt);
         if (edit && s.slot === Object.keys(JSON.parse(fs.readFileSync(path.join(dir, 'settings.json'), 'utf8')).casual)[2]) assert(/skin_exposure: low|, mostly covered, /.test(rec.prompt), '일상 노출 낮추기가 지시문에(짧은 판은 Outfit 줄의 「mostly covered」)');
         const ctx = await br.newContext({ viewport: { width: 1280, height: 900 } });
-        await ctx.addInitScript(v => { if (!sessionStorage.getItem('__seeded')) { localStorage.setItem('element_studio_v1', v); sessionStorage.setItem('__seeded', '1'); } }, JSON.stringify(rec.storage));
+        await ctx.addInitScript(v => { if (!sessionStorage.getItem('__seeded')) { localStorage.setItem('city_studio_v1', v); sessionStorage.setItem('__seeded', '1'); } }, JSON.stringify(rec.storage));
         await ctx.route(/^https?:\/\/(?!127\.0\.0\.1)/, r => r.abort());
         const page = await ctx.newPage();
         await page.goto(BASE + '/prompt.html?card=' + key + '&o=' + rec.storage.out + '&world=' + s.world);

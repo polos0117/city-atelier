@@ -3,14 +3,12 @@ name: 그림 등록
 # 그림 저장소(element-atelier-img · element-atelier-img-2)의 img/ 를 읽어 data/img.json 에 적고 되커밋한다.
 # 깨우는 길은 셋이다.
 #   repository_dispatch — 그림 저장소의 썸네일 워크플로가 끝나면서 보낸다(토큰이 있을 때).
-#   schedule            — 뒤받침. GitHub 시간표는 자주 밀리고 빠진다(8시간에 1번 돈 적이 있다).
+#   (schedule 은 뺐다 — 2026-11-19, 그림 저장소 city-atelier-img 가 생길 때(Task 5 · 10) 되살린다)
 #   workflow_dispatch   — 기다리기 싫으면 Actions 에서 "Run workflow".
 # 달라진 것이 없으면 커밋하지 않는다. 썸네일은 그림 저장소의 워크플로가 만든다.
 on:
   repository_dispatch:
     types: [images-updated]
-  schedule:
-    - cron: '41 * * * *'
   workflow_dispatch:
     inputs:
       prune:

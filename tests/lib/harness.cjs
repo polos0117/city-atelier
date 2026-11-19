@@ -34,7 +34,7 @@ async function open(browser, base, url, opt = {}) {
   });
   /* 기억값은 그 맥락의 첫 문서에서만 — 뒤 문서에서 껍데기가 쓴 값을 덮지 않게 */
   if (pref) await ctx.addInitScript(p => {
-    try { if (window.top === window && !sessionStorage.getItem('__walk_pref')) { localStorage.setItem('element_dex_v1', JSON.stringify(p)); sessionStorage.setItem('__walk_pref', '1'); } } catch (e) {}
+    try { if (window.top === window && !sessionStorage.getItem('__walk_pref')) { localStorage.setItem('city_dex_v1', JSON.stringify(p)); sessionStorage.setItem('__walk_pref', '1'); } } catch (e) {}
   }, pref);
   await ctx.route('**/*', async r => {
     const u = r.request().url(), bare = u.split('?')[0];

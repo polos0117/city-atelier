@@ -86,7 +86,7 @@ const lineOf = (txt, head) => (String(txt).split('\n').find(l => l.startsWith(he
       assert.equal(await rp.locator('#st-style').inputValue(), '', '내린 화풍 주소 — 고르개는 기본'); assert.equal((await state(rp)).style, S.default, '내린 화풍 주소 — 기본 화풍으로 짓는다');
       assert((await promptOf(rp)).startsWith('A full-body vertical 2:3 (1024×1536)'), '내린 화풍 주소 — 칸 꼴(구조판 아님)');
       /* 이 기기에 기억된 고른 화풍이 내린 것이어도 — 기본으로 */
-      await rp.evaluate(() => { const k = 'element_studio_v1', o = JSON.parse(localStorage.getItem(k) || '{}'); o.stylePick = 'kv_jp_paint'; localStorage.setItem(k, JSON.stringify(o)); });
+      await rp.evaluate(() => { const k = 'city_studio_v1', o = JSON.parse(localStorage.getItem(k) || '{}'); o.stylePick = 'kv_jp_paint'; localStorage.setItem(k, JSON.stringify(o)); });
       await rp.goto(BASE + '/prompt.html?card=fe&o=world&world=fantasy'); await rp.waitForSelector('.hchip');
       assert.equal(await rp.locator('#st-style').inputValue(), '', '내린 화풍 기억값 — 고르개는 기본'); assert.equal((await state(rp)).style, S.default, '내린 화풍 기억값 — 기본 화풍으로 짓는다');
       assert.deepEqual(rv.errors, [], '내린 화풍 주소 콘솔'); checks += 6; await rv.ctx.close(); }
