@@ -7,6 +7,11 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-19 · claude · 서울 판타지 — 동양 궁궐에서 서양 하이판타지 속 한국 결로
+- 사용자 「판타지도 느낌이 지금은 동양쪽 판타지잖아. 이걸 서양판타지 쪽에 들어간 한국 느낌으로 해봤으면 좋겠는데」 — 참고로 든 것은 한 게임의 엘프 수도(지시문에는 게임 · 종족 이름을 쓰지 않는다).
+- data/city-design.json 서울 판타지: 세계 글 → 네 산을 뿌리로 감은 거대한 고목 위의 달빛 엘프풍 수도(옅은 조각 나무 · 월석 아치 궁전, 빛나는 단청 문양의 곡선 처마, 은빛 강 위 살아 있는 나무다리, 빛나는 꽃잎 · 떠다니는 정령 빛, 보랏빛 밤하늘, 남쪽 능선의 달불 봉화). 장면 셋 → 고목 궁전의 달빛 테라스 · 은빛 강 위 나무다리 · 남쪽 능선의 달불 봉화. motif → 서울 빨강 · 달빛 은색 망토 가운(은실 · 금실 단청 문양), 해치 초승달 견갑, 네 봉우리 은빛 관. 손에 든 것 → 은 해치 월석 인장. 짧은 말(card_ko.motif) 맞춤.
+- 장르 이름 검사(「high-fantasy」 금지)에 걸려 「a moonlit elven capital of a Western myth-world」 로. 얼굴 · 나이 · 머리 · 체형은 그대로(20대 후반 · 남빛 긴 생머리). 검사 city-design · prompt-city · prompt-sections · prompt-short-look · casual-plan 통과.
+
 ## 2026-11-19 · claude · 서울 판타지 — 나이 서른 초반 → 20대 후반, 성벽은 먼 능선에 희미하게
 - 사용자가 실사 유화 판타지 지시문으로 뽑은 그림을 보고 「얼굴 이거 어쩔거야」 — 이를 드러낸 웃음 · 주름으로 설계보다 나이 들어 보였고, 배경에 만리장성 같은 성벽이 Avoid(Great Wall)에도 또 섰다.
 - data/city-design.json 서울 판타지 `look.face.age` early_30s → late_20s(「no wrinkles, folds or under-eye bags」). 세계 글의 성벽 「a low granite fortress wall following their ridges」 → 「a low granite city wall only faintly visible on the distant ridges」(긍정 문장이 금지 낱말보다 세게 먹었다). 화풍 쪽 얼굴 고침(얼굴도 같은 유화로 · 입 다문 미소)은 화풍 시험 지시문 몫 — 저장소에 화풍을 넣을 때 같이.

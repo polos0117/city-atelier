@@ -68,24 +68,24 @@
       "card_ko": { "symbols": "경복궁 · 한양도성 · 남산 송신탑 · 한강철교 · 해치" },
       "worlds": {
         "fantasy": {
-          "ko": "왕도 서울 — 북악 · 인왕 · 남산 · 낙산을 성벽으로 이어 감싼 금빛 궁궐의 도읍, 남산 봉수대에 불이 오르고 한강이 은빛 해자처럼 남쪽을 돈다",
-          "en": "a grand royal capital ringed by four mountains, a low granite city wall only faintly visible on the distant ridges: Joseon-style Korean palace halls with gently upswept charcoal-tiled roofs, gilded ridge ornaments and painted dancheong eaves stacked beneath the northern peak, only beacon fires burning on the summit of the southern mountain, the wide silver river curving past like a moat, banners and lanterns along the processional road",
+          "ko": "달빛 숲의 왕도 서울 — 네 산을 뿌리로 감은 거대한 고목 위에 지은 서양 하이판타지풍 수도, 빛나는 단청 문양을 새긴 곡선 처마의 나무 · 월석 궁전들, 은빛 한강 위로 살아 있는 나무다리가 놓이고 남산 능선엔 달불 봉화가 탄다",
+          "en": "a moonlit elven capital of a Western myth-world, grown into the branches of a colossal ancient world-tree whose roots grip four mountains: sweeping arched halls of pale carved wood and moonstone with gently upswept, curving eaves painted in glowing dancheong-like patterns of red, green and gold, lantern-lit bridges of living wood arching over a wide silver river, blossoming trees with glowing petals and floating spirit lights under a deep violet night sky, a moonfire beacon burning on the southern ridge",
           "scenes": [
-            { "key": "throne", "ko": "정전 앞 박석 마당", "en": "on the stone-paved courtyard before the great throne hall, painted dancheong eaves and rows of rank stones leading to the stairs" },
-            { "key": "wall", "ko": "산등성이 성곽 위", "en": "on the stone city wall winding along the mountain ridge above the capital, dark-tiled palace roofs with gilded ridges below at dusk" },
-            { "key": "beacon", "ko": "남산 봉수대", "en": "beside the beacon fires on the southern mountain, the whole walled capital and the silver river spread below" }
+            { "key": "throne", "ko": "고목 궁전의 달빛 테라스", "en": "on a moonlit terrace of the great-tree palace, carved moonstone columns painted with glowing dancheong-like patterns, the silver river far below" },
+            { "key": "wall", "ko": "은빛 강 위 나무다리", "en": "on a bridge of living wood arching over the wide silver river, glowing lanterns hanging from its rails, the great-tree city rising behind her" },
+            { "key": "beacon", "ko": "남쪽 능선의 달불 봉화", "en": "beside the moonfire beacon on the southern ridge, a great root of the world-tree curving past, the whole glowing tree city spread below" }
           ],
           "look": {
             "face": { "face_shape": "oval", "eyes": "monolid_long", "brows": "arched_thin", "nose": "straight_narrow", "lips": "small_bow", "eye_color": "gold", "age": "late_20s", "impression": "regal", "skin_tone": "fair", "eye_size": "medium", "eye_tilt": "up", "mark": "red_lip", "expr": "proud" },
             "silhouette": { "body": "tall_statuesque", "hair": "long_straight", "hair_color": "navy", "bangs": "parted" },
             "why": "왕도의 여왕 — 세로로 긴 사람. 키 큰 체형(tall_statuesque) · 허리까지 곧게 내린 긴 머리 · 바닥에 끌리는 망토 · 높은 왕관으로 실루엣이 위아래로 길게 선 삼각형. 머리색은 단청의 짙은 청(navy, 검정에 가까운 남빛), 눈은 궁궐 금빛(gold). 갸름한 얼굴 · 긴 홑꺼풀 눈 · 올라간 눈꼬리 · 가는 아치 눈썹 · 작은 활 입술로 단정하고 위엄 있게(regal · proud), 30대 초반, 밝은 피부, 붉은 입술. 다른 두 세계와 머리색 · 체형 · 얼굴형 · 헤어스타일이 다 다르다."
           },
-          "hold": { "en": "a small golden seal topped with a carved haechi guardian beast" },
+          "hold": { "en": "a small moonstone seal topped with a carved silver haechi guardian beast" },
           "motif": {
-            "ko": "단청 문양을 금실로 수놓은 바닥까지 끌리는 서울 빨강 비단 망토, 해치를 새긴 금 견갑, 성곽으로 이은 네 산봉우리 모양의 보석 왕관",
-            "en": "a floor-sweeping Seoul-red silk cape embroidered in gold thread with dancheong temple-eave patterns, gilded pauldrons engraved with a haechi guardian beast, and a gold crown whose rim rises into four low mountain peaks, joined by a thin band shaped like a granite city wall"
+            "ko": "빛나는 단청 문양을 은실 · 금실로 수놓은 바닥까지 끌리는 서울 빨강 · 달빛 은색 망토 가운, 해치를 새긴 초승달 곡선 견갑, 네 산봉우리로 솟은 가는 은빛 관",
+            "en": "a floor-sweeping gown-cape of Seoul red and moon-silver embroidered in silver and gold thread with glowing dancheong-like filigree, crescent-curved pauldrons carved with a haechi guardian beast, and a delicate silver circlet whose rim rises into four low mountain peaks"
           },
-          "card_ko": { "look": "남빛 긴 생머리 · 키 큰 몸", "motif": "단청 금실 망토 · 네 봉우리 왕관" }
+          "card_ko": { "look": "남빛 긴 생머리 · 키 큰 몸", "motif": "단청빛 은실 망토 · 네 봉우리 관" }
         },
         "steampunk": {
           "ko": "증기 공업 도시 서울 — 1900년 무렵, 한강을 건너는 리벳 트러스 철교 위로 기관차가 달리고 강변 주물 공장 굴뚝이 그을음을 뿜는다",
