@@ -17,8 +17,8 @@
         "banned_en": ["smartphone", "mobile phone", "plastic", "LED screen", "neon sign", "neon", "laptop", "headphones", "earbuds", "sneakers", "hoodie", "hologram", "digital display", "touchscreen", "bomber jacket", "sweatpants", "leggings", "baseball cap", "tracksuit", "jogger", "track pants", "windbreaker", "fleece", "bodycon", "broadcast tower", "TV tower", "observation tower", "skyscraper", "Chinese-style palace", "Great Wall", "yellow-glazed roof tiles", "soot", "grime", "rust", "coal smoke", "sweat stains", "photographic texture"]
       },
       "cyberpunk": {
-        "ko": ["빛나는 네온 문신", "의체 · 이식 장치", "비에 젖어 반사되는 비옷", "얼굴에 비친 간판 빛", "홀로그램 장신구", "광섬유처럼 빛나는 머리 가닥", "크롬과 번들거리는 비닐", "마젠타 · 시안 빛", "비 젖은 네온 골목", "발광 선이 흐르는 테크웨어", "빛 무늬가 흐르는 먼 미래의 스마트 직물"],
-        "en": ["glowing neon tattoos", "cybernetic implants", "a reflective rain-slick raincoat", "sign light reflected on her face", "holographic jewelry", "fiber-optic glowing hair strands", "chrome and glossy vinyl", "magenta and cyan glow", "rain beading on her skin and coat", "techwear traced with glowing light lines", "far-future smart fabric rippling with soft light patterns"],
+        "ko": ["빛나는 네온 문신", "의체 · 이식 장치", "빛을 반사하는 매끈한 롱코트", "얼굴에 비친 간판 빛", "홀로그램 장신구", "광섬유처럼 빛나는 머리 가닥", "크롬과 번들거리는 비닐", "마젠타 · 시안 빛", "겹겹이 빛나는 도시 층", "발광 선이 흐르는 테크웨어", "빛 무늬가 흐르는 먼 미래의 스마트 직물"],
+        "en": ["glowing neon tattoos", "cybernetic implants", "a sleek reflective long coat", "sign light reflected on her face", "holographic jewelry", "fiber-optic glowing hair strands", "chrome and glossy vinyl", "magenta and cyan glow", "soft holographic light shimmering across her skin and coat", "techwear traced with glowing light lines", "far-future smart fabric rippling with soft light patterns"],
         "banned_en": []
       }
     },
@@ -37,10 +37,10 @@
         "low": "EXPOSURE (low): her elegant outfit covers her — a buttoned high-collared blouse under the fitted coat, fine gloves and a long layered skirt or breeches tucked into tall laced boots."
       },
       "cyberpunk": {
-        "costume": "COSTUME (cyberpunk): techwear for a neon megacity — a reflective rain-slick coat or cropped jacket over fitted technical layers, straps and buckles, chrome and glossy vinyl, glowing tattoo lines and cybernetic implants on her skin, holographic jewelry; sign light reflected on her face and coat.",
+        "costume": "COSTUME (cyberpunk): techwear for a neon megacity — a sleek reflective coat or cropped jacket over fitted technical layers, straps and buckles, chrome and glossy vinyl, glowing tattoo lines and cybernetic implants on her skin, holographic jewelry; sign light reflected on her face and coat.",
         "bold": "EXPOSURE (bold): her techwear opens to show skin — a cropped top under the open reflective coat with natural cleavage, bare midriff and shoulders traced with glowing tattoo lines, high-cut shorts or a slit skirt over strapped thigh-high boots. Chest and pelvis covered.",
         "moderate": "EXPOSURE (moderate): her techwear shows some skin — bare arms or a bare collarbone with glowing tattoo lines, the reflective coat worn open over a fitted top. Chest and pelvis covered.",
-        "low": "EXPOSURE (low): her techwear covers her — the reflective raincoat zipped to the throat, fitted technical trousers and gloves, light only from the glowing seams and implants."
+        "low": "EXPOSURE (low): her techwear covers her — the reflective coat zipped to the throat, fitted technical trousers and gloves, light only from the glowing seams and implants."
       }
     },
     "casual_world_note": "일상컷 「World:」 줄의 세계 결(2026-11-19 사용자 「일부러 뒷배경은 다 나오게 만든거야?」 → 「응 그렇게 해줘」) — 도시의 세계 글(worlds.<세계>.en)은 명소 목록이라 일곱 장 뒷배경이 다 같아졌다. 그래서 일상컷은 세계마다의 재료 · 빛 · 결만 싣고(en — {city_en} 은 도시 이름), guard_en 이 명소를 장소 줄이 말할 때만 나오게 막는다. 조립기 lib/prompt-city.js buildCasual.",
