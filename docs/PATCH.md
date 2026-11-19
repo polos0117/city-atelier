@@ -7,6 +7,14 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-19 · claude · 일상컷 검토 고침 — 세계 그림 motif 빼기 · 지금 옷 거르기 · 노출 컷 클로즈업 막기
+- lib/prompt-city.js — 일상컷(casualVars)이 도시 motif(왕관 · 망토 · 견갑)를 싣지 않는다(traits 비움 — 「no crown … regalia」 와 부딪혔다, 도시다움은 장면 · 소품 · 상징 색이). 옷 무게 문구의 「denim」 은 뺀다
+- data/city-design.json — 판타지 · 스팀펑크 banned_en 에 지금 옷 낱말(denim · bomber jacket · cowboy hat · sweatpants · leggings · baseball cap · tracksuit · jogger · track pants · windbreaker · fleece · bodycon). 스팀펑크는 denim · cowboy hat 허용(1900년 무렵에도 있었다)
+- tools/casual-plan.cjs — 노출 갈래 칸은 얼굴 클로즈업(face_close — hair_close 자세 포함) 구도를 안 고른다(+check 한 줄) · 색 이름도 그 세계 금지 낱말(denim)이 들면 거른다
+- tests/prompt-city.cjs · tests/casual-plan.cjs — 일상컷에 motif 낱말 없음 · 판타지 · 스팀펑크 씨앗 12개의 모든 칸 옷에 금지 낱말 없음 · 노출 컷 클로즈업 없음
+- docs/samples/seoul-casual-prompts.md — 조립기로 다시 뽑음(motif 줄 없음, 본보기 B 도 새 계획)
+- docs/PORT_NOTES.md — 「남은 것」 에 손으로 고를 때 새는 것 · 역할극 산타 한 줄씩
+
 ## 2026-11-19 · claude · 일상컷을 그 세계의 서울의 하루로 — 생활 장면표 · 세계 소품 사전 · 서울 직업
 - data/city-life.json — 새로. 서울 생활 장면 열둘(한강공원 밤 돗자리 · 출근길 지하철 · 포장마차 · 찜질방 · 광장시장 노점 · 익선동 한옥 카페 · 북촌 한옥 마당 · 청계천 · 한양도성 순성길 · 야구장 응원석 · 한강 수영장 · 옥탑방, 장면마다 위키백과 src · 받침 장소 base)과 장면마다 세 세계 글 · 소품, 공용 시간대 · 서울 계절 · 날씨(장마 · 황사 · 가을 안개 · 눈 — 근거 src)
 - data/world-props.json — 새로. 세계 소품 사전 스물넷(휴대폰 · 컵 · 가방 · 우산 · 조명 · 탈것 · 간판 · 그릇 · 돈 · 책 · 시계 · 음악 · 열쇠 · 쇼핑봉투 · 표 …) × 세 세계, 그 세계에서 어색한 소품 동작(not_uses), 일상컷 옷의 결(clothes — 그 세계의 평상복)

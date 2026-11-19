@@ -127,4 +127,15 @@ try {
   const ph = C.check([{ ...c0, use: 'phone_selfie' }], card, []);
   assert(ph.some(e => /phone_selfie 는 steampunk 에서 안 쓴다/.test(e)), '스팀펑크 셀카');
 }
+/* 일상컷 검토 고침 — 판타지 · 스팀펑크 모든 칸 옷 글에 그 세계 banned_en 낱말이 없다(씨앗 12개) · 노출 갈래 컷은 얼굴 클로즈업이 아니다 */
+for (const w of ['fantasy', 'steampunk']) {
+  card.world = w;
+  const re = C.BANNED[w];
+  for (let seed = 100; seed < 112; seed++) {
+    for (const c of C.plan(card, SEVEN, [], { seed }).cuts) {
+      assert(!re.test(C.outfitEn(c)), `${w} 씨앗 ${seed} 칸 ${c.n}: 옷 「${C.outfitEn(c)}」 에 금지 낱말`);
+      if (C.EXPOSE_TYPES.includes(C.requiredType(c))) assert(c.frame !== 'face_close', `${w} 씨앗 ${seed} 칸 ${c.n}: 노출 갈래가 얼굴 클로즈업`);
+    }
+  }
+}
 console.log(`PASS 일상컷 묶음 계획기: 서울 ${n} 묶음(세 세계 × 씨앗 셋)이 일곱 장(장면 다섯 + 자유 설계 둘) · 묶음 규칙 · 노출 갈래(세계마다 다르게) · 상황 노출 · 장면 겹침 0 · 자세 겹침 0(세계끼리도) · 시간 · 계절 · 날씨는 서울 표 안 · 그 세계 장면 글 · 소품 · 옷의 결 · 금지 낱말 0, 직업컷 셋(자세 서로 다르게), 있는 두 장 위에 세 장, 같은 씨앗 같은 답, 틀린 칸 여섯`);

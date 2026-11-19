@@ -48,6 +48,7 @@ const DRINKS = ['cup', 'drink_glass', 'water_bottle', 'teapot'];
 /* 상황 노출(사용자 2026-11-09 「1번 내용을 필수갈래에 넣어줘. 그러면 필수컷이 3장은 확정」) — 장면 컷 한 장, 노출 갈래 · 세계 안 갈래와 다른 컷에
    젖은 옷 · 바람 · 반쯤 푼 차림 · 흘러내린 어깨끈 중 그 옷에 맞는 것 하나(T.CASUAL.situations). 다른 세계 묶음이 쓴 상황은 뒤로 */
 const SITUS = (T.CASUAL.situations || []).map(x => x.key);
+const EXPOSE_NO_FRAME = ['face_close'];   /* 노출 갈래(란제리풍 · 수영복 · 역할극) 컷에 안 쓰는 구도 — hair_close 같은 얼굴 클로즈업 자세도 이 구도 */
 const SITU_NO_FRAME = ['face_close'];   /* 얼굴 클로즈업엔 옷이 안 보여 상황이 안 산다(손상향 시험 계획 — 젖은 옷이 클로즈업에) */
 
 function rng(seed) { let a = seed >>> 0; return () => { a = (a + 0x6D2B79F5) >>> 0; let t = a; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
@@ -135,6 +136,7 @@ const pathKey = (preset, place) => preset + '@' + place;
    wantSig 면 소품 동작을 그 원소의 물건으로. 소품 동작은 덜 쓴 소품 쪽으로(무게 1/(1+횟수)², 따로 된 난수 흐름 — game 과 같다).
    장소 · 옷 · 자세 추천(그 자세) · 표정은 다른 카드에서 안 쓴 · 덜 쓴 쪽으로(lean — 2026-11-01) */
 function slot(r, card, reqType, { frame = '', wantSig = false, usage = {}, rUse = r } = {}) {
+  if (EXPOSE_TYPES.includes(reqType) && EXPOSE_NO_FRAME.includes(frame)) return null;   /* 노출 갈래 컷은 얼굴 클로즈업으로 짜지 않는다 — 옷이 안 보인다 */
   const g = card.g, U = usageOf(usage), world = card.world || '', noUse = NOT_USES(world);
   let sc;
   if (reqType) { const paths = requiredPaths(reqType, card); if (!paths.length) return null; sc = { ...lean(r, paths, U.place, x => x.place, famW) }; }
@@ -207,6 +209,7 @@ function check(cuts, card, base = [], others = []) {
   over('마실 것', c => { const u = C2.use(T2, c.use); return u && DRINKS.includes(u.prop) && 'drink'; }, 1);
   over('그 도시의 물건', c => sigProp(c) && 'signature', 2);
   over('어색한 조합', c => C2.awkward(T2, c.ofam, c.place).length && 'awkward', 1);
+  for (const c of cuts) if (EXPOSE_TYPES.includes(requiredType(c)) && EXPOSE_NO_FRAME.includes(c.frame)) errs.push(`칸 ${c.n || '?'}: 노출 갈래 컷은 얼굴 클로즈업에 두지 않는다`);
   over('동탄룩', c => c.ofam === 'dongtan' && 'dongtan', 1);
   /* 셋째 필수 — 상황 노출 한 장(여섯 장 묶음부터 — 옛 다섯 장 묶음은 이 갈래 전), 노출 · 세계 안 갈래 컷과 다른 컷 */
   over('상황 노출', c => c.situ && 'situ', 1);
@@ -269,9 +272,10 @@ function check(cuts, card, base = [], others = []) {
 }
 /* 옷 색 갈래(2026-11-08 「일상컷 생성 옵션에 의상색 관련 다양성은 없었나?」 → 「응 넣어줘」) — 색이 박히지 않은 옷마다 서로 다른 갈래를 준다.
    이미 있는 컷 · 다른 세계 묶음이 쓴 갈래는 뒤로(다 쓰면 다시 처음부터). 장면 고르기(씨앗 r)와 따로 굴려 옛 씨앗의 장면이 그대로다 */
-const COLORS = (T.CASUAL.colors || []).map(c => c.key);
+const ALL_COLORS = (T.CASUAL.colors || []).map(c => c.key), COLORS = ALL_COLORS;
 function outfitEn(c) { const it = C2.item(T2, c.ofam, c.item), fm = C2.family(T2, c.ofam); return (c.outfit || '').trim() || (it && it.en) || (fm && fm.en) || ''; }
-function colorize(cuts, old = [], others = [], rc = Math.random) {
+function colorize(cuts, old = [], others = [], rc = Math.random, world = '') {
+  const COLORS = ALL_COLORS.filter(k => worldOk(world, ((T.CASUAL.colors || []).find(c => c.key === k) || {}).en));   /* 그 세계 금지 낱말이 든 색 이름(denim)은 거른다 */
   const used = new Set([...old, ...others].map(c => c.color).filter(Boolean)), mine = new Set();
   for (const c of cuts) {
     if (P.colorFixed(outfitEn(c))) { delete c.color; continue; }
@@ -466,7 +470,7 @@ function plan(card, slots, old, { seed = Date.now(), required = '', usage = {}, 
       if (!got) break;
       cuts.push(got);
     }
-    if (cuts.length === slots.length && !check(cuts, card, old, others).filter(e => !/^갈래 자유 컷이 없다/.test(e)).length) { colorize(cuts, old, others, rng((seed ^ mix ^ 0x27d4eb2f) >>> 0)); denierize(cuts, rng((seed ^ mix ^ 0x165667b1) >>> 0)); situate(cuts, situAt, old, others, rng((seed ^ mix ^ 0x3c6ef372) >>> 0)); ambient(cuts, old, rng((seed ^ mix ^ 0x7f4a7c15) >>> 0), card.key);
+    if (cuts.length === slots.length && !check(cuts, card, old, others).filter(e => !/^갈래 자유 컷이 없다/.test(e)).length) { colorize(cuts, old, others, rng((seed ^ mix ^ 0x27d4eb2f) >>> 0), card.world || ''); denierize(cuts, rng((seed ^ mix ^ 0x165667b1) >>> 0)); situate(cuts, situAt, old, others, rng((seed ^ mix ^ 0x3c6ef372) >>> 0)); ambient(cuts, old, rng((seed ^ mix ^ 0x7f4a7c15) >>> 0), card.key);
       const free = makeFree(card.key, freeNums, freeKinds, cuts, old, others, recent, rng((seed ^ mix ^ 0x1b873593) >>> 0));
       if (!free || check([...cuts, ...free], card, old, others).length) continue;   /* 갈래 자유 칸에 남은 갈래가 없으면(노출 갈래가 장면 컷에 다 들었으면) 다시 */
       const all = [...old, ...cuts, ...free];

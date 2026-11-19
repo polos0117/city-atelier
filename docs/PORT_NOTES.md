@@ -68,3 +68,7 @@
 - `holo.js` · 한 장 층: 도시 한 장에도 쓸 수 있으나 원소 한 장 층(`walk-card`)과 한 몸이라 뺌.
 - `lib/city.css` 의 홀로 규칙 · `tb-lands` 규칙(`toolbox.css`) · `studio.js`/`prompt-spec.js` 의 원소 낱말 · `words.js` 의 studio/prompt/dex 낱말: 걷으면 생성기가 깨질 수 있어 두었다 — 각 Task 가 정리.
 - `lib/workspace-theme.js` 의 기억 열쇠(`element_room_v1` 등) · 공간 다섯의 원소 이름: 그대로, Task 7.
+
+## 남은 것
+- (Task 4 검토) 손으로 고를 때 새는 것 — 노래방 · 네온 밤 같은 지금 장면이 판타지 · 스팀펑크 장면 고르기에서 손으로 고르면 그대로 나온다. 계획기는 거르지만 손으로 고르는 길은 아직 안 막았다. 다음으로 미룸.
+- (Task 4 검토) 역할극 산타 — 판타지 · 스팀펑크 역할극 갈래에 산타 같은 지금 문화 옷이 뽑힐 수 있다. 다음으로 미룸.

@@ -39,16 +39,14 @@ Framing: a waist-up shot — the bottom edge crosses her waist; hips, legs and f
 
 Leave behind everything she wears in the attached image — no crown, tiara, helmet, feathers, headpiece, hairpins from it, armour or regalia; her hair is styled for the everyday outfit, with at most one small accessory.
 
-Her city — a floor-sweeping Seoul-red silk cape embroidered in gold thread with dancheong temple-eave patterns, gilded pauldrons engraved with a haechi guardian beast, and a jeweled crown shaped like four mountain peaks linked by a city wall — may show in the outfit's details, motifs or small accessories.
-
 Light: the place's own light, lit and coloured the way this style renders light and skin.
 
 One figure in focus, natural hands with five fingers, no text, logo or watermark.
 
-Avoid: flat single-tone cel shading, photographic appearance, semi-realistic face, plastic 3D-render finish. Nothing from our present day in her world: smartphone, mobile phone, plastic, LED screen, neon sign, neon, laptop, headphones, earbuds, sneakers, hoodie, jeans, hologram, billboard, car, machinery.
+Avoid: flat single-tone cel shading, photographic appearance, semi-realistic face, plastic 3D-render finish. Nothing from our present day in her world: smartphone, mobile phone, plastic, LED screen, neon sign, neon, laptop, headphones, earbuds, sneakers, hoodie, jeans, hologram, billboard, car, machinery, denim, bomber jacket, cowboy hat, sweatpants, leggings, baseball cap, tracksuit, jogger, track pants, windbreaker, fleece, bodycon.
 ```
 
-### B — 계획기 1번 칸: 옥탑방 옥상의 여름밤 · lingerie · 자세 추천 hair_close
+### B — 계획기 1번 칸: 옥탑방 옥상의 여름밤 · lingerie · 자세 추천 bench_sit · 구도 environmental
 
 파일 `seoul_fantasy_jp_paint_anime_f_casual1.webp` · 참고 그림 `seoul_fantasy_jp_paint_anime_f.webp`
 
@@ -65,30 +63,28 @@ World: an ordinary day in Seoul as her world knows it — a grand royal capital 
 
 Place: the flat roof outside her little room atop a house in the capital on a warm night — a low wooden bench, potted herbs, laundry on a line and the lantern-lit city with its palace lights spread below.
 Around her, as her world makes them: a pewter cup; lantern-orbs of soft magical light floating overhead; a painted silk folding fan; a leather-bound book with gilt edges.
-Season: the jangma rainy season of early summer — heavy, humid air under low grey skies.
+Season: spring — cherry blossoms in bloom and petals drifting on the air.
 Time of day: past midnight — the last lamps still burning and the streets nearly empty.
 Hair: her hair let down loose over her shoulders — same colour and length as the attached image.
-Outfit: a simple cotton lingerie set with plain wide bands — in a monochrome palette of black and charcoal with at most one white or grey accent; the outfit colour reads clearly at first glance, showing her shoulders, collarbones and legs as far as the outfit allows, following her curvy figure — a slim waist and rounded hips; intimate areas covered.
+Outfit: a qipao-inspired silk set with a mandarin collar and frog-button closures — in a monochrome palette of black and charcoal with at most one white or grey accent; the outfit colour reads clearly at first glance, showing her shoulders, collarbones and legs as far as the outfit allows, following her curvy figure — a slim waist and rounded hips; intimate areas covered.
 Her clothes are her world's everyday dress, not regalia — the chosen outfit keeps its cut, cover and skin, but is made of hand-woven linen, silk, cotton and wool, with laced, tied or hooked closures, embroidered hems and soft leather shoes or boots; nothing synthetic, no zips, no printed logos.
-POSTURE: standing.
-COMPOSITION: a close-up of her face and hair; body in side profile, her face in profile too, not turned toward the camera, facing the right of the frame, so her own right side is toward the camera; camera slightly above, looking down at her; a wall or backdrop of the place close behind her.
-Lens / perspective: 85mm-equivalent short-telephoto perspective from a suitable distance, with gentle background compression.
-RIGHT HAND: her own right hand tucks hair behind her ear — her near arm, on the camera side.
-LEFT HAND: her own left hand stays outside the frame — her far arm, on the side away from the camera.
-GAZE: her eyes are lowered.
-EXPRESSION: brows level, eyes bright and steady, closed-lip smile with a firm mouth.
-
-Framing: a close-up — her face and hair fill most of the frame and the bottom edge crosses at her collarbones; nothing below the shoulders shows, and her hands and anything she holds stay below the frame unless raised to her face.
+POSTURE: seated on a chair.
+COMPOSITION: an environmental long shot, her complete figure and enough of the place around her; body facing the camera; head turned to the side; camera at her eye level; she is placed in the left third of the frame, open space of the place to her right; a wall or backdrop of the place close behind her.
+Lens / perspective: 35mm-equivalent environmental perspective balancing the woman and the setting with moderate depth.
+RIGHT HAND: her own right hand is in PROP.
+LEFT HAND: her own left hand rests on her knee.
+PROP: with her own right hand she holds a leather-bound book with gilt edges closed against her chest; it is all she holds.
+LEGS: knees together, feet slightly apart.
+GAZE: she looks toward the left of the frame.
+EXPRESSION: faint upward pull at the mouth corners, lips together, warmth reaching the lower eyelids.
 
 Leave behind everything she wears in the attached image — no crown, tiara, helmet, feathers, headpiece, hairpins from it, armour or regalia; her hair is styled for the everyday outfit, with at most one small accessory.
-
-Her city — a floor-sweeping Seoul-red silk cape embroidered in gold thread with dancheong temple-eave patterns, gilded pauldrons engraved with a haechi guardian beast, and a jeweled crown shaped like four mountain peaks linked by a city wall — may show in the outfit's details, motifs or small accessories.
 
 Light: the place's own light, lit and coloured the way this style renders light and skin.
 
 One figure in focus, natural hands with five fingers, no text, logo or watermark.
 
-Avoid: flat single-tone cel shading, photographic appearance, semi-realistic face, plastic 3D-render finish. Nothing from our present day in her world: smartphone, mobile phone, plastic, LED screen, neon sign, neon, laptop, headphones, earbuds, sneakers, hoodie, jeans, hologram, billboard, car, machinery.
+Avoid: flat single-tone cel shading, photographic appearance, semi-realistic face, plastic 3D-render finish. Nothing from our present day in her world: smartphone, mobile phone, plastic, LED screen, neon sign, neon, laptop, headphones, earbuds, sneakers, hoodie, jeans, hologram, billboard, car, machinery, denim, bomber jacket, cowboy hat, sweatpants, leggings, baseball cap, tracksuit, jogger, track pants, windbreaker, fleece, bodycon.
 ```
 
 ## 스팀펑크 (`steampunk`)
@@ -126,16 +122,14 @@ Framing: a waist-up shot — the bottom edge crosses her waist; hips, legs and f
 
 Leave behind everything she wears in the attached image — no crown, tiara, helmet, feathers, headpiece, hairpins from it, armour or regalia; her hair is styled for the everyday outfit, with at most one small accessory.
 
-Her city — a soot-blackened leather work harness riveted in the crisscross truss pattern of the iron railway bridge over the Han River, fastened with a pressure-gauge buckle cast in the shape of a haechi head — may show in the outfit's details, motifs or small accessories.
-
 Light: the place's own light, lit and coloured the way this style renders light and skin.
 
 One figure in focus, natural hands with five fingers, no text, logo or watermark.
 
-Avoid: flat single-tone cel shading, photographic appearance, semi-realistic face, plastic 3D-render finish. Nothing from our present day in her world: smartphone, mobile phone, plastic, LED screen, neon sign, neon, laptop, headphones, earbuds, sneakers, hoodie, hologram, digital display, touchscreen.
+Avoid: flat single-tone cel shading, photographic appearance, semi-realistic face, plastic 3D-render finish. Nothing from our present day in her world: smartphone, mobile phone, plastic, LED screen, neon sign, neon, laptop, headphones, earbuds, sneakers, hoodie, hologram, digital display, touchscreen, bomber jacket, sweatpants, leggings, baseball cap, tracksuit, jogger, track pants, windbreaker, fleece, bodycon.
 ```
 
-### B — 계획기 1번 칸: 한강 야외 수영장 · swimwear · 자세 추천 raise_chest
+### B — 계획기 1번 칸: 한강 야외 수영장 · swimwear · 자세 추천 raise_chest · 구도 chest_up
 
 파일 `seoul_steampunk_jp_paint_anime_f_casual1.webp` · 참고 그림 `seoul_steampunk_jp_paint_anime_f.webp`
 
@@ -168,13 +162,11 @@ Framing: a chest-up shot — the bottom edge crosses just below her bust; waist,
 
 Leave behind everything she wears in the attached image — no crown, tiara, helmet, feathers, headpiece, hairpins from it, armour or regalia; her hair is styled for the everyday outfit, with at most one small accessory.
 
-Her city — a soot-blackened leather work harness riveted in the crisscross truss pattern of the iron railway bridge over the Han River, fastened with a pressure-gauge buckle cast in the shape of a haechi head — may show in the outfit's details, motifs or small accessories.
-
 Light: the place's own light, lit and coloured the way this style renders light and skin.
 
 One figure in focus, natural hands with five fingers, no text, logo or watermark.
 
-Avoid: flat single-tone cel shading, photographic appearance, semi-realistic face, plastic 3D-render finish. Nothing from our present day in her world: smartphone, mobile phone, plastic, LED screen, neon sign, neon, laptop, headphones, earbuds, sneakers, hoodie, hologram, digital display, touchscreen.
+Avoid: flat single-tone cel shading, photographic appearance, semi-realistic face, plastic 3D-render finish. Nothing from our present day in her world: smartphone, mobile phone, plastic, LED screen, neon sign, neon, laptop, headphones, earbuds, sneakers, hoodie, hologram, digital display, touchscreen, bomber jacket, sweatpants, leggings, baseball cap, tracksuit, jogger, track pants, windbreaker, fleece, bodycon.
 ```
 
 ## 사이버펑크 (`cyberpunk`)
@@ -212,8 +204,6 @@ Framing: a waist-up shot — the bottom edge crosses her waist; hips, legs and f
 
 Leave behind everything she wears in the attached image — no crown, tiara, helmet, feathers, headpiece, hairpins from it, armour or regalia; her hair is styled for the everyday outfit, with at most one small accessory.
 
-Her city — long earrings shaped like the Namsan transmission tower in glowing Seoul-red neon, a reflective raincoat with light strips racing along it like the river bridges at night, and a glowing haechi tattoo on the back of her hand — may show in the outfit's details, motifs or small accessories.
-
 Light: the place's own light, lit and coloured the way this style renders light and skin.
 
 One figure in focus, natural hands with five fingers, no text, logo or watermark.
@@ -221,7 +211,7 @@ One figure in focus, natural hands with five fingers, no text, logo or watermark
 Avoid: flat single-tone cel shading, photographic appearance, semi-realistic face, plastic 3D-render finish.
 ```
 
-### B — 계획기 1번 칸: 야구장 응원석 · roleplay · 자세 추천 walk_away
+### B — 계획기 1번 칸: 야구장 응원석 · roleplay · 자세 추천 reach_waist · 구도 waist_up
 
 파일 `seoul_cyberpunk_jp_paint_anime_f_casual1.webp` · 참고 그림 `seoul_cyberpunk_jp_paint_anime_f.webp`
 
@@ -241,20 +231,19 @@ Around her, as her world makes them: a pair of glowing inflatable thundersticks;
 Season: autumn — cool, clear, dry air and turning leaves.
 Time of day: the evening rush after work — the warm low sun sinking into dusk and lamps coming on along the street.
 Light direction: dappled light — patches of light with leaf or blind shadow across her.
-Outfit: a Christmas party costume — a fur-trimmed red velvet mini dress, a Santa hat and boots, showing her shoulders, collarbones and legs as far as the outfit allows, following her curvy figure — a slim waist and rounded hips; intimate areas covered.
+Outfit: a marching majorette costume — a plumed shako, a braided short jacket and a pleated mini skirt — in one bright, saturated colour such as cherry red, cobalt blue, sunflower yellow or kelly green; the outfit colour reads clearly at first glance, showing her shoulders, collarbones and legs as far as the outfit allows, following her curvy figure — a slim waist and rounded hips; intimate areas covered.
 Her clothes are her world's everyday techwear — the chosen outfit keeps its cut, cover and skin, but is made of technical fabrics with reflective panels, glowing seam lines, magnetic clasps and chunky-soled boots.
-POSTURE: walking.
-COMPOSITION: an environmental long shot, her complete figure and enough of the place around her; back to the camera; camera at her eye level; she is placed in the right third of the frame, open space of the place to her left; the space runs far back behind her, its lines receding into the distance; a soft out-of-focus object of the place sits in the near foreground at one edge of the frame.
-Lens / perspective: 35mm-equivalent environmental perspective balancing the woman and the setting with moderate depth.
-RIGHT HAND: her own right hand is in PROP.
-LEFT HAND: her own left arm hangs relaxed at her side.
-PROP: with her own right hand she carries a palm-sized camera drone by its grip at her side; it is all she holds.
-LEGS: mid-stride, one heel lifting.
-GAZE: she looks toward the far distance.
+POSTURE: standing.
+COMPOSITION: a waist-up shot of her head, torso and hands; body facing the camera; camera at her eye level; she is placed in the left third of the frame, open space of the place to her right; the space runs far back behind her, its lines receding into the distance; a soft out-of-focus object of the place sits in the near foreground at one edge of the frame.
+Lens / perspective: 50mm-equivalent natural perspective with balanced proportions and modest depth compression.
+RIGHT HAND: her own right hand reaches gently toward the camera.
+LEFT HAND: her own left hand rests lightly on her collarbone.
+GAZE: she looks into the camera.
+EXPRESSION: relaxed brow, softly open eyes, lips closed and unstrained, no smile.
+
+Framing: a waist-up shot — the bottom edge crosses her waist; hips, legs and feet are out of frame.
 
 Leave behind everything she wears in the attached image — no crown, tiara, helmet, feathers, headpiece, hairpins from it, armour or regalia; her hair is styled for the everyday outfit, with at most one small accessory.
-
-Her city — long earrings shaped like the Namsan transmission tower in glowing Seoul-red neon, a reflective raincoat with light strips racing along it like the river bridges at night, and a glowing haechi tattoo on the back of her hand — may show in the outfit's details, motifs or small accessories.
 
 Light: the place's own light, lit and coloured the way this style renders light and skin.
 

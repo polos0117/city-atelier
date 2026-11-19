@@ -110,6 +110,7 @@ for (const style of LIVE) for (const w of D.vocab.worlds) for (const s of LIFE.c
   const body = r.sections.negative ? t.replace(r.sections.negative, '') : t;
   for (const b of mk.banned_en) assert(!word(b, 'i').test(body), id + ' (d) 금지 낱말 「' + b + '」');
   if (mk.banned_en.length) assert(/^Avoid: /.test(r.sections.negative) && r.sections.negative.includes(mk.banned_en.join(', ')), id + ' 그 세계 금지 낱말은 Avoid 단락에');
+  assert(!/(?:cape|crown|pauldrons?|tiara|regalia)/i.test(body) && !/Her city/.test(t) && !t.includes(mk.en[0]), id + ' 일상컷에 세계 그림용 motif 가 없다');
   for (const nm of NAMES) assert(!word(nm).test(t), id + ' (e) 이름 「' + nm + '」');
   assert(!/[가-힣]/.test(t) && !/\b(?:element|kingdom|atomic|mecha)\b/i.test(t) && !/\bundefined\b/.test(t) && !/\.\./.test(t), id + ' 한국어 · 원소 말 · 찌꺼기');
   nc++;
