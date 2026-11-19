@@ -7,6 +7,18 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-19 · claude · 전체 도감 탭(Task 9) — 도시마다 표 한 장, 그림 없는 칸 · 설계 전 · 새 그림 점
+- lib/dex-view.js(새) — 전체 도감: 도시 10줄(표 한 장 — 도시 상징 색 띠 palette.hex 셋 · 이름 · 나라), 세계 세 칸(그림이 있으면 작은 그림 → 한 장, 없으면 「그림 없음」 → prompt.html?card=<도시>&o=world&world=<세계>), 설계 전 아홉은 「설계 전」, 칸마다 그 세계 일상컷 수 · 줄 끝 일상컷 수, 위 머리(설계된 도시 · 세계 그림 · 일상컷). 줄을 누르면 그 도시 무대, 설계 전이면 그 줄 아래 짧은 안내. 세계 고르개는 그 세계 칸만 강조
+- lib/img.js — 새 그림(today · isNew · markSeen): 오늘 · 어제 등록(added)이고 이 기기에서 안 연 그림, 그 도시(무대 · 한 장)를 열면 꺼짐 — 열쇠 city_seen_v1(어제 이후 등록분만 남김)
+- index.html — 도감 층을 「짓는 중」 대신 DexView 로, 도시를 열면 새 그림을 본 것으로, 검사용 ?today=YYYY-MM-DD(이 탭의 sessionStorage 에 남김), 도구 상자에 새 그림 수
+- lib/toolbox.js · lib/toolbox.css — 공방에서만 「새 그림 모두 확인 {n}」(없으면 누를 수 없음)
+- lib/room.css — 도감 표(.th-dex · .th-stats · .th-legend · .th-tk-cols · .th-ticket · .th-stub · .th-tk-name · .th-seat · .th-seat-n · .th-new · .th-count · .th-tk-note)
+- lib/words.js — 도감 낱말(dex.stat · dex.lg · dex.col · dex.seat · dex.new · dex.unit · dex.city.open · tool.seen), 쓰지 않게 된 home.building.note 뺌
+- tests/dex-screen.cjs(새) — 여섯 판 · 10줄 · 색 띠 · 그림 없음 → 생성기 · 설계 전 · 머리 · 강조 · 줄 누르기, 가짜 등록부(data/img.json 가로채기 — 서울 판타지 그림 + 일상컷 둘 오늘 · 스팀펑크 어제 · 사이버펑크 사흘 전)로 작은 그림 · 일상컷 수 · 새 점 · 열면 꺼짐 · 새로 고침 · 모두 확인 · 날짜 지남, 344 · 1280
+- tests/theme.cjs — 도감 탭 제목을 .th-dex h2 에서 본다
+- prompt.html · styles.html — 공용 링크 ?v= 올림(words 33 · img 11 · room 5 · toolbox 7 · toolbox.css 4)
+- DESIGN.md · AGENTS.md · docs/PORT_NOTES.md — 도감 선택자 · 새 그림 규칙 · 검사 자리
+
 ## 2026-11-19 · claude · 지구본 탭 · 도시 무대 · 한 장(Task 8) — SVG 지구본을 끌어 돌리고, 세 사람이 한 무대에
 - lib/globe.js(새) — 회전 무대 위 지구본: d3-geo 정사영 + world-atlas 땅, 세계마다 결(판타지 금 · 남빛 바다 / 스팀펑크 톱니 테 · 그을린 구리 / 사이버펑크 네온 선). 끌면 조명 안 도시가 바뀌고 놓으면 가운데로, 뒷면 점은 숨기고 못 누름, 날짜변경선은 짧은 쪽으로. glb(Task 6)가 그림 저장소에 있고 WebGL 이 되면 three.js 캔버스, 아니면 SVG 그대로
 - lib/globe-math.js(새) — latLonToVec3 · facing · nearestCity · wrapLon · lonDelta · 도시 차례(경도 서 → 동). 좌표 약속은 계획 Task 6 그대로

@@ -17,7 +17,7 @@
 | `tools/*` · `tests/*` · `.github/workflows/register-images.yml` | 도구 · 검사 | 이름 바꿈: `element-design.py` → `city-design.py`, `prompt-element.cjs` → `prompt-city.cjs`, `element.css` → `city.css`. 워크플로는 Task 5 에서 `city-atelier-img` 하나를 받게 고침(`schedule` 은 Task 10) |
 | `IMAGE_RULES.md` · `docs/IMAGE_AUTOMATION.md` · `docs/CASUAL_TREE_PORT.md` | 규칙 문서 | `IMAGE_RULES.md` 는 Task 5 에서 도시 꼴로 다시 씀. `IMAGE_AUTOMATION.md` 는 그림 길 대목만 고치고 머리에 「Task 10 · 11 뒤 다시」, `CASUAL_TREE_PORT.md` 는 머리 안내 그대로 |
 | `AGENTS.md` · `CLAUDE.md` · `README.md` · `DESIGN.md` · `docs/PATCH.md` | 문서 | 도시 공방 것으로 다시 씀(DESIGN 은 빈 틀) |
-| `index.html` | 첫 화면 | 「짓는 중」 껍데기 + 도구 상자 |
+| `index.html` | 첫 화면 | 도시 극장 — 지구본 · 도시 무대 · 한 장(Task 8) · 전체 도감(Task 9, `lib/dex-view.js`) + 도구 상자 |
 
 ## 뺀 것
 
@@ -41,7 +41,7 @@
 | ~~`tests/prompt-city.cjs`~~ | 되살림(Task 3, 2026-11-19) — 서울 × 세 세계 × 살아 있는 화풍: 표지 셋 이상 · motif · 머리색 · 금지 낱말(Avoid 줄 밖) · 상표 · 사람 이름 · mecha 던짐 · 설계 미정 아홉 | — |
 | ~~`tests/prompt-sections.cjs` · `tests/prompt-short-look.cjs`~~ | 되살림(Task 3) — 칸 꼴 · 짧은 판의 도시 칸 | — |
 | ~~`tests/prompt-pack-screen.cjs`~~ | 되살림(Task 3 · 4) — 서울 세계 그림 셋 + 세계마다 일상 일곱(계획기 · 자유 설계 둘), 폰 344×882 | — |
-| ~~`tests/screen.cjs`~~ | 되살림(Task 3 · 4) — 화풍 비교 · 생성기 도시 판 · 세계 그림 걸음 · **일상컷 걸음**(세계 → 시대 → 서울 생활 장면 → … · 화면 = 조립기 · 해방 · 랜덤 · 여기부터 다시 · 처음부터 · 그 도시의 물건) · 폰 레일/막대/시트/44px. 지구본 · 도감 화면은 **Task 8 · 9** | Task 8 · 9 |
+| ~~`tests/screen.cjs`~~ | 되살림(Task 3 · 4) — 화풍 비교 · 생성기 도시 판 · 세계 그림 걸음 · **일상컷 걸음**(세계 → 시대 → 서울 생활 장면 → … · 화면 = 조립기 · 해방 · 랜덤 · 여기부터 다시 · 처음부터 · 그 도시의 물건) · 폰 레일/막대/시트/44px. 지구본 · 도감 화면은 따로 — `tests/globe-screen.cjs`(Task 8) · `tests/dex-screen.cjs`(Task 9) | 끝 |
 | ~~`tests/casual-plan.cjs`~~ | 되살림(Task 4, 2026-11-19) — 서울 세 세계 × 씨앗 셋: 일곱 장 · 장면 · 자세 겹침 0 · 시간 · 계절 · 날씨는 서울 표 안 · 금지 낱말 · 직업컷 셋 | — |
 | ~~`tests/image-claim.cjs` · `tests/register-images.py` · `tests/make-thumbs.py`~~ | 되살림(Task 5, 2026-11-19) — 그림 잠금 · 등록 · 썸네일을 도시 꼴로(도시 열쇠 · 세계 셋 · `_f` 만 · 그림 저장소 하나). 건너뛴 검사 표는 이제 비었다 — 남은 건너뜀 없음 | — |
 
@@ -71,7 +71,8 @@
 - (Task 4) **편의점 앞 파라솔**은 근거(위키백과)를 못 찾아 장면표에서 뺐다 — 한강공원 편의점은 Hangang Park 문서에 있어 밤 돗자리 장면의 근거로만.
 - (Task 3) **화풍 비교(styles.html)**: 아직 세계 `mecha` 를 쓴다(원소 그림 묶음) — 낱말 `world.mecha` 를 그래서 남겼다. Task 11 에서 서울 묶음으로 바꿀 때 뺀다.
 
-- `dex.html`: 원소 AGENTS 는 「옛 주소 껍데기」, 계획 Task 9 는 「`dex.html` 또는 `index.html` 의 `tab=dex`」 — 껍데기는 뺐고, 도감은 Task 7 이 정한다.
+- `dex.html`: 원소 AGENTS 는 「옛 주소 껍데기」, 계획 Task 9 는 「`dex.html` 또는 `index.html` 의 `tab=dex`」 — 껍데기는 뺐고, 도감은 `index.html?tab=dex`(Task 7 이 정하고 Task 9 가 지음). 계획은 `lib/city.css` 를 고친다고 했지만 index.html 은 그 파일을 부르지 않는다 — 도감 꼴은 극장 선택자와 같이 `lib/room.css` 에.
+- 새 그림 점: 원소의 `lib/fresh.js` 는 「새 판이 나왔다」 띠(빌드 살핌)라 그림과 상관없다 — 새 그림(오늘 · 어제 등록 · 열면 꺼짐)은 등록일(added)을 이미 읽는 `lib/img.js` 에 `isNew` · `markSeen` 으로 더했다(삼국지 공방 규칙, 열쇠 `city_seen_v1`).
 - `holo.js` · 한 장 층: 도시 한 장에도 쓸 수 있으나 원소 한 장 층(`walk-card`)과 한 몸이라 뺌.
 - `lib/city.css` 의 홀로 규칙 · `tb-lands` 규칙(`toolbox.css`) · `studio.js`/`prompt-spec.js` 의 원소 낱말 · `words.js` 의 studio/prompt/dex 낱말: 걷으면 생성기가 깨질 수 있어 두었다 — 각 Task 가 정리.
 - ~~`lib/workspace-theme.js` 의 공간 다섯~~ — Task 7 에서 공간 여섯으로(열쇠 `city_world_v1` · `city_room_v1`). 「배경 끄기」(`data-background`)는 도구 상자에 고르개가 없던 것이라 같이 걷었다.

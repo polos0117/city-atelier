@@ -78,7 +78,7 @@ const smallTargets = p => p.$$eval('button, a, select', els => els.filter(e => {
       await p.tap('.th-tab[data-tab="dex"]');
       assert.equal(await p.evaluate(() => location.search), '?tab=dex&w=steampunk', '도감 탭 주소');
       assert.equal(await p.getAttribute('.th-tab[data-tab="dex"]', 'aria-current'), 'page');
-      assert.equal(await p.textContent('.th-marquee-name'), await p.evaluate(() => W('tab.dex')));
+      assert.equal(await p.textContent('.th-dex h2'), await p.evaluate(() => W('tab.dex')));
       await p.goBack(); await p.waitForFunction(() => document.querySelector('.th-tab[data-tab="globe"]').getAttribute('aria-current') === 'page');
       assert.deepEqual(o.errors, []); checks += 18;
       // 주소에 세계가 없으면 이 기기의 마지막 세계

@@ -242,5 +242,43 @@ html[data-motion="on"] .th-role:nth-child(3) .th-beam {animation-delay:.5s}
 @keyframes th-flick {0% {opacity:.25;filter:brightness(1.8)} 100% {opacity:1;filter:none}}
 @keyframes th-light {from {opacity:0} to {opacity:.32}}
 
+/* ── 전체 도감(Task 9, DESIGN.md 5절) — 도시마다 표 한 장: 도시 색 띠 · 이름 · 세계 세 칸(44px) · 일상컷 수. 칸 색 --rc = 그 세계 배역 색 ── */
+.th-dex h2 {margin:14px 0 0;font-size:36px;line-height:1}
+.th-stats {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-top:10px}
+.th-stats div {padding:6px 8px;border-radius:8px;background:var(--card);border:1px solid var(--line)}
+.th-stats b {display:block;font-size:22px;line-height:1.1;color:var(--accent)}
+.th-stats small {font-size:13px}
+.th-stats span {font-size:10.5px;font-weight:700;color:var(--muted)}
+.th-legend {display:flex;flex-wrap:wrap;gap:4px 12px;margin-top:10px;font-size:10.5px;font-weight:700;color:var(--muted)}
+.th-legend > span {display:inline-flex;align-items:center;gap:5px}
+.th-legend i {position:relative;width:14px;height:14px;border-radius:4px;border:1.5px solid var(--accent)}
+.th-legend i.is-pre {border:1px dashed var(--line)}
+.th-legend > span:last-child i {margin-right:6px}
+.th-tk-cols,.th-ticket {display:grid;grid-template-columns:10px minmax(0,1fr) repeat(3,44px) 30px;gap:5px;align-items:center}
+.th-tk-cols {margin-top:10px;padding:0 6px 0 1px;font-size:9.5px;font-weight:800;line-height:1.2;text-align:center;color:var(--muted);white-space:pre-line}
+.th-tk-cols span:nth-child(2) {text-align:left;padding-left:8px}
+.th-tk-cols .is-cur {color:var(--text);box-shadow:inset 0 -2px var(--rc)}
+.th-tickets {list-style:none;margin:6px 0 0;padding:0;display:flex;flex-direction:column;gap:5px}
+.th-ticket {position:relative;min-height:54px;padding:4px 6px 4px 0;border-radius:8px;background:var(--card);border:1px solid var(--line);cursor:pointer}
+.th-ticket::after {content:'';position:absolute;left:14px;top:5px;bottom:5px;border-left:2px dotted var(--line);pointer-events:none}
+.th-stub {align-self:stretch;margin:-4px 0;border-radius:7px 0 0 7px}
+.th-tk-name {min-width:0;min-height:44px;padding:0 0 0 8px;border:0;background:none;color:var(--text);font-family:inherit;text-align:left;cursor:pointer;display:flex;flex-direction:column;justify-content:center}
+.th-tk-name b {display:block;line-height:1.15;white-space:nowrap;overflow:hidden}
+.th-tk-name small {display:block;font-size:10px;font-weight:700;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.th-seat {position:relative;box-sizing:border-box;width:44px;height:44px;padding:0;border-radius:10px;display:flex;align-items:center;justify-content:center;text-align:center;
+  font-family:inherit;font-size:9.5px;font-weight:800;line-height:1.15;white-space:pre-line;text-decoration:none;color:var(--muted);background:transparent}
+.th-seat.is-empty {border:1.5px solid var(--rc);color:var(--text);background:repeating-linear-gradient(135deg,transparent 0 5px,var(--card2) 5px 7px)}
+.th-seat.is-pre {border:1px dashed var(--line)}
+.th-seat.has-pic {border:1.5px solid var(--rc);cursor:pointer;overflow:visible}
+.th-seat.has-pic img {width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:8px}
+.th-seat.is-cur:not(.is-pre) {box-shadow:0 0 0 2px var(--bg),0 0 0 3.5px var(--rc),0 0 12px var(--rc)}
+.th-seat.is-pre.is-cur {border-color:var(--muted)}
+.th-seat-n {position:absolute;left:-4px;bottom:-4px;min-width:16px;padding:1px 3px;border-radius:6px;background:var(--card);border:1px solid var(--rc);color:var(--text);font-size:9.5px;line-height:1.2}
+.th-new {position:absolute;top:-7px;right:-7px;padding:2px 4px;border-radius:6px;background:var(--text);color:var(--bg);font-style:normal;font-size:9px;font-weight:800;line-height:1.1;box-shadow:0 0 8px var(--accent2)}
+.th-count {text-align:center;line-height:1}
+.th-count b {display:block;font-size:17px}
+.th-count small {display:block;margin-top:2px;font-size:9px;font-weight:700;color:var(--muted)}
+.th-tk-note {grid-column:1/-1;margin:2px 0 2px 16px;font-size:12px;line-height:1.5;color:var(--text)}
+
 @media (min-width:768px) {.th {padding-top:40px} .th-marquee-name {font-size:52px}}
 @media (forced-colors:active) {.th-valance,.th-side,.th-spot,.th-drop {display:none}}

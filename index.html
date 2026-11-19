@@ -7,7 +7,7 @@
 <meta name="theme-color" content="#1c0810">
 <title>도시 공방</title>
 <!-- 도시 극장(시안 B, DESIGN.md). 막 · 조명 · 세계 고르개(위) · 도구 단추(오른쪽 위) · 아래 탭 둘(지구본 · 전체 도감).
-     층: 지구본(첫 화면 — 회전 무대 위 지구본 lib/globe.js + 전광판) · 도시 무대 · 한 장(lib/city-view.js, Task 8) · 전체 도감(Task 9 — 아직 「짓는 중」).
+     층: 지구본(첫 화면 — 회전 무대 위 지구본 lib/globe.js + 전광판) · 도시 무대 · 한 장(lib/city-view.js, Task 8) · 전체 도감(lib/dex-view.js, Task 9 — 도시마다 표 한 장, 새 그림 점).
      공간 여섯(세계 × 객석 불)은 lib/workspace-theme.js + lib/room.css. 주소는 lib/walk-core.js 꼴(?tab=globe|dex &city= &card= &pic= &w=).
      세계를 바꾸면 주소의 w 를 바꿔 쓰고(역사 안 늘림) 막이 한 번 내려온다(움직임 켬일 때만). 탭 · 도시 · 한 장 들어가기는 역사 한 칸.
      importmap 'three' — 모형(glb)이 있을 때만 lib/globe.js 가 three.js 를 부른다(GLTFLoader 가 'three' 를 찾는다). -->
@@ -17,14 +17,14 @@
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;700&display=swap"></noscript>
 <link rel="stylesheet" href="lib/workspace.css?v=5">
 <script src="lib/workspace-theme.js?v=4"></script>
-<script src="lib/words.js?v=32"></script>
+<script src="lib/words.js?v=33"></script>
 <script src="lib/favorites.js?v=1"></script>
 <script src="lib/patch.js?v=1"></script>
 <script src="lib/walk-core.js?v=7"></script>
-<script src="lib/img.js?v=10"></script>
+<script src="lib/img.js?v=11"></script>
 <script src="lib/globe-math.js?v=1"></script>
-<link rel="stylesheet" href="lib/room.css?v=4">
-<link rel="stylesheet" href="lib/toolbox.css?v=3">
+<link rel="stylesheet" href="lib/room.css?v=5">
+<link rel="stylesheet" href="lib/toolbox.css?v=4">
 <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"}}</script>
 </head>
 <body class="th-page">
@@ -32,9 +32,10 @@
 <script type="module">
 import {h,render} from 'https://esm.sh/preact@10.24.3';
 import {useState,useEffect,useRef,useMemo} from 'https://esm.sh/preact@10.24.3/hooks';
-import {Toolbox} from './lib/toolbox.js?v=6';
+import {Toolbox} from './lib/toolbox.js?v=7';
 import {mountGlobe} from './lib/globe.js?v=1';
 import {CityStage,CardView,ready,latlon} from './lib/city-view.js?v=1';
+import {DexView,worldFiles,freshFiles} from './lib/dex-view.js?v=1';
 const W = window.W, A = window.AtelierAppearance, R = window.AtelierWalk, GM = window.GlobeMath, IMG = window.AtelierImg;
 const here = () => R.readRoute(location.search);
 const remember = () => { try { sessionStorage.setItem('city_walk_last', location.search); } catch (e) {} };
@@ -42,6 +43,9 @@ const json = u => fetch(u, { cache: 'no-cache' }).then(r => { if (!r.ok) throw n
 /* 자료 — 설계표 · 화풍 판(주소 검증) · 직업표 · 생활 장면표는 꼭, 그림 등록부는 없어도 돈다 */
 const DATA = Promise.all([json('data/city-design.json'), json('data/style.json'), json('data/casual-own.json'), json('data/city-life.json'), IMG.load().catch(() => ({}))])
   .then(([d, s, own, life, img]) => ({ d, s, own, life, img }));
+/* 새 그림의 「오늘」 — 이 기기의 날짜. 검사는 주소 ?today=YYYY-MM-DD 로 정하고(주소 검증이 지우므로 이 탭의 sessionStorage 에 남긴다) */
+const TODAY = (() => { const q = new URLSearchParams(location.search).get('today');
+  try { if (/^\d{4}-\d{2}-\d{2}$/.test(q || '')) sessionStorage.setItem('city_today', q); return sessionStorage.getItem('city_today') || IMG.today(); } catch (e) { return IMG.today(); } })();
 let FOCUS = 'seoul';   /* 지구본 조명 안의 도시 — 탭을 오가도 남는다(이 화면 안에서만) */
 
 /* 지구본 자리 — 세계가 바뀌면 지우고 새로 띄운다(늦게 온 응답은 lib/globe.js 가 버린다) */
@@ -60,6 +64,7 @@ function Theater() {
   const [route, setRoute] = useState(here), [look, setLook] = useState(() => A.get()), [drop, setDrop] = useState(0), dropEl = useRef(null);
   const [data, setData] = useState(null), [fail, setFail] = useState(false), [focus, setFocusState] = useState(FOCUS), [note, setNote] = useState('');
   const moved = useRef(false);   /* 전광판 이름 켜짐은 도시가 바뀔 때만(처음 그릴 때는 아니다) */
+  const [, setSeen] = useState(0);   /* 새 그림을 본 것으로 적으면 다시 그린다 */
   const setFocus = k => { FOCUS = k; moved.current = true; setFocusState(k); setNote(''); };
   useEffect(() => {
     const pop = () => setRoute(here()), app = () => setLook(A.get());
@@ -72,6 +77,14 @@ function Theater() {
     return () => { removeEventListener('popstate', pop); removeEventListener('atelier-appearance', app); };
   }, []);
   useEffect(remember, [route]);
+  /* 그 도시를 열어 보면(도시 무대 · 한 장) 그 도시의 새 그림이 꺼진다 */
+  useEffect(() => {
+    if (!data || !route.city) return;
+    const e = data.img[route.city];
+    if (IMG.markSeen(data.d.vocab.worlds.flatMap(w => worldFiles(e, w)), TODAY)) setSeen(n => n + 1);
+  }, [data, route.city]);
+  const fresh = data ? freshFiles(data, TODAY) : [];
+  const seenAll = () => { if (IMG.markSeen(fresh, TODAY)) setSeen(n => n + 1); };
   /* 막 내림 — 클래스를 다시 붙여 처음부터. 움직임 끔이면 CSS 가 아무것도 돌리지 않는다 */
   useEffect(() => {
     const el = dropEl.current; if (!drop || !el) return;
@@ -109,10 +122,8 @@ function Theater() {
   else if (layer === 'city') body = [h(CityStage, { key: 'c', data, city: route.city, world: look.world, st: route.st, from: route.tab, onBack: leave, onCard: pic => enter({ tab: route.tab, city: route.city, card: route.city, pic }) })];
   else if (layer === 'card') body = [h(CardView, { key: 'k', data, city: route.city, pic: route.pic, st: route.st, onBack: leave,
     onPic: pic => { const next = Object.assign({}, route, { pic }); history.replaceState(history.state, '', location.pathname + R.routeSearch(next)); setRoute(next); } })];
-  else if (layer === 'dex') body = [
-    h('main', { class: 'th-stage', key: 's' }, h('div', { class: 'th-spot', 'aria-hidden': 'true' }), h('div', { class: 'th-floor', 'aria-hidden': 'true' }), h('div', { class: 'th-slot', 'aria-hidden': 'true' })),
-    h('section', { class: 'th-marquee', 'aria-live': 'polite', key: 'm' }, h('h2', { class: 'th-marquee-name th-disp' }, W('tab.dex')),
-      h('div', { class: 'th-bulbs', 'aria-hidden': 'true' }, h('i'), h('i'), h('i')), h('p', null, W('home.building') + ' — ' + W('home.building.note')))];
+  else if (layer === 'dex') body = [h(DexView, { key: 'd', data, world: look.world, st: route.st, day: TODAY, onCity: k => enter({ city: k, tab: 'dex' }),
+    onCard: (k, pic) => enter({ tab: 'dex', city: k, card: k, pic }) })];
   else {
     const c = cityOf(focus) || data.d.cities[0], prev = cityOf(GM.step(cities, c.key, -1)), next = cityOf(GM.step(cities, c.key, 1)), on = ready(c);
     const nav = (cls, x, arrow) => h('button', { type: 'button', class: cls, 'aria-label': W(cls === 'th-mq-prev' ? 'globe.prev' : 'globe.next', { city: x.ko }), onClick: () => setFocus(x.key) },
@@ -137,7 +148,7 @@ function Theater() {
     h('header', { class: 'th-head' },
       h('div', null, h('h1', { class: 'th-name th-disp' }, W('app.title')),
         h('span', { class: 'th-sub' }, W('stage.sub', { world: W('world.' + look.world), tone: W('stage.tone.' + look.tone) }))),
-      h(Toolbox, {})),
+      h(Toolbox, { seen: { n: fresh.length, onAll: seenAll } })),
     h('nav', { class: 'th-worlds', 'aria-label': W('world.pick') },
       A.worlds.map(k => h('button', { key: k, type: 'button', 'data-world': k, 'aria-pressed': k === look.world, onClick: () => pickWorld(k) }, W('world.' + k)))),
     ...body,
