@@ -229,7 +229,8 @@ const kindOf = c => c.sfree ? (c.gfree ? 'gfree' : 'ofree') : isCosplay(c) ? 'co
 /* 장소가 받는 의상 계열 — 트리가 고를 수 있는 것(생활 장면이면 ∩ 장면표 outfits) */
 const FAMS_AT = new Map();
 function famsAt(place) {
-  if (!FAMS_AT.has(place)) { const s = lifeOf(place), all = C2.choices(T2, { era: ERA, place }, 'ofam', null); FAMS_AT.set(place, s && s.outfits ? all.filter(f => s.outfits.includes(f)) : all); }
+  /* 생활 장면은 장면표 outfits, 일반 장소는 버전1 표의 그 장소 outfits(2026-11-20 — 버전2 표는 계열을 거의 어디서나 받아 라이브하우스에 수영복이 나왔다) */
+  if (!FAMS_AT.has(place)) { const s = lifeOf(place), g = (tree.places || []).find(x => x.key === place), all = C2.choices(T2, { era: ERA, place }, 'ofam', null), allow = s && s.outfits ? s.outfits : g && g.outfits ? g.outfits : null; FAMS_AT.set(place, allow ? all.filter(f => allow.includes(f)) : all); }
   return FAMS_AT.get(place);
 }
 /* 생활 장면 컷 · 보통 칸이 고를 계열 — 노출 갈래 · 코스프레는 정해 둔 칸 한 장씩만 */

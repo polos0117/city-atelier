@@ -21,7 +21,7 @@ const T1 = J('data/casual-tree.json'), GENERIC = new Set(T1.places.map(p => p.ke
 let n = 0;
 const card = C.cardOf('seoul');
 assert.deepEqual(card.worlds, ['fantasy', 'steampunk', 'cyberpunk'], '서울 세 세계');
-assert(SCENES.length >= 10 && SCENES.length <= 12, '서울 생활 장면 10~12 — ' + SCENES.length);
+assert(SCENES.length >= 10, '서울 생활 장면 10 이상 — ' + SCENES.length);
 const lifeCount = {};
 for (const seed of [3, 11, 29]) {
   const planned = [];   /* --world all 처럼 — 앞 세계 묶음이 다음 세계의 겹침 검사(others)에 든다 */

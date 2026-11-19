@@ -299,7 +299,7 @@ TREE2 = os.path.join(ROOT, "data", "casual-tree-v2.json")
 
 
 def check_life(doc, life, props, design, tree2):
-    """생활 장면표 · 세계 소품 사전(2026-11-19 Task 4) — 설계한 도시는 장면 10~12(근거 src), 장면마다 받침 장소 · 세 세계 글 · 소품,
+    """생활 장면표 · 세계 소품 사전(2026-11-19 Task 4) — 설계한 도시는 장면 10 이상(근거 src — 2026-11-20 사용자 「서울 장면 더 만들어서」, 서울 28), 장면마다 받침 장소 · 세 세계 글 · 소품,
     판타지 · 스팀펑크 글엔 그 세계 금지 낱말(설계표 banned_en)이 없다"""
     errs = []
     worlds = design["vocab"]["worlds"]
@@ -341,8 +341,8 @@ def check_life(doc, life, props, design, tree2):
                 if t not in times:
                     errs.append("%s 날씨 %s 의 시간대 %s 가 없다" % (ck, x["key"], t))
         scenes = c.get("scenes", [])
-        if not 10 <= len(scenes) <= 12:
-            errs.append("%s 생활 장면이 %d 개 — 10~12" % (ck, len(scenes)))
+        if len(scenes) < 10:
+            errs.append("%s 생활 장면이 %d 개 — 10 이상" % (ck, len(scenes)))
         keys = set()
         for sc in scenes:
             k = sc["key"]; where = "장면 %s.%s" % (ck, k)

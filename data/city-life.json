@@ -204,6 +204,239 @@
       "steampunk": { "en": "the flat roof outside her small room atop a tenement on a warm night — a copper water tank on iron legs, laundry on a line, chimney pots all around and the warm gaslight of the city glowing across the roofs", "props": ["cup", "lamp", "fan", "music"] },
       "cyberpunk": { "en": "the roof outside her tiny rooftop room above an old tenement on a warm night — printed-polymer stools, a humming climate unit, potted plants under a grow-light and the layered towers and flying-vehicle lanes of the megacity filling the sky", "props": ["cup", "lamp", "fan", "phone"] }
      }
+    },
+    {
+     "key": "noraebang",
+     "ko": "노래방",
+     "src": ["https://ko.wikipedia.org/wiki/노래방", "https://en.wikipedia.org/wiki/Noraebang"],
+     "base": "night_karaoke",
+     "indoor": true,
+     "times": ["night_out", "past_midnight"],
+     "outfits": ["everyday", "dongtan", "subculture", "evening", "roleplay", "costume"],
+     "en": "a private karaoke room",
+     "worlds": {
+      "fantasy": { "en": "a private song chamber in a lantern-lit tavern of the capital — cushioned benches around a low lacquered table, a bard's crystal glowing with the words of each song, spell-lights turning slowly across the painted ceiling", "props": ["microphone", "cup", "lamp", "drink_glass"] },
+      "steampunk": { "en": "a private music parlour of a gaslit song-house — velvet banquettes around a brass-edged table, a gramophone-organ with a speaking horn and punched song-rolls, coloured glass lamps turning slowly on a clockwork wheel", "props": ["microphone", "cup", "lamp", "drink_glass"] },
+      "cyberpunk": { "en": "a private karaoke capsule — curved walls that flood with the colours of the song, floating lyric holograms and a ring of soft seats around a glass table of glowing drinks", "props": ["microphone", "drink_glass", "phone", "lamp"] }
+     }
+    },
+    {
+     "key": "pc_bang",
+     "ko": "PC방 밤샘",
+     "src": ["https://ko.wikipedia.org/wiki/PC방", "https://en.wikipedia.org/wiki/PC_bang"],
+     "base": "street_office",
+     "indoor": true,
+     "times": ["midday", "night_out", "past_midnight"],
+     "outfits": ["everyday", "subculture", "homewear", "dongtan"],
+     "en": "an all-night PC gaming room",
+     "worlds": {
+      "fantasy": { "en": "an all-night scrying hall of the capital — rows of carved desks, each with a glowing crystal mirror where players guide tiny conjured armies, high-backed cushioned chairs and a counter selling noodle bowls and honey tea", "props": ["bowl", "cup", "lamp", "drink_glass"] },
+      "steampunk": { "en": "an all-night calculating-engine parlour — rows of brass consoles with glowing glass viewing-plates and clacking keys, leather swivel chairs and a counter of steaming noodle bowls", "props": ["bowl", "cup", "watch", "lamp"] },
+      "cyberpunk": { "en": "an all-night gaming hall — rows of wraparound displays and neural headsets glowing in the dark, deep reclining gaming chairs and a robot counter serving cup noodles", "props": ["drink_glass", "bowl", "phone", "music"] }
+     }
+    },
+    {
+     "key": "goshiwon",
+     "ko": "고시원 작은 방",
+     "src": ["https://ko.wikipedia.org/wiki/고시원"],
+     "base": "home_bedroom",
+     "indoor": true,
+     "times": ["dawn", "night_out", "past_midnight"],
+     "outfits": ["homewear", "lingerie", "everyday"],
+     "en": "a tiny exam-study lodging room",
+     "worlds": {
+      "fantasy": { "en": "a tiny scholar's cell in a lodging house of the capital — a narrow bed under a slanted wooden roof, a writing desk stacked with exam scrolls, a single oil lamp and a round window onto the night", "props": ["book", "lamp", "cup", "key"] },
+      "steampunk": { "en": "a cramped boarding-house room for exam clerks — a narrow iron bed, a fold-down desk heaped with ledgers and textbooks, a warm radiator pipe and one gas lamp by a tiny window", "props": ["book", "lamp", "cup", "watch"] },
+      "cyberpunk": { "en": "a capsule micro-room in a vertical study tower — a fold-out bed, a smart-glass desk scrolling lecture notes, one strip of soft light and a window slot onto the glowing city levels", "props": ["phone", "book", "cup", "lamp"] }
+     }
+    },
+    {
+     "key": "hongdae_busking",
+     "ko": "홍대 거리 공연",
+     "src": ["https://ko.wikipedia.org/wiki/홍대_(지역)", "https://en.wikipedia.org/wiki/Hongdae_(area)"],
+     "base": "street_alley",
+     "times": ["commute_pm", "night_out"],
+     "outfits": ["subculture", "retro", "roleplay", "costume", "everyday", "dongtan", "game_cosplay"],
+     "en": "a street performance in the university nightlife district",
+     "worlds": {
+      "fantasy": { "en": "a lantern-lit street of minstrels near the capital's academy — young bards playing lutes and drums on the cobbles, a juggler ringed by watching students, painted signboards over taverns and charm shops", "props": ["music", "lamp", "cup", "money"] },
+      "steampunk": { "en": "a gaslit student quarter of street musicians — a brass band and a fiddler playing on the cobbles beside a hand-cranked organ, posters for music halls pasted on brick walls, a crowd in caps and capes", "props": ["music", "lamp", "money", "ticket"] },
+      "cyberpunk": { "en": "a street-performance plaza in the university district — dancers on a glowing floor panel, drones filming overhead, layered projection murals on the walls and a crowd holding up glowing wristbands", "props": ["music", "phone", "drink_glass", "camera"] }
+     }
+    },
+    {
+     "key": "comic_world",
+     "ko": "서울 코믹월드 행사장",
+     "src": ["https://ko.wikipedia.org/wiki/코믹월드", "https://en.wikipedia.org/wiki/Comic_World"],
+     "base": "stage_convention",
+     "indoor": true,
+     "times": ["midday", "commute_pm"],
+     "outfits": ["subculture", "costume", "halloween", "roleplay", "game_cosplay"],
+     "en": "an anime and comics fan convention hall",
+     "worlds": {
+      "fantasy": { "en": "a great guild hall during a masquerade fair of storytellers — tables of hand-bound picture books and painted charms, costumed revellers dressed as heroes of legend posing before an illusion-lit backdrop", "props": ["book", "camera", "shopping_bag", "ticket"] },
+      "steampunk": { "en": "an exhibition hall during a costume fair — stalls of illustrated penny dreadfuls and tin badges, revellers costumed as heroes of serial adventures posing for a photographer under a magnesium flash", "props": ["book", "camera", "shopping_bag", "ticket"] },
+      "cyberpunk": { "en": "a mega-convention hall of fan creators — booths of printed comics and glowing acrylic charms, cosplayers posing in a ring-light photo zone while camera drones hover", "props": ["camera", "phone", "shopping_bag", "ticket"] }
+     }
+    },
+    {
+     "key": "daehangno_backstage",
+     "ko": "대학로 소극장 분장실",
+     "src": ["https://ko.wikipedia.org/wiki/대학로", "https://en.wikipedia.org/wiki/Daehangno"],
+     "base": "night_powder",
+     "indoor": true,
+     "times": ["commute_pm", "night_out"],
+     "outfits": ["roleplay", "costume", "halloween", "traditional", "retro", "evening"],
+     "en": "the dressing room behind a small theatre stage",
+     "worlds": {
+      "fantasy": { "en": "the backstage of a small players' theatre in the capital's scholar quarter — a dressing table ringed with candles, racks of costumes and painted masks, the velvet curtain glowing beyond the wings", "props": ["lamp", "book", "cup", "ticket"] },
+      "steampunk": { "en": "the dressing room behind a little playhouse stage — a mirror framed in gas jets, costume racks and wig stands, scripts pinned to the wall and the limelight glowing past the curtain", "props": ["lamp", "book", "watch", "ticket"] },
+      "cyberpunk": { "en": "the backstage of a micro-theatre — a mirror framed in light strips, costume racks beside holographic set pieces, a cue panel glowing on the wall and stage light spilling through the curtain", "props": ["phone", "lamp", "book", "ticket"] }
+     }
+    },
+    {
+     "key": "hanbok_palace",
+     "ko": "한복 입고 고궁 나들이",
+     "src": ["https://ko.wikipedia.org/wiki/경복궁", "https://ko.wikipedia.org/wiki/한복", "https://en.wikipedia.org/wiki/Gyeongbokgung", "https://en.wikipedia.org/wiki/Hanbok"],
+     "base": "street_park",
+     "times": ["midday", "commute_pm"],
+     "seasons": ["spring", "autumn", "winter"],
+     "outfits": ["traditional", "roleplay"],
+     "en": "strolling an old royal palace in hanbok",
+     "worlds": {
+      "fantasy": { "en": "the moonstone courtyards of the great-tree royal palace on a festival day — visitors in flowing traditional silks strolling under carved eaves painted with glowing dancheong-like patterns, guards in plumed helmets at the gate", "props": ["fan", "camera", "bag", "ticket"] },
+      "steampunk": { "en": "the old royal palace courtyards on a holiday — visitors in traditional silk hanbok with lace parasols strolling past carved wooden halls, a brass-trimmed photographer's booth by the gate", "props": ["fan", "camera", "umbrella", "ticket"] },
+      "cyberpunk": { "en": "the preserved royal palace under a climate dome — visitors in traditional hanbok with glowing trims strolling the old stone courtyards, a holographic guard ceremony at the gate and the towers of the future city beyond the walls", "props": ["fan", "camera", "phone", "ticket"] }
+     }
+    },
+    {
+     "key": "itaewon_night",
+     "ko": "이태원 밤거리 바",
+     "src": ["https://ko.wikipedia.org/wiki/이태원", "https://en.wikipedia.org/wiki/Itaewon"],
+     "base": "night_bar",
+     "indoor": true,
+     "times": ["night_out", "past_midnight"],
+     "outfits": ["evening", "dongtan", "subculture", "halloween", "everyday"],
+     "en": "a bar on the cosmopolitan nightlife street",
+     "worlds": {
+      "fantasy": { "en": "a hillside tavern street of travelers from distant realms at night — taverns with carved signs of faraway lands, a terrace bar strung with glowing lanterns and a crowd in many lands' dress", "props": ["drink_glass", "lamp", "cup", "money"] },
+      "steampunk": { "en": "a gaslit cosmopolitan quarter at night — a mirrored cocktail saloon on a steep street, foreign travelers in top hats and silk, brass taps and coloured glass lamps", "props": ["drink_glass", "lamp", "money", "watch"] },
+      "cyberpunk": { "en": "a steep nightlife street of the international quarter — sky-terraces of bars glowing in layered light, holographic signs in many languages, a crowd of travelers and drinks that glow", "props": ["drink_glass", "phone", "music", "money"] }
+     }
+    },
+    {
+     "key": "dongdaemun_wholesale",
+     "ko": "동대문 새벽 도매시장",
+     "src": ["https://ko.wikipedia.org/wiki/동대문시장", "https://en.wikipedia.org/wiki/Dongdaemun_Market"],
+     "base": "street_market",
+     "times": ["past_midnight", "dawn"],
+     "outfits": ["everyday", "dongtan", "workwear", "subculture"],
+     "en": "an all-night wholesale fashion market",
+     "worlds": {
+      "fantasy": { "en": "the night cloth market by the capital's eastern gate — stalls piled with bolts of silk and enchanted thread, porters carrying bundles on carved frames, lanterns burning until dawn", "props": ["bag", "shopping_bag", "lamp", "money"] },
+      "steampunk": { "en": "the all-night wholesale drapers' arcade by the eastern gate — iron galleries stacked with bolts of cloth, porters wheeling bundles on hand-carts, gas lamps and pneumatic tubes whisking order slips", "props": ["shopping_bag", "bag", "money", "watch"] },
+      "cyberpunk": { "en": "a round-the-clock fashion wholesale tower by the eastern gate — racks gliding on automated rails, delivery drones loading bundles, glowing price tags and buyers comparing fabrics under bright light", "props": ["shopping_bag", "phone", "bag", "money"] }
+     }
+    },
+    {
+     "key": "seongsu_cafe",
+     "ko": "성수동 공장 개조 카페",
+     "src": ["https://ko.wikipedia.org/wiki/성수동", "https://en.wikipedia.org/wiki/Seongsu-dong"],
+     "base": "street_cafe",
+     "indoor": true,
+     "times": ["midday", "commute_pm"],
+     "outfits": ["everyday", "dongtan", "subculture", "retro"],
+     "en": "a café in a converted old factory",
+     "worlds": {
+      "fantasy": { "en": "a café in an old forge hall of the capital's craft quarter — stone hearths turned into counters, tall iron-framed windows, honey cakes and spiced drinks on worn workbenches", "props": ["cup", "bowl", "book", "bag"] },
+      "steampunk": { "en": "a café inside a converted brick shoe factory — iron columns, belt-drive wheels left on the ceiling, tall arched windows and coffee brewed in glass siphons on a brass counter", "props": ["cup", "book", "bag", "watch"] },
+      "cyberpunk": { "en": "a café in a restored old factory shell wrapped in smart glass — exposed brick beside living green walls, a robot barista arm and floating menus", "props": ["cup", "phone", "bag", "book"] }
+     }
+    },
+    {
+     "key": "euljiro_alley",
+     "ko": "을지로 골목 노포",
+     "src": ["https://ko.wikipedia.org/wiki/을지로", "https://en.wikipedia.org/wiki/Euljiro"],
+     "base": "street_alley",
+     "times": ["commute_pm", "night_out"],
+     "outfits": ["retro", "everyday", "workwear", "dongtan"],
+     "en": "old eateries in an alley of print shops and workshops",
+     "worlds": {
+      "fantasy": { "en": "a lantern-lit alley of old tavern-stalls among printing and smithing workshops — stools at plank tables in the lane, a cook grilling skewers over coals and painted signboards of the old craft quarter", "props": ["skewer", "cup", "drink_glass", "lamp"] },
+      "steampunk": { "en": "an alley of old taverns among print shops and tool works — folding tables on the cobbles, a cook frying fish in a cast-iron pan, gas lamps and enamel signboards", "props": ["cup", "drink_glass", "lamp", "bowl"] },
+      "cyberpunk": { "en": "a preserved old-town alley wedged under the mega-towers — stools at metal tables, a sizzling grill and retro glowing signboards kept as heritage among workshop shutters", "props": ["drink_glass", "skewer", "phone", "lamp"] }
+     }
+    },
+    {
+     "key": "myeongdong_food",
+     "ko": "명동 길거리 음식",
+     "src": ["https://ko.wikipedia.org/wiki/명동", "https://en.wikipedia.org/wiki/Myeong-dong"],
+     "base": "street_market",
+     "times": ["commute_pm", "night_out"],
+     "outfits": ["everyday", "dongtan", "subculture"],
+     "en": "street food stalls in the shopping district",
+     "worlds": {
+      "fantasy": { "en": "the capital's bright market street at dusk — carts of honeyed skewers, steaming dumplings and sugar-spun sweets, merchants calling out and spell-lights floating over the crowd", "props": ["skewer", "bowl", "shopping_bag", "money"] },
+      "steampunk": { "en": "the bustling shopping street at dusk — hawkers' carts of roasted chestnuts and egg bread under gas lamps, shop windows of hats and gloves and crowds with paper parcels", "props": ["skewer", "shopping_bag", "money", "bag"] },
+      "cyberpunk": { "en": "the shopping boulevard at dusk — food stalls with robot grills, giant animated shop facades, shoppers with glowing bags and drone deliveries overhead", "props": ["skewer", "shopping_bag", "phone", "drink_glass"] }
+     }
+    },
+    {
+     "key": "bukhansan_hike",
+     "ko": "북한산 등산",
+     "src": ["https://ko.wikipedia.org/wiki/북한산", "https://en.wikipedia.org/wiki/Bukhansan"],
+     "base": "travel_trail",
+     "times": ["dawn", "midday"],
+     "outfits": ["active", "adventure", "everyday"],
+     "en": "a granite mountain hiking trail above the city",
+     "worlds": {
+      "fantasy": { "en": "a granite mountain trail above the capital — carved stone steps, a cairn shrine on the ridge, pines clinging to the rock and the great-tree city far below", "props": ["water_bottle", "bag", "bowl", "lamp"] },
+      "steampunk": { "en": "a granite ridge trail above the city — iron handrails bolted to the rock, hikers with walking sticks and canteens, the city's clocktowers and white steam far below", "props": ["water_bottle", "bag", "watch", "camera"] },
+      "cyberpunk": { "en": "a granite mountain trail above the megacity — smart handrails lit along the rock, a weather drone hovering and the layered towers spread far below in haze", "props": ["water_bottle", "phone", "bag", "camera"] }
+     }
+    },
+    {
+     "key": "seoul_forest",
+     "ko": "서울숲 산책",
+     "src": ["https://ko.wikipedia.org/wiki/서울숲", "https://en.wikipedia.org/wiki/Seoul_Forest"],
+     "base": "street_park",
+     "times": ["dawn", "midday", "commute_pm"],
+     "outfits": ["everyday", "active", "dongtan"],
+     "en": "a walk in a large city forest park",
+     "worlds": {
+      "fantasy": { "en": "a deer park forest in the capital — tame deer among birch groves, wooden footbridges over clear streams and softly glowing moss along the paths", "props": ["bag", "book", "cup", "camera"] },
+      "steampunk": { "en": "a city forest park — deer grazing behind wrought-iron fences, a glass conservatory and tall-wheeled bicycles on the gravel paths", "props": ["bag", "book", "umbrella", "camera"] },
+      "cyberpunk": { "en": "an urban forest park — real trees beside bioluminescent plants, deer in a protected meadow and walkway bridges among the towers", "props": ["phone", "bag", "drink_glass", "camera"] }
+     }
+    },
+    {
+     "key": "nodeulseom_sunset",
+     "ko": "노들섬 노을",
+     "src": ["https://ko.wikipedia.org/wiki/노들섬", "https://en.wikipedia.org/wiki/Nodeulseom"],
+     "base": "stage_fireworks",
+     "times": ["commute_pm", "night_out"],
+     "outfits": ["everyday", "subculture", "retro", "dongtan"],
+     "en": "sunset on a river island with a music lawn",
+     "worlds": {
+      "fantasy": { "en": "a grassy island in the middle of the wide silver river at sunset — a lawn where minstrels play, the bridge arches glowing and the capital's lights coming on along both banks", "props": ["music", "mat", "cup", "lamp"] },
+      "steampunk": { "en": "a river island garden at sunset — a bandstand on the lawn, the iron arches of the railway bridge overhead and paddle steamers passing in gold light", "props": ["music", "mat", "cup", "camera"] },
+      "cyberpunk": { "en": "a terraced river island at sunset — an open-air music lawn, maglev arches gliding overhead and the tiered city lighting up along both banks", "props": ["music", "phone", "drink_glass", "mat"] }
+     }
+    },
+    {
+     "key": "banpo_fountain",
+     "ko": "반포대교 달빛 분수",
+     "src": ["https://ko.wikipedia.org/wiki/반포대교", "https://en.wikipedia.org/wiki/Banpo_Bridge"],
+     "base": "stage_fireworks",
+     "times": ["night_out"],
+     "seasons": ["spring", "summer", "autumn"],
+     "outfits": ["evening", "everyday", "dongtan"],
+     "en": "the riverside under a bridge fountain show at night",
+     "worlds": {
+      "fantasy": { "en": "the riverbank below a great stone bridge at night — enchanted water arching from its sides in rainbow light, couples on the grass and moonlight on the river", "props": ["mat", "cup", "lamp", "camera"] },
+      "steampunk": { "en": "the embankment below the double-decker iron bridge at night — jets of water pumped from its sides lit by coloured lamps, strollers along the river walk", "props": ["umbrella", "cup", "lamp", "camera"] },
+      "cyberpunk": { "en": "the riverbank below the bridge at night — a water-and-light show pouring from its sides in time with music, light-boats on the river and drones drawing patterns above", "props": ["phone", "drink_glass", "camera", "mat"] }
+     }
     }
    ]
   }
