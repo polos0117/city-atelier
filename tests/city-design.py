@@ -71,6 +71,8 @@ cases = {
     "서울 얼굴 칸 하나만 다름": lambda d: [sw(d, "cyberpunk")["look"]["face"].__setitem__(f, sw(d, "fantasy")["look"]["face"][f]) for f in ("eyes", "brows", "nose", "lips")],
     "서울 얼굴 칸 둘만 다름": lambda d: [sw(d, "steampunk")["look"]["face"].__setitem__(f, sw(d, "fantasy")["look"]["face"][f]) for f in ("eyes", "nose", "lips")],
     "옷 말투 빠짐": lambda d: d["vocab"]["wear"]["cyberpunk"].pop("moderate"),
+    "일상컷 세계 결 빠짐": lambda d: d["vocab"]["casual_world"]["fantasy"].pop("guard_en"),
+    "일상컷 세계 결에 금지 낱말": lambda d: d["vocab"]["casual_world"]["steampunk"].update(en="a gaslamp city of polished brass and glass, warm gaslight and soot on every sill"),
 }
 for name, mut in cases.items():
     assert broken(mut), "검사기가 못 걸었다: " + name

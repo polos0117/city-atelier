@@ -42,8 +42,8 @@
      "en": "a riverside park lawn at night with a picnic mat and a late supper",
      "worlds": {
       "fantasy": { "en": "the grassy bank of the wide silver river below the royal capital at night — a woven rush mat spread on the grass, a late supper of roasted skewers and rice cakes in lacquered boxes, lantern-boats drifting on the water and the palace lights across the river", "props": ["mat", "bowl", "lamp", "cup"] },
-      "steampunk": { "en": "the cinder-strewn embankment of the wide river at night — a canvas groundsheet on the grass, a late supper of fried chicken in a greased paper parcel and stoneware bottles of beer, the iron truss bridge glowing with gas lamps and a paddle steamer puffing past", "props": ["mat", "bowl", "lamp", "ride"] },
-      "cyberpunk": { "en": "the floodlit river-park lawn at night — a glowing mat on the grass, a late fried-chicken delivery in heat-sealed boxes just dropped by a drone, rows of bridges strung with neon and holographic ads reflected on the black water", "props": ["mat", "bowl", "lamp", "phone"] }
+      "steampunk": { "en": "the lamplit grassy embankment of the wide shining river at night — a canvas groundsheet on the grass, a late supper of fried chicken in a ribbon-tied paper parcel and stoneware bottles of beer, the brass-trimmed truss bridge glowing with gas lamps and a paddle steamer gliding past in soft white steam", "props": ["mat", "bowl", "lamp", "ride"] },
+      "cyberpunk": { "en": "the floodlit river-park lawn at night — a glowing mat on the grass, a late fried-chicken delivery in heat-sealed boxes just dropped by a drone, stacked tiers of luminous maglev arches over the river and holographic ads reflected on the black water", "props": ["mat", "bowl", "lamp", "phone"] }
      }
     },
     {
@@ -57,8 +57,8 @@
      "en": "a crowded subway at rush hour",
      "worlds": {
       "fantasy": { "en": "a crowded rune-lit underground carriage gliding through the tunnels beneath the royal capital at rush hour — carved wooden benches along the walls, brass hand-loops swaying overhead, travelers in cloaks reading folded broadsheets", "props": ["ticket", "book", "bag", "lamp"] },
-      "steampunk": { "en": "a packed steam-hauled underground railway carriage at rush hour — slatted wooden benches, leather hand-straps hanging from a brass rail, gas lamps flickering as the smoky tunnel rushes past the windows, clerks in bowler hats reading newspapers", "props": ["ticket", "watch", "bag", "book"] },
-      "cyberpunk": { "en": "a packed driverless maglev subway car at rush hour — chrome grab rails, strip lights, passengers lit by the glow of their wrist screens, holographic route maps flickering over the doors", "props": ["phone", "music", "ticket", "bag"] }
+      "steampunk": { "en": "a packed steam-hauled underground railway carriage at rush hour — polished wooden benches, leather hand-straps hanging from a brass rail, gas lamps glowing in etched-glass shades as the tunnel rushes past the windows in wisps of white steam, clerks in bowler hats reading newspapers", "props": ["ticket", "watch", "bag", "book"] },
+      "cyberpunk": { "en": "a packed driverless maglev car at rush hour — a sleek curved cabin of smart glass, chrome grab rails, passengers lit by the glow of their wrist screens, holographic route maps flickering over the doors", "props": ["phone", "music", "ticket", "bag"] }
      }
     },
     {
@@ -71,8 +71,8 @@
      "en": "a tented street-food stall at night",
      "worlds": {
       "fantasy": { "en": "a tented night stall at the edge of the market road under magic lanterns — a canvas awning glowing from within, a charcoal brazier roasting skewers, a simmering iron pot of spicy rice cakes and low wooden stools at a plank counter", "props": ["skewer", "lamp", "cup", "bowl"] },
-      "steampunk": { "en": "a street-food handcart stall at night under a soot-stained tarp — a hissing steam boiler and a hot iron griddle of skewers, gas lamps on poles, a narrow tin counter with stools and clouds of steam", "props": ["skewer", "lamp", "cup", "money"] },
-      "cyberpunk": { "en": "a street-food tent stall at night under a translucent neon-lit awning — a holographic menu board floating over the counter, skewers on an induction grill, steam rising through pink and cyan light", "props": ["skewer", "sign", "cup", "money"] }
+      "steampunk": { "en": "a street-food handcart stall at night under a striped canvas awning — a gleaming brass steam boiler and a hot griddle of skewers, gas lamps on poles, a narrow polished-wood counter with stools and soft clouds of white steam", "props": ["skewer", "lamp", "cup", "money"] },
+      "cyberpunk": { "en": "a street-food tent stall at night under a translucent smart-fabric awning glowing pink and cyan — a holographic menu board floating over the counter, skewers on an induction grill, steam rising through layers of light", "props": ["skewer", "sign", "cup", "money"] }
      }
     },
     {
@@ -86,7 +86,7 @@
      "en": "a heated public bathhouse hall with sauna rooms",
      "worlds": {
       "fantasy": { "en": "a heated stone bathhouse hall of the capital — warm ondol floors under woven mats, a domed kiln-sauna glowing with enchanted embers, bathers resting on wooden pillows and eggs baking among hot river stones", "props": ["bowl", "cup", "key", "lamp"] },
-      "steampunk": { "en": "a coal-fired public bathhouse hall — a brick kiln-sauna behind a riveted iron door, steam pipes warming the stone floor, bathers lounging on mats under gas lamps and a tea counter with tin cups", "props": ["cup", "key", "watch", "lamp"] },
+      "steampunk": { "en": "a gaslit public bathhouse hall — a brick kiln-sauna behind a brass-bound door, steam pipes warming the stone floor, bathers lounging on mats under gas lamps and a tea counter with enamel cups", "props": ["cup", "key", "watch", "lamp"] },
       "cyberpunk": { "en": "an all-night heated spa hall — glowing ceramic sleep pods, a kiln-sauna lit amber from inside, wall screens of drifting ocean light and a vending bar of glowing drinks", "props": ["cup", "key", "music", "lamp"] }
      }
     },
@@ -100,8 +100,8 @@
      "en": "a covered market with food stalls frying mung-bean pancakes",
      "worlds": {
       "fantasy": { "en": "a covered market hall of the royal capital — rows of food stalls under painted beams, mung-bean pancakes frying in a great iron pan over a fire, rolls of rice and greens on wooden boards and merchants calling out under silk banners", "props": ["bowl", "money", "sign", "shopping_bag"] },
-      "steampunk": { "en": "an iron-roofed market arcade — food stalls under riveted girders, mung-bean pancakes sizzling on a coal-heated griddle, gas lamps, enamel signs and steam curling up into the skylights", "props": ["bowl", "money", "sign", "shopping_bag"] },
-      "cyberpunk": { "en": "a crowded night-market arcade — food stalls under stacked neon signs, mung-bean pancakes frying on a robot-arm griddle, holographic prices floating above the steaming trays", "props": ["bowl", "money", "sign", "phone"] }
+      "steampunk": { "en": "a glass-roofed market arcade on brass-trimmed girders — food stalls in long rows, mung-bean pancakes sizzling on a hot griddle, gas lamps, enamel signs and white steam curling up into the skylights", "props": ["bowl", "money", "sign", "shopping_bag"] },
+      "cyberpunk": { "en": "a crowded night-market arcade on a sky-bridge level between towers — food stalls under stacked holographic signs, mung-bean pancakes frying on a robot-arm griddle, glowing prices floating above the steaming trays", "props": ["bowl", "money", "sign", "phone"] }
      }
     },
     {
@@ -128,8 +128,8 @@
      "en": "the courtyard of her own old tiled-roof house on a hillside",
      "worlds": {
       "fantasy": { "en": "the stone-paved inner courtyard of her own tiled-roof house on a hillside of the capital — a wooden veranda, crocks of soy and pepper paste, a persimmon tree and the curved roofs of the neighbours stepping down the hill", "props": ["cup", "key", "lamp", "bowl"] },
-      "steampunk": { "en": "the inner courtyard of her tiled-roof house on a hillside of the steam city — a wooden veranda, earthenware crocks, laundry lines, a copper water heater ticking on the wall and factory chimneys smoking beyond the curved roofs", "props": ["cup", "key", "watch", "bowl"] },
-      "cyberpunk": { "en": "the inner courtyard of her old tiled-roof house on a hillside of the megacity — a wooden veranda, earthenware crocks beside a drone landing pad, glowing mesh lanterns and glass towers rising behind the curved roofs", "props": ["cup", "key", "lamp", "phone"] }
+      "steampunk": { "en": "the inner courtyard of her tiled-roof house on a hillside of the gaslamp city — a wooden veranda, earthenware crocks, laundry lines, a copper water heater ticking on the wall and wisps of white steam rising beyond the curved roofs", "props": ["cup", "key", "watch", "bowl"] },
+      "cyberpunk": { "en": "the inner courtyard of her old tiled-roof house on a hillside of the megacity — a wooden veranda, earthenware crocks beside a drone landing pad, glowing mesh lanterns and arcology towers rising kilometres high behind the curved roofs", "props": ["cup", "key", "lamp", "phone"] }
      }
     },
     {
@@ -142,7 +142,7 @@
      "en": "a stone-walled stream through the city centre with a walking path",
      "worlds": {
       "fantasy": { "en": "the stone-walled stream that runs through the heart of the capital — stepping stones across clear water, willow branches, paper lanterns floating downstream and people strolling along the stone path", "props": ["lamp", "umbrella", "bag", "cup"] },
-      "steampunk": { "en": "the stone-walled canal through the city centre — iron footbridges, gas lamps along the stone path, mill sluices and steam pipes along the walls and workers strolling after their shift", "props": ["lamp", "umbrella", "bag", "watch"] },
+      "steampunk": { "en": "the stone-walled canal through the city centre — iron footbridges with brass lamp-posts, gas lamps along the stone path, little water-wheels and polished steam pipes along the walls and people strolling in the evening", "props": ["lamp", "umbrella", "bag", "watch"] },
       "cyberpunk": { "en": "the stone-walled stream sunk below the megacity's towers — stepping stones lit from beneath, light-art installations shimmering over the water and people strolling with glowing ear-pieces", "props": ["lamp", "music", "bag", "cup"] }
      }
     },
@@ -156,8 +156,8 @@
      "en": "a walking trail along an old stone city wall on a ridge",
      "worlds": {
       "fantasy": { "en": "the trail along the great stone city wall on the ridge above the capital — battlements, pine trees, a gate pavilion ahead and the golden palace roofs far below", "props": ["water_bottle", "bag", "lamp", "cup"] },
-      "steampunk": { "en": "the trail along the old stone city wall on the ridge above the steam city — battlements, pine trees, a riveted signal mast and below a valley of chimneys, rail yards and drifting smoke", "props": ["water_bottle", "bag", "watch", "camera"] },
-      "cyberpunk": { "en": "the trail along the old stone city wall on the ridge above the megacity — battlements and pine trees, a sea of glowing towers below and drone lights drifting at eye level", "props": ["water_bottle", "bag", "phone", "camera"] }
+      "steampunk": { "en": "the trail along the old stone city wall on the ridge above the gaslamp city — battlements, pine trees, a brass signal mast and below a valley of tiled roofs, glass domes and drifting white steam", "props": ["water_bottle", "bag", "watch", "camera"] },
+      "cyberpunk": { "en": "the trail along the old stone city wall on the ridge above the megacity — battlements and pine trees, a sea of arcology towers and sky-bridges below and flying vehicles drifting in lanes of light at eye level", "props": ["water_bottle", "bag", "phone", "camera"] }
      }
     },
     {
@@ -186,7 +186,7 @@
      "en": "an open-air riverside swimming pool in summer",
      "worlds": {
       "fantasy": { "en": "a riverside bathing pool beside the wide silver river in high summer — clear water in stone basins, striped silk awnings, bathers on the warm stone edge and the palace hills beyond", "props": ["float_ring", "cup", "fan", "umbrella"] },
-      "steampunk": { "en": "a riverside open-air bathing pool in high summer — a riveted iron diving tower, canvas awnings, a steam pump churning fresh water into the basin and the iron railway bridge beyond", "props": ["float_ring", "cup", "fan", "umbrella"] },
+      "steampunk": { "en": "a riverside open-air bathing pool in high summer — a brass-railed diving tower, striped canvas awnings, a gleaming steam pump churning fresh water into the basin and the truss railway bridge beyond", "props": ["float_ring", "cup", "fan", "umbrella"] },
       "cyberpunk": { "en": "a riverside open-air pool in high summer — water glowing turquoise from underwater lights, inflatable rings, a misting fan array over the deck and glass towers across the river", "props": ["float_ring", "cup", "fan", "music"] }
      }
     },
@@ -201,8 +201,8 @@
      "en": "the roof outside her small rooftop room on a warm night",
      "worlds": {
       "fantasy": { "en": "the flat roof outside her little room atop a house in the capital on a warm night — a low wooden bench, potted herbs, laundry on a line and the lantern-lit city with its palace lights spread below", "props": ["cup", "lamp", "fan", "book"] },
-      "steampunk": { "en": "the tarred roof outside her small room atop a tenement on a warm night — a water tank on iron legs, laundry on a line, chimneys all around and the red glow of the foundries across the city", "props": ["cup", "lamp", "fan", "music"] },
-      "cyberpunk": { "en": "the roof outside her tiny rooftop room above an old tenement on a warm night — cheap plastic stools, a humming air-conditioner unit, potted plants and the neon skyline of the megacity filling the sky", "props": ["cup", "lamp", "fan", "phone"] }
+      "steampunk": { "en": "the flat roof outside her small room atop a tenement on a warm night — a copper water tank on iron legs, laundry on a line, chimney pots all around and the warm gaslight of the city glowing across the roofs", "props": ["cup", "lamp", "fan", "music"] },
+      "cyberpunk": { "en": "the roof outside her tiny rooftop room above an old tenement on a warm night — printed-polymer stools, a humming climate unit, potted plants under a grow-light and the layered towers and flying-vehicle lanes of the megacity filling the sky", "props": ["cup", "lamp", "fan", "phone"] }
      }
     }
    ]

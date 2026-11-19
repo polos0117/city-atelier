@@ -96,6 +96,9 @@ assert.throws(() => PC.build({ design: D, styles: S, city: 'atlantis', world: 'f
    (d) 판타지 · 스팀펑크 금지 낱말은 맨 끝 Avoid 단락(sections.negative) 밖에 없다, 소품 낱말이 그 세계 것(phone → 판타지는 전령 수정, smartphone 없음) */
 const J = f => JSON.parse(fs.readFileSync(f, 'utf8'));
 const tree = J('data/casual-tree.json'), tree2 = J('data/casual-tree-v2.json'), LIFE = J('data/city-life.json'), PROPS = J('data/world-props.json');
+/* 세계마다의 명소 낱말 — 일상컷 세계 줄에 나오면 일곱 장 뒷배경이 다 같아진다(장소 줄이 말하면 괜찮다) */
+const LANDMARKS = { fantasy: ['great tree', 'world-tree', 'moon', 'palace', 'spire'], steampunk: ['airship', 'airships', 'clocktower', 'clock tower', 'docking tower', 'city gate', 'pleasure boat'],
+  cyberpunk: ['space-elevator', 'space elevator', 'arcology', 'sky-bridge', 'maglev', 'transmission tower', 'glass dome', 'guardian beast', 'haechi'] };
 const cas = (w, scene, style) => PC.build({ design: D, styles: S, city: 'seoul', world: w, style, kind: 'casual', casual: { scene, tree, tree2, life: LIFE, props: PROPS } });
 let nc = 0;
 for (const style of LIVE) for (const w of D.vocab.worlds) for (const s of LIFE.cities.seoul.scenes) {
@@ -107,7 +110,10 @@ for (const style of LIVE) for (const w of D.vocab.worlds) for (const s of LIFE.c
   assert(t.includes('the same adult ' + seoul.people.en + ' woman') && t.includes(T.CASUAL.short.beauty), id + ' 일상컷 — 그 나라 사람 · 미형 줄');
   assert(t.includes('\nPlace: ' + sw.en.replace(/\.$/, '') + '.\n'), id + ' 그 장면의 그 세계 글');
   for (const k of sw.props) assert(t.includes(PROPS.props[k].worlds[w].en), id + ' 소품 ' + k);
-  assert(t.includes(PROPS.clothes[w].en) && t.includes('World: an ordinary day in Seoul as her world knows it — ' + seoul.worlds[w].en.replace(/\.$/, '')), id + ' 옷의 결 · 그 세계의 서울');
+  /* 세계 줄 = 그 세계의 결(vocab.casual_world — 2026-11-19 「일부러 뒷배경은 다 나오게 만든거야?」), 다음 줄이 guard. 명소 낱말은 장소 줄이 말할 때만 */
+  const cw = D.vocab.casual_world[w], wl = (t.match(/^World: .*$/m) || [''])[0], pl = (t.match(/^Place: .*$/m) || [''])[0];
+  assert(t.includes(PROPS.clothes[w].en) && wl.startsWith('World: an ordinary day in Seoul as her world knows it — ' + cw.en.replace('{city_en}', 'Seoul').replace(/\.$/, '')) && t.includes(wl + '\n' + cw.guard_en), id + ' 옷의 결 · 그 세계의 결 · guard');
+  for (const lm of LANDMARKS[w]) assert(!word(lm, 'i').test(wl) || word(lm, 'i').test(pl), id + ' 세계 줄에 명소 「' + lm + '」');
   for (const o of D.vocab.worlds.filter(x => x !== w)) assert(!t.includes(sw.en === s.worlds[o].en ? '\u0000' : s.worlds[o].en), id + ' 다른 세계 글이 안 샌다');
   const body = r.sections.negative ? t.replace(r.sections.negative, '') : t;
   for (const b of mk.banned_en) assert(!word(b, 'i').test(body), id + ' (d) 금지 낱말 「' + b + '」');

@@ -8,6 +8,7 @@
 - vocab.worlds 는 정확히 fantasy · steampunk · cyberpunk. world_ko · markers · wear 가 세계마다.
 - markers.<세계> = { ko, en(8~12, 같은 수), banned_en } — 판타지 · 스팀펑크는 금지 낱말 10개 이상(스팀펑크는 neon 포함), 사이버펑크는 빈 배열.
 - wear.<세계> = { costume, bold, moderate, low } — 영어 옷 말투(원소 prompt-spec 의 COSTUME · EXPOSURE 꼴).
+- casual_world.<세계> = { en, guard_en } — 일상컷 「World:」 줄의 세계 결(명소 없이)과 다음 줄 guard. en 에 그 세계 금지 낱말이 없다.
 - cities 열쇠는 CITY_KEYS 와 같은 열 개 같은 차례. 도시마다 ko · en · country · persona, lat · lon(범위 안, 소수 둘째 자리까지) · latlon_src(주소),
   palette { en, hex 2~3개 #RRGGBB }, symbols 3~5개(ko · en · src 주소).
 - worlds 가 {} 면 설계 미정. 채우면 세 세계 다: ko · en(40자 이상, 한국어 없음) · scenes 셋(key · ko · en) ·
@@ -84,6 +85,11 @@ def check(doc):
         wr = wear.get(w) or {}
         for k in WEAR:
             en("vocab.wear.%s.%s" % (w, k), wr.get(k), 30)
+        cw = (v.get("casual_world") or {}).get(w) or {}
+        for k in ("en", "guard_en"):
+            en("vocab.casual_world.%s.%s" % (w, k), cw.get(k), 40)
+        if banned_in(cw.get("en"), ban or []):
+            errs.append("vocab.casual_world.%s.en 에 그 세계 금지 낱말 %s" % (w, banned_in(cw.get("en"), ban or [])))
     for w in list(markers) + list(wear):
         if w not in WORLDS:
             errs.append("vocab 의 %r 는 아는 세계가 아니다" % w)

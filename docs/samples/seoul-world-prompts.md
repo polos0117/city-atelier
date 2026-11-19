@@ -1,4 +1,4 @@
-# 서울 — 세 세계 세계 그림 지시문 (2026-11-19, 화풍 확정 뒤 다시 뽑음)
+# 서울 — 세 세계 세계 그림 지시문 (2026-11-19, 가스등 판타지 · 먼 미래 뒤 다시 뽑음)
 
 `lib/prompt-city.js` 가 설계표(`data/city-design.json`)로 지은 그대로 — 손으로 고치지 않았다. 다시 뽑으려면 생성기(`prompt.html?card=seoul&o=world&world=<세계>`)나 `PromptCity.build({ design, styles, city: 'seoul', world, kind: 'world' })`.
 
@@ -45,9 +45,9 @@ One figure only; no text, lettering or numbers anywhere in the picture; no logo 
 Avoid: corset, modern material, machinery, second character, living creature, logo, watermark, speech bubble, frame border, text, lettering, numbers anywhere in the picture, smartphone, mobile phone, plastic, LED screen, neon sign, neon, laptop, headphones, earbuds, sneakers, hoodie, jeans, hologram, billboard, car, denim, bomber jacket, cowboy hat, sweatpants, leggings, baseball cap, tracksuit, jogger, track pants, windbreaker, fleece, bodycon, broadcast tower, TV tower, observation tower, skyscraper, Chinese-style palace, Great Wall, yellow-glazed roof tiles.
 ```
 
-## 스팀펑크 (`steampunk`) — 827낱말
+## 스팀펑크 (`steampunk`) — 871낱말
 
-증기 공업 도시 서울 — 1900년 무렵, 한강을 건너는 리벳 트러스 철교 위로 기관차가 달리고 강변 주물 공장 굴뚝이 그을음을 뿜는다
+가스등 판타지 서울 — 황금빛 하늘 아래 남산 놋쇠 계류탑에 비행선이 매이고, 옛 돌 성문 위로 큰 시계탑이 솟고, 빛나는 한강에 증기 유람선이 미끄러지며, 유리 돔 온실과 가스등 거리에 흰 증기가 구름처럼 떠돈다
 
 ```text
 A full-body vertical 2:3 (1024×1536) character card image of an adult Korean woman — the personification of the city of Seoul — one woman who IS Seoul as it stands in this world. She is the subject of the picture; her costume, body, props and light carry the city's symbols and this world's marks, and the city behind her only supports her.
@@ -58,36 +58,36 @@ She is strikingly beautiful and refined — harmonious features, clear luminous 
 Face proportions: a short midface and a soft, gently rounded jawline with a small soft chin; any crown or headpiece sits above her hairline. Her eyes keep the shape and size described below.
 
 2. CHARACTER
-Age: late twenties — a graceful grown-up face with soft, smooth contours; no wrinkles, folds or under-eye bags.
-Face — her own: a rugged, tough, outdoorsy look; light warm-beige skin with a golden undertone; softly squared face with a rounded jaw; medium-sized eyes — wide almond eyes, level outer eye corners; thick straight brows; broad soft nose; a wide mouth with softly upturned corners; amber eyes; a dusting of freckles across nose and cheeks.
-Body and hair: broad-shouldered and strong build; a shaggy layered wolf cut with choppy uneven bangs; polished copper-red hair.
+Age: mid-twenties — a clear adult face; no facial lines.
+Face — her own: an elegant, refined presence; light warm-beige skin with a golden undertone; diamond-shaped face; medium-sized eyes — large round eyes, level outer eye corners; soft rounded brows; upturned nose; full heart-shaped lips; amber eyes; a dusting of freckles across nose and cheeks.
+Body and hair: lean and toned — a slim, firm waist with softly defined vertical abs and lightly sculpted arms and shoulders, a full bust build; glossy chin-length finger waves with side-swept bangs; polished copper-red hair.
 Hair: her hair is worn exactly as described above — loose, long or cut as named; do not pin it up into a bun or tuck it under goggles or a hat unless the hair above is an updo.
-Expression: a firm, resolute look with calm, steady eyes.
+Expression: a composed, self-assured look.
 Anatomy: one head, two arms and two legs, each joined at its natural joint; natural hands with five fingers.
 
 3. COSTUME — STEAMPUNK
-Costume: the working dress of a steam city, not clean brass decoration — a sweat-damp shirt with rolled-up sleeves, a scorched leather apron or work harness, oil-stained leather gloves, pressure gauges, tools and brass piping strapped to her body, soot on her cheeks and hands, heavy work boots.
-City motif: a soot-blackened leather work harness riveted in the crisscross truss pattern of the iron railway bridge over the Han River, fastened with a pressure-gauge buckle cast in the shape of a haechi head.
-World marks on her: soot-smudged cheeks; a sweat-damp shirt; oil-stained leather gloves; rolled-up sleeves; pressure gauges and brass pipes strapped to her body; a heavy tool belt; billowing steam; red furnace glow; riveted iron; coal smoke and grime.
+Costume: gaslamp-fantasy dress of a storybook steam city — a fitted brass-buttoned airship officer's coat or tailored waistcoat over a crisp blouse, a short layered skirt or fitted breeches, polished brass buckles and clockwork filigree, fine leather gloves, a little gear-and-crystal brooch; clean, elegant and adventurous, gleaming brass and glass, never sooty or rusty.
+City motif: a navigator's harness of polished leather and brass worked in the crisscross truss pattern of the Han River railway bridge, fastened with a brass compass buckle shaped like a haechi head, and a short cape in Seoul red lined with dancheong-patterned silk.
+World marks on her: polished brass buttons and buckles; clockwork filigree; little gears and glass lenses as jewelry; flight goggles with tinted lenses pushed up on her hat; a pocket watch on a fine chain; a ribbon of white steam curling around her; warm gaslight glinting on brass; feathers and silk ribbons; an airship pilot's fitted coat; delicate brass instruments clipped to her belt.
 Colours: Seoul red (dancheong red), Namsan pine green, palace gold — one of these as her accent colour.
-Prop: in one hand she holds a soot-blackened riveting hammer with a worn brass grip; her other hand is free.
-Exposure (bold): her work clothes open to show skin — the sweat-damp shirt unbuttoned to the sternum or tied up over a bandeau with natural cleavage, bare soot-streaked arms and shoulders, short work breeches or a skirt hitched above the boots; the harness and tools stay on. Intimate areas covered.
+Prop: in one hand she holds an ornate brass spyglass; her other hand is free.
+Exposure (bold): her elegant outfit shows skin — an open coat over a low-cut fitted bodice with natural cleavage, bare shoulders and arms, a short skirt or fitted breeches over tall laced boots; the brass ornaments stay neat and symmetrical. Intimate areas covered.
 
 4. SCENE
-World: a steam-powered industrial Seoul around 1900: locomotives thundering over riveted iron truss bridges across the wide river, riverside foundries and factories pouring coal smoke, steam pipes running past the old stone city gates, workers' alleys lit red by furnace glow.
-This card: on a maintenance catwalk under the riveted truss of the iron railway bridge over the river, a locomotive roaring overhead in steam.
+World: a storybook gaslamp-fantasy Seoul under a golden sky: airships moored to a brass docking tower on the southern mountain, a great clocktower rising above the old stone city gate, steam pleasure boats gliding along the wide shining river, glass-domed greenhouses and gaslit streets, white steam drifting in soft clouds.
+This card: on the brass deck of an airship landing platform on the southern mountain, the clocktower gate and the shining river spread below, airships drifting past.
 Pose: standing confidently, her body turned slightly while her face looks toward the viewer.
-Light: hazy daylight through steam and coal smoke, with red furnace glow on her skin, sweat and riveted metal.
+Light: warm golden daylight or soft gaslight through drifting white steam, glinting on polished brass, glass and her skin.
 Composition: vertical 2:3 full-body framing with modest headroom and clear space below the boots — the whole figure from the top of her head or headpiece to both feet stays inside the frame, occupying about four-fifths of the image height, with the same camera distance in every world; her hands stay inside the frame. Camera level with her face with natural portrait perspective; her head level, chin neither raised nor tucked — no upward perspective on her face, no wide-angle distortion, no low angle, no close crop.
 
 5. CONSTRAINTS
 One figure only; no text, lettering or numbers anywhere in the picture; no logo or watermark.
-Avoid: armor plates, crown, corset, second character, living creature, logo, watermark, speech bubble, frame border, text, lettering, numbers anywhere in the picture, smartphone, mobile phone, plastic, LED screen, neon sign, neon, laptop, headphones, earbuds, sneakers, hoodie, hologram, digital display, touchscreen, bomber jacket, sweatpants, leggings, baseball cap, tracksuit, jogger, track pants, windbreaker, fleece, bodycon, broadcast tower, TV tower, observation tower, skyscraper, Chinese-style palace, Great Wall, yellow-glazed roof tiles.
+Avoid: armor plates, crown, corset, second character, living creature, logo, watermark, speech bubble, frame border, text, lettering, numbers anywhere in the picture, smartphone, mobile phone, plastic, LED screen, neon sign, neon, laptop, headphones, earbuds, sneakers, hoodie, hologram, digital display, touchscreen, bomber jacket, sweatpants, leggings, baseball cap, tracksuit, jogger, track pants, windbreaker, fleece, bodycon, broadcast tower, TV tower, observation tower, skyscraper, Chinese-style palace, Great Wall, yellow-glazed roof tiles, soot, grime, rust, coal smoke, sweat stains, photographic texture.
 ```
 
-## 사이버펑크 (`cyberpunk`) — 734낱말
+## 사이버펑크 (`cyberpunk`) — 817낱말
 
-네온 메가시티 서울 — 남산 송신탑이 붉은 네온 첨탑으로 빛나고, 한강 다리마다 빛줄기가 흐르며, 고층 아파트 숲과 비 젖은 골목에 간판 빛이 넘친다
+두 세기 뒤의 먼 미래 도시 서울 — 구름을 뚫는 킬로미터 높이의 아콜로지 타워가 층층 공중 다리로 이어지고, 남산 송신탑은 빛의 줄을 궤도까지 올리는 거대한 궤도 엘리베이터 첨탑이 되었으며, 한강 위로 층층 자기부상 아치가 걸치고 탑 사이 빛의 길로 비행 차량이 흐르고, 하늘엔 해치와 단청 홀로그램, 옛 궁궐은 탑들 사이 거대한 유리 돔 속에 남았다
 
 ```text
 A full-body vertical 2:3 (1024×1536) character card image of an adult Korean woman — the personification of the city of Seoul — one woman who IS Seoul as it stands in this world. She is the subject of the picture; her costume, body, props and light carry the city's symbols and this world's marks, and the city behind her only supports her.
@@ -107,14 +107,14 @@ Anatomy: one head, two arms and two legs, each joined at its natural joint; natu
 3. COSTUME — CYBERPUNK
 Costume: techwear for a neon megacity — a reflective rain-slick coat or cropped jacket over fitted technical layers, straps and buckles, chrome and glossy vinyl, glowing tattoo lines and cybernetic implants on her skin, holographic jewelry; sign light reflected on her face and coat.
 City motif: long earrings shaped like the Namsan transmission tower in glowing Seoul-red neon, a reflective raincoat with light strips racing along it like the river bridges at night, and a glowing haechi tattoo on the back of her hand.
-World marks on her: glowing neon tattoos; cybernetic implants; a reflective rain-slick raincoat; sign light reflected on her face; holographic jewelry; fiber-optic glowing hair strands; chrome and glossy vinyl; magenta and cyan glow; rain beading on her skin and coat; techwear traced with glowing light lines.
+World marks on her: glowing neon tattoos; cybernetic implants; a reflective rain-slick raincoat; sign light reflected on her face; holographic jewelry; fiber-optic glowing hair strands; chrome and glossy vinyl; magenta and cyan glow; rain beading on her skin and coat; techwear traced with glowing light lines; far-future smart fabric rippling with soft light patterns.
 Colours: Seoul red (dancheong red), Namsan pine green, palace gold — one of these as her accent colour.
 Prop: in one hand she holds a palm-sized hologram projector showing a tiny glowing tower above her hand; her other hand is free.
 Exposure (bold): her techwear opens to show skin — a cropped top under the open reflective coat with natural cleavage, bare midriff and shoulders traced with glowing tattoo lines, high-cut shorts or a slit skirt over strapped thigh-high boots. Intimate areas covered.
 
 4. SCENE
-World: a neon megacity Seoul: the transmission tower on the southern mountain glowing as a red neon spire, light streams racing along the many bridges over the wide river, endless high-rise apartment towers, rain-wet alleys stacked with glowing signs and steaming food stalls.
-This card: at the railing of the observation deck of the neon tower on the southern mountain, the glowing city sprawling below in the rain.
+World: Seoul two centuries from now, a vertical far-future megacity: arcology towers kilometres tall piercing the clouds, linked by glowing sky-bridges at many levels; the old transmission tower on the southern mountain rebuilt as a colossal space-elevator spire whose cable of light climbs straight into orbit; the wide river spanned by stacked tiers of luminous maglev arches; streams of flying vehicles moving in lanes of light between the towers; giant holographic guardian beasts and dancheong patterns projected across the sky; the old palace preserved as a small island of curved tiled roofs under a vast glass dome, deep among the towers; rain falling through layers of light.
+This card: on a high open-air sky-terrace of an arcology tower, the space-elevator spire and the luminous maglev arches over the river spread far below her, flying vehicles streaming past at eye level in the rain.
 Pose: standing confidently, her body turned slightly while her face looks toward the viewer.
 Light: night lit by magenta and cyan neon, sign light reflected on her face, skin and wet raincoat, glowing implants and tattoo lines.
 Composition: vertical 2:3 full-body framing with modest headroom and clear space below the boots — the whole figure from the top of her head or headpiece to both feet stays inside the frame, occupying about four-fifths of the image height, with the same camera distance in every world; her hands stay inside the frame. Camera level with her face with natural portrait perspective; her head level, chin neither raised nor tucked — no upward perspective on her face, no wide-angle distortion, no low angle, no close crop.

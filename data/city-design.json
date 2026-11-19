@@ -12,13 +12,13 @@
         "banned_en": ["smartphone", "mobile phone", "plastic", "LED screen", "neon sign", "neon", "laptop", "headphones", "earbuds", "sneakers", "hoodie", "jeans", "hologram", "billboard", "car", "machinery", "denim", "bomber jacket", "cowboy hat", "sweatpants", "leggings", "baseball cap", "tracksuit", "jogger", "track pants", "windbreaker", "fleece", "bodycon", "broadcast tower", "TV tower", "observation tower", "skyscraper", "Chinese-style palace", "Great Wall", "yellow-glazed roof tiles"]
       },
       "steampunk": {
-        "ko": ["그을음 묻은 뺨", "땀에 젖은 셔츠", "기름때 가죽 장갑", "걷어붙인 소매", "몸에 두른 압력계 · 놋쇠 배관", "묵직한 공구 벨트", "피어오르는 증기", "붉은 화로 빛", "리벳 박힌 쇠", "석탄 연기와 때"],
-        "en": ["soot-smudged cheeks", "a sweat-damp shirt", "oil-stained leather gloves", "rolled-up sleeves", "pressure gauges and brass pipes strapped to her body", "a heavy tool belt", "billowing steam", "red furnace glow", "riveted iron", "coal smoke and grime"],
-        "banned_en": ["smartphone", "mobile phone", "plastic", "LED screen", "neon sign", "neon", "laptop", "headphones", "earbuds", "sneakers", "hoodie", "hologram", "digital display", "touchscreen", "bomber jacket", "sweatpants", "leggings", "baseball cap", "tracksuit", "jogger", "track pants", "windbreaker", "fleece", "bodycon", "broadcast tower", "TV tower", "observation tower", "skyscraper", "Chinese-style palace", "Great Wall", "yellow-glazed roof tiles"]
+        "ko": ["놋쇠 단추 · 버클", "시계태엽 세공", "작은 톱니 · 유리 렌즈 장신구", "모자 위로 올린 색유리 비행 고글", "가는 사슬의 회중시계", "몸을 감도는 흰 증기 한 줄기", "놋쇠에 비친 따스한 가스등 빛", "깃털과 비단 리본", "몸에 맞는 비행선 조종사 코트", "허리에 단 작은 놋쇠 계기"],
+        "en": ["polished brass buttons and buckles", "clockwork filigree", "little gears and glass lenses as jewelry", "flight goggles with tinted lenses pushed up on her hat", "a pocket watch on a fine chain", "a ribbon of white steam curling around her", "warm gaslight glinting on brass", "feathers and silk ribbons", "an airship pilot's fitted coat", "delicate brass instruments clipped to her belt"],
+        "banned_en": ["smartphone", "mobile phone", "plastic", "LED screen", "neon sign", "neon", "laptop", "headphones", "earbuds", "sneakers", "hoodie", "hologram", "digital display", "touchscreen", "bomber jacket", "sweatpants", "leggings", "baseball cap", "tracksuit", "jogger", "track pants", "windbreaker", "fleece", "bodycon", "broadcast tower", "TV tower", "observation tower", "skyscraper", "Chinese-style palace", "Great Wall", "yellow-glazed roof tiles", "soot", "grime", "rust", "coal smoke", "sweat stains", "photographic texture"]
       },
       "cyberpunk": {
-        "ko": ["빛나는 네온 문신", "의체 · 이식 장치", "비에 젖어 반사되는 비옷", "얼굴에 비친 간판 빛", "홀로그램 장신구", "광섬유처럼 빛나는 머리 가닥", "크롬과 번들거리는 비닐", "마젠타 · 시안 빛", "비 젖은 네온 골목", "발광 선이 흐르는 테크웨어"],
-        "en": ["glowing neon tattoos", "cybernetic implants", "a reflective rain-slick raincoat", "sign light reflected on her face", "holographic jewelry", "fiber-optic glowing hair strands", "chrome and glossy vinyl", "magenta and cyan glow", "rain beading on her skin and coat", "techwear traced with glowing light lines"],
+        "ko": ["빛나는 네온 문신", "의체 · 이식 장치", "비에 젖어 반사되는 비옷", "얼굴에 비친 간판 빛", "홀로그램 장신구", "광섬유처럼 빛나는 머리 가닥", "크롬과 번들거리는 비닐", "마젠타 · 시안 빛", "비 젖은 네온 골목", "발광 선이 흐르는 테크웨어", "빛 무늬가 흐르는 먼 미래의 스마트 직물"],
+        "en": ["glowing neon tattoos", "cybernetic implants", "a reflective rain-slick raincoat", "sign light reflected on her face", "holographic jewelry", "fiber-optic glowing hair strands", "chrome and glossy vinyl", "magenta and cyan glow", "rain beading on her skin and coat", "techwear traced with glowing light lines", "far-future smart fabric rippling with soft light patterns"],
         "banned_en": []
       }
     },
@@ -31,10 +31,10 @@
         "low": "EXPOSURE (low): her regalia covers her — long brocade sleeves, a high jeweled collar and a floor-length robe under the cape."
       },
       "steampunk": {
-        "costume": "COSTUME (steampunk): the working dress of a steam city, not clean brass decoration — a sweat-damp shirt with rolled-up sleeves, a scorched leather apron or work harness, oil-stained leather gloves, pressure gauges, tools and brass piping strapped to her body, soot on her cheeks and hands, heavy work boots. No armor plates, no crown, no corset.",
-        "bold": "EXPOSURE (bold): her work clothes open to show skin — the sweat-damp shirt unbuttoned to the sternum or tied up over a bandeau with natural cleavage, bare soot-streaked arms and shoulders, short work breeches or a skirt hitched above the boots; the harness and tools stay on. Chest and pelvis covered.",
-        "moderate": "EXPOSURE (moderate): her work clothes show some skin — rolled-up sleeves baring the forearms, the shirt open at the collarbone, the harness and apron over it. Chest and pelvis covered.",
-        "low": "EXPOSURE (low): her work clothes cover her — a buttoned work shirt with sleeves pushed only to the wrist, a long leather apron, trousers tucked into the boots."
+        "costume": "COSTUME (steampunk): gaslamp-fantasy dress of a storybook steam city — a fitted brass-buttoned airship officer's coat or tailored waistcoat over a crisp blouse, a short layered skirt or fitted breeches, polished brass buckles and clockwork filigree, fine leather gloves, a little gear-and-crystal brooch; clean, elegant and adventurous, gleaming brass and glass, never sooty or rusty. No armor plates, no crown, no corset.",
+        "bold": "EXPOSURE (bold): her elegant outfit shows skin — an open coat over a low-cut fitted bodice with natural cleavage, bare shoulders and arms, a short skirt or fitted breeches over tall laced boots; the brass ornaments stay neat and symmetrical. Chest and pelvis covered.",
+        "moderate": "EXPOSURE (moderate): her elegant outfit shows some skin — bare forearms below turned-back cuffs or an open collar at the collarbone, the fitted coat or waistcoat over it and a knee-length layered skirt or breeches. Chest and pelvis covered.",
+        "low": "EXPOSURE (low): her elegant outfit covers her — a buttoned high-collared blouse under the fitted coat, fine gloves and a long layered skirt or breeches tucked into tall laced boots."
       },
       "cyberpunk": {
         "costume": "COSTUME (cyberpunk): techwear for a neon megacity — a reflective rain-slick coat or cropped jacket over fitted technical layers, straps and buckles, chrome and glossy vinyl, glowing tattoo lines and cybernetic implants on her skin, holographic jewelry; sign light reflected on her face and coat.",
@@ -42,6 +42,12 @@
         "moderate": "EXPOSURE (moderate): her techwear shows some skin — bare arms or a bare collarbone with glowing tattoo lines, the reflective coat worn open over a fitted top. Chest and pelvis covered.",
         "low": "EXPOSURE (low): her techwear covers her — the reflective raincoat zipped to the throat, fitted technical trousers and gloves, light only from the glowing seams and implants."
       }
+    },
+    "casual_world_note": "일상컷 「World:」 줄의 세계 결(2026-11-19 사용자 「일부러 뒷배경은 다 나오게 만든거야?」 → 「응 그렇게 해줘」) — 도시의 세계 글(worlds.<세계>.en)은 명소 목록이라 일곱 장 뒷배경이 다 같아졌다. 그래서 일상컷은 세계마다의 재료 · 빛 · 결만 싣고(en — {city_en} 은 도시 이름), guard_en 이 명소를 장소 줄이 말할 때만 나오게 막는다. 조립기 lib/prompt-city.js buildCasual.",
+    "casual_world": {
+      "fantasy": { "en": "a moonlit elven city of a Western myth-world: pale carved wood and moonstone, glowing dancheong-like patterns of red, green and gold, silk, lantern-light and drifting spirit lights, blossoms with softly glowing petals", "guard_en": "Let the place itself carry this world through its materials, fittings and objects; do not add the city's landmarks, the great tree, the moon or a skyline unless the place below names them." },
+      "steampunk": { "en": "a storybook gaslamp-fantasy city: gleaming brass, polished wood, glass, silk, lace and feathers, clockwork details, warm gaslight and soft white steam — clean, warm and storybook-bright, never sooty, rusty or grimy", "guard_en": "Let the place itself carry this world through its materials, fittings and objects; do not add the city's landmarks, airships or a skyline unless the place below names them. Wherever the place below sounds sooty, smoky, grimy or rusty, show it clean and gleaming instead." },
+      "cyberpunk": { "en": "a far-future city two centuries from now: sleek curved architecture, smart glowing materials, holographic interfaces, layered levels of the city and quiet flying vehicles; even an everyday place is rebuilt in that future, not today's {city_en} with neon added", "guard_en": "Let the place itself carry this world through its materials, fittings and objects; do not add the city's landmarks, towers, giant holograms or a skyline unless the place below names them." }
     },
     "look_note": "worlds.<세계>.look = 그 세계의 그 사람 외형 전부 — face 여섯(face_shape · eyes · brows · nose · lips · eye_color) + 얼굴 설계(age · impression · skin_tone · eye_size · eye_tilt · mark · expr) + silhouette 셋(body · hair · hair_color) + bangs. 어휘는 lib/look-spec.js VOCAB_EN · FACE_DESIGN. 원소와 달리 세 세계가 완전히 다른 사람이라 공통 칸이 없다 — 머리색 · 체형 · 얼굴형 · 헤어스타일이 세계끼리 모두 달라야 한다(검사). palette 는 머리 · 눈 색이 아니라 상징 색 — 지도 · 도감 색과 세 사람의 강조색 하나.",
     "scenes_note": "worlds.<세계>.scenes = 그 세계의 그 도시 안 장소 셋(key · ko · en). hold.en = 손에 드는 그 도시 · 그 세계의 작은 물건. motif = 도시 상징이 그 세계 식으로 사람에게 실린 옷 · 장신구 한 줄."
@@ -89,32 +95,32 @@
           "card_ko": { "look": "남빛 긴 생머리 · 키 큰 몸", "motif": "단청빛 은실 망토 · 네 봉우리 관" }
         },
         "steampunk": {
-          "ko": "증기 공업 도시 서울 — 1900년 무렵, 한강을 건너는 리벳 트러스 철교 위로 기관차가 달리고 강변 주물 공장 굴뚝이 그을음을 뿜는다",
-          "en": "a steam-powered industrial Seoul around 1900: locomotives thundering over riveted iron truss bridges across the wide river, riverside foundries and factories pouring coal smoke, steam pipes running past the old stone city gates, workers' alleys lit red by furnace glow",
+          "ko": "가스등 판타지 서울 — 황금빛 하늘 아래 남산 놋쇠 계류탑에 비행선이 매이고, 옛 돌 성문 위로 큰 시계탑이 솟고, 빛나는 한강에 증기 유람선이 미끄러지며, 유리 돔 온실과 가스등 거리에 흰 증기가 구름처럼 떠돈다",
+          "en": "a storybook gaslamp-fantasy Seoul under a golden sky: airships moored to a brass docking tower on the southern mountain, a great clocktower rising above the old stone city gate, steam pleasure boats gliding along the wide shining river, glass-domed greenhouses and gaslit streets, white steam drifting in soft clouds",
           "scenes": [
-            { "key": "bridge", "ko": "한강철교 아래 정비 발판", "en": "on a maintenance catwalk under the riveted truss of the iron railway bridge over the river, a locomotive roaring overhead in steam" },
-            { "key": "foundry", "ko": "강변 주물 공장", "en": "inside a riverside foundry, molten iron pouring from a ladle, sweat, coal smoke and red furnace glow" },
-            { "key": "alley", "ko": "개천가 공구 공방 골목", "en": "a narrow workshop alley along a stone-lined stream, steam valves hissing and tool stalls stacked with gears and pipe fittings" }
+            { "key": "airship", "ko": "남산 비행선 정류장 놋쇠 갑판", "en": "on the brass deck of an airship landing platform on the southern mountain, the clocktower gate and the shining river spread below, airships drifting past" },
+            { "key": "clocktower", "ko": "옛 성문 위 시계탑 아래", "en": "under the great clocktower rising above the old stone city gate, gas lamps glowing along the street and white steam drifting past the brass gears of its face" },
+            { "key": "pier", "ko": "한강 증기 유람선 선착장", "en": "on a gaslit pier on the wide shining river at dusk, a steam pleasure boat with brass rails and striped awnings drawing alongside in soft white steam" }
           ],
           "look": {
             "face": { "face_shape": "diamond", "eyes": "round_large", "brows": "soft_round", "nose": "upturned", "lips": "heart_full", "eye_color": "amber", "age": "mid_20s", "impression": "elegant", "skin_tone": "golden_tan", "eye_size": "medium", "eye_tilt": "level", "mark": "freckles", "expr": "confident" },
             "silhouette": { "body": "lean_toned", "hair": "finger_waves", "hair_color": "copper", "bangs": "side_swept" },
-            "why": "철교 정비공 — 2026-11-19 사용자 「이 건장한 느낌말고 설계를 좀 바꾸자. 예쁘게」 로 다시: 날씬하고 탄탄한 몸(lean_toned) · 1900~1920년대 결의 윤기 나는 구리빛 핑거웨이브(finger_waves, 옆으로 쓸어 넘긴 앞머리) · 광대가 살짝 선 다이아몬드형 얼굴 · 크고 둥근 눈 · 부드러운 둥근 눈썹 · 살짝 들린 코 · 도톰한 하트 입술, 우아한 인상에 자신 있는 표정, 20대 중반. 머리색 구리빛(copper) · 호박색 눈 · 그을린 피부의 주근깨는 그대로. 판타지(갸름 · 홑꺼풀 긴 눈 · 남빛 긴 생머리) · 사이버펑크(하트형 · 올라간 눈 · 청록 단발)와 얼굴 칸 다섯 · 머리 · 체형이 다 다르다."
+            "why": "가스등 판타지 서울의 비행선 항해사(처음 설계는 철교 정비공) — 2026-11-19 사용자 「이 건장한 느낌말고 설계를 좀 바꾸자. 예쁘게」 로 다시: 날씬하고 탄탄한 몸(lean_toned) · 1900~1920년대 결의 윤기 나는 구리빛 핑거웨이브(finger_waves, 옆으로 쓸어 넘긴 앞머리) · 광대가 살짝 선 다이아몬드형 얼굴 · 크고 둥근 눈 · 부드러운 둥근 눈썹 · 살짝 들린 코 · 도톰한 하트 입술, 우아한 인상에 자신 있는 표정, 20대 중반. 머리색 구리빛(copper) · 호박색 눈 · 그을린 피부의 주근깨는 그대로. 판타지(갸름 · 홑꺼풀 긴 눈 · 남빛 긴 생머리) · 사이버펑크(하트형 · 올라간 눈 · 청록 단발)와 얼굴 칸 다섯 · 머리 · 체형이 다 다르다."
           },
-          "hold": { "en": "a soot-blackened riveting hammer with a worn brass grip" },
+          "hold": { "en": "an ornate brass spyglass" },
           "motif": {
-            "ko": "한강철교 트러스의 엇갈린 리벳 무늬를 그대로 박은 그을린 가죽 작업 하네스와 해치 머리 모양으로 부어 만든 압력계 버클",
-            "en": "a soot-blackened leather work harness riveted in the crisscross truss pattern of the iron railway bridge over the Han River, fastened with a pressure-gauge buckle cast in the shape of a haechi head"
+            "ko": "한강철교 트러스의 엇갈린 무늬를 놋쇠로 새긴 윤나는 가죽 항해사 하네스와 해치 머리 모양의 놋쇠 나침반 버클, 단청 무늬 비단 안감을 댄 서울 빨강 짧은 망토",
+            "en": "a navigator's harness of polished leather and brass worked in the crisscross truss pattern of the Han River railway bridge, fastened with a brass compass buckle shaped like a haechi head, and a short cape in Seoul red lined with dancheong-patterned silk"
           },
-          "card_ko": { "look": "구리빛 핑거웨이브 · 날씬한 몸", "motif": "철교 리벳 하네스 · 해치 압력계" }
+          "card_ko": { "look": "구리빛 핑거웨이브 · 날씬한 몸", "motif": "나침반 해치 버클 · 단청 안감 망토" }
         },
         "cyberpunk": {
-          "ko": "네온 메가시티 서울 — 남산 송신탑이 붉은 네온 첨탑으로 빛나고, 한강 다리마다 빛줄기가 흐르며, 고층 아파트 숲과 비 젖은 골목에 간판 빛이 넘친다",
-          "en": "a neon megacity Seoul: the transmission tower on the southern mountain glowing as a red neon spire, light streams racing along the many bridges over the wide river, endless high-rise apartment towers, rain-wet alleys stacked with glowing signs and steaming food stalls",
+          "ko": "두 세기 뒤의 먼 미래 도시 서울 — 구름을 뚫는 킬로미터 높이의 아콜로지 타워가 층층 공중 다리로 이어지고, 남산 송신탑은 빛의 줄을 궤도까지 올리는 거대한 궤도 엘리베이터 첨탑이 되었으며, 한강 위로 층층 자기부상 아치가 걸치고 탑 사이 빛의 길로 비행 차량이 흐르고, 하늘엔 해치와 단청 홀로그램, 옛 궁궐은 탑들 사이 거대한 유리 돔 속에 남았다",
+          "en": "Seoul two centuries from now, a vertical far-future megacity: arcology towers kilometres tall piercing the clouds, linked by glowing sky-bridges at many levels; the old transmission tower on the southern mountain rebuilt as a colossal space-elevator spire whose cable of light climbs straight into orbit; the wide river spanned by stacked tiers of luminous maglev arches; streams of flying vehicles moving in lanes of light between the towers; giant holographic guardian beasts and dancheong patterns projected across the sky; the old palace preserved as a small island of curved tiled roofs under a vast glass dome, deep among the towers; rain falling through layers of light",
           "scenes": [
-            { "key": "tower", "ko": "남산 송신탑 전망대 난간", "en": "at the railing of the observation deck of the neon tower on the southern mountain, the glowing city sprawling below in the rain" },
-            { "key": "bridge", "ko": "비 오는 한강 다리 위", "en": "on a bridge over the river in the rain, light streams racing past and the skyline mirrored in the black water" },
-            { "key": "alley", "ko": "비 젖은 구도심 골목", "en": "a rain-soaked old-town alley under stacked neon signs, steam rising from food stalls under plastic awnings" }
+            { "key": "skyterrace", "ko": "아콜로지 하늘 테라스", "en": "on a high open-air sky-terrace of an arcology tower, the space-elevator spire and the luminous maglev arches over the river spread far below her, flying vehicles streaming past at eye level in the rain" },
+            { "key": "bridge", "ko": "한강 위 층층 자기부상 아치", "en": "on a glass walkway along the top tier of the stacked maglev arches over the river in the rain, silent trains of light streaking past below her and the towers mirrored in the black water" },
+            { "key": "alley", "ko": "아콜로지 아래층 골목", "en": "a rain-soaked lower-level street deep between the arcology towers, walkways and glowing market stalls stacked overhead, steam rising from food stalls under smart-glass awnings" }
           ],
           "look": {
             "face": { "face_shape": "heart", "eyes": "narrow_upturned", "brows": "angled_sharp", "nose": "small_button", "lips": "thin_long", "eye_color": "violet", "age": "early_20s", "impression": "cool", "skin_tone": "porcelain", "eye_size": "medium", "eye_tilt": "up", "mark": "winged_liner", "expr": "cold_smile" },

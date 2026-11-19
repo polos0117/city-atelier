@@ -7,6 +7,15 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-19 · claude · 시험 그림으로 정한 세 방향 — 스팀펑크 가스등 판타지 · 사이버펑크 먼 미래 · 일상컷 세계 줄은 결만
+- 사용자 「스팀펑크만 너무 실사쪽으로 가는데 시대를 바꿔볼까?」 → 「1번으로 해줘」 → 「이거는 이렇게 가고」 · 「지금은 그냥 서울에다가 네온사인만 더 한 느낌이라 완전 미래 느낌은 안나거든」 · 「일부러 뒷배경은 다 나오게 만든거야?」 → 「응 그렇게 해줘」(판타지도 「지금 이 느낌으로 가자」). 시험 지시문의 낱말을 가져왔고 화풍은 그대로(painterly_concept).
+- data/city-design.json — `vocab.markers.steampunk` 를 가스등 판타지 표지 열로(놋쇠 단추 · 시계태엽 · 비행 고글 · 회중시계 · 흰 증기 · 가스등 빛 …), banned_en 에 soot · grime · rust · coal smoke · sweat stains · photographic texture. `vocab.wear.steampunk` 를 깔끔하고 우아한 모험가 차림으로(시험의 「rather than soot and rust」 는 금지 낱말이 본문에 나오면 안 되는 규칙 때문에 「never sooty or rusty」). `vocab.markers.cyberpunk` 에 먼 미래 표지 하나. 새 `vocab.casual_world.<세계> = { en, guard_en }`(시험 swap3 의 세계 결 · guard — 스팀펑크 guard 의 「mentions soot, coal, grime or rust」 도 같은 까닭으로 「sounds sooty, smoky, grimy or rusty」). 서울 스팀펑크 세계 글 · 장면 셋(airship · clocktower · pier) · motif(나침반 해치 버클 항해사 하네스 + 단청 안감 망토) · hold(놋쇠 망원경) · card_ko.motif, look.why 머리만. 서울 사이버펑크 세계 글 · 장면 셋(skyterrace · 자기부상 아치 · 아콜로지 아래층 골목). 사람(외형 · 나이 · 얼굴)은 그대로 — 표정 confident 는 core 표(손으로 안 고침)의 「composed, self-assured」 그대로.
+- lib/prompt-city.js — 일상컷 「World:」 줄이 도시 세계 글(명소 목록) 대신 casual_world.en, 다음 줄 guard_en(짧은 판 · 긴 판). `?v=38`.
+- lib/prompt-spec.js — 스팀펑크 빛 줄(석탄 연기 · 화로 · 땀 → 가스등 · 흰 증기 · 놋쇠), 실루엣 stoker(그을음 바지) → engineer(비행선 기관사형), 일상 옷 색 earth 의 rust → terracotta(스팀펑크 금지 낱말과 겹침). `?v=40`.
+- data/city-life.json — 서울 스팀펑크 장면 글 열(그을음 · 석탄 · 주물 공장 · 굴뚝 연기 → 놋쇠 · 유리 · 가스등 · 흰 증기, 장소는 그대로), 사이버펑크 장면 글 일곱(네온 · 플라스틱 → 자기부상 아치 · 아콜로지 · 스마트 유리 등 먼 미래 결). data/world-props.json — 스팀펑크 lamp · bowl · cup · ride · float_ring 과 평상복(「a little soot at the cuffs」 걷음).
+- tools/city-design.py · tests/city-design.py — casual_world 검사(글 · 금지 낱말)와 망가뜨린 경우 둘. tests/prompt-city.cjs — 일상컷 세계 줄 = casual_world + guard, 세계마다 명소 낱말 표가 장소 줄이 말하지 않는 한 세계 줄에 없다. tests/prompt-sections.cjs — 스팀펑크 의상 글 첫머리 기대값.
+- AGENTS.md 규칙 1 · 설계 3절 표 · 3-1절 — 세 방향과 까닭. docs/samples 두 개 — 조립기로 다시 뽑음(일상컷 본보기는 기본 화풍 painterly_concept 로).
+
 ## 2026-11-19 · claude · 서울 스팀펑크 — 건장한 철교 정비공에서 예쁜 쪽으로
 - 사용자 「아니.. 이 건장한 느낌말고 설계를 좀 바꾸자. 예쁘게」(삼국지 화풍 시험 그림을 보고).
 - data/city-design.json 서울 스팀펑크 `look`: 체형 broad_strong → lean_toned(날씬하고 탄탄한), 헤어 wolf_cut(두 번 다 긴 웨이브로 나왔다) → finger_waves(1900~1920년대 결의 윤기 나는 핑거웨이브) · 앞머리 choppy → side_swept, 얼굴 square_soft · almond_wide · straight_thick · broad_soft · wide_smile → diamond · round_large · soft_round · upturned · heart_full, 인상 rugged → elegant, 표정 determined → confident, 나이 late_20s → mid_20s. 구리빛 머리 · 호박색 눈 · 주근깨 · 직업(철교 정비공) · motif 는 그대로. card_ko.look 「구리빛 핑거웨이브 · 날씬한 몸」. 얼굴 칸 다섯이 판타지 · 사이버펑크와 다 다르다(FACE_DIFF_MIN 3). 검사 city-design · look-spec · prompt-city · prompt-sections · casual-plan 통과.

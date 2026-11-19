@@ -34,7 +34,7 @@ for (const style of LIVE) {
 }
 /* 스팀펑크 HAIR 조각은 2칸 Hair 줄로, 고른 시간대가 있으면 빛 줄이 그것을 가리킨다 */
 const sp = P.build(D, S, 'seoul', 'steampunk', {});
-assert(/^Hair: her hair is worn exactly as described above/m.test(sp) && /^Costume: the working dress of a steam city/m.test(sp) && /^Avoid: [^\n]*armor plates/m.test(sp), '서울 스팀펑크 — Hair 줄 · 의상 글 · 금지는 Avoid');
+assert(/^Hair: her hair is worn exactly as described above/m.test(sp) && /^Costume: gaslamp-fantasy dress of a storybook steam city/m.test(sp) && /^Avoid: [^\n]*armor plates/m.test(sp), '서울 스팀펑크 — Hair 줄 · 의상 글 · 금지는 Avoid');
 const times = T.WORLD_TIMES || [];
 const tt = P.build(D, S, 'seoul', 'steampunk', { shot: { time: times[0].key } });
 assert(tt.includes(times[0].en.replace(/^TIME & WEATHER:/, 'Time & weather:')) && /unless the time and weather above say otherwise/.test(tt), '시간대를 고르면 빛 줄이 그것을 따른다');
