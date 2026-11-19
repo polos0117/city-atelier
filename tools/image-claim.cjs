@@ -19,7 +19,7 @@ const fs = require('node:fs'), path = require('node:path'), cp = require('node:c
 const ROOT = path.join(__dirname, '..');
 const read = f => JSON.parse(fs.readFileSync(path.join(process.env.CITY_DATA_ROOT || ROOT, f), 'utf8'));
 /* 몫 — null 이면 없다. 도시 공방도 원소처럼 없다 */
-const DAILY_MAX = null, EXECUTION_MAX = null, CASUAL_N = 7;   /* 2026-11-11 일곱 장(사용자 「…그럼 일상컷은 총 7장 되는거야」 — 일곱째는 갈래 자유 칸) — 장면 컷 다섯(필수 둘 — 노출 갈래 · 상황 노출, 계획기 tools/casual-plan.cjs) + 자유 설계 칸 둘. 원소의 「나라 안」 갈래는 도시에 없다 */
+const DAILY_MAX = null, EXECUTION_MAX = null, CASUAL_N = 10;   /* 2026-11-20 열 장(사용자 「포켓몬도 11장 까지 만드니까 그렇게 늘려도 되고」) — 필수 다섯(생활 장면 · 란제리풍 · 수영복 · 역할극 · 게임 코스프레) + 보통 셋(그 가운데 상황 노출 한 장) + 자유 설계 칸 둘(계획기 tools/casual-plan.cjs). 전엔 일곱(2026-11-11) */
 
 /* ── 공방마다 다른 것: 그림 저장소 이름 · 차례 · 한 도시의 빈 자리 ── */
 const IMG_REPO = 'city-atelier-img', WHAT = '도시 세계';
@@ -31,7 +31,7 @@ function order() {
   const D = read('data/city-design.json'), wk = (D.vocab || {}).world_ko || {};
   return P.cards(D).flatMap(k => P.worldsOf(D, k).map(w => ({ key: k + '_' + w, city: k, world: w, title: ((P.card(D, k) || {}).ko || k) + ' ' + (wk[w] || w) })));
 }
-/* 몫의 빈 자리 — 세계 그림 + 일상컷 일곱 장(번호는 세계마다). 열쇠가 도시만이면 그 도시의 세계 전부. 캐릭터만의 컷(casual90)은 일상 장수에 세지 않는다 */
+/* 몫의 빈 자리 — 세계 그림 + 일상컷 열 장(번호는 세계마다). 열쇠가 도시만이면 그 도시의 세계 전부. 캐릭터만의 컷(casual90)은 일상 장수에 세지 않는다 */
 function missing(key) {
   const D = read('data/city-design.json'), st = read('data/style.json')['default'];
   const i = key.indexOf('_'), city = i < 0 ? key : key.slice(0, i), only = i < 0 ? null : key.slice(i + 1);

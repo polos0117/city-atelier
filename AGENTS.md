@@ -91,7 +91,7 @@ node tests/theme.cjs                 # 공간 여섯 · 세계 따라감 · 밝�
 node tests/globe-screen.cjs          # 지구본 탭 · 도시 무대 · 한 장(CDN 모듈은 처음 한 번 받아 ESM_DIR 옆 cdn-cache 에)
 node tests/dex-screen.cjs            # 전체 도감(여섯 판 · 가짜 등록부로 그림 · 새 그림 점, 날짜는 ?today=)
 node tests/screen.cjs                # 화풍 비교 · 생성기 도시 판 · 세계 그림 걸음 · 일상컷 걸음
-node tests/prompt-pack-screen.cjs    # 서울 세계 그림 셋 + 일상 일곱 묶음(폰 344×882)
+node tests/prompt-pack-screen.cjs    # 서울 세계 그림 셋 + 일상 열 장 묶음(폰 344×882)
 # 파이썬 (python -I -X utf8)
 python -I -X utf8 tools/city-design.py check     # 설계표 검사기
 python -I -X utf8 tests/city-design.py           # 검사기 자체의 검사

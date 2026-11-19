@@ -7,6 +7,16 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-20 · claude · 일상컷 열 장 — 필수 다섯(생활 장면 · 노출 갈래 셋 · 게임 코스프레) · 장소는 생활 장면과 일반 장소를 섞어
+- 사용자 「노출 갈래를 다 필수로 해서 2장 더 늘리고, 게임 코스튬도 필수로 했었는데 그게 없네?」 · 「기존 장소들을 해당 시대 느낌으로 바꿔서 쓰는건 안되는거야?」 · 「서울 장면은 일반장소랑 섞어 쓰면서 또 하나의 필수 컷으로」 · 「포켓몬도 11장 까지 만드니까 그렇게 늘려도 되고」 · 「필수칸 두고 전부 섞자」.
+  tools/casual-plan.cjs — 세계마다 열 장: 필수 다섯(생활 장면 컷 lifeMust — 그 도시 생활 장면에서 가장 먼저 · 란제리풍 · 수영복 · 역할극 · 게임 코스프레) + 보통 셋(상황 노출은 늘 그 가운데 한 장) + 자유 설계 둘(옷 자유 · 갈래 자유 — 갈래는 다른 세계가 덜 쓴 노출 갈래, 그 갈래 필수 컷의 옷은 gnot 으로 피함). 장소 풀 = 생활 장면 ∪ 일반 장소(버전1 트리 장소 — 판타지 · 스팀펑크는 글에 금지 낱말이 든 곳을 뺀다), 반쯤 생활 장면 먼저. 장소 겹침 0(한 세계), 세계끼리는 같은 장소 · 같은 옷 계열만 막고 노출 갈래 · 코스프레 칸은 남은 곳이 없으면 허용. 일반 장소의 시간대 · 날씨는 장소 특징(밤 · 실내)대로. 몸 방향 한도는 장면 여덟이라 세 번까지(자세 추천의 몸 방향이 사실상 셋). 옛 묶음 호환(SITU_FROM · OFREE_FROM · GFREE_FROM · --required)은 걷었다 — 도시는 아직 그린 일상컷이 없다.
+  게임 코스프레 — 원소 공방(origin/main 53b1956 ~ 6d68172)에서 옮김: data/game-cosplay.json 사본, pickCosplay(남은 인원 제곱근 무게 · 계획기가 캐릭터를 정함 · 2회차), cosplayUsage 는 이 공방 그림 저장소(city-atelier-img)의 그린 기록 + 계획 예약만(없으면 멈춤, --cosplay-usage none), game-atelier 원본과 다르면 경고, --check 가 generation.cosplay 를 본다. 옛 pick 칸 · --recosplay 는 옮기지 않았다. 판타지 · 스팀펑크는 글에 그 세계 금지 낱말이 든 게임을 안 고른다(다크 소울의 rust).
+  data/casual-tree.json · data/casual-tree-v2.json — 의상 계열 game_cosplay(재단 열하나) · costume_required · 시대 now 계열, 그 계열을 받는 장소(침실 · 거실 · 수영장 · 해변 · 댄스 무대 · 코스프레 행사 · 테마 행사장)와 새 장소 arcade_hall(오락실, 원소 것 그대로).
+  lib/prompt-spec.js · lib/prompt-city.js — 코스프레 컷 글(Costume 줄 · OUTPUT · WARDROBE · CHARACTER 끝), Outfit 줄은 목록 글(게임 · 캐릭터 이름), 옷 색 · 데니어 · 상황 · 세계 평상복 결 없음. 장면 칸 cosplay · lifeMust · gnot, 갈래 자유의 「Not the same outfit …」 줄. lib/studio.js · prompt.html — 생성기도 목록을 읽어 같은 지시문(?v= 올림).
+  tools/prompt-pack.cjs — 코스프레 기록 안내(INDEX.md) · 차례표 갈래. tools/image-claim.cjs CASUAL_N 10 — 한 세계 몫 11, 서울 33.
+  IMAGE_RULES.md · docs/IMAGE_AUTOMATION.md · AGENTS.md · docs/PORT_NOTES.md · docs/CASUAL_TREE_PORT.md — 일곱 → 열 장, 필수 다섯, 섞은 장소 풀, 코스프레 절(generation.cosplay · --check). 새 서울 생활 장면은 더하지 않았다(다른 일).
+  tests/casual-plan.cjs · tests/image-claim.cjs · tests/prompt-pack-screen.cjs — 열 칸 갈래 · 필수 다섯 · 생활 장면 컷 · 장소 겹침 0 · 금지 장소 · 코스프레 게임 · 캐릭터 · 재단 · 쓴 것 읽기, 빈 자리 33 · 11, 묶음 33 자리.
+
 ## 2026-11-20 · claude · 그림 몫을 한 세계씩 · 몸 이상은 다시 그린다
 - 사용자 「몸 이상은 다시 그리도록 해줘」 「세가지 세계를 다 한 번에 만드는게 아니고 한 세계씩 하는걸로」.  
   tools/image-claim.cjs — 몫 열쇠가 <도시>_<세계>(seoul_fantasy). 차례 = 설계표 도시 차례 × 세계 차례, 잠금 파일 claims/<도시>_<세계>.json, missing 은 그 세계의 세계 그림 + 일상컷 일곱(도시 열쇠만 주면 세계 전부). tests/image-claim.cjs 맞춤.  

@@ -39,6 +39,7 @@ game-atelier 의 일상컷 트리 버전1·버전2 를 가져왔다. 모듈 둘�
 
 - 묶음: `arcade`(오락실·게임 가게) → `site`(원소의 현장), `game`(게임 세계) → `nation`(나라 안). `studio` 는 「작업실·공방」. 묶음·장소의 `screens` 표시는 다 뺐다.
 - 뺀 장소 17: `arcade_*` 여섯, `studio_dev`·`studio_stream`·`studio_mocap`, `stage_contest`, `game_*` 일곱(그 게임의 장소 포함).
+- 2026-11-20 게임 코스프레를 원소에서 옮기며 더한 것: 의상 계열 `game_cosplay`(재단 열하나 — `gc_*`, `cosplay: true`) · `costume_required`(얼굴 클로즈업 안 씀) · 시대 `now` 의 계열 목록에 그것, 장소 `arcade_hall`(오락실 — 원소가 같은 날 새로 만든 곳, 화면은 빛만) · 그 계열을 받는 장소(침실 · 거실 · 수영장 · 해변 · 댄스 무대 · 코스프레 행사 · 테마 행사장 · 오락실). 버전2 표엔 `arcade_hall` 받침과 `outfit_features.defaults.game_cosplay`.
 - 더한 장소 17: `site_lab`(화학 실험실) · `site_furnace`(제철소 용광로) · `site_mine`(광산 갱도) · `site_saltpan`(염전) · `site_refinery`(정유소·탱크) · `site_control`(발전소 제어실) · `site_mint`(조폐소·금고) · `site_observatory`(천문대) · `site_hydrogen`(수소 충전소) · `site_kiln`(유리·도자기 공방) — 시대 `now`·`site`; `nation_room`·`nation_market`·`nation_field`·`nation_square`·`nation_bath`·`nation_roof`·`nation_inn` — 시대 `nation`.
 - 뺀 하는 일 22(오락실·PC방·사진 부스·개발실·방송·대회 무대·휴대용 게임기 등). 더한 하는 일 11: `inspect_sample`·`log_entry`·`goggles_up`·`dial_watch`·`valve_turn`·`furnace_watch`·`wipe_brow`·`rake_salt`·`lamp_check`·`cart_push`·`coin_count`. `game_*` 를 가리키던 하는 일은 `nation_*` 로, 「그 게임의 장소」 는 맞는 것만 `nation_square` 로. `@arcade` 자리엔 `@site`(앉아 쉬기·물 마시기·야근 커피 등). `backstage_ready` 의 `prefer: esports_jersey` 는 뺐다.
 - 의상 14 계열 265 옷은 그대로(`low` 포함).
