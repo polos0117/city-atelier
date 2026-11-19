@@ -7,6 +7,19 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-19 · claude · 도시 극장 뼈대와 공간 여섯 — 사용자 「B로 해줘」(시안 B · 회전 무대 위 지구본)
+- DESIGN.md — 빈 틀을 이 공방의 뼈대로: 층(지구본 · 도시 무대 · 한 장 · 전체 도감)과 주소, 아래 탭 둘, 위 세계 고르개, 오른쪽 위 도구 단추, 공간 여섯, 막 · 조명 · 전광판 · 무대 · 표 한 장의 선택자(Task 8 · 9 가 그대로 쓴다), 효과와 움직임 끄기, 하지 않는 것, 폴드 덮개 규칙
+- lib/room.css — 원소 공간 다섯을 걷고 공간 여섯(세계 셋 × 객석 불 끔/켬)의 변수 한 곳으로. 판타지 붉은 벨벳 · 밝은 금 / 스팀펑크 쇠 들보 · 구리 리벳 · 화로 주황(금이 아니다) / 사이버펑크 네온 테 · 아래에서 쏘는 빛. 막 · 조명 · 무대 · 전광판 · 아래 탭 · 막 내림을 그림 파일 없이 CSS 로
+- lib/workspace-theme.js — html[data-world][data-tone][data-motion] 를 붙인다. 세계는 주소(?w= · ?world=) → 이 기기의 마지막 세계(city_world_v1), 밝기는 city_room_v1(기본 끔), 움직임 줄이기 · 「움직임 끄기」면 data-motion="off". 제목 글꼴은 간판 글씨 하나
+- lib/workspace.css — 원소 공간 다섯의 색 묶음을 걷음(색은 room.css 에서)
+- lib/material.css — Task 5 가 none 으로 걷은 그림 단추 · 장식 틀 변수(--ui-* · --frame · border-image)를 지움
+- lib/toolbox.js · lib/toolbox.css — 설정의 「공간」 고르개 대신 「객석 불」(끔 · 켬), 판 색이 지금 공간을 따름
+- index.html — 「짓는 중」 껍데기에 극장을 입힘(막 · 조명 · 세계 고르개 · 도구 단추 · 무대 · 전광판 · 아래 탭 둘 — 탭은 아직 「짓는 중」)
+- lib/words.js — 극장 · 탭 · 객석 불 낱말, 원소 공간 다섯 · 배경 끄기 낱말 지움
+- prompt.html · styles.html — 공용 링크 ?v= 올림
+- tests/theme.cjs(새) · tests/lib/harness.cjs — 여섯 판 변수 · 강조색 색상 차이 ≥ 25° · 대비 4.5 · 44px · 넘침 · 콘솔 · 세계 따라감 · 밝기 기억 · 움직임 끔(하네스에 터치 맥락)
+- docs/PORT_NOTES.md · AGENTS.md — 공간 여섯 · 걷은 그림 변수 · 검사 목록
+
 ## 2026-11-19 · claude · 그림 길을 도시 꼴로 — 등록 · 잠금 · 썸네일 · 그림 저장소 city-atelier-img
 - tools/register-images.py — `roster` 를 걷고 `data/city-design.json` · `data/style.json` 을 바로 읽음. 이름 꼴 `<도시>_<세계>_<화풍>_f[_casualN].webp`(세계 fantasy · steampunk · cyberpunk, 일상컷 90 = 캐릭터만의 컷), 남성 · 세계 없는 컷 · 특별컷 · 없는 도시 · 대문자는 저장 안 하고 실패. SHARDS 는 `city-atelier-img` 하나
 - tools/image-claim.cjs — 그림 저장소 `city-atelier-img`, 몫은 도시 단위, 일상컷 빈 자리 셈에서 90번 제외, 환경 변수 `CITY_DATA_ROOT`(검사용)

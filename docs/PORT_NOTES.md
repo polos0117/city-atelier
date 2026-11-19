@@ -12,7 +12,7 @@
 | `lib/walk-core.js` | 주소 · 층 꼴 | 층 globe · dex · city · card, 열쇠 `tab city card pic w st view` 로 다시 씀. 주기율표 · 나라 · 가문 · 입자 · 땅 · 옛 주소 함수는 걷음. 함수 꼴(readRoute · routeSearch · layerOf · parentOf · ancestors · resolve · validate · worldOf · motionOn · setMotion)은 남김 |
 | `lib/words.js` | 낱말 표 | 합성 · 주기율표 · 땅 낱말 삭제, `app.title` 「도시 공방」, `home.building` 추가. studio · prompt · dex · gallery · fact · cat 낱말은 생성기가 아직 쓸 수 있어 남김(Task 3 · 8 · 9 에서 정리) |
 | `lib/img.js` · `lib/fresh.js` · `lib/look-spec.js` · `lib/patch.js` · `lib/favorites.js` · `lib/casual-tree.js` · `lib/casual-tree-v2.js` · `lib/motion-fx.js` | 공용 · 그림 길 · 새 그림 | 그대로(`img.js` 는 Task 5 에서 `BASES` 를 `city-atelier-img` 하나로, 머리 설명만 도시 꼴로) |
-| `lib/city.css`(← `element.css`) · `lib/workspace.css` · `lib/workspace-theme.js` · `lib/room.css` · `lib/material.css` · `lib/studio.css` | 겉모습 | 그대로(공간 다섯 · 원소 배경 경로는 Task 7). `city.css` 에 홀로 효과 규칙이 남아 있다 |
+| `lib/city.css`(← `element.css`) · `lib/workspace.css` · `lib/workspace-theme.js` · `lib/room.css` · `lib/material.css` · `lib/studio.css` | 겉모습 | **Task 7 에서 공간 여섯(도시 극장)으로 다시 씀** — 색 변수는 `room.css` 한 곳(세계 셋 × 객석 불 둘), `workspace-theme.js` 가 `data-world` · `data-tone` · `data-motion`, `workspace.css` 는 원소 공간 다섯을 걷고 틀 규칙만, `material.css` 는 그림 변수를 지움. `city.css` 에 홀로 효과 규칙이 남아 있다 |
 | `data/casual-tree.json` · `data/casual-tree-v2.json` · `data/casual-own.json`(`cards: {}`) · `data/img.json`(빈 꼴) | 일상컷 트리 · 직업표 · 등록부 | 트리 표는 그대로(Task 4 가 이 공방 것으로), 직업표 · 등록부는 비움 |
 | `tools/*` · `tests/*` · `.github/workflows/register-images.yml` | 도구 · 검사 | 이름 바꿈: `element-design.py` → `city-design.py`, `prompt-element.cjs` → `prompt-city.cjs`, `element.css` → `city.css`. 워크플로는 Task 5 에서 `city-atelier-img` 하나를 받게 고침(`schedule` 은 Task 10) |
 | `IMAGE_RULES.md` · `docs/IMAGE_AUTOMATION.md` · `docs/CASUAL_TREE_PORT.md` | 규칙 문서 | `IMAGE_RULES.md` 는 Task 5 에서 도시 꼴로 다시 씀. `IMAGE_AUTOMATION.md` 는 그림 길 대목만 고치고 머리에 「Task 10 · 11 뒤 다시」, `CASUAL_TREE_PORT.md` 는 머리 안내 그대로 |
@@ -27,10 +27,10 @@
 | `hall.html` · `gallery.html` · `dex.html` | 옛 원소 주소를 새 주소로 넘기는 껍데기(`gallery.html` · `dex.html` 은 원소 전용이라 뺌 — 도감은 Task 9 가 `index.html?tab=dex` 로) |
 | `lib/walk.js` · `lib/walk.css` · `lib/walk-table.js` · `lib/walk-orbit.js` · `lib/walk-family.js` · `lib/walk-list.js` · `lib/walk-card.js` · `lib/walk-data.js` · `lib/walk-fx.js` | 원소 층 화면(주기율표 · 궤도 · 가문 · 목록 · 한 장) · 껍데기 · 효과 다섯. 한 장 · 자료 읽기 꼴은 Task 8 이 원소 저장소에서 참고해 새로 짠다 |
 | `lib/holo.js` | 한 장의 홀로(Pixi) 효과 — 한 장 층과 함께 쓰임. 판단이 갈려 뺌(Task 8 이 다시 가져올지 정한다) |
-| `tests/walk-orbit|table|family|list|card|shell|world|tools|particles|theme.cjs` · `tests/dex-holo.cjs` · `tests/dex-turn.cjs` | 위 화면의 검사(`walk-theme` 는 땅 · 원소 설계표에 묶여 있어 뺌 — Task 7 이 `tests/theme.cjs` 로 새로) |
+| `tests/walk-orbit|table|family|list|card|shell|world|tools|particles|theme.cjs` · `tests/dex-holo.cjs` · `tests/dex-turn.cjs` | 위 화면의 검사(`walk-theme` 는 땅 · 원소 설계표에 묶여 있어 뺌 — Task 7 이 `tests/theme.cjs` 를 새로 씀: 공간 여섯 · 세계 따라감 · 밝기 기억 · 움직임 끔) |
 | `tools/seed-elements.py` · `tools/roster.py` | 원소 번호 채우기 · 세 층 카드 읽기. **`tools/register-images.py` 는 Task 5 에서 `roster` 없이 `data/city-design.json` 을 바로 읽게 고쳤다**(`tools/city-design.py` 는 Task 2 에서 `roster` 없이 다시 씀) |
 | `data/element-design.json` · `docs/ELEMENT_CONCEPT.md` · `docs/casual-review-2026-11-13.md` | 원소 설계표 · 기획 · 원소 일상컷 검토 |
-| 원소 공간 다섯의 그림 · 원소 그림 | 저장소에 없던 것(그림 저장소) — 경로를 쓰던 `lib/img.js` · `lib/room.css` · `lib/material.css` 는 Task 5 에서 걷었다(UI 배경은 Task 7 이 채운다) |
+| 원소 공간 다섯의 그림 · 원소 그림 | 저장소에 없던 것(그림 저장소) — 경로를 쓰던 `lib/img.js` · `lib/room.css` · `lib/material.css` 는 Task 5 에서 걷었고, Task 7 에서 그 변수(`--room-src` · `--ui-*` · `--frame`)를 지웠다 — 도시 극장은 그림 파일 없이 CSS 로만 꾸민다 |
 
 ## 건너뛰게 한 검사 (맨 위 `process.exit(0)` · `sys.exit(0)`)
 
@@ -74,7 +74,9 @@
 - `dex.html`: 원소 AGENTS 는 「옛 주소 껍데기」, 계획 Task 9 는 「`dex.html` 또는 `index.html` 의 `tab=dex`」 — 껍데기는 뺐고, 도감은 Task 7 이 정한다.
 - `holo.js` · 한 장 층: 도시 한 장에도 쓸 수 있으나 원소 한 장 층(`walk-card`)과 한 몸이라 뺌.
 - `lib/city.css` 의 홀로 규칙 · `tb-lands` 규칙(`toolbox.css`) · `studio.js`/`prompt-spec.js` 의 원소 낱말 · `words.js` 의 studio/prompt/dex 낱말: 걷으면 생성기가 깨질 수 있어 두었다 — 각 Task 가 정리.
-- `lib/workspace-theme.js` 의 기억 열쇠(`element_room_v1` 등) · 공간 다섯의 원소 이름: 그대로, Task 7.
+- ~~`lib/workspace-theme.js` 의 공간 다섯~~ — Task 7 에서 공간 여섯으로(열쇠 `city_world_v1` · `city_room_v1`). 「배경 끄기」(`data-background`)는 도구 상자에 고르개가 없던 것이라 같이 걷었다.
+- (Task 7) **세계의 기억**: 공방 · 생성기가 같은 `city_world_v1` 을 쓴다 — 생성기에서 `?world=cyberpunk` 로 열면 공방의 마지막 세계도 사이버펑크가 된다(「세계는 하나의 상태」). 주소에 세계가 있으면 늘 주소가 먼저.
+- (Task 7) **장식 영어 · 도시 영어 이름**: 시안 B 의 「SEOUL」 같은 장식 영어 대문자는 뺐고, 도시 영어 이름은 화면에 내지 않기로 DESIGN.md 에 적었다(`tests/theme.cjs` 가 화면 글에 영어 대문자 셋 이상 연달음이 없는지 본다).
 
 ## 남은 것
 - (Task 4 검토) 손으로 고를 때 새는 것 — 노래방 · 네온 밤 같은 지금 장면이 판타지 · 스팀펑크 장면 고르기에서 손으로 고르면 그대로 나온다. 계획기는 거르지만 손으로 고르는 길은 아직 안 막았다. 다음으로 미룸.

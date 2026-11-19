@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#f7f9fc">
+<meta name="theme-color" content="#1c0810">
 <title>도시 공방</title>
 <style>@media (prefers-reduced-motion: no-preference) { @view-transition { navigation: auto; } }</style><script>addEventListener('pageswap', e => { const t = e.viewTransition; if (t) { t.skipTransition(); t.ready.catch(() => {}); } }); addEventListener('pagereveal', e => { const t = e.viewTransition; if (t) t.ready.catch(() => {}); });</script>   <!-- 공방 지도(polos0117.github.io)의 문에서 넘어올 때 페이드로 들어온다(2026-11-12 — 그쪽 README 「방에 들어가는 연출」). 여기서 나갈 때는 전환을 걸지 않아 공방 안에서 쪽을 옮길 때는 전과 같다. 모르는 브라우저는 그냥 넘어온다 -->
 <!-- 생성기 — 공방 모음 통합 생성기 꼴(한 단계씩, 칩·판·아래 막대). 도시 › 갈래(세계 그림 · 일상컷) › 단계 → 지시문·파일 이름·기록.
@@ -14,9 +14,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;700&display=swap" media="print" onload="this.media='all'">   <!-- 본문 글꼴 — 화면 그리기를 막지 않게(오면 바뀐다). 제목 글꼴은 lib/workspace-theme.js 가 공간 것 하나만 -->
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;700&display=swap"></noscript>
-<link rel="stylesheet" href="lib/workspace.css?v=3">
-<script src="lib/workspace-theme.js?v=3"></script>
-<script src="lib/words.js?v=30"></script>
+<link rel="stylesheet" href="lib/workspace.css?v=5">
+<script src="lib/workspace-theme.js?v=4"></script>
+<script src="lib/words.js?v=31"></script>
 <script src="lib/img.js?v=10"></script>
 <script src="lib/prompt-spec.js?v=38"></script>
 <script src="lib/look-spec.js?v=12"></script>
@@ -24,14 +24,14 @@
 <script src="lib/casual-tree-v2.js?v=7"></script>
 <script src="lib/prompt-city.js?v=35"></script>
 <script src="lib/fresh.js?v=1"></script>
-<link rel="stylesheet" href="lib/room.css?v=2">
+<link rel="stylesheet" href="lib/room.css?v=3">
 <link rel="stylesheet" href="lib/city.css?v=8">
 <link rel="stylesheet" href="lib/studio.css?v=3">
-<link rel="stylesheet" href="lib/material.css?v=5">
+<link rel="stylesheet" href="lib/material.css?v=6">
 <script src="lib/favorites.js?v=1"></script>
 <script src="lib/patch.js?v=1"></script>
 <script src="lib/walk-core.js?v=7"></script>
-<link rel="stylesheet" href="lib/toolbox.css?v=2">
+<link rel="stylesheet" href="lib/toolbox.css?v=3">
 </head>
 <body class="prompt-page lab-page">
 <div class="wrap"><div id="app"></div>
@@ -58,7 +58,7 @@
 <div class="hsheet" id="hsheet" hidden></div>
 <script type="module">
 import {h,render} from 'https://esm.sh/preact@10.24.3';
-import {ToolBar} from './lib/toolbox.js?v=5';
+import {ToolBar} from './lib/toolbox.js?v=6';
 render(h(ToolBar,{tool:'prompt'}),document.getElementById('app'));
 window.AtelierFresh.watch();
 </script>

@@ -1,6 +1,6 @@
-/* 도구 상자 · 도구 화면의 가는 막대(lib/toolbox.js, 2026-11-12). 판은 새 층과 같은 어두운 토큰을 여기 따로 둔다 — 도구 화면은 walk.css 를 싣지 않는다.
+/* 도구 상자 · 도구 화면의 가는 막대(lib/toolbox.js, 2026-11-12). 판의 색은 지금 공간(lib/room.css 의 세계 × 객석 불)을 따른다(2026-11-19 Task 7).
    폰은 아래에서 오르는 시트, 768 넘으면 오른쪽 아래에 붙은 판. 누르는 자리 44px */
-.tb-open,.tb-backdrop,.tb-sheet {--tb-bg:#0d0f16;--tb-card:#161924;--tb-ink:#ece9f2;--tb-mute:#a9a5b8;--tb-line:#ffffff1f}
+.tb-open,.tb-backdrop,.tb-sheet {--tb-bg:var(--deck);--tb-card:var(--card);--tb-ink:var(--text);--tb-mute:var(--muted);--tb-line:var(--line)}
 .tb-open {position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom));z-index:60;min-width:56px;min-height:56px;padding:0 18px;
   border:1px solid var(--tb-line);border-radius:999px;background:var(--tb-card);color:var(--tb-ink);font:700 14px/1 'IBM Plex Sans KR',system-ui,sans-serif;box-shadow:0 6px 22px #000a;cursor:pointer}
 .tb-open[aria-expanded="true"] {border-color:var(--accent)}

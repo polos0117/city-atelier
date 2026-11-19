@@ -26,8 +26,8 @@ function serve() {
 const launch = () => chromium.launch({ executablePath: process.env.CHROMIUM_PATH || undefined });
 
 async function open(browser, base, url, opt = {}) {
-  const { viewport = COVER, reduced = false, noWebGL = false, blockPixi = false, failURL = null, pref = null, slowImg = 0 } = opt;
-  const ctx = await browser.newContext({ viewport, ...(reduced ? { reducedMotion: 'reduce' } : {}) });
+  const { viewport = COVER, reduced = false, touch = false, noWebGL = false, blockPixi = false, failURL = null, pref = null, slowImg = 0 } = opt;
+  const ctx = await browser.newContext({ viewport, ...(reduced ? { reducedMotion: 'reduce' } : {}), ...(touch ? { hasTouch: true } : {}) });
   if (noWebGL) await ctx.addInitScript(() => {
     const get = HTMLCanvasElement.prototype.getContext;
     HTMLCanvasElement.prototype.getContext = function (kind, ...a) { return /webgl/.test(kind) ? null : get.call(this, kind, ...a); };

@@ -8,7 +8,7 @@
 | 문서 | 무엇 |
 |---|---|
 | 이 문서 | 규칙과 자리 |
-| `DESIGN.md` | 이 공방의 겉모습 뼈대 — 빈 틀(Task 7 에서 사용자가 시안을 고르면 채운다) |
+| `DESIGN.md` | 이 공방의 겉모습 뼈대 — 도시 극장(시안 B): 층 · 주소 · 탭 둘 · 세계 고르개 · 공간 여섯 · 선택자 · 효과 |
 | `docs/superpowers/specs/…design.md` · `plans/…city-atelier.md` | 설계 · 계획 |
 | `IMAGE_RULES.md` | 그림 만들기 · 파일 이름 · 기록 · 올리기 — 그림 작업 전에(도시 꼴, Task 5) |
 | `docs/IMAGE_AUTOMATION.md` | GPT 세션 이미지 작업(잠금 · 계획기 · 지시문 묶음) — 원소 꼴, Task 4~5 에서 도시 꼴로 |
@@ -19,11 +19,12 @@
 
 | 화면 | 파일 | 무엇 |
 |---|---|---|
-| 첫 화면 | `index.html` | 「짓는 중」 껍데기 + 도구 상자. 지구본 탭 · 도시 화면 · 전체 도감 탭은 Task 7~9 |
-| 도구 상자 | `lib/toolbox.js` · `lib/toolbox.css` | 구석의 「도구」 단추 → 화풍 · 프롬프트 · 즐겨찾기 · 설정(공간 · 밀도 · 움직임) · 패치 기록. 도구 화면의 머리는 가는 막대 `ToolBar` |
+| 첫 화면 | `index.html` | 도시 극장 껍데기(막 · 조명 · 세계 고르개 · 도구 단추 · 무대 · 전광판 · 아래 탭 둘) — 지구본 · 도시 무대 · 전체 도감은 「짓는 중」, Task 8 · 9 |
+| 공간 | `lib/room.css` · `lib/workspace-theme.js` | 공간 여섯 = 세계 셋 × 객석 불 끔/켬. 세계는 주소 · 고르개를 따라 저절로, 밝기는 도구 상자(`city_room_v1`). 변수는 `room.css` 한 곳 |
+| 도구 상자 | `lib/toolbox.js` · `lib/toolbox.css` | 「도구」 단추(공방은 머리 오른쪽 위) → 화풍 · 프롬프트 · 즐겨찾기 · 설정(객석 불 · 밀도 · 움직임) · 패치 기록. 도구 화면의 머리는 가는 막대 `ToolBar` |
 | 화풍 비교 | `styles.html` · `data/style-compare.json` · `tools/style-compare.py` | 같은 카드를 화풍별로 — 서울 묶음은 Task 11 |
 | 프롬프트 | `prompt.html` · `lib/studio.js` · `lib/prompt-spec.js` · `lib/prompt-city.js` · `lib/casual-tree*.js` | 생성기. 도시 › 갈래 › 단계(Task 3). 세계 그림은 도시 꼴(`PromptCity.build` — 도시 motif + 세계 표지, 금지 낱말은 5칸 Avoid 줄만). 일상컷은 그 세계의 그 도시의 하루(Task 4 — 생활 장면표 `data/city-life.json` · 세계 소품 사전 `data/world-props.json`, 계획기 `tools/casual-plan.cjs`). 본보기 지시문 `docs/samples/seoul-world-prompts.md` · `docs/samples/seoul-casual-prompts.md` |
-| 주소 | `lib/walk-core.js` | 순수 함수. `?tab=globe\|dex &city= &card= &pic= &w= &st= &view=` — 층 globe · dex · city · card. Task 7 이 `DESIGN.md` 에 확정 |
+| 주소 | `lib/walk-core.js` | 순수 함수. `?tab=globe\|dex &city= &card= &pic= &w= &st= &view=` — 층 globe · dex · city · card(`DESIGN.md` 2절) |
 
 ## 지켜야 할 것
 
@@ -75,6 +76,7 @@ node tests/patch.cjs                 # 패치 기록 모양
 node tests/favorites.cjs             # 즐겨찾기 공용 모듈 = 공방 모음 사본
 node tests/casual-tree-v2.cjs        # 일상컷 트리 v2 + 공용 모듈 동일성(원소 공방 사본)
 node tests/walk-core.cjs             # 주소 순수 함수
+node tests/theme.cjs                 # 공간 여섯 · 세계 따라감 · 밝기 기억 · 움직임 끔(브라우저)
 node tests/casual-tree.cjs · python -I -X utf8 tests/casual-tree.py · python -I -X utf8 tests/style-compare.py · node tests/img-shards.cjs
 ```
 

@@ -4,35 +4,81 @@
 <meta charset="utf-8">
 <meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#07080c">
+<meta name="theme-color" content="#1c0810">
 <title>도시 공방</title>
-<!-- 「짓는 중」 껍데기(Task 1, 2026-11-19) — 원소 공방의 주기율표 화면은 걷어 냈고 진짜 첫 화면(지구본 탭 · 도시 화면 · 전체 도감 탭)은 Task 7~9 에서 채운다.
-     지금은 도구 상자(생성기 · 화풍 비교)로 가는 길만 있다. 주소 · 층 꼴은 lib/walk-core.js 가 이미 갖는다. -->
+<!-- 도시 극장 껍데기(Task 7, 2026-11-19 — 시안 B, DESIGN.md). 막 · 조명 · 세계 고르개(위) · 도구 단추(오른쪽 위) · 무대 · 전광판 · 아래 탭 둘(지구본 · 전체 도감).
+     공간 여섯(세계 × 객석 불)은 lib/workspace-theme.js + lib/room.css. 지구본 · 도시 무대 · 도감은 아직 「짓는 중」 — Task 8 · 9 가 같은 선택자를 채운다.
+     주소는 lib/walk-core.js 꼴(?tab=globe|dex &w=). 세계를 바꾸면 주소의 w 를 바꿔 쓰고(역사 안 늘림) 막이 한 번 내려온다(움직임 켬일 때만). -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;700&display=swap" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;700&display=swap"></noscript>
-<link rel="stylesheet" href="lib/workspace.css?v=3">
-<script src="lib/workspace-theme.js?v=3"></script>
-<script src="lib/words.js?v=30"></script>
+<link rel="stylesheet" href="lib/workspace.css?v=5">
+<script src="lib/workspace-theme.js?v=4"></script>
+<script src="lib/words.js?v=31"></script>
 <script src="lib/favorites.js?v=1"></script>
 <script src="lib/patch.js?v=1"></script>
 <script src="lib/walk-core.js?v=7"></script>
-<link rel="stylesheet" href="lib/toolbox.css?v=2">
-<style>
-html,body{margin:0;min-height:100%;background:#07080c;color:#e9ecf3}
-.build{box-sizing:border-box;min-height:100vh;display:grid;place-content:center;gap:12px;padding:24px 16px;text-align:center;font-family:'IBM Plex Sans KR',system-ui,sans-serif}
-.build h1{margin:0;font-size:22px}
-.build p{margin:0;max-width:30em;line-height:1.6;color:#aab1c2}
-</style>
+<link rel="stylesheet" href="lib/room.css?v=3">
+<link rel="stylesheet" href="lib/toolbox.css?v=3">
 </head>
-<body class="walk">
+<body class="th-page">
 <div id="app"></div>
 <script type="module">
 import {h,render} from 'https://esm.sh/preact@10.24.3';
-import {Toolbox} from './lib/toolbox.js?v=5';
-const W = window.W;
-render(h('main',{class:'build'},h('h1',null,W('home.building')),h('p',null,W('home.building.note')),h(Toolbox,{})),document.getElementById('app'));
+import {useState,useEffect,useRef} from 'https://esm.sh/preact@10.24.3/hooks';
+import {Toolbox} from './lib/toolbox.js?v=6';
+const W = window.W, A = window.AtelierAppearance, R = window.AtelierWalk;
+const here = () => R.readRoute(location.search);
+const remember = () => { try { sessionStorage.setItem('city_walk_last', location.search); } catch (e) {} };
+
+function Theater() {
+  const [route, setRoute] = useState(here), [look, setLook] = useState(() => A.get()), [drop, setDrop] = useState(0), dropEl = useRef(null);
+  useEffect(() => {
+    const pop = () => setRoute(here()), app = () => setLook(A.get());
+    addEventListener('popstate', pop); addEventListener('atelier-appearance', app);
+    return () => { removeEventListener('popstate', pop); removeEventListener('atelier-appearance', app); };
+  }, []);
+  useEffect(remember, [route]);
+  /* 막 내림 — 클래스를 다시 붙여 처음부터. 움직임 끔이면 CSS 가 아무것도 돌리지 않는다 */
+  useEffect(() => {
+    const el = dropEl.current; if (!drop || !el) return;
+    el.classList.remove('is-on'); void el.offsetWidth; el.classList.add('is-on');
+    const t = setTimeout(() => el.classList.remove('is-on'), 800); return () => clearTimeout(t);
+  }, [drop]);
+  const layer = R.layerOf(route), tab = layer === 'dex' ? 'dex' : 'globe';
+  const pickWorld = k => {
+    if (k === look.world) return;
+    A.set('world', k);
+    const next = Object.assign({}, route, { w: k });
+    try { history.replaceState(history.state, '', location.pathname + R.routeSearch(next)); } catch (e) {}
+    setRoute(next); setDrop(n => n + 1);
+  };
+  const tabHref = k => location.pathname + R.routeSearch(Object.assign({}, R.EMPTY, { tab: k === 'dex' ? 'dex' : '', w: route.w, st: route.st, view: route.view }));
+  const goTab = (e, k) => {
+    if (e.ctrlKey || e.metaKey || e.shiftKey || e.button) return;
+    e.preventDefault(); if (k === tab && layer === tab) return;
+    history.pushState(null, '', tabHref(k)); setRoute(here());
+  };
+  return h('div', { class: 'th', 'data-layer': layer },
+    h('div', { class: 'th-valance', 'aria-hidden': 'true' }), h('div', { class: 'th-side l', 'aria-hidden': 'true' }), h('div', { class: 'th-side r', 'aria-hidden': 'true' }),
+    h('header', { class: 'th-head' },
+      h('div', null, h('h1', { class: 'th-name th-disp' }, W('app.title')),
+        h('span', { class: 'th-sub' }, W('stage.sub', { world: W('world.' + look.world), tone: W('stage.tone.' + look.tone) }))),
+      h(Toolbox, {})),
+    h('nav', { class: 'th-worlds', 'aria-label': W('world.pick') },
+      A.worlds.map(k => h('button', { key: k, type: 'button', 'data-world': k, 'aria-pressed': k === look.world, onClick: () => pickWorld(k) }, W('world.' + k)))),
+    h('main', { class: 'th-stage' },
+      h('div', { class: 'th-spot', 'aria-hidden': 'true' }), h('div', { class: 'th-floor', 'aria-hidden': 'true' }), h('div', { class: 'th-slot', 'aria-hidden': 'true' })),
+    h('section', { class: 'th-marquee', 'aria-live': 'polite' },
+      h('h2', { class: 'th-marquee-name th-disp' }, W('tab.' + tab)),
+      h('div', { class: 'th-bulbs', 'aria-hidden': 'true' }, h('i'), h('i'), h('i')),
+      h('p', null, W('home.building') + ' — ' + W('home.building.note'))),
+    h('nav', { class: 'th-tabs', 'aria-label': W('tab.nav') }, h('div', { class: 'th-tabs-in' },
+      ['globe', 'dex'].map(k => h('a', { key: k, class: 'th-tab', 'data-tab': k, href: tabHref(k), 'aria-current': k === tab ? 'page' : undefined, onClick: e => goTab(e, k) }, W('tab.' + k))))),
+    h('div', { class: 'th-drop', ref: dropEl, 'aria-hidden': 'true' }));
+}
+render(h(Theater), document.getElementById('app'));
 </script>
 </body>
 </html>
