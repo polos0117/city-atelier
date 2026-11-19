@@ -97,16 +97,16 @@
             { "key": "alley", "ko": "개천가 공구 공방 골목", "en": "a narrow workshop alley along a stone-lined stream, steam valves hissing and tool stalls stacked with gears and pipe fittings" }
           ],
           "look": {
-            "face": { "face_shape": "square_soft", "eyes": "almond_wide", "brows": "straight_thick", "nose": "broad_soft", "lips": "wide_smile", "eye_color": "amber", "age": "late_20s", "impression": "rugged", "skin_tone": "golden_tan", "eye_size": "medium", "eye_tilt": "level", "mark": "freckles", "expr": "determined" },
-            "silhouette": { "body": "broad_strong", "hair": "wolf_cut", "hair_color": "copper", "bangs": "choppy" },
-            "why": "철교 정비공 — 가로로 넓은 사람. 넓은 어깨의 힘센 체형(broad_strong) · 짧게 친 거친 울프컷 · 묵직한 공구 벨트와 하네스로 실루엣이 낮고 단단한 사각형(올림머리 아님 — 원소 사용자 2026-10-31 「스팀펑크 쪽은 위로 묶은 머리가 너무 많아」). 머리색은 화로에 달군 구리빛(copper), 눈은 호박색(amber). 각지되 둥근 턱 · 넓은 코 · 굵은 일자 눈썹 · 큰 웃는 입, 햇볕에 그을린 피부에 주근깨(그을음과 섞인다), 20대 후반, 다부진 표정. 판타지 · 사이버펑크와 머리색 · 체형 · 얼굴형 · 헤어스타일이 다 다르다."
+            "face": { "face_shape": "diamond", "eyes": "round_large", "brows": "soft_round", "nose": "upturned", "lips": "heart_full", "eye_color": "amber", "age": "mid_20s", "impression": "elegant", "skin_tone": "golden_tan", "eye_size": "medium", "eye_tilt": "level", "mark": "freckles", "expr": "confident" },
+            "silhouette": { "body": "lean_toned", "hair": "finger_waves", "hair_color": "copper", "bangs": "side_swept" },
+            "why": "철교 정비공 — 2026-11-19 사용자 「이 건장한 느낌말고 설계를 좀 바꾸자. 예쁘게」 로 다시: 날씬하고 탄탄한 몸(lean_toned) · 1900~1920년대 결의 윤기 나는 구리빛 핑거웨이브(finger_waves, 옆으로 쓸어 넘긴 앞머리) · 광대가 살짝 선 다이아몬드형 얼굴 · 크고 둥근 눈 · 부드러운 둥근 눈썹 · 살짝 들린 코 · 도톰한 하트 입술, 우아한 인상에 자신 있는 표정, 20대 중반. 머리색 구리빛(copper) · 호박색 눈 · 그을린 피부의 주근깨는 그대로. 판타지(갸름 · 홑꺼풀 긴 눈 · 남빛 긴 생머리) · 사이버펑크(하트형 · 올라간 눈 · 청록 단발)와 얼굴 칸 다섯 · 머리 · 체형이 다 다르다."
           },
           "hold": { "en": "a soot-blackened riveting hammer with a worn brass grip" },
           "motif": {
             "ko": "한강철교 트러스의 엇갈린 리벳 무늬를 그대로 박은 그을린 가죽 작업 하네스와 해치 머리 모양으로 부어 만든 압력계 버클",
             "en": "a soot-blackened leather work harness riveted in the crisscross truss pattern of the iron railway bridge over the Han River, fastened with a pressure-gauge buckle cast in the shape of a haechi head"
           },
-          "card_ko": { "look": "구리빛 울프컷 · 어깨 넓은 몸", "motif": "철교 리벳 하네스 · 해치 압력계" }
+          "card_ko": { "look": "구리빛 핑거웨이브 · 날씬한 몸", "motif": "철교 리벳 하네스 · 해치 압력계" }
         },
         "cyberpunk": {
           "ko": "네온 메가시티 서울 — 남산 송신탑이 붉은 네온 첨탑으로 빛나고, 한강 다리마다 빛줄기가 흐르며, 고층 아파트 숲과 비 젖은 골목에 간판 빛이 넘친다",

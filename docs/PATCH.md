@@ -7,6 +7,10 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-19 · claude · 서울 스팀펑크 — 건장한 철교 정비공에서 예쁜 쪽으로
+- 사용자 「아니.. 이 건장한 느낌말고 설계를 좀 바꾸자. 예쁘게」(삼국지 화풍 시험 그림을 보고).
+- data/city-design.json 서울 스팀펑크 `look`: 체형 broad_strong → lean_toned(날씬하고 탄탄한), 헤어 wolf_cut(두 번 다 긴 웨이브로 나왔다) → finger_waves(1900~1920년대 결의 윤기 나는 핑거웨이브) · 앞머리 choppy → side_swept, 얼굴 square_soft · almond_wide · straight_thick · broad_soft · wide_smile → diamond · round_large · soft_round · upturned · heart_full, 인상 rugged → elegant, 표정 determined → confident, 나이 late_20s → mid_20s. 구리빛 머리 · 호박색 눈 · 주근깨 · 직업(철교 정비공) · motif 는 그대로. card_ko.look 「구리빛 핑거웨이브 · 날씬한 몸」. 얼굴 칸 다섯이 판타지 · 사이버펑크와 다 다르다(FACE_DIFF_MIN 3). 검사 city-design · look-spec · prompt-city · prompt-sections · casual-plan 통과.
+
 ## 2026-11-19 · claude · 화풍 확정(painterly_concept) · 미형 · 세계마다 다른 얼굴 · 도시 people
 - 사용자 「그림체만 우선 이걸로 가보자」 · 「이대로 가자」 (서울 세 장 시험) · 「웬만하면 미형으로 가고」 · 「같은 얼굴은 피하고」 · 「도시공방 이니까 인종을 각 나라의 사람으로 해보자」.
 - data/style.json — 새 화풍 painterly_concept(회화적 콘셉트 아트, 모델 gpt-image-2.6-sunburst)를 더해 기본으로, undecided · undecided_note 걷음. 옛 임시 화풍은 그대로.
