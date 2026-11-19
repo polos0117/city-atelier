@@ -47,7 +47,9 @@ const settle = p => p.waitForFunction(() => { const k = document.querySelector('
 (async () => {
   const srv = await H.serve(), br = await H.launch(), noGL = await H.launch(['--disable-webgl', '--disable-3d-apis']);
   let checks = 0;
-  const open = (url, o = {}) => H.open(o.browser || br, srv.base, url, Object.assign({ touch: true }, o));
+  /* 등록부는 늘 빈 것으로(2026-11-20 — GPT 가 서울 사이버펑크를 올려 진짜 등록부가 차기 시작했다. 그림 있는 판은 칸마다 따로 fulfill) */
+  const EMPTY_IMG = { url: /\/data\/img\.json/, body: JSON.stringify({ img: {}, added: {}, count: 0, where: {} }), contentType: 'application/json' };
+  const open = (url, o = {}) => H.open(o.browser || br, srv.base, url, Object.assign({ touch: true }, o, { fulfill: (o.fulfill || []).concat(EMPTY_IMG) }));
   try {
     /* (f) 여섯 판 — 지구본 탭 */
     for (const w of WORLDS) for (const t of ['dark', 'light']) {
@@ -219,7 +221,7 @@ const settle = p => p.waitForFunction(() => { const k = document.querySelector('
       assert.deepEqual(o.errors, [], 'CDN 막힘 콘솔'); checks += 3; await o.ctx.close(); }
 
     /* 그림이 있으면 — 세계 그림이 그 자리에, 누르면 한 장(세계 넘기기) */
-    { const img = { img: { seoul: { byStyle: { s1: { byForm: { fantasy: { f: 'seoul_fantasy_s1_f.webp' }, cyberpunk: { f: 'seoul_cyberpunk_s1_f.webp' } } } } } }, added: {}, count: 2, where: {} };
+    { const img = { img: { seoul: { byStyle: { s1: { byForm: { fantasy: { f: 'seoul_fantasy_s1_f.webp' }, cyberpunk: { f: 'seoul_cyberpunk_s1_f.webp', casual: { f: ['seoul_cyberpunk_s1_f_casual2.webp', 'seoul_cyberpunk_s1_f_casual90.webp', 'seoul_cyberpunk_s1_f_casual1.webp'] } } } } } } }, added: {}, count: 5, where: {} };
       const o = await open('/index.html?city=seoul&w=cyberpunk', { fulfill: [{ url: /\/data\/img\.json/, body: JSON.stringify(img), contentType: 'application/json' }] }), p = o.page;
       await p.waitForSelector('.th-cast');
       assert.equal(await p.locator('button.th-fig').count(), 2, '그림 있는 두 세계'); assert.equal(await p.locator('.th-fig.is-empty').count(), 1);
@@ -227,10 +229,26 @@ const settle = p => p.waitForFunction(() => { const k = document.querySelector('
       await p.tap('.th-role[data-world="cyberpunk"] button.th-fig'); await p.waitForSelector('.th-card');
       assert.equal(await p.evaluate(() => location.search), '?city=seoul&card=seoul&pic=seoul_cyberpunk_s1_f.webp&w=cyberpunk', '한 장 주소');
       assert.equal(await p.locator('.th-card').getAttribute('data-world'), 'cyberpunk', '한 장의 세계'); assert.match(await p.locator('.th-card figcaption').innerText(), /사이버펑크/, '세계 이름'); assert.match(await p.locator('.th-card').getAttribute('style'), /--w-cyberpunk/, '테 색');
-      await p.tap('.th-card-nav button:last-child'); assert.match(await p.evaluate(() => location.search), /pic=seoul_fantasy_s1_f\.webp/, '세계 넘기기');
+      // 그림 줄 — 그 세계 그림 넷(세계 · 일상 1 · 2 · 직업), 번호 차례 · 90 은 끝
+      assert.deepEqual(await p.$$eval('.th-strip button span', s => s.map(x => x.textContent)), ['세계', '1', '2', '직업'], '그림 줄 차례');
+      assert.match(await p.textContent('.th-card-n'), /2 \/ 5/, '세는 말 — 판타지 세계 그림 다음');
+      await p.tap('.th-card-nav button:last-child'); assert.match(await p.evaluate(() => location.search), /pic=seoul_cyberpunk_s1_f_casual1\.webp/, '뒤 장 — 일상컷 1');
+      assert.match(await p.locator('.th-card figcaption').innerText(), /일상컷 1/, '일상컷 이름');
+      await p.tap('.th-strip li:last-child button'); assert.match(await p.evaluate(() => location.search), /pic=seoul_cyberpunk_s1_f_casual90\.webp/, '줄에서 고르기');
+      await p.tap('.th-card-nav button:last-child'); assert.match(await p.evaluate(() => location.search), /pic=seoul_fantasy_s1_f\.webp/, '끝에서 다음 세계로');
+      await p.tap('.th-card-worlds button[style*="cyberpunk"]'); assert.match(await p.evaluate(() => location.search), /pic=seoul_cyberpunk_s1_f\.webp/, '세계 단추');
+      // 크게 보기 — 누르면 화면 가득, 그림을 누르면 두 배 반 · 다시 맞춤, Esc 로 닫는다
+      await p.tap('.th-zoom-open'); await p.waitForSelector('.th-zoom');
+      const fit = await p.locator('.th-zoom img').evaluate(i => i.getBoundingClientRect().width);
+      await p.tap('.th-zoom img'); const big = await p.locator('.th-zoom img').evaluate(i => i.getBoundingClientRect().width);
+      assert(big > fit * 1.8, '크게 ' + fit + ' → ' + big); assert.deepEqual(await smallTargets(p), [], '크게 보기 44px');
+      await H.shot(p, 'card-zoom-big'); await p.keyboard.press('Escape'); await p.waitForSelector('.th-zoom', { state: 'detached' });
+      assert.match(await p.evaluate(() => location.search), /pic=seoul_cyberpunk_s1_f\.webp/, 'Esc 는 크게 보기만 닫는다');
+      await p.tap('.th-zoom-open'); await p.tap('.th-zoom-bar button'); await p.waitForSelector('.th-zoom', { state: 'detached' });
+      await H.shot(p, 'card-strip');
       assert.deepEqual(await smallTargets(p), [], '한 장 44px'); assert(await H.noOverflow(p));
       await p.tap('.th-back'); await p.waitForSelector('.th-cast'); assert.equal(await p.evaluate(() => location.search), '?city=seoul&w=cyberpunk', '한 장 → 도시 무대');
-      assert.deepEqual(o.errors, [], '한 장 콘솔'); checks += 6; await o.ctx.close(); }
+      assert.deepEqual(o.errors, [], '한 장 콘솔'); checks += 16; await o.ctx.close(); }
 
     /* 등록부에 없는 pic 주소는 도시 무대로 */
     { const o = await open('/index.html?city=seoul&card=seoul&pic=seoul_fantasy_zz_f.webp'), p = o.page;

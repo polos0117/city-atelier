@@ -45,6 +45,7 @@ const lineOf = (txt, head) => (String(txt).split('\n').find(l => l.startsWith(he
       /* 화풍 비교 — 도구 막대에 화풍, 묶음이 없으면 빈 안내(서울 묶음은 Task 11) */
       { const SC = JSON.parse(read('data/style-compare.json')), sv = await open('/styles.html');
         await sv.page.waitForSelector('.sc-lede');
+        await sv.page.waitForFunction(() => !/불러오는/.test(document.querySelector('.sc-lede').innerText));   /* 2026-11-20 — 불러오는 중 글에서 단언해 가끔 깨졌다 */
         assert.equal(await sv.page.locator('h1.tb-name').textContent(), '화풍', '화풍 도구 막대');
         if (!SC.rounds.length) { assert.equal(await sv.page.locator('.sc-cell').count(), 0, '묶음 없음 — 빈 안내'); assert.match(await sv.page.locator('.sc-lede').innerText(), /화풍 시험 전/, '빈 안내 말'); }
         assert.deepEqual(SC.worlds, ['fantasy', 'steampunk', 'cyberpunk'], '화풍 비교 세계 셋');

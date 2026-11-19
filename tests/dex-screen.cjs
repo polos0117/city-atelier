@@ -25,7 +25,9 @@ const newSeats = p => p.$$eval('.th-ticket .th-new', es => es.map(e => e.closest
 
 (async () => {
   const srv = await H.serve(), br = await H.launch(), fonts = !!process.env.SHOT_DIR;
-  const open = (url, o = {}) => H.open(br, srv.base, url, Object.assign({ touch: true, fonts }, o));
+  /* 등록부는 늘 빈 것으로(2026-11-20 — GPT 가 서울 사이버펑크를 올려 진짜 등록부가 차기 시작했다. 그림 있는 판은 칸마다 따로 fulfill) */
+  const EMPTY_IMG = { url: /\/data\/img\.json/, body: JSON.stringify({ img: {}, added: {}, count: 0, where: {} }), contentType: 'application/json' };
+  const open = (url, o = {}) => H.open(br, srv.base, url, Object.assign({ touch: true, fonts }, o, { fulfill: (o.fulfill || []).concat(EMPTY_IMG) }));
   let checks = 0;
   try {
     /* 여섯 판 — 등록부 그대로(비어 있다: Review Focus 4 — 그림이 하나도 없는 도시) */
