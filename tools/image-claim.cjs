@@ -1,11 +1,11 @@
 #!/usr/bin/env node
-/* 이미지 작업 잠금 — GPT 세션이 같은 카드를 둘이 그리지 않게(docs/IMAGE_AUTOMATION.md). 도시 공방은 하루 · 실행마다의 몫이 없다(원소 공방과 같다 — 사용자 2026-10-31). 원소 공방의 같은 도구에서 왔다(2026-11-19 도시 꼴: 「카드」 = 도시 하나, 몫은 도시 단위).
+/* 이미지 작업 잠금 — GPT 세션이 같은 카드를 둘이 그리지 않게(docs/IMAGE_AUTOMATION.md). 도시 공방은 하루 · 실행마다의 몫이 없다(원소 공방과 같다 — 사용자 2026-10-31). 원소 공방의 같은 도구에서 왔다(2026-11-19 도시 꼴). 2026-11-20 몫은 「한 도시의 한 세계」 — 열쇠 <도시>_<세계>(seoul_fantasy), 사용자 「세가지 세계를 다 한 번에 만드는게 아니고 한 세계씩」.
    pkm-atelier 의 image-runner 가 하는 일 가운데 「누가 무엇을 그리나」 만 — 지시문은 tools/prompt-pack.cjs, 검수 · 올리기는 문서대로 한다.
 
    잠금은 그림 저장소(옆의 city-atelier-img)의 records/automation/claims/<도시>.json 하나다. 바꿀 때마다 그 파일만 커밋해 일반 push 한다 —
    그 사이 다른 세션이 밀었으면 push 가 거절되고 이 도구는 제 커밋을 되돌린 뒤 멈춘다(다시 받고 처음부터).
 
-     node tools/image-claim.cjs status                                   # 잠금 · 오늘 쓴 몫 · 다음 차례
+     node tools/image-claim.cjs status                                   # 잠금 · 오늘 쓴 몫 · 다음 차례  (<몫> = <도시>_<세계>, 예 seoul_fantasy)
      node tools/image-claim.cjs next                                     # 다음에 그릴 도시와 빈 자리(읽기만)
      node tools/image-claim.cjs claim <도시> --execution <실행 ID>        # 잡는다 — 잡힌 도시만 못 잡는다(몫 없음)
      node tools/image-claim.cjs block <도시> --execution <실행 ID> --reason <까닭>   # 멈춘다(안전 거절 · 도구 오류 …). 잠금은 그대로 남는다
@@ -22,17 +22,22 @@ const read = f => JSON.parse(fs.readFileSync(path.join(process.env.CITY_DATA_ROO
 const DAILY_MAX = null, EXECUTION_MAX = null, CASUAL_N = 7;   /* 2026-11-11 일곱 장(사용자 「…그럼 일상컷은 총 7장 되는거야」 — 일곱째는 갈래 자유 칸) — 장면 컷 다섯(필수 둘 — 노출 갈래 · 상황 노출, 계획기 tools/casual-plan.cjs) + 자유 설계 칸 둘. 원소의 「나라 안」 갈래는 도시에 없다 */
 
 /* ── 공방마다 다른 것: 그림 저장소 이름 · 차례 · 한 도시의 빈 자리 ── */
-const IMG_REPO = 'city-atelier-img', WHAT = '도시';
+const IMG_REPO = 'city-atelier-img', WHAT = '도시 세계';
 const P = (() => { const vm = require('node:vm'), ctx = { window: {}, console }; vm.createContext(ctx);
   for (const f of ['lib/prompt-spec.js', 'lib/look-spec.js', 'lib/prompt-city.js']) vm.runInContext(fs.readFileSync(path.join(ROOT, f), 'utf8'), ctx);
   return ctx.window.AtelierPrompt; })();
-/* 차례는 설계표 차례(서울이 처음) — 도시 하나를 끝까지 그린 뒤 다음 도시로(IMAGE_RULES 2절). 설계 미정 도시(worlds 가 빈)는 빈 자리가 없어 건너뛴다 */
-function order() { const D = read('data/city-design.json'); return P.cards(D).map(k => ({ key: k, title: (P.card(D, k) || {}).ko || k })); }
-/* 한 도시의 빈 자리 — 세계마다 세계 그림 + 일상컷 일곱 장(세 세계면 스물넷)(세계마다 따로 센다, 번호도 세계마다). 캐릭터만의 컷(casual90)은 일상 장수에 세지 않는다 */
+/* 차례는 설계표 차례(서울이 처음) × 세계 차례(판타지 → 스팀펑크 → 사이버펑크) — 한 도시의 세계를 다 그린 뒤 다음 도시로(IMAGE_RULES 2절). 설계 미정 도시(worlds 가 빈)는 몫이 없다 */
+function order() {
+  const D = read('data/city-design.json'), wk = (D.vocab || {}).world_ko || {};
+  return P.cards(D).flatMap(k => P.worldsOf(D, k).map(w => ({ key: k + '_' + w, city: k, world: w, title: ((P.card(D, k) || {}).ko || k) + ' ' + (wk[w] || w) })));
+}
+/* 몫의 빈 자리 — 세계 그림 + 일상컷 일곱 장(번호는 세계마다). 열쇠가 도시만이면 그 도시의 세계 전부. 캐릭터만의 컷(casual90)은 일상 장수에 세지 않는다 */
 function missing(key) {
   const D = read('data/city-design.json'), st = read('data/style.json')['default'];
-  const by = (((((read('data/img.json').img || {})[key] || {}).byStyle || {})[st]) || {}).byForm || {}, out = [];
-  for (const w of P.worldsOf(D, key)) {
+  const i = key.indexOf('_'), city = i < 0 ? key : key.slice(0, i), only = i < 0 ? null : key.slice(i + 1);
+  const by = (((((read('data/img.json').img || {})[city] || {}).byStyle || {})[st]) || {}).byForm || {}, out = [];
+  for (const w of P.worldsOf(D, city).filter(w => !only || w === only)) {
+    const key = city;
     const b = by[w] || {};
     if (!b.f) out.push(`${key}_${w}_${st}_f.webp`);
     out.push(...casualGap(key, st, (b.casual || {}).f || [], CASUAL_N).map(n => `${key}_${w}_${st}_f_casual${n}.webp`));

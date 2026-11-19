@@ -15,7 +15,7 @@
 | `lib/city.css`(← `element.css`) · `lib/workspace.css` · `lib/workspace-theme.js` · `lib/room.css` · `lib/material.css` · `lib/studio.css` | 겉모습 | **Task 7 에서 공간 여섯(도시 극장)으로 다시 씀** — 색 변수는 `room.css` 한 곳(세계 셋 × 객석 불 둘), `workspace-theme.js` 가 `data-world` · `data-tone` · `data-motion`, `workspace.css` 는 원소 공간 다섯을 걷고 틀 규칙만, `material.css` 는 그림 변수를 지움. `city.css` 에 홀로 효과 규칙이 남아 있다 |
 | `data/casual-tree.json` · `data/casual-tree-v2.json` · `data/casual-own.json`(`cards: {}`) · `data/img.json`(빈 꼴) | 일상컷 트리 · 직업표 · 등록부 | 트리 표는 그대로(Task 4 가 이 공방 것으로), 직업표 · 등록부는 비움 |
 | `tools/*` · `tests/*` · `.github/workflows/register-images.yml` | 도구 · 검사 | 이름 바꿈: `element-design.py` → `city-design.py`, `prompt-element.cjs` → `prompt-city.cjs`, `element.css` → `city.css`. 워크플로는 Task 5 에서 `city-atelier-img` 하나를 받게 고침(`schedule` 은 2026-11-20 되살림 — 매시 41분) |
-| `IMAGE_RULES.md` · `docs/IMAGE_AUTOMATION.md` · `docs/CASUAL_TREE_PORT.md` | 규칙 문서 | `IMAGE_RULES.md` 는 Task 5 에서 도시 꼴로 다시 씀. `IMAGE_AUTOMATION.md` 는 그림 길 대목만 고치고 머리에 「Task 10 · 11 뒤 다시」 → 2026-11-20 둘 다 도시 꼴로 다시 씀(기본 화풍 · 세 세계 결 · 비치는 옷 규칙), `CASUAL_TREE_PORT.md` 는 머리 안내 그대로 |
+| `IMAGE_RULES.md` · `docs/IMAGE_AUTOMATION.md` · `docs/CASUAL_TREE_PORT.md` | 규칙 문서 | `IMAGE_RULES.md` 는 Task 5 에서 도시 꼴로 다시 씀. `IMAGE_AUTOMATION.md` 는 그림 길 대목만 고치고 머리에 「Task 10 · 11 뒤 다시」 → 2026-11-20 둘 다 도시 꼴로 다시 씀(기본 화풍 · 세 세계 결), `CASUAL_TREE_PORT.md` 는 머리 안내 그대로 |
 | `AGENTS.md` · `CLAUDE.md` · `README.md` · `DESIGN.md` · `docs/PATCH.md` | 문서 | 도시 공방 것으로 다시 씀(DESIGN 은 빈 틀) |
 | `index.html` | 첫 화면 | 도시 극장 — 지구본 · 도시 무대 · 한 장(Task 8) · 전체 도감(Task 9, `lib/dex-view.js`) + 도구 상자 |
 

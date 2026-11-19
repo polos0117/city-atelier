@@ -1,4 +1,4 @@
-/* 이미지 작업 잠금(tools/image-claim.cjs) — 몫은 도시 단위. 실제 bare 저장소 둘로: 잡기 · 겹쳐 잡기 거절 · 실행마다 하나 · 멈춤 · 끝은 빈 자리가 없어야 ·
+/* 이미지 작업 잠금(tools/image-claim.cjs) — 몫은 한 도시의 한 세계(<도시>_<세계>, 2026-11-20). 실제 bare 저장소 둘로: 잡기 · 겹쳐 잡기 거절 · 실행마다 하나 · 멈춤 · 끝은 빈 자리가 없어야 ·
    다른 세션이 먼저 밀면 push 거절 뒤 제 커밋을 되돌린다 · 하루 몫. 서울(설계된 유일한 도시)의 빈 자리는 실제 자료로 본다. node tests/image-claim.cjs */
 const assert = require('node:assert/strict');
 const fs = require('node:fs'), path = require('node:path'), os = require('node:os'), cp = require('node:child_process');
@@ -8,14 +8,17 @@ const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'image-claim-'));
 {
   const st = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'style.json'), 'utf8'))['default'];
   const m = K.missing('seoul');
-  assert.equal(m.length, 24, '서울 빈 자리 24');
+  assert.equal(m.length, 24, '서울(도시 열쇠) 빈 자리 24');
+  assert.equal(K.missing('seoul_fantasy').length, 8, '한 세계 몫 = 세계 그림 1 + 일상컷 7');
+  assert(K.missing('seoul_fantasy').every(f => f.startsWith('seoul_fantasy_')), '그 세계 것만');
   for (const w of ['fantasy', 'steampunk', 'cyberpunk']) {
     assert(m.includes(`seoul_${w}_${st}_f.webp`), w + ' 세계 그림');
     for (let n = 1; n <= 7; n++) assert(m.includes(`seoul_${w}_${st}_f_casual${n}.webp`), `${w} 일상컷 ${n}`);
   }
-  assert.deepEqual(K.order().map(x => x.key), ['seoul', 'tokyo', 'beijing', 'paris', 'london', 'rome', 'newyork', 'istanbul', 'cairo', 'rio'], '설계표 차례');
+  assert.deepEqual(K.order().map(x => x.key), ['seoul_fantasy', 'seoul_steampunk', 'seoul_cyberpunk'], '설계표 차례 × 세계 차례 — 설계 미정 도시는 몫이 없다');
   assert.equal(K.missing('tokyo').length, 0, '설계 미정 도시는 빈 자리 없음(건너뛴다)');
-  assert.equal(K.nextOf({}).key, 'seoul', '다음 차례는 서울');
+  assert.equal(K.nextOf({}).key, 'seoul_fantasy', '다음 차례는 서울 판타지');
+  assert.equal(K.nextOf({ seoul_fantasy: { runs: [{ status: 'working' }] } }).key, 'seoul_steampunk', '잡힌 세계는 건너뛰고 같은 도시 다음 세계');
   /* 캐릭터만의 컷(casual90)은 일상 일곱에 세지 않는다 */
   assert.equal(K.casualGap('seoul', st, [`seoul_fantasy_${st}_f_casual90.webp`], 7).length, 7);
   assert.deepEqual(K.casualGap('seoul', st, ['x_casual1.webp', 'x_casual2.webp', 'x_casual4.webp'], 5), [3, 5]);
@@ -41,9 +44,9 @@ try {
   fs.writeFileSync(path.join(a, 'README.md'), 'x\n'); git(a, 'add', '.'); git(a, 'commit', '-q', '-m', 'init'); git(a, 'push', '-q', 'origin', 'main');
   const b = clone('b');
   const todo = K.order().filter(x => K.missing(x.key).length).map(x => x.key);
-  assert(todo.length >= 3, '빈 자리가 있는 도시가 셋은 있어야 시험이 된다');
+  assert(todo.length >= 3, '빈 자리가 있는 몫이 셋은 있어야 시험이 된다');
   const [x, y, z] = todo;
-  assert.equal(JSON.parse(run(a, 'next').out).next, x, 'next — 차례대로 첫 빈 도시');
+  assert.equal(JSON.parse(run(a, 'next').out).next, x, 'next — 차례대로 첫 빈 몫');
 
   let r = run(a, 'claim', x, '--execution', 'e1');
   assert.equal(r.code, 0, r.out);

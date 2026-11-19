@@ -1,9 +1,9 @@
 # GPT 세션 이미지 작업 — 몫 없이, 잠금만
 
-사람이 지켜보지 않는 GPT 세션이 빈 도시를 차례대로 채우는 길이다. 사람이 지켜보는 세션은 `IMAGE_RULES.md` 그대로 한다(「올릴까?」).
+사람이 지켜보지 않는 GPT 세션이 빈 도시의 세계를 하나씩 차례대로 채우는 길이다. 사람이 지켜보는 세션은 `IMAGE_RULES.md` 그대로 한다(「올릴까?」).
 원소 공방의 같은 문서(그쪽은 pkm 공방에서 — 사용자 2026-10-31 「pkm 공방처럼 gpt용 이미지 생성룰을 … 정의해줘」)를 도시 꼴로 다시 썼다(2026-11-20 — 그림 저장소 `city-atelier-img` · 기본 화풍 `kr_drawn_rim_dewy` · 서울 시험 그림에서 정한 것). 아래 도구 이름 · 칸 이름 · 갈래는 지금 코드(`tools/casual-plan.cjs` · `tools/prompt-pack.cjs` · `tools/image-claim.cjs` · `lib/prompt-city.js`)가 하는 그대로다.
 
-도시 하나 = **세계마다**(판타지 · 스팀펑크 · 사이버펑크) 세계 그림 한 장 + 그 세계 그림을 붙인 **일상컷 일곱 장** — 장면 컷 다섯(그 가운데 필수 둘: 노출 갈래 한 장 · 상황 노출 한 장) + 자유 설계 칸 둘(옷 자유 · 갈래 자유). 세 세계 도시면 빈 자리 스물넷(+ 캐릭터만의 컷 90번 셋 — `IMAGE_RULES.md` 2절).
+도시 하나 = **세계마다**(판타지 · 스팀펑크 · 사이버펑크) 세계 그림 한 장 + 그 세계 그림을 붙인 **일상컷 일곱 장** — 장면 컷 다섯(그 가운데 필수 둘: 노출 갈래 한 장 · 상황 노출 한 장) + 자유 설계 칸 둘(옷 자유 · 갈래 자유). 한 실행이 맡는 몫은 **한 도시의 한 세계**(`<도시>_<세계>`, 예 `seoul_fantasy` — 사용자 2026-11-20 「세가지 세계를 다 한 번에 만드는게 아니고 한 세계씩」): 세계 그림 한 장 + 일상컷 일곱 장 = 빈 자리 여덟(+ 캐릭터만의 컷 90번 하나 — `IMAGE_RULES.md` 2절).
 
 ## 0-1. 세계 그림은 네 장 뽑고 멈춘다
 
@@ -58,26 +58,26 @@ node tools/image-claim.cjs status                      # 잠금 · 다음 차례
 ## 2. 차례와 잠금
 
 ```sh
-node tools/image-claim.cjs next                         # 다음에 그릴 도시와 빈 자리
-node tools/image-claim.cjs claim <도시> --execution $ATELIER_EXECUTION_ID
+node tools/image-claim.cjs next                         # 다음에 그릴 몫(도시 · 세계)과 빈 자리
+node tools/image-claim.cjs claim <도시>_<세계> --execution $ATELIER_EXECUTION_ID
 ```
 
-- 차례는 설계표 차례(서울이 처음)다 — 도시 하나를 끝까지 그린 뒤 다음 도시로(`IMAGE_RULES.md` 2절). 설계 전 도시(`worlds` 가 빈)는 빈 자리가 없어 건너뛴다. 고르는 것은 도구가 한다.
-- **하루 · 실행마다의 몫이 없다**(다른 공방과 같다). 한 실행이 여러 도시를 차례로 잡아도 된다. 「몫」 은 도시 단위다.
-  잠금은 그대로다 — 다른 세션이 잡은 도시는 건드리지 않고, 한 도시를 끝내거나 멈춘(block) 뒤 다음 도시를 잡는다. 그림 저장소가 900 MB 를 넘으면 썸네일 워크플로가 경고한다(Pages 1 GB) — 그때는 다음 그림 저장소를 연다(`IMAGE_RULES.md` 3절).
-- 잠금은 그림 저장소 `records/automation/claims/<도시>.json` 하나다. `claim` 은 그 파일만 커밋해 일반 push 한다 —
+- 차례는 설계표 차례(서울이 처음) × 세계 차례(판타지 → 스팀펑크 → 사이버펑크)다 — 한 도시의 세계를 다 그린 뒤 다음 도시로(`IMAGE_RULES.md` 2절). 설계 전 도시(`worlds` 가 빈)는 몫이 없다. 고르는 것은 도구가 한다.
+- **하루 · 실행마다의 몫이 없다**(다른 공방과 같다). 한 실행이 여러 몫을 차례로 잡아도 된다. 「몫」 은 한 도시의 한 세계다.
+  잠금은 그대로다 — 다른 세션이 잡은 몫은 건드리지 않고, 한 몫을 끝내거나 멈춘(block) 뒤 다음 몫을 잡는다. 그림 저장소가 900 MB 를 넘으면 썸네일 워크플로가 경고한다(Pages 1 GB) — 그때는 다음 그림 저장소를 연다(`IMAGE_RULES.md` 3절).
+- 잠금은 그림 저장소 `records/automation/claims/<도시>_<세계>.json` 하나다. `claim` 은 그 파일만 커밋해 일반 push 한다 —
   다른 세션이 먼저 밀었으면 거절되고 도구가 제 커밋을 되돌린다. 그때는 pull 하고 `status` 부터 다시.
-- 잡힌 도시(`working` · `blocked`)는 시간이 지나도 가져가지 않는다. `blocked` 는 사용자가 정한 뒤 `release` 로만 푼다.
-- 한 도시의 빈 자리 = 사는 세계마다 세계 그림 · **일상컷 일곱 장**(기본 화풍 — `data/style.json` default, `data/img.json`). 일곱보다 적은 세계는 모자란 만큼만 더 그린다 — 계획기가 그 번호만 짠다.
+- 잡힌 몫(`working` · `blocked`)은 시간이 지나도 가져가지 않는다. `blocked` 는 사용자가 정한 뒤 `release` 로만 푼다.
+- 한 몫의 빈 자리 = 그 세계의 세계 그림 · **일상컷 일곱 장**(기본 화풍 — `data/style.json` default, `data/img.json`). 일곱보다 적은 세계는 모자란 만큼만 더 그린다 — 계획기가 그 번호만 짠다.
   번호는 **세계마다 따로** 비어 있는 가장 작은 것부터 — 이름에 세계가 있어 세계끼리 번호가 겹쳐도 된다(`claim` 이 적어 준 `missing` 그대로). 캐릭터만의 컷(90번)은 일곱 장 수에 세지 않는다.
 
 ## 3. 계획과 지시문 묶음
 
-작업 폴더(`$W`)는 세션 임시 자리에 둔다. 일상컷이 빈 세계마다 계획부터:
+작업 폴더(`$W`)는 세션 임시 자리에 둔다. 잡은 세계의 계획부터:
 
 ```sh
 node tools/casual-plan.cjs <도시> --world <세계> --records ../city-atelier-img/records/<도시> --out $W/plan-<세계>   # --slots 를 안 주면 그 세계의 빈 번호
-node tools/prompt-pack.cjs init <도시> --dir $W/pack --plan $W/plan-fantasy/plan.json --plan $W/plan-steampunk/plan.json …   # 계획한 세계만
+node tools/prompt-pack.cjs init <도시> --dir $W/pack --plan $W/plan-<세계>/plan.json   # 잡은 세계 하나
 node tools/prompt-pack.cjs build --dir $W/pack                                  # 자리마다 <자리>-prompt.txt · <자리>-ui.json, 세계 그림 자리는 <세계>-free.txt 도 · outfit-catalog.md · INDEX.md
 ```
 
@@ -109,23 +109,26 @@ node tools/prompt-pack.cjs build --dir $W/pack                                  
   - **노출** — 은밀한 부위가 가려졌나.
   - **팔·다리·손의 수와 이어짐**.
 - 몸 이상은 `qa.anatomy` 에 따로 적는다: `ok` 또는 걸린 것의 목록 `["arm", "hand", "foot", "leg"]`(추가 · 끊긴 · 떠 있는 · 뒤바뀐 팔은 arm, 손가락 수 · 떠 있는 손은 hand, 발 · 발 윤곽은 foot, 다리는 leg) — 무엇을 봤는지는 `observations` 에. 이미 쓴 기록은 고치지 않는다.
+- **몸 이상이면 다시 그린다**(사용자 2026-11-20 「몸 이상은 다시 그리도록 해줘」) — 같은 지시문 · 같은 첨부 그대로, 낱말은 고치지 않는다. 두 번까지(처음까지 세 번).
+  세 번째도 몸 이상이면 그 장을 `passed: false` · `qa.anatomy` 와 함께 올린다. 다시 그린 차례마다 `generation.retries` 에 `result: "anatomy"` 와 그 시도의 원본 sha256 을 남긴다.
+  세계 그림 네 장도 같다 — 몸 이상인 장만 다시 그린 뒤 네 장을 보인다.
 - 그 밖에 검수에서 걸린 것은 `passed: false` 와 함께 그대로 적고 **올린다**(0절 승인 — 사용자가 올라간 뒤 본다). 다시 그리지 않는다.
   지시문에서 부딪힌 줄(세계 · 장소 · 의상 · 자세 · 프레이밍 · HAND · ANGLE · WARDROBE)을 찾았으면 원인도 적는다 — 규칙 · 계획기 · 설계표를 고치는 일은 사람이 지켜보는 세션이 한다.
 
 ## 5. 멈춤
 
 ```sh
-node tools/image-claim.cjs block <도시> --execution $ATELIER_EXECUTION_ID --reason '실제 까닭(어느 자리 · 무슨 응답)'
+node tools/image-claim.cjs block <도시>_<세계> --execution $ATELIER_EXECUTION_ID --reason '실제 까닭(어느 자리 · 무슨 응답)'
 ```
 
 - 0절의 「닿지 않는 것」 이면 그 자리는 그리지 않고 block 한다. 그 전까지 검수한 자리는 6절대로 올려도 된다(빈 자리를 줄인다).
 - 거절된 지시문은 sha256 과 함께 기록 폴더에 `<자리>.blocked.json` 으로 남긴다(지시문 · 시도 수 · 응답 코드). 그 지시문을 바꿔 다시 시도하지 않는다.
-- block 된 도시는 사용자가 정할 때까지 잠긴 채다. 사용자가 정하면 사람이 지켜보는 세션이 `release --approval '<사용자 말>'` 로 푼다.
+- block 된 몫은 사용자가 정할 때까지 잠긴 채다. 사용자가 정하면 사람이 지켜보는 세션이 `release --approval '<사용자 말>'` 로 푼다.
 
 ## 6. 올리기와 끝
 
 1. 자리마다 원본을 WebP(품질 90, method 6, 1024×1536)로 바꾼다. 이름은 `INDEX.md` 의 「올릴 파일」(= `IMAGE_RULES.md` 3절). 같은 이름이 그림 저장소에 이미 있으면 멈춘다 — 덮지 않는다.
-2. 그림 저장소에 **한 도시 한 커밋**으로 일반 push 한다: `img/<파일>.webp` 들과 `records/<도시>/` 의 기록 —
+2. 그림 저장소에 **한 몫 한 커밋**으로 일반 push 한다: `img/<파일>.webp` 들과 `records/<도시>/` 의 기록 —
    세계 그림은 `<세계>.<화풍>-ui.json`, 일상컷은 `<세계>-casualN.<화풍>-ui.json`(묶음의 `<자리>-ui.json` 을 이 이름으로 — 안의 `record` 칸이 그 자리다), 일상 계획은 `<세계>-casual-plan.json`.
    기록 JSON 에 7절의 `generation` · `qa` 칸을 더한다. **원본 PNG 는 올리지 않는다** — sha256 만(그림 저장소 `.gitignore` 가 `*.png` 를 막는다). 썸네일 · `data/img.json` 은 손으로 만들지 않는다(워크플로가 한다).
 3. push 가 밀리면 pull --rebase 한 번. 그 사이 같은 파일 이름이 들어왔으면 멈추고 보고한다.
@@ -133,10 +136,10 @@ node tools/image-claim.cjs block <도시> --execution $ATELIER_EXECUTION_ID --re
 5. 코드 저장소를 pull 한 뒤 끝낸다. 등록이 아직이면 잠금을 `working` 으로 두고 실행을 마친다 — 다음 실행의 `status` 가 끝내라고 알려 준다.
 
 ```sh
-node tools/image-claim.cjs done <도시> --execution $ATELIER_EXECUTION_ID
+node tools/image-claim.cjs done <도시>_<세계> --execution $ATELIER_EXECUTION_ID
 ```
 
-`done` 은 `data/img.json` 에 그 도시의 빈 자리가 없어야 된다(사는 세계마다 세계 그림 + 일상컷 일곱 장).
+`done` 은 `data/img.json` 에 그 세계의 빈 자리가 없어야 된다(세계 그림 + 일상컷 일곱 장).
 
 ## 7. 기록에 더하는 칸 — `records/<도시>/<…>-ui.json`
 
@@ -146,7 +149,7 @@ node tools/image-claim.cjs done <도시> --execution $ATELIER_EXECUTION_ID
 {"generation": {"tool": "image_gen (GPT 세션)", "endpoint": "images/generations | images/edits", "ref_sha256": "<일상컷 — 붙인 세계 그림의 sha256>",
                 "size": [1024, 1536], "png_sha256": "<원본>", "webp": {"quality": 90}, "note": "원본 PNG 는 올리지 않는다 — sha256 만 남긴다",
                 "design": "<세계 그림 — ours | gpt_free>",
-                "retries": [{"n": 1, "exposure": "bold", "result": "<filtered | see_through | ok>", "png_sha256": "<그 시도의 원본>"}],
+                "retries": [{"n": 1, "exposure": "bold", "result": "<filtered | anatomy | ok>", "png_sha256": "<그 시도의 원본>"}],
                 "free_prompt": "<자유 설계 칸 · 임의 설계 장 — 실제로 넘긴 지시문 통째>", "free_design": "<자유 설계 칸만 — 채운 FREE DESIGN 덩어리>"},
  "execution": "<실행 ID>", "imported": "<YYYY-MM-DD>",
  "qa": {"reviewer": "<세션>", "image_sha256": "<원본>", "passed": true, "anatomy": "ok", "observations": ["<본 것 하나씩>"], "cause": "<어긋났으면 부딪힌 줄>"},
@@ -156,4 +159,4 @@ node tools/image-claim.cjs done <도시> --execution $ATELIER_EXECUTION_ID
 ## 8. 하지 않는 것
 
 - 브라우저로 생성기를 조작하지 않는다 · 다른 유료 API 나 새 자격증명을 쓰지 않는다 · 계획 · 지시문을 손으로 고쳐 내지 않는다(자유 설계 덩어리 채우기 · 임의 설계 주문만 예외).
-- 남의 잠금 · 기록 · 그림을 고치지 않는다 · 검수 실패를 통과로 바꾸지 않는다 · 같은 자리를 여러 번 다시 그려 고르지 않는다(필터 거절의 순서만 예외) · 화풍을 바꾸지 않는다(늘 기본).
+- 남의 잠금 · 기록 · 그림을 고치지 않는다 · 검수 실패를 통과로 바꾸지 않는다 · 같은 자리를 여러 번 다시 그려 고르지 않는다(필터 거절의 순서 · 몸 이상 다시 그리기만 예외) · 화풍을 바꾸지 않는다(늘 기본).
