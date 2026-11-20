@@ -7,6 +7,9 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-20 · claude · 서울 스팀펑크 — 시계탑을 성문 위에서 한강 증기선 나루로
+- 사용자 「스팀펑크에서 광화문 뒤에 시계탑 위치 옮겨야겠는데? 총독부 같잖아..」 → 「1번으로」. 세계 글(en · ko)의 「a great clocktower rising above the old stone city gate」 → 성문은 뒤에 큰 건물 없이 하늘과 산, 시계탑은 한강 증기선 나루(「a brass-faced clocktower over the steamboat pier」). 장면 airship 의 「the clocktower gate」 · 장면 clocktower 의 글(열쇠는 그린 그림 기록이 가리켜 그대로)도. 본보기 지시문도 맞췄다. 이미 그린 서울 스팀펑크 그림은 그대로.
+
 ## 2026-11-20 · claude · 세계컷 GPT 설계 — 칸 채우기(삼국지에서 옮김)
 - 사용자 「세계컷에서 gpt 담당컷을 얼마나 풀어놨어? 삼국지공방이랑 비교해서」 → 「아.. 그러니 이상하지. 칸 채우기로 옮겨줘」. 전엔 열린 주문(맡은 쪽이 얼굴 · 헤어스타일 · 자세 · 장면 · 빛까지 지어 제 지시문을 씀)이라 우리 화풍 · 얼굴 규칙이 GPT 장엔 안 닿았다. 이제 삼국지 2026-11-18 · 11-19 판처럼 우리 설계 지시문을 통째로 주고 칸만 채운다 — lib/prompt-spec.js WORLD_FREE.fill · msg, lib/prompt-city.js worldFillTemplate · worldFillErrors · worldFillPicks · buildWorldFree, tools/world-fill-check.cjs(새). 도시 꼴: 머리 줄의 무기 → 소품, 카드마다 실루엣 설계값이 없어 실루엣 칸은 Costume 줄 뒤 새 줄 · 목록은 그 세계 실루엣 열아홉 전부(우리 것 뺌 없음). 지시문 묶음 INDEX · docs/IMAGE_AUTOMATION.md 0-1 · tests/prompt-city.cjs 를 맞췄다.
 

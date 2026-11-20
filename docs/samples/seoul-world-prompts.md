@@ -48,7 +48,7 @@ Avoid: corset, modern material, machinery, second character, living creature, lo
 
 ## 스팀펑크 (`steampunk`) — 947낱말
 
-가스등 판타지 서울 — 황금빛 하늘 아래 남산 놋쇠 계류탑에 비행선이 매이고, 옛 돌 성문 위로 큰 시계탑이 솟고, 빛나는 한강에 증기 유람선이 미끄러지며, 유리 돔 온실과 가스등 거리에 흰 증기가 구름처럼 떠돈다
+가스등 판타지 서울 — 황금빛 하늘 아래 남산 놋쇠 계류탑에 비행선이 매이고, 옛 돌 성문은 뒤에 큰 건물 없이 하늘과 산을 등지고 서며, 빛나는 한강 증기선 나루에 놋쇠 시계탑이 서고 증기 유람선이 미끄러지며, 유리 돔 온실과 가스등 거리에 흰 증기가 구름처럼 떠돈다
 
 ```text
 A full-body vertical 2:3 (1024×1536) character card image of an adult Korean woman — the personification of the city of Seoul — one woman who IS Seoul as it stands in this world. She is the subject of the picture; her costume, body, props and light carry the city's symbols and this world's marks, and the city behind her only supports her.
@@ -76,8 +76,8 @@ Prop: in one hand she holds an ornate brass spyglass; her other hand is free.
 Exposure (bold): her elegant outfit shows skin — an open coat over a low-cut fitted bodice with natural cleavage, bare shoulders and arms, a short skirt or fitted breeches over tall laced boots; the brass ornaments stay neat and symmetrical. Intimate areas covered.
 
 4. SCENE
-World: a storybook gaslamp-fantasy Seoul under a golden sky: airships moored to a brass docking tower on the southern mountain, a great clocktower rising above the old stone city gate, steam pleasure boats gliding along the wide shining river, glass-domed greenhouses and gaslit streets, white steam drifting in soft clouds.
-This card: on the brass deck of an airship landing platform on the southern mountain, the clocktower gate and the shining river spread below, airships drifting past.
+World: a storybook gaslamp-fantasy Seoul under a golden sky: airships moored to a brass docking tower on the southern mountain, the old stone city gate standing on its own with open sky and the mountains behind it, a brass-faced clocktower over the steamboat pier on the wide shining river where steam pleasure boats glide, glass-domed greenhouses and gaslit streets, white steam drifting in soft clouds.
+This card: on the brass deck of an airship landing platform on the southern mountain, the old city gate, the riverside clocktower and the shining river spread below, airships drifting past.
 Pose: standing confidently, her body turned slightly while her face looks toward the viewer.
 Light: a soft key light with a strong rim light tracing her hair, shoulders and armour; bright, crisp specular highlights on metal and jewellery, and a clean, warm-neutral sheen on her skin.
 Composition: vertical 2:3 full-body framing with modest headroom and clear space below the boots — the whole figure from the top of her head or headpiece to both feet stays inside the frame, occupying about four-fifths of the image height, with the same camera distance in every world; her hands stay inside the frame. Camera level with her face with natural portrait perspective; her head level, chin neither raised nor tucked — no upward perspective on her face, no wide-angle distortion, no low angle, no close crop.

@@ -97,11 +97,11 @@
           "card_ko": { "look": "남빛 긴 생머리 · 키 큰 몸", "motif": "태극 망토 · 해치 견갑 · 네봉 관" }
         },
         "steampunk": {
-          "ko": "가스등 판타지 서울 — 황금빛 하늘 아래 남산 놋쇠 계류탑에 비행선이 매이고, 옛 돌 성문 위로 큰 시계탑이 솟고, 빛나는 한강에 증기 유람선이 미끄러지며, 유리 돔 온실과 가스등 거리에 흰 증기가 구름처럼 떠돈다",
-          "en": "a storybook gaslamp-fantasy Seoul under a golden sky: airships moored to a brass docking tower on the southern mountain, a great clocktower rising above the old stone city gate, steam pleasure boats gliding along the wide shining river, glass-domed greenhouses and gaslit streets, white steam drifting in soft clouds",
+          "ko": "가스등 판타지 서울 — 황금빛 하늘 아래 남산 놋쇠 계류탑에 비행선이 매이고, 옛 돌 성문은 뒤에 큰 건물 없이 하늘과 산을 등지고 서며, 빛나는 한강 증기선 나루에 놋쇠 시계탑이 서고 증기 유람선이 미끄러지며, 유리 돔 온실과 가스등 거리에 흰 증기가 구름처럼 떠돈다",
+          "en": "a storybook gaslamp-fantasy Seoul under a golden sky: airships moored to a brass docking tower on the southern mountain, the old stone city gate standing on its own with open sky and the mountains behind it, a brass-faced clocktower over the steamboat pier on the wide shining river where steam pleasure boats glide, glass-domed greenhouses and gaslit streets, white steam drifting in soft clouds",
           "scenes": [
-            { "key": "airship", "ko": "남산 비행선 정류장 놋쇠 갑판", "en": "on the brass deck of an airship landing platform on the southern mountain, the clocktower gate and the shining river spread below, airships drifting past" },
-            { "key": "clocktower", "ko": "옛 성문 위 시계탑 아래", "en": "under the great clocktower rising above the old stone city gate, gas lamps glowing along the street and white steam drifting past the brass gears of its face" },
+            { "key": "airship", "ko": "남산 비행선 정류장 놋쇠 갑판", "en": "on the brass deck of an airship landing platform on the southern mountain, the old city gate, the riverside clocktower and the shining river spread below, airships drifting past" },
+            { "key": "clocktower", "ko": "한강 증기선 나루 시계탑 아래", "en": "under the brass clocktower of the steamboat pier on the shining river, gas lamps glowing along the quay and white steam drifting past the brass gears of its face" },
             { "key": "pier", "ko": "한강 증기 유람선 선착장", "en": "on a gaslit pier on the wide shining river at dusk, a steam pleasure boat with brass rails and striped awnings drawing alongside in soft white steam" }
           ],
           "look": {
