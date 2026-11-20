@@ -170,7 +170,7 @@ def history_dates(repo, folder=IMG_DIR):
 
 
 def split_style(head, styles):
-    """'seoul_fantasy_game_keyart' → ('seoul_fantasy', 'game_keyart').
+    """'seoul_fantasy_painterly_concept' → ('seoul_fantasy', 'painterly_concept').
 
     화풍이 안 붙었으면 style 자리가 None 이다. 이름 뒤가 아는 화풍일 때만
     떼어내므로, 화풍처럼 생겼지만 목록에 없는 토막은 도시 열쇠의 일부로 남아

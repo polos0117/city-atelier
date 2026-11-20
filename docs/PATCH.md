@@ -7,6 +7,9 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-20 · claude · 화풍 셋만 — 기본 · 회화적 콘셉트 아트 · 실사 유화
+- 사용자 「실사유화 화풍도 우선 key 로 등록해줄래? 지금 기존화풍, 실사유화, 너가 만든 회화적 콘셉아트 3개만 남기고 다른건 지워줘」. data/style.json — real_oil(실사 유화, 시험 열쇠 oil_real_try 의 화풍 글 · 세계 공통 빛 줄 · avoid) 더하고, kr_drawn_rim_dewy(기본) · painterly_concept 말고 열여덟 화풍(원소에서 옮긴 임시 · 내린 화풍, 등록된 그림 없음)을 지웠다. 시험 때 얼굴 줄 · 표정 줄 덧붙임과 사이버펑크 비 젖은 빛은 장면 몫이라 넣지 않았다. tests/register-images.py · tests/screen.cjs 가 지운 화풍(game_keyart · retired)을 쓰던 곳을 고쳤다.
+
 ## 2026-11-20 · claude · core v7 — 얼굴 낱말에서 크기 말을 빼고 모양 · 방향만
 - 사용자 「이건 공통적으로 손볼 부분 같긴한데」 → 「이건 지금 고치자」 → 「옮겨주고」. style-atelier core/v7 — VOCAB_EN 얼굴 낱말(face_shape · eyes · brows · nose · lips 스물다섯)과 FACE_DESIGN.eye_size 에서 크기 말을 빼고, 이목구비 크기는 자연스러운 범위 · 차이는 눈꼬리 · 눈썹 곡선 · 입꼬리 · 턱선으로(예: square_soft · broad_soft · wide_smile · round_large). 도시 공방 해치 스팀펑크 시험에서 각진 얼굴 · 넓은 코 · 넓은 입 · 긴 아몬드 눈이 겹쳐 넓적하게 나왔다. 열쇠는 그대로 — 이 공방 lib/ 끝 core 블록을 node core/sync.cjs 로 v7 로 옮겼다(블록은 손으로 고치지 않는다). 이미 그린 그림은 그대로.
 

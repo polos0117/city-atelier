@@ -12,7 +12,7 @@ const D = JSON.parse(read('data/city-design.json')), S = JSON.parse(read('data/s
 const { T, P } = (() => { const c = { window: {} }; vm.createContext(c); for (const f of ['lib/prompt-spec.js', 'lib/look-spec.js', 'lib/casual-tree.js', 'lib/casual-tree-v2.js', 'lib/prompt-city.js']) vm.runInContext(read(f), c); return { T: c.window.AtelierSpec, P: c.window.AtelierPrompt }; })();
 const TREE = JSON.parse(read('data/casual-tree.json')), TREE2 = JSON.parse(read('data/casual-tree-v2.json')), LIFE = JSON.parse(read('data/city-life.json')), PROPS = JSON.parse(read('data/world-props.json'));
 const casualOf = (scene, world) => P.buildCasual(D, S, 'seoul', scene, { world, style: DEF, tree: TREE, tree2: TREE2, life: LIFE, props: PROPS });
-const RETIRED = Object.keys(S.styles).filter(k => S.styles[k].retired), LIVE = Object.keys(S.styles).filter(k => !S.styles[k].retired), DEF = S.default;
+const LIVE = Object.keys(S.styles).filter(k => !S.styles[k].retired), DEF = S.default;
 const lineOf = (txt, head) => (String(txt).split('\n').find(l => l.startsWith(head)) || '');
 
 (async () => {
@@ -61,8 +61,8 @@ const lineOf = (txt, head) => (String(txt).split('\n').find(l => l.startsWith(he
         const other = LIVE.find(k => k !== DEF);
         await gp.selectOption('#st-style', other); assert.equal(await promptOf(gp), P.build(D, S, 'seoul', 'fantasy', { style: other }), '고른 화풍 지시문');
         await gp.selectOption('#st-style', ''); assert.equal(await promptOf(gp), d0, '기본으로 돌아옴');
-        await gp.goto(srv.base + '/prompt.html?card=seoul&o=world&world=fantasy&style=' + RETIRED[0]); await gp.waitForSelector('.hchip');
-        assert.equal((await state(gp)).style, DEF, '내린 화풍 주소 — 기본 화풍으로 짓는다');
+        await gp.goto(srv.base + '/prompt.html?card=seoul&o=world&world=fantasy&style=game_keyart'); await gp.waitForSelector('.hchip');
+        assert.equal((await state(gp)).style, DEF, '지운 화풍 주소(game_keyart, 2026-11-20 지움) — 기본 화풍으로 짓는다');
         /* 옛 세계(mecha)가 주소로 와도 버린다 — 조립기가 던지지 않게 */
         await gp.goto(srv.base + '/prompt.html?card=seoul&o=world&world=mecha'); await gp.waitForSelector('.hchip');
         assert.equal((await state(gp)).world, '', '세계 mecha 주소는 버린다'); assert.equal(await openOf(gp), 'world', '세계 칸부터');

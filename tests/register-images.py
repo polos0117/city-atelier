@@ -13,13 +13,13 @@ worlds = reg.world_keys()
 styles = reg.style_names()
 cities = reg.cities()
 assert worlds == ['fantasy', 'steampunk', 'cyberpunk'], worlds
-assert 'game_keyart' in styles, styles
+assert set(styles) >= {'kr_drawn_rim_dewy', 'painterly_concept', 'real_oil'}, styles
 # 카드 열쇠 = 도시 열 + 설계표의 랜드마크(<도시>-<랜드마크>) — 수를 박지 않는다(2026-11-20 랜드마크 넷을 더하자 「11」 이 깨져 그림 등록이 실패했다)
 _design = json.load(open(os.path.join(ROOT, 'data', 'city-design.json'), encoding='utf-8'))
 _want = [k for c in _design['cities'] for k in [c['key']] + [c['key'] + '-' + l['key'] for l in c.get('landmarks') or []]]
 assert cities == _want and cities[:2] == ['seoul', 'seoul-haechi'] and 'newyork' in cities, cities
 assert 'zz' not in cities and 'new_york' not in cities and all(c == c.lower() and '_' not in c for c in cities), '도시 열쇠는 소문자 영문, 밑줄 없음'
-S = 'game_keyart'
+S = 'painterly_concept'
 
 
 real_read = reg.read
