@@ -755,6 +755,7 @@ function ownStep(card, world, seed, opt, recDir, worlds) {
     if (opt.out) { const out = worlds.length > 1 ? path.join(opt.out, 'plan-' + world) : opt.out; fs.mkdirSync(out, { recursive: true }); const rec = record(card, world, oc);
       rec.own = { job_ko: ownRow(card, world).job_ko, level: oc.axes.skin_exposure, example: !!((OWN.cards[card.key] || {}).example) };
       fs.writeFileSync(path.join(out, `${world}-casual${OWN_N}.${STYLE}-ui.json`), JSON.stringify(rec, null, 1) + '\n'); fs.writeFileSync(path.join(out, `${world}-casual${OWN_N}-prompt.txt`), rec.prompt); }
+  } else if (card.c.tier === 'landmark') { /* 랜드마크는 90 컷이 없다 — 말 없음 */
   } else if (!ownRow(card, world)) console.log(`  ${OWN_N} ◇ 캐릭터만의 컷 — 아직 없음(data/casual-own.json 에 내용이 없다) · 건너뜀`);
 }
 function freeSlots(card, world, want = CASUAL_N) {

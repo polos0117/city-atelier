@@ -79,6 +79,11 @@ with tempfile.TemporaryDirectory() as d:
     assert code == 1 and s2 is None and '그런 도시가 없다' in out, out
     (Path(d) / f'seoul-nope_fantasy_{S}_f.webp').unlink()
 
+    (Path(d) / f'seoul-haechi_fantasy_{S}_f_casual90.webp').touch()
+    code, s3, out = run(saved, d)
+    assert code == 1 and s3 is None and '90번' in out, out
+    (Path(d) / f'seoul-haechi_fantasy_{S}_f_casual90.webp').unlink()
+
     # 틀린 이름은 하나라도 있으면 아무것도 저장하지 않는다
     for bad, why in [(f'seoul_mecha_{S}_f.webp', '그런 도시가 없다'),            # 없는 세계(원소의 mecha) → 도시 이름으로 읽혀 실패
                      (f'seoul_modern_{S}_f.webp', '그런 도시가 없다'),

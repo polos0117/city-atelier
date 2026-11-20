@@ -18,7 +18,7 @@ for (const style of LIVE) {
   for (const key of P.cards(D)) for (const w of P.worldsOf(D, key)) {
     const t = P.build(D, S, key, w, { style }), B = t.split('\n\n'), id = key + ' ' + w + ' ' + style, lines = t.split('\n');
     assert.equal(B.length, 6, id + ' 머리말 + 다섯 칸');
-    assert(B[0].startsWith('A full-body vertical 2:3 (1024×1536) character card image of an adult ' + D.cities.find(c => c.key === key).people.en + ' woman — the personification of the city of ') && !/ Age: /.test(B[0]), id + ' 머리말(나이는 2칸 · 그 나라 사람)');
+    assert(B[0].startsWith('A full-body vertical 2:3 (1024×1536) character card image of an adult ' + P.card(D, key).people + ' woman — the personification of ') && !/ Age: /.test(B[0]), id + ' 머리말(나이는 2칸 · 그 나라 사람)');
     assert(B[1].includes(T.WORLD_SHORT.beauty) && B[1].indexOf(T.WORLD_SHORT.beauty) > B[1].indexOf(styleNo.text), id + ' 1칸 — 화풍 뒤 미형 · 다른 얼굴 줄');
     assert.deepEqual(B.slice(1).map(b => b.split('\n')[0]), [CF.s1, CF.s2, CF.s3.replace('{costume}', 'COSTUME').replace('{genre}', T.WORLDS.find(x => x.key === w).en), CF.s4, CF.s5], id + ' 칸 머리 차례');
     assert(B[1].includes(styleNo.text) && (sv.worldFace ? B[1].includes('Face proportions: ' + sv.worldFace) : B[1].includes('described below')) && !B[1].includes('described above'), id + ' 1칸 — 화풍 · 얼굴 비율(②)');

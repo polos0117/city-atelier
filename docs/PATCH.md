@@ -14,6 +14,7 @@
   지시문: 세계 그림 첫 줄 CONCEPT_LANDMARK(<랜드마크>를 의인화, <도시>의 랜드마크), 일상컷은 부모 도시 생활 장면 · 계절 · 날씨 · 「an ordinary day in <도시>」. 계획기는 같은 도시 카드끼리 덜 쓴 장면부터(그린 기록 + 아직 안 그린 계획 파일). 서울 · 도쿄 지시문 36개씩은 바꾸기 전과 글자까지 같다.  
   화면: 생성기 카드 고르개에 「서울 › 해치」(?card=seoul-haechi) · 도시 무대 세 사람 아래 랜드마크 줄(.th-marks, 랜드마크 없는 도시는 숨김) · 랜드마크 한 장 보기(?city=seoul&card=seoul-haechi&pic=…) · 도감 도시 줄의 일상컷 수에 랜드마크 일상컷 합산.  
   IMAGE_RULES.md 2절 · docs/IMAGE_AUTOMATION.md 1절 · AGENTS.md 3절에 랜드마크 카드 규칙을 적음.
+- 마무리 검토 고침 — lib/prompt-city.js row(): 랜드마크 세계가 부모 도시 세계의 palette · own_vocab 을 물려받음(자기 것이 있으면 그것) · prompt.html ?v 올림(prompt-spec 43 · prompt-city 42) · lib/dex-view.js freshFiles · index.html markSeen 이 랜드마크 그림도 셈 · tools/casual-plan.cjs 랜드마크는 90 컷 없음 말 안 함 · tools/register-images.py 랜드마크 casual90 거절 · tests/prompt-sections.cjs 랜드마크 열쇠.
 
 ## 2026-11-20 · claude · 도시별 말 own_vocab — 공용 판타지 말에서 서울 것을 뺌
 - 도쿄를 설계하자 공용 판타지 말의 서울 것(노리개 · 수호수 문장 · 단청 · 청자 잔 · 엘프 달빛 고목 도시 일상컷 세계 줄)이 도쿄 지시문에 실렸다 → 사용자 「그렇게 해」(서울 것을 공용에서 빼고 서울에만).  

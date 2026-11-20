@@ -206,5 +206,10 @@ for (const w of T.WORLDS.map(x => x.key)) { const t = PC.build({ design: D, styl
   assert(t.length > 1000 && !r.missing, '랜드마크 일상컷 — 서울 생활 장면이 지어진다');
   assert(t.includes(s.worlds.fantasy.en), '랜드마크 일상컷 Place');
   assert(t.includes('an ordinary day in Seoul'), '랜드마크 일상컷 — 부모 도시 줄'); }
+/* 랜드마크 세계는 부모 도시 세계의 palette · own_vocab 을 물려받는다(서울 판타지 태극 색 · 서울 말) */
+{ const sf = D.cities.find(c => c.key === 'seoul').worlds.fantasy, t = PC.build({ design: D, styles: S, city: 'seoul-haechi', world: 'fantasy', style: S['default'], kind: 'world' }).text;
+  assert(t.includes(sf.palette.en) && !t.includes('Seoul red (dancheong red)'), '해치 판타지 — 서울 판타지 palette 를 물려받음');
+  const s0 = LIFE.cities.seoul.scenes[0], r = cas('fantasy', { place: P.lifeKey('seoul', s0.key), time: (s0.times || [])[0], season: (s0.seasons || ['autumn'])[0] }, S['default'], 'seoul-haechi').text;
+  assert(r.split('\n').some(l => l.startsWith('World: ') && l.includes(sf.own_vocab.casual_world.en)), '해치 판타지 일상컷 World 줄 — 서울 own_vocab'); }
 console.log('PASS 지시문 조립: ' + DESIGNED.map(c => c.ko).join(' · ') + ' × 세 세계 × 화풍 ' + LIVE.length + ' = ' + n + '장 — 표지 · motif · 머리색 · 금지 낱말(Avoid 줄 밖) · 이름 · mecha 던짐 · 설계 미정 ' + undesigned.length + '곳 · 노출 · 고른 칸; ' +
   '일상컷 ' + nc + '장(' + DESIGNED.map(c => c.ko + ' 생활 장면 ' + LIFE.cities[c.key].scenes.length).join(' · ') + ' × 세 세계 × 화풍) — 그 세계 장면 글 · 소품 · 옷의 결 · 금지 낱말(Avoid 단락 밖) · 휴대폰 사전 · lifeTree');

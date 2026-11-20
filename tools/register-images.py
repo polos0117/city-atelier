@@ -323,6 +323,9 @@ def main():
         if not form:
             unknown.append((f, "세계 열쇠가 없다 — <도시>_<세계>_<화풍>_f.webp 꼴이어야 한다(fantasy · steampunk · cyberpunk)"))
             continue
+        if m.group(2) == "90" and "-" in head:
+            unknown.append((f, "랜드마크 카드에는 90번 캐릭터만의 컷이 없다(세계 그림 1 + 일상컷 10)"))
+            continue
         # 세계 몫 — 세계 그림과, 그 그림을 참고 그림으로 붙인 일상컷
         e = img.setdefault(city, {}).setdefault("byStyle", {}).setdefault(style, {}).setdefault("byForm", {}).setdefault(form, {})
         if m.group(2) is None:

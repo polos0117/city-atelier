@@ -34,8 +34,8 @@ import {h,render} from 'https://esm.sh/preact@10.24.3';
 import {useState,useEffect,useRef,useMemo} from 'https://esm.sh/preact@10.24.3/hooks';
 import {Toolbox} from './lib/toolbox.js?v=7';
 import {mountGlobe} from './lib/globe.js?v=1';
-import {CityStage,CardView,ready,latlon,known} from './lib/city-view.js?v=4';
-import {DexView,worldFiles,freshFiles} from './lib/dex-view.js?v=4';
+import {CityStage,CardView,ready,latlon,known,landmarksOf} from './lib/city-view.js?v=4';
+import {DexView,worldFiles,freshFiles} from './lib/dex-view.js?v=5';
 const W = window.W, A = window.AtelierAppearance, R = window.AtelierWalk, GM = window.GlobeMath, IMG = window.AtelierImg;
 const here = () => R.readRoute(location.search);
 const remember = () => { try { sessionStorage.setItem('city_walk_last', location.search); } catch (e) {} };
@@ -80,8 +80,9 @@ function Theater() {
   /* 그 도시를 열어 보면(도시 무대 · 한 장) 그 도시의 새 그림이 꺼진다 */
   useEffect(() => {
     if (!data || !route.city) return;
-    const e = data.img[route.city];
-    if (IMG.markSeen(data.d.vocab.worlds.flatMap(w => worldFiles(e, w)), TODAY)) setSeen(n => n + 1);
+    const c = data.d.cities.find(x => x.key === route.city);
+    const keys = [route.city, ...(c ? landmarksOf(c).map(m => m.key) : [])];   /* 랜드마크 카드 · 줄도 함께 */
+    if (IMG.markSeen(keys.flatMap(k => data.d.vocab.worlds.flatMap(w => worldFiles(data.img[k], w))), TODAY)) setSeen(n => n + 1);
   }, [data, route.city]);
   const fresh = data ? freshFiles(data, TODAY) : [];
   const seenAll = () => { if (IMG.markSeen(fresh, TODAY)) setSeen(n => n + 1); };
