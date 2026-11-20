@@ -208,11 +208,12 @@ function cardOf(key) {
   const c = P.card(D, key);
   if (!c) throw new Error('카드가 없다: ' + key + ' (설계표 data/city-design.json 의 도시 열쇠)');
   const h = P.holdOf(c);
-  return { key, c, g: { key, signature: h ? [h] : [], signature_hold: h ? [0] : [], land: key }, worlds: P.worldsOf(D, key) };
+  const city = c.parent || key;   /* 랜드마크 카드는 생활 장면 · 계절 · 날씨 · 땅이 부모 도시 것 */
+  return { key, city, c, g: { key, signature: h ? [h] : [], signature_hold: h ? [0] : [], land: city }, worlds: P.worldsOf(D, key) };
 }
 /* 생활 장면 — 트리 장소 열쇠 → 장면 줄 · 그 도시의 장면 장소들 · 장면이 받는 의상 계열 · 시간 · 계절 · 날씨 */
 const lifeOf = place => P.lifeScene(LIFE, place);
-const lifePlaces = card => (((LIFE.cities || {})[card.key] || {}).scenes || []).map(s => P.lifeKey(card.key, s.key));
+const lifePlaces = card => (((LIFE.cities || {})[card.city] || {}).scenes || []).map(s => P.lifeKey(card.city, s.key));
 const SEASONS = k => (LIFE.seasons || {})[k] || [], WEATHERS = k => (LIFE.weather || {})[k] || [], TIMES = LIFE.times || [];
 /* 그 세계의 금지 낱말(설계표 banned_en)이 든 옷 · 그 세계에서 어색한 소품 동작(세계 소품 사전 not_uses) */
 const esc = x => x.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -399,10 +400,10 @@ function check(cuts, card, base = [], others = []) {
   for (const c of cuts) {
     if (!c.lifeMust) continue;
     const ls = lifeOf(c.place);
-    if (!ls || ls.city !== card.key) errs.push(`칸 ${c.n || '?'}: 생활 장면 필수 컷의 장소 ${c.place} 가 ${card.key} 생활 장면이 아니다`);
+    if (!ls || ls.city !== card.city) errs.push(`칸 ${c.n || '?'}: 생활 장면 필수 컷의 장소 ${c.place} 가 ${card.city} 생활 장면이 아니다`);
     if (requiredType(c) || isCosplay(c) || c.situ) errs.push(`칸 ${c.n || '?'}: 생활 장면 필수 컷은 노출 갈래 · 코스프레 · 상황 노출이 아닌 컷`);
   }
-  if (complete && !sAll.some(c => c.lifeMust)) errs.push(`생활 장면 필수 컷이 없다 — ${card.key} 생활 장면에서 한 장`);
+  if (complete && !sAll.some(c => c.lifeMust)) errs.push(`생활 장면 필수 컷이 없다 — ${card.city} 생활 장면에서 한 장`);
   /* 필수 — 게임 코스프레 한 장(원소 2026-11-15 에서 옮김) */
   over('게임 코스프레', c => isCosplay(c) && 'cosplay', 1);
   if (complete && !sAll.some(isCosplay)) errs.push('게임 코스프레 컷이 없다 — 필수');
@@ -448,18 +449,18 @@ function check(cuts, card, base = [], others = []) {
     if (!sAll.some(c => NEAR.includes(c.frame))) errs.push('가까운 컷(가슴 위·클로즈업)이 없다');
   }
   /* 장소 — 그 도시의 생활 장면 또는 일반 장소(버전1 트리 장소 · 그 세계 금지 낱말 없음), 시간 · 계절 · 날씨는 생활 장면표(생활 장면은 받는 것만, 일반 장소는 장소 특징) */
-  const world = card.world || '', noUse = NOT_USES(world), seasons = SEASONS(card.key), weathers = WEATHERS(card.key);
+  const world = card.world || '', noUse = NOT_USES(world), seasons = SEASONS(card.city), weathers = WEATHERS(card.city);
   for (const c of sCuts) {
     const ls = lifeOf(c.place), pr = placeRules(c.place), where = ls ? '장면 ' + ls.key : '장소 ' + c.place;
-    if (ls ? ls.city !== card.key : !GEN.has(c.place)) { errs.push(`칸 ${c.n || '?'}: 장소 ${c.place} 는 ${card.key} 생활 장면도 일반 장소(버전1 트리 장소)도 아니다`); continue; }
+    if (ls ? ls.city !== card.city : !GEN.has(c.place)) { errs.push(`칸 ${c.n || '?'}: 장소 ${c.place} 는 ${card.city} 생활 장면도 일반 장소(버전1 트리 장소)도 아니다`); continue; }
     if (!ls && !worldOk(world, (C2.place(T2, c.place) || {}).en)) errs.push(`칸 ${c.n || '?'}: 일반 장소 ${c.place} 의 글에 ${world} 금지 낱말`);
     if (ls && ls.outfits && !ls.outfits.includes(c.ofam)) errs.push(`칸 ${c.n || '?'}: 장면 ${ls.key} 에서 의상 계열 ${c.ofam} 은 안 고른다(장면표 outfits)`);
     if (!worldOk(world, outfitEn(c))) errs.push(`칸 ${c.n || '?'}: 옷 「${outfitEn(c)}」 에 ${world} 금지 낱말`);
     if (c.use && noUse.includes(c.use)) errs.push(`칸 ${c.n || '?'}: 소품 동작 ${c.use} 는 ${world} 에서 안 쓴다(세계 소품 사전 not_uses)`);
     if (c.time && !(TIMES.some(x => x.key === c.time) && (!pr.times || pr.times.includes(c.time)))) errs.push(`칸 ${c.n || '?'}: 시간대 ${c.time} 는 생활 장면표 times · ${where} 밖`);
-    if (c.season && !(seasons.some(x => x.key === c.season) && (!pr.seasons || pr.seasons.includes(c.season)))) errs.push(`칸 ${c.n || '?'}: 계절 ${c.season} 는 ${card.key} 표 · ${where} 밖`);
+    if (c.season && !(seasons.some(x => x.key === c.season) && (!pr.seasons || pr.seasons.includes(c.season)))) errs.push(`칸 ${c.n || '?'}: 계절 ${c.season} 는 ${card.city} 표 · ${where} 밖`);
     const wx = c.cityWeather && weathers.find(x => x.key === c.cityWeather);
-    if (c.cityWeather && !(wx && !pr.indoor && (!wx.seasons || wx.seasons.includes(c.season)) && (!wx.times || wx.times.includes(c.time)))) errs.push(`칸 ${c.n || '?'}: 날씨 ${c.cityWeather} 는 ${card.key} 표 · 그 계절 · 시간대 · 실외 밖`);
+    if (c.cityWeather && !(wx && !pr.indoor && (!wx.seasons || wx.seasons.includes(c.season)) && (!wx.times || wx.times.includes(c.time)))) errs.push(`칸 ${c.n || '?'}: 날씨 ${c.cityWeather} 는 ${card.city} 표 · 그 계절 · 시간대 · 실외 밖`);
     if (c.weather) errs.push(`칸 ${c.n || '?'}: 트리 날씨(weather)는 쓰지 않는다 — 생활 장면표 날씨(cityWeather)`);
   }
   for (const c of sCuts) {
@@ -627,7 +628,7 @@ function recentScenes(dir, n = RECENT_N) {
    장면 글은 하나, 의상 줄만 노출 단계(bold → moderate → low)로 바뀐다. 손 · 구도는 표의 자세 추천을 트리로 풀어 쓴다(팔 규칙 그대로). 내용이 없는 카드 · 세계는 건너뛴다 */
 const OWN = fs.existsSync(path.join(ROOT, 'data', 'casual-own.json')) ? JSON.parse(read('data/casual-own.json')) : { cards: {} };
 const OWN_N = OWN.number || 90, OWN_LEVELS = OWN.levels || ['bold', 'moderate', 'low'];
-const ownRow = (card, world) => (((OWN.cards || {})[card.key] || {}).worlds || {})[world] || null;
+const ownRow = (card, world) => card.c && card.c.tier === 'landmark' ? null : (((OWN.cards || {})[card.key] || {}).worlds || {})[world] || null;
 function ownCut(card, world, level = OWN_LEVELS[0], rr = Math.random) {
   const row = ownRow(card, world); if (!row) return null;
   if (!OWN_LEVELS.includes(level)) throw new Error('노출 단계는 ' + OWN_LEVELS.join(' · ') + ' — ' + level);
@@ -639,7 +640,7 @@ function ownCut(card, world, level = OWN_LEVELS[0], rr = Math.random) {
   sc = C2.repair(T2, C2.applyPreset(T2, sc, row.preset), g, l => l[0]);
   if (row.use) { const next = C2.set(T2, sc, 'use', row.use, g, l => l[0]); if (next.use !== row.use) throw new Error(`${card.key} ${world} 캐릭터만의 컷: 소품 동작 ${row.use} 가 ${row.preset} @ ${row.base} 에서 안 된다`); sc = next; }
   if (sc.posture !== (C2.preset(T2, row.preset) || {}).posture) throw new Error(`${card.key} ${world} 캐릭터만의 컷: ${row.preset} 의 자세가 ${row.base} 에서 안 된다`);
-  Object.assign(sc, C2.ambience(T2, sc, rr, { times: [], hairs: [] }), lifeOf(row.base) ? lifeAmbience({ place: row.base }, card.key, rr, {}) : {});
+  Object.assign(sc, C2.ambience(T2, sc, rr, { times: [], hairs: [] }), lifeOf(row.base) ? lifeAmbience({ place: row.base }, card.city, rr, {}) : {});
   delete sc.weather;
   for (const k of [...AMBIENT, 'season', 'cityWeather']) if (!sc[k]) delete sc[k];
   const body = by(tree2.body, sc.body), head = by(tree2.head, sc.head);
@@ -706,7 +707,7 @@ function plan(card, slots, old, { seed = Date.now(), usage = {}, others = [], re
     if (!old.some(c => c.situ) && plainAt.length && !sPool.length) continue;
     situate(cuts, sPool.length ? sPool[Math.floor(rs() * sPool.length)] : -1, old, others, rs);
     if (sPool.length && !cuts.some(c => c.situ)) continue;
-    ambient(cuts, old, rng((seed ^ mix ^ 0x7f4a7c15) >>> 0), card.key);
+    ambient(cuts, old, rng((seed ^ mix ^ 0x7f4a7c15) >>> 0), card.city);
     const free = makeFree(card.key, freeNums, freeKinds, cuts, old, others, recent, rng((seed ^ mix ^ 0x1b873593) >>> 0));
     if (check([...cuts, ...free], card, old, others).length) continue;
     const all = [...old, ...cuts, ...free];
@@ -766,16 +767,30 @@ function sceneUsage(dir, skip) {
   const out = EMPTY_USAGE();
   if (!dir || !fs.existsSync(dir)) return out;
   const add = (m, k) => { if (k) m[k] = (m[k] || 0) + 1; };
+  const tally = sc => {
+    const u = C2.use(T2, sc.use);
+    if (u && u.prop !== 'signature') add(out.prop, u.prop);
+    add(out.place, sc.place); add(out.item, sc.item); add(out.preset, sc.preset); add(out.posture, sc.posture); add(out.expr, sc.expr); add(out.ofam, sc.ofam);
+    if (sc.preset && sc.place) add(out.path, pathKey(sc.preset, sc.place));
+  };
+  const city = String(skip || '').split('-')[0];   /* 같은 도시 카드(<도시> · <도시>-*) — 안 그린 계획 파일도 센다 */
   for (const k of fs.readdirSync(dir)) {
     if (k === skip || !fs.statSync(path.join(dir, k)).isDirectory()) continue;
-    for (const f of fs.readdirSync(path.join(dir, k)).filter(x => /-casual\d+\.[a-z_]+-ui\.json$/.test(x))) {
+    const files = fs.readdirSync(path.join(dir, k)), drawn = new Set();
+    for (const f of files.filter(x => /-casual\d+\.[a-z_]+-ui\.json$/.test(x))) {
+      const m = REC_FILE.exec(f); if (m) drawn.add((m[1] || '') + '|' + Number(m[2]));
       let sc; try { sc = JSON.parse(fs.readFileSync(path.join(dir, k, f), 'utf8')).scene; } catch (e) { continue; }
-      if (!sc) continue;
-      const u = C2.use(T2, sc.use);
-      if (u && u.prop !== 'signature') add(out.prop, u.prop);
-      add(out.place, sc.place); add(out.item, sc.item); add(out.preset, sc.preset); add(out.posture, sc.posture); add(out.expr, sc.expr); add(out.ofam, sc.ofam);
-      if (sc.preset && sc.place) add(out.path, pathKey(sc.preset, sc.place));
+      if (sc) tally(sc);
     }
+    if (!city || k.split('-')[0] !== city) continue;
+    const planned = new Map();   /* 세계 · 번호마다 가장 나중(replan) 계획 한 칸 — 그린 번호는 기록이 센다 */
+    for (const f of files.filter(x => PLAN_FILE.test(x) && !PLAN_OLD.test(x))) {
+      let r; try { r = JSON.parse(fs.readFileSync(path.join(dir, k, f), 'utf8')); } catch (e) { continue; }
+      if (!Array.isArray(r.cuts)) continue;
+      const world = r.world || (/^([^.-]+)[.-]/.exec(f) || [])[1] || '', re = /replan/.test(f) ? 1 : 0;
+      for (const c of r.cuts) { const pk = world + '|' + cutNo(c), was = planned.get(pk); if (c && !c.sfree && (!was || re >= was.re)) planned.set(pk, { c, re }); }
+    }
+    for (const [pk, { c }] of planned) if (!drawn.has(pk)) tally(c);
   }
   return out;
 }

@@ -228,4 +228,31 @@ for (const w of ['fantasy', 'steampunk']) {
   }
   assert.equal(new Set(tk.worlds.map(w => C.ownRow(tk, w).preset)).size, 3, '도쿄 직업컷 자세가 서로 다르다');
 }
+/* 랜드마크 카드(해치) — 열 장 · 생활 장면은 서울 것 · 90번 없음 · 서울 기록의 장면은 뒤로 밀린다(덜 쓴 장면) */
+{
+  const HC = C.cardOf('seoul-haechi');
+  for (const w of HC.worlds) {
+    HC.world = w;
+    const res = C.plan(HC, TEN, [], { seed: 7 + HC.worlds.indexOf(w) });
+    assert.equal(res.cuts.length, 10, w + ' 해치 열 장');
+    assert(res.cuts.filter(c => c.lifeMust).every(c => C.lifeOf(c.place).city === 'seoul'), w + ' 생활 장면은 서울 것');
+    assert.equal(C.ownRow(HC, w), null, w + ' 90번 없음');
+  }
+  HC.world = 'fantasy';
+  const hits = (usage) => { let k = 0; for (let seed = 1; seed <= 12; seed++) k += C.plan(HC, TEN, [], { seed, usage }).cuts.filter(c => c.place === 'seoul_noraebang').length; return k; };
+  const base = hits({}), tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'lmu-'));
+  try {
+    const rec = (dir, name, scene) => { fs.mkdirSync(path.join(tmp, dir), { recursive: true }); fs.writeFileSync(path.join(tmp, dir, name), JSON.stringify(scene)); };
+    for (let i = 1; i <= 4; i++) rec('seoul', `fantasy-casual${i}.default-ui.json`, { scene: { place: 'seoul_noraebang' } });
+    rec('seoul-haechi', 'fantasy-casual-plan.json', { world: 'fantasy', cuts: [{ n: 5, place: 'seoul_noraebang' }, { n: 1, place: 'seoul_noraebang' }] });
+    const u = C.sceneUsage(tmp, 'seoul-haechi');
+    assert.equal(u.place.seoul_noraebang, 4, '자기 계획은 빼고 서울 기록 넷');
+    rec('seoul-haechi', 'x', {}); fs.rmSync(path.join(tmp, 'seoul-haechi'), { recursive: true });
+    rec('seoul-jongro', 'fantasy-casual-plan.json', { world: 'fantasy', cuts: [{ n: 1, place: 'seoul_noraebang' }, { n: 2, place: 'seoul_noraebang' }] });
+    rec('seoul-jongro', 'fantasy-casual1.default-ui.json', { scene: { place: 'seoul_noraebang' } });
+    assert.equal(C.sceneUsage(tmp, 'seoul-haechi').place.seoul_noraebang, 4 + 1 + 1, '그린 번호 계획은 안 세고 안 그린 계획은 센다');
+    assert(!C.sceneUsage(tmp, 'tokyo').place.seoul_noraebang === false, '다른 도시 사용 횟수에도 그린 기록은 센다');
+    assert(hits(C.sceneUsage(tmp, 'seoul-haechi')) <= base, '기록 많은 장면은 뒤로 밀린다');
+  } finally { fs.rmSync(tmp, { recursive: true, force: true }); }
+}
 console.log(`PASS 일상컷 묶음 계획기: 서울 ${n} 묶음(세 세계 × 씨앗 셋)이 열 장(필수 다섯 — 생활 장면 · 노출 갈래 셋 · 게임 코스프레, 보통 셋, 자유 설계 둘) · 묶음 규칙 · 상황 노출은 보통 컷 한 장 · 장소 겹침 0(생활 장면 ∪ 일반 장소) · 자세 겹침 0(세계끼리도) · 금지 장소 · 코스프레 게임 · 캐릭터 · 재단 · 시간 · 계절 · 날씨는 서울 표 안 · 장면 글 · 소품 · 옷의 결 · 금지 낱말 0, 직업컷 셋(자세 서로 다르게), 있는 세 장 위에 일곱 장, 같은 씨앗 같은 답, 틀린 칸, 코스프레 고르기, 도쿄 세 세계 열 장 · 직업컷`);
