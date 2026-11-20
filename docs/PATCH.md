@@ -7,6 +7,9 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-20 · gpt · 서울 스팀펑크 도감 설명 갱신
+- data/city-design.json — 대표컷 3번의 구리빛 긴 웨이브와 한강철교 트러스 여밈을 도감 설명에 반영.
+
 ## 2026-11-20 · claude · 서울 스팀펑크 — 시계탑을 성문 위에서 한강 증기선 나루로
 - 사용자 「스팀펑크에서 광화문 뒤에 시계탑 위치 옮겨야겠는데? 총독부 같잖아..」 → 「1번으로」. 세계 글(en · ko)의 「a great clocktower rising above the old stone city gate」 → 성문은 뒤에 큰 건물 없이 하늘과 산, 시계탑은 한강 증기선 나루(「a brass-faced clocktower over the steamboat pier」). 장면 airship 의 「the clocktower gate」 · 장면 clocktower 의 글(열쇠는 그린 그림 기록이 가리켜 그대로)도. 본보기 지시문도 맞췄다. 이미 그린 서울 스팀펑크 그림은 그대로.
 
