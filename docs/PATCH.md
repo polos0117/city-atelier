@@ -13,6 +13,17 @@
 ## 2026-11-21 · gpt · 뉴욕 판타지 대표컷 4번 도감 설명 갱신
 - data/city-design.json — 대표컷의 와인빛 긴 땋은 머리, 조개 부채 관, 현수교 아치 치맛자락을 도감에 반영.
 
+## 2026-11-20 · claude · 체형 — 마른 체형 일곱 자리를 굴곡형으로
+- 사용자 「도시공방은 마른 체형이 많은가」 → 24명 가운데 마르게 읽히는 체형이 12명이었다 → 「1번으로 하는데 마른체형도 일부 넣어줘. slender 같은거」.
+- data/city-design.json — 서울 판타지 · 성곽 스팀펑크 · 뉴욕 판타지 tall_statuesque → tall_curvy, 경복궁 판타지 · 한강다리 사이버펑크 · 도쿄 스팀펑크 petite → petite_curvy, 경복궁 사이버펑크 tall_statuesque → willowy_curvy(look.why 체형 말도 같이). slender 둘 · lanky 하나 · lean_toned 둘은 그대로 — 마른 쪽 5 · athletic 4 · 굴곡 15.
+- lib/look-spec.js · tools/port-look-spec.cjs — 도시 체형 표에 굴곡 다섯(tall_curvy · strong_curvy · petite_curvy · pear_curvy · willowy_curvy)을 원소 표에서 옮김. 표에 없으면 core 블록이 글을 못 덮어 지시문에 열쇠가 그대로 나갔다. prompt.html look-spec ?v=13.
+
+## 2026-11-20 · claude · 일상컷 고개 · 몸 좌우 — 몸 · 고개 · 시선을 따로, 묶음 안에 좌우를 나눔
+- 사용자 「도시공방 경복궁 사이버펑크야. 고치려면 공통으로 고쳐줘」. GPT 검토 — 일상컷 시선은 정해도 고개 좌우를 안 적어 모델이 참고 그림 각도를 그대로 따라 컷마다 같은 각도였다. 네 공방 같이 고침.
+- lib/casual-tree-v2.js — turns · turnText · spreadTurns 추가(scene.turn = 코끝이 향하는 화면 쪽 front · left · right). 몸 · 고개를 따로 적고 「각도는 이 줄을 따르고 붙인 그림을 따르지 않는다」 한 줄. 옆모습에서 두 손 쓰임이 같으면 turn 쪽을 본다.
+- 계획기 — 분위기 단계 끝에 spreadTurns 로 묶음 안 좌우를 고르게 나눔(자유 설계 칸 빼고). 조립부 COMPOSITION 줄이 turnText 를 씀, SCENE_V2 에 turn. ?v= 올림.
+- lib/casual-tree-v2.js — 도시 사본이 옛 판이라 casual-tree-v2 검사가 실패하던 것을 원소 · 삼국지 사본과 같게 맞춤.
+
 ## 2026-11-20 · claude · 뉴욕 설계 — 시안
 - 사용자 「city-atelier 에 뉴욕 설계해줘」. 도쿄 꼴을 따른 시안(시험 그림 전). 다른 도시는 그대로.
 - data/city-design.json — 뉴욕 en 「New York City」 → 「New York」(머리 줄이 「the city of New York City」 로 겹쳐서). 상징에 노란 택시 하나 더(근거 https://en.wikipedia.org/wiki/Taxis_of_New_York_City), card_ko.symbols · design_note(근거 주소들). 세 세계 — 판타지 「횃불 수호상의 새벽 항구 왕도」(항구의 빛을 다스리는 여군주, 짙은 갈색 피부 · 고금빛 곱슬 · 큰 키 · 일곱 빛살 티아라 · 녹청 비단 · 빅 애플 사과 홀), 스팀펑크 「가스등 브라운스톤 거리」(고가 증기 철로 · 놋쇠 케이블 돌탑 다리 · 돌탑 꼭대기 비행선 계류탑 — 엠파이어 스테이트 빌딩 첨탑이 원래 계류탑으로 지어진 사실, 이름은 지시문에 안 씀 · 흰 피부 · 테라코타 올림머리 · 곡선 몸 · 다리 케이블 재킷 · 횃불 모양 놋쇠 등), 사이버펑크 「두 세기 뒤 뉴욕」(1마일 아콜로지 · 하늘 택시 길 · 빛의 돔 아래 숲 협곡 · 올리브 피부 · 코발트 땋은머리 · 탄탄한 몸 · 아르데코 계단식 깃 · 택시 노랑 빛). 얼굴 칸 다섯이 세 세계끼리 모두 다르고 서울 · 도쿄 사람(랜드마크 포함)과도 셋 이상 다르다. 판타지 · 스팀펑크만 세계 palette(「taxi yellow」 가 지시문에 실려 현대로 끌어서).

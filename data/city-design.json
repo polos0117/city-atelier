@@ -302,12 +302,12 @@
               "expr": "proud"
             },
             "silhouette": {
-              "body": "tall_statuesque",
+              "body": "tall_curvy",
               "hair": "long_straight",
               "hair_color": "navy",
               "bangs": "parted"
             },
-            "why": "왕도의 여왕 — 세로로 긴 사람. 키 큰 체형(tall_statuesque) · 허리까지 곧게 내린 긴 머리 · 바닥에 끌리는 망토 · 높은 왕관으로 실루엣이 위아래로 길게 선 삼각형. 머리색은 단청의 짙은 청(navy, 검정에 가까운 남빛), 눈은 궁궐 금빛(gold). 갸름한 얼굴 · 긴 홑꺼풀 눈 · 올라간 눈꼬리 · 가는 아치 눈썹 · 작은 활 입술로 단정하고 위엄 있게(regal · proud), 30대 초반, 밝은 피부, 윤기 나는 맨 입술. 다른 두 세계와 머리색 · 체형 · 얼굴형 · 헤어스타일이 다 다르다."
+            "why": "왕도의 여왕 — 세로로 긴 사람. 키 크고 굴곡 있는 체형(tall_curvy) · 허리까지 곧게 내린 긴 머리 · 바닥에 끌리는 망토 · 높은 왕관으로 실루엣이 위아래로 길게 선 삼각형. 머리색은 단청의 짙은 청(navy, 검정에 가까운 남빛), 눈은 궁궐 금빛(gold). 갸름한 얼굴 · 긴 홑꺼풀 눈 · 올라간 눈꼬리 · 가는 아치 눈썹 · 작은 활 입술로 단정하고 위엄 있게(regal · proud), 30대 초반, 밝은 피부, 윤기 나는 맨 입술. 다른 두 세계와 머리색 · 체형 · 얼굴형 · 헤어스타일이 다 다르다."
           },
           "hold": {
             "en": "a small moonstone seal topped with a carved silver haechi guardian beast"
@@ -694,12 +694,12 @@
                   "expr": "gentle"
                 },
                 "silhouette": {
-                  "body": "petite",
+                  "body": "petite_curvy",
                   "hair": "updo_bun",
                   "hair_color": "violet",
                   "bangs": "wispy"
                 },
-                "why": "달빛 궁궐에서 춤추는 궁중 무희 — 서울 판타지의 곧은 남빛 여왕 · 갈기 머리 해치 신수와 달리 작고 둥글고 부드러운 사람. 작은 몸(petite) · 단정히 올린 보랏빛 쪽머리(updo_bun · violet) · 비치듯 가는 앞머리, 눈은 연보라(lilac). 둥근 얼굴 · 처진 부드러운 눈 · 둥근 눈썹 · 작은 코 · 도톰한 하트 입술, 도자기 피부에 발그레한 볼, 20대 초반의 우아한 인상에 다정한 표정."
+                "why": "달빛 궁궐에서 춤추는 궁중 무희 — 서울 판타지의 곧은 남빛 여왕 · 갈기 머리 해치 신수와 달리 작고 둥글고 부드러운 사람. 작고 굴곡 있는 몸(petite_curvy) · 단정히 올린 보랏빛 쪽머리(updo_bun · violet) · 비치듯 가는 앞머리, 눈은 연보라(lilac). 둥근 얼굴 · 처진 부드러운 눈 · 둥근 눈썹 · 작은 코 · 도톰한 하트 입술, 도자기 피부에 발그레한 볼, 20대 초반의 우아한 인상에 다정한 표정."
               },
               "hold": {
                 "en": "a pair of folding fans"
@@ -808,12 +808,12 @@
                   "expr": "calm"
                 },
                 "silhouette": {
-                  "body": "tall_statuesque",
+                  "body": "willowy_curvy",
                   "hair": "long_straight",
                   "hair_color": "ice_white",
                   "bangs": "parted"
                 },
-                "why": "유리 돔 속 마지막 궁궐 관리자 — 서울 사이버펑크의 날 선 시안 단발 시민 · 부드러운 긴 웨이브 플라즈마 블루 해치 AI와 달리 곧고 긴 선을 가진 쓸쓸한 사람. 키 큰 조각 같은 체형(tall_statuesque) · 허리까지 곧게 떨어지는 얼음 흰색 긴 생머리(long_straight · ice_white) · 가운데 가르마, 눈은 은회색. 긴 얼굴 · 홑꺼풀 긴 눈 · 굵고 곧은 눈썹 · 곧고 좁은 코 · 작은 활 입술, 따뜻한 베이지 피부에 맨 얼굴, 30대 초반의 쓸쓸한 인상."
+                "why": "유리 돔 속 마지막 궁궐 관리자 — 서울 사이버펑크의 날 선 시안 단발 시민 · 부드러운 긴 웨이브 플라즈마 블루 해치 AI와 달리 곧고 긴 선을 가진 쓸쓸한 사람. 팔다리가 길고 부드러운 곡선 체형(willowy_curvy) · 허리까지 곧게 떨어지는 얼음 흰색 긴 생머리(long_straight · ice_white) · 가운데 가르마, 눈은 은회색. 긴 얼굴 · 홑꺼풀 긴 눈 · 굵고 곧은 눈썹 · 곧고 좁은 코 · 작은 활 입술, 따뜻한 베이지 피부에 맨 얼굴, 30대 초반의 쓸쓸한 인상."
               },
               "hold": {
                 "en": "a holographic roof tile showing the palace's past"
@@ -1168,12 +1168,12 @@
                   "expr": "calm"
                 },
                 "silhouette": {
-                  "body": "petite",
+                  "body": "petite_curvy",
                   "hair": "pixie_cut",
                   "hair_color": "lemon_yellow",
                   "bangs": "choppy"
                 },
-                "why": "자기부상 아치의 궤도 관제사 — 서울 사이버펑크의 시안 단발 시민 · 플라즈마 블루 해치 AI · 얼음 흰색 궁궐 관리자 · 로즈골드 조종사와 달리 작고 단단한 사람. 작은 체형(petite) · 짧게 친 레몬 옐로(pixie_cut · lemon_yellow) 머리 · 들쭉날쭉한 앞머리, 눈은 양극산화 보라(anodized_violet). 각진 듯 부드러운 얼굴 · 깊은 눈매 · 날 선 눈썹 · 작은 단추코 · 넓고 도톰한 입술, 그을린 피부에 스모키 화장, 20대 중반의 시크한 인상."
+                "why": "자기부상 아치의 궤도 관제사 — 서울 사이버펑크의 시안 단발 시민 · 플라즈마 블루 해치 AI · 얼음 흰색 궁궐 관리자 · 로즈골드 조종사와 달리 작고 단단한 사람. 작고 굴곡 있는 체형(petite_curvy) · 짧게 친 레몬 옐로(pixie_cut · lemon_yellow) 머리 · 들쭉날쭉한 앞머리, 눈은 양극산화 보라(anodized_violet). 각진 듯 부드러운 얼굴 · 깊은 눈매 · 날 선 눈썹 · 작은 단추코 · 넓고 도톰한 입술, 그을린 피부에 스모키 화장, 20대 중반의 시크한 인상."
               },
               "hold": {
                 "en": "a holographic timetable ring"
@@ -1291,12 +1291,12 @@
                   "expr": "calm"
                 },
                 "silhouette": {
-                  "body": "tall_statuesque",
+                  "body": "tall_curvy",
                   "hair": "low_ponytail",
                   "hair_color": "bronze",
                   "bangs": "parted"
                 },
-                "why": "성벽 위 가스등 문지기 — 서울 스팀펑크의 구리빛 항해사 · 크림빛 안주인 · 재회색 전파 등대지기 · 테라코타 기관사와 달리 키 크고 차분한 사람. 키 큰 조각 같은 체형(tall_statuesque) · 목덜미에서 낮게 묶은 청동빛 말총머리(low_ponytail · bronze) · 가운데 가르마, 눈은 은회색. 하트형 얼굴 · 홑꺼풀 긴 눈 · 둥근 눈썹 · 매부리코 · 도톰한 하트 입술, 따뜻한 베이지 피부에 눈 밑 점, 20대 후반의 우아한 인상."
+                "why": "성벽 위 가스등 문지기 — 서울 스팀펑크의 구리빛 항해사 · 크림빛 안주인 · 재회색 전파 등대지기 · 테라코타 기관사와 달리 키 크고 차분한 사람. 키 크고 굴곡 있는 체형(tall_curvy) · 목덜미에서 낮게 묶은 청동빛 말총머리(low_ponytail · bronze) · 가운데 가르마, 눈은 은회색. 하트형 얼굴 · 홑꺼풀 긴 눈 · 둥근 눈썹 · 매부리코 · 도톰한 하트 입술, 따뜻한 베이지 피부에 눈 밑 점, 20대 후반의 우아한 인상."
               },
               "hold": {
                 "en": "a large ornate brass gate key"
@@ -1524,12 +1524,12 @@
               "expr": "soft_smile"
             },
             "silhouette": {
-              "body": "petite",
+              "body": "petite_curvy",
               "hair": "half_up",
               "hair_color": "cedar",
               "bangs": "curtain"
             },
-            "why": "다이쇼 「하이칼라」 가스등 점등원 — 작고 동그란 사람. 작은 몸(petite) · 반만 올려 묶은 긴 머리(half_up)에 큰 비단 리본 · 발목까지 오는 하카마풍 긴 주름 치마로 실루엣이 아래로 퍼지는 종 모양. 머리색은 삼나무빛 갈색(cedar — 밤색에 가장 가까운 열쇠), 눈은 헤이즐. 갸름한 얼굴 · 처진 순한 눈 · 둥근 눈썹 · 곧은 코 · 작은 활 입술, 밝은 피부, 눈 밑 점, 20대 중반, 밝은 인상(cheerful)에 부드러운 미소. 판타지(하트형 · 은백 히메컷 · 가는 몸) · 사이버펑크(둥근 얼굴 · 노을분홍 울프컷 · 글래머)와 얼굴 칸 다섯 · 머리 · 체형이 다 다르다."
+            "why": "다이쇼 「하이칼라」 가스등 점등원 — 작고 동그란 사람. 작고 굴곡 있는 몸(petite_curvy) · 반만 올려 묶은 긴 머리(half_up)에 큰 비단 리본 · 발목까지 오는 하카마풍 긴 주름 치마로 실루엣이 아래로 퍼지는 종 모양. 머리색은 삼나무빛 갈색(cedar — 밤색에 가장 가까운 열쇠), 눈은 헤이즐. 갸름한 얼굴 · 처진 순한 눈 · 둥근 눈썹 · 곧은 코 · 작은 활 입술, 밝은 피부, 눈 밑 점, 20대 중반, 밝은 인상(cheerful)에 부드러운 미소. 판타지(하트형 · 은백 히메컷 · 가는 몸) · 사이버펑크(둥근 얼굴 · 노을분홍 울프컷 · 글래머)와 얼굴 칸 다섯 · 머리 · 체형이 다 다르다."
           },
           "hold": {
             "en": "a brass hand lantern with cherry blossoms cut into its glass panes"
@@ -1878,12 +1878,12 @@
               "expr": "calm"
             },
             "silhouette": {
-              "body": "tall_statuesque",
+              "body": "tall_curvy",
               "hair": "long_curly",
               "hair_color": "antique_gold",
               "bangs": "parted"
             },
-            "why": "항구의 빛을 다스리는 여군주 — 위로 길게 솟는 사람. 큰 키(tall_statuesque) · 가르마를 탄 고금빛 긴 나선 곱슬(long_curly · antique_gold) · 바닥에 끌리는 드레스와 한쪽 어깨에서 흘러내린 녹청 비단 자락으로 실루엣이 위아래로 길다. 갸름한 달걀형 얼굴 · 아몬드 눈 · 조금 낮게 자리한 짙은 눈썹 · 곧은 코 · 도톰한 입술, 에메랄드 눈(녹청 수호상의 메아리), 짙은 갈색 피부에 윤기 나는 입술, 20대 후반, 위엄 있는 인상(regal)에 고요한 표정(calm). 스팀펑크(하트형 · 테라코타 올림머리 · 곡선 몸 · 흰 피부) · 사이버펑크(다이아몬드형 · 코발트 땋은머리 · 탄탄한 몸 · 올리브 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다."
+            "why": "항구의 빛을 다스리는 여군주 — 위로 길게 솟는 사람. 큰 키에 굴곡 있는 몸(tall_curvy) · 가르마를 탄 고금빛 긴 나선 곱슬(long_curly · antique_gold) · 바닥에 끌리는 드레스와 한쪽 어깨에서 흘러내린 녹청 비단 자락으로 실루엣이 위아래로 길다. 갸름한 달걀형 얼굴 · 아몬드 눈 · 조금 낮게 자리한 짙은 눈썹 · 곧은 코 · 도톰한 입술, 에메랄드 눈(녹청 수호상의 메아리), 짙은 갈색 피부에 윤기 나는 입술, 20대 후반, 위엄 있는 인상(regal)에 고요한 표정(calm). 스팀펑크(하트형 · 테라코타 올림머리 · 곡선 몸 · 흰 피부) · 사이버펑크(다이아몬드형 · 코발트 땋은머리 · 탄탄한 몸 · 올리브 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다."
           },
           "hold": {
             "en": "a slender gold scepter topped with a glowing apple of amber-red crystal"
