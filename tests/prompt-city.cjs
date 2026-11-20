@@ -201,5 +201,10 @@ assert.equal(P.parentOf('seoul-haechi'), 'seoul');
 assert(P.card(D, 'seoul').tier === 'city' && P.card(D, 'seoul-nope') === null, '도시 카드 그대로 · 없는 랜드마크 null');
 for (const w of T.WORLDS.map(x => x.key)) { const t = PC.build({ design: D, styles: S, city: 'seoul-haechi', world: w, style: S['default'], kind: 'world' }).text;
   assert(/personification of Haechi, a landmark of the city of Seoul/.test(t) && !/haechi_/.test(t), w + ' 랜드마크 머리 줄'); }
+{ const s = LIFE.cities.seoul.scenes[0], sc = { place: P.lifeKey('seoul', s.key), time: (s.times || [])[0], season: (s.seasons || ['autumn'])[0] };
+  const r = cas('fantasy', sc, S['default'], 'seoul-haechi'), t = r.text;
+  assert(t.length > 1000 && !r.missing, '랜드마크 일상컷 — 서울 생활 장면이 지어진다');
+  assert(t.includes(s.worlds.fantasy.en), '랜드마크 일상컷 Place');
+  assert(t.includes('an ordinary day in Seoul'), '랜드마크 일상컷 — 부모 도시 줄'); }
 console.log('PASS 지시문 조립: ' + DESIGNED.map(c => c.ko).join(' · ') + ' × 세 세계 × 화풍 ' + LIVE.length + ' = ' + n + '장 — 표지 · motif · 머리색 · 금지 낱말(Avoid 줄 밖) · 이름 · mecha 던짐 · 설계 미정 ' + undesigned.length + '곳 · 노출 · 고른 칸; ' +
   '일상컷 ' + nc + '장(' + DESIGNED.map(c => c.ko + ' 생활 장면 ' + LIFE.cities[c.key].scenes.length).join(' · ') + ' × 세 세계 × 화풍) — 그 세계 장면 글 · 소품 · 옷의 결 · 금지 낱말(Avoid 단락 밖) · 휴대폰 사전 · lifeTree');

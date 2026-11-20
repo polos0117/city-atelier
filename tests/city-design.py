@@ -78,6 +78,7 @@ cases = {
     "옷 말투 빠짐": lambda d: d["vocab"]["wear"]["cyberpunk"].pop("moderate"),
     "일상컷 세계 결 빠짐": lambda d: d["vocab"]["casual_world"]["fantasy"].pop("guard_en"),
     "일상컷 세계 결에 금지 낱말": lambda d: d["vocab"]["casual_world"]["steampunk"].update(en="a gaslamp city of polished brass and glass, warm gaslight and soot on every sill"),
+    "미정 도시에 랜드마크": lambda d: city(d, "beijing").__setitem__("landmarks", [dict(lm(d), key="x")]),
     "랜드마크 열쇠에 -": lambda d: lm(d).__setitem__("key", "hae-chi"),
     "랜드마크 세계 둘뿐": lambda d: lm(d)["worlds"].pop("cyberpunk"),
     "랜드마크 판타지 글에 broadcast tower": lambda d: lm(d, "fantasy").__setitem__("en", lm(d, "fantasy")["en"] + ", beside a broadcast tower"),

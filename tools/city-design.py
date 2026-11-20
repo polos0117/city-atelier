@@ -201,6 +201,8 @@ def check(doc):
             continue
         if not ws:
             undecided += 1
+            if c.get("landmarks"):
+                errs.append(here + " 설계 미정(worlds {})인데 landmarks 가 있다 — 랜드마크는 설계된 도시에만")
             continue
         line = (c.get("card_ko") or {}).get("symbols")
         line = line.strip() if isinstance(line, str) else ""
