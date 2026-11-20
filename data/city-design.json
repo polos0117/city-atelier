@@ -154,7 +154,71 @@
         { "ko": "도쿄 스카이트리 — 방송 송신탑", "en": "Tokyo Skytree, a broadcasting tower", "src": "https://en.wikipedia.org/wiki/Tokyo_Skytree" },
         { "ko": "은행나무와 왕벚나무 — 도쿄도의 나무 · 꽃", "en": "the ginkgo tree and the Yoshino cherry, Tokyo's tree and flower", "src": "https://en.wikipedia.org/wiki/Tokyo" }
       ],
-      "worlds": {}
+      "design_note": "설계 상태: 시안(claude, 2026-11-20) — 시험 그림 전. 사용자 「한 도시씩 검토」 로 본 설계. 스팀펑크의 긴자 벽돌 거리 · 가스등은 메이지 때 실제로 있었던 것(1872년 대화재 뒤 조지안 양식 벽돌 거리, 가로수 · 가스등 — https://ko.wikipedia.org/wiki/긴자 · https://en.wikipedia.org/wiki/Ginza). 사이버펑크 세계 글 · 장면엔 비를 박지 않았다(비는 생활 장면표 날씨가 맡는다). 원소 설계표에는 설계 상태 칸이 없어 칸을 만들지 않고 여기 적는다.",
+      "card_ko": { "symbols": "도쿄 타워 · 센소지 가미나리몬 · 도쿄 스카이트리 · 은행나무" },
+      "worlds": {
+        "fantasy": {
+          "ko": "벚꽃 만의 달빛 왕도 도쿄 — 달빛 어린 큰 만에 계단처럼 솟은 섬들 위에 지은 서양 신화 세계의 왕도, 처마가 길게 휘어 오른 박공지붕의 흰 첨탑들, 섬마다 물가에 선 주홍 수정 아치 문, 테라스 사이로 은은히 빛나는 거대한 벚나무, 밤하늘에 뜬 은행잎 금빛 초롱, 가장 높은 섬 위엔 붉고 흰 격자로 솟은 주문의 첨탑",
+          "en": "a moonlit royal capital of a Western myth-world on terraced islands rising from a great silver bay: slender white spires under sweeping, upswept gabled roofs of pale silver tile, tall arch gates of carved vermilion crystal at the water's edge, colossal cherry trees glowing soft pink between the terraces, golden ginkgo-leaf lanterns floating on the night air, and a red-and-white lattice spell spire of enchanted crystal above the highest island under a deep indigo sky",
+          "scenes": [
+            { "key": "gate", "ko": "주홍 수정 문 아래 물가 계단", "en": "on the moonlit water stairs below a tall arch gate of carved vermilion crystal, glowing cherry petals drifting over the silver bay and the terraced island capital rising behind her" },
+            { "key": "grove", "ko": "섬 테라스의 거대한 벚나무 아래", "en": "on a white stone terrace under a colossal glowing cherry tree, golden ginkgo-leaf lanterns floating among its branches and the white spires of the capital below" },
+            { "key": "spire", "ko": "붉고 흰 격자 주문 첨탑의 발코니", "en": "on a high balcony of the red-and-white lattice spell spire, runes glowing along its crossed beams, the whole island capital and the moonlit bay spread far below" }
+          ],
+          "look": {
+            "face": { "face_shape": "heart", "eyes": "almond_wide", "brows": "arched_thin", "nose": "small_button", "lips": "heart_full", "eye_color": "rose", "age": "early_20s", "impression": "innocent", "skin_tone": "porcelain", "eye_size": "large", "eye_tilt": "level", "mark": "blush", "expr": "gentle" },
+            "silhouette": { "body": "slender", "hair": "hime_cut", "hair_color": "silver_white", "bangs": "straight" },
+            "why": "벚꽃 문을 지키는 무녀 기사 — 곧고 가는 사람. 가는 몸(slender) · 뺨 길이 옆머리를 일자로 자른 은백의 히메컷(hime_cut · silver_white) · 일자 앞머리 · 바닥까지 끌리는 긴 소매로 실루엣이 위에서 아래로 곧게 떨어진다. 하트형 얼굴 · 크고 넓은 아몬드 눈 · 가는 아치 눈썹 · 작은 코 · 도톰한 하트 입술, 장밋빛 눈(rose), 도자기 피부에 발그레한 볼, 20대 초반, 맑고 순한 인상(innocent)에 다정한 표정. 서울 세 사람(남빛 · 구리빛 · 청록)과도, 도쿄의 다른 두 세계와도 머리색 · 체형 · 얼굴형 · 헤어스타일이 다 다르다."
+          },
+          "hold": { "en": "a slender crystal wand topped with a tiny glowing red-and-white lattice spire" },
+          "motif": {
+            "ko": "길게 끌리는 기모노풍 소매를 단 벚꽃빛 · 달빛 은색 서양 드레스 — 금빛 은행잎을 수놓은 오비 같은 넓은 허리띠(뒤에 큰 매듭), 가미나리몬의 큰 초롱을 본뜬 작은 주홍 초롱 귀걸이, 치맛단에 흩날리는 벚꽃잎 자수",
+            "en": "a Western court gown of pale sakura-pink and moon-silver silk with long, trailing kimono-like sleeves lined in deep indigo; a wide obi-like sash embroidered with golden ginkgo leaves, tied in a large bow at the back; small vermilion earrings shaped like the great round paper lantern of the old temple's thunder gate; cherry petals embroidered down the hem"
+          },
+          "palette": { "en": "sakura pink, moon silver and deep indigo, with vermilion only on the gates", "hex": ["#F4B6C2", "#C9CED6", "#1F2A5C", "#E8452C"], "why": "판타지만 따로 — 도쿄 주홍 · 금이 겹치면 중국 궁궐로 읽혀서(서울 판타지 때 사용자 「판타지 쪽 색상이 너무 붉은색이라 중국 느낌」 을 처음부터 따름), 벚꽃 분홍 · 달빛 은 · 쪽빛(아이) 바탕에 주홍은 문(아치 문 · 초롱 귀걸이)에만." },
+          "card_ko": { "look": "은백 히메컷 · 가는 몸", "motif": "은행잎 오비 · 초롱 귀걸이" }
+        },
+        "steampunk": {
+          "ko": "가스등 긴자 벽돌 거리 — 황금빛 저녁 아래 붉은 벽돌 2~3층 상점가와 아케이드가 늘어선 가스등 거리, 벚나무 · 소나무 가로수, 네거리의 큰 시계탑, 놋쇠 궤도를 미끄러지는 말이 끄는 궤도 마차, 만 위로 떠가는 비행선과 언덕 위 붉고 흰 놋쇠 격자 계류탑",
+          "en": "a storybook gaslamp-fantasy Tokyo at golden dusk: an avenue of two- and three-storey red-brick shopfronts with arched arcades, gas lamps glowing between cherry and pine trees, a great clocktower at the crossing, a horse-drawn tram on gleaming brass rails, airships over the shining bay docking at a slender red-and-white brass lattice mooring mast on the hill, soft white steam in the warm light",
+          "scenes": [
+            { "key": "clocktower", "ko": "시계탑 네거리의 가스등 아래", "en": "at the gaslit crossing under the great clocktower, red-brick arcades on every corner and a horse-drawn tram passing on brass rails in soft white steam" },
+            { "key": "arcade", "ko": "붉은 벽돌 상점가 아케이드", "en": "under the arched brick arcade of the shopping avenue, gleaming shop windows of silk, lace and brass curios, gas lamps being lit one by one along the street" },
+            { "key": "mast", "ko": "놋쇠 격자 계류탑 정류장", "en": "on the brass landing deck of the red-and-white lattice mooring mast on the hill, an airship easing in to dock and the gaslit brick town and the shining bay spread below" }
+          ],
+          "look": {
+            "face": { "face_shape": "oval", "eyes": "droopy_soft", "brows": "soft_round", "nose": "straight_narrow", "lips": "small_bow", "eye_color": "hazel", "age": "mid_20s", "impression": "cheerful", "skin_tone": "fair", "eye_size": "medium", "eye_tilt": "down", "mark": "mole_eye", "expr": "soft_smile" },
+            "silhouette": { "body": "petite", "hair": "half_up", "hair_color": "cedar", "bangs": "curtain" },
+            "why": "다이쇼 「하이칼라」 가스등 점등원 — 작고 동그란 사람. 작은 몸(petite) · 반만 올려 묶은 긴 머리(half_up)에 큰 비단 리본 · 발목까지 오는 하카마풍 긴 주름 치마로 실루엣이 아래로 퍼지는 종 모양. 머리색은 삼나무빛 갈색(cedar — 밤색에 가장 가까운 열쇠), 눈은 헤이즐. 갸름한 얼굴 · 처진 순한 눈 · 둥근 눈썹 · 곧은 코 · 작은 활 입술, 밝은 피부, 눈 밑 점, 20대 중반, 밝은 인상(cheerful)에 부드러운 미소. 판타지(하트형 · 은백 히메컷 · 가는 몸) · 사이버펑크(둥근 얼굴 · 노을분홍 울프컷 · 글래머)와 얼굴 칸 다섯 · 머리 · 체형이 다 다르다."
+          },
+          "hold": { "en": "a brass hand lantern with cherry blossoms cut into its glass panes" },
+          "motif": {
+            "ko": "다이쇼 하이칼라 차림 — 하카마 같은 긴 주름 치마에 퍼프 소매 레이스 블라우스와 끈 매는 부츠, 몸에 맞는 짧은 재킷에 은행잎 모양 놋쇠 단추, 반묶음 머리의 큰 비단 리본",
+            "en": "a Taishō-era haikara look: a long pleated hakama-like skirt of deep plum silk, a white lace blouse with puffed sleeves under a short fitted jacket with ginkgo-leaf brass buttons, laced leather boots, and a large silk ribbon in her half-up hair"
+          },
+          "card_ko": { "look": "삼나무빛 반묶음 · 작은 몸", "motif": "하카마 치마 · 은행잎 단추" }
+        },
+        "cyberpunk": {
+          "ko": "두 세기 뒤 도쿄만 — 만 위에 떠 있는 아콜로지 섬들이 빛나는 자기부상 고리로 이어지고, 시부야 스크램블 교차로는 겹겹이 쌓인 빛의 광장으로 다시 지어졌으며, 하늘엔 거대한 도리이와 벚꽃 홀로그램, 강가의 옛 송신탑(스카이트리)은 구름까지 빛을 쏘아 올리는 빛기둥 탑이 되었다",
+          "en": "Tokyo Bay two centuries from now, a far-future megacity on the water: arcology islands of sleek curved towers floating on the bay, linked by glowing maglev rings that loop between them; the Shibuya scramble crossing rebuilt as a stack of circular plazas of light, crowds flowing across every level at once; giant holographic torii gates and drifting cherry-blossom holograms hanging in the sky; the tall broadcasting spire by the river reborn as a pillar-of-light tower shining straight up into the clouds; flying vehicles moving in quiet lanes of light under a clear night sky",
+          "scenes": [
+            { "key": "plaza", "ko": "시부야 스크램블 위 겹겹 빛의 광장", "en": "on the top tier of the stacked plazas of light rebuilt over the Shibuya scramble crossing, crowds streaming across the glowing levels below her and cherry-blossom holograms drifting overhead" },
+            { "key": "ring", "ko": "아콜로지 섬을 잇는 자기부상 고리", "en": "on a glass walkway along a glowing maglev ring looping between the floating arcology islands of the bay, silent trains of light streaking past and the islands mirrored in the dark water" },
+            { "key": "pillar", "ko": "빛기둥 탑의 하늘 데크", "en": "on an open sky-deck high on the pillar-of-light tower, its column of light rising past her into the clouds and a giant holographic torii floating over the bay below" }
+          ],
+          "look": {
+            "face": { "face_shape": "round", "eyes": "round_large", "brows": "straight_thick", "nose": "upturned", "lips": "full_wide", "eye_color": "mint", "age": "early_20s", "impression": "melancholic", "skin_tone": "warm_beige", "eye_size": "large", "eye_tilt": "down", "mark": "smoky", "expr": "wistful" },
+            "silhouette": { "body": "hourglass", "hair": "wolf_cut", "hair_color": "sunset_pink", "bangs": "choppy" },
+            "why": "겹겹 빛의 광장의 공중 무대 드론 연출가 — 사용자 「사이버펑크에서 사나운 인상대신 아련한 느낌에 몸매는 좀 글래머러스하게 가보자」. 글래머러스한 모래시계 몸(hourglass) · 층진 노을분홍 울프컷(wolf_cut · sunset_pink) · 들쭉날쭉한 앞머리 · 몸에 맞는 코트로 실루엣이 허리에서 잘록한 곡선. 둥근 얼굴 · 크고 둥근 눈 · 곧고 짙은 눈썹 · 살짝 들린 코 · 넓고 도톰한 입술, 박하빛 눈(mint), 따뜻한 베이지 피부에 스모키 눈화장, 20대 초반 — 사나움 대신 아련한 인상(melancholic)에 그리운 듯한 표정(wistful). 판타지 · 스팀펑크와 머리색 · 체형 · 얼굴형 · 헤어스타일이 다 다르다."
+          },
+          "hold": { "en": "a holographic folding fan whose ribs of light open into a spray of drifting digital cherry petals" },
+          "motif": {
+            "ko": "도쿄 타워의 격자처럼 옷 위를 달리는 빛 줄 — 붉고 흰 빛의 엇갈린 격자 무늬가 몸에 맞는 코트와 보디슈트를 타고 흐르고, 디지털 벚꽃잎이 그녀 둘레로 흩날리다 빛으로 녹는다",
+            "en": "light strips running over her fitted coat and bodysuit in the crisscross pattern of the city's old red-and-white lattice tower, glowing vermilion and white, with digital cherry petals drifting around her and dissolving into light"
+          },
+          "card_ko": { "look": "노을분홍 울프컷 · 글래머", "motif": "격자 빛줄 · 홀로그램 부채" }
+        }
+      }
     },
     {
       "key": "beijing",

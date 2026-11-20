@@ -212,4 +212,19 @@ for (const w of ['fantasy', 'steampunk']) {
     }
   }
 }
-console.log(`PASS 일상컷 묶음 계획기: 서울 ${n} 묶음(세 세계 × 씨앗 셋)이 열 장(필수 다섯 — 생활 장면 · 노출 갈래 셋 · 게임 코스프레, 보통 셋, 자유 설계 둘) · 묶음 규칙 · 상황 노출은 보통 컷 한 장 · 장소 겹침 0(생활 장면 ∪ 일반 장소) · 자세 겹침 0(세계끼리도) · 금지 장소 · 코스프레 게임 · 캐릭터 · 재단 · 시간 · 계절 · 날씨는 서울 표 안 · 장면 글 · 소품 · 옷의 결 · 금지 낱말 0, 직업컷 셋(자세 서로 다르게), 있는 세 장 위에 일곱 장, 같은 씨앗 같은 답, 틀린 칸, 코스프레 고르기`);
+/* 도쿄(2026-11-20 설계) — 세 세계가 열 장 · 묶음 규칙 · 생활 장면 필수 컷은 도쿄 장면, 직업컷 세 세계 자세가 서로 다르다 */
+{
+  const tk = C.cardOf('tokyo'), planned = [];
+  assert.deepEqual(tk.worlds, ['fantasy', 'steampunk', 'cyberpunk'], '도쿄 세 세계');
+  for (const w of tk.worlds) {
+    tk.world = w;
+    const res = C.plan(tk, TEN, [], { seed: 7 + tk.worlds.indexOf(w), others: planned });
+    assert.equal(res.cuts.length, 10, 'tokyo ' + w + ' 열 장');
+    assert.deepEqual(C.check(res.cuts, tk, [], planned), [], 'tokyo ' + w + ' 묶음 규칙');
+    const lm = res.cuts.find(c => c.lifeMust);
+    assert(lm && C.lifeOf(lm.place).city === 'tokyo', 'tokyo ' + w + ' 생활 장면 필수 컷은 도쿄 장면');
+    planned.push(...res.cuts);
+  }
+  assert.equal(new Set(tk.worlds.map(w => C.ownRow(tk, w).preset)).size, 3, '도쿄 직업컷 자세가 서로 다르다');
+}
+console.log(`PASS 일상컷 묶음 계획기: 서울 ${n} 묶음(세 세계 × 씨앗 셋)이 열 장(필수 다섯 — 생활 장면 · 노출 갈래 셋 · 게임 코스프레, 보통 셋, 자유 설계 둘) · 묶음 규칙 · 상황 노출은 보통 컷 한 장 · 장소 겹침 0(생활 장면 ∪ 일반 장소) · 자세 겹침 0(세계끼리도) · 금지 장소 · 코스프레 게임 · 캐릭터 · 재단 · 시간 · 계절 · 날씨는 서울 표 안 · 장면 글 · 소품 · 옷의 결 · 금지 낱말 0, 직업컷 셋(자세 서로 다르게), 있는 세 장 위에 일곱 장, 같은 씨앗 같은 답, 틀린 칸, 코스프레 고르기, 도쿄 세 세계 열 장 · 직업컷`);

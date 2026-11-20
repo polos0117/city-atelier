@@ -1,6 +1,6 @@
 /* 전체 도감 탭(Task 9 — DESIGN.md 5절, 계획 Task 9 Step 1 · Review Focus 4) — 폴드 덮개 344×882 터치 + PC 1280.
    여섯 판(세계 × 밝기): 도시 10줄 · 줄마다 도시 상징 색 띠(palette.hex[0] 맨 위) · 세계 세 칸 + 일상컷 수 · 그림 없는 칸은 「그림 없음」 + 생성기 길 ·
-   설계 전 도시(아홉)는 「설계 전」 · 위 머리(설계된 도시 · 세계 그림 · 일상컷 수) · 세계 고르개는 그 세계 칸만 강조 · 44px · 넘침 0 · 대비 4.5 · 콘솔 0 · 장식 영어 대문자 없음.
+   설계 전 도시(여덟 — 도쿄는 2026-11-20 설계)는 「설계 전」 · 위 머리(설계된 도시 · 세계 그림 · 일상컷 수) · 세계 고르개는 그 세계 칸만 강조 · 44px · 넘침 0 · 대비 4.5 · 콘솔 0 · 장식 영어 대문자 없음.
    줄 누르기: 설계 전이면 짧은 안내(주소 그대로), 서울이면 ?city=seoul 무대 → 돌아오면 도감.
    가짜 등록부(data/img.json 을 가로채기 — 실제 파일은 고치지 않는다): 서울 판타지 세계 그림 + 일상컷 둘(오늘) · 스팀펑크 그림(어제) · 사이버펑크 그림(사흘 전), ?today= 로 날짜를 정한다 —
    작은 그림 칸 · 일상컷 수 · 새 그림 점(오늘 · 어제만) · 그림 칸 → 한 장 · 줄을 열면 점 꺼짐 · 새로 고쳐도 꺼진 채 · 「새 그림 모두 확인」 · 날짜가 지나면 점 없음.
@@ -56,7 +56,7 @@ const newSeats = p => p.$$eval('.th-ticket .th-new', es => es.map(e => e.closest
           } else { assert(/is-pre/.test(s.cls) && s.tag === 'SPAN' && !s.href, at + ' 설계 전 칸 ' + r.city); assert.equal(s.text.replace(/\s/g, ''), '설계전'); }
         }
       }
-      assert.equal(READY.length, 1, '설계된 도시는 서울 하나(아홉은 설계 전)');
+      assert.deepEqual(READY, ['seoul', 'tokyo'], '설계된 도시는 서울 · 도쿄 둘(여덟은 설계 전 — 도쿄 2026-11-20)');
       assert.deepEqual(await p.$$eval('.th-stats b', bs => bs.map(b => b.textContent.replace(/\s/g, ''))), [READY.length + '/10', '0/30', '0'], at + ' 위 머리');
       assert.equal(await p.locator('.th-new').count(), 1, at + ' 새 그림 점은 범례 하나뿐');
       assert.match(await p.getAttribute('.th-tk-cols span.is-cur', 'style'), new RegExp('--w-' + w + '\\)'), at + ' 고른 세계 머리 강조');
@@ -70,10 +70,10 @@ const newSeats = p => p.$$eval('.th-ticket .th-new', es => es.map(e => e.closest
 
     /* 줄 누르기 — 설계 전은 짧은 안내, 서울은 무대(돌아오면 도감) */
     { const o = await open('/index.html?tab=dex&w=fantasy'), p = o.page; await p.waitForSelector('.th-ticket');
-      await p.tap('.th-ticket[data-city="tokyo"] .th-seat[data-world="steampunk"]');
-      assert.match(await p.textContent('.th-ticket[data-city="tokyo"] .th-tk-note'), /도쿄.*설계 전/, '설계 전 줄 — 짧은 안내');
+      await p.tap('.th-ticket[data-city="beijing"] .th-seat[data-world="steampunk"]');
+      assert.match(await p.textContent('.th-ticket[data-city="beijing"] .th-tk-note'), /베이징.*설계 전/, '설계 전 줄 — 짧은 안내');
       assert.equal(await p.evaluate(() => location.search), '?tab=dex&w=fantasy', '설계 전 줄은 주소 그대로');
-      await p.tap('.th-ticket[data-city="tokyo"] .th-tk-name'); assert.equal(await p.locator('.th-tk-note').count(), 0, '다시 누르면 안내 닫힘');
+      await p.tap('.th-ticket[data-city="beijing"] .th-tk-name'); assert.equal(await p.locator('.th-tk-note').count(), 0, '다시 누르면 안내 닫힘');
       await p.tap('.th-ticket[data-city="seoul"] .th-count');
       await p.waitForSelector('.th-role'); assert.equal(await p.locator('.th-role').count(), 3, '서울 무대 세 칸');
       assert.equal(await p.evaluate(() => location.search), '?tab=dex&city=seoul&w=fantasy');
@@ -92,7 +92,7 @@ const newSeats = p => p.$$eval('.th-ticket .th-new', es => es.map(e => e.closest
       WORLDS.forEach((w, i) => { assert.equal(seats[i].tag, 'BUTTON', w + ' 그림 칸'); assert(seats[i].img.endsWith('/thumb/' + F(w)), w + ' 작은 그림 ' + seats[i].img); });
       assert.deepEqual(seats.map(s => s.n), ['2', '', ''], '세계별 일상컷 수');
       assert.equal(await p.textContent('.th-ticket[data-city="seoul"] .th-count b'), '2', '서울 일상컷 수');
-      assert.deepEqual(await p.$$eval('.th-stats b', bs => bs.map(b => b.textContent.replace(/\s/g, ''))), ['1/10', '3/30', '2'], '위 머리 — 그림 셋 · 일상컷 둘');
+      assert.deepEqual(await p.$$eval('.th-stats b', bs => bs.map(b => b.textContent.replace(/\s/g, ''))), [READY.length + '/10', '3/30', '2'], '위 머리 — 설계된 도시 · 그림 셋 · 일상컷 둘');
       assert.deepEqual(await newSeats(p), ['seoul:fantasy', 'seoul:steampunk'], '새 그림 점 — 오늘 · 어제만(사흘 전 사이버펑크는 아님)');
       assert.deepEqual(await smallTargets(p), [], '그림 칸 44px'); assert(await H.noOverflow(p), '그림 칸 넘침');
       for (const [txt, c] of await H.contrast(p, '.th-new, .th-seat-n, .th-count b')) assert(c >= 4.5, '새 점 대비 ' + c + ' — ' + txt);

@@ -1,5 +1,5 @@
 /* 지시문 조립(lib/prompt-city.js) — 도시 한 층 · 세 세계(계획 Task 3).
-   서울 × 세 세계 세계 그림(kind 'world')이 (a) 그 세계 표지(vocab.markers.<세계>.en) 셋 이상 (b) 서울 motif.en (c) 그 사람 머리색 낱말을 싣고,
+   설계된 도시(서울 · 도쿄 2026-11-20) × 세 세계 세계 그림(kind 'world')이 (a) 그 세계 표지(vocab.markers.<세계>.en) 셋 이상 (b) 그 도시 motif.en (c) 그 사람 머리색 낱말을 싣고,
    (d) 그 세계 banned_en 낱말이 하나도 없다 — 금지 줄(sections.negative, 칸 꼴 5칸의 「Avoid:」 한 줄)만 빼고 본다. 금지 낱말을 「no …」 로 적는 곳은 그 줄뿐이다
        (원소 조립기의 칸 꼴이 「No …」 금지를 5칸 Avoid 로 모으는 꼴을 따랐다 — 판타지 옷 말투의 「no machinery」 는 Avoid 로 간다).
    (e) 상표 · 실존 인물 이름(아래 작은 표)이 없다 (f) world 가 mecha(세 세계 밖)면 던진다 (g) 설계 미정 도시는 던지지 않고 { text: '', missing: ['worlds'] }.
@@ -15,7 +15,7 @@ const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 const word = (w, flags) => new RegExp('\\b' + esc(w) + '\\b', flags);
 
 /* 상표 · 실존 인물 이름 — 서울 상징 · 설계에서 새기 쉬운 것(남산 송신탑의 상표 이름, 대기업 · 가게, 왕 · 장군 · 가수). 대소문자 그대로 낱말 경계로 본다 */
-const NAMES = ['YTN', 'N Seoul Tower', 'Seoul Tower', 'Lotte', 'Samsung', 'Hyundai', 'Kia', 'LG', 'Starbucks', 'Coca-Cola', 'Nike', 'Adidas', 'Apple', 'Gucci', 'Chanel',
+const NAMES = ['YTN', 'N Seoul Tower', 'Seoul Tower', 'Tokyo Tower', 'Skytree', 'Lotte', 'Samsung', 'Hyundai', 'Kia', 'LG', 'Starbucks', 'Coca-Cola', 'Nike', 'Adidas', 'Apple', 'Gucci', 'Chanel',
   'Disney', 'Pokemon', 'Hello Kitty', 'BTS', 'BLACKPINK', 'Sejong', 'Yi Sun-sin', 'Taejo', 'Gojong', 'Heungseon'];
 
 /* 세계 사전 — 정확히 세 세계, 표와 설계표가 같다 */
@@ -27,14 +27,17 @@ assert(!S.undecided && S.default === 'kr_drawn_rim_dewy', '화풍 확정 — 기
 const LIVE = Object.keys(S.styles).filter(k => !S.styles[k].retired);
 assert(LIVE.includes(S.default), '기본 화풍이 살아 있다');
 const seoul = D.cities.find(c => c.key === 'seoul');
+/* 설계된 도시 — 서울(2026-11-19) · 도쿄(2026-11-20). 세계 그림 · 일상컷 단언은 설계된 도시 모두에 */
+const DESIGNED = D.cities.filter(c => Object.keys(c.worlds || {}).length);
+assert(DESIGNED.some(c => c.key === 'seoul') && DESIGNED.some(c => c.key === 'tokyo'), '서울 · 도쿄 설계됨');
 let n = 0;
-for (const style of LIVE) for (const w of D.vocab.worlds) {
-  const id = style + ' ' + w, r = PC.build({ design: D, styles: S, city: 'seoul', world: w, style, kind: 'world' }), t = r.text, sw = seoul.worlds[w], mk = D.vocab.markers[w];
+for (const city of DESIGNED) for (const style of LIVE) for (const w of D.vocab.worlds) {
+  const id = city.key + ' ' + style + ' ' + w, r = PC.build({ design: D, styles: S, city: city.key, world: w, style, kind: 'world' }), t = r.text, sw = city.worlds[w], mk = D.vocab.markers[w];
   assert(t.length > 2000 && !r.missing, id + ' 지어진다 ' + t.length);
-  assert.equal(t, P.build(D, S, 'seoul', w, { style }), id + ' PromptCity.build = AtelierPrompt.build(생성기가 부르는 것)');
+  assert.equal(t, P.build(D, S, city.key, w, { style }), id + ' PromptCity.build = AtelierPrompt.build(생성기가 부르는 것)');
   /* sections — 칸 꼴 이름, 화풍 미정 표시 */
   assert.equal(r.sections.style_undecided, false, id + ' style_undecided');
-  assert(t.includes('adult ' + seoul.people.en + ' woman —') && t.includes(T.WORLD_SHORT.beauty), id + ' 그 나라 사람 · 미형 줄');
+  assert(t.includes('adult ' + city.people.en + ' woman —') && t.includes(T.WORLD_SHORT.beauty), id + ' 그 나라 사람 · 미형 줄');
   if (P.worldSectionsOn(S, style)) {
     assert(same(Object.keys(r.sections), ['style_undecided', 'head', 's1', 's2', 's3', 's4', 's5', 'negative']), id + ' sections 열쇠 ' + Object.keys(r.sections));
     assert.equal([r.sections.head, r.sections.s1, r.sections.s2, r.sections.s3, r.sections.s4, r.sections.s5].join('\n\n'), t, id + ' sections 를 이으면 지시문');
@@ -83,7 +86,7 @@ for (const bad of ['mecha', 'modern', '', undefined]) {
 }
 /* (g) 설계 미정 도시 — 던지지 않고 비운다(mecha 는 먼저 던진다) */
 const undesigned = D.cities.filter(c => !Object.keys(c.worlds || {}).length);
-assert(undesigned.length === 9, '설계 미정 아홉');
+assert(undesigned.length === 8, '설계 미정 여덟(서울 · 도쿄 말고)');
 for (const c of undesigned) for (const w of D.vocab.worlds) {
   const r = PC.build({ design: D, styles: S, city: c.key, world: w });
   assert(r.text === '' && same(r.missing, ['worlds']), '(g) ' + c.key + ' ' + w);
@@ -99,20 +102,20 @@ const tree = J('data/casual-tree.json'), tree2 = J('data/casual-tree-v2.json'), 
 /* 세계마다의 명소 낱말 — 일상컷 세계 줄에 나오면 일곱 장 뒷배경이 다 같아진다(장소 줄이 말하면 괜찮다) */
 const LANDMARKS = { fantasy: ['great tree', 'world-tree', 'moon', 'palace', 'spire'], steampunk: ['airship', 'airships', 'clocktower', 'clock tower', 'docking tower', 'city gate', 'pleasure boat'],
   cyberpunk: ['space-elevator', 'space elevator', 'arcology', 'sky-bridge', 'maglev', 'transmission tower', 'glass dome', 'guardian beast', 'haechi'] };
-const cas = (w, scene, style) => PC.build({ design: D, styles: S, city: 'seoul', world: w, style, kind: 'casual', casual: { scene, tree, tree2, life: LIFE, props: PROPS } });
+const cas = (w, scene, style, city = 'seoul') => PC.build({ design: D, styles: S, city, world: w, style, kind: 'casual', casual: { scene, tree, tree2, life: LIFE, props: PROPS } });
 let nc = 0;
-for (const style of LIVE) for (const w of D.vocab.worlds) for (const s of LIFE.cities.seoul.scenes) {
-  const id = 'casual ' + style + ' ' + w + ' ' + s.key, sw = s.worlds[w], mk = D.vocab.markers[w];
-  const r = cas(w, { place: P.lifeKey('seoul', s.key), time: (s.times || [])[0], season: (s.seasons || ['autumn'])[0] }, style), t = r.text;
+for (const city of DESIGNED) for (const style of LIVE) for (const w of D.vocab.worlds) for (const s of LIFE.cities[city.key].scenes) {
+  const id = 'casual ' + city.key + ' ' + style + ' ' + w + ' ' + s.key, sw = s.worlds[w], mk = D.vocab.markers[w];
+  const r = cas(w, { place: P.lifeKey(city.key, s.key), time: (s.times || [])[0], season: (s.seasons || ['autumn'])[0] }, style, city.key), t = r.text;
   assert(t.length > 1000 && !r.missing, id + ' 지어진다');
-  assert.equal(t, P.buildCasual(D, S, 'seoul', { place: P.lifeKey('seoul', s.key), time: (s.times || [])[0], season: (s.seasons || ['autumn'])[0] }, { world: w, style, tree, tree2, life: LIFE, props: PROPS }), id + ' PromptCity = AtelierPrompt.buildCasual');
+  assert.equal(t, P.buildCasual(D, S, city.key, { place: P.lifeKey(city.key, s.key), time: (s.times || [])[0], season: (s.seasons || ['autumn'])[0] }, { world: w, style, tree, tree2, life: LIFE, props: PROPS }), id + ' PromptCity = AtelierPrompt.buildCasual');
   assert.equal([r.sections.head, r.sections.body, r.sections.negative].filter(Boolean).join('\n\n'), t, id + ' sections 를 이으면 지시문');
-  assert(t.includes('the same adult ' + seoul.people.en + ' woman') && t.includes(T.CASUAL.short.beauty), id + ' 일상컷 — 그 나라 사람 · 미형 줄');
+  assert(t.includes('the same adult ' + city.people.en + ' woman') && t.includes(T.CASUAL.short.beauty), id + ' 일상컷 — 그 나라 사람 · 미형 줄');
   assert(t.includes('\nPlace: ' + sw.en.replace(/\.$/, '') + '.\n'), id + ' 그 장면의 그 세계 글');
   for (const k of sw.props) assert(t.includes(PROPS.props[k].worlds[w].en), id + ' 소품 ' + k);
   /* 세계 줄 = 그 세계의 결(vocab.casual_world — 2026-11-19 「일부러 뒷배경은 다 나오게 만든거야?」), 다음 줄이 guard. 명소 낱말은 장소 줄이 말할 때만 */
   const cw = D.vocab.casual_world[w], wl = (t.match(/^World: .*$/m) || [''])[0], pl = (t.match(/^Place: .*$/m) || [''])[0];
-  assert(t.includes(PROPS.clothes[w].en) && wl.startsWith('World: an ordinary day in Seoul as her world knows it — ' + cw.en.replace('{city_en}', 'Seoul').replace(/\.$/, '')) && t.includes(wl + '\n' + cw.guard_en), id + ' 옷의 결 · 그 세계의 결 · guard');
+  assert(t.includes(PROPS.clothes[w].en) && wl.startsWith('World: an ordinary day in ' + city.en + ' as her world knows it — ' + cw.en.replace('{city_en}', city.en).replace(/\.$/, '')) && t.includes(wl + '\n' + cw.guard_en), id + ' 옷의 결 · 그 세계의 결 · guard');
   for (const lm of LANDMARKS[w]) assert(!word(lm, 'i').test(wl) || word(lm, 'i').test(pl), id + ' 세계 줄에 명소 「' + lm + '」');
   for (const o of D.vocab.worlds.filter(x => x !== w)) assert(!t.includes(sw.en === s.worlds[o].en ? '\u0000' : s.worlds[o].en), id + ' 다른 세계 글이 안 샌다');
   const body = r.sections.negative ? t.replace(r.sections.negative, '') : t;
@@ -130,7 +133,7 @@ for (const w of D.vocab.worlds) {
 }
 assert(/messenger crystal/.test(PROPS.props.phone.worlds.fantasy.en) && /telegraph/.test(PROPS.props.phone.worlds.steampunk.en) && /holographic/.test(PROPS.props.phone.worlds.cyberpunk.en), '휴대폰 사전');
 /* 같은 장면이 세 세계로 — 세 글이 다 다르다 */
-for (const s of LIFE.cities.seoul.scenes) assert.equal(new Set(D.vocab.worlds.map(w => s.worlds[w].en)).size, 3, s.key + ' 세 세계 글이 서로 다르다');
+for (const city of DESIGNED) for (const s of LIFE.cities[city.key].scenes) assert.equal(new Set(D.vocab.worlds.map(w => s.worlds[w].en)).size, 3, s.key + ' 세 세계 글이 서로 다르다');
 /* 생활 장면 → 트리 장소(lifeTree) — 받침은 base 것, 땅은 서울, 다른 도시 카드엔 안 뽑힌다 */
 {
   const t2 = P.lifeTree(tree2, tree, LIFE), s = LIFE.cities.seoul.scenes[0], k = P.lifeKey('seoul', s.key);
@@ -143,7 +146,7 @@ for (const s of LIFE.cities.seoul.scenes) assert.equal(new Set(D.vocab.worlds.ma
 }
 /* 세 세계 밖 · 설계 미정은 세계 그림과 같이 */
 assert.throws(() => cas('mecha', {}), /unknown world/);
-assert(same(PC.build({ design: D, styles: S, city: 'tokyo', world: 'fantasy', kind: 'casual', casual: { tree, tree2, life: LIFE, props: PROPS } }).missing, ['worlds']), '설계 미정 도시 일상컷');
+assert(same(PC.build({ design: D, styles: S, city: undesigned[0].key, world: 'fantasy', kind: 'casual', casual: { tree, tree2, life: LIFE, props: PROPS } }).missing, ['worlds']), '설계 미정 도시 일상컷');
 /* ══ 기본 화풍 kr_drawn_rim_dewy(2026-11-20 — 사용자 「기본화풍도 아까 테스트했던 화풍으로 바꿔줘. 마지막 기준」) ══
    서울 세 세계 시험(scratchpad style1/build.cjs · casual/swap3.py)을 조립기가 그대로 — 세계 그림: STYLE 칸 화풍 글 · 얼굴 비율 줄 = worldFace ·
    「Face — her own:」 다음 줄 = worldStyleAfter · 빛 줄 = worldLight · Avoid 에 삼국지 avoid 셋. 일상컷: Style 줄 = casual 글, 다음 줄 = casualStyleAfter. 실사 문구 없음 */
@@ -187,5 +190,5 @@ for (const w of D.vocab.worlds) {
   assert(f.includes('adult ' + seoul.people.en + ' woman') && f.includes('strikingly beautiful') && !f.includes('description below') && f.includes('Hair colour (fixed'), w + ' 임의 설계 주문 — 사람 · 미형 · 머리색');
   assert(ban.length ? f.includes('Keep out of this world (fixed): ' + ban.join(', ')) : !f.includes('Keep out of this world'), w + ' 임의 설계 주문 — 금지 낱말');
 }
-console.log('PASS 지시문 조립: 서울 × 세 세계 × 화풍 ' + LIVE.length + ' = ' + n + '장 — 표지 · motif · 머리색 · 금지 낱말(Avoid 줄 밖) · 이름 · mecha 던짐 · 설계 미정 ' + undesigned.length + '곳 · 노출 · 고른 칸; ' +
-  '일상컷 ' + nc + '장(서울 × 세 세계 × 생활 장면 ' + LIFE.cities.seoul.scenes.length + ' × 화풍) — 그 세계 장면 글 · 소품 · 옷의 결 · 금지 낱말(Avoid 단락 밖) · 휴대폰 사전 · lifeTree');
+console.log('PASS 지시문 조립: ' + DESIGNED.map(c => c.ko).join(' · ') + ' × 세 세계 × 화풍 ' + LIVE.length + ' = ' + n + '장 — 표지 · motif · 머리색 · 금지 낱말(Avoid 줄 밖) · 이름 · mecha 던짐 · 설계 미정 ' + undesigned.length + '곳 · 노출 · 고른 칸; ' +
+  '일상컷 ' + nc + '장(' + DESIGNED.map(c => c.ko + ' 생활 장면 ' + LIFE.cities[c.key].scenes.length).join(' · ') + ' × 세 세계 × 화풍) — 그 세계 장면 글 · 소품 · 옷의 결 · 금지 낱말(Avoid 단락 밖) · 휴대폰 사전 · lifeTree');

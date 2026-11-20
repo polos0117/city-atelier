@@ -59,6 +59,57 @@
      }
     }
    }
+  },
+  "tokyo": {
+   "root": {
+    "ko": "가미나리몬의 큰 초롱 · 도쿄 타워의 불빛 → 도시의 밤을 밝히는 사람 — 문의 초롱(판타지) · 메이지 긴자 벽돌 거리의 가스등(스팀펑크, https://ko.wikipedia.org/wiki/긴자) · 겹겹 빛의 광장 하늘 무대(사이버펑크). 2026-11-20 시안 — 시험 그림 전",
+    "from": "story"
+   },
+   "mode": "per_world",
+   "worlds": {
+    "fantasy": {
+     "job_ko": "벚꽃 문 초롱지기",
+     "base": "stage_festival",
+     "place": "the great vermilion crystal arch gate at the water stairs of her world's island capital at dusk — a huge round paper lantern hanging under the gate's beam, rows of smaller lanterns on carved posts, glowing cherry petals drifting over the moonlit bay",
+     "activity": "she is the keeper of the gate lanterns, holding up a freshly lit lantern to check its flame before hanging it under the great gate",
+     "preset": "light_check",
+     "use": "sig_raise",
+     "prop": "a round cherry-blossom paper lantern on a lacquered handle",
+     "outfit": {
+      "bold": "a lantern-keeper look fitted to her body — a short wrap top with wide open sleeves tied with a narrow sash, a short pleated skirt, bare legs, thong sandals and a little flint pouch at her hip",
+      "moderate": "a lantern-keeper look — a wrap top with wide sleeves and a sash, a knee-length pleated skirt, white split-toe socks and thong sandals",
+      "low": "a lantern-keeper look — a long-sleeved wrap coat over a high-collared top, an ankle-length pleated skirt, a wide sash and soft boots"
+     }
+    },
+    "steampunk": {
+     "job_ko": "긴자 가스등 점등원",
+     "base": "street_alley",
+     "place": "a gaslit red-brick avenue of her steam city at dusk — a row of tall cast-iron gas lamps with glass lanterns, arched brick arcades and glowing shop windows, a horse-drawn tram passing on brass rails in soft white steam",
+     "activity": "she is the lamplighter, striding along the avenue at dusk with her long brass pole upright in her hand, lighting the gas lamps one by one",
+     "preset": "stride_prop",
+     "use": "sig_hold",
+     "prop": "a long brass lamplighter's pole with a small flame hook at its tip",
+     "outfit": {
+      "bold": "a lamplighter look fitted to her body — a cropped brass-buttoned waistcoat over a lace-edged camisole, a short pleated skirt, a leather tool belt, striped stockings and laced boots",
+      "moderate": "a lamplighter look — a fitted brass-buttoned waistcoat over a blouse with rolled sleeves, a knee-length pleated skirt, a leather tool belt and laced boots",
+      "low": "a lamplighter look — a long brass-buttoned coat over a high-collared blouse, an ankle-length skirt, gloves, a peaked cap and laced boots"
+     }
+    },
+    "cyberpunk": {
+     "job_ko": "공중 무대 드론 연출가",
+     "base": "stage_open_air",
+     "place": "the control deck at the edge of the stacked plazas of light above the old scramble crossing of her far-future megacity at night — a floating ring of holographic cue panels, a swarm of tiny light drones hovering in formation over the crowd, giant cherry-blossom holograms in the sky",
+     "activity": "she is the aerial-stage drone director, sweeping her hands through the holographic cue panel to send the drone swarm blooming into a light show",
+     "preset": "stand_use",
+     "use": "sig_both",
+     "prop": "a holographic drone-cue panel of floating light",
+     "outfit": {
+      "bold": "a show-director look fitted to her body — a cropped glowing-seam jacket over a fitted bandeau top, a high-waisted short skirt, sheer light-patterned tights and platform boots",
+      "moderate": "a show-director look — a cropped glowing-seam jacket over a fitted top, a knee-length pleated skirt traced with light strips and platform boots",
+      "low": "a show-director look — a long fitted coat traced with light strips zipped high, slim trousers, gloves and platform boots"
+     }
+    }
+   }
   }
  }
 }

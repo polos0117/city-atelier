@@ -16,6 +16,13 @@
    { "key": "summer", "ko": "한여름", "en": "high summer — hot, humid air and strong sunlight", "src": "https://en.wikipedia.org/wiki/Seoul" },
    { "key": "autumn", "ko": "가을", "en": "autumn — cool, clear, dry air and turning leaves", "src": "https://en.wikipedia.org/wiki/Climate_of_Seoul" },
    { "key": "winter", "ko": "겨울", "en": "winter — cold, dry, frosty air, breath showing in the cold", "src": "https://en.wikipedia.org/wiki/Climate_of_Seoul" }
+  ],
+  "tokyo": [
+   { "key": "spring", "ko": "봄 벚꽃", "en": "spring — cherry blossoms in full bloom and petals drifting on the air", "src": "https://en.wikipedia.org/wiki/Sumida_Park" },
+   { "key": "tsuyu", "ko": "쓰유(장마)", "en": "the tsuyu rainy season of early summer — humid air and soft, steady rain under low grey skies", "src": "https://en.wikipedia.org/wiki/East_Asian_rainy_season" },
+   { "key": "summer", "ko": "한여름", "en": "high summer — hot, humid air and strong sunlight", "src": "https://en.wikipedia.org/wiki/Tokyo" },
+   { "key": "autumn", "ko": "가을 은행잎", "en": "autumn — clear, mild air and ginkgo trees turning bright golden yellow", "src": "https://en.wikipedia.org/wiki/Ginkgo_biloba" },
+   { "key": "winter", "ko": "겨울", "en": "winter — cool, dry, clear air under bright pale skies", "src": "https://en.wikipedia.org/wiki/Tokyo" }
   ]
  },
  "weather": {
@@ -26,6 +33,13 @@
    { "key": "yellow_dust", "ko": "황사", "en": "a yellow-dust day — the spring sky veiled in a pale ochre haze", "seasons": ["spring"], "src": "https://en.wikipedia.org/wiki/Climate_of_Seoul" },
    { "key": "fog", "ko": "가을 아침 안개", "en": "morning fog after a clear, cold night", "seasons": ["autumn"], "times": ["dawn", "commute_am"], "src": "https://en.wikipedia.org/wiki/Climate_of_Seoul" },
    { "key": "snowfall", "ko": "눈", "en": "light snow falling through the cold, dry air, frost on every edge", "seasons": ["winter"], "src": "https://en.wikipedia.org/wiki/Climate_of_Seoul" }
+  ],
+  "tokyo": [
+   { "key": "tsuyu_rain", "ko": "쓰유 비", "en": "a tsuyu rain — soft, steady warm rain and wet ground shining", "seasons": ["tsuyu"], "src": "https://en.wikipedia.org/wiki/East_Asian_rainy_season" },
+   { "key": "shower", "ko": "지나가는 비", "en": "a passing rain shower — wet streets shining and the air washed clean", "seasons": ["spring", "summer", "autumn"], "src": "https://en.wikipedia.org/wiki/Tokyo" },
+   { "key": "muggy", "ko": "후텁지근함", "en": "muggy heat — the air thick and damp, a haze over the distance", "seasons": ["tsuyu", "summer"], "src": "https://en.wikipedia.org/wiki/Tokyo" },
+   { "key": "typhoon_edge", "ko": "태풍 언저리", "en": "the edge of a passing typhoon — gusty wind and sweeping rain under fast-moving grey clouds", "seasons": ["summer", "autumn"], "src": "https://en.wikipedia.org/wiki/Tokyo" },
+   { "key": "light_snow", "ko": "드문 눈", "en": "a rare light snowfall — soft flakes drifting through the cold air", "seasons": ["winter"], "src": "https://en.wikipedia.org/wiki/Tokyo" }
   ]
  },
  "cities": {
@@ -436,6 +450,245 @@
       "fantasy": { "en": "the riverbank below a great stone bridge at night — enchanted water arching from its sides in rainbow light, couples on the grass and moonlight on the river", "props": ["mat", "cup", "lamp", "camera"] },
       "steampunk": { "en": "the embankment below the double-decker iron bridge at night — jets of water pumped from its sides lit by coloured lamps, strollers along the river walk", "props": ["umbrella", "cup", "lamp", "camera"] },
       "cyberpunk": { "en": "the riverbank below the bridge at night — a water-and-light show pouring from its sides in time with music, light-boats on the river and drones drawing patterns above", "props": ["phone", "drink_glass", "camera", "mat"] }
+     }
+    }
+   ]
+  },
+  "tokyo": {
+   "scenes": [
+    {
+     "key": "shibuya_scramble",
+     "ko": "시부야 스크램블 교차점 출퇴근길",
+     "src": ["https://ko.wikipedia.org/wiki/시부야_스크램블_교차점", "https://en.wikipedia.org/wiki/Shibuya_Crossing"],
+     "base": "street_bus_stop",
+     "times": ["commute_am", "commute_pm", "night_out"],
+     "outfits": ["everyday", "dongtan", "subculture", "retro", "workwear"],
+     "en": "a huge scramble crossing at rush hour, crowds crossing from every corner at once",
+     "worlds": {
+      "fantasy": { "en": "the great five-way crossing of the island capital's market square at rush hour — when the bells ring, crowds in cloaks and long-sleeved robes stream across the cobbles from every corner at once, glowing rune-signs on the white walls and cherry petals in the air", "props": ["bag", "book", "lamp", "ticket"] },
+      "steampunk": { "en": "the busy brick crossing of the gaslit commercial quarter at rush hour — a semaphore signal turns and crowds in bowler hats and parasols pour across from every corner at once between horse-drawn trams and steam omnibuses, painted shop signs above", "props": ["bag", "watch", "umbrella", "ticket"] },
+      "cyberpunk": { "en": "the scramble crossing rebuilt two centuries on at rush hour — crowds flowing from every corner at once across a glowing smart-paved square, giant holographic screens wrapping the curved towers and drones gliding overhead", "props": ["phone", "bag", "music", "ticket"] }
+     }
+    },
+    {
+     "key": "yamanote_rush",
+     "ko": "야마노테선 만원 전철",
+     "src": ["https://ko.wikipedia.org/wiki/야마노테선", "https://en.wikipedia.org/wiki/Yamanote_Line"],
+     "base": "subway_car",
+     "indoor": true,
+     "times": ["commute_am", "commute_pm"],
+     "outfits": ["everyday", "workwear", "dongtan", "subculture", "retro"],
+     "en": "a packed loop-line commuter train at rush hour",
+     "worlds": {
+      "fantasy": { "en": "a packed rune-driven loop carriage circling the island capital at rush hour — pale carved-wood benches, silk hand-loops swaying overhead, travelers in long-sleeved robes pressed shoulder to shoulder, cherry petals caught on the windows", "props": ["ticket", "book", "bag", "lamp"] },
+      "steampunk": { "en": "a packed green-painted loop-line railway carriage at rush hour — polished wooden benches, leather hand-straps hanging from a brass rail, etched-glass gas lamps, clerks with folded newspapers and students in hakama pressed shoulder to shoulder, white steam streaming past the windows", "props": ["ticket", "watch", "bag", "book"] },
+      "cyberpunk": { "en": "a packed driverless loop-line maglev at rush hour — a sleek curved cabin of smart glass, chrome grab rails, commuters lit by their wrist screens and the floating arcology islands sliding past the windows", "props": ["phone", "music", "ticket", "bag"] }
+     }
+    },
+    {
+     "key": "golden_gai",
+     "ko": "신주쿠 골든가이 좁은 술집 골목",
+     "src": ["https://ko.wikipedia.org/wiki/신주쿠_골든가이", "https://en.wikipedia.org/wiki/Shinjuku_Golden_Gai"],
+     "base": "night_bar",
+     "indoor": true,
+     "times": ["night_out", "past_midnight"],
+     "outfits": ["evening", "everyday", "retro", "subculture", "dongtan"],
+     "en": "a tiny bar of a few seats in a maze of narrow drinking alleys at night",
+     "worlds": {
+      "fantasy": { "en": "a tiny tavern of five stools in a maze of narrow lantern-lit lanes of the capital at night — a dark-wood counter, rows of glazed sake flasks on the shelves, a paper lantern over the door and a steep stair up to a loft", "props": ["drink_glass", "cup", "lamp", "money"] },
+      "steampunk": { "en": "a tiny gaslit bar of five stools in a maze of narrow brick alleys at night — a polished wooden counter, rows of glass bottles glowing amber on the shelves, a brass bell over the door and a steep stair up to a loft", "props": ["drink_glass", "lamp", "money", "watch"] },
+      "cyberpunk": { "en": "a tiny bar of five stools in a maze of narrow alleys kept deep under the towers at night — a lacquered counter, bottles glowing on smart-glass shelves, a floating holographic menu and a steep stair up to a loft", "props": ["drink_glass", "phone", "music", "money"] }
+     }
+    },
+    {
+     "key": "sento",
+     "ko": "동네 센토 대중목욕탕",
+     "src": ["https://ko.wikipedia.org/wiki/센토", "https://en.wikipedia.org/wiki/Sent%C5%8D"],
+     "base": "spa_sauna",
+     "indoor": true,
+     "times": ["commute_pm", "night_out", "past_midnight"],
+     "outfits": ["bath", "homewear"],
+     "en": "a neighbourhood public bathhouse with a big tiled bath and a painted mountain mural",
+     "worlds": {
+      "fantasy": { "en": "a neighbourhood bathhouse of the capital — a deep tiled pool of steaming water under a great painted mural of a snow-capped sacred mountain, wooden buckets and low stools along the wall, lantern light on the steam", "props": ["bowl", "cup", "key", "lamp"] },
+      "steampunk": { "en": "a neighbourhood public bathhouse — a big tiled bath steaming under a painted mural of a snow-capped mountain, brass taps along the wall, wooden buckets and low stools, a gas lamp glowing through the steam", "props": ["cup", "key", "watch", "lamp"] },
+      "cyberpunk": { "en": "a neighbourhood bathhouse rebuilt in the far future — a big tiled bath steaming under a living light-mural of a snow-capped mountain, sleek low stools, warm smart-glass panels and a wall of cold drinks by the door", "props": ["cup", "key", "music", "lamp"] }
+     }
+    },
+    {
+     "key": "konbini_night",
+     "ko": "한밤의 편의점 야식",
+     "src": ["https://ko.wikipedia.org/wiki/편의점", "https://en.wikipedia.org/wiki/Convenience_store#Japan"],
+     "base": "street_grocery",
+     "indoor": true,
+     "times": ["night_out", "past_midnight"],
+     "outfits": ["everyday", "subculture", "dongtan"],
+     "en": "a bright all-night convenience store with a late snack",
+     "worlds": {
+      "fantasy": { "en": "the all-night provisions shop of the capital, lit warm by glowing glass orbs — shelves of rice parcels wrapped in leaves, warm steamed buns in a lacquered box, bottled teas and a sleepy keeper at the counter", "props": ["bowl", "money", "shopping_bag", "lamp"] },
+      "steampunk": { "en": "an all-night corner provisions shop bright with gaslight — glass-fronted shelves of rice parcels, warm buns in a brass steamer on the counter, bottled lemonade and tea, a brass till ringing", "props": ["bowl", "money", "shopping_bag", "watch"] },
+      "cyberpunk": { "en": "an all-night convenience store of the far future — bright clean aisles of smart shelves, a drone delivery hatch, steaming buns in a glowing warmer and a checkout that reads her wrist", "props": ["bowl", "phone", "shopping_bag", "drink_glass"] }
+     }
+    },
+    {
+     "key": "tsukiji_outer",
+     "ko": "쓰키지 장외시장 아침 먹거리",
+     "src": ["https://ko.wikipedia.org/wiki/쓰키지_시장", "https://en.wikipedia.org/wiki/Tsukiji_fish_market"],
+     "base": "street_market",
+     "times": ["dawn", "commute_am", "midday"],
+     "outfits": ["everyday", "workwear", "dongtan", "retro"],
+     "en": "a busy morning outer market of seafood stalls and kitchen-knife shops",
+     "worlds": {
+      "fantasy": { "en": "the morning fish-market lanes of the island capital — stalls of glittering fish on crushed ice, grilled skewers of scallop and sweet omelette, a smith's shop of shining kitchen blades and fishmongers calling under cloth awnings", "props": ["skewer", "bowl", "money", "shopping_bag"] },
+      "steampunk": { "en": "the morning outer-market lanes by the harbour — stalls of fresh fish on crushed ice, sweet rolled omelette on sticks, a knife-maker's shop of gleaming blades behind glass, brass scales and fishmongers in oilcloth aprons", "props": ["skewer", "bowl", "money", "shopping_bag"] },
+      "cyberpunk": { "en": "the morning outer market kept under a glass canopy in the far future — stalls of fresh fish on glowing chilled counters, sweet omelette skewers, holographic price tags and delivery drones lifting crates overhead", "props": ["skewer", "bowl", "phone", "money"] }
+     }
+    },
+    {
+     "key": "nakamise",
+     "ko": "아사쿠사 나카미세 참뱃길 상점가",
+     "src": ["https://ko.wikipedia.org/wiki/센소지", "https://en.wikipedia.org/wiki/Sens%C5%8D-ji"],
+     "base": "street_market",
+     "times": ["commute_am", "midday", "commute_pm"],
+     "outfits": ["traditional", "everyday", "retro", "dongtan"],
+     "en": "a long temple approach lined with little souvenir and snack shops",
+     "worlds": {
+      "fantasy": { "en": "the long approach to the old temple of the capital, lined with little stalls under glowing paper lanterns — rice crackers toasting on grills, sweet bean cakes, folding fans and charms, the great vermilion gate with its giant lantern at the far end", "props": ["fan", "bowl", "money", "shopping_bag"] },
+      "steampunk": { "en": "the long temple approach lined with little shops under gas lamps and paper lanterns — rice crackers toasting on brass grills, sweet cakes in glass cases, folding fans and painted parasols, rickshaws waiting by the great gate with its giant lantern", "props": ["fan", "umbrella", "money", "shopping_bag"] },
+      "cyberpunk": { "en": "the long temple approach kept two centuries on — little wooden shops under paper lanterns lit from within by soft smart light, rice crackers toasting, holographic charms floating over the counters and the great gate's giant lantern glowing at the end", "props": ["fan", "phone", "money", "shopping_bag"] }
+     }
+    },
+    {
+     "key": "sumida_hanami",
+     "ko": "스미다 공원 벚꽃놀이",
+     "src": ["https://en.wikipedia.org/wiki/Sumida_Park", "https://ko.wikipedia.org/wiki/하나미", "https://en.wikipedia.org/wiki/Hanami"],
+     "base": "street_park",
+     "times": ["midday", "commute_pm", "night_out"],
+     "seasons": ["spring"],
+     "outfits": ["everyday", "traditional", "dongtan", "retro"],
+     "en": "a cherry-blossom viewing picnic on a riverside promenade",
+     "worlds": {
+      "fantasy": { "en": "a blossom-viewing picnic on the riverbank of the island capital — a woven mat under rows of glowing cherry trees, lacquered boxes of rice balls and sweets, petals drifting onto the silver river", "props": ["mat", "bowl", "cup", "lamp"] },
+      "steampunk": { "en": "a blossom-viewing picnic on the riverside promenade — a canvas groundsheet under rows of cherry trees in full bloom, a picnic hamper and ceramic flasks of tea, gas lamps along the embankment and a paddle steamer on the river", "props": ["mat", "bowl", "cup", "umbrella"] },
+      "cyberpunk": { "en": "a blossom-viewing picnic on the river promenade two centuries on — a glowing mat under real cherry trees in full bloom lit from below, boxed lunches, real petals and petal holograms drifting together over the river", "props": ["mat", "bowl", "drink_glass", "phone"] }
+     }
+    },
+    {
+     "key": "sumida_fireworks",
+     "ko": "스미다강 불꽃놀이 유카타 나들이",
+     "src": ["https://ko.wikipedia.org/wiki/스미다강_불꽃놀이_대회", "https://en.wikipedia.org/wiki/Sumidagawa_Fireworks_Festival", "https://ko.wikipedia.org/wiki/유카타"],
+     "base": "stage_fireworks",
+     "times": ["night_out"],
+     "seasons": ["summer"],
+     "outfits": ["traditional", "everyday", "evening", "dongtan"],
+     "en": "a summer fireworks night on the riverbank in yukata",
+     "worlds": {
+      "fantasy": { "en": "a summer night of spell-fire on the riverbank of the capital — crowds in light cotton robes along the embankment, paper fans and lanterns, great blossoms of enchanted fire bursting over the river", "props": ["fan", "lamp", "cup", "mat"] },
+      "steampunk": { "en": "a summer fireworks night on the gaslit riverbank — crowds in light cotton yukata along the embankment, paper fans, lantern boats on the river and great gold and red fireworks bursting over the iron bridges", "props": ["fan", "lamp", "cup", "camera"] },
+      "cyberpunk": { "en": "a summer fireworks night on the river promenade two centuries on — crowds in light cotton yukata, paper fans, real fireworks blooming between drone light shows over the river", "props": ["fan", "phone", "drink_glass", "camera"] }
+     }
+    },
+    {
+     "key": "hatsumode",
+     "ko": "메이지 신궁 하쓰모데 새해 참배",
+     "src": ["https://ko.wikipedia.org/wiki/하쓰모데", "https://en.wikipedia.org/wiki/Hatsum%C5%8Dde", "https://en.wikipedia.org/wiki/Meiji_Shrine"],
+     "base": "stage_festival",
+     "times": ["dawn", "commute_am", "midday"],
+     "seasons": ["winter"],
+     "outfits": ["traditional", "everyday", "dongtan"],
+     "en": "a crowded first shrine visit of the new year",
+     "worlds": {
+      "fantasy": { "en": "the first visit of the new year to the great forest shrine of the capital — a crowd in winter robes beneath a towering wooden gate, the gravel path between ancient evergreens, white paper streamers, coins tossed into an offering box and a cold sun through the trees", "props": ["money", "lamp", "ticket", "cup"] },
+      "steampunk": { "en": "the first visit of the new year to the great forest shrine — crowds in winter kimono and wool coats under a towering wooden gate, the gravel path between ancient trees, paper fortunes tied to the branches, coins tossed into the offering box", "props": ["money", "umbrella", "ticket", "cup"] },
+      "cyberpunk": { "en": "the first visit of the new year to the great forest shrine, kept unchanged among the far-future towers — crowds beneath the towering wooden gate, the gravel path between ancient trees, paper fortunes and a few softly glowing charms, the sky-towers faint beyond the forest", "props": ["money", "phone", "ticket", "cup"] }
+     }
+    },
+    {
+     "key": "maid_cafe",
+     "ko": "아키하바라 메이드 카페",
+     "src": ["https://ko.wikipedia.org/wiki/메이드_카페", "https://en.wikipedia.org/wiki/Maid_caf%C3%A9"],
+     "base": "street_cafe",
+     "indoor": true,
+     "times": ["midday", "commute_pm", "night_out"],
+     "outfits": ["roleplay", "costume", "subculture", "everyday"],
+     "en": "a themed café where the staff play maids serving their masters",
+     "worlds": {
+      "fantasy": { "en": "a themed tea house of the capital where the serving girls play the maids of a grand manor — lace curtains, a pastel parlour of little round tables, cream cakes on porcelain and tea poured with a curtsy", "props": ["cup", "bowl", "sign", "money"] },
+      "steampunk": { "en": "a themed parlour café where the waitresses play the maids of a grand gaslit mansion — lace curtains, a pastel parlour of little round tables, cream cakes on porcelain and tea poured from a silver pot with a curtsy", "props": ["cup", "bowl", "sign", "money"] },
+      "cyberpunk": { "en": "a themed maid café two centuries on — a pastel parlour of little round tables, holographic hearts drawn above the cakes, serving staff in frilled outfits and a small stage glowing for a song", "props": ["cup", "bowl", "sign", "phone"] }
+     }
+    },
+    {
+     "key": "takeshita",
+     "ko": "하라주쿠 다케시타 거리",
+     "src": ["https://ko.wikipedia.org/wiki/하라주쿠", "https://en.wikipedia.org/wiki/Harajuku"],
+     "base": "street_shop",
+     "times": ["midday", "commute_pm"],
+     "outfits": ["subculture", "retro", "dongtan", "everyday", "costume"],
+     "en": "a narrow youth-fashion shopping street of crepe stands and quirky boutiques",
+     "worlds": {
+      "fantasy": { "en": "a narrow, crowded lane of the capital's young — tiny boutiques of frilled dresses, ribboned charms and bright fabrics, a sweet-crepe stand rolling cream and berries, bunting strung overhead", "props": ["shopping_bag", "bowl", "bag", "money"] },
+      "steampunk": { "en": "a narrow, crowded shopping lane — tiny boutiques of frilled dresses, lace and ribbons in gleaming windows, a crepe cart with a brass griddle rolling cream and berries, bunting strung from gas lamp to gas lamp", "props": ["shopping_bag", "bowl", "bag", "money"] },
+      "cyberpunk": { "en": "a narrow, crowded youth-fashion lane two centuries on — tiny boutiques of smart-fabric dresses that shift their patterns, crepe stands, holographic signs and stickers floating overhead", "props": ["shopping_bag", "phone", "drink_glass", "camera"] }
+     }
+    },
+    {
+     "key": "game_center",
+     "ko": "게임 센터 오락실",
+     "src": ["https://ko.wikipedia.org/wiki/전자오락실", "https://en.wikipedia.org/wiki/Amusement_arcade"],
+     "base": "arcade_hall",
+     "indoor": true,
+     "times": ["commute_pm", "night_out"],
+     "outfits": ["game_cosplay", "subculture", "everyday", "retro", "dongtan"],
+     "en": "a multi-floor game arcade of rhythm games and claw machines",
+     "worlds": {
+      "fantasy": { "en": "a hall of enchanted games in the capital — crystal claw cabinets full of plush beasts, rune drums that light up to the beat, tables of carved game pieces and warm lantern light", "props": ["money", "ticket", "music", "cup"] },
+      "steampunk": { "en": "a gaslit hall of clockwork amusements — brass claw cabinets of plush toys, coin-fed rhythm drums with spinning gears, fortune-telling automatons and penny games", "props": ["money", "ticket", "music", "watch"] },
+      "cyberpunk": { "en": "a multi-floor game arcade of the far future — immersive rhythm games of light, claw machines with drone grabbers, holographic fighters and a booth printing glittering photo stickers", "props": ["money", "phone", "music", "camera"] }
+     }
+    },
+    {
+     "key": "jimbocho",
+     "ko": "진보초 헌책방 거리",
+     "src": ["https://ko.wikipedia.org/wiki/간다진보초", "https://en.wikipedia.org/wiki/Kanda-Jinb%C5%8Dch%C5%8D"],
+     "base": "street_bookstall",
+     "times": ["midday", "commute_pm"],
+     "outfits": ["everyday", "retro", "dongtan", "workwear"],
+     "en": "a street of second-hand bookshops with stalls of books outside",
+     "worlds": {
+      "fantasy": { "en": "the street of old bookshops in the capital — tall shelves of leather-bound tomes and scrolls spilling out onto trestle stalls, a scribe's lamp in every window", "props": ["book", "bag", "lamp", "money"] },
+      "steampunk": { "en": "the street of second-hand bookshops — stacks of cloth-bound books and maps on trestle stalls under striped awnings, a brass magnifying glass on the counter and gas lamps in the windows", "props": ["book", "bag", "money", "watch"] },
+      "cyberpunk": { "en": "the street of old paper bookshops kept two centuries on — real paper books stacked on trestle stalls under smart-glass awnings, a few holographic catalogues floating by the doors", "props": ["book", "bag", "phone", "cup"] }
+     }
+    },
+    {
+     "key": "summer_waterpark",
+     "ko": "여름 워터파크",
+     "src": ["https://ko.wikipedia.org/wiki/도쿄_서머랜드"],
+     "base": "water_pool",
+     "times": ["midday", "commute_pm"],
+     "seasons": ["summer"],
+     "outfits": ["swimwear", "active", "resort"],
+     "en": "a big water park with a wave pool and slides",
+     "worlds": {
+      "fantasy": { "en": "an enchanted water garden in the hills at the edge of the capital — a great wave pool stirred by water spirits, carved stone slides and cherry trees around the lagoon", "props": ["float_ring", "cup", "fan", "umbrella"] },
+      "steampunk": { "en": "a great glass-domed bathing palace — a wave pool rolled by a brass paddle-wheel engine, polished wooden slides, striped bathing tents and lemonade at a brass bar", "props": ["float_ring", "cup", "fan", "umbrella"] },
+      "cyberpunk": { "en": "a domed water park of the far future — a wave pool under a sky-dome of shifting light, clear tube slides looping overhead and floating lounge islands", "props": ["float_ring", "cup", "fan", "music"] }
+     }
+    },
+    {
+     "key": "capsule_hotel",
+     "ko": "캡슐 호텔의 밤",
+     "src": ["https://ko.wikipedia.org/wiki/캡슐_호텔", "https://en.wikipedia.org/wiki/Capsule_hotel"],
+     "base": "home_bedroom",
+     "indoor": true,
+     "times": ["night_out", "past_midnight", "dawn"],
+     "outfits": ["homewear", "lingerie", "everyday"],
+     "en": "a small sleeping capsule of a capsule hotel at night",
+     "worlds": {
+      "fantasy": { "en": "a sleeping alcove in a stacked inn of tiny chambers in the capital — a pale-wood niche just big enough to lie in, a thick quilt, a paper screen and a small glowing lantern", "props": ["book", "lamp", "cup", "key"] },
+      "steampunk": { "en": "a sleeping berth in a stacked inn of tiny cabins — a polished wooden berth just big enough to lie in, a brass reading lamp, a velvet curtain and a little shelf for her watch", "props": ["book", "lamp", "cup", "watch"] },
+      "cyberpunk": { "en": "a sleeping capsule in a stacked capsule hotel of the far future — a sleek curved pod of white smart material, soft mood light, a ceiling screen and a sliding hatch", "props": ["phone", "book", "cup", "lamp"] }
      }
     }
    ]
