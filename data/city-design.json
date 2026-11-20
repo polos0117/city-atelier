@@ -136,7 +136,78 @@
           },
           "card_ko": { "look": "청록빛 비대칭 단발 · 마른 몸", "motif": "네온 송신탑 귀걸이 · 해치 문신" }
         }
-      }
+      },
+      "landmarks": [
+        {
+          "key": "haechi",
+          "ko": "해치",
+          "en": "Haechi",
+          "src": "https://ko.wikipedia.org/wiki/해치",
+          "persona": "불과 재앙을 물리치고 옳고 그름을 가려 서울의 궁궐 문을 지켜 온 외뿔 신수 — 사납고 곧으며, 한 번 지키기로 한 것은 끝까지 지킨다.",
+          "worlds": {
+          "fantasy": {
+            "ko": "달빛 숲의 왕도 서울의 정문을 지키는 곳 — 고목 궁전의 큰 정문 앞에 한 쌍의 월석 해치상이 서 있고, 달빛 아래 옳고 그름을 가르는 재판의 전각과 기와 용마루가 이어진다",
+            "en": "the main gate of the moonlit great-tree palace of the elven capital, guarded by a pair of glowing moonstone haechi statues, with a hall of judgment and sweeping carved-wood roof ridges under the deep violet night sky",
+            "scenes": [
+              {"key": "gate", "ko": "궁전 정문의 월석 해치상 앞", "en": "at the main gate of the great-tree palace, a pair of glowing moonstone haechi statues standing guard on either side"},
+              {"key": "judgment", "ko": "달빛 재판의 전각", "en": "in a moonlit hall of judgment of pale carved wood, soft light falling on the floor where right and wrong are weighed"},
+              {"key": "ridge", "ko": "달빛 아래 궁전 용마루", "en": "on the roof ridge of the palace under the full moon, the glowing great-tree city spread out below her"}
+            ],
+            "look": {
+              "face": {"face_shape": "long", "eyes": "almond_wide", "brows": "straight_thick", "nose": "aquiline", "lips": "full_wide", "eye_color": "ember", "age": "mid_20s", "impression": "fierce", "skin_tone": "warm_beige", "eye_size": "large", "eye_tilt": "up", "mark": "mole_eye", "expr": "determined"},
+              "silhouette": {"body": "athletic", "hair": "voluminous", "hair_color": "antique_gold", "bangs": "choppy"},
+              "why": "궁전 정문을 지키는 신수의 화신 — 서울 판타지의 왕도 여왕(키 큰 몸 · 곧은 남빛 긴 머리 · 단정한 위엄)과 달리 거칠고 강한 사람. 탄탄한 운동선수 체형(athletic) · 갈기처럼 풍성하게 부푼 고금빛(antique_gold) 머리 · 들쭉날쭉한 앞머리, 눈은 불씨 빛(ember). 긴 얼굴 · 굵고 곧은 눈썹 · 매부리코 · 크고 넓은 입술, 따뜻한 베이지 피부, 눈 밑 점 하나, 20대 중반의 사나운 인상(fierce)에 결연한 표정."
+            },
+            "hold": {"en": "a calm orb of captured flame that does not burn"},
+            "motif": {
+              "ko": "이마의 수정 외뿔 관, 비늘무늬 팔 보호대, 불꽃 갈기처럼 휘날리는 망토",
+              "en": "a crystal single-horn circlet on her brow, scale-patterned bracers, and a cape that flows like a mane of flame"
+            },
+            "card_ko": {"look": "고금빛 갈기 머리", "motif": "수정 외뿔 관 · 불꽃 갈기 망토"}
+          },
+          "steampunk": {
+            "ko": "가스등 판타지 서울의 옛 성문 앞 — 놋쇠 태엽 해치 한 쌍이 궁궐 문을 지키고, 그 속 톱니가 도는 태엽실과 가스등 도시를 내려다보는 불 감시탑이 이어진다",
+            "en": "the old stone palace gate of the storybook gaslamp-fantasy Seoul, guarded by a pair of brass clockwork haechi automatons, with a clockwork room where their gears turn and a fire watchtower above the gaslit city under the golden sky",
+            "scenes": [
+              {"key": "gate", "ko": "궁궐 문 놋쇠 해치 곁", "en": "beside a brass clockwork haechi automaton at the old stone palace gate, gas lamps glowing and white steam drifting past its gears"},
+              {"key": "clockwork", "ko": "수호수의 톱니가 도는 태엽실", "en": "in the clockwork room where the guardian's brass gears turn, great cogs and springs filling the walls in warm lamplight"},
+              {"key": "watchtower", "ko": "가스등 도시를 내려다보는 불 감시탑", "en": "on a fire watchtower of brass and stone overlooking the gaslit city, airships drifting in the golden sky"}
+            ],
+            "look": {
+              "face": {"face_shape": "square_soft", "eyes": "almond_wide", "brows": "straight_thick", "nose": "straight_narrow", "lips": "wide_smile", "eye_color": "emerald", "age": "early_30s", "impression": "mature", "skin_tone": "olive", "eye_size": "medium", "eye_tilt": "level", "mark": "smoky", "expr": "confident"},
+              "silhouette": {"body": "curvy_athletic", "hair": "side_braid", "hair_color": "brass_gold", "bangs": "side_swept"},
+              "why": "태엽 해치를 돌보는 수호수지기 — 서울 스팀펑크의 날씬한 구리빛 핑거웨이브 항해사와 달리 단단하고 곡선 있는 사람. 굴곡 있는 운동 체형(curvy_athletic) · 한쪽으로 땋아 내린 놋쇠빛(brass_gold) 머리, 눈은 에메랄드. 각진 듯 부드러운 얼굴 · 넓은 아몬드 눈 · 굵고 곧은 눈썹 · 곧고 좁은 코 · 시원한 웃는 입, 올리브 피부, 눈가의 스모키 화장, 30대 초반의 성숙한 인상에 자신 있는 표정."
+            },
+            "hold": {"en": "an ornate brass winding key shaped like a haechi horn"},
+            "motif": {
+              "ko": "놋쇠 비늘판을 이은 몸통 의상, 톱니 갈기 모양의 깃, 고글 머리띠 위의 놋쇠 외뿔",
+              "en": "a bodice of overlapping brass scale plates, a collar shaped like a mane of gears, and a single brass horn mounted on a goggle headband"
+            },
+            "card_ko": {"look": "놋쇠빛 옆 땋은 머리", "motif": "놋쇠 외뿔 · 톱니 갈기 깃"}
+          },
+          "cyberpunk": {
+            "ko": "두 세기 뒤의 먼 미래 도시 서울을 지켜보는 수호 AI의 영역 — 아콜로지 첨탑에서 하늘에 거대한 홀로그램 해치를 띄우고, 도시 보안 중추의 서버홀과 층층 광장의 인파를 그 빛이 내려다본다",
+            "en": "the domain of the guardian AI of far-future Seoul two centuries from now: a giant holographic haechi projected across the sky from an arcology spire, the city's security-core server hall, and layered plazas full of people under the watching hologram",
+            "scenes": [
+              {"key": "spire", "ko": "홀로그램 해치를 띄우는 아콜로지 첨탑", "en": "atop an arcology spire projecting a giant holographic haechi across the sky, the luminous maglev arches and flying vehicles far below her"},
+              {"key": "core", "ko": "도시 보안 중추의 서버홀", "en": "in the city's security-core server hall, towering racks of glowing data columns and soft blue light reflected on smart-glass floors"},
+              {"key": "plaza", "ko": "홀로그램 아래 층층 광장의 인파", "en": "among the crowd on layered plazas between the arcology towers, the giant holographic haechi watching over the sky above"}
+            ],
+            "look": {
+              "face": {"face_shape": "oval", "eyes": "round_large", "brows": "soft_round", "nose": "straight_narrow", "lips": "heart_full", "eye_color": "ion_blue", "age": "early_20s", "impression": "stoic", "skin_tone": "fair", "eye_size": "large", "eye_tilt": "level", "mark": "bare", "expr": "calm"},
+              "silhouette": {"body": "busty_slender", "hair": "long_wavy", "hair_color": "plasma_blue", "bangs": "curtain"},
+              "why": "도시를 지키는 AI가 사람 모습으로 걸어 나온 분신 — 서울 사이버펑크의 비대칭 단발 시안 머리 · 마른 몸 · 날 선 밤 사람과 달리 부드럽고 차분한 사람. 가슴이 도드라진 가는 몸(busty_slender) · 어깨 아래로 흐르는 긴 웨이브 플라즈마 블루(plasma_blue) 머리 · 가르마 커튼 앞머리, 눈은 이온 블루. 갸름한 달걀형 얼굴 · 크고 둥근 눈 · 부드러운 둥근 눈썹 · 하트 입술, 흰 피부, 맨 얼굴, 20대 초반의 감정을 숨긴 무표정(stoic)."
+            },
+            "hold": {"en": "a cat-sized floating holographic haechi"},
+            "motif": {
+              "ko": "어깨에서 흘러내리는 반투명 홀로그램 갈기, 이마의 빛 외뿔, 옷을 덮은 회로 비늘무늬",
+              "en": "a translucent holographic mane flowing from her shoulders, a single horn of light at her brow, and circuit-scale patterns running across her clothes"
+            },
+            "card_ko": {"look": "플라즈마빛 긴 웨이브", "motif": "홀로그램 갈기 · 빛 외뿔"}
+          }
+          }
+        }
+      ]
     },
     {
       "key": "tokyo",
