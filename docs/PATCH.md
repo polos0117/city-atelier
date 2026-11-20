@@ -7,6 +7,10 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-20 · claude · 실내 장면의 계절 — 창밖 · 옷차림으로만
+- 사용자 「계절표현이 보니까 나무들로 되있던데, 실내공간까지 따라들어오는것 같아」. 일상컷 계절 줄(생활 장면표 seasons 의 en — 벚꽃 · 낙엽 · 은행잎 …)이 장소와 상관없이 실려 찜질방 · 고시원 같은 실내에도 나무 · 꽃잎이 들어왔다(날씨는 실내에서 이미 뺐다).  
+  lib/prompt-city.js — 실내(생활 장면 indoor, 일반 장소는 장소 특징 indoor · timed — 계획기 placeRules 와 같은 기준)면 계절 이름만 싣고 lib/prompt-spec.js CASUAL.life.seasonIn(「창밖이나 옷차림으로만 — 방 안에 꽃 · 꽃잎 · 낙엽 · 눈 · 나무 없음」). 바깥 장면은 그대로. tests/casual-plan.cjs 계절 줄 단언을 실내 · 바깥으로 나눔. prompt.html ?v — prompt-spec · prompt-city 하나씩.
+
 ## 2026-11-20 · claude · 크게 보기에서 넘기기 · 즐겨찾기
 - 사용자 「도감에서 크게보기때도 옆으로 넘기는 기능이랑, 다른 공방에도있는 즐겨찾기 버튼 붙여줘」. lib/city-view.js — 크게 보기(맞춤일 때)에서 옆으로 밀기 · ←→ 로 앞뒤 장(크게 보기는 열린 채), 아래 막대에 몇째 장 · 즐겨찾기 단추. 한 장 화면의 앞 장 · 뒤 장 사이에도 즐겨찾기 단추(♡/♥, aria-pressed) — 공방 모음 공용 lib/favorites.js, a = 'city', 지금 보이는 그림 한 장(세계 그림 · 일상컷 · 랜드마크 카드도), 담고 빼면 잠깐 알림.  
   낱말 card.zoom.hint, 꼴 lib/room.css(막대가 폰에서 줄바꿈하지 않게). ?v — words 38 · room.css 8 · city-view 5 · dex-view 6. tests/globe-screen.cjs — 크게 보기 → · 밀기 · 몇째 장 · 즐겨찾기 담기/빼기 · 저장 칸. 공방 모음 favorites.html 에 도시공방(칩 · 문).
