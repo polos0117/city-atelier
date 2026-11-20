@@ -66,14 +66,20 @@ const lineOf = (txt, head) => (String(txt).split('\n').find(l => l.startsWith(he
         /* 옛 세계(mecha)가 주소로 와도 버린다 — 조립기가 던지지 않게 */
         await gp.goto(srv.base + '/prompt.html?card=seoul&o=world&world=mecha'); await gp.waitForSelector('.hchip');
         assert.equal((await state(gp)).world, '', '세계 mecha 주소는 버린다'); assert.equal(await openOf(gp), 'world', '세계 칸부터');
-        assert.deepEqual(gv.errors, [], '생성기 화풍 콘솔'); checks += 8; await gv.ctx.close();
+        /* 랜드마크 카드 — 주소가 그대로 열리고 고르개에 서울 바로 아래 */
+        await gp.goto(srv.base + '/prompt.html?card=seoul-haechi&o=world&world=fantasy'); await gp.waitForSelector('.hchip');
+        assert.equal(await promptOf(gp), P.build(D, S, 'seoul-haechi', 'fantasy', { style: DEF }), '해치 주소 지시문');
+        await gp.click('[data-open="city"]');
+        const ck = await gp.$$eval('#panel [data-city]', bs => bs.map(b => b.dataset.city)); assert.equal(ck[ck.indexOf('seoul') + 1], 'seoul-haechi', '서울 바로 아래 해치');
+        assert.match(await gp.locator('#panel [data-city="seoul-haechi"]').innerText(), /서울 › 해치/, '랜드마크 줄 글');
+        assert.deepEqual(gv.errors, [], '생성기 화풍 콘솔'); checks += 11; await gv.ctx.close();
       }
 
       /* 도시 판 — 처음 오면 도시부터. 열 곳, 설계 미정(서울 · 도쿄 말고 여덟)은 누를 수 없다 */
       const v = await open('/prompt.html'), p = v.page;
       await p.evaluate(() => localStorage.removeItem('city_studio_v1')); await p.reload(); await p.waitForSelector('#panel .opt');
       assert.equal(await openOf(p), 'city', '처음은 도시 판');
-      assert.equal(await p.locator('#panel .opt[data-city]').count(), D.cities.length, '도시 열 곳');
+      assert.equal(await p.locator('#panel .opt[data-city]').count(), P.cards(D).length, '카드 칸(도시 + 랜드마크)');
       assert.equal(await p.locator('#panel .opt[data-city][disabled]').count(), D.cities.filter(c => !P.worldsOf(D, c.key).length).length, '설계 미정은 누를 수 없다');
       assert.match(await p.locator('#panel .opt[data-city="beijing"]').textContent(), /설계 미정/, '설계 미정 표시');
       await p.click('#panel .opt[data-city="seoul"]'); assert.equal(await openOf(p), 'out', '도시 다음 갈래');
