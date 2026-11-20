@@ -92,7 +92,8 @@ for (const seed of [3, 11, 29]) {
       if (s) {
         const sw = s.worlds[w];
         assert(t.includes('\nPlace: ' + sw.en.replace(/\.$/, '') + '.\n'), id + ' 그 장면의 그 세계 글');
-        for (const k of sw.props) assert(t.includes(PROPS.props[k].worlds[w].en), id + ' 소품 ' + k + ' 의 그 세계 낱말');
+        const own = (((D.cities.find(x => x.key === card.key) || {}).worlds || {})[w] || {}).own_vocab || {};   /* 도시별 말(2026-11-20) */
+        for (const k of sw.props) assert(t.includes((own.props || {})[k] || PROPS.props[k].worlds[w].en), id + ' 소품 ' + k + ' 의 그 세계 낱말');
       } else assert(t.includes('\nPlace: ' + T1.places.find(p => p.key === c.place).en + '\n'), id + ' 일반 장소 글 그대로');
       assert(t.includes(PROPS.clothes[w].en) === !C.isCosplay(c), id + ' 옷의 결 — 그 세계 평상복(코스프레 컷은 없음)');
       assert(t.includes('Season: ' + byKey(LIFE.seasons.seoul, c.season).en.replace(/\.$/, '') + '.') && (!c.time || t.includes('Time of day: ' + byKey(LIFE.times, c.time).en + '.')), id + ' 계절 · 시간대 줄');

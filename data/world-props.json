@@ -16,7 +16,7 @@
    "steampunk": { "en": "a painted enamel mug" },
    "cyberpunk": { "en": "a self-heating tumbler with a glowing band" } } },
   "drink_glass": { "ko": "술잔", "worlds": {
-   "fantasy": { "en": "a small celadon wine cup" },
+   "fantasy": { "en": "a small glazed porcelain wine cup" },
    "steampunk": { "en": "a thick pressed-glass tumbler" },
    "cyberpunk": { "en": "a glass of glowing liquor on a lit base" } } },
   "bag": { "ko": "가방", "worlds": {

@@ -112,9 +112,10 @@ for (const city of DESIGNED) for (const style of LIVE) for (const w of D.vocab.w
   assert.equal([r.sections.head, r.sections.body, r.sections.negative].filter(Boolean).join('\n\n'), t, id + ' sections 를 이으면 지시문');
   assert(t.includes('the same adult ' + city.people.en + ' woman') && t.includes(T.CASUAL.short.beauty), id + ' 일상컷 — 그 나라 사람 · 미형 줄');
   assert(t.includes('\nPlace: ' + sw.en.replace(/\.$/, '') + '.\n'), id + ' 그 장면의 그 세계 글');
-  for (const k of sw.props) assert(t.includes(PROPS.props[k].worlds[w].en), id + ' 소품 ' + k);
+  const own = (city.worlds[w] || {}).own_vocab || {};   /* 도시별 말(2026-11-20 own_vocab) — 있으면 공용 대신 */
+  for (const k of sw.props) assert(t.includes((own.props || {})[k] || PROPS.props[k].worlds[w].en), id + ' 소품 ' + k);
   /* 세계 줄 = 그 세계의 결(vocab.casual_world — 2026-11-19 「일부러 뒷배경은 다 나오게 만든거야?」), 다음 줄이 guard. 명소 낱말은 장소 줄이 말할 때만 */
-  const cw = D.vocab.casual_world[w], wl = (t.match(/^World: .*$/m) || [''])[0], pl = (t.match(/^Place: .*$/m) || [''])[0];
+  const cw = own.casual_world || D.vocab.casual_world[w], wl = (t.match(/^World: .*$/m) || [''])[0], pl = (t.match(/^Place: .*$/m) || [''])[0];
   assert(t.includes(PROPS.clothes[w].en) && wl.startsWith('World: an ordinary day in ' + city.en + ' as her world knows it — ' + cw.en.replace('{city_en}', city.en).replace(/\.$/, '')) && t.includes(wl + '\n' + cw.guard_en), id + ' 옷의 결 · 그 세계의 결 · guard');
   for (const lm of LANDMARKS[w]) assert(!word(lm, 'i').test(wl) || word(lm, 'i').test(pl), id + ' 세계 줄에 명소 「' + lm + '」');
   for (const o of D.vocab.worlds.filter(x => x !== w)) assert(!t.includes(sw.en === s.worlds[o].en ? '\u0000' : s.worlds[o].en), id + ' 다른 세계 글이 안 샌다');
