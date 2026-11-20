@@ -20,6 +20,9 @@ const FAKE = { img: { seoul: { byStyle: { [ST]: { byForm: {
   steampunk: { f: F('steampunk') }, cyberpunk: { f: F('cyberpunk') } } } } } },
   added: { [F('fantasy')]: DAY, [F('fantasy').replace('.webp', '_casual1.webp')]: DAY, [F('fantasy').replace('.webp', '_casual2.webp')]: DAY, [F('steampunk')]: '2026-11-18', [F('cyberpunk')]: '2026-11-16' },
   count: 5, where: {} };
+const HF = 'seoul-haechi_fantasy_' + ST + '_f';
+const FAKE_LM = JSON.parse(JSON.stringify(FAKE)); FAKE_LM.img['seoul-haechi'] = { byStyle: { [ST]: { byForm: { fantasy: { f: HF + '.webp', casual: { f: [HF + '_casual1.webp', HF + '_casual2.webp'] } } } } } };
+const fakeLM = [{ url: /\/data\/img\.json/, body: JSON.stringify(FAKE_LM), contentType: 'application/json' }];
 const fake = [{ url: /\/data\/img\.json/, body: JSON.stringify(FAKE), contentType: 'application/json' }];
 const newSeats = p => p.$$eval('.th-ticket .th-new', es => es.map(e => e.closest('.th-ticket').dataset.city + ':' + e.closest('.th-seat').dataset.world));
 
@@ -85,6 +88,10 @@ const newSeats = p => p.$$eval('.th-ticket .th-new', es => es.map(e => e.closest
       assert.deepEqual(await p.$$eval('.th-ticket[data-city="seoul"] .th-seat', ss => ss.map(s => s.classList.contains('is-cur'))), [false, false, true], '세계 고르개 → 그 칸 강조');
       assert.equal(await p.locator('.th-seat').count(), 30, '세 세계 다');
       assert.deepEqual(o.errors, [], '줄 누르기 콘솔'); checks += 9; await o.ctx.close(); }
+
+    /* 랜드마크 일상컷은 그 도시 줄 일상컷 수에 더한다 */
+    { const o = await open('/index.html?tab=dex', { fulfill: fakeLM }), p = o.page; await p.waitForSelector('.th-ticket');
+      assert.equal(await p.textContent('.th-ticket[data-city="seoul"] .th-count b'), '4', '서울 일상컷 = 도시 2 + 해치 2'); checks += 1; await o.ctx.close(); }
 
     /* 가짜 등록부 — 그림 · 일상컷 · 새 그림 점 · 열면 꺼짐 · 새로 고쳐도 · 한 장 */
     { const o = await open('/index.html?tab=dex&w=fantasy&today=' + DAY, { fulfill: fake }), p = o.page; await p.waitForSelector('.th-seat.has-pic'); await p.evaluate(() => document.fonts.ready);

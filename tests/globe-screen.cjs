@@ -250,6 +250,29 @@ const settle = p => p.waitForFunction(() => { const k = document.querySelector('
       await p.tap('.th-back'); await p.waitForSelector('.th-cast'); assert.equal(await p.evaluate(() => location.search), '?city=seoul&w=cyberpunk', '한 장 → 도시 무대');
       assert.deepEqual(o.errors, [], '한 장 콘솔'); checks += 16; await o.ctx.close(); }
 
+    /* 랜드마크 줄 — 서울 무대에 해치(세계 그림 + 일상 둘), 한 장, 돌아가기 · 도쿄엔 줄 없음 */
+    { const HF = 'seoul-haechi_fantasy_s1_f', img = { img: { 'seoul-haechi': { byStyle: { s1: { byForm: { fantasy: { f: HF + '.webp', casual: { f: [HF + '_casual2.webp', HF + '_casual1.webp'] } } } } } } }, added: {}, count: 3, where: {} };
+      const fl = [{ url: /\/data\/img\.json/, body: JSON.stringify(img), contentType: 'application/json' }];
+      const o = await open('/index.html?city=seoul&w=fantasy', { fulfill: fl }), p = o.page;
+      await p.waitForSelector('.th-cast'); await calm(p);
+      assert.equal(await p.locator('.th-marks .th-mark').count(), 1, '랜드마크 하나'); assert.equal(await p.locator('.th-mark[data-card="seoul-haechi"]').count(), 1);
+      assert.equal(await p.locator('.th-mark[data-card="seoul-haechi"] button').count(), 1, '그림 있는 세계 하나만 누를 수 있다');
+      assert.equal(await p.locator('.th-mark[data-card="seoul-haechi"] .is-empty').count(), 2, '빈 자리 둘');
+      assert.deepEqual(await smallTargets(p), [], '랜드마크 줄 44px'); assert(await H.noOverflow(p), '랜드마크 줄 넘침 없음');
+      for (const [txt, c] of await H.contrast(p, '.th-mark-name')) assert(c >= 4.5, '랜드마크 대비 ' + c + ' — ' + txt);
+      await H.shot(p, 'city-seoul-landmark');
+      await p.tap('.th-mark[data-card="seoul-haechi"] button'); await p.waitForSelector('.th-card');
+      assert.equal(await p.evaluate(() => location.search), '?city=seoul&card=seoul-haechi&pic=seoul-haechi_fantasy_s1_f.webp&w=fantasy', '랜드마크 한 장 주소');
+      assert.deepEqual(await p.$$eval('.th-strip button span', s => s.map(x => x.textContent)), ['세계', '1', '2'], '한 장 그림 줄');
+      assert.match(await p.locator('.th-card figcaption').innerText(), /해치/, '캡션에 해치'); await H.shot(p, 'card-landmark');
+      await p.tap('.th-strip li:last-child button'); assert.match(await p.evaluate(() => location.search), /pic=seoul-haechi_fantasy_s1_f_casual2\.webp/, '줄에서 일상컷');
+      assert.deepEqual(await smallTargets(p), [], '한 장 44px'); assert(await H.noOverflow(p));
+      await p.tap('.th-back'); await p.waitForSelector('.th-cast'); assert.equal(await p.evaluate(() => location.search), '?city=seoul&w=fantasy', '돌아가기 → 서울 무대');
+      assert.deepEqual(o.errors, [], '랜드마크 콘솔'); checks += 13; await o.ctx.close(); }
+    { const o = await open('/index.html?city=tokyo'), p = o.page; await p.waitForSelector('.th-cast'); assert.equal(await p.locator('.th-marks').count(), 0, '도쿄엔 랜드마크 줄 없음'); checks += 1; await o.ctx.close(); }
+    { const o = await open('/index.html?city=seoul&card=seoul-haechi&pic=seoul-haechi_fantasy_zz_f.webp'), p = o.page;
+      await p.waitForSelector('.th-cast'); assert.equal(await p.locator('.th-card').count(), 0, '없는 랜드마크 그림 — 무대'); checks += 1; await o.ctx.close(); }
+
     /* 등록부에 없는 pic 주소는 도시 무대로 */
     { const o = await open('/index.html?city=seoul&card=seoul&pic=seoul_fantasy_zz_f.webp'), p = o.page;
       await p.waitForSelector('.th-cast'); assert.equal(await p.locator('.th-card').count(), 0, '없는 그림 — 무대'); checks += 1; await o.ctx.close(); }

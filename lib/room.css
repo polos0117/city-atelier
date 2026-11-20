@@ -226,6 +226,15 @@ button.th-fig {padding:0;border-style:solid;cursor:pointer}
 .th-motif {color:var(--muted)}
 .th-draw {display:flex;align-items:center;justify-content:center;min-height:44px;margin-top:auto;border-radius:22px;border:1.5px solid var(--rc);color:var(--text);font-size:12px;font-weight:800;text-decoration:none}
 .th-plaque {margin-bottom:8px}
+.th-marks {display:flex;gap:10px;margin-top:16px;overflow-x:auto;scroll-snap-type:x proximity;padding-bottom:4px}
+.th-mark {flex:0 0 auto;scroll-snap-align:start;display:flex;flex-direction:column;gap:6px;padding:8px 10px;border-radius:10px;background:var(--card);border:1px solid var(--line)}
+.th-mark-name {font-size:13px;font-weight:800;color:var(--text);word-break:keep-all}
+.th-mark-seats {display:flex;gap:6px}
+.th-mark-fig {width:56px;height:56px;padding:0;border-radius:10px;border:1.5px solid var(--rc);background:transparent;overflow:hidden;display:flex;align-items:center;justify-content:center}
+button.th-mark-fig {cursor:pointer}
+.th-mark-fig.is-empty {border-style:dashed}
+.th-mark-fig img {width:100%;height:100%;object-fit:cover}
+.th-mark-fig i {width:12px;height:12px;border-radius:50%;background:var(--rc);opacity:.7}
 .th-day {margin:16px 0 0;padding:10px 12px;border-radius:10px;background:var(--card);border:1px solid var(--line);font-size:12px;line-height:1.55;color:var(--muted)}
 .th-day b {color:var(--text)}
 /* 한 장 — 막 틀 안에 그림 하나 */
