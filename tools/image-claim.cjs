@@ -29,7 +29,7 @@ const P = (() => { const vm = require('node:vm'), ctx = { window: {}, console };
 /* 차례는 설계표 차례(서울이 처음) × 세계 차례(판타지 → 스팀펑크 → 사이버펑크) — 한 도시의 세계를 다 그린 뒤 다음 도시로(IMAGE_RULES 2절). 설계 미정 도시(worlds 가 빈)는 몫이 없다 */
 function order() {
   const D = read('data/city-design.json'), wk = (D.vocab || {}).world_ko || {};
-  return P.cards(D).flatMap(k => P.worldsOf(D, k).map(w => ({ key: k + '_' + w, city: k, world: w, title: ((P.card(D, k) || {}).ko || k) + ' ' + (wk[w] || w) })));
+  return Array.from(P.cards(D)).flatMap(k => P.worldsOf(D, k).map(w => ({ key: k + '_' + w, city: k, world: w, title: (c => c ? (c.tier === 'landmark' ? c.cityKo + ' ' : '') + c.ko : k)(P.card(D, k)) + ' ' + (wk[w] || w) })));
 }
 /* 몫의 빈 자리 — 세계 그림 + 일상컷 열 장(번호는 세계마다). 열쇠가 도시만이면 그 도시의 세계 전부. 캐릭터만의 컷(casual90)은 일상 장수에 세지 않는다 */
 function missing(key) {

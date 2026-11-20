@@ -70,8 +70,8 @@ def read(name):
 
 
 def cities():
-    """도시 열쇠 목록 — data/city-design.json 의 cities(설계가 비어 있어도 열쇠는 있다)."""
-    return [c["key"] for c in read("city-design")["cities"]]
+    """카드 열쇠 목록 — data/city-design.json 의 도시 + 그 도시의 랜드마크 <도시>-<랜드마크>(설계가 비어 있어도 열쇠는 있다)."""
+    return [k for c in read("city-design")["cities"] for k in [c["key"]] + [c["key"] + "-" + l["key"] for l in c.get("landmarks") or []]]
 
 
 def world_keys():

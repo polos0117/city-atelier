@@ -21,7 +21,11 @@ const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'image-claim-'));
     for (let n = 1; n <= 10; n++) assert(m.includes(`seoul_${w}_${st}_f_casual${n}.webp`), `${w} 일상컷 ${n}`);
   }
   assert.equal(K.missing('tokyo').length, 33, '도쿄(2026-11-20 설계) 빈 자리 33');
-  assert.deepEqual(K.order().map(x => x.key), ['seoul_fantasy', 'seoul_steampunk', 'seoul_cyberpunk', 'tokyo_fantasy', 'tokyo_steampunk', 'tokyo_cyberpunk'], '설계표 차례 × 세계 차례 — 설계 미정 도시는 몫이 없다');
+  assert.deepEqual(K.order().map(x => x.key), ['seoul_fantasy', 'seoul_steampunk', 'seoul_cyberpunk', 'seoul-haechi_fantasy', 'seoul-haechi_steampunk', 'seoul-haechi_cyberpunk', 'tokyo_fantasy', 'tokyo_steampunk', 'tokyo_cyberpunk'], '설계표 차례 × 세계 차례 — 설계 미정 도시는 몫이 없다');
+  assert.deepEqual(K.order().map(x => x.key).slice(0, 6), ['seoul_fantasy', 'seoul_steampunk', 'seoul_cyberpunk', 'seoul-haechi_fantasy', 'seoul-haechi_steampunk', 'seoul-haechi_cyberpunk'], '도시 세 세계 다음 그 랜드마크');
+  assert.equal(K.order()[3].title, '서울 해치 판타지');
+  assert.equal(K.missing('seoul-haechi_fantasy').length, 11, '랜드마크 한 세계 = 세계 그림 1 + 일상 10');
+  assert(K.missing('seoul-haechi_fantasy').every(f => f.startsWith('seoul-haechi_fantasy_')));
   assert.equal(K.missing('beijing').length, 0, '설계 미정 도시는 빈 자리 없음(건너뛴다)');
   assert.equal(K.nextOf({}).key, 'seoul_fantasy', '다음 차례는 서울 판타지');
   assert.equal(K.nextOf({ seoul_fantasy: { runs: [{ status: 'working' }] } }).key, 'seoul_steampunk', '잡힌 세계는 건너뛰고 같은 도시 다음 세계');

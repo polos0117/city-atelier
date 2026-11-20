@@ -14,7 +14,7 @@ styles = reg.style_names()
 cities = reg.cities()
 assert worlds == ['fantasy', 'steampunk', 'cyberpunk'], worlds
 assert 'game_keyart' in styles, styles
-assert len(cities) == 10 and cities[0] == 'seoul' and 'newyork' in cities, cities
+assert len(cities) == 11 and cities[:2] == ['seoul', 'seoul-haechi'] and 'newyork' in cities, cities
 assert 'zz' not in cities and 'new_york' not in cities and all(c == c.lower() and '_' not in c for c in cities), '도시 열쇠는 소문자 영문, 밑줄 없음'
 S = 'game_keyart'
 
@@ -67,6 +67,17 @@ with tempfile.TemporaryDirectory() as d:
     (Path(d) / extra).unlink()
     code, s_p, out = run(s_c, d, ['--prune'])
     assert code == 0 and 'rome' not in s_p['img'], out
+
+    # 랜드마크 카드 열쇠 <도시>-<랜드마크> — 도시와 같은 꼴로 들어간다, 없는 랜드마크는 도시가 없다
+    lm, lc = f'seoul-haechi_fantasy_{S}_f.webp', f'seoul-haechi_fantasy_{S}_f_casual1.webp'
+    for n in (lm, lc): (Path(d) / n).touch()
+    code, s_l, out = run(saved, d)
+    assert code == 0 and s_l['img']['seoul-haechi']['byStyle'][S]['byForm'] == {'fantasy': {'f': lm, 'casual': {'f': [lc]}}}, out
+    for n in (lm, lc): (Path(d) / n).unlink()
+    (Path(d) / f'seoul-nope_fantasy_{S}_f.webp').touch()
+    code, s2, out = run(saved, d)
+    assert code == 1 and s2 is None and '그런 도시가 없다' in out, out
+    (Path(d) / f'seoul-nope_fantasy_{S}_f.webp').unlink()
 
     # 틀린 이름은 하나라도 있으면 아무것도 저장하지 않는다
     for bad, why in [(f'seoul_mecha_{S}_f.webp', '그런 도시가 없다'),            # 없는 세계(원소의 mecha) → 도시 이름으로 읽혀 실패
