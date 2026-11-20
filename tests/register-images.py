@@ -1,5 +1,5 @@
 """그림 등록 — 도시의 세계 그림과 일상컷이 제자리에, 틀린 이름은 저장하지 않고 실패. 원소 공방의 같은 검사에서 왔다(2026-10-30 → 도시 꼴 2026-11-19). python3 tests/register-images.py"""
-import contextlib, copy, importlib.util, io, os, subprocess, sys, tempfile
+import contextlib, copy, importlib.util, io, json, os, subprocess, sys, tempfile
 from pathlib import Path
 from unittest.mock import patch
 
@@ -14,7 +14,10 @@ styles = reg.style_names()
 cities = reg.cities()
 assert worlds == ['fantasy', 'steampunk', 'cyberpunk'], worlds
 assert 'game_keyart' in styles, styles
-assert len(cities) == 11 and cities[:2] == ['seoul', 'seoul-haechi'] and 'newyork' in cities, cities
+# 카드 열쇠 = 도시 열 + 설계표의 랜드마크(<도시>-<랜드마크>) — 수를 박지 않는다(2026-11-20 랜드마크 넷을 더하자 「11」 이 깨져 그림 등록이 실패했다)
+_design = json.load(open(os.path.join(ROOT, 'data', 'city-design.json'), encoding='utf-8'))
+_want = [k for c in _design['cities'] for k in [c['key']] + [c['key'] + '-' + l['key'] for l in c.get('landmarks') or []]]
+assert cities == _want and cities[:2] == ['seoul', 'seoul-haechi'] and 'newyork' in cities, cities
 assert 'zz' not in cities and 'new_york' not in cities and all(c == c.lower() and '_' not in c for c in cities), '도시 열쇠는 소문자 영문, 밑줄 없음'
 S = 'game_keyart'
 
