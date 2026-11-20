@@ -244,7 +244,20 @@ const settle = p => p.waitForFunction(() => { const k = document.querySelector('
       assert(big > fit * 1.8, '크게 ' + fit + ' → ' + big); assert.deepEqual(await smallTargets(p), [], '크게 보기 44px');
       await H.shot(p, 'card-zoom-big'); await p.keyboard.press('Escape'); await p.waitForSelector('.th-zoom', { state: 'detached' });
       assert.match(await p.evaluate(() => location.search), /pic=seoul_cyberpunk_s1_f\.webp/, 'Esc 는 크게 보기만 닫는다');
-      await p.tap('.th-zoom-open'); await p.tap('.th-zoom-bar button'); await p.waitForSelector('.th-zoom', { state: 'detached' });
+      // 크게 보기에서 넘기기(맞춤일 때 ← → · 밀기) — 크게 보기는 열린 채 다음 장, 몇째 장 · 즐겨찾기(2026-11-20)
+      await p.tap('.th-zoom-open'); await p.waitForSelector('.th-zoom');
+      assert.match(await p.textContent('.th-zoom-n'), /2 \/ 5/, '크게 보기 몇째 장');
+      await p.keyboard.press('ArrowRight'); assert.match(await p.evaluate(() => location.search), /pic=seoul_cyberpunk_s1_f_casual1\.webp/, '크게 보기에서 → 다음 장');
+      assert.equal(await p.locator('.th-zoom').count(), 1, '넘겨도 크게 보기 그대로');
+      await p.evaluate(() => { const b = document.querySelector('.th-zoom-box'), t = (type, x) => b.dispatchEvent(new TouchEvent(type, { bubbles: true, touches: type === 'touchend' ? [] : [new Touch({ identifier: 1, target: b, clientX: x, clientY: 300 })], changedTouches: [new Touch({ identifier: 1, target: b, clientX: x, clientY: 300 })] })); t('touchstart', 250); t('touchend', 100); });
+      if (await p.locator('.th-zoom').count()) assert.match(await p.evaluate(() => location.search), /pic=seoul_cyberpunk_s1_f_casual2\.webp/, '크게 보기에서 밀어 다음 장');
+      if (!(await p.locator('.th-zoom').count())) await p.tap('.th-zoom-open');
+      await p.tap('.th-zoom-bar .th-fav'); assert.equal(await p.getAttribute('.th-zoom-bar .th-fav', 'aria-pressed'), 'true', '크게 보기에서 즐겨찾기 담기');
+      const fv = await p.evaluate(() => JSON.parse(localStorage.getItem('atelier_favorites_v1') || '[]'));
+      assert(fv.length === 1 && fv[0].a === 'city' && fv[0].key === 'seoul' && /^seoul_cyberpunk_s1_f_casual\d\.webp$/.test(fv[0].file) && /card=seoul&pic=/.test(fv[0].link), '즐겨찾기 칸 ' + JSON.stringify(fv));
+      await p.tap('.th-zoom-bar button:last-child'); await p.waitForSelector('.th-zoom', { state: 'detached' });
+      assert.equal(await p.getAttribute('.th-card-nav .th-fav', 'aria-pressed'), 'true', '한 장 즐겨찾기 단추도 담김');
+      await p.tap('.th-card-nav .th-fav'); assert.equal(await p.getAttribute('.th-card-nav .th-fav', 'aria-pressed'), 'false', '한 장에서 빼기');
       await H.shot(p, 'card-strip');
       assert.deepEqual(await smallTargets(p), [], '한 장 44px'); assert(await H.noOverflow(p));
       await p.tap('.th-back'); await p.waitForSelector('.th-cast'); assert.equal(await p.evaluate(() => location.search), '?city=seoul&w=cyberpunk', '한 장 → 도시 무대');

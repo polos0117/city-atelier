@@ -242,6 +242,10 @@ button.th-mark-fig {cursor:pointer}
 .th-card figure img {display:block;width:100%;border-radius:6px}
 .th-card figcaption {margin-top:8px;text-align:center;font-size:12px;font-weight:700;color:var(--text)}
 .th-card-nav {display:flex;gap:8px;margin-top:10px}
+.th-card-nav .th-fav {flex:0 0 auto;padding:0 14px}
+.th-fav[aria-pressed="true"] {border-color:#ff8fb1 !important;color:#ffb3c8 !important}
+.th-toast {position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:1001;max-width:calc(100vw - 32px);padding:8px 14px;border-radius:18px;background:#000d;color:#fff;font-size:12px;font-weight:700;pointer-events:none}
+.th-toast:empty {display:none}
 .th-card-nav button {flex:1 1 0;min-height:44px;border-radius:22px;border:1.5px solid var(--line);background:transparent;color:var(--text);font-family:inherit;font-weight:800}
 /* 한 장의 그림 줄 · 크게 보기(2026-11-20 — 일상컷 · 확대) */
 .th-zoom-open {display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in}
@@ -261,6 +265,10 @@ button.th-mark-fig {cursor:pointer}
 .th-zoom-box.is-big {display:block}
 .th-zoom-box.is-big img {max-width:none;max-height:none;width:250%;cursor:zoom-out}
 .th-zoom-bar {flex:0 0 auto;background:#000;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 12px calc(8px + env(safe-area-inset-bottom));color:#fff;font-size:12px}
+.th-zoom-n {margin-left:8px;font-variant-numeric:tabular-nums;opacity:.8}
+.th-zoom-bar > span:first-child {flex:1 1 auto;min-width:0;font-size:11px;line-height:1.4}
+.th-zoom-bar button {white-space:nowrap;flex:0 0 auto}
+.th-zoom-bar .th-fav {margin-left:auto}
 .th-zoom-bar button {min-height:44px;padding:0 18px;border-radius:22px;border:1px solid #fff8;background:#0008;color:#fff;font-family:inherit;font-weight:800}
 /* 효과 — 「조명이 도시를 따라감」(전광판 이름이 켜지며 바뀐다) · 「세 조명 켜짐」(차례로). 움직임 끔이면 없음 */
 html[data-motion="on"] .th-marquee-name.is-flick {animation:th-flick .4s ease-out}
