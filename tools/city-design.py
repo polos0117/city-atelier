@@ -11,6 +11,8 @@
 - casual_world.<세계> = { en, guard_en } — 일상컷 「World:」 줄의 세계 결(명소 없이)과 다음 줄 guard. en 에 그 세계 금지 낱말이 없다.
 - cities 열쇠는 CITY_KEYS 와 같은 열 개 같은 차례. 도시마다 ko · en · country · persona, lat · lon(범위 안, 소수 둘째 자리까지) · latlon_src(주소),
   palette { en, hex 2~3개 #RRGGBB }, symbols 3~5개(ko · en · src 주소).
+- landmarks(고를 수 있는 칸) 가 있으면 랜드마크마다 key(소문자 · 숫자 — '-' '_' 없음, 도시 안에서 겹침 없음) · ko · en · persona · src(주소) · worlds 를
+  도시 worlds 와 같은 검사로 보고, 같은 도시 · 같은 세계 사람끼리(도시 사람 + 랜드마크 전부) 얼굴 칸이 FACE_DIFF_MIN 개 이상 다르지 않으면 오류.
 - worlds 가 {} 면 설계 미정. 채우면 세 세계 다: ko · en(40자 이상, 한국어 없음) · scenes 셋(key · ko · en) ·
   look { face 여섯, silhouette 셋, why } · hold.en · motif { ko, en }. 세 세계는 다른 사람 — 머리색 · 체형 · 얼굴형 · 헤어스타일이 세계끼리 모두 다르고, 얼굴 칸(face_shape · eyes · brows · nose · lips) 가운데
   셋 이상이 세 세계 모두 다르다(미형이되 같은 얼굴은 피한다 — 사용자 2026-11-19). 도시마다 people { ko, en }(그 나라 사람, 조립기 머리 줄 「an adult <en> woman」).
@@ -94,64 +96,12 @@ def check(doc):
         if w not in WORLDS:
             errs.append("vocab 의 %r 는 아는 세계가 아니다" % w)
 
-    cities = doc.get("cities") or []
-    keys = [c.get("key") for c in cities]
-    if keys != CITY_KEYS:
-        errs.append("cities 열쇠가 계획 목록과 다르다 — %r" % keys)
-    undecided = 0
-    for c in cities:
-        k = c.get("key")
-        here = "도시 %r" % k
-        if not k or not KEY.match(k):
-            errs.append(here + " 열쇠는 소문자 · 숫자만")
-        for col in ("ko", "en", "country", "persona"):
-            if not (c.get(col) or "").strip():
-                errs.append(here + " %s 가 비었다" % col)
-        pp = c.get("people")
-        if not isinstance(pp, dict) or not (pp.get("ko") or "").strip() or not (pp.get("en") or "").strip() or HANGUL.search(pp.get("en") or ""):
-            errs.append(here + " people { ko, en } 이 없거나 비었다(그 나라 사람 — en 은 한국어 없이 한 낱말)")
-        for col, lim in (("lat", 90), ("lon", 180)):
-            x = c.get(col)
-            if not isinstance(x, (int, float)) or isinstance(x, bool) or not -lim <= x <= lim:
-                errs.append(here + " %s 가 범위 밖 — %r" % (col, x))
-            elif round(x, 2) != x:
-                errs.append(here + " %s 는 소수 둘째 자리까지 — %r" % (col, x))
-        if not URL.match(c.get("latlon_src") or ""):
-            errs.append(here + " latlon_src 가 주소가 아니다")
-        pal = c.get("palette") or {}
-        if not (pal.get("en") or "").strip() or HANGUL.search(pal.get("en") or ""):
-            errs.append(here + " palette.en 이 비었거나 한국어")
-        hx = pal.get("hex") or []
-        if not 2 <= len(hx) <= 3 or not all(isinstance(h, str) and HEX.match(h) for h in hx):
-            errs.append(here + " palette.hex 는 #RRGGBB 2~3개 — %r" % (hx,))
-        sy = c.get("symbols") or []
-        if not 3 <= len(sy) <= 5:
-            errs.append(here + " symbols 는 3~5개 — %d" % len(sy))
-        for i, s in enumerate(sy):
-            if not (s.get("ko") or "").strip():
-                errs.append(here + " symbols[%d].ko 가 비었다" % i)
-            en(here + " symbols[%d].en" % i, s.get("en"), 3)
-            if not URL.match(s.get("src") or ""):
-                errs.append(here + " symbols[%d].src 가 주소가 아니다" % i)
-        ws = c.get("worlds")
-        if not isinstance(ws, dict):
-            errs.append(here + " worlds 는 {}(미정) 이거나 세 세계")
-            continue
-        if not ws:
-            undecided += 1
-            continue
-        line = (c.get("card_ko") or {}).get("symbols")
-        line = line.strip() if isinstance(line, str) else ""
-        if not line or len(line) > SHORT_SYMBOLS:
-            errs.append(here + " card_ko.symbols(상징 한 줄)가 비었거나 %d자 넘음 — %d자" % (SHORT_SYMBOLS, len(line)))
-        for part in [x.strip() for x in line.split(" · ") if x.strip()]:
-            if not any((s.get("ko") or "").startswith(part) for s in sy):
-                errs.append(here + " card_ko.symbols 의 %r 가 symbols[].ko 머리에 없다(지어내지 않는다)" % part)
+    def worlds_check(here, ws):
         if sorted(ws) != sorted(WORLDS):
             errs.append(here + " worlds 는 세 세계 다 — %r" % sorted(ws))
         for w, body in ws.items():
             if w not in WORLDS:
-                continue
+                return
             wh = here + " " + w
             if not (body.get("ko") or "").strip():
                 errs.append(wh + " ko 가 비었다")
@@ -205,6 +155,86 @@ def check(doc):
         far = [f for f in FACE_KEYS if len({(((ws.get(w) or {}).get("look") or {}).get("face") or {}).get(f) for w in WORLDS}) == len(WORLDS)]
         if len(far) < FACE_DIFF_MIN:
             errs.append("%s 세 세계 얼굴 칸 가운데 세계마다 다른 것이 %d개뿐(%d개 이상) — %s" % (here, len(far), FACE_DIFF_MIN, "·".join(far) or "없음"))
+
+    cities = doc.get("cities") or []
+    keys = [c.get("key") for c in cities]
+    if keys != CITY_KEYS:
+        errs.append("cities 열쇠가 계획 목록과 다르다 — %r" % keys)
+    undecided = 0
+    for c in cities:
+        k = c.get("key")
+        here = "도시 %r" % k
+        if not k or not KEY.match(k):
+            errs.append(here + " 열쇠는 소문자 · 숫자만")
+        for col in ("ko", "en", "country", "persona"):
+            if not (c.get(col) or "").strip():
+                errs.append(here + " %s 가 비었다" % col)
+        pp = c.get("people")
+        if not isinstance(pp, dict) or not (pp.get("ko") or "").strip() or not (pp.get("en") or "").strip() or HANGUL.search(pp.get("en") or ""):
+            errs.append(here + " people { ko, en } 이 없거나 비었다(그 나라 사람 — en 은 한국어 없이 한 낱말)")
+        for col, lim in (("lat", 90), ("lon", 180)):
+            x = c.get(col)
+            if not isinstance(x, (int, float)) or isinstance(x, bool) or not -lim <= x <= lim:
+                errs.append(here + " %s 가 범위 밖 — %r" % (col, x))
+            elif round(x, 2) != x:
+                errs.append(here + " %s 는 소수 둘째 자리까지 — %r" % (col, x))
+        if not URL.match(c.get("latlon_src") or ""):
+            errs.append(here + " latlon_src 가 주소가 아니다")
+        pal = c.get("palette") or {}
+        if not (pal.get("en") or "").strip() or HANGUL.search(pal.get("en") or ""):
+            errs.append(here + " palette.en 이 비었거나 한국어")
+        hx = pal.get("hex") or []
+        if not 2 <= len(hx) <= 3 or not all(isinstance(h, str) and HEX.match(h) for h in hx):
+            errs.append(here + " palette.hex 는 #RRGGBB 2~3개 — %r" % (hx,))
+        sy = c.get("symbols") or []
+        if not 3 <= len(sy) <= 5:
+            errs.append(here + " symbols 는 3~5개 — %d" % len(sy))
+        for i, s in enumerate(sy):
+            if not (s.get("ko") or "").strip():
+                errs.append(here + " symbols[%d].ko 가 비었다" % i)
+            en(here + " symbols[%d].en" % i, s.get("en"), 3)
+            if not URL.match(s.get("src") or ""):
+                errs.append(here + " symbols[%d].src 가 주소가 아니다" % i)
+        ws = c.get("worlds")
+        if not isinstance(ws, dict):
+            errs.append(here + " worlds 는 {}(미정) 이거나 세 세계")
+            continue
+        if not ws:
+            undecided += 1
+            continue
+        line = (c.get("card_ko") or {}).get("symbols")
+        line = line.strip() if isinstance(line, str) else ""
+        if not line or len(line) > SHORT_SYMBOLS:
+            errs.append(here + " card_ko.symbols(상징 한 줄)가 비었거나 %d자 넘음 — %d자" % (SHORT_SYMBOLS, len(line)))
+        for part in [x.strip() for x in line.split(" · ") if x.strip()]:
+            if not any((s.get("ko") or "").startswith(part) for s in sy):
+                errs.append(here + " card_ko.symbols 의 %r 가 symbols[].ko 머리에 없다(지어내지 않는다)" % part)
+        worlds_check(here, ws)
+        lms = c.get("landmarks") or []
+        seen_lm = set()
+        for l in lms:
+            lk = l.get("key")
+            lh = here + " 랜드마크 %r" % lk
+            if not lk or not KEY.match(lk) or lk in seen_lm:
+                errs.append(lh + " 열쇠는 소문자 · 숫자만('-' · '_' 없음)이고 도시 안에서 겹치지 않는다")
+            seen_lm.add(lk)
+            for col in ("ko", "en", "persona"):
+                if not (l.get(col) or "").strip():
+                    errs.append(lh + " %s 가 비었다" % col)
+            if not URL.match(l.get("src") or ""):
+                errs.append(lh + " src 가 주소가 아니다")
+            lw = l.get("worlds")
+            if not isinstance(lw, dict) or not lw:
+                errs.append(lh + " worlds 는 세 세계 다")
+                continue
+            worlds_check(lh, lw)
+            for w in WORLDS:
+                mine = (((lw.get(w) or {}).get("look") or {}).get("face") or {})
+                for other, ow in [(here, ws)] + [("랜드마크 %r" % o.get("key"), o.get("worlds") or {}) for o in lms if o is not l and o.get("key") in seen_lm]:
+                    theirs = (((ow.get(w) or {}).get("look") or {}).get("face") or {})
+                    diff = [f for f in FACE_KEYS if mine.get(f) != theirs.get(f)]
+                    if len(diff) < FACE_DIFF_MIN:
+                        errs.append("%s %s 얼굴이 %s 과 칸 %d개만 다르다(%d개 이상)" % (lh, w, other, len(diff), FACE_DIFF_MIN))
     if undecided:
         warns.append("설계 미정(worlds {}) 도시 %d곳" % undecided)
     return errs, warns

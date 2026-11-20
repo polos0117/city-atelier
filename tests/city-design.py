@@ -32,6 +32,11 @@ def sw(d, w):
     return city(d, "seoul")["worlds"][w]
 
 
+def lm(d, w=None):
+    h = city(d, "seoul")["landmarks"][0]
+    return h if w is None else h["worlds"][w]
+
+
 cases = {
     "세계 열쇠가 셋이 아님": lambda d: d["vocab"].__setitem__("worlds", ["fantasy", "steampunk", "mecha"]),
     "세계 열쇠 넷": lambda d: d["vocab"]["worlds"].append("mecha"),
@@ -73,6 +78,10 @@ cases = {
     "옷 말투 빠짐": lambda d: d["vocab"]["wear"]["cyberpunk"].pop("moderate"),
     "일상컷 세계 결 빠짐": lambda d: d["vocab"]["casual_world"]["fantasy"].pop("guard_en"),
     "일상컷 세계 결에 금지 낱말": lambda d: d["vocab"]["casual_world"]["steampunk"].update(en="a gaslamp city of polished brass and glass, warm gaslight and soot on every sill"),
+    "랜드마크 열쇠에 -": lambda d: lm(d).__setitem__("key", "hae-chi"),
+    "랜드마크 세계 둘뿐": lambda d: lm(d)["worlds"].pop("cyberpunk"),
+    "랜드마크 판타지 글에 broadcast tower": lambda d: lm(d, "fantasy").__setitem__("en", lm(d, "fantasy")["en"] + ", beside a broadcast tower"),
+    "해치 판타지 얼굴이 서울 판타지와 같음": lambda d: lm(d, "fantasy")["look"].__setitem__("face", dict(sw(d, "fantasy")["look"]["face"])),
 }
 for name, mut in cases.items():
     assert broken(mut), "검사기가 못 걸었다: " + name

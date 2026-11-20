@@ -180,7 +180,7 @@ assert(same(PC.build({ design: D, styles: S, city: undesigned[0].key, world: 'fa
     pc.includes('Style: ' + S.styles.painterly_concept.versions[0].casual + ' ' + T.CASUAL.short.keep), 'painterly_concept 는 예전 글');
 }
 /* 카드 = 도시 */
-assert(same(P.cards(D), D.cities.map(c => c.key)) && P.card(D, 'seoul').tier === 'city' && same(P.worldsOf(D, 'seoul'), D.vocab.worlds) && P.card(D, 'seoul-x') === null, '카드 = 도시 열쇠');
+assert(same(P.cards(D).filter(k => !k.includes('-')), D.cities.map(c => c.key)) && P.card(D, 'seoul').tier === 'city' && same(P.worldsOf(D, 'seoul'), D.vocab.worlds) && P.card(D, 'seoul-x') === null, '카드 = 도시 열쇠');
 const rec = P.record(D, S, 'seoul', 'steampunk', {});
 assert(rec.atelier === 'city' && rec.styleUndecided === false && rec.file === 'seoul_steampunk_' + S.default + '_f.webp' && rec.prompt === P.build(D, S, 'seoul', 'steampunk', {}), '기록');
 /* GPT 임의 설계 주문(tools/prompt-pack.cjs) — 도시 말, 원소 말 없음 */
@@ -191,5 +191,15 @@ for (const w of D.vocab.worlds) {
   assert(f.includes('adult ' + seoul.people.en + ' woman') && f.includes('strikingly beautiful') && !f.includes('description below') && f.includes('Hair colour (fixed'), w + ' 임의 설계 주문 — 사람 · 미형 · 머리색');
   assert(ban.length ? f.includes('Keep out of this world (fixed): ' + ban.join(', ')) : !f.includes('Keep out of this world'), w + ' 임의 설계 주문 — 금지 낱말');
 }
+/* 랜드마크 카드(2026-11-20) — 열쇠 <도시>-<랜드마크> 를 card 한 곳에서 푼다 */
+const LK = P.card(D, 'seoul-haechi');
+assert(LK && LK.tier === 'landmark' && LK.parent === 'seoul' && LK.people === 'Korean', '랜드마크 카드');
+assert(same(P.cards(D).slice(0, 2), ['seoul', 'seoul-haechi']), '도시 바로 뒤에 그 랜드마크');
+assert(same(P.worldsOf(D, 'seoul-haechi'), ['fantasy', 'steampunk', 'cyberpunk']), '랜드마크 세계');
+assert(same(P.landmarksOf(D, 'tokyo'), []), '랜드마크 없는 도시');
+assert.equal(P.parentOf('seoul-haechi'), 'seoul');
+assert(P.card(D, 'seoul').tier === 'city' && P.card(D, 'seoul-nope') === null, '도시 카드 그대로 · 없는 랜드마크 null');
+for (const w of T.WORLDS.map(x => x.key)) { const t = PC.build({ design: D, styles: S, city: 'seoul-haechi', world: w, style: S['default'], kind: 'world' }).text;
+  assert(/personification of Haechi, a landmark of the city of Seoul/.test(t) && !/haechi_/.test(t), w + ' 랜드마크 머리 줄'); }
 console.log('PASS 지시문 조립: ' + DESIGNED.map(c => c.ko).join(' · ') + ' × 세 세계 × 화풍 ' + LIVE.length + ' = ' + n + '장 — 표지 · motif · 머리색 · 금지 낱말(Avoid 줄 밖) · 이름 · mecha 던짐 · 설계 미정 ' + undesigned.length + '곳 · 노출 · 고른 칸; ' +
   '일상컷 ' + nc + '장(' + DESIGNED.map(c => c.ko + ' 생활 장면 ' + LIFE.cities[c.key].scenes.length).join(' · ') + ' × 세 세계 × 화풍) — 그 세계 장면 글 · 소품 · 옷의 결 · 금지 낱말(Avoid 단락 밖) · 휴대폰 사전 · lifeTree');

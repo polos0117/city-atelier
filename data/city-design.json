@@ -174,9 +174,9 @@
               {"key": "watchtower", "ko": "가스등 도시를 내려다보는 불 감시탑", "en": "on a fire watchtower of brass and stone overlooking the gaslit city, airships drifting in the golden sky"}
             ],
             "look": {
-              "face": {"face_shape": "square_soft", "eyes": "almond_wide", "brows": "straight_thick", "nose": "straight_narrow", "lips": "wide_smile", "eye_color": "emerald", "age": "early_30s", "impression": "mature", "skin_tone": "olive", "eye_size": "medium", "eye_tilt": "level", "mark": "smoky", "expr": "confident"},
+              "face": {"face_shape": "square_soft", "eyes": "almond_wide", "brows": "straight_thick", "nose": "broad_soft", "lips": "wide_smile", "eye_color": "emerald", "age": "early_30s", "impression": "mature", "skin_tone": "olive", "eye_size": "medium", "eye_tilt": "level", "mark": "smoky", "expr": "confident"},
               "silhouette": {"body": "curvy_athletic", "hair": "side_braid", "hair_color": "brass_gold", "bangs": "side_swept"},
-              "why": "태엽 해치를 돌보는 수호수지기 — 서울 스팀펑크의 날씬한 구리빛 핑거웨이브 항해사와 달리 단단하고 곡선 있는 사람. 굴곡 있는 운동 체형(curvy_athletic) · 한쪽으로 땋아 내린 놋쇠빛(brass_gold) 머리, 눈은 에메랄드. 각진 듯 부드러운 얼굴 · 넓은 아몬드 눈 · 굵고 곧은 눈썹 · 곧고 좁은 코 · 시원한 웃는 입, 올리브 피부, 눈가의 스모키 화장, 30대 초반의 성숙한 인상에 자신 있는 표정."
+              "why": "태엽 해치를 돌보는 수호수지기 — 서울 스팀펑크의 날씬한 구리빛 핑거웨이브 항해사와 달리 단단하고 곡선 있는 사람. 굴곡 있는 운동 체형(curvy_athletic) · 한쪽으로 땋아 내린 놋쇠빛(brass_gold) 머리, 눈은 에메랄드. 각진 듯 부드러운 얼굴 · 넓은 아몬드 눈 · 굵고 곧은 눈썹 · 넓고 부드러운 코 · 시원한 웃는 입, 올리브 피부, 눈가의 스모키 화장, 30대 초반의 성숙한 인상에 자신 있는 표정."
             },
             "hold": {"en": "an ornate brass winding key shaped like a haechi horn"},
             "motif": {
