@@ -268,7 +268,7 @@ const settle = p => p.waitForFunction(() => { const k = document.querySelector('
       const fl = [{ url: /\/data\/img\.json/, body: JSON.stringify(img), contentType: 'application/json' }];
       const o = await open('/index.html?city=seoul&w=fantasy', { fulfill: fl }), p = o.page;
       await p.waitForSelector('.th-cast'); await calm(p);
-      assert.equal(await p.locator('.th-marks .th-mark').count(), 1, '랜드마크 하나'); assert.equal(await p.locator('.th-mark[data-card="seoul-haechi"]').count(), 1);
+      assert.equal(await p.locator('.th-marks .th-mark').count(), 5, '랜드마크 다섯(해치 · 경복궁 · 남산 송신탑 · 한강철교 · 한양도성)'); assert.equal(await p.locator('.th-mark[data-card="seoul-haechi"]').count(), 1);
       assert.equal(await p.locator('.th-mark[data-card="seoul-haechi"] button').count(), 1, '그림 있는 세계 하나만 누를 수 있다');
       assert.equal(await p.locator('.th-mark[data-card="seoul-haechi"] .is-empty').count(), 2, '빈 자리 둘');
       assert.deepEqual(await smallTargets(p), [], '랜드마크 줄 44px'); assert(await H.noOverflow(p), '랜드마크 줄 넘침 없음');

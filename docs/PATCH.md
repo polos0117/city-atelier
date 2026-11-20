@@ -7,6 +7,11 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-20 · claude · 서울 랜드마크 넷 더함 — 경복궁 · 남산 송신탑 · 한강철교 · 한양도성
+- 사용자 「응 이대로 해줘」(랜드마크 카드 설계 승인). 서울 landmarks 에 해치 뒤로 넷을 더해 카드 다섯이 됐다. 세계마다 다른 사람(궁중 무희 · 연회 안주인 · 유리 돔 궁궐 관리자 / 봉화 정령 · 전파 등대지기 · 궤도 승강 칸 조종사 / 살아 있는 나무다리 수호자 · 기관사 · 자기부상 관제사 / 성곽 순찰 기사 · 가스등 문지기 · 빛 방어막 관리자).
+  data/city-design.json — landmarks 열쇠는 검사기 규칙(소문자 · 숫자만, '_' 없음)대로 gyeongbokgung · namsantower · hangangbridge · citywall(설계 문서의 namsan_tower 등은 카드 열쇠 꼴 때문에 붙여 씀). 남산 송신탑 en 은 "Namsan"(조립기가 en 을 그림 지시문 첫 줄에 실어 탑 이름이 새지 않게). 한강철교 사이버펑크 코를 broad_soft → small_button 으로(세 세계 얼굴 칸 셋 이상 다름 규칙).
+  tests/image-claim.cjs · tests/globe-screen.cjs — 카드 수가 박혀 있던 기대값(잠금 차례 · 서울 무대 랜드마크 줄 1 → 5)을 맞춤.
+
 ## 2026-11-20 · claude · 실내 장면의 계절 — 창밖 · 옷차림으로만
 - 사용자 「계절표현이 보니까 나무들로 되있던데, 실내공간까지 따라들어오는것 같아」. 일상컷 계절 줄(생활 장면표 seasons 의 en — 벚꽃 · 낙엽 · 은행잎 …)이 장소와 상관없이 실려 찜질방 · 고시원 같은 실내에도 나무 · 꽃잎이 들어왔다(날씨는 실내에서 이미 뺐다).  
   lib/prompt-city.js — 실내(생활 장면 indoor, 일반 장소는 장소 특징 indoor · timed — 계획기 placeRules 와 같은 기준)면 계절 이름만 싣고 lib/prompt-spec.js CASUAL.life.seasonIn(「창밖이나 옷차림으로만 — 방 안에 꽃 · 꽃잎 · 낙엽 · 눈 · 나무 없음」). 바깥 장면은 그대로. tests/casual-plan.cjs 계절 줄 단언을 실내 · 바깥으로 나눔. prompt.html ?v — prompt-spec · prompt-city 하나씩.
