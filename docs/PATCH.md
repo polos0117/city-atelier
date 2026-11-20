@@ -7,6 +7,9 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-20 · claude · core v7 — 얼굴 낱말에서 크기 말을 빼고 모양 · 방향만
+- 사용자 「이건 공통적으로 손볼 부분 같긴한데」 → 「이건 지금 고치자」 → 「옮겨주고」. style-atelier core/v7 — VOCAB_EN 얼굴 낱말(face_shape · eyes · brows · nose · lips 스물다섯)과 FACE_DESIGN.eye_size 에서 크기 말을 빼고, 이목구비 크기는 자연스러운 범위 · 차이는 눈꼬리 · 눈썹 곡선 · 입꼬리 · 턱선으로(예: square_soft · broad_soft · wide_smile · round_large). 도시 공방 해치 스팀펑크 시험에서 각진 얼굴 · 넓은 코 · 넓은 입 · 긴 아몬드 눈이 겹쳐 넓적하게 나왔다. 열쇠는 그대로 — 이 공방 lib/ 끝 core 블록을 node core/sync.cjs 로 v7 로 옮겼다(블록은 손으로 고치지 않는다). 이미 그린 그림은 그대로.
+
 ## 2026-11-20 · claude · 해치 스팀펑크 얼굴 — 넓적함 걷기
 - 사용자 「1번은 예쁜 서양인이고, 2번은 얼굴이 엄청 넓적하고 눈매는 길어서 못생기게 나왔는데. 원인이 뭘까?」 → 머리색 · 얼굴 시험(머리색 문구 셋 × 세 번, 얼굴 칸을 바꾼 것과 안 바꾼 것) → 「염색 효과는 없어도 되겠네. 얼굴만 바꾸자」.  
   data/city-design.json 해치 스팀펑크 look.face — 눈 almond_wide → droopy_soft, 눈썹 straight_thick → soft_round, 코 broad_soft → straight_narrow(처음 승인안으로 — 검사기에 맞추느라 넓은 코로 바꿨던 칸), 입 wide_smile → small_bow, 눈색 emerald → hazel, why 글도. 얼굴형 square_soft 는 그대로(서울 스팀펑크 여섯 사람이 얼굴형을 하나씩 나눠 가진다). 시험에서 얼굴 칸을 바꾸자 아홉 장 모두 넓적함 · 긴 눈매가 빠졌고, 머리색 「hair dyed …」 는 장마다 효과가 갈려 넣지 않았다. 검사기 통과.
