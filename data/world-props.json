@@ -102,6 +102,18 @@
   "microphone": { "ko": "마이크", "worlds": {
    "fantasy": { "en": "a carved speaking-shell that carries her voice" },
    "steampunk": { "en": "a brass-horned voice trumpet" },
-   "cyberpunk": { "en": "a glowing wireless microphone" } } }
+   "cyberpunk": { "en": "a glowing wireless microphone" } } },
+  "slice": { "ko": "조각 피자", "worlds": {
+   "fantasy": { "en": "a hot, thin wedge of tomato-and-cheese flatbread pie folded in half" },
+   "steampunk": { "en": "a hot, thin slice of tomato-and-cheese pie folded on brown paper" },
+   "cyberpunk": { "en": "a hot, thin pizza slice folded on a glowing heat-plate" } } },
+  "street_food": { "ko": "길거리 음식", "worlds": {
+   "fantasy": { "en": "a warm flatbread wrapped around spiced meat in a twist of waxed cloth" },
+   "steampunk": { "en": "a hot sausage in a split roll wrapped in waxed paper" },
+   "cyberpunk": { "en": "a steaming wrap in a self-heating sleeve with a glowing seal" } } },
+  "laundry_basket": { "ko": "빨래 바구니", "worlds": {
+   "fantasy": { "en": "a deep reed hamper of folded linen" },
+   "steampunk": { "en": "a wicker laundry basket of pressed linen tied with a ribbon" },
+   "cyberpunk": { "en": "a collapsible smart laundry tote with a glowing band" } } }
  }
 }

@@ -29,13 +29,13 @@ for (const style of LIVE) {
     assert(/^One figure only; no text/m.test(B[5]) && !/five fingers/.test(B[5]) && /^Avoid: /m.test(B[5]), id + ' 5칸 — 손가락 말 없음 · Avoid(④⑤)');
     assert(!lines.some(l => !/^Avoid: /.test(l) && /(?:^|[.;:] )No [a-z]/.test(l) && !/unless/.test(l)), id + ' 「No …」 금지 문장은 Avoid 로(조건 unless 마디만 남김)');
     assert(!/\b(?:CONCEPT|WORLD|SILHOUETTE|TIME & WEATHER|TRAITS|EXPOSURE|IDENTITY|CITY MOTIF|WORLD MARKS|PROP|SETTING)\b/.test(t) && !/\.\./.test(t) && !/: \./.test(t), id + ' 옛 줄 이름 · 찌꺼기 없음');
-    const wc = t.split(/\s+/).length; maxW = Math.max(maxW, wc); assert(wc > 450 && wc < 950, id + ' 낱말 ' + wc);
+    const wc = t.split(/\s+/).length; maxW = Math.max(maxW, wc); assert(wc > 450 && wc < 1150, id + ' 낱말 ' + wc);   /* 상한 950 → 1150(2026-11-20 — 카드마다 실루엣 줄이 붙고 뉴욕 · 서울 판타지가 넘었다, 글은 줄이지 않는다) */
     n++;
   }
 }
 /* 스팀펑크 HAIR 조각은 2칸 Hair 줄로, 고른 시간대가 있으면 빛 줄이 그것을 가리킨다 */
 const sp = P.build(D, S, 'seoul', 'steampunk', {});
-assert(/^Hair: her hair is worn exactly as described above/m.test(sp) && /^Costume: gaslamp-fantasy dress of a storybook steam city/m.test(sp) && /^Avoid: [^\n]*armor plates/m.test(sp), '서울 스팀펑크 — Hair 줄 · 의상 글 · 금지는 Avoid');
+assert(/^Hair: her hair is worn exactly as described above/m.test(sp) && /^Costume: gaslamp-fantasy dress of a storybook steam city/m.test(sp) && /^Avoid: /m.test(sp) && /^Silhouette: /m.test(sp), '서울 스팀펑크 — Hair 줄 · 의상 글 · Avoid · 실루엣 줄');   /* 2026-11-20 옷 말투의 「No armor plates, no crown, no corset」 을 뺐다 — 옷의 꼴은 카드 실루엣이 정한다(철갑 실루엣도 있다) */
 const times = T.WORLD_TIMES || [];
 /* 판에 빛 줄(worldLight)이 있는 화풍(기본 kr_drawn_rim_dewy, 2026-11-20)은 그 줄이 이긴다 — 세계 글 빛 조각을 쓰는 painterly_concept 로 본다 */
 const tt = P.build(D, S, 'seoul', 'steampunk', { style: 'painterly_concept', shot: { time: times[0].key } });

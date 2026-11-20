@@ -23,6 +23,12 @@
    { "key": "summer", "ko": "한여름", "en": "high summer — hot, humid air and strong sunlight", "src": "https://en.wikipedia.org/wiki/Tokyo" },
    { "key": "autumn", "ko": "가을 은행잎", "en": "autumn — clear, mild air and ginkgo trees turning bright golden yellow", "src": "https://en.wikipedia.org/wiki/Ginkgo_biloba" },
    { "key": "winter", "ko": "겨울", "en": "winter — cool, dry, clear air under bright pale skies", "src": "https://en.wikipedia.org/wiki/Tokyo" }
+  ],
+  "newyork": [
+   { "key": "spring", "ko": "봄", "en": "spring — mild air, fresh green leaves and flowering trees in the parks", "src": "https://en.wikipedia.org/wiki/Climate_of_New_York_City" },
+   { "key": "summer", "ko": "한여름", "en": "high summer — hot, humid air and strong sunlight", "src": "https://en.wikipedia.org/wiki/Climate_of_New_York_City" },
+   { "key": "autumn", "ko": "가을 단풍", "en": "autumn — crisp, clear air and park trees turning red, orange and gold", "src": "https://en.wikipedia.org/wiki/Climate_of_New_York_City" },
+   { "key": "winter", "ko": "겨울", "en": "winter — cold air, bare trees and old snow along the curbs", "src": "https://en.wikipedia.org/wiki/Climate_of_New_York_City" }
   ]
  },
  "weather": {
@@ -40,6 +46,13 @@
    { "key": "muggy", "ko": "후텁지근함", "en": "muggy heat — the air thick and damp, a haze over the distance", "seasons": ["tsuyu", "summer"], "src": "https://en.wikipedia.org/wiki/Tokyo" },
    { "key": "typhoon_edge", "ko": "태풍 언저리", "en": "the edge of a passing typhoon — gusty wind and sweeping rain under fast-moving grey clouds", "seasons": ["summer", "autumn"], "src": "https://en.wikipedia.org/wiki/Tokyo" },
    { "key": "light_snow", "ko": "드문 눈", "en": "a rare light snowfall — soft flakes drifting through the cold air", "seasons": ["winter"], "src": "https://en.wikipedia.org/wiki/Tokyo" }
+  ],
+  "newyork": [
+   { "key": "shower", "ko": "지나가는 비", "en": "a passing rain shower — wet streets shining and the air washed clean", "seasons": ["spring", "summer", "autumn"], "src": "https://en.wikipedia.org/wiki/Climate_of_New_York_City" },
+   { "key": "heat_wave", "ko": "찌는 무더위", "en": "a humid heat wave — the air thick and hazy, heat shimmering off the streets", "seasons": ["summer"], "src": "https://en.wikipedia.org/wiki/Climate_of_New_York_City" },
+   { "key": "thunderstorm", "ko": "여름 뇌우", "en": "a summer thunderstorm rolling in — dark clouds, a sudden downpour and the street shining wet", "seasons": ["summer"], "src": "https://en.wikipedia.org/wiki/Climate_of_New_York_City" },
+   { "key": "snowfall", "ko": "눈", "en": "snow falling softly through the cold air and settling on every ledge", "seasons": ["winter"], "src": "https://en.wikipedia.org/wiki/Climate_of_New_York_City" },
+   { "key": "noreaster", "ko": "노이스터(북동풍 눈보라)", "en": "a nor'easter — a cold wind off the sea driving heavy snow and sleet sideways", "seasons": ["winter"], "src": "https://en.wikipedia.org/wiki/Nor%27easter" }
   ]
  },
  "cities": {
@@ -689,6 +702,188 @@
       "fantasy": { "en": "a sleeping alcove in a stacked inn of tiny chambers in the capital — a pale-wood niche just big enough to lie in, a thick quilt, a paper screen and a small glowing lantern", "props": ["book", "lamp", "cup", "key"] },
       "steampunk": { "en": "a sleeping berth in a stacked inn of tiny cabins — a polished wooden berth just big enough to lie in, a brass reading lamp, a velvet curtain and a little shelf for her watch", "props": ["book", "lamp", "cup", "watch"] },
       "cyberpunk": { "en": "a sleeping capsule in a stacked capsule hotel of the far future — a sleek curved pod of white smart material, soft mood light, a ceiling screen and a sliding hatch", "props": ["phone", "book", "cup", "lamp"] }
+     }
+    }
+   ]
+  },
+  "newyork": {
+   "scenes": [
+    {
+     "key": "subway_rush",
+     "ko": "지하철 출퇴근길 만원 객차",
+     "src": ["https://en.wikipedia.org/wiki/New_York_City_Subway"],
+     "base": "subway_car",
+     "indoor": true,
+     "times": ["commute_am", "commute_pm"],
+     "outfits": ["everyday", "workwear", "dongtan", "subculture", "retro"],
+     "en": "a packed subway car at rush hour under the city",
+     "worlds": {
+      "fantasy": { "en": "a packed rune-lit carriage of the deep tunnels beneath the island capital at rush hour — carved oak benches, brass hand-rings swaying overhead, travelers in cloaks and long robes pressed shoulder to shoulder, glowing tile mosaics sliding past the windows", "props": ["ticket", "book", "bag", "lamp"] },
+      "steampunk": { "en": "a packed wooden carriage of the underground steam railway at rush hour — rattan benches, leather hand-straps from a brass rail, etched-glass gas lamps, clerks with folded newspapers and ladies in feathered hats pressed shoulder to shoulder, white-tiled station walls sliding past", "props": ["ticket", "watch", "bag", "book"] },
+      "cyberpunk": { "en": "a packed driverless maglev car deep under the towers at rush hour — a sleek curved cabin of smart glass, chrome grab rails, commuters lit by their wrist screens and light-lined tunnel walls streaking past", "props": ["phone", "music", "ticket", "bag"] }
+     }
+    },
+    {
+     "key": "bodega_night",
+     "ko": "한밤의 길모퉁이 보데가(구멍가게)",
+     "src": ["https://en.wikipedia.org/wiki/Bodega"],
+     "base": "street_grocery",
+     "indoor": true,
+     "times": ["night_out", "past_midnight"],
+     "outfits": ["everyday", "subculture", "dongtan", "homewear"],
+     "en": "a cramped all-night corner store with a sandwich counter",
+     "worlds": {
+      "fantasy": { "en": "the cramped all-night corner provisions shop of the capital, lit warm by glowing glass orbs — shelves crammed to the ceiling with jars and loaves, a counter where the keeper builds a hot egg-and-cheese roll, a striped cloth awning over the door", "props": ["bowl", "money", "shopping_bag", "lamp"] },
+      "steampunk": { "en": "a cramped all-night corner grocer bright with gaslight — shelves of tins and jars to the ceiling, a marble counter where the grocer wraps a hot egg-and-cheese roll in waxed paper, a brass till and a striped awning over the door", "props": ["bowl", "money", "shopping_bag", "watch"] },
+      "cyberpunk": { "en": "a cramped all-night corner store kept alive under the far-future towers — smart shelves crammed to the ceiling, a sandwich counter under a glowing hood, a drone hatch by the door and a checkout that reads her wrist", "props": ["bowl", "phone", "shopping_bag", "drink_glass"] }
+     }
+    },
+    {
+     "key": "park_lawn",
+     "ko": "센트럴 파크 큰 잔디밭 피크닉",
+     "src": ["https://en.wikipedia.org/wiki/Central_Park", "https://en.wikipedia.org/wiki/Sheep_Meadow"],
+     "base": "street_park",
+     "times": ["midday", "commute_pm"],
+     "seasons": ["spring", "summer", "autumn"],
+     "outfits": ["everyday", "active", "dongtan", "retro", "subculture"],
+     "en": "a picnic on the great open lawn of the city's central park, towers above the trees",
+     "worlds": {
+      "fantasy": { "en": "a picnic on the great meadow lawn of the walled forest garden — a woven rush mat on the grass, a basket of bread, cheese and apples, ancient elms all around and white-and-gold towers rising above the trees", "props": ["mat", "bowl", "book", "cup"] },
+      "steampunk": { "en": "a picnic on the great open meadow of the central park — a canvas groundsheet on the grass, a wicker hamper and stoneware bottles of lemonade, elms in every direction and tall stone towers rising above the trees", "props": ["mat", "bowl", "umbrella", "cup"] },
+      "cyberpunk": { "en": "a picnic on the great open lawn of the central park two centuries on — a glowing mat on real grass, boxed lunches, real elms all around and towers of light rising far above the trees", "props": ["mat", "bowl", "drink_glass", "music"] }
+     }
+    },
+    {
+     "key": "brownstone_stoop",
+     "ko": "브라운스톤 집 앞 계단의 저녁",
+     "src": ["https://en.wikipedia.org/wiki/Brownstone", "https://en.wikipedia.org/wiki/Stoop_(architecture)"],
+     "base": "home_balcony",
+     "times": ["commute_pm", "night_out"],
+     "seasons": ["spring", "summer", "autumn"],
+     "outfits": ["everyday", "homewear", "retro", "dongtan"],
+     "en": "sitting on the front stoop of a brownstone row house on a warm evening",
+     "worlds": {
+      "fantasy": { "en": "the tall carved-stone front steps of a red-sandstone row house in the capital on a warm evening — wrought-iron railings curled into vines, potted flowers on the steps, neighbours chatting from the next stoop and lantern light in the windows", "props": ["cup", "book", "lamp", "bowl"] },
+      "steampunk": { "en": "the tall stoop of a brownstone row house on a warm evening — curled cast-iron railings, potted geraniums on the steps, a gas lamp just lit at the curb and neighbours chatting from the next stoop", "props": ["cup", "book", "lamp", "watch"] },
+      "cyberpunk": { "en": "the stoop of an old brownstone row house kept two centuries on between the towers — warm stone steps under a soft smart-light lamp, ivy on the railings and delivery drones drifting overhead", "props": ["cup", "phone", "drink_glass", "music"] }
+     }
+    },
+    {
+     "key": "fire_stair_night",
+     "ko": "한여름 밤 비상계단 바람 쐬기",
+     "src": ["https://en.wikipedia.org/wiki/Fire_escape"],
+     "base": "home_balcony",
+     "times": ["night_out", "past_midnight"],
+     "seasons": ["summer"],
+     "outfits": ["homewear", "lingerie", "everyday"],
+     "en": "the iron fire stair outside an apartment window on a hot summer night",
+     "worlds": {
+      "fantasy": { "en": "the wrought-iron balcony stair clinging outside an upper window of a tall stone row house in the capital on a hot summer night — a pillow and a jug of cool water on the iron slats, potted herbs, open windows all down the street and the warm lights of the city below", "props": ["cup", "lamp", "fan", "book"] },
+      "steampunk": { "en": "the cast-iron fire stair outside an upper window of a red-brick tenement on a hot summer night — a pillow and a jug of iced tea on the iron slats, potted herbs, open windows and washing lines across the street, gas lamps glowing below", "props": ["cup", "lamp", "fan", "music"] },
+      "cyberpunk": { "en": "an old iron fire stair kept on a brick building among the far-future towers on a hot summer night — a cushion and a cold drink on the iron slats, a little humming fan and the glowing windows of the towers rising all around", "props": ["drink_glass", "fan", "phone", "lamp"] }
+     }
+    },
+    {
+     "key": "harbour_ferry",
+     "ko": "항구 연락선 갑판(스태튼아일랜드 페리)",
+     "src": ["https://en.wikipedia.org/wiki/Staten_Island_Ferry"],
+     "base": "travel_ferry",
+     "times": ["commute_am", "commute_pm", "night_out"],
+     "outfits": ["everyday", "workwear", "dongtan", "retro"],
+     "en": "the open deck of the harbour commuter ferry passing the great statue",
+     "worlds": {
+      "fantasy": { "en": "the open deck of a great harbour barge crossing to the island capital — salt wind in the sails, passengers at the rails and the colossal verdigris guardian with her torch of living flame passing close by", "props": ["ticket", "bag", "cup", "camera"] },
+      "steampunk": { "en": "the open deck of a paddle-wheel harbour ferry — white steam from its twin funnels, passengers at the brass rails and the copper-green colossus raising her torch close across the water", "props": ["ticket", "camera", "watch", "bag"] },
+      "cyberpunk": { "en": "the open deck of a silent hydrofoil harbour ferry two centuries on — glass rails, commuters at the edge, the old statue on her island close by and the beacon beam of her torch rising into the clouds", "props": ["ticket", "phone", "camera", "drink_glass"] }
+     }
+    },
+    {
+     "key": "coney_beach",
+     "ko": "코니아일랜드 해변과 보드워크",
+     "src": ["https://en.wikipedia.org/wiki/Coney_Island", "https://en.wikipedia.org/wiki/Riegelmann_Boardwalk"],
+     "base": "water_beach",
+     "times": ["midday", "commute_pm"],
+     "seasons": ["summer"],
+     "outfits": ["swimwear", "active", "resort"],
+     "en": "a crowded summer beach beside a wooden boardwalk and an old amusement park",
+     "worlds": {
+      "fantasy": { "en": "a crowded summer beach of golden sand by the sea gate of the capital — a long boardwalk of pale planks, striped silk pavilions, a great carved carousel and a wheel of lanterns turning above the fair", "props": ["float_ring", "umbrella", "cup", "fan"] },
+      "steampunk": { "en": "a crowded summer beach beside the long wooden boardwalk — striped bathing tents, a great iron pleasure wheel and a carousel of painted horses turning in white steam, lemonade at a brass stand", "props": ["float_ring", "umbrella", "cup", "fan"] },
+      "cyberpunk": { "en": "a crowded summer beach two centuries on — a boardwalk of warm smart planks, a towering wheel and a roller coaster traced in light and shade canopies floating overhead", "props": ["float_ring", "drink_glass", "fan", "music"] }
+     }
+    },
+    {
+     "key": "food_cart",
+     "ko": "길모퉁이 할랄 카트 · 핫도그 수레 점심",
+     "src": ["https://en.wikipedia.org/wiki/Halal_cart", "https://en.wikipedia.org/wiki/Hot_dog_cart", "https://en.wikipedia.org/wiki/Food_cart"],
+     "base": "street_noodle_stall",
+     "times": ["midday", "commute_pm", "night_out"],
+     "outfits": ["everyday", "workwear", "dongtan", "subculture"],
+     "en": "a steaming street-food cart on a busy corner, a quick lunch from the cart",
+     "worlds": {
+      "fantasy": { "en": "a steaming food cart on a busy corner of the capital — spiced meat turning on a spit, yellow saffron rice, warm flatbread and a striped canopy, a line of hungry clerks and guards at noon", "props": ["street_food", "bowl", "money", "sign"] },
+      "steampunk": { "en": "a steaming food cart on a busy corner — sausages sizzling on a steam-heated griddle, warm pretzels hanging on pegs, a striped canopy and polished brass fittings, clerks lining up at noon", "props": ["street_food", "money", "watch", "sign"] },
+      "cyberpunk": { "en": "a steaming street-food cart on a busy far-future corner — spiced rice and grilled meat under a glowing hood, a holographic menu floating over the canopy and a pay pad on the side", "props": ["street_food", "bowl", "phone", "sign"] }
+     }
+    },
+    {
+     "key": "slice_shop",
+     "ko": "조각 피자 가게 카운터",
+     "src": ["https://en.wikipedia.org/wiki/New_York%E2%80%93style_pizza"],
+     "base": "street_cafe",
+     "indoor": true,
+     "times": ["midday", "night_out", "past_midnight"],
+     "outfits": ["everyday", "dongtan", "subculture", "retro"],
+     "en": "a narrow pizza-by-the-slice shop, a big thin slice folded in half",
+     "worlds": {
+      "fantasy": { "en": "a narrow bakehouse of the capital that sells pie by the slice — a roaring stone oven, great thin wheels of tomato-and-cheese flatbread pie on the counter and a wedge folded in half to eat standing", "props": ["slice", "drink_glass", "money", "lamp"] },
+      "steampunk": { "en": "a narrow slice shop with a black-and-white tiled floor — a big brick oven glowing, great thin tomato-and-cheese pies on a marble counter, a slice folded in half on brown paper and a brass bell over the door", "props": ["slice", "drink_glass", "money", "watch"] },
+      "cyberpunk": { "en": "a narrow pizza-by-the-slice counter two centuries on — a glowing oven, great thin pies under a heat canopy, a slice folded in half on a glowing heat-plate and the night street of light beyond the window", "props": ["slice", "drink_glass", "phone", "sign"] }
+     }
+    },
+    {
+     "key": "theatre_backstage",
+     "ko": "극장가 공연 전 분장실",
+     "src": ["https://en.wikipedia.org/wiki/Broadway_theatre", "https://en.wikipedia.org/wiki/Theater_District,_Manhattan"],
+     "base": "night_powder",
+     "indoor": true,
+     "times": ["commute_pm", "night_out"],
+     "outfits": ["roleplay", "costume", "evening", "retro"],
+     "en": "a theatre dressing room before a show in the theatre district",
+     "worlds": {
+      "fantasy": { "en": "a dressing room under the stage of a grand playhouse of the capital before the show — a mirror ringed with glowing orbs, racks of jewelled costumes, masks on hooks and the murmur of the audience through the walls", "props": ["lamp", "cup", "fan", "book"] },
+      "steampunk": { "en": "a dressing room backstage at a gaslit playhouse before the show — a mirror ringed with little gas lamps, racks of sequinned costumes and feathered headdresses, a call bell ringing down the corridor", "props": ["lamp", "cup", "fan", "watch"] },
+      "cyberpunk": { "en": "a dressing room backstage at a far-future theatre before the show — a mirror framed in soft smart light, racks of light-woven costumes and a holographic cue sheet floating by the door", "props": ["lamp", "drink_glass", "phone", "fan"] }
+     }
+    },
+    {
+     "key": "laundromat",
+     "ko": "동네 코인 빨래방",
+     "src": ["https://en.wikipedia.org/wiki/Self-service_laundry"],
+     "base": "street_laundromat",
+     "indoor": true,
+     "times": ["midday", "commute_pm", "night_out", "past_midnight"],
+     "outfits": ["everyday", "homewear", "dongtan", "subculture"],
+     "en": "a neighbourhood laundromat with rows of washers, waiting for the wash",
+     "worlds": {
+      "fantasy": { "en": "a neighbourhood washhouse of the capital — rows of great wooden tubs turned by water-spirit wheels, linen drying on lines overhead, warm lantern light and a bench to wait on", "props": ["laundry_basket", "book", "cup", "lamp"] },
+      "steampunk": { "en": "a neighbourhood steam laundry — rows of brass-bound washing drums turning in soft white steam, a long folding table, linen on drying racks and a bench to wait on under a gas lamp", "props": ["laundry_basket", "book", "watch", "cup"] },
+      "cyberpunk": { "en": "a neighbourhood laundromat of the far future — rows of sleek glowing wash pods, a folding counter of smart glass, a drone sorting baskets and a bench to wait on", "props": ["laundry_basket", "phone", "music", "drink_glass"] }
+     }
+    },
+    {
+     "key": "new_year_ball",
+     "ko": "새해 전야 타임스스퀘어 볼 드롭",
+     "src": ["https://en.wikipedia.org/wiki/Times_Square_Ball"],
+     "base": "stage_fireworks",
+     "times": ["night_out", "past_midnight"],
+     "seasons": ["winter"],
+     "outfits": ["everyday", "evening", "dongtan", "subculture"],
+     "en": "the New Year's Eve crowd in the great square counting down as a glittering ball descends",
+     "worlds": {
+      "fantasy": { "en": "the great square of the capital on the last night of the year — a packed crowd in winter cloaks counting down as a giant glittering crystal orb descends a tall pole, sparks of light bursting over everyone", "props": ["cheer", "lamp", "cup", "camera"] },
+      "steampunk": { "en": "the great square on the last night of the year — a packed crowd in wool coats and top hats counting down as a glittering ball of cut glass and brass descends a tall flagpole, paper confetti and fireworks bursting overhead", "props": ["cheer", "lamp", "cup", "watch"] },
+      "cyberpunk": { "en": "the great square two centuries on, on the last night of the year — a packed crowd counting down as a giant glittering orb of light descends between the towers, light-confetti and drone fireworks bursting overhead", "props": ["cheer", "phone", "drink_glass", "camera"] }
      }
     }
    ]

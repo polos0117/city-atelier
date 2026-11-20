@@ -1,6 +1,6 @@
 /* 화면 검사 — 화풍 비교 · 생성기를 브라우저로 연다. 폴드 덮개(344×882)와 PC(1280).
    도시 꼴(2026-11-19 Task 3): 생성기는 도시 › 갈래 › 단계. 세계 그림은 세계 → 장면 → 자세 · 표정 → 실루엣 → 설계 줄 → 외형 → 덧붙임 → 다 골랐다 —
-   화면이 지은 지시문이 node 쪽 조립기(lib/prompt-city.js)와 글자 하나 다르지 않다. 도시 판은 열 곳(설계 미정 여덟은 누를 수 없다), 화풍 고르개(내린 화풍 빠짐), 주소 ?card=&o=&world=,
+   화면이 지은 지시문이 node 쪽 조립기(lib/prompt-city.js)와 글자 하나 다르지 않다. 도시 판은 열 곳(설계 미정 일곱은 누를 수 없다), 화풍 고르개(내린 화풍 빠짐), 주소 ?card=&o=&world=,
    폰 칩 레일 · 아래 막대 · 시트, 새로 고쳐도 남음, 옆 넘침 없음, 콘솔 오류 없음.
    일상컷(Task 4): 세계 → 시대 → 장소(서울 생활 장면) → … 한 칸씩 · 화면 지시문 = 조립기(생활 장면표 · 세계 소품 사전) · 그 세계 장면 글 · 금지 낱말은 Avoid 단락만 ·
    손에 드는 그 도시의 물건 · 해방 · 랜덤 · 여기부터 다시 · 처음부터 다시 · 파일 이름 · 주소.
@@ -75,7 +75,7 @@ const lineOf = (txt, head) => (String(txt).split('\n').find(l => l.startsWith(he
         assert.deepEqual(gv.errors, [], '생성기 화풍 콘솔'); checks += 11; await gv.ctx.close();
       }
 
-      /* 도시 판 — 처음 오면 도시부터. 열 곳, 설계 미정(서울 · 도쿄 말고 여덟)은 누를 수 없다 */
+      /* 도시 판 — 처음 오면 도시부터. 열 곳, 설계 미정(서울 · 도쿄 · 뉴욕 말고 일곱)은 누를 수 없다 */
       const v = await open('/prompt.html'), p = v.page;
       await p.evaluate(() => localStorage.removeItem('city_studio_v1')); await p.reload(); await p.waitForSelector('#panel .opt');
       assert.equal(await openOf(p), 'city', '처음은 도시 판');

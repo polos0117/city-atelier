@@ -7,6 +7,15 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-20 · claude · 뉴욕 설계 — 시안
+- 사용자 「city-atelier 에 뉴욕 설계해줘」. 도쿄 꼴을 따른 시안(시험 그림 전). 다른 도시는 그대로.
+- data/city-design.json — 뉴욕 en 「New York City」 → 「New York」(머리 줄이 「the city of New York City」 로 겹쳐서). 상징에 노란 택시 하나 더(근거 https://en.wikipedia.org/wiki/Taxis_of_New_York_City), card_ko.symbols · design_note(근거 주소들). 세 세계 — 판타지 「횃불 수호상의 새벽 항구 왕도」(항구의 빛을 다스리는 여군주, 짙은 갈색 피부 · 고금빛 곱슬 · 큰 키 · 일곱 빛살 티아라 · 녹청 비단 · 빅 애플 사과 홀), 스팀펑크 「가스등 브라운스톤 거리」(고가 증기 철로 · 놋쇠 케이블 돌탑 다리 · 돌탑 꼭대기 비행선 계류탑 — 엠파이어 스테이트 빌딩 첨탑이 원래 계류탑으로 지어진 사실, 이름은 지시문에 안 씀 · 흰 피부 · 테라코타 올림머리 · 곡선 몸 · 다리 케이블 재킷 · 횃불 모양 놋쇠 등), 사이버펑크 「두 세기 뒤 뉴욕」(1마일 아콜로지 · 하늘 택시 길 · 빛의 돔 아래 숲 협곡 · 올리브 피부 · 코발트 땋은머리 · 탄탄한 몸 · 아르데코 계단식 깃 · 택시 노랑 빛). 얼굴 칸 다섯이 세 세계끼리 모두 다르고 서울 · 도쿄 사람(랜드마크 포함)과도 셋 이상 다르다. 판타지 · 스팀펑크만 세계 palette(「taxi yellow」 가 지시문에 실려 현대로 끌어서).
+- data/city-life.json — 뉴욕 계절 넷(봄 · 한여름 · 가을 단풍 · 겨울) · 날씨 다섯(지나가는 비 · 무더위 · 여름 뇌우 · 눈 · 노이스터), 생활 장면 열둘(지하철 만원 객차 · 한밤의 보데가 · 센트럴 파크 잔디밭 피크닉 · 브라운스톤 현관 계단 · 한여름 밤 비상계단 · 항구 연락선 · 코니아일랜드 해변 · 할랄 카트 · 조각 피자 · 극장가 분장실 · 코인 빨래방 · 새해 전야 볼 드롭). 근거는 위키백과(있는지 API 로 확인). 받침은 대부분 다른 도시가 쓰는 것, 연락선 travel_ferry · 해변 water_beach · 빨래방 street_laundromat 은 트리에 있는 장소를 처음 썼다. 비상계단은 「fire escape」 의 escape 가 일상컷 검사의 cape 에 걸려 「fire stair」 로.
+- data/world-props.json — 소품 셋(조각 피자 slice · 길거리 음식 street_food · 빨래 바구니 laundry_basket)을 세 세계 함께 더함.
+- data/casual-own.json — 뉴욕 뿌리 「자유의 여신상의 횃불 — 바다를 건너온 이들을 맞는 도시」(story), 세계마다 직업: 항구 횃불 등대지기(light_check · sig_raise) · 이민 섬 등록 홀 안내원(counter_work · sig_both) · 하늘 택시 승강장 착륙 유도원(half_kneel_use · sig_hold). 계획기가 90번을 세 세계 다 짠다.
+- tests/prompt-city.cjs — 설계 미정 여덟 → 일곱, 이름 표에 뉴욕 사유 건물 · 상표(Empire State · Chrysler · Rockefeller · Yellow Cab · Broadway …). tests/image-claim.cjs — 몫 차례에 뉴욕 셋 · 빈 자리 33. tests/dex-screen.cjs · tests/screen.cjs — 설계된 도시 셋.
+- 남은 것: tests/prompt-sections.cjs 낱말 상한(950)은 전부터 서울 판타지(1006)로 걸려 있다. 뉴욕은 기본 화풍에서 판타지 974 · 스팀펑크 1021 · 사이버펑크 901 — 둘이 상한을 넘는다(줄이지 않았다).
+
 ## 2026-11-20 · gpt · 도쿄 스팀펑크 도감 설명 갱신
 - data/city-design.json — 대표컷 1번의 자주색 리본, 은행잎 장식 치마와 벚꽃 놋쇠 랜턴을 도감에 반영.
 

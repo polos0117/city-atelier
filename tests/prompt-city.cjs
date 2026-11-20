@@ -1,5 +1,5 @@
 /* 지시문 조립(lib/prompt-city.js) — 도시 한 층 · 세 세계(계획 Task 3).
-   설계된 도시(서울 · 도쿄 2026-11-20) × 세 세계 세계 그림(kind 'world')이 (a) 그 세계 표지(vocab.markers.<세계>.en) 셋 이상 (b) 그 도시 motif.en (c) 그 사람 머리색 낱말을 싣고,
+   설계된 도시(서울 · 도쿄 · 뉴욕 2026-11-20) × 세 세계 세계 그림(kind 'world')이 (a) 그 세계 표지(vocab.markers.<세계>.en) 셋 이상 (b) 그 도시 motif.en (c) 그 사람 머리색 낱말을 싣고,
    (d) 그 세계 banned_en 낱말이 하나도 없다 — 금지 줄(sections.negative, 칸 꼴 5칸의 「Avoid:」 한 줄)만 빼고 본다. 금지 낱말을 「no …」 로 적는 곳은 그 줄뿐이다
        (원소 조립기의 칸 꼴이 「No …」 금지를 5칸 Avoid 로 모으는 꼴을 따랐다 — 판타지 옷 말투의 「no machinery」 는 Avoid 로 간다).
    (e) 상표 · 실존 인물 이름(아래 작은 표)이 없다 (f) world 가 mecha(세 세계 밖)면 던진다 (g) 설계 미정 도시는 던지지 않고 { text: '', missing: ['worlds'] }.
@@ -16,7 +16,8 @@ const word = (w, flags) => new RegExp('\\b' + esc(w) + '\\b', flags);
 
 /* 상표 · 실존 인물 이름 — 서울 상징 · 설계에서 새기 쉬운 것(남산 송신탑의 상표 이름, 대기업 · 가게, 왕 · 장군 · 가수). 대소문자 그대로 낱말 경계로 본다 */
 const NAMES = ['YTN', 'N Seoul Tower', 'Seoul Tower', 'Tokyo Tower', 'Skytree', 'Lotte', 'Samsung', 'Hyundai', 'Kia', 'LG', 'Starbucks', 'Coca-Cola', 'Nike', 'Adidas', 'Apple', 'Gucci', 'Chanel',
-  'Disney', 'Pokemon', 'Hello Kitty', 'BTS', 'BLACKPINK', 'Sejong', 'Yi Sun-sin', 'Taejo', 'Gojong', 'Heungseon'];
+  'Disney', 'Pokemon', 'Hello Kitty', 'BTS', 'BLACKPINK', 'Sejong', 'Yi Sun-sin', 'Taejo', 'Gojong', 'Heungseon',
+  'Empire State', 'Chrysler', 'Rockefeller', 'Yankees', 'Macy', 'Tiffany', 'Yellow Cab', 'Broadway'];   /* 뉴욕(2026-11-20) — 사유 건물 · 상표 · 극장가 이름 */
 
 /* 세계 사전 — 정확히 세 세계, 표와 설계표가 같다 */
 assert(same(D.vocab.worlds, ['fantasy', 'steampunk', 'cyberpunk']) && same(T.WORLDS.map(w => w.key), D.vocab.worlds), '세계 열쇠 셋(mecha 없음)');
@@ -27,9 +28,9 @@ assert(!S.undecided && S.default === 'kr_drawn_rim_dewy', '화풍 확정 — 기
 const LIVE = Object.keys(S.styles).filter(k => !S.styles[k].retired);
 assert(LIVE.includes(S.default), '기본 화풍이 살아 있다');
 const seoul = D.cities.find(c => c.key === 'seoul');
-/* 설계된 도시 — 서울(2026-11-19) · 도쿄(2026-11-20). 세계 그림 · 일상컷 단언은 설계된 도시 모두에 */
+/* 설계된 도시 — 서울(2026-11-19) · 도쿄 · 뉴욕(2026-11-20). 세계 그림 · 일상컷 단언은 설계된 도시 모두에 */
 const DESIGNED = D.cities.filter(c => Object.keys(c.worlds || {}).length);
-assert(DESIGNED.some(c => c.key === 'seoul') && DESIGNED.some(c => c.key === 'tokyo'), '서울 · 도쿄 설계됨');
+assert(['seoul', 'tokyo', 'newyork'].every(k => DESIGNED.some(c => c.key === k)), '서울 · 도쿄 · 뉴욕 설계됨');
 let n = 0;
 for (const city of DESIGNED) for (const style of LIVE) for (const w of D.vocab.worlds) {
   const id = city.key + ' ' + style + ' ' + w, r = PC.build({ design: D, styles: S, city: city.key, world: w, style, kind: 'world' }), t = r.text, sw = city.worlds[w], mk = D.vocab.markers[w];
@@ -86,7 +87,7 @@ for (const bad of ['mecha', 'modern', '', undefined]) {
 }
 /* (g) 설계 미정 도시 — 던지지 않고 비운다(mecha 는 먼저 던진다) */
 const undesigned = D.cities.filter(c => !Object.keys(c.worlds || {}).length);
-assert(undesigned.length === 8, '설계 미정 여덟(서울 · 도쿄 말고)');
+assert(undesigned.length === 7, '설계 미정 일곱(서울 · 도쿄 · 뉴욕 말고)');
 for (const c of undesigned) for (const w of D.vocab.worlds) {
   const r = PC.build({ design: D, styles: S, city: c.key, world: w });
   assert(r.text === '' && same(r.missing, ['worlds']), '(g) ' + c.key + ' ' + w);
@@ -188,15 +189,17 @@ const FACE_TOK = ['IMPRESSION', 'SKIN TONE', 'FACE SHAPE', 'EYE SHAPE', 'EYE COL
 for (const card of ['seoul', 'seoul-haechi']) for (const w of D.vocab.worlds) {
   const f = P.buildWorldFree(D, S, card, w, {}), tpl = P.worldFillTemplate(D, S, card, w, {}), id = card + ' ' + w + ' 칸 채우기';
   assert(f.endsWith(tpl) && !/\b(?:element|atomic|mecha)\b/i.test(f) && f.includes('Must differ — costume silhouette'), id + ' 주문');
-  assert(['[HAIRSTYLE: …]', '[COSTUME SILHOUETTE: …]', 'Design idea: …', 'Stance and hands: …', 'Setting detail: …'].concat(FACE_TOK.map(k => '[' + k + ': …]')).every(x => tpl.includes(x)), id + ' 칸');
+  assert(['[HAIRSTYLE: …]', '[HAIR COLOUR: …]', '[COSTUME SILHOUETTE: …]', 'Design idea: …', 'Stance and hands: …', 'Setting detail: …'].concat(FACE_TOK.map(k => '[' + k + ': …]')).every(x => tpl.includes(x)), id + ' 칸');
   const B = f.split('\n\n'), lst = h => B.find(x => x.startsWith(h)).split(/: 1\) /)[1].split(/; \d+\) /).map(x => x.replace(/\.$/, ''));
   const face = Object.fromEntries(B.find(x => x.startsWith('Must differ — her face')).split(' | ').map(x => { const m = x.match(/([A-Z ]+) — (.*)$/); return [m[1].trim(), m[2].replace(/\.$/, '').split(/; \d+\) |^1\) /).filter(Boolean)]; }));
-  const sil = lst('Must differ — costume'), body = tpl.includes('[BUILD: …]') ? lst('May keep or change — build') : null;
-  const mk = n => 'SUMMARY: test\n' + tpl.replace('[HAIRSTYLE: …]', n ? 'a sleek high ponytail' : 'a soft low chignon').replace('[COSTUME SILHOUETTE: …]', sil[n]).replace('[BUILD: …]', body ? body[n] : '')
+  const sil = lst('Must differ — costume'), body = tpl.includes('[BUILD: …]') ? lst('Must differ — build') : null, hcol = lst('Must differ — hair colour');   /* 머리색 · 체형도 우리 것 뺀 목록(2026-11-20) */
+  const lk = c => P.lookOf(P.card(D, card), w).silhouette[c], en = (a, k) => T.VOCAB_EN[a][k];
+  assert(!hcol.includes(en('hair_color', lk('hair_color')).replace(/\.$/, '')) && (!body || !body.includes(en('body', lk('body')))), id + ' 머리색 · 체형 목록에 우리 것 없음');
+  const mk = n => 'SUMMARY: test\n' + tpl.replace('[HAIRSTYLE: …]', n ? 'a sleek high ponytail' : 'a soft low chignon').replace('[COSTUME SILHOUETTE: …]', sil[n]).replace('[BUILD: …]', body ? body[n] : '').replace('[HAIR COLOUR: …]', hcol[n])
     .replace(/\[([A-Z ]+): …\]/g, (_, k) => face[k][n]).replace('Design idea: …', 'Design idea: a hem cut in the stepped outline of the city wall.').replace('Stance and hands: …', 'Stance and hands: one hand raised.').replace('Setting detail: …\n', '');
   const ok = P.worldFillErrors(D, S, card, w, mk(0), {}, mk(1)); assert(ok.length === 0, id + ' 칸만 채움 → 통과 ' + ok.slice(0, 3));   /* vm 쪽 배열이라 deepEqual 대신 길이 */
   const bad = P.worldFillErrors(D, S, card, w, mk(0).replace('\nComposition:', '\nComposition: wide'), {}, mk(0));
-  assert(bad.some(e => e.startsWith(T.WORLD_FREE.msg.line_changed)) && bad.includes(T.WORLD_FREE.msg.two_hair) && bad.includes(T.WORLD_FREE.msg.two_sil), id + ' 칸 밖 · 두 장 같음 → 걸림 ' + bad.slice(0, 3));
+  assert(bad.some(e => e.startsWith(T.WORLD_FREE.msg.line_changed)) && bad.includes(T.WORLD_FREE.msg.two_hair) && bad.includes(T.WORLD_FREE.msg.two_sil) && bad.includes(T.WORLD_FREE.msg.two_hcol) && (!body || bad.includes(T.WORLD_FREE.msg.two_body)), id + ' 칸 밖 · 두 장 같음 → 걸림 ' + bad.slice(0, 3));
 }
 /* 랜드마크 카드(2026-11-20) — 열쇠 <도시>-<랜드마크> 를 card 한 곳에서 푼다 */
 const LK = P.card(D, 'seoul-haechi');

@@ -46,6 +46,20 @@ def banned_in(text, banned):
     return [b for b in banned if re.search(r"\b" + re.escape(b.lower()) + r"\b", (text or "").lower())]
 
 
+def _sil_keys():
+    """lib/prompt-spec.js 의 세계별 실루엣 열쇠(SILHOUETTES = { fantasy: FANTASY_SILHOUETTES, … })"""
+    import re as _re
+    src = open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "lib", "prompt-spec.js"), encoding="utf-8").read()
+    out = {}
+    for w, name in (("fantasy", "FANTASY"), ("steampunk", "STEAMPUNK"), ("cyberpunk", "CYBERPUNK")):
+        m = _re.search(r"var " + name + r"_SILHOUETTES = \[(.*?)\n  \];", src, _re.S)
+        out[w] = tuple(_re.findall(r"key: '([a-z_]+)'", m.group(1))) if m else ()
+    return out
+
+
+SIL_KEYS = _sil_keys()
+
+
 def check(doc):
     errs, warns = [], []
 
@@ -132,6 +146,9 @@ def check(doc):
                         errs.append("%s look.%s.%s 값은 소문자 열쇠 — %r" % (wh, grp, f, val))
             if not (lk.get("why") or "").strip():
                 errs.append(wh + " look.why 가 비었다")
+            # 옷의 꼴 — 세계별 실루엣 한 칸(2026-11-20 사용자 「안에 입는옷은 다 똑같아보이는데」 → 「응 바꿔줘」). 열쇠는 lib/prompt-spec.js 의 그 세계 *_SILHOUETTES
+            if body.get("sil") not in SIL_KEYS.get(w, ()):
+                errs.append("%s sil 이 없거나 그 세계 실루엣 표에 없다 — %r" % (wh, body.get("sil")))
             en(wh + " hold.en", (body.get("hold") or {}).get("en"), 12)
             mo = body.get("motif")
             if not isinstance(mo, dict) or not (mo.get("ko") or "").strip():

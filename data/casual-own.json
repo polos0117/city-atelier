@@ -110,6 +110,57 @@
      }
     }
    }
+  },
+  "newyork": {
+   "root": {
+    "ko": "자유의 여신상의 횃불 — 바다를 건너온 이들을 맞는 도시(이민자를 맞는 환영의 상징, https://en.wikipedia.org/wiki/Statue_of_Liberty · 엘리스섬 이민국 https://en.wikipedia.org/wiki/Ellis_Island) → 도착하는 이를 불빛으로 맞고 길을 내주는 사람 — 항구 어귀 횃불 등대(판타지) · 이민 섬 등록 홀 창구(스팀펑크) · 노란 하늘 택시 승강장(사이버펑크, 노란 택시 https://en.wikipedia.org/wiki/Taxis_of_New_York_City). 2026-11-20 시안 — 시험 그림 전",
+    "from": "story"
+   },
+   "mode": "per_world",
+   "worlds": {
+    "fantasy": {
+     "job_ko": "항구 횃불 등대지기",
+     "base": "stage_festival",
+     "place": "the gallery atop the beacon tower at the harbour mouth of her world's island capital at dawn — a great bronze brazier on white marble, gilded rails, ships with white sails gliding into the shining harbour below and the colossal verdigris guardian with her torch across the water",
+     "activity": "she is the harbour beacon keeper, raising a freshly lit torch high to signal the incoming ships before she sets it to the great brazier",
+     "preset": "light_check",
+     "use": "sig_raise",
+     "prop": "a long gilded torch with a flame of living golden fire",
+     "outfit": {
+      "bold": "a beacon-keeper look fitted to her body — a sleeveless ivory leather jerkin with gilded clasps cut low at the neck, a short pleated linen skirt, a verdigris-green scarf knotted at her throat, leather bracers and laced sandals",
+      "moderate": "a beacon-keeper look — a sleeveless ivory leather jerkin with gilded clasps over a linen shirt, a knee-length pleated skirt, a verdigris-green scarf, leather bracers and laced sandals",
+      "low": "a beacon-keeper look — a long-sleeved ivory leather coat with gilded clasps, a high collar, an ankle-length pleated skirt, a verdigris-green hooded scarf and soft boots"
+     }
+    },
+    "steampunk": {
+     "job_ko": "이민 섬 등록 홀 안내원",
+     "base": "repair_kiosk",
+     "place": "the great vaulted registry hall on the immigration island in the harbour of her steam city — a tiled arched ceiling, tall arched windows full of light, rows of polished wooden benches, brass railings and a high clerk's counter, travellers with trunks and bundles arriving in soft white steam",
+     "activity": "she is the arrivals clerk at the registry counter, warmly stamping a newcomer's landing card with both hands on her heavy brass stamp",
+     "preset": "counter_work",
+     "use": "sig_both",
+     "prop": "a heavy brass arrival stamp over an ink pad",
+     "outfit": {
+      "bold": "an arrivals-clerk look fitted to her body — a cropped brass-buttoned waistcoat over a lace-edged camisole blouse with the sleeves rolled, a short bustled skirt, sleeve garters, striped stockings and laced boots",
+      "moderate": "an arrivals-clerk look — a fitted brass-buttoned waistcoat over a high-collared blouse with sleeve garters, a knee-length bustled skirt and laced boots",
+      "low": "an arrivals-clerk look — a long brass-buttoned coat over a high-collared blouse, an ankle-length bustled skirt, gloves, a small feathered hat and laced boots"
+     }
+    },
+    "cyberpunk": {
+     "job_ko": "하늘 택시 승강장 착륙 유도원",
+     "base": "street_rooftop",
+     "place": "the sky-taxi landing pad jutting from the stepped top of a mile-high arcology of her far-future megacity at night — a glowing landing ring on the deck, yellow-lit sky-taxis gliding in along lanes of light and the towers of light falling away far below",
+     "activity": "she is the landing guide of the sky-taxi pad, down on one knee at the edge of the landing ring, holding up her signal wand to guide the next yellow sky-taxi down",
+     "preset": "half_kneel_use",
+     "use": "sig_hold",
+     "prop": "a slim landing-signal wand glowing taxi yellow",
+     "outfit": {
+      "bold": "a landing-guide look fitted to her body — a cropped high-collared reflective jacket lined with taxi-yellow light strips, open over a fitted sports top, high-cut utility shorts over glowing-seam tights and magnetic boots",
+      "moderate": "a landing-guide look — a reflective jacket lined with taxi-yellow light strips over a fitted top, slim utility trousers and magnetic boots",
+      "low": "a landing-guide look — a zipped high-collared reflective flight suit lined with taxi-yellow light strips, gloves and magnetic boots"
+     }
+    }
+   }
   }
  }
 }
