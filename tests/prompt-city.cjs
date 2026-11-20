@@ -158,7 +158,7 @@ assert(same(PC.build({ design: D, styles: S, city: undesigned[0].key, world: 'fa
   for (const w of D.vocab.worlds) {
     const t = PC.build({ design: D, styles: S, city: 'seoul', world: w, kind: 'world' }).text, L = t.split('\n'), id = 'kr ' + w;
     const s1 = t.split('\n\n')[1].split('\n');
-    assert(s1[0] === T.CORE_FRAME.s1 && s1[1] === kv.text && s1[1].startsWith('Korean MMORPG character artwork. A recognisably drawn face '), id + ' STYLE 칸 첫 줄 = 화풍 글');
+    assert(s1[0] === T.CORE_FRAME.s1 && s1[1] === kv.text && s1[1].startsWith('Korean MMORPG character artwork. A painterly face with naturally observed facial anatomy'), id + ' STYLE 칸 첫 줄 = 화풍 글');
     assert(s1.includes(T.WORLD_SHORT.beauty) && s1.includes('Face proportions: ' + kv.worldFace) && !t.includes(T.WORLD_SHORT.face.slice(0, 40)), id + ' 미형 줄 · 얼굴 비율 = worldFace');
     const fi = L.findIndex(l => l.startsWith('Face — her own: '));
     assert(fi > 0 && L[fi + 1] === kv.worldStyleAfter && L[fi + 1].startsWith('Skin finish: dewy'), id + ' 「Face — her own:」 다음 줄 = Skin finish');

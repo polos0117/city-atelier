@@ -7,6 +7,9 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-20 · claude · 기본 화풍 kr_drawn_rim_dewy v2 — 얼굴 문장 한 줄
+- 사용자 「기본화풍 v2로 올려줘」. text · casual 의 「A recognisably drawn face with gently simplified anatomical structure.」 → 「A painterly face with naturally observed facial anatomy, subtle eyelid structure, and soft, realistic shading across the nose and cheeks.」, 나머지 칸은 v1 그대로, current v2. 서울 세 세계 세계 그림 · 일상컷 스물넷 시험. 머리 문구 교체 시험은 효과가 흔들림 안이라 안 넣었다. 본보기 지시문(docs/samples) 그 문장도 바꿨다. 이미 그린 그림은 v1 기록 그대로.
+
 ## 2026-11-20 · claude · 화풍 셋만 — 기본 · 회화적 콘셉트 아트 · 실사 유화
 - 사용자 「실사유화 화풍도 우선 key 로 등록해줄래? 지금 기존화풍, 실사유화, 너가 만든 회화적 콘셉아트 3개만 남기고 다른건 지워줘」. data/style.json — real_oil(실사 유화, 시험 열쇠 oil_real_try 의 화풍 글 · 세계 공통 빛 줄 · avoid) 더하고, kr_drawn_rim_dewy(기본) · painterly_concept 말고 열여덟 화풍(원소에서 옮긴 임시 · 내린 화풍, 등록된 그림 없음)을 지웠다. 시험 때 얼굴 줄 · 표정 줄 덧붙임과 사이버펑크 비 젖은 빛은 장면 몫이라 넣지 않았다. tests/register-images.py · tests/screen.cjs 가 지운 화풍(game_keyart · retired)을 쓰던 곳을 고쳤다.
 

@@ -5,7 +5,7 @@
  "styles": {
   "kr_drawn_rim_dewy": {
    "name": "그린 얼굴 · 2D 붓 칠 · 림 라이트 · 몸 피부 물광 (한국 MMORPG · 화풍공방 확정)",
-   "current": "v1",
+   "current": "v2",
    "versions": [
     {
      "v": "v1",
@@ -21,6 +21,31 @@
      },
      "text": "Korean MMORPG character artwork. A recognisably drawn face with gently simplified anatomical structure. 2D painting with visible brushwork: layered strokes of colour, soft broken edges, thin coloured linework and a few crisp accents on the face and costume.",
      "casual": "Korean MMORPG character artwork. A recognisably drawn face with gently simplified anatomical structure. 2D painting with visible brushwork: layered strokes of colour, soft broken edges, thin coloured linework and a few crisp accents on the face and costume.",
+     "worldFace": "Her face is small and soft: a short midface, a softly rounded jaw and a small chin, about 1.3 times as long as it is wide, with her eyes open at their natural size. Bangs, side locks and headpieces frame the face without lengthening it.",
+     "worldStyleAfter": "Skin finish: dewy, glass-like highlights on the skin of her shoulders, arms, collarbones and legs — a soft, luminous wet-look sheen that follows the body's forms; her face keeps a soft, natural finish.",
+     "casualStyleAfter": "SKIN FINISH: dewy, glass-like highlights on the skin of her shoulders, arms, collarbones and legs — a soft, luminous wet-look sheen that follows the body's forms; her face keeps a soft, natural finish.",
+     "worldLight": "Light: a soft key light with a strong rim light tracing her hair, shoulders and armour; bright, crisp specular highlights on metal and jewellery, and a clean, warm-neutral sheen on her skin.",
+     "casualLight": "",
+     "avoid": [
+      "a blue or bruise-like tint on the skin around the eyes",
+      "glossy or shiny highlights on the face",
+      "sweaty, oily or plastic-looking skin"
+     ]
+    },
+    {
+     "v": "v2",
+     "adopted": "2026-11-20",
+     "by": "사용자 — 「기본화풍 v2로 올려줘」",
+     "why": "v1 의 얼굴 문장 「A recognisably drawn face with gently simplified anatomical structure.」 가 얼굴 구조를 일러스트 쪽으로 직접 당겨서, 붓 칠 느낌은 두고 눈꺼풀 · 코 · 볼 명암을 자연스럽게 그리는 문장으로 그 한 줄만 바꿨다(사용자가 준 의견 — short midface 는 그대로, 실사감은 얼굴을 길게가 아니라 짧은 중안부 안의 입체감). 서울 세 세계 세계 그림 셋 + 일상컷 스물넷으로 시험 — 눈꺼풀 · 콧대 · 볼 명암이 꾸준히 들고 얼굴은 길어지지 않았다. 판타지는 2D 느낌이 남고 사이버펑크는 실사 쪽으로 조금 더 온다. 머리 문구 「Korean MMORPG character artwork」 를 「Painterly character key art with naturalistic facial rendering」 으로 바꾼 시험(세계마다 두 장)은 장마다 흔들림만큼의 차이라 그대로 둔다(사용자 「머리문구는 상관없는거 같기도」). 나머지 칸(worldFace · worldStyleAfter · casualStyleAfter · worldLight · avoid · source)은 v1 그대로.",
+     "model": "gpt-image-2.6-sunburst",
+     "source": {
+      "atelier": "style-atelier",
+      "confirmed": "kr_drawn_brush_rim",
+      "id": "km2-il2-ba3-rg2-x01",
+      "skin": "dewy_body@v1"
+     },
+     "text": "Korean MMORPG character artwork. A painterly face with naturally observed facial anatomy, subtle eyelid structure, and soft, realistic shading across the nose and cheeks. 2D painting with visible brushwork: layered strokes of colour, soft broken edges, thin coloured linework and a few crisp accents on the face and costume.",
+     "casual": "Korean MMORPG character artwork. A painterly face with naturally observed facial anatomy, subtle eyelid structure, and soft, realistic shading across the nose and cheeks. 2D painting with visible brushwork: layered strokes of colour, soft broken edges, thin coloured linework and a few crisp accents on the face and costume.",
      "worldFace": "Her face is small and soft: a short midface, a softly rounded jaw and a small chin, about 1.3 times as long as it is wide, with her eyes open at their natural size. Bangs, side locks and headpieces frame the face without lengthening it.",
      "worldStyleAfter": "Skin finish: dewy, glass-like highlights on the skin of her shoulders, arms, collarbones and legs — a soft, luminous wet-look sheen that follows the body's forms; her face keeps a soft, natural finish.",
      "casualStyleAfter": "SKIN FINISH: dewy, glass-like highlights on the skin of her shoulders, arms, collarbones and legs — a soft, luminous wet-look sheen that follows the body's forms; her face keeps a soft, natural finish.",
