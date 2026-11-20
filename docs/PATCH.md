@@ -7,6 +7,14 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-20 · claude · 랜드마크 카드 — 서울 해치 (도시 카드 한 장 더)
+- 사용자 「랜드마크같은게 좋지 않을까?」 · 「10장으로 해줘」(일상컷 열 장) · 「사는 세계를 다 할까 그럼」(세 세계 모두) · 「해치 먼저」(서울 해치부터).  
+  설계표 cities[].landmarks[](key · ko · en · src · persona · worlds.<세계> — 도시 세계와 같은 꼴), 서울에 haechi 해치 세 세계. tools/city-design.py 가 랜드마크를 검사(열쇠 꼴 · 세 세계 · 금지 낱말 · 짧은 글 · 얼굴이 자기 세 세계끼리 · 같은 도시 사람 셋과 달라야 함 FACE_DIFF_MIN 3, 설계 전 도시의 랜드마크는 오류).  
+  카드 열쇠 `<도시>-<랜드마크>`(seoul-haechi) — 파일 seoul-haechi_<세계>_<화풍>_f(_casualN).webp · 등록 img['seoul-haechi'] · 기록 records/seoul-haechi/ · 잠금 seoul-haechi_<세계>. 차례: 도시 세 세계 → 그 도시 랜드마크(각 세 세계) → 다음 도시. 한 몫 = 세계 그림 1 + 일상컷 10, 90번 없음.  
+  지시문: 세계 그림 첫 줄 CONCEPT_LANDMARK(<랜드마크>를 의인화, <도시>의 랜드마크), 일상컷은 부모 도시 생활 장면 · 계절 · 날씨 · 「an ordinary day in <도시>」. 계획기는 같은 도시 카드끼리 덜 쓴 장면부터(그린 기록 + 아직 안 그린 계획 파일). 서울 · 도쿄 지시문 36개씩은 바꾸기 전과 글자까지 같다.  
+  화면: 생성기 카드 고르개에 「서울 › 해치」(?card=seoul-haechi) · 도시 무대 세 사람 아래 랜드마크 줄(.th-marks, 랜드마크 없는 도시는 숨김) · 랜드마크 한 장 보기(?city=seoul&card=seoul-haechi&pic=…) · 도감 도시 줄의 일상컷 수에 랜드마크 일상컷 합산.  
+  IMAGE_RULES.md 2절 · docs/IMAGE_AUTOMATION.md 1절 · AGENTS.md 3절에 랜드마크 카드 규칙을 적음.
+
 ## 2026-11-20 · claude · 도시별 말 own_vocab — 공용 판타지 말에서 서울 것을 뺌
 - 도쿄를 설계하자 공용 판타지 말의 서울 것(노리개 · 수호수 문장 · 단청 · 청자 잔 · 엘프 달빛 고목 도시 일상컷 세계 줄)이 도쿄 지시문에 실렸다 → 사용자 「그렇게 해」(서울 것을 공용에서 빼고 서울에만).  
   설계표 worlds.<세계>.own_vocab = { marks, costume, casual_world, props } — 있으면 공용 표지 · 세계 옷 말투 · 일상컷 세계 줄 · 소품 글 대신(lib/prompt-city.js ownVocab). 서울 판타지에 지금 글 그대로를 옮겼다 — 서울 지시문 36개(세계 그림 셋 · 자유 설계 셋 · 일상 서른)가 바꾸기 전과 글자까지 같다.  

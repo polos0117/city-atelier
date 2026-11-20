@@ -52,6 +52,7 @@
 - **일상컷은 세계마다 열 장**(2026-11-20, 전엔 일곱) — 장면 컷 여덟(계획기가 짠다) + 자유 설계 칸 둘(옷 자유 · 갈래 자유). 장면 컷 여덟 = **필수 다섯**(그 도시 생활 장면 한 장 · 란제리풍 · 수영복 · 역할극 · 게임 코스프레) + 보통 셋(그 가운데 한 장에 늘 상황 노출). 장소는 섞은 풀 — 그 도시의 생활 장면(`data/city-life.json`, 소품은 `data/world-props.json` 세계 소품) ∪ 일반 장소(`data/casual-tree.json` 의 장소 — 지시문의 World 줄이 그 세계로 바꾼다, 판타지 · 스팀펑크는 글에 그 세계 금지 낱말이 든 곳을 안 쓴다). 생활 장면 필수 컷만 생활 장면에서, 나머지는 반쯤 생활 장면 먼저. 게임 코스프레 컷은 게임 · 캐릭터 · 재단을 계획기가 정하고(`data/game-cosplay.json`), 그린 뒤 기록에 `generation.cosplay` 를 남긴다. 계획기는 `tools/casual-plan.cjs`, 자세한 말은 IMAGE_AUTOMATION 3절.
 - **캐릭터만의 컷**은 세계마다 한 장 더(필수) — 번호 **90**, 파일 `<도시>_<세계>_<화풍>_f_casual90.webp`. 내용은 `data/casual-own.json`(도시마다 직업 · 하는 일 · 의상 단계별 글, 표에 줄이 없는 도시는 건너뛴다 — 서울은 세 세계가 채워졌다). 노출 단계는 높음(bold)에서 시작해 막히면 두 번 더, 그래도 막히면 한 단계씩(bold → moderate → low). 계획기는 90번을 일상 열 장 수에 세지 않는다.
 - 한 세계의 빈 자리는 세계 그림 1 + 일상컷 10 = **열한 장**(+ 90번 하나), 세 세계 도시면 서른세 장. `node tools/image-claim.cjs next` 가 알려 준다.
+- **랜드마크 카드**(2026-11-20 — 사용자 「랜드마크같은게 좋지 않을까?」 · 「10장으로 해줘」 · 「사는 세계를 다 할까 그럼」 · 「해치 먼저」): 설계표 `cities[].landmarks[]`(서울은 `haechi` 해치) 하나가 카드 하나 — 카드 열쇠 `<도시>-<랜드마크>`(예 `seoul-haechi`), 파일 `seoul-haechi_<세계>_<화풍>_f.webp` · `…_f_casualN.webp`(이름 위 `<도시>_` 자리에 카드 열쇠가 들어간다), 등록 `img['seoul-haechi']`, 기록 `records/seoul-haechi/`, 잠금 `seoul-haechi_<세계>`. **세 세계 모두** 그린다. 한 몫 = 세계 그림 1 + 일상컷 10, **90번(캐릭터만의 컷)은 없다**. 일상컷의 생활 장면 · 계절 · 날씨 · 「an ordinary day in <도시>」 는 부모 도시 것을 쓰고(그 도시 카드끼리 장면을 덜 쓴 것부터), 세계 그림 첫 줄은 `CONCEPT_LANDMARK`(<도시>의 랜드마크 <이름>을 의인화). 차례는 한 도시의 세 세계 → 그 도시 랜드마크마다 세 세계 → 다음 도시. 얼굴은 같은 도시 사람들 · 자기 세 세계끼리 달라야 한다(`tools/city-design.py`).
 - 일상컷 뽑기: 참고 그림(그 도시의 그 세계 그림 webp)을 붙여 이미지 편집으로 뽑는다 — 첨부 없이 뽑으면 다른 사람이 된다. 기록 `generation` 에 `endpoint: images/edits` 와 참고 그림의 `ref_sha256` 을 남긴다.
 - 교체한 그림은 그림 저장소 `records/replacement.json` 에 앞 그림의 sha256(webp · 원본 png) · 날짜 · 까닭을 남기고, 옛 썸네일은 지워 워크플로가 새로 만들게 한다(같은 이름이면 시각이 같아 안 바뀐다).
 
@@ -63,6 +64,7 @@
 ```
 <도시>_<세계>_<화풍>_f.webp           세계 그림
 <도시>_<세계>_<화풍>_f_casual3.webp   일상컷 3 (번호는 세계마다 따로 1 부터, 90 = 캐릭터만의 컷)
+랜드마크는 <도시> 자리에 카드 열쇠: seoul-haechi_fantasy_kr_drawn_rim_dewy_f.webp · seoul-haechi_fantasy_kr_drawn_rim_dewy_f_casual4.webp
 예) seoul_fantasy_kr_drawn_rim_dewy_f.webp · seoul_cyberpunk_kr_drawn_rim_dewy_f.webp · seoul_steampunk_kr_drawn_rim_dewy_f_casual1.webp · seoul_fantasy_kr_drawn_rim_dewy_f_casual90.webp
 ```
 
