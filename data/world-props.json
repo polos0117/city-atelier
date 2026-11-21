@@ -158,6 +158,98 @@
   "deckchair": { "ko": "줄무늬 접이 의자", "worlds": {
    "fantasy": { "en": "a folding wooden lounging chair slung with striped canvas" },
    "steampunk": { "en": "a striped canvas deckchair on a folding wooden frame" },
-   "cyberpunk": { "en": "a striped smart-fabric deckchair on a slim folding frame" } } }
+   "cyberpunk": { "en": "a striped smart-fabric deckchair on a slim folding frame" } } },
+  "jianbing": { "ko": "젠빙(달걀 전병)", "worlds": {
+   "fantasy": { "en": "a hot folded crêpe of egg-and-grain batter brushed with sauce around a crisp cracker, wrapped in waxed cloth" },
+   "steampunk": { "en": "a hot folded egg crêpe around a crisp cracker, wrapped in waxed paper" },
+   "cyberpunk": { "en": "a hot folded egg crêpe around a crisp cracker in a self-heating paper sleeve with a glowing seal" } } },
+  "pedicab": { "ko": "세발 인력거", "worlds": {
+   "fantasy": { "en": "a canopied three-wheeled pedal cart of carved, red-lacquered wood with silk curtains" },
+   "steampunk": { "en": "a brass-trimmed three-wheeled pedicab with a folding leather hood" },
+   "cyberpunk": { "en": "a silent three-wheeled pedal cab with a clear folding canopy and softly glowing wheels" } } },
+  "ice_skates": { "ko": "스케이트", "worlds": {
+   "fantasy": { "en": "laced leather boots on bright steel skating blades" },
+   "steampunk": { "en": "laced leather skating boots on polished blades with brass fittings" },
+   "cyberpunk": { "en": "sleek skating boots on blades edged with soft light" } } },
+  "candied_haws": { "ko": "탕후루(산사 사탕 꼬치)", "worlds": {
+   "fantasy": { "en": "a skewer of glossy sugar-glazed red hawthorn fruits" },
+   "steampunk": { "en": "a bamboo skewer of glossy sugar-coated red hawthorn fruits wrapped in waxed paper" },
+   "cyberpunk": { "en": "a skewer of glossy sugar-coated red hawthorn fruits in a clear sleeve with a glowing band" } } },
+  "hot_pot": { "ko": "고리 모양 청동 냄비의 양고기 샤브샤브(솬양러우)", "worlds": {
+   "fantasy": { "en": "a ring-shaped bronze pot of clear broth bubbling over glowing coals, with plates of paper-thin sliced lamb" },
+   "steampunk": { "en": "a ring-shaped bronze pot of clear broth bubbling on a little gas burner, with plates of paper-thin sliced lamb" },
+   "cyberpunk": { "en": "a ring-shaped bronze pot of clear broth bubbling on a glowing induction ring, with plates of paper-thin sliced lamb" } } },
+  "roast_duck": { "ko": "오리구이(카오야) — 얇은 전병 · 파 · 단장", "worlds": {
+   "fantasy": { "en": "a platter of crisp, glossy roast duck slices with thin pancakes, scallion slivers and sweet bean sauce" },
+   "steampunk": { "en": "crisp, glossy roast duck slices on white porcelain with thin pancakes, scallion slivers and sweet bean sauce" },
+   "cyberpunk": { "en": "crisp, glossy roast duck slices on a softly glowing warming plate with thin pancakes, scallion slivers and sweet bean sauce" } } },
+  "simit": { "ko": "시미트(깨 고리 빵)", "worlds": {
+   "fantasy": { "en": "a ring of crisp, sesame-crusted bread, warm from the oven" },
+   "steampunk": { "en": "a ring of crisp, sesame-crusted simit bread wrapped in a twist of paper" },
+   "cyberpunk": { "en": "a warm sesame-crusted simit ring in a softly glowing paper sleeve" } } },
+  "tea_glass": { "ko": "튤립 잔의 튀르키예 차", "worlds": {
+   "fantasy": { "en": "a small tulip-shaped glass of deep amber tea on a little glazed saucer" },
+   "steampunk": { "en": "a tulip-shaped glass of amber tea on a little saucer, beside a gleaming brass double teapot" },
+   "cyberpunk": { "en": "a tulip-shaped glass of amber tea on a softly glowing saucer" } } },
+  "turkish_coffee": { "ko": "제즈베로 끓인 튀르키예 커피", "worlds": {
+   "fantasy": { "en": "a little long-handled copper pot of thick, frothy coffee and a tiny porcelain cup, a glass of water beside it" },
+   "steampunk": { "en": "a long-handled copper coffee pot and a tiny porcelain cup of thick, frothy coffee on a brass tray with a glass of water" },
+   "cyberpunk": { "en": "a tiny porcelain cup of thick, frothy coffee and a little copper pot on a softly glowing warming tray, a glass of water beside it" } } },
+  "lokum": { "ko": "로쿰(튀르키예 젤리 과자)", "worlds": {
+   "fantasy": { "en": "a little dish of soft jewel-coloured sweet cubes dusted with powdered sugar" },
+   "steampunk": { "en": "a little tin box of soft rose and pistachio sweet cubes dusted with powdered sugar" },
+   "cyberpunk": { "en": "soft jewel-coloured sweet cubes dusted with powdered sugar in a clear box with a glowing seal" } } },
+  "fish_bread": { "ko": "발륵 에크멕(구운 고등어 빵)", "worlds": {
+   "fantasy": { "en": "a warm half-loaf of crusty bread stuffed with grilled fish, onion and greens, wrapped in a twist of paper" },
+   "steampunk": { "en": "a grilled-fish sandwich in a crusty half-loaf with onion and lettuce, wrapped in a twist of paper" },
+   "cyberpunk": { "en": "a grilled-fish sandwich in a crusty half-loaf in a softly glowing paper sleeve" } } },
+  "pestemal": { "ko": "페슈테말(얇은 목욕 천) · 놋쇠 목욕 그릇", "worlds": {
+   "fantasy": { "en": "a thin cotton bath wrap and a hammered brass bathing bowl" },
+   "steampunk": { "en": "a thin cotton bath wrap and a hammered brass bathing bowl beside a polished brass tap" },
+   "cyberpunk": { "en": "a thin cotton bath wrap and a brass bathing bowl with a softly glowing rim" } } },
+  "meze": { "ko": "메제(작은 접시 안주)", "worlds": {
+   "fantasy": { "en": "little glazed plates of cold meze crowding the table" },
+   "steampunk": { "en": "little porcelain plates of cold meze on white linen" },
+   "cyberpunk": { "en": "little plates of cold meze on a softly glowing tray" } } },
+  "mint_tea": { "ko": "민트 넣은 이집트 홍차", "worlds": {
+   "fantasy": { "en": "a small clear glass of sweet black tea with fresh mint leaves on a little brass tray" },
+   "steampunk": { "en": "a small clear glass of sweet black tea with fresh mint leaves on a polished brass tray" },
+   "cyberpunk": { "en": "a small clear glass of sweet black tea with fresh mint leaves on a softly glowing tray" } } },
+  "koshary": { "ko": "코샤리(쌀 · 렌틸콩 · 마카로니)", "worlds": {
+   "fantasy": { "en": "an earthenware bowl of rice, lentils and little pasta heaped with spiced tomato sauce, chickpeas and crisp fried onions" },
+   "steampunk": { "en": "an enamel bowl of rice, lentils and macaroni heaped with tomato sauce, chickpeas and crisp fried onions, a little tin jug of garlic vinegar beside it" },
+   "cyberpunk": { "en": "a bowl of rice, lentils and macaroni heaped with tomato sauce, chickpeas and crisp fried onions in a heat-keeping bowl with a softly glowing rim" } } },
+  "ful": { "ko": "풀 메담므스(누에콩 스튜)와 둥근 빵", "worlds": {
+   "fantasy": { "en": "a clay dish of stewed fava beans drizzled with oil and cumin, with warm round flatbread" },
+   "steampunk": { "en": "an enamel plate of stewed fava beans drizzled with oil and cumin, with warm round flatbread" },
+   "cyberpunk": { "en": "a dish of stewed fava beans drizzled with oil and cumin on a softly glowing tray, with warm round flatbread" } } },
+  "fanous": { "ko": "파누스(금속과 색유리 등불)", "worlds": {
+   "fantasy": { "en": "a pierced metal lantern set with coloured glass panes, a candle glowing within" },
+   "steampunk": { "en": "a star-pierced brass lantern with ruby, emerald and amber glass panes and a little flame inside" },
+   "cyberpunk": { "en": "a traditional lantern of metal and coloured glass with a soft light core glowing inside" } } },
+  "cane_juice": { "ko": "갓 짠 사탕수수 즙", "worlds": {
+   "fantasy": { "en": "a tall glass of pale green, freshly pressed sugarcane juice with a little foam on top" },
+   "steampunk": { "en": "a tall glass of pale green, freshly pressed sugarcane juice with a little foam on top" },
+   "cyberpunk": { "en": "a tall glass of pale green, freshly pressed sugarcane juice on a softly glowing coaster" } } },
+  "dyed_eggs": { "ko": "봄 축제의 물들인 달걀", "worlds": {
+   "fantasy": { "en": "a little woven basket of brightly dyed boiled eggs" },
+   "steampunk": { "en": "a little wicker basket of brightly dyed boiled eggs lined with a checked cloth" },
+   "cyberpunk": { "en": "a little basket of brightly dyed boiled eggs, real ones, in a clear bowl with a softly glowing rim" } } },
+  "coconut": { "ko": "초록 코코넛(코코넛 물)", "worlds": {
+   "fantasy": { "en": "a fresh green coconut cut open at the top, a hollow reed straw in it" },
+   "steampunk": { "en": "a fresh green coconut cut open at the top, a slim glass straw in it" },
+   "cyberpunk": { "en": "a fresh green coconut cut open at the top, a softly glowing straw in it" } } },
+  "acai": { "ko": "아사이 볼(바나나 · 그래놀라)", "worlds": {
+   "fantasy": { "en": "an earthenware bowl of thick, icy dark-purple berry cream topped with sliced banana and toasted oats" },
+   "steampunk": { "en": "an enamel bowl of thick, icy dark-purple açaí topped with sliced banana and granola" },
+   "cyberpunk": { "en": "a bowl of thick, icy dark-purple açaí topped with sliced banana and granola in a chilled bowl with a softly glowing rim" } } },
+  "pao_de_queijo": { "ko": "팡 지 케이주(브라질 치즈빵)", "worlds": {
+   "fantasy": { "en": "a little woven basket of warm, golden cheese breads, crisp outside and chewy inside" },
+   "steampunk": { "en": "a little wicker basket of warm, golden cheese breads lined with a checked cloth" },
+   "cyberpunk": { "en": "a little basket of warm, golden cheese breads on a softly glowing warming tray" } } },
+  "chope": { "ko": "시원한 생맥주(쇼피)", "worlds": {
+   "fantasy": { "en": "a small pewter tankard of pale golden ale with a thick white head" },
+   "steampunk": { "en": "a slim glass of ice-cold pale lager with a thick white head" },
+   "cyberpunk": { "en": "a slim glass of ice-cold pale lager with a thick white head on a softly glowing coaster" } } }
  }
 }

@@ -160,7 +160,11 @@ def check(doc):
                 if not t or len(t) > SHORT_WORLD:
                     errs.append("%s card_ko.%s(화면 짧은 말)가 비었거나 %d자 넘음 — %d자" % (wh, f, SHORT_WORLD, len(t)))
             ban = (markers.get(w) or {}).get("banned_en") or []
-            texts = [body.get("en"), (body.get("hold") or {}).get("en"), (mo or {}).get("en")] + [(r or {}).get("en") for r in sc]
+            # 도시별로 Avoid 줄에서만 빼는 금지 낱말(2026-11-21 베이징) — 그 세계 banned_en 에 있는 낱말만. 글 검사는 그대로(빼도 글엔 쓰지 않는다)
+            for u in (body.get("own_vocab") or {}).get("unban_en") or []:
+                if u not in ban:
+                    errs.append("%s own_vocab.unban_en %r 는 그 세계 banned_en 에 없다" % (wh, u))
+            texts =[body.get("en"), (body.get("hold") or {}).get("en"), (mo or {}).get("en")] + [(r or {}).get("en") for r in sc]
             for t in texts:
                 hit = banned_in(t, ban)
                 if hit:

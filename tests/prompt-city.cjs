@@ -1,8 +1,8 @@
 /* 지시문 조립(lib/prompt-city.js) — 도시 한 층 · 세 세계(계획 Task 3).
-   설계된 도시(서울 · 도쿄 · 뉴욕 2026-11-20 · 로마 · 파리 · 런던 2026-11-21) × 세 세계 세계 그림(kind 'world')이 (a) 그 세계 표지(vocab.markers.<세계>.en) 셋 이상 (b) 그 도시 motif.en (c) 그 사람 머리색 낱말을 싣고,
+   설계된 도시(서울 · 도쿄 · 뉴욕 2026-11-20 · 로마 · 파리 · 런던 · 베이징 · 이스탄불 · 카이로 · 리우데자네이루 2026-11-21 — 열 곳 모두) × 세 세계 세계 그림(kind 'world')이 (a) 그 세계 표지(vocab.markers.<세계>.en) 셋 이상 (b) 그 도시 motif.en (c) 그 사람 머리색 낱말을 싣고,
    (d) 그 세계 banned_en 낱말이 하나도 없다 — 금지 줄(sections.negative, 칸 꼴 5칸의 「Avoid:」 한 줄)만 빼고 본다. 금지 낱말을 「no …」 로 적는 곳은 그 줄뿐이다
        (원소 조립기의 칸 꼴이 「No …」 금지를 5칸 Avoid 로 모으는 꼴을 따랐다 — 판타지 옷 말투의 「no machinery」 는 Avoid 로 간다).
-   (e) 상표 · 실존 인물 이름(아래 작은 표)이 없다 (f) world 가 mecha(세 세계 밖)면 던진다 (g) 설계 미정 도시는 던지지 않고 { text: '', missing: ['worlds'] }.
+   (e) 상표 · 실존 인물 이름(아래 작은 표)이 없다 (f) world 가 mecha(세 세계 밖)면 던진다 (g) 설계 미정 도시는 던지지 않고 { text: '', missing: ['worlds'] } — 2026-11-21 리우까지 열 곳이 다 설계돼 설계표 사본에서 리우의 worlds 를 비워 본다.
    살아 있는 화풍(retired 아닌 것) 전부로 본다 — 기본 화풍은 kr_drawn_rim_dewy(2026-11-20 — 삼국지 기본 화풍을 옮김, 그 전 painterly_concept)이지만 임시 화풍도 고르개에 남아 한 화풍에 묶지 않는다.
    Run: node tests/prompt-city.cjs */
 const fs = require('node:fs'), vm = require('node:vm'), assert = require('node:assert/strict');
@@ -23,7 +23,19 @@ const NAMES = ['YTN', 'N Seoul Tower', 'Seoul Tower', 'Tokyo Tower', 'Skytree', 
   'Eiffel', 'Dior', 'Louis Vuitton', 'Hermès', 'Hermes', 'Cartier', 'Ladurée', 'Laduree', 'Moulin Rouge', 'Galeries Lafayette', 'Lafayette', 'PSG', 'Paris Saint-Germain', 'Bateaux Mouches',
   'Napoleon', 'Marie Antoinette', 'Guimard', 'Haussmann', 'Victor Hugo', 'Quasimodo',   /* 파리(2026-11-21) — 상표 · 사유 카바레 · 백화점 · 구단 · 유람선 상표 · 실존 인물(탑 · 지하철 입구 · 대로를 만든 이 이름도) */
   'Harrods', 'Burberry', 'Selfridges', 'Liberty', 'Fortnum', 'London Eye', 'The Shard', 'Shard', 'Gherkin', 'Routemaster', 'Arsenal', 'Chelsea', 'Tottenham',
-  'Sherlock', 'Holmes', 'Harry Potter', 'Hogwarts', 'Paddington', 'Mary Poppins', 'Peter Pan', 'Queen Victoria', 'Victoria', 'Elizabeth', 'Shakespeare', 'Beatles', 'Pugin', 'Big Ben'];   /* 런던(2026-11-21) — 상표 · 사유 건물 · 버스 모델 · 구단 · 꾸민 인물 · 실존 인물(시계탑 설계자 · 탑 이름의 여왕도), 빅벤은 지시문엔 생김새로만 */
+  'Sherlock', 'Holmes', 'Harry Potter', 'Hogwarts', 'Paddington', 'Mary Poppins', 'Peter Pan', 'Queen Victoria', 'Victoria', 'Elizabeth', 'Shakespeare', 'Beatles', 'Pugin', 'Big Ben',   /* 런던(2026-11-21) — 상표 · 사유 건물 · 버스 모델 · 구단 · 꾸민 인물 · 실존 인물(시계탑 설계자 · 탑 이름의 여왕도), 빅벤은 지시문엔 생김새로만 */
+  'Tsingtao', 'Huawei', 'Xiaomi', 'Alibaba', 'Tencent', 'Lenovo', 'Quanjude', 'Bianyifang', 'Donglaishun', 'Lao She', 'Tiananmen', "Tian'anmen", 'Mao', 'Xi Jinping', 'Puyi', 'Cixi', 'Qianlong', 'Yongle', 'Kublai',
+  'Bruce Lee', 'Jackie Chan', 'Mulan', 'Monkey King', 'Sun Wukong',   /* 베이징(2026-11-21) — 상표 · 오리구이 · 샤브샤브 노포 · 찻집 이름 · 정치 장소 · 실존 인물(황제 · 황태후 · 지도자) · 배우 · 꾸민 인물 */
+  'Turkish Airlines', 'Galatasaray', 'Fenerbahçe', 'Fenerbahce', 'Beşiktaş', 'Besiktas', 'Efes', 'Simit Sarayı', 'Hafız Mustafa', 'Hafiz Mustafa', 'Hacı Bekir', 'Haci Bekir', 'Kurukahveci',
+  'Hürrem', 'Hurrem', 'Roxelana', 'Suleiman', 'Süleyman', 'Atatürk', 'Ataturk', 'Mehmed', 'Murad', 'Justinian', 'Theodora', 'Sinan', 'Hezarfen', 'Hezârfen', 'Evliya', 'Leander',
+  'Hagia Sophia', 'Ayasofya', 'Blue Mosque', 'Sultanahmet', 'Topkapı', 'Topkapi', 'Galata Tower', "Maiden's Tower", 'Kız Kulesi',   /* 이스탄불(2026-11-21) — 항공사 · 구단 · 맥주 · 빵집 · 과자 · 커피 노포 · 실존 인물(술탄 · 황후 · 건축가 · 날아간 이 · 여행가) · 처녀의 탑 전설 인물, 예배하는 곳 · 궁전 · 탑 이름은 지시문엔 생김새로만 */
+  'Al Ahly', 'Zamalek', 'EgyptAir', 'Egyptair', 'Pepsi', 'Fishawy', 'Naguib Mahfouz', 'Mahfouz', 'Umm Kulthum', 'Mohamed Salah', 'Omar Sharif', 'Abdel Halim',
+  'Cleopatra', 'Nefertiti', 'Nefertari', 'Tutankhamun', 'Tutankhamen', 'Ramses', 'Ramesses', 'Khufu', 'Cheops', 'Khafre', 'Menkaure', 'Hatshepsut', 'Akhenaten', 'Saladin', 'Muhammad Ali', 'Mohamed Ali', "Al-Mu'izz", 'Mutawakkil', 'Farghani', 'Nasser', 'Sadat',
+  'Isis', 'Osiris', 'Horus', 'Anubis', 'Bastet', 'Khan el-Khalili', 'Al-Azhar', 'Alabaster Mosque', 'Nilometer',   /* 카이로(2026-11-21) — 구단 · 항공사 · 음료 · 찻집 노포 · 작가 · 가수 · 배우 · 선수 · 실존 인물(파라오 · 왕비 · 술탄 · 칼리프 · 측정계를 세운 이 · 대통령) · 신 이름(신 · 동물 머리 형상은 싣지 않는다), 시장 · 공원 · 모스크 · 측정계 이름은 지시문엔 생김새로만 */
+  'Havaianas', 'Flamengo', 'Fluminense', 'Vasco', 'Botafogo', 'Guaraná', 'Guarana', 'Brahma', 'Skol', 'Matte Leão', 'Biscoito Globo', 'Globo', 'Copacabana Palace', 'Maracanã', 'Maracana',
+  'Mangueira', 'Portela', 'Beija-Flor', 'Salgueiro', 'Mocidade', 'Viradouro', 'Sapucaí', 'Sapucai',
+  'Pelé', 'Neymar', 'Ronaldinho', 'Ronaldo', 'Romário', 'Romario', 'Zico', 'Carmen Miranda', 'Anitta', 'Jobim', 'Vinicius', 'Vinícius', 'Girl from Ipanema',
+  'Niemeyer', 'Burle Marx', 'Selarón', 'Selaron', 'Landowski', 'Dom Pedro', 'Pedro II', 'Christ', 'Redeemer', 'Cristo Redentor', 'Jesus'];   /* 리우데자네이루(2026-11-21) — 샌들 · 음료 · 맥주 · 과자 · 방송 상표, 구단 · 사유 호텔 · 경기장 이름, 삼바 학교 이름, 선수 · 가수 · 작곡가 · 건축가 · 조경가 · 계단을 만든 이 · 조각가 · 황제(실존 인물), 구세주상은 이름 없이 생김새로만(종교 이름도 싣지 않는다) */
 
 /* 세계 사전 — 정확히 세 세계, 표와 설계표가 같다 */
 assert(same(D.vocab.worlds, ['fantasy', 'steampunk', 'cyberpunk']) && same(T.WORLDS.map(w => w.key), D.vocab.worlds), '세계 열쇠 셋(mecha 없음)');
@@ -34,9 +46,9 @@ assert(!S.undecided && S.default === 'kr_drawn_rim_dewy', '화풍 확정 — 기
 const LIVE = Object.keys(S.styles).filter(k => !S.styles[k].retired);
 assert(LIVE.includes(S.default), '기본 화풍이 살아 있다');
 const seoul = D.cities.find(c => c.key === 'seoul');
-/* 설계된 도시 — 서울(2026-11-19) · 도쿄 · 뉴욕(2026-11-20) · 로마 · 파리 · 런던(2026-11-21). 세계 그림 · 일상컷 단언은 설계된 도시 모두에 */
+/* 설계된 도시 — 서울(2026-11-19) · 도쿄 · 뉴욕(2026-11-20) · 로마 · 파리 · 런던 · 베이징 · 이스탄불 · 카이로 · 리우데자네이루(2026-11-21 — 열 곳 모두). 세계 그림 · 일상컷 단언은 설계된 도시 모두에 */
 const DESIGNED = D.cities.filter(c => Object.keys(c.worlds || {}).length);
-assert(['seoul', 'tokyo', 'paris', 'london', 'rome', 'newyork'].every(k => DESIGNED.some(c => c.key === k)), '서울 · 도쿄 · 파리 · 런던 · 로마 · 뉴욕 설계됨');
+assert(['seoul', 'tokyo', 'beijing', 'paris', 'london', 'rome', 'newyork', 'istanbul', 'cairo', 'rio'].every(k => DESIGNED.some(c => c.key === k)) && DESIGNED.length === D.cities.length, '열 곳 모두 설계됨(리우데자네이루 2026-11-21)');
 let n = 0;
 for (const city of DESIGNED) for (const style of LIVE) for (const w of D.vocab.worlds) {
   const id = city.key + ' ' + style + ' ' + w, r = PC.build({ design: D, styles: S, city: city.key, world: w, style, kind: 'world' }), t = r.text, sw = city.worlds[w], mk = D.vocab.markers[w];
@@ -61,6 +73,7 @@ for (const city of DESIGNED) for (const style of LIVE) for (const w of D.vocab.w
   assert(t.includes(sw.scenes[0].en) && t.includes(sw.hold.en) && t.includes(sw.en), id + ' 첫 장면 · hold · 세계 글');
   /* (d) 금지 낱말 — 금지 줄 밖에 없다 */
   for (const b of mk.banned_en) assert(!word(b, 'i').test(body), id + ' (d) 금지 낱말 「' + b + '」');
+  for (const u of ((sw.own_vocab || {}).unban_en || [])) assert(!word(u, 'i').test(r.sections.negative || ''), id + ' 그 도시가 뺀 금지 낱말 「' + u + '」 은 Avoid 에도 없다');
   /* (e) 상표 · 사람 이름 */
   for (const nm of NAMES) assert(!word(nm).test(t), id + ' (e) 이름 「' + nm + '」');
   /* 장르 이름에 기대지 않는다 — 세계 줄 머리에 장르 낱말이 없다(3칸 머리 「COSTUME — FANTASY」 같은 칸 이름은 둔다) */
@@ -91,14 +104,17 @@ for (const bad of ['mecha', 'modern', '', undefined]) {
   assert.throws(() => PC.build({ design: D, styles: S, city: 'seoul', world: bad }), /unknown world/, '(f) ' + bad);
   assert.throws(() => P.build(D, S, 'seoul', bad, {}), /unknown world/, '(f) AtelierPrompt ' + bad);
 }
-/* (g) 설계 미정 도시 — 던지지 않고 비운다(mecha 는 먼저 던진다) */
-const undesigned = D.cities.filter(c => !Object.keys(c.worlds || {}).length);
-assert(undesigned.length === 4, '설계 미정 넷(서울 · 도쿄 · 파리 · 런던 · 로마 · 뉴욕 말고)');
-for (const c of undesigned) for (const w of D.vocab.worlds) {
-  const r = PC.build({ design: D, styles: S, city: c.key, world: w });
+/* (g) 설계 미정 도시 — 던지지 않고 비운다(mecha 는 먼저 던진다). 2026-11-21 리우까지 열 곳이 다 설계돼 실제 설계표엔 미정이 없다 —
+   설계표 사본(메모리)에서 리우의 worlds 를 {} 로 비워 미정 길을 그대로 본다(저장소 자료는 안 건드림) */
+assert.equal(D.cities.filter(c => !Object.keys(c.worlds || {}).length).length, 0, '실제 설계표엔 설계 미정이 없다(열 곳 모두 설계)');
+const DU = JSON.parse(JSON.stringify(D)); DU.cities.find(c => c.key === 'rio').worlds = {};
+const undesigned = DU.cities.filter(c => !Object.keys(c.worlds || {}).length);
+assert(undesigned.length === 1 && undesigned[0].key === 'rio', '사본의 설계 미정 하나(리우)');
+for (const c of undesigned) for (const w of DU.vocab.worlds) {
+  const r = PC.build({ design: DU, styles: S, city: c.key, world: w });
   assert(r.text === '' && same(r.missing, ['worlds']), '(g) ' + c.key + ' ' + w);
-  assert.equal(P.build(D, S, c.key, w, {}), '', c.key + ' 생성기 쪽도 빈 글');
-  assert(same(P.worldsOf(D, c.key), []), c.key + ' 사는 세계 없음');
+  assert.equal(P.build(DU, S, c.key, w, {}), '', c.key + ' 생성기 쪽도 빈 글');
+  assert(same(P.worldsOf(DU, c.key), []), c.key + ' 사는 세계 없음');
 }
 assert.throws(() => PC.build({ design: D, styles: S, city: 'atlantis', world: 'fantasy' }), /unknown city/);
 /* ══ 일상컷(kind 'casual', Task 4) — 그 세계의 서울의 하루 ══
@@ -128,7 +144,10 @@ for (const city of DESIGNED) for (const style of LIVE) for (const w of D.vocab.w
   for (const o of D.vocab.worlds.filter(x => x !== w)) assert(!t.includes(sw.en === s.worlds[o].en ? '\u0000' : s.worlds[o].en), id + ' 다른 세계 글이 안 샌다');
   const body = r.sections.negative ? t.replace(r.sections.negative, '') : t;
   for (const b of mk.banned_en) assert(!word(b, 'i').test(body), id + ' (d) 금지 낱말 「' + b + '」');
-  if (mk.banned_en.length) assert(/^Avoid: /.test(r.sections.negative) && r.sections.negative.includes(mk.banned_en.join(', ')), id + ' 그 세계 금지 낱말은 Avoid 단락에');
+  /* Avoid 단락엔 그 세계 금지 낱말 — 그 도시 own_vocab.unban_en 은 빼고(2026-11-21 베이징 — 자금성 · 장성이 그 도시 자체), 뺀 낱말은 Avoid 에도 없다 */
+  const unban = own.unban_en || [], banHere = mk.banned_en.filter(b => !unban.includes(b));
+  if (banHere.length) assert(/^Avoid: /.test(r.sections.negative) && r.sections.negative.includes(banHere.join(', ')), id + ' 그 세계 금지 낱말은 Avoid 단락에');
+  for (const u of unban) assert(!word(u, 'i').test(r.sections.negative || ''), id + ' 뺀 금지 낱말 「' + u + '」 은 Avoid 에도 없다');
   assert(!/(?:cape|crown|pauldrons?|tiara|regalia)/i.test(body) && !/Her city/.test(t) && !t.includes(mk.en[0]), id + ' 일상컷에 세계 그림용 motif 가 없다');
   for (const nm of NAMES) assert(!word(nm).test(t), id + ' (e) 이름 「' + nm + '」');
   assert(!/[가-힣]/.test(t) && !/\b(?:element|kingdom|atomic|mecha)\b/i.test(t) && !/\bundefined\b/.test(t) && !/\.\./.test(t), id + ' 한국어 · 원소 말 · 찌꺼기');
@@ -154,7 +173,7 @@ for (const city of DESIGNED) for (const s of LIFE.cities[city.key].scenes) asser
 }
 /* 세 세계 밖 · 설계 미정은 세계 그림과 같이 */
 assert.throws(() => cas('mecha', {}), /unknown world/);
-assert(same(PC.build({ design: D, styles: S, city: undesigned[0].key, world: 'fantasy', kind: 'casual', casual: { tree, tree2, life: LIFE, props: PROPS } }).missing, ['worlds']), '설계 미정 도시 일상컷');
+assert(same(PC.build({ design: DU, styles: S, city: undesigned[0].key, world: 'fantasy', kind: 'casual', casual: { tree, tree2, life: LIFE, props: PROPS } }).missing, ['worlds']), '설계 미정 도시 일상컷(사본)');
 /* ══ 기본 화풍 kr_drawn_rim_dewy(2026-11-20 — 사용자 「기본화풍도 아까 테스트했던 화풍으로 바꿔줘. 마지막 기준」) ══
    서울 세 세계 시험(scratchpad style1/build.cjs · casual/swap3.py)을 조립기가 그대로 — 세계 그림: STYLE 칸 화풍 글 · 얼굴 비율 줄 = worldFace ·
    「Face — her own:」 다음 줄 = worldStyleAfter · 빛 줄 = worldLight · Avoid 에 삼국지 avoid 셋. 일상컷: Style 줄 = casual 글, 다음 줄 = casualStyleAfter. 실사 문구 없음 */
@@ -227,5 +246,5 @@ for (const w of T.WORLDS.map(x => x.key)) { const t = PC.build({ design: D, styl
   assert(t.includes(sf.palette.en) && !t.includes('Seoul red (dancheong red)'), '해치 판타지 — 서울 판타지 palette 를 물려받음');
   const s0 = LIFE.cities.seoul.scenes[0], r = cas('fantasy', { place: P.lifeKey('seoul', s0.key), time: (s0.times || [])[0], season: (s0.seasons || ['autumn'])[0] }, S['default'], 'seoul-haechi').text;
   assert(r.split('\n').some(l => l.startsWith('World: ') && l.includes(sf.own_vocab.casual_world.en)), '해치 판타지 일상컷 World 줄 — 서울 own_vocab'); }
-console.log('PASS 지시문 조립: ' + DESIGNED.map(c => c.ko).join(' · ') + ' × 세 세계 × 화풍 ' + LIVE.length + ' = ' + n + '장 — 표지 · motif · 머리색 · 금지 낱말(Avoid 줄 밖) · 이름 · mecha 던짐 · 설계 미정 ' + undesigned.length + '곳 · 노출 · 고른 칸; ' +
+console.log('PASS 지시문 조립: ' + DESIGNED.map(c => c.ko).join(' · ') + ' × 세 세계 × 화풍 ' + LIVE.length + ' = ' + n + '장 — 표지 · motif · 머리색 · 금지 낱말(Avoid 줄 밖) · 이름 · mecha 던짐 · 설계 미정 ' + undesigned.length + '곳(사본) · 노출 · 고른 칸; ' +
   '일상컷 ' + nc + '장(' + DESIGNED.map(c => c.ko + ' 생활 장면 ' + LIFE.cities[c.key].scenes.length).join(' · ') + ' × 세 세계 × 화풍) — 그 세계 장면 글 · 소품 · 옷의 결 · 금지 낱말(Avoid 단락 밖) · 휴대폰 사전 · lifeTree');

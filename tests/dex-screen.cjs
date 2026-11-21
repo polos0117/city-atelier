@@ -1,6 +1,6 @@
 /* 전체 도감 탭(Task 9 — DESIGN.md 5절, 계획 Task 9 Step 1 · Review Focus 4) — 폴드 덮개 344×882 터치 + PC 1280.
    여섯 판(세계 × 밝기): 도시 10줄 · 줄마다 도시 상징 색 띠(palette.hex[0] 맨 위) · 세계 세 칸 + 일상컷 수 · 그림 없는 칸은 「그림 없음」 + 생성기 길 ·
-   설계 전 도시(넷 — 도쿄 · 뉴욕은 2026-11-20, 로마 · 파리 · 런던은 2026-11-21 설계)는 「설계 전」 · 위 머리(설계된 도시 · 세계 그림 · 일상컷 수) · 세계 고르개는 그 세계 칸만 강조 · 44px · 넘침 0 · 대비 4.5 · 콘솔 0 · 장식 영어 대문자 없음.
+   설계 전 도시(이제 없다 — 도쿄 · 뉴욕은 2026-11-20, 로마 · 파리 · 런던 · 베이징 · 이스탄불 · 카이로 · 리우데자네이루는 2026-11-21 설계, 「설계 전」 판은 설계표를 가로채 리우를 미정으로 되돌려 본다)는 「설계 전」 · 위 머리(설계된 도시 · 세계 그림 · 일상컷 수) · 세계 고르개는 그 세계 칸만 강조 · 44px · 넘침 0 · 대비 4.5 · 콘솔 0 · 장식 영어 대문자 없음.
    줄 누르기: 설계 전이면 짧은 안내(주소 그대로), 서울이면 ?city=seoul 무대 → 돌아오면 도감.
    가짜 등록부(data/img.json 을 가로채기 — 실제 파일은 고치지 않는다): 서울 판타지 세계 그림 + 일상컷 둘(오늘) · 스팀펑크 그림(어제) · 사이버펑크 그림(사흘 전), ?today= 로 날짜를 정한다 —
    작은 그림 칸 · 일상컷 수 · 새 그림 점(오늘 · 어제만) · 그림 칸 → 한 장 · 줄을 열면 점 꺼짐 · 새로 고쳐도 꺼진 채 · 「새 그림 모두 확인」 · 날짜가 지나면 점 없음.
@@ -24,6 +24,9 @@ const HF = 'seoul-haechi_fantasy_' + ST + '_f';
 const FAKE_LM = JSON.parse(JSON.stringify(FAKE)); FAKE_LM.added[HF + '_casual1.webp'] = DAY; FAKE_LM.img['seoul-haechi'] = { byStyle: { [ST]: { byForm: { fantasy: { f: HF + '.webp', casual: { f: [HF + '_casual1.webp', HF + '_casual2.webp'] } } } } } };
 const fakeLM = [{ url: /\/data\/img\.json/, body: JSON.stringify(FAKE_LM), contentType: 'application/json' }];
 const fake = [{ url: /\/data\/img\.json/, body: JSON.stringify(FAKE), contentType: 'application/json' }];
+/* 설계 전 판 — 설계표 사본에서 리우만 미정({})으로(2026-11-21 리우까지 열 곳 모두 설계) */
+const DPRE = JSON.parse(JSON.stringify(D)); DPRE.cities.find(c => c.key === 'rio').worlds = {};
+const PRE = [{ url: /\/data\/city-design\.json/, body: JSON.stringify(DPRE), contentType: 'application/json' }];
 const newSeats = p => p.$$eval('.th-ticket .th-new', es => es.map(e => e.closest('.th-ticket').dataset.city + ':' + e.closest('.th-seat').dataset.world));
 
 (async () => {
@@ -59,7 +62,7 @@ const newSeats = p => p.$$eval('.th-ticket .th-new', es => es.map(e => e.closest
           } else { assert(/is-pre/.test(s.cls) && s.tag === 'SPAN' && !s.href, at + ' 설계 전 칸 ' + r.city); assert.equal(s.text.replace(/\s/g, ''), '설계전'); }
         }
       }
-      assert.deepEqual(READY, ['seoul', 'tokyo', 'paris', 'london', 'rome', 'newyork'], '설계된 도시는 서울 · 도쿄 · 파리 · 런던 · 로마 · 뉴욕 여섯(넷은 설계 전 — 도쿄 · 뉴욕 2026-11-20 · 로마 · 파리 · 런던 2026-11-21)');
+      assert.deepEqual(READY, ['seoul', 'tokyo', 'beijing', 'paris', 'london', 'rome', 'newyork', 'istanbul', 'cairo', 'rio'], '설계된 도시는 열 곳 모두(도쿄 · 뉴욕 2026-11-20 · 로마 · 파리 · 런던 · 베이징 · 이스탄불 · 카이로 · 리우데자네이루 2026-11-21)');
       assert.deepEqual(await p.$$eval('.th-stats b', bs => bs.map(b => b.textContent.replace(/\s/g, ''))), [READY.length + '/10', '0/30', '0'], at + ' 위 머리');
       assert.equal(await p.locator('.th-new').count(), 1, at + ' 새 그림 점은 범례 하나뿐');
       assert.match(await p.getAttribute('.th-tk-cols span.is-cur', 'style'), new RegExp('--w-' + w + '\\)'), at + ' 고른 세계 머리 강조');
@@ -71,12 +74,14 @@ const newSeats = p => p.$$eval('.th-ticket .th-new', es => es.map(e => e.closest
       assert.deepEqual(o.errors, [], at + ' 콘솔'); checks += 14; await o.ctx.close();
     }
 
-    /* 줄 누르기 — 설계 전은 짧은 안내, 서울은 무대(돌아오면 도감) */
-    { const o = await open('/index.html?tab=dex&w=fantasy'), p = o.page; await p.waitForSelector('.th-ticket');
-      await p.tap('.th-ticket[data-city="beijing"] .th-seat[data-world="steampunk"]');
-      assert.match(await p.textContent('.th-ticket[data-city="beijing"] .th-tk-note'), /베이징.*설계 전/, '설계 전 줄 — 짧은 안내');
+    /* 줄 누르기 — 설계 전은 짧은 안내, 서울은 무대(돌아오면 도감). 2026-11-21 리우까지 열 곳이 다 설계돼 설계표(data/city-design.json)를 가로채 리우를 미정({})으로 되돌린다 — 실제 파일은 안 고친다 */
+    { const o = await open('/index.html?tab=dex&w=fantasy', { fulfill: PRE }), p = o.page; await p.waitForSelector('.th-ticket');
+      for (const wk of WORLDS) { const c = await p.getAttribute('.th-ticket[data-city="rio"] .th-seat[data-world="' + wk + '"]', 'class'); assert(/is-pre/.test(c), '가로챈 설계표 — 리우 ' + wk + ' 설계 전 칸'); }
+      assert.deepEqual(await p.$$eval('.th-stats b', bs => bs.map(b => b.textContent.replace(/\s/g, ''))).then(x => x[0]), (READY.length - 1) + '/10', '가로챈 설계표 — 설계된 도시 아홉');
+      await p.tap('.th-ticket[data-city="rio"] .th-seat[data-world="steampunk"]');   /* 설계 전 예 — 사본의 리우 */
+      assert.match(await p.textContent('.th-ticket[data-city="rio"] .th-tk-note'), /리우데자네이루.*설계 전/, '설계 전 줄 — 짧은 안내');
       assert.equal(await p.evaluate(() => location.search), '?tab=dex&w=fantasy', '설계 전 줄은 주소 그대로');
-      await p.tap('.th-ticket[data-city="beijing"] .th-tk-name'); assert.equal(await p.locator('.th-tk-note').count(), 0, '다시 누르면 안내 닫힘');
+      await p.tap('.th-ticket[data-city="rio"] .th-tk-name'); assert.equal(await p.locator('.th-tk-note').count(), 0, '다시 누르면 안내 닫힘');
       await p.tap('.th-ticket[data-city="seoul"] .th-count');
       await p.waitForSelector('.th-role'); assert.equal(await p.locator('.th-role').count(), 3, '서울 무대 세 칸');
       assert.equal(await p.evaluate(() => location.search), '?tab=dex&city=seoul&w=fantasy');

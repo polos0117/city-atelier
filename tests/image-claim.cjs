@@ -1,11 +1,11 @@
 /* 이미지 작업 잠금(tools/image-claim.cjs) — 몫은 한 도시의 한 세계(<도시>_<세계>, 2026-11-20). 실제 bare 저장소 둘로: 잡기 · 겹쳐 잡기 거절 · 실행마다 하나 · 멈춤 · 끝은 빈 자리가 없어야 ·
-   다른 세션이 먼저 밀면 push 거절 뒤 제 커밋을 되돌린다 · 하루 몫. 빈 자리는 실제 설계표(설계된 도시 — 서울 · 도쿄 · 뉴욕 2026-11-20 · 로마 · 파리 · 런던 2026-11-21)를 빈 등록부로 본다
+   다른 세션이 먼저 밀면 push 거절 뒤 제 커밋을 되돌린다 · 하루 몫. 빈 자리는 실제 설계표(설계된 도시 — 서울 · 도쿄 · 뉴욕 2026-11-20 · 로마 · 파리 · 런던 · 베이징 · 이스탄불 · 카이로 · 리우데자네이루 2026-11-21, 열 곳 모두)를 빈 등록부로 본다
    (실제 등록부는 그림이 늘 때마다 바뀌어서 — 서울 세 세계가 다 그려져 「빈 자리 33」 이 깨졌다). node tests/image-claim.cjs */
 const assert = require('node:assert/strict');
 const fs = require('node:fs'), path = require('node:path'), os = require('node:os'), cp = require('node:child_process');
 const TOOL = path.join(__dirname, '..', 'tools', 'image-claim.cjs'), K = require(TOOL);
 const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'image-claim-'));
-/* 실제 설계표 + 빈 등록부: 설계된 도시(서울 · 도쿄 · 파리 · 런던 · 로마 · 뉴욕)마다 빈 자리는 세계 셋 × (세계 그림 1 + 일상컷 10) = 33, 이름은 <도시>_<세계>_<화풍>_f[_casualN].webp */
+/* 실제 설계표 + 빈 등록부: 설계된 도시(서울 · 도쿄 · 베이징 · 파리 · 런던 · 로마 · 뉴욕 · 이스탄불 · 카이로 · 리우데자네이루)마다 빈 자리는 세계 셋 × (세계 그림 1 + 일상컷 10) = 33, 이름은 <도시>_<세계>_<화풍>_f[_casualN].webp */
 {
   const emptyRoot = path.join(tmp, 'empty'); fs.mkdirSync(path.join(emptyRoot, 'data'), { recursive: true });
   for (const f of ['style.json', 'city-design.json']) fs.copyFileSync(path.join(__dirname, '..', 'data', f), path.join(emptyRoot, 'data', f));
@@ -25,17 +25,33 @@ const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'image-claim-'));
   assert.equal(K.missing('rome').length, 33, '로마(2026-11-21 설계) 빈 자리 33');
   assert.equal(K.missing('paris').length, 33, '파리(2026-11-21 설계) 빈 자리 33');
   assert.equal(K.missing('london').length, 33, '런던(2026-11-21 설계) 빈 자리 33');
-  assert.deepEqual(K.order().map(x => x.key), ['seoul_fantasy', 'seoul_steampunk', 'seoul_cyberpunk', 'seoul-haechi_fantasy', 'seoul-haechi_steampunk', 'seoul-haechi_cyberpunk', 'seoul-gyeongbokgung_fantasy', 'seoul-gyeongbokgung_steampunk', 'seoul-gyeongbokgung_cyberpunk', 'seoul-namsantower_fantasy', 'seoul-namsantower_steampunk', 'seoul-namsantower_cyberpunk', 'seoul-hangangbridge_fantasy', 'seoul-hangangbridge_steampunk', 'seoul-hangangbridge_cyberpunk', 'seoul-citywall_fantasy', 'seoul-citywall_steampunk', 'seoul-citywall_cyberpunk', 'tokyo_fantasy', 'tokyo_steampunk', 'tokyo_cyberpunk', 'paris_fantasy', 'paris_steampunk', 'paris_cyberpunk', 'london_fantasy', 'london_steampunk', 'london_cyberpunk', 'rome_fantasy', 'rome_steampunk', 'rome_cyberpunk', 'newyork_fantasy', 'newyork_steampunk', 'newyork_cyberpunk'], '설계표 차례 × 세계 차례 — 설계 미정 도시는 몫이 없다');
+  assert.equal(K.missing('beijing').length, 33, '베이징(2026-11-21 설계) 빈 자리 33');
+  assert.equal(K.missing('istanbul').length, 33, '이스탄불(2026-11-21 설계) 빈 자리 33');
+  assert.equal(K.missing('cairo').length, 33, '카이로(2026-11-21 설계) 빈 자리 33');
+  assert.equal(K.missing('rio').length, 33, '리우데자네이루(2026-11-21 설계) 빈 자리 33');
+  assert.deepEqual(K.order().map(x => x.key), ['seoul_fantasy', 'seoul_steampunk', 'seoul_cyberpunk', 'seoul-haechi_fantasy', 'seoul-haechi_steampunk', 'seoul-haechi_cyberpunk', 'seoul-gyeongbokgung_fantasy', 'seoul-gyeongbokgung_steampunk', 'seoul-gyeongbokgung_cyberpunk', 'seoul-namsantower_fantasy', 'seoul-namsantower_steampunk', 'seoul-namsantower_cyberpunk', 'seoul-hangangbridge_fantasy', 'seoul-hangangbridge_steampunk', 'seoul-hangangbridge_cyberpunk', 'seoul-citywall_fantasy', 'seoul-citywall_steampunk', 'seoul-citywall_cyberpunk', 'tokyo_fantasy', 'tokyo_steampunk', 'tokyo_cyberpunk', 'beijing_fantasy', 'beijing_steampunk', 'beijing_cyberpunk', 'paris_fantasy', 'paris_steampunk', 'paris_cyberpunk', 'london_fantasy', 'london_steampunk', 'london_cyberpunk', 'rome_fantasy', 'rome_steampunk', 'rome_cyberpunk', 'newyork_fantasy', 'newyork_steampunk', 'newyork_cyberpunk', 'istanbul_fantasy', 'istanbul_steampunk', 'istanbul_cyberpunk', 'cairo_fantasy', 'cairo_steampunk', 'cairo_cyberpunk', 'rio_fantasy', 'rio_steampunk', 'rio_cyberpunk'], '설계표 차례 × 세계 차례(리우까지 열 곳 모두 설계 — 2026-11-21)');
   assert.deepEqual(K.order().map(x => x.key).slice(0, 6), ['seoul_fantasy', 'seoul_steampunk', 'seoul_cyberpunk', 'seoul-haechi_fantasy', 'seoul-haechi_steampunk', 'seoul-haechi_cyberpunk'], '도시 세 세계 다음 그 랜드마크');
   assert.equal(K.order()[3].title, '서울 해치 판타지');
   assert.equal(K.missing('seoul-haechi_fantasy').length, 11, '랜드마크 한 세계 = 세계 그림 1 + 일상 10');
   assert(K.missing('seoul-haechi_fantasy').every(f => f.startsWith('seoul-haechi_fantasy_')));
-  assert.equal(K.missing('beijing').length, 0, '설계 미정 도시는 빈 자리 없음(건너뛴다)');
   assert.equal(K.nextOf({}).key, 'seoul_fantasy', '다음 차례는 서울 판타지');
   assert.equal(K.nextOf({ seoul_fantasy: { runs: [{ status: 'working' }] } }).key, 'seoul_steampunk', '잡힌 세계는 건너뛰고 같은 도시 다음 세계');
   /* 캐릭터만의 컷(casual90)은 일상 열 장에 세지 않는다 */
   assert.equal(K.casualGap('seoul', st, [`seoul_fantasy_${st}_f_casual90.webp`], 10).length, 10);
   assert.deepEqual(K.casualGap('seoul', st, ['x_casual1.webp', 'x_casual2.webp', 'x_casual4.webp'], 5), [3, 5]);
+  delete process.env.CITY_DATA_ROOT;
+}
+/* 설계 미정 도시는 빈 자리 · 몫이 없다(건너뛴다) — 2026-11-21 리우까지 열 곳이 다 설계돼, 설계표 사본에서 리우의 worlds 를 {} 로 비워 본다(저장소 자료는 안 건드림) */
+{
+  const preRoot = path.join(tmp, 'pre'); fs.mkdirSync(path.join(preRoot, 'data'), { recursive: true });
+  fs.copyFileSync(path.join(__dirname, '..', 'data', 'style.json'), path.join(preRoot, 'data', 'style.json'));
+  const D = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'city-design.json'), 'utf8'));
+  D.cities.find(c => c.key === 'rio').worlds = {};
+  fs.writeFileSync(path.join(preRoot, 'data', 'city-design.json'), JSON.stringify(D));
+  fs.writeFileSync(path.join(preRoot, 'data', 'img.json'), JSON.stringify({ img: {} }));
+  process.env.CITY_DATA_ROOT = preRoot;
+  assert.equal(K.missing('rio').length, 0, '설계 미정 도시는 빈 자리 없음(사본의 리우)');
+  assert(!K.order().some(x => x.city === 'rio') && K.order().some(x => x.city === 'cairo'), '설계 미정 도시는 몫이 없다(사본의 리우)');
   delete process.env.CITY_DATA_ROOT;
 }
 /* 시험 자료 — 빈 자리가 있는 도시가 셋은 있어야 시험이 된다. 설계표 복사본에서 도쿄 · 베이징에도 서울의 세계 셋을 붙인다(검사용, 저장소 자료는 안 건드림) */

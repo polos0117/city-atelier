@@ -1,6 +1,6 @@
 /* 화면 검사 — 화풍 비교 · 생성기를 브라우저로 연다. 폴드 덮개(344×882)와 PC(1280).
    도시 꼴(2026-11-19 Task 3): 생성기는 도시 › 갈래 › 단계. 세계 그림은 세계 → 장면 → 자세 · 표정 → 실루엣 → 설계 줄 → 외형 → 덧붙임 → 다 골랐다 —
-   화면이 지은 지시문이 node 쪽 조립기(lib/prompt-city.js)와 글자 하나 다르지 않다. 도시 판은 열 곳(설계 미정 여섯은 누를 수 없다), 화풍 고르개(내린 화풍 빠짐), 주소 ?card=&o=&world=,
+   화면이 지은 지시문이 node 쪽 조립기(lib/prompt-city.js)와 글자 하나 다르지 않다. 도시 판은 열 곳(설계 미정은 누를 수 없다 — 2026-11-21 열 곳 모두 설계돼 설계표를 가로챈 사본으로 본다), 화풍 고르개(내린 화풍 빠짐), 주소 ?card=&o=&world=,
    폰 칩 레일 · 아래 막대 · 시트, 새로 고쳐도 남음, 옆 넘침 없음, 콘솔 오류 없음.
    일상컷(Task 4): 세계 → 시대 → 장소(서울 생활 장면) → … 한 칸씩 · 화면 지시문 = 조립기(생활 장면표 · 세계 소품 사전) · 그 세계 장면 글 · 금지 낱말은 Avoid 단락만 ·
    손에 드는 그 도시의 물건 · 해방 · 랜덤 · 여기부터 다시 · 처음부터 다시 · 파일 이름 · 주소.
@@ -75,13 +75,21 @@ const lineOf = (txt, head) => (String(txt).split('\n').find(l => l.startsWith(he
         assert.deepEqual(gv.errors, [], '생성기 화풍 콘솔'); checks += 11; await gv.ctx.close();
       }
 
-      /* 도시 판 — 처음 오면 도시부터. 열 곳, 설계 미정(서울 · 도쿄 · 로마 · 뉴욕 말고 여섯)은 누를 수 없다 */
+      /* 도시 판 — 처음 오면 도시부터. 열 곳, 설계 미정은 누를 수 없다(2026-11-21 리우까지 열 곳이 다 설계돼 실제 표엔 미정이 없다 — 미정 칸은 아래에서 설계표를 가로채 리우를 {} 로 되돌려 본다) */
       const v = await open('/prompt.html'), p = v.page;
       await p.evaluate(() => localStorage.removeItem('city_studio_v1')); await p.reload(); await p.waitForSelector('#panel .opt');
       assert.equal(await openOf(p), 'city', '처음은 도시 판');
       assert.equal(await p.locator('#panel .opt[data-city]').count(), P.cards(D).length, '카드 칸(도시 + 랜드마크)');
       assert.equal(await p.locator('#panel .opt[data-city][disabled]').count(), D.cities.filter(c => !P.worldsOf(D, c.key).length).length, '설계 미정은 누를 수 없다');
-      assert.match(await p.locator('#panel .opt[data-city="beijing"]').textContent(), /설계 미정/, '설계 미정 표시');
+      assert.equal(D.cities.filter(c => !P.worldsOf(D, c.key).length).length, 0, '열 곳 모두 설계(리우데자네이루 2026-11-21)');
+      assert.doesNotMatch(await p.locator('#panel .opt[data-city="rio"]').textContent(), /설계 미정/, '리우는 설계됨');
+      { const DPRE = JSON.parse(JSON.stringify(D)); DPRE.cities.find(c => c.key === 'rio').worlds = {};
+        const pv = await H.open(br, srv.base, '/prompt.html', { viewport: vp, fulfill: [{ url: /\/data\/city-design\.json/, body: JSON.stringify(DPRE), contentType: 'application/json' }] }), pp = pv.page;
+        await pp.waitForSelector('#panel .opt');
+        assert.equal(await pp.locator('#panel .opt[data-city][disabled]').count(), 1, '가로챈 설계표 — 설계 미정 하나(리우)는 누를 수 없다');
+        assert(await pp.locator('#panel .opt[data-city="rio"]').isDisabled(), '가로챈 설계표 — 리우 칸이 막힘');
+        assert.match(await pp.locator('#panel .opt[data-city="rio"]').textContent(), /설계 미정/, '설계 미정 표시');
+        assert.deepEqual(pv.errors, [], '가로챈 설계표 판 콘솔'); await pv.ctx.close(); }
       await p.click('#panel .opt[data-city="seoul"]'); assert.equal(await openOf(p), 'out', '도시 다음 갈래');
       await p.click('[data-out="world"]'); assert.equal(await openOf(p), 'world', '갈래 다음 세계');
       assert.deepEqual(await p.$$eval('#panel .opt[data-pick]', os => os.map(o => o.dataset.pick)), D.vocab.worlds, '세계 셋(mecha 없음)');

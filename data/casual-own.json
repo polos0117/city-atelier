@@ -314,6 +314,210 @@
      }
     }
    }
+  },
+  "beijing": {
+   "root": {
+    "ko": "황제의 도시에 때와 소식을 알리던 소리와 불 — 천단에선 황제가 하늘에 풍년을 빌었고(기년전 · 원구단 — https://en.wikipedia.org/wiki/Temple_of_Heaven · https://en.wikipedia.org/wiki/Circular_Mound_Altar, 옥 벽은 뒷날 하늘의 상징 — https://en.wikipedia.org/wiki/Bi_(jade)), 중축선 북쪽 끝의 고루 · 종루는 원 · 명 · 청 내내 북과 종으로 도시의 공식 시각을 알렸으며(고루 위층에 큰 북 하나와 작은 북 스물넷 — https://en.wikipedia.org/wiki/Drum_Tower_and_Bell_Tower_of_Beijing), 만리장성은 산마루 봉수대의 연기와 불로 소식을 건넸다(https://en.wikipedia.org/wiki/Great_Wall_of_China) → 하늘에 빌고 · 때를 울리고 · 불을 건네는 사람 — 하늘 제단의 풍년 기원 제사관(판타지) · 고루 시보 북지기(스팀펑크) · 장성 봉화 빛 신호 관제사(사이버펑크). 2026-11-21 시안 — 시험 그림 전",
+    "from": "story"
+   },
+   "mode": "per_world",
+   "worlds": {
+    "fantasy": {
+     "job_ko": "하늘 제단의 풍년 기원 제사관",
+     "base": "stage_open_air",
+     "place": "the top tier of the round white marble sky altar of her world's imperial capital at dawn — rings of carved white balustrades stepping down around her, the round hall with its three tiers of deep-blue glazed roofs glowing beyond, and the vermilion walls and golden roofs of the palace city far to the north in the golden light",
+     "activity": "she is the keeper of the harvest prayer, kneeling on one knee at the centre of the altar with the jade disc of heaven held at her breast, her eyes on its soft glow as she asks heaven for a good harvest",
+     "preset": "half_kneel_use",
+     "use": "sig_hold",
+     "prop": "a round disc of pale green jade with a hole at its centre, carved with curling cloud scrolls and glowing softly from within",
+     "outfit": {
+      "bold": "a harvest-priestess look fitted to her body — a sleeveless wrap top of imperial-yellow silk brocade with a deep crossed neckline, a short pleated vermilion skirt slit at the sides, a small cloud collar of deep-blue silk edged in gold, gold armlets and soft embroidered slippers",
+      "moderate": "a harvest-priestess look — a short-sleeved imperial-yellow brocade jacket crossed at the front, a knee-length pleated vermilion horse-face skirt, a cloud collar of deep-blue silk edged in gold and embroidered slippers",
+      "low": "a harvest-priestess look — a long-sleeved imperial-yellow brocade robe with wide trailing sleeves, a floor-length pleated vermilion horse-face skirt, a broad cloud collar of deep-blue silk edged in gold and embroidered slippers"
+     }
+    },
+    "steampunk": {
+     "job_ko": "고루 시보 북지기",
+     "base": "street_rooftop",
+     "place": "the upper floor of the tall drum tower at the north end of her steam city's old axis at dusk — a great red-lacquered drum on a carved stand beside her and rows of smaller drums around it, brass clockwork gears turning in the painted rafters, and through the open arches the gaslit grey roofs of the hutong lanes and the grey-walled bell tower with its green glazed roof",
+     "activity": "she is the drum tower's timekeeper, standing beside the great drum with the heavy beater gripped in both hands, about to beat out the evening hour across the city",
+     "preset": "stand_use",
+     "use": "sig_both",
+     "prop": "a long, heavy drum beater of red-lacquered wood capped in polished brass",
+     "outfit": {
+      "bold": "a timekeeper look fitted to her body — a sleeveless high-collared qipao-cut minidress of white silk painted with cobalt-blue porcelain scrolls, brass frog buttons down one side, a hem banded in stepped brass, lace gloves and laced ankle boots",
+      "moderate": "a timekeeper look — a short-sleeved, knee-length qipao-cut dress of white silk painted with cobalt-blue porcelain scrolls, brass frog buttons down one side, a hem banded in stepped brass and laced boots",
+      "low": "a timekeeper look — a long-sleeved, ankle-length qipao-cut gown of white silk painted with cobalt-blue porcelain scrolls, a high collar, brass frog buttons down one side, a short fitted jacket, fine gloves and laced boots"
+     }
+    },
+    "cyberpunk": {
+     "job_ko": "장성 봉화 빛 신호 관제사",
+     "base": "travel_lookout",
+     "place": "the walkway of the ancient crenellated wall on a mountain ridge north of her far-future city at night — the old stone kept exactly as it was, a watchtower ahead of her sending a pulse of vermilion light to the next ridge, the wall winding away over the dark mountains and the megacity glowing on the horizon",
+     "activity": "she is the beacon keeper of the wall, striding along the walkway toward the next watchtower with her beacon baton held before her, ready to pass the light on",
+     "preset": "stride_prop",
+     "use": "sig_hold",
+     "prop": "a slim beacon baton of white ceramic and chrome, a steady flame of vermilion light burning at its tip",
+     "outfit": {
+      "bold": "a beacon-keeper look fitted to her body — a cropped high-collared smart-fabric jacket with a scalloped cloud-collar edge traced in yellow light, a fitted top, high-cut shorts, a slim exo-frame along her legs and tall sleek boots",
+      "moderate": "a beacon-keeper look — a fitted smart-fabric jacket with a scalloped cloud-collar edge traced in yellow light, slim trousers, a slim exo-frame along her spine and tall sleek boots",
+      "low": "a beacon-keeper look — a long smart-fabric coat with a high scalloped cloud collar traced in yellow light, gloves, slim trousers, a slim exo-frame along her spine and tall sleek boots"
+     }
+    }
+   }
+  },
+  "istanbul": {
+   "root": {
+    "ko": "두 대륙 사이를 건너게 하는 손 — 보스포루스 해협은 유럽과 아시아를 가르고(https://en.wikipedia.org/wiki/Bosporus), 1973년 첫 다리 전까지 두 기슭을 잇는 길은 배뿐이었으며 지금도 연락선이 날마다 수많은 사람을 건넨다(https://en.wikipedia.org/wiki/Ferries_in_Istanbul), 해협 남쪽 입구 작은 섬의 처녀의 탑은 1721년 불탄 뒤 다시 지어 등대로 쓰였고(https://en.wikipedia.org/wiki/Maiden%27s_Tower), 17세기 이야기엔 한 사람이 날개를 달고 갈라타 탑 꼭대기에서 남서풍을 타고 해협 건너 위스퀴다르까지 날았다고 전한다(https://en.wikipedia.org/wiki/Galata_Tower · https://en.wikipedia.org/wiki/Hez%C3%A2rfen_Ahmed_%C3%87elebi — 이름은 지시문에 쓰지 않는다) → 해협을 건너게 하는 사람 — 처녀의 탑 등불지기(판타지) · 갈라타 탑 비단 날개 비행사(스팀펑크) · 두 대륙 해협 횡단 관제사(사이버펑크). 2026-11-21 시안 — 시험 그림 전",
+    "from": "story"
+   },
+   "mode": "per_world",
+   "worlds": {
+    "fantasy": {
+     "job_ko": "해협 입구 처녀의 탑 등불지기",
+     "base": "travel_lookout",
+     "place": "the stone landing of the small white tower on its islet at the mouth of the strait of her world's capital at dusk — the lamp room glowing at the top of the tower behind her, the shining strait running between two continents, galleys with silk sails gliding past and the domes and slender minarets of the old city rising gold across the water",
+     "activity": "she is the keeper of the islet tower's lamp, lifting her lantern high toward a passing galley to guide it safely between the two shores, her eyes on its warm glow",
+     "preset": "light_check",
+     "use": "sig_raise",
+     "prop": "a small pierced gold lantern with panes of turquoise glass, a warm light glowing within",
+     "outfit": {
+      "bold": "a lamp-keeper look fitted to her body — a cropped sleeveless jacket of ivory silk brocade woven with turquoise and cobalt Iznik tulips and edged in gold, a short wrap skirt slit at the side, a coral-red silk sash, gold armlets and soft embroidered slippers",
+      "moderate": "a lamp-keeper look — a short-sleeved, fitted kaftan-cut jacket of ivory brocade woven with turquoise and cobalt Iznik tulips, a knee-length skirt, a coral-red silk sash and embroidered slippers",
+      "low": "a lamp-keeper look — a long-sleeved, ankle-length kaftan of ivory brocade woven with turquoise and cobalt Iznik tulips and carnations, edged in gold, a coral-red silk sash and soft embroidered boots"
+     }
+    },
+    "steampunk": {
+     "job_ko": "갈라타 탑 비단 날개 비행사",
+     "base": "street_rooftop",
+     "place": "the high stone gallery ringing the top of the round stone tower with its tall conical cap, on the hill of her steam city at dusk — the cone rising overhead, the gaslit roofs and steep stepped lanes falling away below and the golden strait with the far continent's shore beyond, paddle-wheel ferries crossing in clean white steam",
+     "activity": "she is the tower's glider flyer, standing at the gallery rail with both hands on the brass control bar of her silk-and-brass wings, testing the south-west wind before she leaps out across the strait to the far shore",
+     "preset": "stand_use",
+     "use": "sig_both",
+     "prop": "the polished brass control bar of her folding glider wings of ivory silk and brass",
+     "outfit": {
+      "bold": "a glider-flyer look fitted to her body — a cropped cobalt waistcoat with polished brass buckles over a fitted top, high-cut shorts, a harness for silk-and-brass glider wings across her back, fingerless leather gloves and tall laced boots",
+      "moderate": "a glider-flyer look — a fitted cobalt waistcoat with brass buckles over a short-sleeved blouse, knee-length riding breeches, a harness for silk-and-brass glider wings across her back and tall laced boots",
+      "low": "a glider-flyer look — a long-sleeved cobalt flying jacket with brass buckles and a high collar, fitted riding trousers, leather gloves, a harness for silk-and-brass glider wings across her back and tall laced boots"
+     }
+    },
+    "cyberpunk": {
+     "job_ko": "두 대륙 해협 횡단 관제사",
+     "base": "repair_kiosk",
+     "place": "a glass control deck at the top of a bridge tower high over the strait of her far-future city at night — a curved console of glowing lanes before her, bridges of light spanning the water between Europe and Asia below, hydrofoil ferries and quiet flying vehicles crossing in streams of light and the old city's gold domes glowing on the far shore",
+     "activity": "she is the warden of the crossing, leaning over the console with both hands on its glowing surface, guiding the streams of ferries and flying vehicles safely between the two continents",
+     "preset": "counter_work",
+     "use": "sig_both",
+     "prop": "a curved glass control slate glowing with the winding strait and its crossing lanes drawn as lines of light",
+     "outfit": {
+      "bold": "a crossing-warden look fitted to her body — a cropped smart-fabric top split cobalt and turquoise down the middle with a seam of white light, a high-cut skirt glowing with drifting tulip patterns and tall sleek boots",
+      "moderate": "a crossing-warden look — a fitted smart-fabric jacket split cobalt and turquoise down the middle with a seam of white light, slim trousers glowing with drifting tulip patterns and sleek boots",
+      "low": "a crossing-warden look — a long smart-fabric coat split cobalt and turquoise down the middle with a seam of white light, a high collar, gloves, slim trousers and sleek boots"
+     }
+    }
+   }
+  },
+  "cairo": {
+   "root": {
+    "ko": "물때와 별과 등불로 때를 알리는 손 — 카이로 로다섬의 나일 측정계는 861년에 세운 눈금 기둥으로 해마다 범람기 나일의 물높이를 쟀고(https://en.wikipedia.org/wiki/Nilometer), 기자 대피라미드를 지은 이들은 별(미자르 · 코카브)로 참북쪽을 찾았다는 방법들이 전해지며(https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza), 이집트에서 비롯한 파누스는 금속과 유리로 만든 등불로 해마다 거리와 집을 밝힌다(https://en.wikipedia.org/wiki/Fanous · 칸 엘칼릴리의 공방 https://en.wikipedia.org/wiki/Khan_el-Khalili) → 때를 재고 길을 밝히는 사람 — 나일 측정계의 물때 수호자(판타지) · 칸 엘칼릴리 놋쇠 등불 장인(스팀펑크) · 피라미드처럼 별로 방위를 맞추는 별빛 측량사(사이버펑크). 2026-11-21 시안 — 시험 그림 전",
+    "from": "story"
+   },
+   "mode": "per_world",
+   "worlds": {
+    "fantasy": {
+     "job_ko": "로다섬 나일 측정계의 물때 수호자",
+     "base": "stage_open_air",
+     "place": "the stone stair of the river gauge on its island in the Nile of her world's capital at morning — the stair descending into clear green water around a tall marked column under carved arches, the glittering river and white slanting sails beyond, and the three great pyramids shining white on the far plateau",
+     "activity": "she is the keeper of the river gauge, kneeling on one knee on a wet step to read the rising flood against the marked column, her gold measuring staff held upright beside her as the river climbs",
+     "preset": "half_kneel_use",
+     "use": "sig_hold",
+     "prop": "a tall, slender gold measuring staff ringed with fine gold bands and topped with an open blue lotus of softly glowing glass",
+     "outfit": {
+      "bold": "a river-keeper look fitted to her body — a broad beaded collar of gold, lapis and turquoise faience over a cropped sleeveless top of finely pleated white linen, a short pleated linen wrap skirt slit at the side with a hem stepped in gold, gold armlets and soft gold sandals",
+      "moderate": "a river-keeper look — a broad beaded collar of gold, lapis and turquoise faience over a fitted short-sleeved dress of finely pleated white linen falling to the knee, its hem stepped in gold, a lapis-blue sash and gold sandals",
+      "low": "a river-keeper look — a broad beaded collar of gold, lapis and turquoise faience over a long-sleeved, ankle-length robe of finely pleated white linen with a hem stepped in gold, a lapis-blue sash and soft gold slippers"
+     }
+    },
+    "steampunk": {
+     "job_ko": "칸 엘칼릴리 놋쇠 등불 장인",
+     "base": "repair_kiosk",
+     "place": "her lantern workshop at the open front of a covered bazaar lane in the old city of her steam city at dusk — a worn workbench of polished wood scattered with brass sheets, little punches and pieces of coloured glass, hundreds of finished star-pierced brass lanterns glowing overhead in ruby, emerald and amber, a carved wooden lattice balcony leaning over the lane and gas lamps coming on",
+     "activity": "she is the lane's lantern-maker, leaning over her workbench and fitting a last pane of ruby glass into a star-pierced brass lantern with both hands, its little flame just lit inside",
+     "preset": "counter_work",
+     "use": "sig_both",
+     "prop": "a small brass lantern with a pointed domed cap, its sides pierced with stars and set with ruby, emerald and amber glass",
+     "outfit": {
+      "bold": "a lantern-maker look fitted to her body — a cropped Nile-blue waistcoat with polished brass buttons and a short shoulder cape of openwork brass lattice, a fitted brass-buckled waist band, a short skirt, fingerless leather gloves, brass goggles pushed up in her hair and laced ankle boots",
+      "moderate": "a lantern-maker look — a fitted Nile-blue waistcoat with brass buttons over a short-sleeved cotton blouse, a shoulder cape of openwork brass lattice, a knee-length skirt with a leather tool apron, brass goggles pushed up in her hair and laced boots",
+      "low": "a lantern-maker look — a long Nile-blue coat with brass buttons and cuffs of openwork brass lattice over a high-collared blouse, an ankle-length skirt with a leather tool apron, leather gloves, brass goggles pushed up in her hair and laced boots"
+     }
+    },
+    "cyberpunk": {
+     "job_ko": "피라미드처럼 별로 방위를 맞추는 별빛 측량사",
+     "base": "street_rooftop",
+     "place": "a glass deck high on a stepped white tower of her far-future city at night — the three great pyramids glowing in their slow halos of light on the plateau beyond, a pale beam rising from the apex of the greatest into a sky full of stars, the river of light winding through the city below and quiet flying vehicles streaming along the lanes she sets",
+     "activity": "she is the city's star surveyor, raising her glass sighting rod toward the night sky to find true north by the stars as the ancient builders of the pyramids did, setting the flying lanes by it, her eyes on the thin beam of light",
+     "preset": "light_check",
+     "use": "sig_raise",
+     "prop": "a slim sighting rod of clear glass and gold, a thin pale beam of light running from its tip toward the stars",
+     "outfit": {
+      "bold": "a star-surveyor look fitted to her body — a cropped top of white smart ceramic with raised shoulders stepped in triangular tiers, a high-cut skirt traced with lines of gold light, a band of gold and lapis-blue light striped across her slicked-back hair and tall sleek boots",
+      "moderate": "a star-surveyor look — a fitted jacket of white smart ceramic with raised shoulders stepped in triangular tiers, slim trousers traced with lines of gold light, a band of gold and lapis-blue light striped across her slicked-back hair and sleek boots",
+      "low": "a star-surveyor look — a long coat of white smart ceramic with a high collar and raised shoulders stepped in triangular tiers, gloves, slim trousers and sleek boots, a band of gold and lapis-blue light striped across her slicked-back hair"
+     }
+    }
+   }
+  },
+  "rio": {
+   "root": {
+    "ko": "해를 보내고 · 봉우리를 잇고 · 장단을 이끄는 경이로운 도시의 손 — 아르포아도르 바위 곶과 이파네마 바닷가에선 한여름 해가 바다로 질 때 사람들이 모여 환호하고 박수를 보내며(https://en.wikipedia.org/wiki/Arpoador · https://en.wikipedia.org/wiki/Ipanema), 빵 산 곤돌라 길은 1912년 브라질에서 처음 · 세계에서 셋째로 열려 두 봉우리를 잇고(https://en.wikipedia.org/wiki/Sugarloaf_Mountain), 삼바 학교 행진에선 바테리아(북 패)가 장단으로 행진의 빠르기를 이끌며 그 북 패에도 지휘자가 있다(https://en.wikipedia.org/wiki/Samba_school) → 도시의 경이를 사람들에게 건네는 사람 — 아르포아도르의 해넘이 전령(판타지) · 빵 산 곤돌라 조종사(스팀펑크) · 빛의 대로의 바테리아 지휘자(사이버펑크). 2026-11-21 시안 — 시험 그림 전",
+    "from": "story"
+   },
+   "mode": "per_world",
+   "worlds": {
+    "fantasy": {
+     "job_ko": "아르포아도르의 해넘이 전령",
+     "base": "travel_lookout",
+     "place": "the great rock headland reaching into the sea at the end of the long crescent beach of her world's capital at sunset — the sun sinking gold and orange into the ocean, white surf breaking on the rocks below, a crowd gathered along the shore and on the rocks, and the rounded granite peaks and rainforest mountains of the bay glowing behind",
+     "activity": "she is the sunset herald of the Marvelous City, raising her gold staff high toward the sinking sun as it touches the sea, the crowd on the rocks behind her breaking into applause",
+     "preset": "light_check",
+     "use": "sig_raise",
+     "prop": "a slender gold herald's staff topped with a glowing disc of sunset-orange glass ringed with fine gold rays",
+     "outfit": {
+      "bold": "a sunset-herald look fitted to her body — a sleeveless top of light gold scale armor edged in turquoise, a short tabard skirt of Atlantic-turquoise silk embroidered in gold with rainforest leaves and tropical flowers, a small fan of sunset-orange and gold plumes rising behind her shoulders, gold arm cuffs and laced gold sandals",
+      "moderate": "a sunset-herald look — a fitted short-sleeved bodice of light gold scale armor over a knee-length tabard dress of Atlantic-turquoise silk embroidered in gold with rainforest leaves and tropical flowers, a small fan of sunset-orange and gold plumes rising behind her shoulders and gold sandals",
+      "low": "a sunset-herald look — a long-sleeved, ankle-length gown of Atlantic-turquoise silk embroidered in gold with rainforest leaves and tropical flowers under a light gold breastplate, a small fan of sunset-orange and gold plumes rising behind her shoulders and soft gold slippers"
+     }
+    },
+    "steampunk": {
+     "job_ko": "빵 산 곤돌라 조종사",
+     "base": "street_rooftop",
+     "place": "the summit station of the gondola line on the great rounded granite peak of her steam city on a golden afternoon — great brass cable wheels turning behind polished railings, a little brass-and-wood gondola easing in on its fine cable in soft white steam, the turquoise bay, the white crescent beaches and the green rainforest hills spread far below and an airship drifting past",
+     "activity": "she is the pilot of the gondola line to the peak, standing at the station rail and raising her long brass spyglass with both hands to read the clouds and the wind over the bay before she sends the next gondola down",
+     "preset": "stand_use",
+     "use": "sig_both",
+     "prop": "a long brass spyglass banded in turquoise enamel",
+     "outfit": {
+      "bold": "a gondola-pilot look fitted to her body — a cropped turquoise flight jacket with polished brass buttons over a fitted bandeau top, crossing leather harness straps, high-waisted shorts, a long white silk scarf patterned with black waves, fingerless leather gloves, brass goggles on her head and laced ankle boots",
+      "moderate": "a gondola-pilot look — a cropped turquoise flight jacket with polished brass buttons over a fitted cotton blouse, crossing leather harness straps, a knee-length pleated skirt, a long white silk scarf patterned with black waves, leather gloves, brass goggles on her head and laced boots",
+      "low": "a gondola-pilot look — a long turquoise flight coat with polished brass buttons over a high-collared blouse, crossing leather harness straps, slim trousers tucked into tall laced boots, a long white silk scarf patterned with black waves, leather gloves and brass goggles on her head"
+     }
+    },
+    "cyberpunk": {
+     "job_ko": "빛의 대로의 바테리아(북 패) 지휘자",
+     "base": "stage_festival",
+     "place": "the long parade avenue of light of her far-future city on a carnival night — tiers of glowing stands rising on both sides packed with cheering crowds, towering floats of light gliding behind, hundreds of drummers with drums rimmed in light marching in step and the halo-ringed granite peaks glowing over the city",
+     "activity": "she is the conductor of a samba school's drum section, striding ahead of her hundreds of drummers with her glass baton in hand and cueing the beat, the whole avenue moving to her rhythm",
+     "preset": "stride_prop",
+     "use": "sig_hold",
+     "prop": "a slim conductor's baton of clear glass, a bead of light at its tip pulsing to the beat",
+     "outfit": {
+      "bold": "a drum-conductor look fitted to her body — a cropped jacket of softly glowing glazed-tile mosaic panels in green, yellow and blue set with little mirror pieces over a fitted bandeau top, crossing strap-and-buckle harnesses, a short skirt where rings of light pulse to the beat and tall sleek boots",
+      "moderate": "a drum-conductor look — a cropped jacket of softly glowing glazed-tile mosaic panels in green, yellow and blue set with little mirror pieces over a fitted top, crossing strap-and-buckle harnesses, a short skirt over sheer smart tights where rings of light pulse to the beat and tall sleek boots",
+      "low": "a drum-conductor look — a long-sleeved jacket of softly glowing glazed-tile mosaic panels in green, yellow and blue set with little mirror pieces over a high-necked bodysuit, crossing strap-and-buckle harnesses, slim trousers where rings of light pulse to the beat and tall sleek boots"
+     }
+    }
+   }
   }
  }
 }

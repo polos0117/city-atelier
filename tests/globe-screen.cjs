@@ -12,6 +12,10 @@ const H = require('./lib/harness.cjs'), GM = require('../lib/globe-math.js');
 const D = JSON.parse(fs.readFileSync(path.join(H.ROOT, 'data/city-design.json'), 'utf8')), OWN = JSON.parse(fs.readFileSync(path.join(H.ROOT, 'data/casual-own.json'), 'utf8'));
 const WORLDS = ['fantasy', 'steampunk', 'cyberpunk'], C = Object.fromEntries(D.cities.map(c => [c.key, c]));
 const GLB = /models\/globe\/[a-z]+\.glb/;
+/* 설계 전 판 — 2026-11-21 리우까지 열 곳이 다 설계돼, 설계 전 막힘을 보는 판은 설계표(data/city-design.json)를 가로채 사본에서 리우만 미정({})으로 되돌린다(실제 파일은 안 고친다) */
+const DPRE = JSON.parse(JSON.stringify(D)); DPRE.cities.find(c => c.key === 'rio').worlds = {};
+const CPRE = Object.fromEntries(DPRE.cities.map(c => [c.key, c]));
+const PRE = [{ url: /\/data\/city-design\.json/, body: JSON.stringify(DPRE), contentType: 'application/json' }];
 const TEXT = '.th-sub, .th-name, .th-marquee p, .th-marquee-name, .th-mq-sub, .th-tab, .th-worlds button, .th-go, .th-mq-prev, .th-mq-next';
 /* 아주 작은 glb — 노드 Globe · Stand 만(계획 Task 6 의 노드 약속) */
 function glb() {
@@ -68,7 +72,7 @@ const settle = p => p.waitForFunction(() => { const k = document.querySelector('
     }
 
     /* (a) (b) (e) 판타지 어두운 — 끌기 · 앞뒤 · 앞면 · 날짜변경선 · 들어가기 */
-    { const o = await open('/index.html?w=fantasy', { failURL: GLB }), p = o.page;
+    { const o = await open('/index.html?w=fantasy', { failURL: GLB, fulfill: PRE }), p = o.page;   /* 설계 전 예(리우)는 가로챈 설계표에서 */
       const t0 = Date.now(); await globeIs(p, 'svg', 4000);
       assert(Date.now() - t0 < 4000, '(a) SVG 지구본이 곧바로');
       await p.waitForTimeout(300);
@@ -88,7 +92,7 @@ const settle = p => p.waitForFunction(() => { const k = document.querySelector('
           const hit = await p.evaluate(([x, y]) => { const e = document.elementFromPoint(x, y); const g = e && e.closest('.gl-pin'); return g ? g.dataset.city : ''; }, [ps[c.key].x, ps[c.key].y]);
           assert.notEqual(hit, c.key, c.key + ' 뒷면 점이 눌린다');
         }
-        assert.equal(ps[c.key].pre, !Object.keys(c.worlds).length, c.key + ' 설계 전 흐린 점');
+        assert.equal(ps[c.key].pre, !Object.keys(CPRE[c.key].worlds).length, c.key + ' 설계 전 흐린 점(가로챈 설계표 — 리우만)');
       }
       assert(!ps.rio.front && ps.tokyo.front, '서울 정면 — 리우 뒷면 · 도쿄 앞면'); checks += 4;
       // (b) 앞 · 뒤 단추 — 서에서 동으로
@@ -97,14 +101,16 @@ const settle = p => p.waitForFunction(() => { const k = document.querySelector('
       assert.equal((await pins(p)).tokyo.on, true, '조명이 도쿄로');
       await p.tap('.th-mq-prev'); await p.tap('.th-mq-prev'); assert.equal((await marquee(p)).city, 'beijing', '앞 앞 → 베이징');
       await settle(p);
+      for (const k of ['cairo', 'istanbul', 'rome', 'paris', 'london', 'rio']) { await p.tap('.th-mq-prev'); assert.equal((await marquee(p)).city, k, '앞으로 → ' + k + '(서에서 동 차례의 거꾸로)'); }   /* 설계 전 예는 리우(2026-11-21 열 곳 모두 설계 — 가로챈 설계표에서만 미정) */
+      await settle(p);
       // 설계 전 도시 — 「설계 전」 · 무대로 막힘(짧은 안내, 주소 그대로)
       assert.equal(await p.locator('.th-marquee .th-pre').count(), 1, '설계 전 표지');
       assert.equal(await p.getAttribute('.th-go', 'aria-disabled'), 'true');
       const before = await p.evaluate(() => location.search);
       await p.tap('.th-go', { force: true }); await p.waitForSelector('.th-go-note');
-      assert.match(await p.textContent('.th-go-note'), new RegExp(C.beijing.ko));
+      assert.match(await p.textContent('.th-go-note'), new RegExp(C.rio.ko));
       assert.equal(await p.evaluate(() => location.search), before, '설계 전 — 무대로 가지 않는다');
-      await H.shot(p, 'globe-pre-beijing'); checks += 6;
+      await H.shot(p, 'globe-pre-rio'); checks += 6;
       // (b) 끌어 돌리기 — 조명 안 도시가 바뀌고 전광판 이름이 따라감(놓으면 그 도시가 가운데로)
       const m0 = await marquee(p); const b = await ballCenter(p);
       await p.mouse.move(b.x, b.y); await p.mouse.down();
@@ -160,7 +166,7 @@ const settle = p => p.waitForFunction(() => { const k = document.querySelector('
       assert.deepEqual(o.errors, [], '(b) 콘솔'); checks += 20; await o.ctx.close(); }
 
     /* (c) 세계 바꿈 중 끌기 · 점 두 번 누르기 · 단추 연타 — 오류 0, 엉뚱한 도시로 가지 않음 */
-    { const o = await open('/index.html?w=fantasy'), p = o.page; await globeIs(p, 'svg');
+    { const o = await open('/index.html?w=fantasy', { fulfill: PRE }), p = o.page; await globeIs(p, 'svg');   /* 설계 전 점(리우)은 가로챈 설계표에서 */
       const b = await ballCenter(p);
       await p.mouse.move(b.x, b.y); await p.mouse.down(); await p.mouse.move(b.x - 30, b.y, { steps: 3 });
       await p.tap('.th-worlds [data-world="cyberpunk"]');   // 끄는 중에 세계를 바꾼다
@@ -179,11 +185,11 @@ const settle = p => p.waitForFunction(() => { const k = document.querySelector('
       await p.waitForSelector('.th-cast');
       assert.equal(await p.evaluate(() => new URLSearchParams(location.search).get('city')), 'seoul', '두 번 눌러도 서울');
       await p.goBack(); await globeIs(p, 'svg');
-      // 막 바꾼 직후 바깥 도시 점(설계 전) 두 번 — 무대로 가지 않는다
-      while ((await marquee(p)).city !== 'cairo') await p.tap('.th-mq-next');
+      // 막 바꾼 직후 바깥 도시 점(설계 전) 두 번 — 무대로 가지 않는다. 설계 전은 가로챈 설계표의 리우 하나뿐이라(2026-11-21 리우까지 열 곳 모두 설계) 리우가 앞면에 오는 뉴욕에 조명을 두고 리우 점을 누른다
+      while ((await marquee(p)).city !== 'newyork') await p.tap('.th-mq-next');
       await settle(p); await p.tap('.th-worlds [data-world="cyberpunk"]'); await globeIs(p, 'svg');
-      const all = await pins(p), sx = all.cairo, pre = Object.entries(all).find(([k, v]) => v.front && v.pre && !v.on && Math.hypot(v.x - sx.x, v.y - sx.y) > 50);   // 조명 안 도시의 누르는 자리(22px)에 겹치지 않는 점
-      assert(pre, '설계 전 앞면 점이 있다');
+      const all = await pins(p), sx = all.newyork, pre = Object.entries(all).find(([k, v]) => v.front && v.pre && !v.on && Math.hypot(v.x - sx.x, v.y - sx.y) > 50);   // 조명 안 도시의 누르는 자리(22px)에 겹치지 않는 점
+      assert(pre && pre[0] === 'rio', '설계 전 앞면 점(리우)이 있다');
       { await p.mouse.click(pre[1].x, pre[1].y); await p.mouse.click(pre[1].x, pre[1].y); await p.waitForTimeout(600);
         assert.equal(await p.evaluate(() => new URLSearchParams(location.search).get('city')), null, '설계 전 도시는 무대로 안 감'); }
       assert.deepEqual(o.errors, [], '(c) 콘솔'); checks += 5; await o.ctx.close(); }

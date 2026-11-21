@@ -78,7 +78,8 @@ cases = {
     "옷 말투 빠짐": lambda d: d["vocab"]["wear"]["cyberpunk"].pop("moderate"),
     "일상컷 세계 결 빠짐": lambda d: d["vocab"]["casual_world"]["fantasy"].pop("guard_en"),
     "일상컷 세계 결에 금지 낱말": lambda d: d["vocab"]["casual_world"]["steampunk"].update(en="a gaslamp city of polished brass and glass, warm gaslight and soot on every sill"),
-    "미정 도시에 랜드마크": lambda d: city(d, "beijing").__setitem__("landmarks", [dict(lm(d), key="x")]),
+    "미정 도시에 랜드마크": lambda d: (city(d, "rio").__setitem__("worlds", {}), city(d, "rio").__setitem__("landmarks", [dict(lm(d), key="x")])),   # 2026-11-21 리우까지 열 곳이 다 설계돼 사본에서 리우를 미정({})으로 되돌려 본다
+    "own_vocab.unban_en 에 금지 낱말 밖의 말": lambda d: city(d, "beijing")["worlds"]["fantasy"]["own_vocab"]["unban_en"].append("Forbidden City"),
     "랜드마크 열쇠에 -": lambda d: lm(d).__setitem__("key", "hae-chi"),
     "랜드마크 세계 둘뿐": lambda d: lm(d)["worlds"].pop("cyberpunk"),
     "랜드마크 판타지 글에 broadcast tower": lambda d: lm(d, "fantasy").__setitem__("en", lm(d, "fantasy")["en"] + ", beside a broadcast tower"),
@@ -86,5 +87,7 @@ cases = {
 }
 for name, mut in cases.items():
     assert broken(mut), "검사기가 못 걸었다: " + name
+# 미정 도시(worlds {})는 그것만으로는 오류가 아니다(알림) — 위 「미정 도시에 랜드마크」 가 랜드마크 규칙으로 걸린 것인지 본다
+assert not broken(lambda d: city(d, "rio").__setitem__("worlds", {})), "설계 미정 도시 하나가 오류로 걸린다"
 
 print("PASS 설계표 검사기: 진짜 표 통과 · 망가뜨린 %d가지 다 걸림" % len(cases))
