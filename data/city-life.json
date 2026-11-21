@@ -143,6 +143,29 @@
    { "key": "cold_front", "ko": "찬 공기 지나는 날", "en": "a cool day after a cold front — a grey sky, a fresh wind and a rougher sea", "seasons": ["winter"], "src": "https://en.wikipedia.org/wiki/Rio_de_Janeiro" }
   ]
  },
+ "heritage": {
+  "note": "전통 · 민족 의상(2026-11-21 사용자 「1번으로 하고」 — 계획기가 유카타 · 한복 · 기모노 · 아바야를 아무 도시에나 골랐다). items 에 적은 옷은 그 문화의 도시(cities)에서만 고른다. 어느 도시에도 없는 문화의 옷은 안 고르고, never(종교 옷)는 어디서도 안 고른다. 자기 전통 옷이 없는 도시는 전통 의상 계열(traditional)을 안 고르고 그 칸이 다른 옷이 된다(tools/casual-plan.cjs herOk).",
+  "items": {
+   "korea": ["hanbok_formal", "hanbok_daily", "hanbok_slip", "hanbok_coverup", "jjimjil_set"],
+   "japan": ["kimono_formal", "yukata_daily", "yukata_over", "bath_yukata", "juban_inspired"],
+   "china": ["hanfu_formal", "qipao_daily", "qipao_silk_set", "xinzhongshi_crop_mamian", "xinzhongshi_knot_dress", "xinzhongshi_jacket_mini"],
+   "turkey": ["kaftan_daily", "caftan_evening", "peshtemal"],
+   "egypt": ["kaftan_daily", "caftan_evening"],
+   "south_asia": ["sari_formal", "lehenga_formal", "salwar_daily", "sari_blouse_set"],
+   "vietnam": ["aodai_daily"],
+   "gulf": ["thobe_inspired"],
+   "alpine": ["dirndl_modern"],
+   "scotland": ["kilt_inspired"],
+   "eastern_europe": ["folk_embroidery"],
+   "west_africa": ["kente_modern", "boubou_flow"],
+   "mexico": ["huipil_modern"],
+   "andes": ["poncho_andes"],
+   "indonesia": ["kebaya_daily", "kebaya_lace"],
+   "philippines": ["barong_inspired"]
+  },
+  "never": ["abaya_modern", "burkini_modest"],
+  "cities": { "seoul": ["korea"], "tokyo": ["japan"], "beijing": ["china"], "istanbul": ["turkey"], "cairo": ["egypt"] }
+ },
  "cities": {
   "seoul": {
    "scenes": [

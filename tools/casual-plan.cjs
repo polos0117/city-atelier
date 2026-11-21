@@ -236,6 +236,12 @@ function famsAt(place) {
 }
 /* 생활 장면 컷 · 보통 칸이 고를 계열 — 노출 갈래 · 코스프레는 정해 둔 칸 한 장씩만 */
 const plainFams = place => famsAt(place).filter(f => !EXPOSE_TYPES.includes(f) && f !== COS_FAM);
+/* 전통 · 민족 의상 — 그 문화의 도시에서만(data/city-life.json heritage, 2026-11-21 사용자 「1번으로 하고」 — 유카타 · 한복 · 기모노 · 아바야가 아무 도시에나 나왔다).
+   표에 적힌 옷은 그 도시 문화 것만, never(종교 옷)는 어디서도 안 고른다. 고를 옷이 하나도 안 남는 계열(자기 전통 옷이 없는 도시의 traditional)은 계열째 안 고른다 */
+const HER = LIFE.heritage || {}, HER_ITEMS = HER.items || {}, HER_NEVER = HER.never || [];
+const HER_ALL = new Set([...Object.values(HER_ITEMS).flat(), ...HER_NEVER]);
+const herOk = (city, item) => !item || !HER_ALL.has(item) || (!HER_NEVER.includes(item) && ((HER.cities || {})[city] || []).some(c => (HER_ITEMS[c] || []).includes(item)));
+const famHerOk = (city, fam) => { const f = (tree.outfits || []).find(o => o.key === fam); return !f || !(f.items || []).length || f.items.some(it => herOk(city, it.key)); };
 /* 일반 장소 — 버전1 트리 장소(data/casual-tree.json places). 버전2 표의 새 장소(extra_places)는 안 쓴다 */
 const GEN = new Set((tree.places || []).map(p => p.key));
 /* 그 세계 그 도시의 장소 풀 — 생활 장면(그 도시) · 일반 장소(그 세계 금지 낱말이 글에 없는 곳) */
@@ -325,7 +331,7 @@ function slot(r, card, kind = 'plain', { frame = '', wantSig = false, usage = {}
   if (kind === 'cosplay') sc = { era: ERA, place, ofam: COS_FAM };
   else if (EXPOSE_TYPES.includes(kind)) sc = { era: ERA, place, ofam: kind };
   else {
-    const fams = plainFams(place); if (!fams.length) return null;   /* 노출 갈래 · 코스프레는 정해 둔 칸 한 장씩만 */
+    const fams = plainFams(place).filter(f => famHerOk(card.city, f)); if (!fams.length) return null;   /* 노출 갈래 · 코스프레는 정해 둔 칸 한 장씩만 */
     sc = { era: ERA, place, ofam: lean(r, fams, U.ofam, x => x, f => famW(f) * (C2.awkward(T2, f, place).length ? AWKWARD_WEIGHT : 1)) };
   }
   sc.treeV = 2; sc.prop = wantSig ? '0' : '';
@@ -342,8 +348,8 @@ function slot(r, card, kind = 'plain', { frame = '', wantSig = false, usage = {}
     if (!sig.length) return null;
     sc = { ...sc, use: pick(r, sig) };
   }
-  const items = C2.choices(T2, sc, 'item', g).filter(k => worldOk(world, (C2.item(T2, sc.ofam, k) || {}).en));
-  if (!items.length && !worldOk(world, (C2.family(T2, sc.ofam) || {}).en)) return null;
+  const items = C2.choices(T2, sc, 'item', g).filter(k => worldOk(world, (C2.item(T2, sc.ofam, k) || {}).en) && herOk(card.city, k));
+  if (!items.length && (!worldOk(world, (C2.family(T2, sc.ofam) || {}).en) || !famHerOk(card.city, sc.ofam))) return null;
   if (kind === 'cosplay') { if (!items.includes(cosItem(cut))) return null; sc.item = cosItem(cut); }   /* 재단은 pickCosplay 가 정했다 */
   else sc.item = items.length ? lean(r, items, U.item) : '';
   sc = C2.repair(T2, sc, g, rp);
@@ -456,6 +462,7 @@ function check(cuts, card, base = [], others = []) {
     if (!ls && !worldOk(world, (C2.place(T2, c.place) || {}).en)) errs.push(`칸 ${c.n || '?'}: 일반 장소 ${c.place} 의 글에 ${world} 금지 낱말`);
     if (ls && ls.outfits && !ls.outfits.includes(c.ofam)) errs.push(`칸 ${c.n || '?'}: 장면 ${ls.key} 에서 의상 계열 ${c.ofam} 은 안 고른다(장면표 outfits)`);
     if (!worldOk(world, outfitEn(c))) errs.push(`칸 ${c.n || '?'}: 옷 「${outfitEn(c)}」 에 ${world} 금지 낱말`);
+    if (!herOk(card.city, c.item) || (!c.item && !c.outfit && !famHerOk(card.city, c.ofam))) errs.push(`칸 ${c.n || '?'}: 전통 의상 ${c.item || c.ofam} 은 ${card.city} 것이 아니다(data/city-life.json heritage)`);
     if (c.use && noUse.includes(c.use)) errs.push(`칸 ${c.n || '?'}: 소품 동작 ${c.use} 는 ${world} 에서 안 쓴다(세계 소품 사전 not_uses)`);
     if (c.time && !(TIMES.some(x => x.key === c.time) && (!pr.times || pr.times.includes(c.time)))) errs.push(`칸 ${c.n || '?'}: 시간대 ${c.time} 는 생활 장면표 times · ${where} 밖`);
     if (c.season && !(seasons.some(x => x.key === c.season) && (!pr.seasons || pr.seasons.includes(c.season)))) errs.push(`칸 ${c.n || '?'}: 계절 ${c.season} 는 ${card.city} 표 · ${where} 밖`);

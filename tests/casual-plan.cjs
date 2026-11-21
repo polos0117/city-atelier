@@ -168,6 +168,9 @@ try {
   bad({ cityWeather: 'snowfall', season: 'summer' }, /날씨 snowfall/, '여름에 눈');
   bad({ time: 'night' }, /시간대 night/, '트리 시간대');
   bad({ weather: 'rain' }, /트리 날씨/, '트리 날씨');
+  bad({ ofam: 'traditional', item: 'kimono_formal' }, /전통 의상 kimono_formal/, '서울에 기모노(heritage — 그 문화의 도시에서만)');
+  bad({ ofam: 'traditional', item: 'abaya_modern' }, /전통 의상 abaya_modern/, '종교 옷은 어디서도 안 고른다');
+  assert(!C.check(at(i0).map((c, j) => j === i0 ? { ...c, ofam: 'traditional', item: 'hanbok_daily' } : c), card, []).some(e => /전통 의상/.test(e)), '서울에 한복은 된다');
   const iL = a.findIndex(c => c.lifeMust), iC = a.findIndex(C.isCosplay), iX = a.findIndex(c => C.requiredType(c) === 'roleplay');
   bad({ place: a.find(c => !c.sfree && !C.lifeOf(c.place)).place }, /생활 장면 필수 컷의 장소/, '생활 장면 필수 컷이 일반 장소', iL);
   bad({ lifeMust: false }, /생활 장면 필수 컷이 없다/, '생활 장면 필수 컷 없음', iL);

@@ -323,6 +323,28 @@ def check_life(doc, life, props, design, tree2):
     places = {x["key"] for x in doc["places"]} | {x["key"] for x in tree2.get("extra_places", [])}
     fams = {o["key"] for o in doc["outfits"]}
     times = {t["key"] for t in life.get("times", [])}
+    # 전통 · 민족 의상 표(2026-11-21) — 옷 열쇠는 트리 옷, 도시는 생활 장면표 도시, 문화는 items 열쇠
+    her = life.get("heritage") or {}
+    all_items = {it["key"] for o in doc["outfits"] for it in o.get("items", [])}
+    for cult, xs in (her.get("items") or {}).items():
+        for x in xs:
+            if x not in all_items:
+                errs.append("heritage.items.%s 의 옷 %s 가 트리에 없다" % (cult, x))
+    for x in her.get("never") or []:
+        if x not in all_items:
+            errs.append("heritage.never 의 옷 %s 가 트리에 없다" % x)
+    for ck, cults in (her.get("cities") or {}).items():
+        if ck not in life.get("cities", {}):
+            errs.append("heritage.cities 의 도시 %s 가 생활 장면표에 없다" % ck)
+        for cu in cults:
+            if cu not in (her.get("items") or {}):
+                errs.append("heritage.cities.%s 의 문화 %s 가 items 에 없다" % (ck, cu))
+    trad = next((o for o in doc["outfits"] if o["key"] == "traditional"), None)
+    tagged = {x for xs in (her.get("items") or {}).values() for x in xs} | set(her.get("never") or [])
+    if her and trad:
+        for it in trad.get("items", []):
+            if it["key"] not in tagged:
+                errs.append("전통 의상 %s 가 heritage 표(items · never)에 없다 — 어느 도시 것인지 적는다" % it["key"])
     for t in life.get("times", []):
         en("시간대 " + t["key"], t.get("en"), errs)
     for ck, c in life.get("cities", {}).items():
