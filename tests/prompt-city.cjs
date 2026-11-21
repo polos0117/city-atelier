@@ -231,7 +231,9 @@ const LK = P.card(D, 'seoul-haechi');
 assert(LK && LK.tier === 'landmark' && LK.parent === 'seoul' && LK.people === 'Korean', '랜드마크 카드');
 assert(same(P.cards(D).slice(0, 2), ['seoul', 'seoul-haechi']), '도시 바로 뒤에 그 랜드마크');
 assert(same(P.worldsOf(D, 'seoul-haechi'), ['fantasy', 'steampunk', 'cyberpunk']), '랜드마크 세계');
-assert(same(P.landmarksOf(D, 'tokyo'), []), '랜드마크 없는 도시');
+assert.equal(P.landmarksOf(D, 'tokyo').length, 3, '도쿄 랜드마크 셋(2026-11-21 — 서울 빼고 아홉 도시에 셋씩)');
+{ const D0 = JSON.parse(JSON.stringify(D)); D0.cities.find(c => c.key === 'tokyo').landmarks = [];   /* 이제 랜드마크 없는 도시가 없다 — 사본에서 비워 본다 */
+  assert(same(P.landmarksOf(D0, 'tokyo'), []), '랜드마크 없는 도시'); }
 assert.equal(P.parentOf('seoul-haechi'), 'seoul');
 assert(P.card(D, 'seoul').tier === 'city' && P.card(D, 'seoul-nope') === null, '도시 카드 그대로 · 없는 랜드마크 null');
 for (const w of T.WORLDS.map(x => x.key)) { const t = PC.build({ design: D, styles: S, city: 'seoul-haechi', world: w, style: S['default'], kind: 'world' }).text;

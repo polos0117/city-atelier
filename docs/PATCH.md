@@ -7,6 +7,13 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-21 · claude · 랜드마크 스물일곱 — 서울 빼고 아홉 도시에 셋씩
+- 사용자 「도시공방 서울 제외한 나머지 9나라의 랜드마크를 3개씩 추가해서 업로드까지 해줘」. 카드마다 세 세계 세 사람(도시 사람 · 같은 도시 다른 랜드마크와 얼굴 칸 셋 이상 다름, 굴곡형 위주 · 마른 체형은 도시마다 많아야 하나), 근거 src(위키백과). 예배 장소 · 종교 조각상 · 상표 걸린 사유 건물은 카드로 안 함, 도시 사람과 겹치는 명소는 뺌.
+- data/city-design.json — landmarks: 도쿄 tokyostation · rainbowbridge · uenopark / 뉴욕 liberty · centralpark · grandcentral / 로마 colosseum · spanishsteps · navona / 파리 eiffeltower(en 은 이름 없이 the iron lattice tower on the Champ de Mars) · louvre · opera(en the grand opera house) / 런던 bigben(en the clock tower of Westminster) · towerbridge · buckingham / 베이징 forbiddencity · summerpalace · greatwall / 이스탄불 cistern · grandbazaar · dolmabahce / 카이로 pyramids · sphinx · cairotower / 리우 sugarloaf · copacabana · lapaarches. 부모 도시 palette 가 다른 명소 말(트레비 청록 · 북 · 장미창 등)이면 그 세계에 palette 를 따로.
+- tests/prompt-city.cjs — 「랜드마크 없는 도시」는 도쿄를 비운 사본으로, 도쿄 셋. tests/image-claim.cjs — 잠금 차례 기대값을 표에서 세움(도시 열 + 랜드마크 서른둘 × 세 세계). tests/city-design.py — 「미정 도시 하나」 사본에서 리우 랜드마크도 비움. tests/globe-screen.cjs — 도쿄 랜드마크 줄 셋(이 세션에서 cdn 이 막혀 못 돌림).
+- tests/screen.cjs — 일상컷 시간대 줄 뒤 빛 모습(「; …」, 2026-11-21 11-18 개선 옮기기)도 받게(그때 못 돌린 검사).
+- 확인할 것: 뉴욕 en 「the Statue of Liberty」 가 이름 표의 런던 백화점 Liberty 와, 베이징 en 「the Great Wall at Badaling」 이 공용 금지 낱말과 겹친다(지금 검사는 랜드마크 첫 줄을 이름 표로 안 본다 — 베이징은 own_vocab.unban_en 을 물려받아 Avoid 줄엔 안 실림). 랜드마크 근거는 src 하나만 들어가 덧 근거 주소는 작업 보고에만 있다.
+
 ## 2026-11-21 · claude · 그림 속 글자 · 숫자로 올림을 멈추지 않음
 - 사용자 「도시공방에 숫자나 글자보인다고 업로드 보류하는 것좀 없애줘」. 지시문의 글자 · 숫자 금지(Avoid)는 그대로 둔다.
 - docs/IMAGE_AUTOMATION.md — 0절: 글자 · 숫자는 멈출 까닭이 아니다(qa.observations 에 적기만, passed 를 false 로 안 하고 block · 다시 그리기 없이 올린다). 로고 · 워터마크 · 말풍선은 4절대로 passed: false 로 올린다(block 아님). 4절 검수 줄도 같게.

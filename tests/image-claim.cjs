@@ -29,7 +29,10 @@ const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'image-claim-'));
   assert.equal(K.missing('istanbul').length, 33, '이스탄불(2026-11-21 설계) 빈 자리 33');
   assert.equal(K.missing('cairo').length, 33, '카이로(2026-11-21 설계) 빈 자리 33');
   assert.equal(K.missing('rio').length, 33, '리우데자네이루(2026-11-21 설계) 빈 자리 33');
-  assert.deepEqual(K.order().map(x => x.key), ['seoul_fantasy', 'seoul_steampunk', 'seoul_cyberpunk', 'seoul-haechi_fantasy', 'seoul-haechi_steampunk', 'seoul-haechi_cyberpunk', 'seoul-gyeongbokgung_fantasy', 'seoul-gyeongbokgung_steampunk', 'seoul-gyeongbokgung_cyberpunk', 'seoul-namsantower_fantasy', 'seoul-namsantower_steampunk', 'seoul-namsantower_cyberpunk', 'seoul-hangangbridge_fantasy', 'seoul-hangangbridge_steampunk', 'seoul-hangangbridge_cyberpunk', 'seoul-citywall_fantasy', 'seoul-citywall_steampunk', 'seoul-citywall_cyberpunk', 'tokyo_fantasy', 'tokyo_steampunk', 'tokyo_cyberpunk', 'beijing_fantasy', 'beijing_steampunk', 'beijing_cyberpunk', 'paris_fantasy', 'paris_steampunk', 'paris_cyberpunk', 'london_fantasy', 'london_steampunk', 'london_cyberpunk', 'rome_fantasy', 'rome_steampunk', 'rome_cyberpunk', 'newyork_fantasy', 'newyork_steampunk', 'newyork_cyberpunk', 'istanbul_fantasy', 'istanbul_steampunk', 'istanbul_cyberpunk', 'cairo_fantasy', 'cairo_steampunk', 'cairo_cyberpunk', 'rio_fantasy', 'rio_steampunk', 'rio_cyberpunk'], '설계표 차례 × 세계 차례(리우까지 열 곳 모두 설계 — 2026-11-21)');
+  { const DD = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'city-design.json'), 'utf8')), W = ['fantasy', 'steampunk', 'cyberpunk'];   /* 2026-11-21 서울 빼고 아홉 도시에 랜드마크 셋씩 — 표에서 차례를 따로 세운다 */
+    const want = DD.cities.flatMap(c => [c.key, ...(c.landmarks || []).map(l => c.key + '-' + l.key)].flatMap(k => W.map(w => k + '_' + w)));
+    assert.equal(want.length, (10 + 5 + 27) * 3, '도시 열 · 서울 랜드마크 다섯 · 아홉 도시 랜드마크 스물일곱 × 세 세계');
+    assert.deepEqual(K.order().map(x => x.key), want, '설계표 차례 × 세계 차례(리우까지 열 곳 모두 설계 — 2026-11-21)'); }
   assert.deepEqual(K.order().map(x => x.key).slice(0, 6), ['seoul_fantasy', 'seoul_steampunk', 'seoul_cyberpunk', 'seoul-haechi_fantasy', 'seoul-haechi_steampunk', 'seoul-haechi_cyberpunk'], '도시 세 세계 다음 그 랜드마크');
   assert.equal(K.order()[3].title, '서울 해치 판타지');
   assert.equal(K.missing('seoul-haechi_fantasy').length, 11, '랜드마크 한 세계 = 세계 그림 1 + 일상 10');

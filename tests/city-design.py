@@ -88,6 +88,6 @@ cases = {
 for name, mut in cases.items():
     assert broken(mut), "검사기가 못 걸었다: " + name
 # 미정 도시(worlds {})는 그것만으로는 오류가 아니다(알림) — 위 「미정 도시에 랜드마크」 가 랜드마크 규칙으로 걸린 것인지 본다
-assert not broken(lambda d: city(d, "rio").__setitem__("worlds", {})), "설계 미정 도시 하나가 오류로 걸린다"
+assert not broken(lambda d: (city(d, "rio").__setitem__("worlds", {}), city(d, "rio").pop("landmarks", None))), "설계 미정 도시 하나가 오류로 걸린다"   # 2026-11-21 리우에도 랜드마크가 생겨 같이 비운다
 
 print("PASS 설계표 검사기: 진짜 표 통과 · 망가뜨린 %d가지 다 걸림" % len(cases))

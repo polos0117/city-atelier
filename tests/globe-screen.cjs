@@ -288,7 +288,7 @@ const settle = p => p.waitForFunction(() => { const k = document.querySelector('
       assert.deepEqual(await smallTargets(p), [], '한 장 44px'); assert(await H.noOverflow(p));
       await p.tap('.th-back'); await p.waitForSelector('.th-cast'); assert.equal(await p.evaluate(() => location.search), '?city=seoul&w=fantasy', '돌아가기 → 서울 무대');
       assert.deepEqual(o.errors, [], '랜드마크 콘솔'); checks += 13; await o.ctx.close(); }
-    { const o = await open('/index.html?city=tokyo'), p = o.page; await p.waitForSelector('.th-cast'); assert.equal(await p.locator('.th-marks').count(), 0, '도쿄엔 랜드마크 줄 없음'); checks += 1; await o.ctx.close(); }
+    { const o = await open('/index.html?city=tokyo'), p = o.page; await p.waitForSelector('.th-cast'); assert.equal(await p.locator('.th-marks .th-mark').count(), 3, '도쿄 랜드마크 셋(2026-11-21)'); checks += 1; await o.ctx.close(); }
     { const o = await open('/index.html?city=seoul&card=seoul-haechi&pic=seoul-haechi_fantasy_zz_f.webp'), p = o.page;
       await p.waitForSelector('.th-cast'); assert.equal(await p.locator('.th-card').count(), 0, '없는 랜드마크 그림 — 무대'); checks += 1; await o.ctx.close(); }
 

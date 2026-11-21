@@ -159,7 +159,7 @@ const lineOf = (txt, head) => (String(txt).split('\n').find(l => l.startsWith(he
       sc = (await state(p)).scene;
       const t1 = await promptOf(p), fwl = LIFE.cities.seoul.scenes.find(x => x.key === 'pojangmacha').worlds.fantasy;
       assert.equal(t1, casualOf(sc, 'fantasy'), '화면 일상컷 지시문 = 조립기(생활 장면표 · 세계 소품 사전)');
-      assert(t1.includes('\nPlace: ' + fwl.en + '.\n') && fwl.props.every(k => t1.includes(PROPS.props[k].worlds.fantasy.en)) && lineOf(t1, 'Time of day: ') === 'Time of day: ' + LIFE.times.find(x => x.key === 'past_midnight').en + '.', '판타지 포장마차 · 그 세계 소품 · 한밤');
+      assert(t1.includes('\nPlace: ' + fwl.en + '.\n') && fwl.props.every(k => t1.includes(PROPS.props[k].worlds.fantasy.en)) && [LIFE.times.find(x => x.key === 'past_midnight').en + '.', LIFE.times.find(x => x.key === 'past_midnight').en + '; '].some(x => lineOf(t1, 'Time of day: ').startsWith('Time of day: ' + x))   /* 2026-11-21 빛 모습이 「; …」 로 붙는다 */, '판타지 포장마차 · 그 세계 소품 · 한밤');
       const neg = t1.split('\n\n').filter(b => /^Avoid: /.test(b))[0] || '';
       assert(neg && D.vocab.markers.fantasy.banned_en.every(b => !new RegExp('\\b' + b + '\\b', 'i').test(t1.replace(neg, ''))), '판타지 금지 낱말은 Avoid 단락만');
       assert.match(await p.locator('.hchip[data-open="time"]').textContent(), /한밤/, '시간대 칩(생활 장면표)');
