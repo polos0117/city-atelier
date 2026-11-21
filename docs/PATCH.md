@@ -7,6 +7,11 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-21 · claude · 그림 속 글자 · 숫자로 올림을 멈추지 않음
+- 사용자 「도시공방에 숫자나 글자보인다고 업로드 보류하는 것좀 없애줘」. 지시문의 글자 · 숫자 금지(Avoid)는 그대로 둔다.
+- docs/IMAGE_AUTOMATION.md — 0절: 글자 · 숫자는 멈출 까닭이 아니다(qa.observations 에 적기만, passed 를 false 로 안 하고 block · 다시 그리기 없이 올린다). 로고 · 워터마크 · 말풍선은 4절대로 passed: false 로 올린다(block 아님). 4절 검수 줄도 같게.
+- IMAGE_RULES.md — 1절 글자 줄에 「나와도 올림을 멈추지 않는다」.
+
 ## 2026-11-21 · claude · 일상컷 — 11-18 공용 개선 옮기기(자세 쏠림 · 순간 · 시간대 · 빛)
 - 사용자 「1번만해줘」 — 도시 일상컷 표가 원소 2026-11-18 공용 개선(C · D · A · B · G) 전 사본이었다. 원소(element-atelier)에서 옮기고 도시 몫(생활 장면 · 전통 의상 · 직업컷 · 노출 셋 · 코스프레 · spreadTurns)은 그대로.
 - data/casual-tree-v2.json — 추천 자세 열넷(chair_3q_high · chair_lookback · sideways_lookback · floor_low_cam · kneel_high_prop · recline_low · squat_side_high · edge_cheek_high · rail_sky_low · walk_side_low · half_kneel_lookback · table_chin_high · lie_side_eye · kneel_side_low, 원소 차례대로 끼움), 순간 moments 스물다섯(도시에 없는 장소 fx_spa · fx_marble_bath · nation_bath 는 뺐고 잠 머리 · 베개 자국 times 에 commute_am), ambience.times 다섯(dawn · forenoon · overcast · day_indoor · fluorescent) · weather_times 원소 것 · looks 열일곱(times 에 도시 시간대 열쇠를 더함 — 아침 → commute_am · 한낮 → midday · 해 질 녘 → commute_pm · 밤 창가 · 등불 → night_out · past_midnight). 도시 계획기는 시간대를 생활 장면표(data/city-life.json times)에서 고르고 트리 시간대 · 날씨는 안 쓴다 — times · weather_times 는 원소와 맞춘 사본일 뿐, 형광등은 도시에 안 나온다.
