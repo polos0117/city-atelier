@@ -29,6 +29,12 @@
    { "key": "summer", "ko": "한여름", "en": "high summer — hot, humid air and strong sunlight", "src": "https://en.wikipedia.org/wiki/Climate_of_New_York_City" },
    { "key": "autumn", "ko": "가을 단풍", "en": "autumn — crisp, clear air and park trees turning red, orange and gold", "src": "https://en.wikipedia.org/wiki/Climate_of_New_York_City" },
    { "key": "winter", "ko": "겨울", "en": "winter — cold air, bare trees and old snow along the curbs", "src": "https://en.wikipedia.org/wiki/Climate_of_New_York_City" }
+  ],
+  "rome": [
+   { "key": "spring", "ko": "봄", "en": "spring — mild air, fresh green leaves and flowers spilling from the balconies", "src": "https://en.wikipedia.org/wiki/Rome" },
+   { "key": "summer", "ko": "한여름", "en": "high summer — hot, dry air under a fierce, cloudless sun", "src": "https://en.wikipedia.org/wiki/Rome" },
+   { "key": "autumn", "ko": "가을", "en": "autumn — mild golden days between the year's heaviest rains", "src": "https://en.wikipedia.org/wiki/Rome" },
+   { "key": "winter", "ko": "겨울", "en": "winter — mild, cool days and damp air, bare trees beside the evergreen pines", "src": "https://en.wikipedia.org/wiki/Rome" }
   ]
  },
  "weather": {
@@ -53,6 +59,12 @@
    { "key": "thunderstorm", "ko": "여름 뇌우", "en": "a summer thunderstorm rolling in — dark clouds, a sudden downpour and the street shining wet", "seasons": ["summer"], "src": "https://en.wikipedia.org/wiki/Climate_of_New_York_City" },
    { "key": "snowfall", "ko": "눈", "en": "snow falling softly through the cold air and settling on every ledge", "seasons": ["winter"], "src": "https://en.wikipedia.org/wiki/Climate_of_New_York_City" },
    { "key": "noreaster", "ko": "노이스터(북동풍 눈보라)", "en": "a nor'easter — a cold wind off the sea driving heavy snow and sleet sideways", "seasons": ["winter"], "src": "https://en.wikipedia.org/wiki/Nor%27easter" }
+  ],
+  "rome": [
+   { "key": "shower", "ko": "지나가는 비", "en": "a passing rain shower — the cobbles shining wet and the air washed clean", "seasons": ["spring", "autumn", "winter"], "src": "https://en.wikipedia.org/wiki/Rome" },
+   { "key": "dry_heat", "ko": "불볕더위", "en": "dry summer heat — a fierce white sun, heat shimmering off the stone and deep shade under the trees", "seasons": ["summer"], "src": "https://en.wikipedia.org/wiki/Rome" },
+   { "key": "downpour", "ko": "가을 큰비", "en": "a heavy downpour — dark clouds, rain drumming on the terracotta roofs and the lanes running wet", "seasons": ["autumn", "winter"], "src": "https://en.wikipedia.org/wiki/Rome" },
+   { "key": "rare_snow", "ko": "드문 눈", "en": "a rare light snowfall — soft flakes drifting over the domes and melting on the warm stone", "seasons": ["winter"], "src": "https://en.wikipedia.org/wiki/Rome" }
   ]
  },
  "cities": {
@@ -884,6 +896,182 @@
       "fantasy": { "en": "the great square of the capital on the last night of the year — a packed crowd in winter cloaks counting down as a giant glittering crystal orb descends a tall pole, sparks of light bursting over everyone", "props": ["cheer", "lamp", "cup", "camera"] },
       "steampunk": { "en": "the great square on the last night of the year — a packed crowd in wool coats and top hats counting down as a glittering ball of cut glass and brass descends a tall flagpole, paper confetti and fireworks bursting overhead", "props": ["cheer", "lamp", "cup", "watch"] },
       "cyberpunk": { "en": "the great square two centuries on, on the last night of the year — a packed crowd counting down as a giant glittering orb of light descends between the towers, light-confetti and drone fireworks bursting overhead", "props": ["cheer", "phone", "drink_glass", "camera"] }
+     }
+    }
+   ]
+  },
+  "rome": {
+   "scenes": [
+    {
+     "key": "espresso_bar",
+     "ko": "동네 바 카운터에 선 채 마시는 아침 에스프레소",
+     "src": ["https://en.wikipedia.org/wiki/Espresso", "https://en.wikipedia.org/wiki/Coffeehouse"],
+     "base": "street_cafe",
+     "indoor": true,
+     "times": ["dawn", "commute_am", "midday"],
+     "outfits": ["everyday", "workwear", "dongtan", "retro"],
+     "en": "standing at the counter of a neighbourhood coffee bar for a quick morning espresso",
+     "worlds": {
+      "fantasy": { "en": "the counter of a little stone-vaulted brew house of the capital in the morning — a long carved marble counter where folk stand elbow to elbow over tiny cups, a copper kettle singing over a brazier, baskets of sweet glazed rolls and lantern-orbs glowing under the arches", "props": ["espresso", "money", "book", "lamp"] },
+      "steampunk": { "en": "the zinc-and-marble counter of a little gaslit coffee bar in the morning — a gleaming brass lever machine hissing white steam, clerks and ladies standing elbow to elbow over tiny cups, glass domes of sugared pastries and a mirrored back wall", "props": ["espresso", "money", "watch", "bowl"] },
+      "cyberpunk": { "en": "the counter of a tiny standing coffee bar under the far-future towers in the morning — a sleek curved counter of warm-lit stone, a chrome brewing arm hissing, commuters standing shoulder to shoulder over tiny cups and a pay pad glowing by the saucers", "props": ["espresso", "money", "music", "bag"] }
+     }
+    },
+    {
+     "key": "gelato_stroll",
+     "ko": "젤라테리아 젤라토 들고 저녁 골목",
+     "src": ["https://en.wikipedia.org/wiki/Gelato"],
+     "base": "street_shop",
+     "times": ["midday", "commute_pm", "night_out"],
+     "seasons": ["spring", "summer", "autumn"],
+     "outfits": ["everyday", "dongtan", "retro", "subculture"],
+     "en": "a gelato shop counter of heaped tubs on a warm evening, the cobbled lane outside",
+     "worlds": {
+      "fantasy": { "en": "a little ice-maker's shop of the capital on a warm evening — a marble counter of frosted copper tubs heaped with fruit-and-cream ices in every colour, a carved wooden cone hanging over the door and a cobbled lane glowing with lantern-light outside", "props": ["gelato", "money", "lamp", "bag"] },
+      "steampunk": { "en": "a little gelato parlour on a warm evening — a gleaming glass counter of tubs heaped in every colour, a brass ice-churn turning with a puff of steam, a striped awning and gaslit cobbles outside", "props": ["gelato", "money", "watch", "bag"] },
+      "cyberpunk": { "en": "a tiny gelato bar under the far-future towers on a warm evening — a curved glass counter of heaped tubs kept cold in soft blue light, a serving arm shaping the scoops and a lane of glowing cobbles outside", "props": ["gelato", "money", "bag", "music"] }
+     }
+    },
+    {
+     "key": "campo_market",
+     "ko": "캄포 데 피오리 아침 시장",
+     "src": ["https://en.wikipedia.org/wiki/Campo_de%27_Fiori"],
+     "base": "street_market",
+     "times": ["dawn", "commute_am", "midday"],
+     "outfits": ["everyday", "workwear", "dongtan", "retro"],
+     "en": "the morning vegetable market under canvas umbrellas in an old cobbled square",
+     "worlds": {
+      "fantasy": { "en": "the morning market in an old cobbled square of the capital — stalls under faded canvas umbrellas heaped with lemons, artichokes, ripe tomatoes and bunches of herbs, sellers calling over wicker baskets and ochre houses with green shutters all around", "props": ["shopping_bag", "bowl", "money", "sign"] },
+      "steampunk": { "en": "the morning market in an old cobbled square — stalls under striped canvas umbrellas heaped with lemons, artichokes and tomatoes, brass scales swinging, sellers in long aprons calling out and ochre houses with green shutters all around", "props": ["shopping_bag", "money", "sign", "watch"] },
+      "cyberpunk": { "en": "the morning market in the old square two centuries on — stalls under glowing canopies heaped with real lemons, artichokes and tomatoes from the hill farms, prices of light floating over the baskets and the old ochre houses kept beneath the towers", "props": ["shopping_bag", "money", "phone", "sign"] }
+     }
+    },
+    {
+     "key": "trattoria_night",
+     "ko": "트라스테베레 골목 트라토리아의 저녁",
+     "src": ["https://en.wikipedia.org/wiki/Trattoria", "https://en.wikipedia.org/wiki/Trastevere"],
+     "base": "street_alley",
+     "times": ["commute_pm", "night_out"],
+     "outfits": ["everyday", "evening", "retro", "dongtan"],
+     "en": "an evening meal at the outdoor tables of a family trattoria in a narrow cobbled lane",
+     "worlds": {
+      "fantasy": { "en": "the outdoor tables of a family tavern in a narrow cobbled lane of the capital in the evening — checked cloths, clay jugs of wine, bowls of steaming pasta and lantern-orbs strung between ivy-covered walls", "props": ["bowl", "drink_glass", "lamp", "money"] },
+      "steampunk": { "en": "the outdoor tables of a family trattoria in a narrow cobbled lane in the evening — checked tablecloths, carafes of house wine, steaming plates of pasta, gas lamps on the ivy-covered walls and a waiter in a long white apron", "props": ["bowl", "drink_glass", "lamp", "watch"] },
+      "cyberpunk": { "en": "the outdoor tables of a family trattoria kept alive in a narrow cobbled lane under the far-future towers in the evening — checked cloths, carafes of wine, steaming pasta served by a quiet waiter drone and soft light strips along the ivy-covered walls", "props": ["bowl", "drink_glass", "lamp", "phone"] }
+     }
+    },
+    {
+     "key": "trevi_coin",
+     "ko": "트레비 분수에 등 돌려 동전 던지기",
+     "src": ["https://en.wikipedia.org/wiki/Trevi_Fountain"],
+     "base": "street_park",
+     "times": ["midday", "commute_pm", "night_out"],
+     "outfits": ["everyday", "dongtan", "retro", "subculture"],
+     "en": "tossing a coin over her shoulder into a great baroque fountain, her back to the water",
+     "worlds": {
+      "fantasy": { "en": "the great fountain of the capital carved like a palace front, water tumbling over sculpted rocks into a wide turquoise pool, travellers on the stone steps turning their backs to toss coins over their shoulders and coins glinting gold under the water", "props": ["money", "lamp", "bag", "camera"] },
+      "steampunk": { "en": "the great baroque fountain against a palace front, water tumbling over carved rocks into a wide turquoise pool, a crowd in hats and bustles on the stone steps tossing coins over their shoulders and gas lamps glowing around the little square", "props": ["money", "camera", "umbrella", "bag"] },
+      "cyberpunk": { "en": "the great baroque fountain kept exactly as it was two centuries on — water tumbling over carved rocks into a turquoise pool lit softly from below, visitors on the steps tossing coins over their shoulders and little drones of light hovering above the square", "props": ["money", "camera", "phone", "drink_glass"] }
+     }
+    },
+    {
+     "key": "scooter_lane",
+     "ko": "돌길 골목에 세운 스쿠터",
+     "src": ["https://en.wikipedia.org/wiki/Scooter_(motorcycle)", "https://en.wikipedia.org/wiki/Trastevere"],
+     "base": "street_alley",
+     "times": ["commute_am", "midday", "commute_pm"],
+     "outfits": ["everyday", "retro", "dongtan", "subculture"],
+     "en": "a narrow cobbled lane, her little scooter parked against an ochre wall",
+     "worlds": {
+      "fantasy": { "en": "a narrow cobbled lane of the capital, her little rune-glider resting against an ochre wall under a window box of red geraniums, washing strung high between the old houses and sunlight slanting down the lane", "props": ["scooter", "key", "bag", "lamp"] },
+      "steampunk": { "en": "a narrow cobbled lane, her little brass steam scooter parked against an ochre wall under a window box of red geraniums, green shutters thrown open and warm sunlight slanting down the lane", "props": ["scooter", "key", "bag", "watch"] },
+      "cyberpunk": { "en": "a narrow cobbled lane kept under the far-future towers, her hovering scooter parked against an ochre wall under a window box of red geraniums, soft light strips tracing the old doorways", "props": ["scooter", "key", "bag", "phone"] }
+     }
+    },
+    {
+     "key": "spanish_steps",
+     "ko": "스페인 계단에 앉아 쉬는 오후",
+     "src": ["https://en.wikipedia.org/wiki/Spanish_Steps"],
+     "base": "stage_open_air",
+     "times": ["midday", "commute_pm"],
+     "outfits": ["everyday", "dongtan", "retro", "subculture"],
+     "en": "sitting on a wide flight of old stone steps rising from a piazza to a twin-towered church",
+     "worlds": {
+      "fantasy": { "en": "a wide flight of pale stone steps climbing from a piazza of the capital to a white twin-towered temple, folk sitting all along the steps in the afternoon sun and a fountain shaped like a half-sunken stone boat at the foot", "props": ["book", "cup", "fan", "bag"] },
+      "steampunk": { "en": "the wide flight of old stone steps climbing from the piazza to a twin-towered church, people resting all along the steps in the afternoon sun, a flower seller's barrow below and a fountain shaped like a half-sunken stone boat at the foot", "props": ["book", "fan", "camera", "umbrella"] },
+      "cyberpunk": { "en": "the wide flight of old stone steps two centuries on, climbing from the piazza to the twin-towered church, each step warm-lit from within, people resting along them in the afternoon sun and the boat-shaped fountain glowing softly at the foot", "props": ["drink_glass", "camera", "phone", "bag"] }
+     }
+    },
+    {
+     "key": "tiber_walk",
+     "ko": "테베레 강변 산책길",
+     "src": ["https://en.wikipedia.org/wiki/Tiber", "https://en.wikipedia.org/wiki/Lungotevere"],
+     "base": "street_bike_path",
+     "times": ["dawn", "midday", "commute_pm", "night_out"],
+     "outfits": ["everyday", "active", "dongtan", "retro"],
+     "en": "a walk along the low riverside path below high stone embankment walls",
+     "worlds": {
+      "fantasy": { "en": "the low stone path along the great river of the capital below high embankment walls, old arched stone bridges spanning the water, tall trees leaning over the walls and a domed temple on the far bank", "props": ["bag", "book", "lamp", "water_bottle"] },
+      "steampunk": { "en": "the low riverside path below high stone embankment walls, old arched stone bridges spanning the water, a paddle-wheel steamboat passing in soft white steam and tall trees leaning over the walls", "props": ["bag", "umbrella", "watch", "water_bottle"] },
+      "cyberpunk": { "en": "the low riverside path below the old stone embankment walls two centuries on, ancient arched bridges spanning the water lit softly from beneath, a silent water-taxi gliding past and tall trees leaning over the walls", "props": ["bag", "music", "water_bottle", "phone"] }
+     }
+    },
+    {
+     "key": "rooftop_aperitivo",
+     "ko": "해 질 녘 옥상 테라스 아페리티보",
+     "src": ["https://en.wikipedia.org/wiki/Ap%C3%A9ritif_and_digestif"],
+     "base": "street_rooftop",
+     "times": ["commute_pm", "night_out"],
+     "seasons": ["spring", "summer", "autumn"],
+     "outfits": ["everyday", "evening", "dongtan", "retro"],
+     "en": "an early-evening aperitivo on a rooftop terrace of potted lemon trees, domes and bell towers all around",
+     "worlds": {
+      "fantasy": { "en": "a rooftop terrace of the capital at sunset — potted lemon trees and a vine pergola, little plates of olives and bread beside a jug of bitter-orange cordial, the domes and bell towers of the seven hills glowing gold all around", "props": ["drink_glass", "bowl", "lamp", "cup"] },
+      "steampunk": { "en": "a rooftop terrace at sunset — potted lemon trees and a vine pergola, little plates of olives and bread beside glasses of red-orange aperitivo, gas lamps on the parapet and domes and bell towers glowing gold all around", "props": ["drink_glass", "bowl", "lamp", "watch"] },
+      "cyberpunk": { "en": "a rooftop terrace high among the far-future towers at sunset — potted lemon trees, little plates of olives and bread beside glowing red-orange aperitivo glasses, the old domes and bell towers glowing gold far below", "props": ["drink_glass", "bowl", "lamp", "music"] }
+     }
+    },
+    {
+     "key": "trastevere_laundry",
+     "ko": "트라스테베레 골목 위 빨래 널기",
+     "src": ["https://en.wikipedia.org/wiki/Trastevere"],
+     "base": "drying_terrace",
+     "times": ["dawn", "commute_am", "midday"],
+     "outfits": ["homewear", "everyday", "retro"],
+     "en": "hanging washing on a line strung above a narrow cobbled lane of old ochre houses",
+     "worlds": {
+      "fantasy": { "en": "a little terrace above a narrow cobbled lane of the capital, washing lines strung across to the house opposite hung with white linen, pots of basil and geraniums on the ledge and ochre walls warm in the morning sun", "props": ["laundry_basket", "cup", "key", "bowl"] },
+      "steampunk": { "en": "a little terrace above a narrow cobbled lane, washing lines strung on brass pulleys across to the house opposite hung with white linen and lace, pots of basil and geraniums on the ledge and ochre walls warm in the morning sun", "props": ["laundry_basket", "cup", "watch", "music"] },
+      "cyberpunk": { "en": "a little terrace above a narrow cobbled lane kept under the far-future towers, smart washing lines strung across to the house opposite drying white linen in a soft warm glow, pots of basil and geraniums on the ledge", "props": ["laundry_basket", "cup", "phone", "music"] }
+     }
+    },
+    {
+     "key": "borghese_park",
+     "ko": "보르게세 공원 호숫가 산책",
+     "src": ["https://en.wikipedia.org/wiki/Villa_Borghese_gardens"],
+     "base": "street_park",
+     "times": ["dawn", "midday", "commute_pm"],
+     "outfits": ["everyday", "active", "dongtan", "retro"],
+     "en": "a stroll by the little lake of a great park of stone pines, a small columned temple reflected in the water",
+     "worlds": {
+      "fantasy": { "en": "the great gardens of the capital — a little lake with a small white columned temple on its island reflected in the still water, tall umbrella pines and marble statues along the gravel paths", "props": ["book", "bag", "mat", "cup"] },
+      "steampunk": { "en": "the great park — a little lake with a small columned temple on its island reflected in the still water, tall umbrella pines, marble statues and gas lamps along the gravel paths", "props": ["book", "umbrella", "camera", "bag"] },
+      "cyberpunk": { "en": "the great park two centuries on — real umbrella pines, a little lake with the small columned temple on its island reflected in the water and soft light running along the paths", "props": ["book", "drink_glass", "camera", "phone"] }
+     }
+    },
+    {
+     "key": "ostia_beach",
+     "ko": "여름 오스티아 바닷가",
+     "src": ["https://en.wikipedia.org/wiki/Ostia_(Rome)"],
+     "base": "water_beach",
+     "times": ["midday", "commute_pm"],
+     "seasons": ["summer"],
+     "outfits": ["swimwear", "active", "resort"],
+     "en": "a summer day on the city's own sandy beach by the sea",
+     "worlds": {
+      "fantasy": { "en": "the capital's own sandy shore on the summer sea — rows of striped linen sunshades, a timber bathing pier and the warm turquoise sea glittering", "props": ["float_ring", "umbrella", "cup", "fan"] },
+      "steampunk": { "en": "the city's own seaside on a summer day — rows of striped canvas bathing cabins and sunshades, a long wooden pier and the warm sea glittering", "props": ["float_ring", "umbrella", "cup", "fan"] },
+      "cyberpunk": { "en": "the city's own beach two centuries on — rows of smart sunshades glowing softly, a sleek floating pier and the warm turquoise sea glittering", "props": ["float_ring", "drink_glass", "fan", "music"] }
      }
     }
    ]

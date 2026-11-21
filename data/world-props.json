@@ -114,6 +114,18 @@
   "laundry_basket": { "ko": "빨래 바구니", "worlds": {
    "fantasy": { "en": "a deep reed hamper of folded linen" },
    "steampunk": { "en": "a wicker laundry basket of pressed linen tied with a ribbon" },
-   "cyberpunk": { "en": "a collapsible smart laundry tote with a glowing band" } } }
+   "cyberpunk": { "en": "a collapsible smart laundry tote with a glowing band" } } },
+  "espresso": { "ko": "에스프레소", "worlds": {
+   "fantasy": { "en": "a tiny glazed cup of dark, fragrant brew on a little saucer" },
+   "steampunk": { "en": "a tiny porcelain cup of espresso on a saucer, fresh from a gleaming brass lever machine" },
+   "cyberpunk": { "en": "a tiny self-heating espresso cup with a glowing rim" } } },
+  "gelato": { "ko": "젤라토", "worlds": {
+   "fantasy": { "en": "a small wafer cone heaped with scoops of frosted fruit-and-cream ice" },
+   "steampunk": { "en": "a crisp wafer cone heaped with two scoops of gelato" },
+   "cyberpunk": { "en": "a cone of gelato in a softly glowing chill-sleeve" } } },
+  "scooter": { "ko": "스쿠터", "worlds": {
+   "fantasy": { "en": "a little two-wheeled rune-glider of carved wood and brass that hums softly over the cobbles" },
+   "steampunk": { "en": "a little brass steam scooter puffing soft white steam" },
+   "cyberpunk": { "en": "a hovering electric scooter with glowing rims" } } }
  }
 }

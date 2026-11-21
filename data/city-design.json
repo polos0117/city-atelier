@@ -1786,7 +1786,193 @@
           "src": "https://en.wikipedia.org/wiki/Rome"
         }
       ],
-      "worlds": {}
+      "design_note": "설계 상태: 시안(claude, 2026-11-21) — 시험 그림 전. 사용자 「로마 설계해줘」, 뉴욕 · 도쿄 꼴을 따랐다. 세 사람 모두 이탈리아인 성인 여성 — 피부 · 얼굴은 look 이 정하고(판타지 올리브 · 스팀펑크 흰 피부 · 사이버펑크 햇볕에 그을린 금빛) 인종 낱말은 쓰지 않는다. 얼굴 칸 다섯은 세 세계끼리 모두 다르고, 서울 · 도쿄 · 뉴욕 사람(랜드마크 포함) 누구와도 셋 이상 다르다. 체형은 셋 다 굴곡형(풍만 · 서양배 · 모래시계 — 사용자 2026-11-20). 사실 근거: 콜로세움은 트래버틴 아치가 층층이 둘린 원형 투기장(https://en.wikipedia.org/wiki/Colosseum), 판테온의 격자(coffered) 돔과 꼭대기의 열린 눈 오쿨루스(https://en.wikipedia.org/wiki/Pantheon,_Rome), 트레비 분수 — 궁전(팔라초 폴리) 정면을 배경으로 바위 사이로 물이 쏟아지고 가운데 오케아노스의 조개 전차, 등을 돌려 오른손으로 왼어깨 너머 동전을 던지면 로마로 돌아온다는 풍습(https://en.wikipedia.org/wiki/Trevi_Fountain), 트레비는 옛 수도교 아쿠아 비르고의 끝점(https://en.wikipedia.org/wiki/Aqua_Virgo), 일곱 언덕(https://en.wikipedia.org/wiki/Seven_hills_of_Rome), 우산 소나무(돌소나무)는 로마의 상징 가운데 하나(https://en.wikipedia.org/wiki/Pinus_pinea), 포룸의 황금 이정표 — 모든 길이 여기서 시작한다고 여겼고 「모든 길은 로마로」 의 뿌리(https://en.wikipedia.org/wiki/Milliarium_Aureum), 월계관(https://en.wikipedia.org/wiki/Laurel_wreath). SPQR 은 글자라 그림에 싣지 않았다(글자 없는 그림 — 모양으로도 쓰지 않음). 트레비의 해마 · 트리톤과 카피톨리노 늑대는 생물이라(지시문 Avoid 의 living creature) 무늬로도 쓰지 않고 조개 · 물줄기만. 지시문에 상표 · 실존 인물 이름은 쓰지 않는다(오케아노스 · 팔라초 폴리 같은 이름도 생김새로). 판타지만 세계 palette 를 따로 둔다(palette.why). 사이버펑크 세계 글 · 장면엔 비를 박지 않았다(날씨는 생활 장면표).",
+      "card_ko": {
+        "symbols": "콜로세움 · 판테온 · 트레비 분수 · SPQR"
+      },
+      "worlds": {
+        "fantasy": {
+          "ko": "일곱 언덕의 황금 영원 왕도 로마 — 굽이치는 강가 일곱 언덕 위에 지은 서양 신화 세계의 영원한 왕도, 해 질 녘 살구빛 · 금빛 하늘 아래 안에서부터 빛나는 꿀빛 트래버틴 아치가 층층이 둘린 거대한 원형 투기장, 격자 둥근 천장 꼭대기의 열린 눈으로 햇빛 기둥이 쏟아지는 흰 대리석 돔 신전, 궁전 정면처럼 새긴 큰 분수 — 조각 바위와 거대한 가리비 조개 위로 살아 있는 빛의 물이 청록 못으로 쏟아진다, 개선문과 나선 부조를 감은 높은 기둥, 언덕마다 우산 소나무와 사이프러스",
+          "en": "an eternal golden capital of a Western myth-world on seven hills beside a winding river at golden hour: a colossal ring-shaped amphitheatre of honey-gold travertine, its tiers of arches glowing from within; a great white-marble temple whose coffered dome opens to the sky in a round eye that pours a pillar of sunlight inside; a vast fountain carved like a palace front, its water of living light tumbling over sculpted rocks and a giant scallop shell into a wide turquoise pool; triumphal arches and tall columns wound with spiral reliefs; umbrella pines and dark cypresses on every hill, all under an apricot-and-gold sky",
+          "scenes": [
+            {
+              "key": "fountain",
+              "ko": "빛의 분수 앞 조개 수반 가장자리",
+              "en": "at the rim of the vast fountain of living light, its water tumbling over sculpted rocks and a giant scallop shell behind her into a turquoise pool, gold coins glinting under the water and the lantern-lit piazza all around"
+            },
+            {
+              "key": "oculus",
+              "ko": "돔 신전 안 하늘 눈의 햇빛 기둥 속",
+              "en": "inside the great domed temple, standing in the pillar of golden sunlight that falls through the open eye of the coffered dome onto the polished marble floor, rings of gilded coffers rising overhead"
+            },
+            {
+              "key": "arena",
+              "ko": "원형 투기장 꼭대기 층 아치 회랑",
+              "en": "on the topmost arcade of the colossal ring-shaped amphitheatre, its travertine arches glowing gold around her and the seven-hilled capital of domes, columns and umbrella pines spread below in the sunset"
+            }
+          ],
+          "look": {
+            "face": {
+              "face_shape": "long",
+              "eyes": "droopy_soft",
+              "brows": "arched_thin",
+              "nose": "aquiline",
+              "lips": "heart_full",
+              "eye_color": "honey",
+              "age": "late_20s",
+              "impression": "glamorous",
+              "skin_tone": "olive",
+              "eye_size": "medium",
+              "eye_tilt": "down",
+              "mark": "red_lip",
+              "expr": "proud"
+            },
+            "silhouette": {
+              "body": "voluptuous",
+              "hair": "mermaid_waves",
+              "hair_color": "bronze",
+              "bangs": "parted"
+            },
+            "why": "살아 있는 빛의 분수를 지키는 소원 분수의 무녀 — 풍만하고 물결처럼 흐르는 사람. 풍만한 몸(voluptuous) · 허리까지 내려오는 따뜻한 청동빛 긴 물결머리(mermaid_waves · bronze — 옛 청동상과 황제의 금빛) · 가운데 가르마 · 분수의 층층 물줄기처럼 겹쳐 흐르는 자락과 조개 머리 장식(tide_oracle)으로 실루엣이 위에서 아래로 물결치며 퍼진다. 고전 조각 같은 갸름하고 긴 달걀형 얼굴 · 눈꼬리가 살짝 내려간 나른한 아몬드 눈 · 가늘게 휜 눈썹 · 부드러운 매부리 곡선의 로마 코 · 도톰한 하트 입술, 꿀빛 금색 눈(honey), 올리브 피부에 은은한 장밋빛 입술, 20대 후반, 화려하고 매혹적인 인상(glamorous)에 자부심 어린 옅은 미소(proud — 입은 다문다). 스팀펑크(둥근 얼굴 · 와인빛 한쪽 땋은머리 · 서양배 굴곡 몸 · 흰 피부) · 사이버펑크(다이아몬드형 · 물빛 단발 · 모래시계 몸 · 햇볕에 그을린 금빛 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울 · 도쿄 · 뉴욕 사람(랜드마크 포함)과도 셋 이상 다르다."
+          },
+          "hold": {
+            "en": "a gold scallop-shell chalice brimming with softly glowing fountain water"
+          },
+          "motif": {
+            "ko": "트래버틴 크림 · 황금 비단 드레스 — 치마가 트레비 분수의 층층 물줄기처럼 겹쳐 흘러내리고 단 끝에 분수 가운데 거대한 조개를 본뜬 금빛 가리비를 둘렀다, 가슴께엔 판테온 돔의 열린 눈을 본뜬 둥근 금 목걸이(작은 금빛 격자 칸이 가운데 빈 빛의 고리를 두른다) — 손에는 빛나는 분수 물을 담은 가리비 금잔",
+            "en": "a gown of travertine-cream and imperial-gold silk whose skirt falls in layered tiers like the great fountain's cascading water, its hem edged with gilded scallop shells after the giant shell at the fountain's heart; at her breast a round gold pendant made as the domed temple's open eye — rings of tiny gilded coffers around an empty circle of light"
+          },
+          "palette": {
+            "en": "travertine cream, imperial gold and fountain turquoise, with terracotta only on the rooftops",
+            "hex": [
+              "#E9DFC8",
+              "#C9A227",
+              "#3FA9A5",
+              "#B5562F"
+            ],
+            "why": "판타지만 따로 — 도시 palette 의 테라코타 · 황금을 화려한 하이판타지 드레스에 함께 실으면 붉은 금빛으로 몰려 다른 나라 궁궐로 읽힐 수 있어서(서울 판타지 「너무 붉은색이라 중국 느낌」 을 처음부터 따름), 트래버틴 크림 · 황금 바탕에 트레비 분수의 청록 물빛을 넣고 테라코타는 지붕에만."
+          },
+          "card_ko": {
+            "look": "청동빛 인어 물결머리 · 풍만한 몸",
+            "motif": "분수 물결 치마 · 돔 눈 목걸이"
+          },
+          "sil": "tide_oracle"
+        },
+        "steampunk": {
+          "ko": "가스등 로마 수도교 거리 — 늦은 오후 금빛 아래 초록 덧창과 꽃 상자를 단 테라코타 · 황토빛 집들의 돌길 골목, 언덕을 건너오는 옛 돌 수도교 아치 위에 반짝이는 놋쇠 물관과 작은 증기 펌프, 증기 펌프로 물을 뿜어 올리는 광장 분수들, 놋쇠 비계와 가스등 줄을 두른 원형 투기장, 큰 돔 신전 곁 가는 놋쇠 계류탑으로 다가오는 비행선, 강 위 물레바퀴 증기선, 언덕의 우산 소나무",
+          "en": "a storybook gaslamp-fantasy Rome in warm late-afternoon light: cobbled lanes of terracotta and ochre houses with green shutters and flower boxes, the old stone aqueduct striding across the hills on tall arches now lined with gleaming brass water pipes and little steam pumps, piazza fountains leaping with steam-pumped water, the great ring-shaped amphitheatre wrapped in brass scaffolds and strings of gas lamps, an airship easing toward a slender brass mooring mast beside a great domed temple, paddle-wheel steamboats on the river and umbrella pines on the hills, soft white steam in the golden air",
+          "scenes": [
+            {
+              "key": "aqueduct",
+              "ko": "물관 두른 수도교 꼭대기의 놋쇠 물길",
+              "en": "on the brass-railed walkway along the top of the old stone aqueduct, gleaming water pipes and a little steam pump beside her and terracotta rooftops and domes stretching away under the golden sky"
+            },
+            {
+              "key": "piazza",
+              "ko": "증기로 뿜는 분수 광장의 가스등 아래",
+              "en": "in a cobbled piazza beside a great fountain leaping with steam-pumped water over carved stone shells, gas lamps glowing on brass posts and soft white steam drifting over the crowd"
+            },
+            {
+              "key": "arena",
+              "ko": "놋쇠 비계를 두른 원형 투기장 아치 아래",
+              "en": "under a travertine arch of the great ring-shaped amphitheatre wrapped in brass scaffolds and strings of gas lamps, an airship gliding past its upper tiers"
+            }
+          ],
+          "look": {
+            "face": {
+              "face_shape": "round",
+              "eyes": "narrow_upturned",
+              "brows": "soft_round",
+              "nose": "upturned",
+              "lips": "small_bow",
+              "eye_color": "forest_green",
+              "age": "early_20s",
+              "impression": "cute",
+              "skin_tone": "fair",
+              "eye_size": "large",
+              "eye_tilt": "up",
+              "mark": "freckles",
+              "expr": "playful"
+            },
+            "silhouette": {
+              "body": "pear_curvy",
+              "hair": "side_braid",
+              "hair_color": "wine_red",
+              "bangs": "straight"
+            },
+            "why": "수도교 물길을 돌보는 분수 기관사 아가씨 — 작고 동그랗고 허리 아래가 둥근 사람. 서양배 굴곡 몸(pear_curvy — 좁은 어깨 · 둥근 엉덩이) · 한쪽 어깨로 넘긴 굵은 와인빛 땋은머리(side_braid · wine_red — 로마의 포도주빛)에 놋쇠 월계수 잎 · 일자 앞머리 · 한 팔을 덮는 큰 놋쇠 기계 건틀릿(mech_gauntlet)과 뒤가 부푼 짧은 치마로 실루엣이 한쪽 팔과 허리 아래가 크다. 둥근 얼굴 · 눈꼬리가 살짝 올라간 장난스러운 아몬드 눈 · 둥근 눈썹 · 살짝 들린 코 · 활 모양 입술, 숲빛 초록 눈(forest_green), 흰 피부에 주근깨, 20대 초반, 귀여운 인상(cute)에 장난스러운 옅은 미소(playful — 웃음을 터뜨리지 않는다). 판타지(긴 달걀형 · 청동빛 물결머리 · 풍만 · 올리브 피부) · 사이버펑크(다이아몬드형 · 물빛 단발 · 모래시계 몸 · 그을린 금빛 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울 · 도쿄 · 뉴욕 사람(랜드마크 포함)과도 셋 이상 다르다."
+          },
+          "hold": {
+            "en": "a polished brass valve wrench with a scallop-shell grip"
+          },
+          "motif": {
+            "ko": "테라코타빛 울 짧은 버슬 치마 — 치맛단을 원형 투기장의 트래버틴 아치 회랑처럼 크림색 아치 줄로 재단하고 아치마다 놋쇠 징으로 테를 둘렀다, 땋은머리에 엮은 놋쇠 월계수 잎 — 손에는 가리비 손잡이의 놋쇠 밸브 렌치",
+            "en": "a short bustled skirt of terracotta wool whose hem is cut as a row of cream travertine arches like the great amphitheatre's arcades, each arch outlined in brass studs; little brass laurel leaves woven into her braid"
+          },
+          "card_ko": {
+            "look": "와인빛 한쪽 땋은머리 · 굴곡 몸",
+            "motif": "투기장 아치 치마 · 월계수 잎"
+          },
+          "sil": "mech_gauntlet"
+        },
+        "cyberpunk": {
+          "ko": "두 세기 뒤 로마 — 일곱 언덕이 빛의 정원을 인 계단식 아콜로지 언덕이 되고, 옛 원형 투기장은 허물지 않은 유산 그대로 떠 있는 빛의 차양 아래 하늘 무대가 되었으며, 돔 신전의 열린 눈은 밤하늘로 빛기둥을 쏘는 등대가 되었고, 옛 수도교 아치를 따라 자기부상 빛길이 언덕을 건너며, 옛 포룸의 황금 이정표에서 도시의 모든 빛길이 사방으로 뻗어 나간다. 분수는 빛나는 물빛 청록으로 흐른다",
+          "en": "Rome two centuries from now, a far-future megacity: the seven hills grown into terraced arcology hills topped with gardens of light; the ancient ring-shaped amphitheatre kept whole as a heritage ruin beneath a floating canopy of light, now a sky-stage; the old domed temple's open eye turned into a beacon sending a pillar of light into the night sky; maglev lines of light gliding along the arches of the old aqueducts across the hills; and in the old forum a golden milestone from which every glowing route of the city radiates outward, the fountains running with luminous aquamarine water under a clear violet night sky",
+          "scenes": [
+            {
+              "key": "milestone",
+              "ko": "옛 포룸 황금 이정표의 빛길 광장",
+              "en": "on the glass plaza over the old forum around the golden milestone, glowing routes of light radiating out from it across the ground in every direction and the columns of the ancient ruins standing softly lit among the towers"
+            },
+            {
+              "key": "arena",
+              "ko": "빛의 차양을 인 원형 투기장 하늘 무대",
+              "en": "on the high rim of the ancient ring-shaped amphitheatre under its floating canopy of light, the old travertine arches glowing warm below her and quiet flying vehicles passing between the terraced arcology hills"
+            },
+            {
+              "key": "aqueduct",
+              "ko": "옛 수도교 아치를 따라가는 자기부상 빛길 승강장",
+              "en": "on a glass platform beside a maglev line of light running along the arches of an old aqueduct, a silent train streaking past and the city's terraced hills glowing beyond"
+            }
+          ],
+          "look": {
+            "face": {
+              "face_shape": "diamond",
+              "eyes": "deep_set",
+              "brows": "straight_thick",
+              "nose": "straight_narrow",
+              "lips": "full_wide",
+              "eye_color": "teal",
+              "age": "mid_20s",
+              "impression": "languid",
+              "skin_tone": "golden_tan",
+              "eye_size": "medium",
+              "eye_tilt": "level",
+              "mark": "mole_lip",
+              "expr": "amused"
+            },
+            "silhouette": {
+              "body": "hourglass",
+              "hair": "bob",
+              "hair_color": "pale_aqua",
+              "bangs": "one_eye"
+            },
+            "why": "모든 빛길이 모이는 황금 이정표의 길잡이 — 느긋하고 매끈한 곡선의 사람. 모래시계 몸(hourglass) · 옅은 물빛 단발(bob · pale_aqua — 분수 물빛) · 한쪽 눈에 드리운 긴 앞머리 · 한쪽 어깨에 토가처럼 감아 두른 스마트 직물 랩 드레스(smart_wrap)로 실루엣이 비스듬히 감겨 허리에서 잘록하다. 다이아몬드형 얼굴 · 살짝 깊은 눈 · 곧고 짙은 눈썹 · 콧대가 곧은 코 · 도톰한 입술, 청록 눈(teal), 햇볕에 그을린 듯한 금빛 피부(golden_tan)에 입가의 점, 20대 중반, 느긋하고 나른한 인상(languid — 분수 곁에서 해를 즐기는 로마의 느긋함)에 눈까지 닿는 작은 미소(amused — 입은 다문다). 판타지(긴 달걀형 · 청동빛 물결머리 · 풍만 · 올리브 피부) · 스팀펑크(둥근 얼굴 · 와인빛 한쪽 땋은머리 · 서양배 굴곡 몸 · 흰 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울 · 도쿄 · 뉴욕 사람(랜드마크 포함)과도 셋 이상 다르다."
+          },
+          "hold": {
+            "en": "a small golden orb projecting a holographic map of glowing roads that all converge on the seven hills"
+          },
+          "motif": {
+            "ko": "트래버틴빛 흰 스마트 직물을 옛 토가처럼 한쪽 어깨에 감아 두른 랩 드레스 — 판테온 돔의 격자 천장처럼 금빛 빛 네모가 층층이 흐르다 가슴께의 빈 빛 고리(돔의 열린 눈)로 모인다, 머리엔 빛으로 된 가는 금빛 월계관 고리",
+            "en": "a wrap of travertine-white smart fabric draped over one shoulder like an ancient toga, its surface drifting with rings of soft gold light squares in the coffered pattern of the old domed temple, converging on an open ring of light at her breast like its oculus; a slim circlet of glowing gold laurel leaves in her hair"
+          },
+          "card_ko": {
+            "look": "물빛 단발 · 모래시계 몸",
+            "motif": "돔 격자 토가 · 빛 월계관"
+          },
+          "sil": "smart_wrap"
+        }
+      }
     },
     {
       "key": "newyork",

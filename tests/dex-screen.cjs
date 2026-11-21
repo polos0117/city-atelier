@@ -1,6 +1,6 @@
 /* 전체 도감 탭(Task 9 — DESIGN.md 5절, 계획 Task 9 Step 1 · Review Focus 4) — 폴드 덮개 344×882 터치 + PC 1280.
    여섯 판(세계 × 밝기): 도시 10줄 · 줄마다 도시 상징 색 띠(palette.hex[0] 맨 위) · 세계 세 칸 + 일상컷 수 · 그림 없는 칸은 「그림 없음」 + 생성기 길 ·
-   설계 전 도시(일곱 — 도쿄 · 뉴욕은 2026-11-20 설계)는 「설계 전」 · 위 머리(설계된 도시 · 세계 그림 · 일상컷 수) · 세계 고르개는 그 세계 칸만 강조 · 44px · 넘침 0 · 대비 4.5 · 콘솔 0 · 장식 영어 대문자 없음.
+   설계 전 도시(여섯 — 도쿄 · 뉴욕은 2026-11-20, 로마는 2026-11-21 설계)는 「설계 전」 · 위 머리(설계된 도시 · 세계 그림 · 일상컷 수) · 세계 고르개는 그 세계 칸만 강조 · 44px · 넘침 0 · 대비 4.5 · 콘솔 0 · 장식 영어 대문자 없음.
    줄 누르기: 설계 전이면 짧은 안내(주소 그대로), 서울이면 ?city=seoul 무대 → 돌아오면 도감.
    가짜 등록부(data/img.json 을 가로채기 — 실제 파일은 고치지 않는다): 서울 판타지 세계 그림 + 일상컷 둘(오늘) · 스팀펑크 그림(어제) · 사이버펑크 그림(사흘 전), ?today= 로 날짜를 정한다 —
    작은 그림 칸 · 일상컷 수 · 새 그림 점(오늘 · 어제만) · 그림 칸 → 한 장 · 줄을 열면 점 꺼짐 · 새로 고쳐도 꺼진 채 · 「새 그림 모두 확인」 · 날짜가 지나면 점 없음.
@@ -59,7 +59,7 @@ const newSeats = p => p.$$eval('.th-ticket .th-new', es => es.map(e => e.closest
           } else { assert(/is-pre/.test(s.cls) && s.tag === 'SPAN' && !s.href, at + ' 설계 전 칸 ' + r.city); assert.equal(s.text.replace(/\s/g, ''), '설계전'); }
         }
       }
-      assert.deepEqual(READY, ['seoul', 'tokyo', 'newyork'], '설계된 도시는 서울 · 도쿄 · 뉴욕 셋(일곱은 설계 전 — 도쿄 · 뉴욕 2026-11-20)');
+      assert.deepEqual(READY, ['seoul', 'tokyo', 'rome', 'newyork'], '설계된 도시는 서울 · 도쿄 · 로마 · 뉴욕 넷(여섯은 설계 전 — 도쿄 · 뉴욕 2026-11-20 · 로마 2026-11-21)');
       assert.deepEqual(await p.$$eval('.th-stats b', bs => bs.map(b => b.textContent.replace(/\s/g, ''))), [READY.length + '/10', '0/30', '0'], at + ' 위 머리');
       assert.equal(await p.locator('.th-new').count(), 1, at + ' 새 그림 점은 범례 하나뿐');
       assert.match(await p.getAttribute('.th-tk-cols span.is-cur', 'style'), new RegExp('--w-' + w + '\\)'), at + ' 고른 세계 머리 강조');

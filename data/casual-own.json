@@ -111,6 +111,57 @@
     }
    }
   },
+  "rome": {
+   "root": {
+    "ko": "영원의 도시로 다시 돌아오게 하는 것 — 트레비 분수에 등을 돌려 동전을 던지면 다시 로마로 돌아온다는 풍습(https://en.wikipedia.org/wiki/Trevi_Fountain), 그 분수에 물을 대는 옛 수도교 아쿠아 비르고(https://en.wikipedia.org/wiki/Aqua_Virgo), 「모든 길은 로마로」 의 뿌리인 포룸의 황금 이정표(https://en.wikipedia.org/wiki/Milliarium_Aureum) → 떠난 이를 다시 로마로 이끄는 사람 — 소원 분수 무녀(판타지) · 수도교 분수 기관사(스팀펑크) · 황금 이정표 빛길 길잡이(사이버펑크). 2026-11-21 시안 — 시험 그림 전",
+    "from": "story"
+   },
+   "mode": "per_world",
+   "worlds": {
+    "fantasy": {
+     "job_ko": "소원 분수 무녀",
+     "base": "stage_festival",
+     "place": "the rim of the great fountain of living light in a lantern-lit piazza of her world's seven-hilled capital at dusk — water tumbling over sculpted rocks and a giant scallop shell into a wide turquoise pool, gold coins glinting under the water and travellers gathered on the stone steps",
+     "activity": "she is the keeper of the wishing fountain, holding a traveller's gold coin up to the last of the sunlight to bless it before it is tossed over the shoulder into the pool",
+     "preset": "light_check",
+     "use": "sig_raise",
+     "prop": "a gold coin stamped with a laurel wreath, glowing faintly",
+     "outfit": {
+      "bold": "a fountain-keeper look fitted to her body — a sleeveless draped top of travertine-cream silk knotted at one shoulder and cut low at the neck, a short tiered skirt falling like water, a gold scallop-shell belt clasp and laced gold sandals",
+      "moderate": "a fountain-keeper look — a draped top of travertine-cream silk knotted at one shoulder, a knee-length tiered skirt falling like water, a gold scallop-shell belt clasp and laced gold sandals",
+      "low": "a fountain-keeper look — a long-sleeved draped gown of travertine-cream silk with a high neckline, an ankle-length tiered skirt falling like water, a hooded turquoise mantle and soft sandals"
+     }
+    },
+    "steampunk": {
+     "job_ko": "수도교 분수 기관사",
+     "base": "street_rooftop",
+     "place": "the brass-railed walkway along the top of the old stone aqueduct of her steam city in the golden afternoon — gleaming brass water pipes, a little steam pump puffing white steam, a row of polished valve wheels and terracotta rooftops and domes stretching away below",
+     "activity": "she is the aqueduct's fountain engineer, down on one knee beside a valve wheel, turning it with her brass wrench to send fresh water down to the great fountain",
+     "preset": "half_kneel_use",
+     "use": "sig_hold",
+     "prop": "a long polished brass valve wrench with a scallop-shell grip",
+     "outfit": {
+      "bold": "an aqueduct-engineer look fitted to her body — a sleeveless terracotta bodice with brass buckles, high-waisted shorts under a short open bustle, a slim tool belt, knee socks and laced boots",
+      "moderate": "an aqueduct-engineer look — a fitted terracotta waistcoat with brass buckles over a cream blouse with rolled sleeves, a knee-length bustled skirt, a slim tool belt and laced boots",
+      "low": "an aqueduct-engineer look — a long brass-buttoned work coat over a high-collared cream blouse, fitted trousers tucked into laced boots, leather gloves and a slim tool belt"
+     }
+    },
+    "cyberpunk": {
+     "job_ko": "황금 이정표 빛길 길잡이",
+     "base": "stage_open_air",
+     "place": "the glass plaza over the old forum of her far-future megacity at night — the ancient golden milestone at its heart, glowing routes of light radiating out across the ground in every direction and softly lit columns of the old ruins standing among the towers",
+     "activity": "she is a route guide at the golden milestone, standing beside it and spreading a holographic map between her hands to show a traveller the glowing road home",
+     "preset": "stand_use",
+     "use": "sig_both",
+     "prop": "a holographic map of glowing roads that all converge on the seven hills",
+     "outfit": {
+      "bold": "a route-guide look fitted to her body — a cropped high-collared jacket of travertine-white smart fabric traced with gold light lines, open over a fitted top, high-cut shorts over glowing-seam tights and sleek boots",
+      "moderate": "a route-guide look — a travertine-white smart-fabric jacket traced with gold light lines over a fitted top, slim trousers and sleek boots",
+      "low": "a route-guide look — a long travertine-white smart-fabric coat traced with gold light lines, a high collar, gloves, slim trousers and sleek boots"
+     }
+    }
+   }
+  },
   "newyork": {
    "root": {
     "ko": "자유의 여신상의 횃불 — 바다를 건너온 이들을 맞는 도시(이민자를 맞는 환영의 상징, https://en.wikipedia.org/wiki/Statue_of_Liberty · 엘리스섬 이민국 https://en.wikipedia.org/wiki/Ellis_Island) → 도착하는 이를 불빛으로 맞고 길을 내주는 사람 — 항구 어귀 횃불 등대(판타지) · 이민 섬 등록 홀 창구(스팀펑크) · 노란 하늘 택시 승강장(사이버펑크, 노란 택시 https://en.wikipedia.org/wiki/Taxis_of_New_York_City). 2026-11-20 시안 — 시험 그림 전",

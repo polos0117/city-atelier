@@ -7,6 +7,15 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-21 · claude · 로마 설계 — 시안
+- 사용자 「로마 설계해줘」. 뉴욕 · 도쿄 꼴을 따른 시안(시험 그림 전). 다른 도시는 그대로.
+- data/city-design.json — 로마 design_note(근거 주소들) · card_ko.symbols, 상징은 넷 그대로. 세 세계 — 판타지 「일곱 언덕의 황금 영원 왕도」(빛의 분수 소원 무녀, 올리브 피부 · 청동빛 인어 물결머리 · 풍만 · 분수 물줄기 층 치마 + 판테온 오쿨루스 금 목걸이 · 가리비 금잔, 실루엣 tide_oracle), 스팀펑크 「가스등 로마 수도교 거리」(수도교 분수 기관사, 흰 피부 · 주근깨 · 와인빛 한쪽 땋은머리 · 서양배 굴곡 몸 · 투기장 아치 치맛단 + 놋쇠 월계수 잎 · 가리비 손잡이 밸브 렌치, mech_gauntlet), 사이버펑크 「두 세기 뒤 로마」(황금 이정표 빛길 길잡이, 그을린 금빛 피부 · 물빛 단발 · 모래시계 몸 · 돔 격자 빛의 토가 랩 + 빛 월계관 · 길 지도 홀로그램 구슬, smart_wrap). 얼굴 칸 다섯이 세 세계끼리 모두 다르고 서울 · 도쿄 · 뉴욕 사람(랜드마크 포함)과도 셋 이상 다르다. 체형은 셋 다 굴곡형. 판타지만 세계 palette(테라코타 · 황금이 화려한 드레스에서 붉은 금빛으로 몰리지 않게 분수 청록). SPQR 은 글자라 그림에 싣지 않았고, 트레비의 해마 · 트리톤 · 늑대는 생물이라 쓰지 않았다. 어휘는 이 공방 lib/look-spec.js 에 있는 열쇠만(원소 · game 표에만 있는 jet_black · braided_crown 같은 열쇠는 지시문에 열쇠 그대로 나가서 뺐다).
+- data/city-life.json — 로마 계절 넷 · 날씨 넷(지나가는 비 · 불볕더위 · 가을 큰비 · 드문 눈 — 근거 https://en.wikipedia.org/wiki/Rome 기후), 생활 장면 열둘(바 카운터 에스프레소 · 젤라토 · 캄포 데 피오리 아침 시장 · 트라스테베레 트라토리아 · 트레비 동전 · 골목 스쿠터 · 스페인 계단 · 테베레 강변 · 옥상 아페리티보 · 골목 위 빨래 · 보르게세 공원 호숫가 · 오스티아 바닷가). 근거는 위키백과(있는지 · 내용을 API 로 확인). 받침은 다른 도시가 쓰는 장소, 빨래는 drying_terrace 를 처음 썼다.
+- data/world-props.json — 소품 셋(에스프레소 espresso · 젤라토 gelato · 스쿠터 scooter)을 세 세계 함께 더함.
+- data/casual-own.json — 로마 뿌리 「영원의 도시로 다시 돌아오게 하는 것」(트레비 동전 · 아쿠아 비르고 · 황금 이정표, story), 세계마다 직업: 소원 분수 무녀(light_check · sig_raise) · 수도교 분수 기관사(half_kneel_use · sig_hold) · 황금 이정표 빛길 길잡이(stand_use · sig_both). 계획기가 90번을 세 세계 다 짠다.
+- tests/prompt-city.cjs — 설계 미정 일곱 → 여섯, 이름 표에 로마 상표 · 구단 · 실존 인물(Vespa · Fiat · Ferrari · Fendi · Bulgari · Nutella · Peroni · Lazio · AS Roma · Bernini …). tests/image-claim.cjs — 몫 차례에 로마 셋 · 빈 자리 33. tests/dex-screen.cjs · tests/screen.cjs — 설계된 도시 넷.
+- 남은 것: 기본 화풍 낱말 수는 판타지 1052 · 스팀펑크 1071 · 사이버펑크 987(tests/prompt-sections.cjs 상한 1150 안, 줄이지 않았다).
+
 ## 2026-11-21 · gpt · 경복궁 판타지 대표컷 4번 도감 설명 갱신
 - data/city-design.json — 적갈색 반묶음 물결머리, 녹색 눈, 단청 공포 견갑과 한삼 소매를 도감에 반영.
 
