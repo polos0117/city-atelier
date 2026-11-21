@@ -6842,6 +6842,143 @@
    "act": "rest"
   },
   {
+   "key": "recline_low",
+   "ko": "기대 누워 발치에서",
+   "posture": "recline",
+   "support": "back_lounger",
+   "frame": "full_body",
+   "body": "front_3q",
+   "head": "with_body",
+   "camera": "low",
+   "right": "behind_head",
+   "left": "natural",
+   "legs": "legs_extended",
+   "gaze": "camera",
+   "act": "rest"
+  },
+  {
+   "key": "squat_side_high",
+   "ko": "쪼그려 앉아 옆모습 — 위에서",
+   "posture": "squat",
+   "support": "none",
+   "frame": "full_body",
+   "body": "side",
+   "head": "with_body",
+   "camera": "high",
+   "right": "lap",
+   "left": "natural",
+   "legs": "squat_heels",
+   "gaze": "down",
+   "act": "look"
+  },
+  {
+   "key": "edge_cheek_high",
+   "ko": "걸터앉아 볼에 손 — 위에서",
+   "posture": "sit_edge",
+   "support": "hip_edge",
+   "frame": "three_quarter",
+   "body": "front_3q",
+   "head": "tilt",
+   "camera": "high",
+   "right": "cheek",
+   "left": "edge_brace",
+   "legs": "knees_together",
+   "gaze": "camera",
+   "act": "rest"
+  },
+  {
+   "key": "rail_sky_low",
+   "ko": "난간에 기대 하늘 보기 — 아래에서",
+   "posture": "lean_rail",
+   "support": "none",
+   "frame": "waist_up",
+   "body": "front",
+   "head": "tilt",
+   "camera": "low",
+   "right": "rail",
+   "left": "hair_tuck",
+   "legs": "",
+   "gaze": "up",
+   "act": "look"
+  },
+  {
+   "key": "walk_side_low",
+   "ko": "옆모습으로 걷기 — 아래에서",
+   "posture": "walk",
+   "support": "none",
+   "frame": "full_body",
+   "body": "side",
+   "head": "with_body",
+   "camera": "low",
+   "right": "prop",
+   "left": "down",
+   "legs": "walk_stride",
+   "gaze": "horizon",
+   "act": "walk",
+   "prop_kind": "hold"
+  },
+  {
+   "key": "half_kneel_lookback",
+   "ko": "한쪽 무릎 꿇고 어깨 너머 보기",
+   "posture": "half_kneel",
+   "support": "none",
+   "frame": "full_body",
+   "body": "rear_3q",
+   "head": "over_shoulder",
+   "camera": "eye",
+   "right": "natural",
+   "left": "natural",
+   "legs": "",
+   "gaze": "camera",
+   "act": "rest"
+  },
+  {
+   "key": "table_chin_high",
+   "ko": "탁자에 기대 턱 괴기 — 위에서",
+   "posture": "sit_lean",
+   "support": "none",
+   "frame": "waist_up",
+   "body": "front_3q",
+   "head": "tilt",
+   "camera": "high",
+   "right": "chin_table",
+   "left": "prop",
+   "legs": "",
+   "gaze": "camera",
+   "act": "rest",
+   "prop_kind": "hold"
+  },
+  {
+   "key": "lie_side_eye",
+   "ko": "옆으로 누워 눈높이",
+   "posture": "lie_side",
+   "support": "side_floor",
+   "frame": "three_quarter",
+   "body": "front",
+   "head": "with_body",
+   "camera": "eye",
+   "right": "floor_front",
+   "left": "head_rest",
+   "legs": "legs_bent_side",
+   "gaze": "camera",
+   "act": "rest"
+  },
+  {
+   "key": "kneel_side_low",
+   "ko": "무릎 꿇고 옆모습 — 아래에서",
+   "posture": "kneel",
+   "support": "none",
+   "frame": "three_quarter",
+   "body": "side",
+   "head": "with_body",
+   "camera": "low",
+   "right": "lap",
+   "left": "natural",
+   "legs": "",
+   "gaze": "camera",
+   "act": "rest"
+  },
+  {
    "key": "edge_dangle",
    "ko": "걸터앉아 발 담그기",
    "posture": "sit_edge",
@@ -7214,6 +7351,82 @@
    "body": "front_3q",
    "right": "fire_warm",
    "left": "fire_warm"
+  },
+  {
+   "key": "chair_3q_high",
+   "ko": "의자에 앉아 위에서 본 3/4",
+   "posture": "sit_chair",
+   "support": "back_seat",
+   "frame": "waist_up",
+   "body": "front_3q",
+   "head": "tilt",
+   "camera": "high",
+   "right": "cheek",
+   "left": "natural",
+   "legs": "",
+   "gaze": "camera",
+   "act": "rest"
+  },
+  {
+   "key": "chair_lookback",
+   "ko": "의자에 앉아 어깨 너머로 돌아보기",
+   "posture": "sit_chair",
+   "support": "none",
+   "frame": "waist_up",
+   "body": "rear_3q",
+   "head": "over_shoulder",
+   "camera": "eye",
+   "right": "natural",
+   "left": "natural",
+   "legs": "",
+   "gaze": "camera",
+   "act": "rest"
+  },
+  {
+   "key": "sideways_lookback",
+   "ko": "옆으로 걸터앉아 어깨 너머 보기",
+   "posture": "sit_sideways",
+   "support": "none",
+   "frame": "three_quarter",
+   "body": "rear_3q",
+   "head": "over_shoulder",
+   "camera": "eye",
+   "right": "lap",
+   "left": "natural",
+   "legs": "",
+   "gaze": "camera",
+   "act": "rest"
+  },
+  {
+   "key": "floor_low_cam",
+   "ko": "바닥에 앉아 낮은 카메라",
+   "posture": "sit_floor",
+   "support": "none",
+   "frame": "full_body",
+   "body": "front_3q",
+   "head": "with_body",
+   "camera": "floor",
+   "right": "floor_brace",
+   "left": "lap",
+   "legs": "knee_up",
+   "gaze": "camera",
+   "act": "rest"
+  },
+  {
+   "key": "kneel_high_prop",
+   "ko": "무릎 꿇고 소품 보기 — 위에서",
+   "posture": "kneel",
+   "support": "none",
+   "frame": "three_quarter",
+   "body": "front_3q",
+   "head": "tilt",
+   "camera": "high",
+   "right": "prop",
+   "left": "lap",
+   "legs": "",
+   "gaze": "at_prop",
+   "act": "look",
+   "prop_kind": "hold"
   }
  ],
  "expressions": {
@@ -7854,7 +8067,7 @@
   }
  ],
  "ambience": {
-  "note": "계획기가 시간대 · 날씨 · 머리 매무새 · 빛을 고를 때의 조건(lib/casual-tree-v2.js ambience). times: 그 시간대가 되는 장소 특징. 밤 고정 장소(night)는 night_times 만. weather_needs_any: 날씨는 하늘 · 창이 있는 곳만. weather_times: 그 날씨와 같이 되는 시간대. hair: 머리 매무새의 조건",
+  "note": "계획기가 시간대 · 날씨 · 머리 매무새 · 빛을 고를 때의 조건(lib/casual-tree-v2.js ambience). times: 그 시간대가 되는 장소 특징. 밤 고정 장소(night)는 night_times 만. weather_needs_any: 날씨는 하늘 · 창이 있는 곳만. weather_times: 그 날씨와 같이 되는 시간대. hair: 머리 매무새의 조건 looks: 그 시간대의 빛이 장소 특징 · 날씨에 따라 어떻게 보이나(2026-11-18 — 첫 맞는 줄이 시간대 줄 뒤에 붙는다). 시간대는 늘 고르고, 덜 쓴 값은 묶음 + 전체 기록 비율로. 도시(2026-11-21): 계획기의 시간대는 생활 장면표(data/city-life.json times — dawn · commute_am · midday · commute_pm · night_out · past_midnight)라 times · weather_times 는 원소와 맞춰 둔 사본이고, looks 의 times 에 도시 시간대 열쇠를 더했다(아침 → commute_am · 한낮 → midday · 해 질 녘 → commute_pm · 밤 창가 · 등불 → night_out · past_midnight).",
   "times": {
    "morning": {
     "needs_any": [
@@ -7898,6 +8111,38 @@
     "needs": [
      "indoor"
     ]
+   },
+   "dawn": {
+    "needs_any": [
+     "sky",
+     "window"
+    ]
+   },
+   "forenoon": {
+    "needs_any": [
+     "sky",
+     "window"
+    ]
+   },
+   "overcast": {
+    "needs_any": [
+     "sky",
+     "window"
+    ]
+   },
+   "day_indoor": {
+    "needs": [
+     "indoor"
+    ]
+   },
+   "fluorescent": {
+    "needs": [
+     "indoor"
+    ],
+    "eras": [
+     "now",
+     "site"
+    ]
    }
   },
   "night_times": [
@@ -7911,7 +8156,9 @@
   ],
   "weather_times": {
    "fog": [
-    "morning"
+    "morning",
+    "dawn",
+    "overcast"
    ],
    "night_snow": [
     "night",
@@ -7919,29 +8166,39 @@
    ],
    "summer": [
     "noon",
-    "golden"
+    "golden",
+    "forenoon"
    ],
    "rain": [
     "morning",
     "noon",
     "dusk",
     "night",
-    "lamplight"
+    "lamplight",
+    "overcast",
+    "forenoon"
    ],
    "snow": [
     "morning",
     "noon",
-    "dusk"
+    "dusk",
+    "dawn",
+    "overcast",
+    "forenoon"
    ],
    "autumn": [
     "morning",
     "noon",
-    "golden"
+    "golden",
+    "forenoon",
+    "overcast"
    ],
    "spring": [
     "morning",
     "noon",
-    "golden"
+    "golden",
+    "forenoon",
+    "dawn"
    ]
   },
   "hair": {
@@ -7961,7 +8218,197 @@
      "sky"
     ]
    }
-  }
+  },
+  "looks": [
+   {
+    "times": [
+     "morning",
+     "forenoon",
+     "noon",
+     "overcast",
+     "dusk",
+     "golden"
+    ],
+    "weather": [
+     "rain"
+    ],
+    "has_any": [
+     "sky"
+    ],
+    "ko": "비에 젖은 바닥 반사",
+    "en": "the rain-wet ground mirroring the light around her"
+   },
+   {
+    "times": [
+     "noon",
+     "forenoon",
+     "golden",
+     "midday",
+     "commute_pm"
+    ],
+    "has_any": [
+     "water",
+     "shallow_water",
+     "deep_water"
+    ],
+    "ko": "물에서 튀는 빛",
+    "en": "light glittering off the water, dappling her skin"
+   },
+   {
+    "times": [
+     "dawn"
+    ],
+    "has_any": [
+     "window"
+    ],
+    "ko": "새벽 창빛",
+    "en": "the first pale light at the window, the room still dim"
+   },
+   {
+    "times": [
+     "dawn"
+    ],
+    "has_any": [
+     "sky"
+    ],
+    "ko": "새벽 하늘",
+    "en": "a pale lilac sky, mist low on the ground"
+   },
+   {
+    "times": [
+     "morning",
+     "forenoon",
+     "commute_am"
+    ],
+    "has_any": [
+     "window"
+    ],
+    "ko": "아침 창빛",
+    "en": "morning light slanting through the window across the floor"
+   },
+   {
+    "times": [
+     "morning",
+     "forenoon",
+     "commute_am"
+    ],
+    "has_any": [
+     "sky"
+    ],
+    "ko": "아침 바깥빛",
+    "en": "fresh low sunlight, long cool shadows"
+   },
+   {
+    "times": [
+     "noon",
+     "midday"
+    ],
+    "has_any": [
+     "sky"
+    ],
+    "ko": "한낮 볕",
+    "en": "hard bright sun, crisp short shadows on the ground"
+   },
+   {
+    "times": [
+     "noon",
+     "midday"
+    ],
+    "has_any": [
+     "window"
+    ],
+    "ko": "한낮 창가",
+    "en": "a bright square of sunlight from the window on the floor"
+   },
+   {
+    "times": [
+     "overcast"
+    ],
+    "has_any": [
+     "sky",
+     "window"
+    ],
+    "ko": "흐린 빛",
+    "en": "soft even light, colours calm, no hard shadows"
+   },
+   {
+    "times": [
+     "golden",
+     "commute_pm"
+    ],
+    "has_any": [
+     "window"
+    ],
+    "ko": "해 질 녘 창빛",
+    "en": "low gold light through the window, long warm stripes across the walls"
+   },
+   {
+    "times": [
+     "golden",
+     "commute_pm"
+    ],
+    "has_any": [
+     "sky"
+    ],
+    "ko": "해 질 녘 역광",
+    "en": "the warm low sun rim-lighting her hair"
+   },
+   {
+    "times": [
+     "dusk"
+    ],
+    "has_any": [
+     "window"
+    ],
+    "ko": "땅거미 첫 불빛",
+    "en": "the first lamps lit inside, blue dusk in the window"
+   },
+   {
+    "times": [
+     "dusk"
+    ],
+    "has_any": [
+     "sky"
+    ],
+    "ko": "땅거미 하늘",
+    "en": "a deep blue sky, the first lights coming on around her"
+   },
+   {
+    "times": [
+     "night",
+     "night_out",
+     "past_midnight"
+    ],
+    "has_any": [
+     "window"
+    ],
+    "ko": "밤 창가",
+    "en": "lamps lit inside, the window dark with night"
+   },
+   {
+    "times": [
+     "day_indoor"
+    ],
+    "ko": "낮 실내 반사광",
+    "en": "daylight bouncing softly off pale walls"
+   },
+   {
+    "times": [
+     "fluorescent"
+    ],
+    "ko": "형광등 빛",
+    "en": "flat white light with crisp edges, no warm glow"
+   },
+   {
+    "times": [
+     "lamplight",
+     "night_out",
+     "past_midnight"
+    ],
+    "ko": "등불 웅덩이",
+    "en": "warm pools of lamplight, soft shadow beyond"
+   }
+  ]
  },
  "outfit_rules": {
   "note": "의상 계열이 설 수 있는 장소 종류(2026-11-13 사용자 「갱도에서 수영복을 입고 누워있는 다거나」). needs_any: 이 종류 가운데 하나여야 · not_has: 이 종류면 안 된다. 없는 계열은 어디든. lib/casual-tree-v2.js why ofam",
@@ -8064,6 +8511,426 @@
   {
    "key": "pose",
    "ko": "카메라용 몸짓"
+  }
+ ],
+ "moments": [
+  {
+   "key": "foam_crown",
+   "ko": "머리 위에 얹힌 거품",
+   "en": "a soft crown of bath foam sits on top of her head",
+   "frames": [
+    "face_close",
+    "chest_up",
+    "waist_up",
+    "three_quarter"
+   ],
+   "places": [
+    "@spa",
+    "home_bath"
+   ],
+   "face": true
+  },
+  {
+   "key": "foam_shoulder",
+   "ko": "어깨 · 쇄골에 붙은 거품",
+   "en": "a few clumps of bath foam cling to her shoulder and collarbone",
+   "frames": [
+    "chest_up",
+    "waist_up",
+    "three_quarter",
+    "full_body"
+   ],
+   "places": [
+    "@spa",
+    "home_bath"
+   ]
+  },
+  {
+   "key": "mirror_palm",
+   "ko": "김 서린 거울의 손바닥 자국",
+   "en": "a clear palm print is wiped into the fogged mirror behind her",
+   "frames": [
+    "waist_up",
+    "three_quarter",
+    "full_body",
+    "environmental"
+   ],
+   "places": [
+    "@spa",
+    "home_bath"
+   ],
+   "needs": [
+    "indoor"
+   ]
+  },
+  {
+   "key": "lashes_drops",
+   "ko": "속눈썹에 맺힌 물방울",
+   "en": "tiny water droplets bead on her eyelashes",
+   "frames": [
+    "face_close",
+    "chest_up"
+   ],
+   "needs_any": [
+    "k_water",
+    "water"
+   ],
+   "face": true
+  },
+  {
+   "key": "wet_fringe",
+   "ko": "이마에 붙은 젖은 앞머리",
+   "en": "her wet fringe clings to her forehead in loose strands",
+   "frames": [
+    "face_close",
+    "chest_up",
+    "waist_up",
+    "three_quarter"
+   ],
+   "needs_any": [
+    "k_water",
+    "water"
+   ],
+   "face": true
+  },
+  {
+   "key": "sand_legs",
+   "ko": "다리에 묻은 모래",
+   "en": "a dusting of pale sand clings to her knees and calves",
+   "frames": [
+    "three_quarter",
+    "full_body",
+    "environmental"
+   ],
+   "needs_any": [
+    "k_water"
+   ],
+   "needs": [
+    "sky"
+   ]
+  },
+  {
+   "key": "flour_cheek",
+   "ko": "볼에 묻은 밀가루",
+   "en": "a light smudge of flour marks her cheek",
+   "frames": [
+    "face_close",
+    "chest_up",
+    "waist_up",
+    "three_quarter"
+   ],
+   "needs_any": [
+    "worktable",
+    "table"
+   ],
+   "needs": [
+    "indoor"
+   ],
+   "face": true
+  },
+  {
+   "key": "cream_nose",
+   "ko": "코끝에 묻은 생크림",
+   "en": "a dab of whipped cream sits on the tip of her nose",
+   "frames": [
+    "face_close",
+    "chest_up",
+    "waist_up"
+   ],
+   "needs_any": [
+    "table"
+   ],
+   "face": true
+  },
+  {
+   "key": "crumb_lip",
+   "ko": "입가의 과자 부스러기",
+   "en": "a single crumb rests at the corner of her mouth",
+   "frames": [
+    "face_close",
+    "chest_up"
+   ],
+   "needs_any": [
+    "table"
+   ],
+   "face": true
+  },
+  {
+   "key": "snow_lashes",
+   "ko": "속눈썹과 머리에 내려앉은 눈송이",
+   "en": "snowflakes are caught in her eyelashes and hair",
+   "frames": [
+    "face_close",
+    "chest_up",
+    "waist_up",
+    "three_quarter"
+   ],
+   "weather": [
+    "snow",
+    "night_snow"
+   ],
+   "needs": [
+    "sky"
+   ],
+   "face": true
+  },
+  {
+   "key": "frost_breath",
+   "ko": "찬 공기에 피어나는 입김",
+   "en": "her breath fogs softly in the cold air",
+   "frames": [
+    "face_close",
+    "chest_up",
+    "waist_up",
+    "three_quarter"
+   ],
+   "weather": [
+    "snow",
+    "night_snow",
+    "fog"
+   ],
+   "needs": [
+    "sky"
+   ],
+   "face": true
+  },
+  {
+   "key": "petals_hair",
+   "ko": "머리에 붙은 꽃잎",
+   "en": "a few petals have caught in her hair",
+   "frames": [
+    "chest_up",
+    "waist_up",
+    "three_quarter",
+    "full_body",
+    "face_close"
+   ],
+   "weather": [
+    "spring"
+   ],
+   "needs": [
+    "sky"
+   ]
+  },
+  {
+   "key": "leaf_hair",
+   "ko": "머리에 걸린 낙엽",
+   "en": "a fallen leaf has caught in her hair",
+   "frames": [
+    "chest_up",
+    "waist_up",
+    "three_quarter",
+    "full_body",
+    "face_close"
+   ],
+   "weather": [
+    "autumn"
+   ],
+   "needs": [
+    "sky"
+   ]
+  },
+  {
+   "key": "rain_shoulders",
+   "ko": "어깨에 맺힌 빗방울",
+   "en": "raindrops bead on her shoulders and hair",
+   "frames": [
+    "chest_up",
+    "waist_up",
+    "three_quarter",
+    "full_body"
+   ],
+   "weather": [
+    "rain"
+   ],
+   "needs": [
+    "sky"
+   ]
+  },
+  {
+   "key": "confetti",
+   "ko": "머리와 어깨에 붙은 색종이 조각",
+   "en": "bits of confetti are stuck in her hair and on her shoulders",
+   "frames": [
+    "chest_up",
+    "waist_up",
+    "three_quarter",
+    "full_body",
+    "face_close"
+   ],
+   "needs_any": [
+    "k_stage"
+   ]
+  },
+  {
+   "key": "glitter_sticker",
+   "ko": "볼에 붙은 반짝이 스티커",
+   "en": "a small glitter sticker sparkles on her cheek",
+   "frames": [
+    "face_close",
+    "chest_up",
+    "waist_up"
+   ],
+   "needs_any": [
+    "k_stage",
+    "k_street"
+   ],
+   "face": true,
+   "eras": [
+    "now"
+   ]
+  },
+  {
+   "key": "bubbles_float",
+   "ko": "얼굴 앞에 떠다니는 비눗방울",
+   "en": "soap bubbles drift through the air in front of her",
+   "frames": [
+    "face_close",
+    "chest_up",
+    "waist_up",
+    "three_quarter"
+   ],
+   "needs_any": [
+    "k_nature",
+    "k_street",
+    "k_private"
+   ]
+  },
+  {
+   "key": "balloon_string",
+   "ko": "손목에 감긴 풍선 끈",
+   "en": "a balloon string is looped around her wrist, the balloon floating out of frame above",
+   "frames": [
+    "waist_up",
+    "three_quarter",
+    "full_body"
+   ],
+   "needs_any": [
+    "k_street",
+    "k_stage"
+   ],
+   "eras": [
+    "now"
+   ]
+  },
+  {
+   "key": "bedhead",
+   "ko": "한 가닥 뻗친 잠 머리",
+   "en": "one stubborn strand of her hair sticks up from sleep",
+   "frames": [
+    "face_close",
+    "chest_up",
+    "waist_up",
+    "three_quarter"
+   ],
+   "needs_any": [
+    "k_private"
+   ],
+   "times": [
+    "dawn",
+    "morning",
+    "forenoon",
+    "commute_am"
+   ],
+   "face": true
+  },
+  {
+   "key": "pillow_crease",
+   "ko": "볼에 남은 베개 자국",
+   "en": "a faint pillow crease lingers on her cheek",
+   "frames": [
+    "face_close",
+    "chest_up"
+   ],
+   "needs_any": [
+    "k_private"
+   ],
+   "times": [
+    "dawn",
+    "morning",
+    "forenoon",
+    "commute_am"
+   ],
+   "face": true
+  },
+  {
+   "key": "pencil_ear",
+   "ko": "귀에 꽂은 연필",
+   "en": "a pencil is tucked behind her ear",
+   "frames": [
+    "face_close",
+    "chest_up",
+    "waist_up",
+    "three_quarter"
+   ],
+   "needs_any": [
+    "k_work",
+    "worktable"
+   ],
+   "face": true
+  },
+  {
+   "key": "goggles_up",
+   "ko": "이마로 올린 보안경",
+   "en": "safety goggles are pushed up on her forehead",
+   "frames": [
+    "face_close",
+    "chest_up",
+    "waist_up",
+    "three_quarter"
+   ],
+   "needs_any": [
+    "k_work",
+    "worktable"
+   ],
+   "face": true
+  },
+  {
+   "key": "paint_streak",
+   "ko": "손등에 묻은 물감",
+   "en": "a streak of paint marks the back of her hand",
+   "frames": [
+    "detail",
+    "chest_up",
+    "waist_up",
+    "three_quarter"
+   ],
+   "needs_any": [
+    "worktable"
+   ]
+  },
+  {
+   "key": "grass_skirt",
+   "ko": "옷자락에 붙은 풀잎",
+   "en": "a few blades of grass cling to the hem of her clothes",
+   "frames": [
+    "three_quarter",
+    "full_body",
+    "environmental"
+   ],
+   "needs_any": [
+    "k_nature"
+   ]
+  },
+  {
+   "key": "sunscreen_streak",
+   "ko": "어깨에 덜 문지른 선크림 자국",
+   "en": "an unblended streak of sunscreen shows on her shoulder",
+   "frames": [
+    "chest_up",
+    "waist_up",
+    "three_quarter",
+    "full_body"
+   ],
+   "needs_any": [
+    "k_water"
+   ],
+   "needs": [
+    "sky"
+   ],
+   "eras": [
+    "now"
+   ]
   }
  ]
 }

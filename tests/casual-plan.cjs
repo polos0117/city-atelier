@@ -98,7 +98,7 @@ for (const seed of [3, 11, 29]) {
       assert(t.includes(PROPS.clothes[w].en) === !C.isCosplay(c), id + ' 옷의 결 — 그 세계 평상복(코스프레 컷은 없음)');
       /* 실내면 계절 이름만 · 창밖 · 옷차림(2026-11-20 「실내공간까지 따라들어오는것 같아」), 바깥이면 계절 글 그대로 */
       const sea = byKey(LIFE.seasons.seoul, c.season), inSeason = 'Season: ' + sea.en.split(' — ')[0] + ' — but she is indoors';
-      assert((C.placeRules(c.place).indoor ? t.includes(inSeason) && !t.includes(sea.en) : t.includes('Season: ' + sea.en.replace(/\.$/, '') + '.')) && (!c.time || t.includes('Time of day: ' + byKey(LIFE.times, c.time).en + '.')), id + ' 계절 · 시간대 줄');
+      assert((C.placeRules(c.place).indoor ? t.includes(inSeason) && !t.includes(sea.en) : t.includes('Season: ' + sea.en.replace(/\.$/, '') + '.')) && (!c.time || ['.', '; '].some(x => t.includes('Time of day: ' + byKey(LIFE.times, c.time).en + x))), id + ' 계절 · 시간대 줄');   /* 시간대 뒤 빛 모습(2026-11-21 — 표 ambience.looks) */
     }
     planned.push(...res.cuts);
     n++;

@@ -297,6 +297,9 @@ const POSE_WEIGHT = 0.4, ACT_MOST = 2;
 /* 어색한 조합(⚠ — 표 awkward: 수영복으로 작업 자리, 휴양지 차림으로 현장 …)인 의상 계열은 덜 고른다(2026-11-13 — 새 장소 · 새 계열이 새 모순이 되지 않게). 묶음마다 한 장까지는 여전히 된다 */
 const AWKWARD_WEIGHT = 0.15;
 const wOf = n => n ? 1 / Math.pow(1 + n, 3) : WEIGHT_UNUSED;
+/* 자세 · 몸 방향 · 카메라 높이 짝(원소 2026-11-18 사용자 C, 도시 2026-11-21) — 셋을 따로 세면 고르게 퍼져도 「서서 · 정면 · 눈높이」 짝이 34% 로 몰렸다. 짝 횟수(전체 기록 + 묶음)로 덜고, 그 짝은 반으로 */
+const comboKey = c => [c.posture || '', c.body || '', c.camera || ''].join('|');
+const standFrontEye = c => c.posture === 'stand' && (c.body === 'front' || c.body === 'front_3q') && c.camera === 'eye';
 /* 옷 계열 무게 — 목욕 차림(수건 · 페슈테말 · 찜질복 · 가운)이 계획 12.7% · 등록 10.8% 로 계열 가운데 가장 많았다(사용자 2026-11-09 「수건 감는 옷 많이 나오던데 이전부터」).
    목욕 계열 장소 · 세계 안 목욕탕이 많아 그렇다 — 고를 때 무게를 줄이고, 한 카드의 세 세계 통틀어 한 장까지(check) */
 const FAM_WEIGHT = { bath: 0.25 };
@@ -308,7 +311,7 @@ function lean(r, list, count, key = x => x, factor = () => 1) {
   return list[list.length - 1];
 }
 /* 쓴 횟수 꼴 바로잡기 — 옛 꼴(소품 → 횟수)도 받는다 */
-const EMPTY_USAGE = () => ({ prop: {}, place: {}, item: {}, preset: {}, posture: {}, expr: {}, ofam: {}, path: {} });
+const EMPTY_USAGE = () => ({ prop: {}, place: {}, item: {}, preset: {}, posture: {}, expr: {}, ofam: {}, path: {}, time: {}, light: {}, cityWeather: {}, combo: {}, moment: {} });
 const usageOf0 = u => (u && (u.place || u.prop || u.preset)) ? { ...EMPTY_USAGE(), ...u } : { ...EMPTY_USAGE(), prop: u || {} };
 /* 새로 더한 옷 계열(쓴 횟수 0)은 다른 계열의 가운데 값에서 시작한다 — 안 그러면 「안 쓴 쪽 먼저」 무게로 모든 묶음에 들어갔다(2026-11-03 동탄룩 72묶음 중 72) */
 const FAMS = (tree.outfits || []).map(o => o.key);
@@ -339,7 +342,7 @@ function slot(r, card, kind = 'plain', { frame = '', wantSig = false, usage = {}
   if (!presets.length) return null;
   const rp = list => pick(r, list);
   /* 자세 추천 — 그 추천과 그 자세의 횟수를 함께(선 자세가 절반이 넘었다 — 2026-11-01 기록 434장) */
-  const pw = presets.map(p => wOf(U.preset[p.key] || 0) * Math.sqrt(wOf(U.posture[p.posture] || 0)) * wOf(U.path[pathKey(p.key, sc.place)] || 0) * (p.pose ? POSE_WEIGHT : 1));
+  const pw = presets.map(p => wOf(U.preset[p.key] || 0) * Math.sqrt(wOf(U.posture[p.posture] || 0)) * wOf(U.path[pathKey(p.key, sc.place)] || 0) * (p.pose ? POSE_WEIGHT : 1) * Math.sqrt(wOf((U.combo || {})[comboKey(p)] || 0)) * (standFrontEye(p) ? 0.5 : 1));
   let px = r() * pw.reduce((a, b) => a + b, 0), chosen = presets[presets.length - 1];
   for (let i = 0; i < presets.length; i++) { px -= pw[i]; if (px < 0) { chosen = presets[i]; break; } }
   sc = C2.repair(T2, C2.applyPreset(T2, sc, chosen.key), g, rp);
@@ -469,6 +472,7 @@ function check(cuts, card, base = [], others = []) {
     const wx = c.cityWeather && weathers.find(x => x.key === c.cityWeather);
     if (c.cityWeather && !(wx && !pr.indoor && (!wx.seasons || wx.seasons.includes(c.season)) && (!wx.times || wx.times.includes(c.time)))) errs.push(`칸 ${c.n || '?'}: 날씨 ${c.cityWeather} 는 ${card.city} 표 · 그 계절 · 시간대 · 실외 밖`);
     if (c.weather) errs.push(`칸 ${c.n || '?'}: 트리 날씨(weather)는 쓰지 않는다 — 생활 장면표 날씨(cityWeather)`);
+    if (c.moment && !(momentFits(world, c.moment) && C2.momentOk(T2, c, by(tree2.moments, c.moment)))) errs.push(`칸 ${c.n || '?'}: 순간 ${c.moment} 은 이 장면 · ${world} 에 안 맞는다(표 moments)`);
   }
   for (const c of sCuts) {
     const fixed = C2.repair(T2, { ...c }, card.g);
@@ -533,23 +537,51 @@ function placeRules(place) {
   const hs = ((T2.v2.places || {})[place]) || [];
   return { times: hs.includes('timed') ? [] : hs.includes('night') ? NIGHT_TIMES : null, seasons: null, indoor: hs.includes('indoor') || hs.includes('timed') };
 }
-/* 생활 장면표의 시간대 · 계절 · 날씨 — 장소가 받는 것(placeRules), 묶음 안에서 덜 쓴 것부터. 날씨는 실외 · 열에 넷, 그 계절 · 시간대에 되는 것만 */
-function lifeAmbience(c, city, ra, used) {
-  const pr = placeRules(c.place);
-  const least = (kind, list) => { if (!list.length) return ''; const u = used[kind] || {}, min = Math.min(...list.map(k => u[k] || 0)), pool = list.filter(k => (u[k] || 0) === min); return pool[Math.floor(ra() * pool.length)]; };
-  const time = least('time', TIMES.map(x => x.key).filter(k => !pr.times || pr.times.includes(k)));
+/* 생활 장면표의 시간대 · 계절 · 날씨 — 장소가 받는 것(placeRules), 묶음 안에서 덜 쓴 것부터. 날씨는 실외 · 열에 넷, 그 계절 · 시간대에 되는 것만.
+   덜 쓴 값은 묶음 횟수(used) + 전체 기록 비율(global — 0 ~ 1, 가장 많이 쓴 값이 1). 묶음 횟수가 먼저, 같으면 전체에서 덜 쓴 쪽(원소 2026-11-18 A, 도시 2026-11-21) */
+const leastOf = (used, global, ra) => (kind, list) => {
+  if (!list.length) return '';
+  const u = used[kind] || {}, g = (global || {})[kind] || {}, sc = k => (u[k] || 0) + (g[k] || 0), min = Math.min(...list.map(sc)), pool = list.filter(k => sc(k) - min < 0.35);
+  return pool[Math.floor(ra() * pool.length)];
+};
+const timesAt = place => { const pr = placeRules(place); return TIMES.map(x => x.key).filter(k => !pr.times || pr.times.includes(k)); };
+function lifeAmbience(c, city, ra, used, global = {}) {
+  const pr = placeRules(c.place), least = leastOf(used, global, ra);
+  const time = least('time', timesAt(c.place));
   const season = least('season', SEASONS(city).map(x => x.key).filter(k => !pr.seasons || pr.seasons.includes(k)));
   const ws = pr.indoor ? [] : WEATHERS(city).filter(x => (!x.seasons || x.seasons.includes(season)) && (!x.times || x.times.includes(time))).map(x => x.key);
   const cityWeather = ws.length && ra() < 0.4 ? least('cityWeather', ws) : '';
   return { time, season, cityWeather };
 }
-function ambient(cuts, old = [], ra = Math.random, city = '') {
+/* 순간(원소 2026-11-18 사용자 D, 도시 2026-11-21) — 노출과 상관없는 작은 사건 하나(표 moments). 일반 컷 가운데 몇 장에(자유 설계 · 상황 노출 · 게임 코스프레 컷은 빼고 — 한 컷에 작은 사건은 하나),
+   전체 기록 + 묶음에서 덜 쓴 것. 장면(장소 · 프레이밍 · 시간대)이 다 정해진 뒤. 도시: 그 세계 금지 낱말이 든 순간은 거르고, 시대 열쇠(eras — now 만)가 붙은 순간(반짝이 스티커 · 풍선 · 선크림)은
+   금지 낱말이 없는 세계(사이버펑크)에서만 — 도시 컷은 시대가 늘 now 라 표의 eras 가 판타지 · 스팀펑크를 거르지 못한다. 날씨가 붙은 순간(눈송이 · 입김 · 꽃잎 · 낙엽 · 빗방울)은
+   트리 날씨(weather)를 안 쓰는 도시에선 안 맞는다 */
+const MOMENT_RATE = 0.4, MOMENT_MAX = 2;
+const momentFits = (world, k) => { const r = by(tree2.moments || [], k); return !!r && worldOk(world, r.en) && (!r.eras || !BANNED[world]); };
+function momentize(cuts, old = [], ra = Math.random, usage = null, world = '') {
+  const U0 = usage ? usageOf(usage) : null, g = (U0 && U0.moment) || {}, here = {};
+  [...old, ...cuts].forEach(c => { if (c.moment) here[c.moment] = (here[c.moment] || 0) + 1; });
+  let n = cuts.filter(c => c.moment).length;
+  for (const c of cuts) {
+    if (n >= MOMENT_MAX || c.moment || c.ofree || c.sfree || c.situ || isCosplay(c) || ra() >= MOMENT_RATE) continue;
+    const list = C2.moments(T2, c).filter(k => momentFits(world, k)); if (!list.length) continue;
+    const sc = k => 3 * (here[k] || 0) + (g[k] || 0), min = Math.min(...list.map(sc)), pool = list.filter(k => sc(k) - min < 1);
+    c.moment = pool[Math.floor(ra() * pool.length)]; here[c.moment] = (here[c.moment] || 0) + 1; n++;
+  }
+  return cuts;
+}
+function ambient(cuts, old = [], ra = Math.random, city = '', usage = null) {
+  /* 전체 기록 비율(원소 2026-11-18 사용자 A) — 그림 저장소의 다른 카드 컷에서 센 시간대 · 빛 · 날씨 횟수를 0 ~ 1 로(가장 많이 쓴 값이 1). 묶음 안 횟수 다음으로 본다 */
+  const U0 = usage ? usageOf(usage) : null, global = {};
+  if (U0) for (const k of ['time', 'light', 'cityWeather']) { const m = U0[k] || {}, top = Math.max(1, ...Object.values(m)); global[k] = Object.fromEntries(Object.entries(m).map(([x, n]) => [x, n / top])); }
   const used = {}, note = c => [...AMBIENT, 'season', 'cityWeather', 'camera'].forEach(k => { if (c[k]) { used[k] = used[k] || {}; used[k][c[k]] = (used[k][c[k]] || 0) + 1; } });
   old.filter(c => !c.sfree).forEach(note);
-  const opts = { times: [], hairs: (T.CASUAL.hairs || []).map(x => x.key), used };   /* 시간대는 생활 장면표(lifeAmbience) — 트리 시간대 · 날씨는 안 쓴다 */
+  const opts = { times: [], hairs: (T.CASUAL.hairs || []).map(x => x.key), used, global };   /* 시간대는 생활 장면표(lifeAmbience) — 트리 시간대 · 날씨는 안 쓴다 */
   for (const c of cuts) {
-    if (c.sfree) continue;
-    Object.assign(c, C2.ambience(T2, c, ra, opts), lifeAmbience(c, city, ra, used));
+    /* 장면 자유 칸은 맡은 쪽이 짓는다 — 시간대만 준다(원소 2026-11-18 사용자 B — 비면 늘 따뜻한 밤 실내로 그렸다). 장소가 없어 생활 장면표 시간대 모두에서 */
+    if (c.sfree) { const t = leastOf(used, global, ra)('time', timesAt(c.place)); if (t) { c.time = t; note({ time: t }); } else delete c.time; continue; }
+    Object.assign(c, C2.ambience(T2, c, ra, opts), lifeAmbience(c, city, ra, used, global));
     delete c.weather;
     if (isCosplay(c)) delete c.hair;   /* 코스튬엔 제 머리 장식이 있다 — 머리 매무새 줄을 얹지 않는다(원소 2026-11-15) */
     /* 빛 — 밤 시간대에 낮 빛, 낮에 밤 빛이 남지 않게 */
@@ -697,7 +729,7 @@ function plan(card, slots, old, { seed = Date.now(), usage = {}, others = [], re
       let got = null;
       const taken = new Set([...old, ...cuts].map(c => c.place).filter(Boolean));
       for (let k = 0; k < 60 && !got; k++) {
-        const U0 = usageOf(usage), here = { ...U0, prop: { ...U0.prop }, ofam: { ...U0.ofam } }; cuts.forEach(c => { const u = C2.use(T2, c.use); if (u) here.prop[u.prop] = (here.prop[u.prop] || 0) + 10; here.ofam[c.ofam] = (here.ofam[c.ofam] || 0) + 10; });   /* 묶음 안에서 이미 고른 옷 계열은 다시 덜 고른다(동탄룩 한 장까지) */
+        const U0 = usageOf(usage), here = { ...U0, prop: { ...U0.prop }, ofam: { ...U0.ofam }, combo: { ...(U0.combo || {}) } }; cuts.forEach(c => { if (c.posture) here.combo[comboKey(c)] = (here.combo[comboKey(c)] || 0) + 2; const u = C2.use(T2, c.use); if (u) here.prop[u.prop] = (here.prop[u.prop] || 0) + 10; here.ofam[c.ofam] = (here.ofam[c.ofam] || 0) + 10; });   /* 묶음 안에서 이미 고른 옷 계열은 다시 덜 고른다(동탄룩 한 장까지) */
         const sc = slot(r, card, kinds[i], { frame: frames[i], wantSig: i === sigAt, usage: here, rUse, cut: cos ? cos.cut : '', taken, others });
         if (!sc) continue;
         const cand = { n: slots[i], ...sc };
@@ -716,8 +748,9 @@ function plan(card, slots, old, { seed = Date.now(), usage = {}, others = [], re
     if (!old.some(c => c.situ) && plainAt.length && !sPool.length) continue;
     situate(cuts, sPool.length ? sPool[Math.floor(rs() * sPool.length)] : -1, old, others, rs);
     if (sPool.length && !cuts.some(c => c.situ)) continue;
-    ambient(cuts, old, rng((seed ^ mix ^ 0x7f4a7c15) >>> 0), card.city);
+    ambient(cuts, old, rng((seed ^ mix ^ 0x7f4a7c15) >>> 0), card.city, usage); momentize(cuts, old, rng((seed ^ mix ^ 0x61c88647) >>> 0), usage, card.world || '');
     const free = makeFree(card.key, freeNums, freeKinds, cuts, old, others, recent, rng((seed ^ mix ^ 0x1b873593) >>> 0));
+    ambient(free, [...old, ...cuts], rng((seed ^ mix ^ 0x68e31da4) >>> 0), card.city, usage);   /* 자유 설계 칸의 시간대(원소 B) — 자유 칸은 ambient 뒤에 생겨 원소 계획기에선 시간대가 안 붙었다. 장면 컷과 덜 겹치는 시간대 */
     if (check([...cuts, ...free], card, old, others).length) continue;
     const all = [...old, ...cuts, ...free];
     return { cuts: [...cuts, ...free], attempt, required: [...all.filter(c => c.lifeMust).map(c => 'life:' + c.place), ...all.map(requiredType).filter(Boolean), ...all.filter(isCosplay).map(c => 'cosplay:' + (c.cosplay || {}).game + '/' + (c.cosplay || {}).character + '/' + (c.cosplay || {}).cut),
@@ -781,6 +814,7 @@ function sceneUsage(dir, skip) {
     const u = C2.use(T2, sc.use);
     if (u && u.prop !== 'signature') add(out.prop, u.prop);
     add(out.place, sc.place); add(out.item, sc.item); add(out.preset, sc.preset); add(out.posture, sc.posture); add(out.expr, sc.expr); add(out.ofam, sc.ofam);
+    add(out.time, sc.time); add(out.light, sc.light); add(out.cityWeather, sc.cityWeather); if (sc.posture) add(out.combo, comboKey(sc)); add(out.moment, sc.moment);   /* 시간대 · 빛 · 날씨(원소 2026-11-18 A — 전체 기록 비율) · 자세 짝(C) · 순간(D) */
     if (sc.preset && sc.place) add(out.path, pathKey(sc.preset, sc.place));
   };
   const city = String(skip || '').split('-')[0];   /* 같은 도시 카드(<도시> · <도시>-*) — 안 그린 계획 파일도 센다 */

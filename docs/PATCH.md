@@ -7,6 +7,14 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-21 · claude · 일상컷 — 11-18 공용 개선 옮기기(자세 쏠림 · 순간 · 시간대 · 빛)
+- 사용자 「1번만해줘」 — 도시 일상컷 표가 원소 2026-11-18 공용 개선(C · D · A · B · G) 전 사본이었다. 원소(element-atelier)에서 옮기고 도시 몫(생활 장면 · 전통 의상 · 직업컷 · 노출 셋 · 코스프레 · spreadTurns)은 그대로.
+- data/casual-tree-v2.json — 추천 자세 열넷(chair_3q_high · chair_lookback · sideways_lookback · floor_low_cam · kneel_high_prop · recline_low · squat_side_high · edge_cheek_high · rail_sky_low · walk_side_low · half_kneel_lookback · table_chin_high · lie_side_eye · kneel_side_low, 원소 차례대로 끼움), 순간 moments 스물다섯(도시에 없는 장소 fx_spa · fx_marble_bath · nation_bath 는 뺐고 잠 머리 · 베개 자국 times 에 commute_am), ambience.times 다섯(dawn · forenoon · overcast · day_indoor · fluorescent) · weather_times 원소 것 · looks 열일곱(times 에 도시 시간대 열쇠를 더함 — 아침 → commute_am · 한낮 → midday · 해 질 녘 → commute_pm · 밤 창가 · 등불 → night_out · past_midnight). 도시 계획기는 시간대를 생활 장면표(data/city-life.json times)에서 고르고 트리 시간대 · 날씨는 안 쓴다 — times · weather_times 는 원소와 맞춘 사본일 뿐, 형광등은 도시에 안 나온다.
+- tools/casual-plan.cjs — 자세 추천 무게에 자세 · 몸 방향 · 카메라 짝 횟수(전체 기록 + 묶음, comboKey), 「서기 · 정면쪽 · 눈높이」 추천은 반(C). momentize — 일반 컷(자유 설계 · 상황 노출 · 코스프레 빼고) 열에 넷 꼴로 묶음에 둘까지, 덜 쓴 것(D) — 도시는 그 세계 금지 낱말이 든 순간과, 시대 열쇠(eras)가 붙은 순간(반짝이 스티커 · 풍선 · 선크림)을 판타지 · 스팀펑크에서 거른다(momentFits — 도시 컷은 시대가 늘 now). check 가 순간을 본다. sceneUsage 가 시간대 · 빛 · 날씨(cityWeather) · 자세 짝 · 순간을 세고(그린 기록 + 같은 도시 계획), ambient 가 전체 기록 비율(global)을 C2.ambience(빛)와 lifeAmbience(시간대 · 날씨)에 넘긴다(A). 자유 설계 칸에도 시간대(B) — 원소는 자유 칸이 ambient 뒤에 생겨 시간대가 안 붙었다(원소 계획 파일에도 없음), 도시는 makeFree 뒤에 ambient 를 한 번 더.
+- lib/prompt-city.js — 장면 칸에 moment, 「Time of day: …; <빛 모습>.」(extras().look) · 「Small moment: ….」 · 자유 설계 칸 「Time of day (fixed): … — set your scene at this time.」(시간대 글은 생활 장면표). prompt.html prompt-city ?v=48.
+- tests/casual-plan.cjs — 시간대 줄 단언이 빛 모습이 붙은 꼴(「…; 」)도 받는다.
+- 시험 계획(설계된 도시 열 곳 × 세 세계 × 씨앗 넷, 장면 컷 960): 서기 · 정면쪽 · 눈높이 18.1% → 10.8%, 서기 44.8% → 35.7%, 눈높이 50.5% → 45.2%, 빛 모습이 붙은 시간대 줄 0 → 84%, 순간 0 → 176컷(18%), 자유 설계 칸 시간대 0 → 240/240. 판타지 · 스팀펑크 지시문의 시간대 · 순간 줄에 금지 낱말 0.
+
 ## 2026-11-21 · claude · 일상컷 전통 의상 — 그 문화의 도시에서만
 - 사용자 「1번으로 하고 올려줘」. 베이징 · 이스탄불 · 카이로 · 리우 시안의 시험 계획에서 유카타 · 기모노 · 한푸 · 살와르 카미즈 · 아바야가 아무 도시에나 뽑혔다.
 - data/city-life.json — heritage 표: 문화별 옷(items — 한국 · 일본 · 중국 · 튀르키예 · 이집트 …), 어디서도 안 고르는 종교 옷(never — 아바야 · 부르키니), 도시별 문화(cities — 서울 한국 · 도쿄 일본 · 베이징 중국 · 이스탄불 튀르키예 · 카이로 이집트). 자기 전통 옷이 없는 뉴욕 · 로마 · 파리 · 런던 · 리우는 전통 의상 계열을 안 고르고 그 칸이 다른 옷이 된다.
