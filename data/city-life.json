@@ -41,6 +41,12 @@
    { "key": "summer", "ko": "여름", "en": "summer — warm, sunny days, now and then a spell of intense heat", "src": "https://en.wikipedia.org/wiki/Climate_of_Paris" },
    { "key": "autumn", "ko": "가을", "en": "autumn — mild, changeable days and cool nights, the avenue trees turning gold", "src": "https://en.wikipedia.org/wiki/Climate_of_Paris" },
    { "key": "winter", "ko": "겨울", "en": "winter — cold, grey days just above freezing, bare trees and a light frost in the morning", "src": "https://en.wikipedia.org/wiki/Climate_of_Paris" }
+  ],
+  "london": [
+   { "key": "spring", "ko": "봄", "en": "spring — mild days and fresh green leaves in the parks and garden squares", "src": "https://en.wikipedia.org/wiki/Climate_of_London" },
+   { "key": "summer", "ko": "여름", "en": "summer — warm, sometimes hot days and everyone out on the grass in the parks", "src": "https://en.wikipedia.org/wiki/London" },
+   { "key": "autumn", "ko": "가을", "en": "autumn — cooler, changeable days and the park trees turning gold", "src": "https://en.wikipedia.org/wiki/Climate_of_London" },
+   { "key": "winter", "ko": "겨울", "en": "winter — cool, grey days under frequent cloud and bare trees in the garden squares", "src": "https://en.wikipedia.org/wiki/Climate_of_London" }
   ]
  },
  "weather": {
@@ -77,6 +83,12 @@
    { "key": "shower", "ko": "갑작스러운 소나기", "en": "a sudden heavy shower — rain bursting down out of nowhere and people ducking under the awnings", "seasons": ["spring", "summer", "autumn"], "src": "https://en.wikipedia.org/wiki/Climate_of_Paris" },
    { "key": "heat_wave", "ko": "폭염", "en": "a summer heat wave — hot, heavy air, the pale stone glaring in the sun and everyone seeking the shade", "seasons": ["summer"], "src": "https://en.wikipedia.org/wiki/Climate_of_Paris" },
    { "key": "light_snow", "ko": "가벼운 눈", "en": "a light snowfall — soft flakes drifting down and melting on the pavements before they settle", "seasons": ["winter"], "src": "https://en.wikipedia.org/wiki/Climate_of_Paris" }
+  ],
+  "london": [
+   { "key": "shower", "ko": "지나가는 비", "en": "a passing rain shower — the pavements shining wet and umbrellas going up", "seasons": ["spring", "summer", "autumn", "winter"], "src": "https://en.wikipedia.org/wiki/London" },
+   { "key": "overcast", "ko": "잿빛 흐린 날", "en": "a grey, cloudy day — a low, soft blanket of cloud and gentle, even light", "seasons": ["winter"], "src": "https://en.wikipedia.org/wiki/Climate_of_London" },
+   { "key": "hot_spell", "ko": "여름 더위", "en": "a hot summer spell — warm, heavy air, the parks full and everyone seeking the shade", "seasons": ["summer"], "src": "https://en.wikipedia.org/wiki/London" },
+   { "key": "light_snow", "ko": "드문 눈", "en": "a light snowfall — soft flakes drifting down and melting on the pavements", "seasons": ["winter"], "src": "https://en.wikipedia.org/wiki/London" }
   ]
  },
  "cities": {
@@ -1261,6 +1273,185 @@
       "fantasy": { "en": "a tiny garret room under the steep slate roof of a stone mansion in the capital — a slanted ceiling, a narrow bed with linen quilts, a candle-lantern on the sill and the dormer window open over a sea of blue-grey roofs and chimney pots under the stars", "props": ["lamp", "cup", "book", "key"] },
       "steampunk": { "en": "a tiny garret room under the steep mansard roof — a slanted ceiling, an iron bedstead with lace pillows, a little gas lamp on the sill and the dormer window open over a sea of blue-grey roofs, chimney pots and the iron lattice tower glowing bronze in the night", "props": ["lamp", "cup", "book", "watch"] },
       "cyberpunk": { "en": "a tiny garret room under the old mansard roof kept two centuries on — a slanted ceiling, a smart bed with a softly glowing quilt, a warm light strip along the sill and the dormer window open over the old blue-grey roofs and the far-future towers glittering beyond", "props": ["lamp", "drink_glass", "phone", "music"] }
+     }
+    }
+   ]
+  },
+  "london": {
+   "scenes": [
+    {
+     "key": "afternoon_tea",
+     "ko": "호텔 라운지의 애프터눈 티 — 3단 접시의 스콘 · 케이크 · 샌드위치",
+     "src": ["https://en.wikipedia.org/wiki/Tea_(meal)"],
+     "base": "street_cafe",
+     "indoor": true,
+     "times": ["midday", "commute_pm"],
+     "outfits": ["everyday", "retro", "evening", "dongtan"],
+     "en": "afternoon tea in a hotel lounge — a pot of tea and a tiered stand of scones, little cakes and sandwiches with cream and jam",
+     "worlds": {
+      "fantasy": { "en": "the sunlit tea salon of a grand inn of the capital in the afternoon — tall arched windows, a lace-covered table set with a gilded porcelain teapot, a three-tiered stand of scones, little cakes and dainty sandwiches, and pots of thick cream and berry jam", "props": ["tea_set", "cup", "flowers", "book"] },
+      "steampunk": { "en": "the palm-filled tea lounge of a grand hotel in the afternoon — a white linen table, a flowered bone-china teapot, a three-tiered stand of scones, little cakes and cucumber sandwiches with cream and jam, brass lamps and a string trio playing by the potted palms", "props": ["tea_set", "cup", "watch", "flowers"] },
+      "cyberpunk": { "en": "the tea lounge of a grand old hotel kept two centuries on — real porcelain on white linen, a three-tiered stand of scones, little cakes and sandwiches with cream and jam, soft light panels set into the old plaster ceiling and a quiet serving drone pouring the tea", "props": ["tea_set", "cup", "phone", "music"] }
+     }
+    },
+    {
+     "key": "pub_evening",
+     "ko": "퇴근길 동네 펍 나무 바에서 맥주 한 잔",
+     "src": ["https://en.wikipedia.org/wiki/Pub"],
+     "base": "night_bar",
+     "indoor": true,
+     "times": ["commute_pm", "night_out"],
+     "outfits": ["everyday", "workwear", "dongtan", "retro", "evening"],
+     "en": "a neighbourhood pub after work — a long wooden bar with tall beer taps, a pint of ale in her hand and the room full of chatter",
+     "worlds": {
+      "fantasy": { "en": "a cosy tavern of the capital after the day's work — low oak beams, a long carved wooden counter with tall brass taps, foaming tankards of ale, a fire crackling in the hearth and lantern light on the leaded windows", "props": ["pint", "money", "lamp", "book"] },
+      "steampunk": { "en": "a gas-lit corner public house after work — a polished mahogany bar with tall brass beer pulls, etched-glass mirrors and frosted windows, pints of amber ale and clerks in waistcoats chatting at the bar", "props": ["pint", "money", "watch", "umbrella"] },
+      "cyberpunk": { "en": "a neighbourhood pub kept two centuries on — the old dark-wood bar and real brass beer taps, pints of amber ale on glowing coasters, soft light strips along the old plaster ceiling and a holographic menu floating behind the bar", "props": ["pint", "phone", "money", "music"] }
+     }
+    },
+    {
+     "key": "tube_commute",
+     "ko": "둥근 굴 속 지하철(튜브) 출퇴근길",
+     "src": ["https://en.wikipedia.org/wiki/London_Underground"],
+     "base": "subway_car",
+     "indoor": true,
+     "times": ["commute_am", "commute_pm"],
+     "outfits": ["everyday", "workwear", "dongtan", "subculture", "retro"],
+     "en": "a packed train on a deep underground line at rush hour, its carriage curved to fit the round tunnel",
+     "worlds": {
+      "fantasy": { "en": "a packed rune-lit carriage of the deep round tunnels beneath the capital at rush hour — a low curved ceiling following the round tunnel, wooden benches along both sides, brass hand-rails and travellers in cloaks pressed shoulder to shoulder", "props": ["ticket", "book", "bag", "lamp"] },
+      "steampunk": { "en": "a packed carriage of the new deep underground railway at rush hour — a low rounded ceiling following the tube-shaped tunnel, buttoned leather seats, brass hand-rails and etched-glass lamps, clerks with folded newspapers and ladies in feathered hats", "props": ["ticket", "watch", "bag", "book"] },
+      "cyberpunk": { "en": "a packed driverless train deep in the round tunnels beneath the heritage city at rush hour — a low curved cabin of smart glass following the tunnel's round shape, chrome grab rails, commuters lit by their wrist screens and the old tiled platforms streaking past", "props": ["phone", "music", "ticket", "bag"] }
+     }
+    },
+    {
+     "key": "bus_top_deck",
+     "ko": "빨간 이층 버스 2층 맨 앞자리",
+     "src": ["https://en.wikipedia.org/wiki/Bus_transport_in_London", "https://en.wikipedia.org/wiki/AEC_Routemaster"],
+     "base": "subway_car",
+     "indoor": true,
+     "times": ["commute_am", "midday", "commute_pm", "night_out"],
+     "outfits": ["everyday", "dongtan", "retro", "subculture", "workwear"],
+     "en": "the front seat on the top deck of a red double-decker bus, the big front window looking down on the busy street",
+     "worlds": {
+      "fantasy": { "en": "the front bench on the open upper deck of a great red two-storey coach drawn through the capital by enchantment — a carved wooden rail, the lantern-lit street and honey-gold rooftops sliding by below", "props": ["ticket", "book", "bag", "lamp"] },
+      "steampunk": { "en": "the front seat on the top deck of a red steam omnibus — a curved brass rail, slatted wooden benches, the big front window looking down on the gas-lit street, shop awnings and soft white steam drifting past", "props": ["ticket", "watch", "umbrella", "book"] },
+      "cyberpunk": { "en": "the front seat on the top deck of a silent red double-decker two centuries on — a wide curved window of smart glass, soft light strips along the ceiling and the heritage street and far-future towers gliding past below", "props": ["phone", "music", "ticket", "bag"] }
+     }
+    },
+    {
+     "key": "borough_market",
+     "ko": "철교 아래 오래된 버러 마켓의 먹거리 가판",
+     "src": ["https://en.wikipedia.org/wiki/Borough_Market"],
+     "base": "street_market",
+     "times": ["commute_am", "midday", "commute_pm"],
+     "outfits": ["everyday", "workwear", "dongtan", "retro"],
+     "en": "the old food market hall under the railway viaducts by the river, stalls of cheese, bread, fruit and hot street food",
+     "worlds": {
+      "fantasy": { "en": "the old covered food market of the capital beneath great stone arches by the river — stalls heaped with wheels of cheese, crusty loaves, fruit and cured meats, steaming pans of stew and the bell tower of an old cathedral beyond", "props": ["street_food", "shopping_bag", "money", "bowl"] },
+      "steampunk": { "en": "the old covered food market under the iron railway arches by the river — green-painted iron columns, stalls of cheese wheels, crusty loaves and fruit, a little steam train rumbling overhead and gas lamps glowing in the morning", "props": ["street_food", "shopping_bag", "money", "watch"] },
+      "cyberpunk": { "en": "the old covered food market under the railway arches kept two centuries on — real cheese wheels, loaves, fruit and hot street food on the old stalls, soft light strips along the iron beams and a quiet train gliding overhead", "props": ["street_food", "shopping_bag", "phone", "money"] }
+     }
+    },
+    {
+     "key": "south_bank_walk",
+     "ko": "템스강 남쪽 강변 산책길",
+     "src": ["https://en.wikipedia.org/wiki/South_Bank"],
+     "base": "street_bike_path",
+     "times": ["midday", "commute_pm", "night_out"],
+     "outfits": ["everyday", "active", "dongtan", "retro", "subculture"],
+     "en": "a walk along the riverside promenade on the south bank, street performers and the river view across the water",
+     "worlds": {
+      "fantasy": { "en": "the broad stone river walk on the south bank of the shining river of the capital — lantern posts, minstrels and jugglers playing for passers-by, and across the water the honey-gold palace with its clock tower glowing", "props": ["cup", "bag", "music", "lamp"] },
+      "steampunk": { "en": "the gas-lit stone embankment on the south bank of the river — iron benches and lamp posts, a barrel-organ player, a paddle steamer churning past and the clock tower of the palace glowing across the water", "props": ["cup", "bag", "music", "watch"] },
+      "cyberpunk": { "en": "the riverside walk on the south bank two centuries on — skaters weaving between glowing benches, street performers with light-sculptures and the heritage palace and its clock tower glowing across the river under the clear canopy", "props": ["cup", "bag", "music", "phone"] }
+     }
+    },
+    {
+     "key": "canal_boat",
+     "ko": "리틀 베니스 운하에 매인 장미 그림 좁은 배",
+     "src": ["https://en.wikipedia.org/wiki/Little_Venice,_London", "https://en.wikipedia.org/wiki/Narrowboat"],
+     "base": "travel_ferry",
+     "times": ["dawn", "midday", "commute_pm"],
+     "outfits": ["everyday", "homewear", "retro", "dongtan"],
+     "en": "the deck of a long, narrow canal boat moored in a leafy canal basin, painted with roses and castles, flower pots on its roof",
+     "worlds": {
+      "fantasy": { "en": "the deck of a long, narrow canal barge moored in a willow-hung basin where three waterways meet — its sides painted with roses and little castles, pots of flowers and herbs on the cabin roof and a wisp of woodsmoke from the stove pipe", "props": ["flowers", "cup", "book", "lamp"] },
+      "steampunk": { "en": "the deck of a long, narrow canal boat moored in a leafy canal basin — its sides painted with roses and castles, gleaming brass fittings and lace at the cabin windows, a kettle steaming on the little stove and flower pots on the roof", "props": ["cup", "flowers", "book", "watch"] },
+      "cyberpunk": { "en": "the deck of a long, narrow canal boat moored in a leafy canal basin two centuries on — still painted with roses and castles, a garden of herbs under a clear solar film on its roof and soft light strips glowing along the cabin", "props": ["cup", "flowers", "phone", "music"] }
+     }
+    },
+    {
+     "key": "park_deckchairs",
+     "ko": "하이드 파크 호숫가 줄무늬 접이 의자",
+     "src": ["https://en.wikipedia.org/wiki/Deckchair", "https://en.wikipedia.org/wiki/Hyde_Park,_London"],
+     "base": "street_park",
+     "times": ["midday", "commute_pm"],
+     "seasons": ["spring", "summer"],
+     "outfits": ["everyday", "active", "dongtan", "retro"],
+     "en": "lounging in a striped canvas deckchair on the grass by the park lake on a sunny afternoon",
+     "worlds": {
+      "fantasy": { "en": "the green lawns beside the long lake of the capital's great royal park on a sunny afternoon — folding wooden chairs slung with striped canvas set out on the grass, rowing boats gliding on the water and lantern posts along the paths", "props": ["deckchair", "book", "cup", "flowers"] },
+      "steampunk": { "en": "the green lawns beside the long park lake on a sunny afternoon — striped canvas deckchairs on the grass, rowing boats from the boathouse gliding on the water and ladies with lace parasols strolling the gravel paths", "props": ["deckchair", "book", "cup", "watch"] },
+      "cyberpunk": { "en": "the green lawns beside the long park lake two centuries on — striped smart-fabric deckchairs on real grass, little light-boats gliding on the water and the far-future towers rising beyond the trees", "props": ["deckchair", "phone", "cup", "music"] }
+     }
+    },
+    {
+     "key": "bookshop",
+     "ko": "채링 크로스 로드 헌책방의 천장까지 닿는 책장",
+     "src": ["https://en.wikipedia.org/wiki/Charing_Cross_Road"],
+     "base": "street_bookstall",
+     "indoor": true,
+     "times": ["midday", "commute_pm"],
+     "outfits": ["everyday", "retro", "dongtan", "workwear"],
+     "en": "browsing the crammed shelves of a second-hand bookshop on a street of bookshops",
+     "worlds": {
+      "fantasy": { "en": "a narrow, crooked old bookshop on a lane of booksellers in the capital — shelves of leather-bound tomes up to the ceiling, a wooden ladder, piles of maps and scrolls and a lamp-lit counter", "props": ["book", "bag", "money", "lamp"] },
+      "steampunk": { "en": "a narrow second-hand bookshop on a lane of booksellers — floor-to-ceiling shelves of cloth-bound books, a brass rolling ladder, old prints and maps in the window and gas lamps glowing", "props": ["book", "bag", "money", "watch"] },
+      "cyberpunk": { "en": "a narrow second-hand bookshop kept two centuries on — real paper books on shelves up to the ceiling, a softly glowing rolling ladder and a holographic catalogue floating above the counter", "props": ["book", "bag", "phone", "cup"] }
+     }
+    },
+    {
+     "key": "terrace_step",
+     "ko": "크림빛 테라스 하우스 현관 계단의 저녁",
+     "src": ["https://en.wikipedia.org/wiki/Terraced_house"],
+     "base": "home_balcony",
+     "times": ["midday", "commute_pm", "night_out"],
+     "seasons": ["spring", "summer", "autumn"],
+     "outfits": ["everyday", "homewear", "retro", "dongtan"],
+     "en": "sitting on the front steps of a long row of uniform terraced houses, black iron railings beside her",
+     "worlds": {
+      "fantasy": { "en": "the stone front steps of a long row of tall, uniform townhouses of cream stone in the capital — wrought-iron railings, a glossy painted door with a brass knocker, window boxes of flowers and lanterns lit along the street", "props": ["cup", "key", "book", "flowers"] },
+      "steampunk": { "en": "the front steps of a long row of cream-stuccoed terraced houses — black iron railings, a glossy painted door with a brass knocker and a fanlight, and gas lamps coming on along the street", "props": ["cup", "key", "book", "watch"] },
+      "cyberpunk": { "en": "the front steps of a long row of old cream terraced houses kept two centuries on — black iron railings, a glossy painted door with a softly glowing keypad, window boxes of real flowers and soft light strips under the eaves", "props": ["cup", "key", "phone", "music"] }
+     }
+    },
+    {
+     "key": "lock_market",
+     "ko": "운하 갑문 옆 캠던 마켓의 노점 골목",
+     "src": ["https://en.wikipedia.org/wiki/Camden_Market", "https://en.wikipedia.org/wiki/Regent%27s_Canal"],
+     "base": "street_market",
+     "times": ["midday", "commute_pm", "night_out"],
+     "outfits": ["subculture", "everyday", "dongtan", "retro"],
+     "en": "a crowded canal-side market by an old lock — stalls of clothing, crafts, books and street food",
+     "worlds": {
+      "fantasy": { "en": "a crowded market by an old lock on the canal of the capital — stalls of hand-dyed clothes, trinkets, old books and sizzling food under colourful awnings and lanterns, canal barges moored below", "props": ["street_food", "bag", "money", "shopping_bag"] },
+      "steampunk": { "en": "a crowded market in old brick stables by a canal lock — stalls of second-hand clothes, curios, books and hot food, striped awnings, gas lamps and narrow boats waiting at the lock", "props": ["street_food", "shopping_bag", "money", "watch"] },
+      "cyberpunk": { "en": "a crowded canal-side market by an old lock two centuries on — stalls of vintage clothes, crafts and street food under glowing awnings, holographic signs flickering and boats trimmed with light strips at the lock", "props": ["street_food", "phone", "shopping_bag", "music"] }
+     }
+    },
+    {
+     "key": "fish_chips",
+     "ko": "길모퉁이 가게의 갓 튀긴 피시 앤드 칩스",
+     "src": ["https://en.wikipedia.org/wiki/Fish_and_chips"],
+     "base": "street_shop",
+     "times": ["commute_pm", "night_out"],
+     "outfits": ["everyday", "dongtan", "retro", "subculture"],
+     "en": "hot fish and chips from a corner chip shop, eaten from the paper on the pavement",
+     "worlds": {
+      "fantasy": { "en": "the doorway of a little corner fry-house of the capital in the evening — golden battered fish and thick-cut fried potatoes sizzling in great pans, wrapped hot in waxed paper, and a jug of vinegar on the counter", "props": ["fish_chips", "money", "lamp", "cup"] },
+      "steampunk": { "en": "the steamy doorway of a corner fish-and-chip shop in the evening — a tiled counter, golden battered fish and chips wrapped hot in paper, salt and vinegar shakers and gas lamps shining on the wet pavement", "props": ["fish_chips", "money", "watch", "umbrella"] },
+      "cyberpunk": { "en": "a corner fish-and-chip shop kept two centuries on — golden battered fish and chips in a softly glowing paper tray, salt and vinegar on the old tiled counter and a pay pad glowing by the door", "props": ["fish_chips", "phone", "money", "drink_glass"] }
      }
     }
    ]

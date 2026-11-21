@@ -162,6 +162,57 @@
     }
    }
   },
+  "london": {
+   "root": {
+    "ko": "매일 같은 시각 도시의 일과를 지키는 오래된 손 — 빅벤(웨스트민스터 대시계의 대종)은 1859년부터 시간마다 울리고, 대시계는 일주일에 세 번 손으로 감으며 진자 위 옛 페니 동전을 더하고 빼서 맞춘다(https://en.wikipedia.org/wiki/Big_Ben). 타워 브리지는 배가 먼저라 큰 배가 오면 두 날개를 들어 길을 내주었고(원래는 증기 기관이 채운 수압으로, 밤엔 붉은 등 신호 — https://en.wikipedia.org/wiki/Tower_Bridge), 런던 탑은 밤마다 촛불 등을 든 수석 요먼 워더가 열쇠 의식으로 정문을 잠근다(https://en.wikipedia.org/wiki/Ceremony_of_the_Keys_(London)) → 시간을 울리고 · 강을 열고 · 문을 잠그는 사람 — 대종지기(판타지) · 도개교 신호수(스팀펑크) · 흰 요새 열쇠지기(사이버펑크). 2026-11-21 시안 — 시험 그림 전",
+    "from": "story"
+   },
+   "mode": "per_world",
+   "worlds": {
+    "fantasy": {
+     "job_ko": "시간을 울리는 대종지기",
+     "base": "travel_lookout",
+     "place": "the open belfry high in the great clock tower of her world's Gothic river capital at dusk — a huge bronze bell hanging in a frame of carved oak, smaller bells around it, the glowing back of a pearl-white clock dial behind, and through the stone arches the honey-gold palace and the shining river far below",
+     "activity": "she is the keeper of the great bell, standing beside it with a long gilded bell hammer gripped in both hands, about to strike the hour",
+     "preset": "stand_use",
+     "use": "sig_both",
+     "prop": "a long bell hammer with a gilded head and a carved oak handle",
+     "outfit": {
+      "bold": "a bell-keeper look fitted to her body — a sleeveless Prussian-blue brocade bodice laced with gold cord and cut low at the neck, a short layered skirt of ivory silk embroidered with Gothic tracery, gold bracers and laced knee boots",
+      "moderate": "a bell-keeper look — a short-sleeved Prussian-blue brocade tunic-dress with gold-thread tracery at the hem, a wide leather belt hung with a tiny gold bell, and laced boots",
+      "low": "a bell-keeper look — a long-sleeved Prussian-blue brocade coat-dress with a high collar and gold-thread tracery, an ankle-length ivory underskirt, soft gloves and boots"
+     }
+    },
+    "steampunk": {
+     "job_ko": "타워 브리지 도개교 신호수",
+     "base": "street_rooftop",
+     "place": "the high open walkway between the twin Gothic towers of the great bascule bridge of her steam city on a golden evening — blue-and-white ironwork and brass rails, the two road leaves rising below, a tall-masted sailing ship gliding through on the river and a soft golden fog lying on the water",
+     "activity": "she is the bridge's signal-keeper, standing at the walkway rail and raising her signal lantern high to tell the waiting ship that the bridge is open",
+     "preset": "light_check",
+     "use": "sig_raise",
+     "prop": "a brass signal lantern with panes of blue and white glass",
+     "outfit": {
+      "bold": "a signal-keeper look fitted to her body — a cropped cornflower-blue tailcoat with brass buttons over a lace-edged white camisole, high-waisted shorts, a small silk top hat, fingerless gloves and tall laced boots",
+      "moderate": "a signal-keeper look — a fitted cornflower-blue tailcoat with brass buttons over a white blouse and waistcoat, a knee-length bustled skirt, a small silk top hat and laced boots",
+      "low": "a signal-keeper look — a long cornflower-blue greatcoat with brass buttons and a high collar over a white blouse, fitted trousers tucked into tall laced boots, leather gloves and a small silk top hat"
+     }
+    },
+    "cyberpunk": {
+     "job_ko": "흰 요새 열쇠지기",
+     "base": "stage_festival",
+     "place": "the cobbled lane inside the ancient white fortress of her far-future city at night, at the hour of locking — high stone walls with crenellated battlements, old arched gateways with heavy oak gates, lamps of white light along the stone, a slow halo of red light pulsing around the walls and the far-future towers glowing beyond the river",
+     "activity": "she is the keeper of the keys, marching down the lane toward the last gate to lock the fortress for the night, the great old key held upright before her",
+     "preset": "stride_prop",
+     "use": "sig_hold",
+     "prop": "a long ornate antique iron key traced with fine lines of glowing red light",
+     "outfit": {
+      "bold": "a key-keeper look fitted to her body — a cropped high-collared jacket of raven-black smart fabric traced with red light lines, open over a fitted top, high-cut shorts over glowing-seam tights and tall sleek boots",
+      "moderate": "a key-keeper look — a fitted raven-black smart-fabric jacket with a high collar traced with red light lines over a fitted top, slim trousers and tall sleek boots",
+      "low": "a key-keeper look — a long hooded raven-black smart-fabric coat traced with red light lines, a high collar, gloves, slim trousers and tall sleek boots"
+     }
+    }
+   }
+  },
   "rome": {
    "root": {
     "ko": "영원의 도시로 다시 돌아오게 하는 것 — 트레비 분수에 등을 돌려 동전을 던지면 다시 로마로 돌아온다는 풍습(https://en.wikipedia.org/wiki/Trevi_Fountain), 그 분수에 물을 대는 옛 수도교 아쿠아 비르고(https://en.wikipedia.org/wiki/Aqua_Virgo), 「모든 길은 로마로」 의 뿌리인 포룸의 황금 이정표(https://en.wikipedia.org/wiki/Milliarium_Aureum) → 떠난 이를 다시 로마로 이끄는 사람 — 소원 분수 무녀(판타지) · 수도교 분수 기관사(스팀펑크) · 황금 이정표 빛길 길잡이(사이버펑크). 2026-11-21 시안 — 시험 그림 전",

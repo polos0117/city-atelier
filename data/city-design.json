@@ -1925,9 +1925,210 @@
           "ko": "템스강",
           "en": "the River Thames",
           "src": "https://en.wikipedia.org/wiki/River_Thames"
+        },
+        {
+          "ko": "빨간 이층 버스 — 도시의 상징이 된 붉은 런던 버스",
+          "en": "the red double-decker London bus",
+          "src": "https://en.wikipedia.org/wiki/Bus_transport_in_London"
         }
       ],
-      "worlds": {}
+      "design_note": "설계 상태: 시안(claude, 2026-11-21) — 시험 그림 전. 사용자 「런던 설계해줘」, 파리 · 로마 · 뉴욕 · 도쿄 꼴을 따랐다. 세 사람 모두 영국인 성인 여성 — 피부 · 얼굴은 look 이 정하고(판타지 흰 피부에 주근깨 · 스팀펑크 따뜻한 베이지 · 사이버펑크 짙은 갈색) 인종 낱말은 쓰지 않는다. 얼굴 칸 다섯은 세 세계끼리 모두 다르고, 서울 · 도쿄 · 파리 · 로마 · 뉴욕 사람(랜드마크 포함) 누구와도 셋 이상 다르다. 체형은 셋 다 굴곡형(늘씬 글래머 busty_slender · 작은 굴곡 petite_curvy · 탄탄한 굴곡 curvy_athletic — 사용자 2026-11-20), 뉴욕 · 로마 · 파리 체형과 겹치지 않는다. 사실 근거: 빅벤은 웨스트민스터 궁 북쪽 끝 시계탑의 대종(Great Bell) 별명이자 탑의 별명 — 수직 고딕 양식(1859 완공), 문자판 지름 6.9m · 금박 테두리, 문자판은 처음엔 안쪽에서 가스등으로 밝혔고 바늘 · 문자판 틀은 처음 프러시안 블루였다가 1930년대 검게 칠한 것을 최근 복원에서 프러시안 블루로 되돌렸다, 대시계는 일주일에 세 번 손으로 감고 진자 위 옛 페니 동전을 더하고 빼서 맞춘다, 종루엔 대종과 15분마다 울리는 네 작은 종, 종루 위 랜턴(https://en.wikipedia.org/wiki/Big_Ben), 타워 브리지 — 1886~1894년 지은 도개교 · 현수교, 높은 두 보행 통로로 이어진 두 탑(강철 뼈대에 콘월 화강암 · 포틀랜드 돌을 입혀 런던 탑과 어울리게), 가운데 두 날개를 들어 배를 지나보낸다(배가 먼저), 원래 증기 기관 두 대가 채운 수압 축압기로 들었고 지금도 빅토리아 시대 기관실에 증기 기관이 남았다, 가스등도 함께 설치, 밤엔 붉은 등 · 안개 낀 날엔 배의 증기 기적, 지금 색은 파랑 · 흰색(https://en.wikipedia.org/wiki/Tower_Bridge), 런던 탑 — 화이트 타워(흰 칠을 한 데서 온 이름, 성곽 흉벽 · 네 모서리 탑)와 두 겹 성벽 · 해자, 왕관 보석을 두는 곳, 까마귀가 떠나면 왕국이 무너진다는 믿음으로 늘 여섯 마리 이상을 둔다(https://en.wikipedia.org/wiki/Tower_of_London · https://en.wikipedia.org/wiki/Ravens_of_the_Tower_of_London), 밤마다 정문을 잠그는 열쇠 의식 — 촛불 등을 든 수석 요먼 워더(https://en.wikipedia.org/wiki/Ceremony_of_the_Keys_(London)), 왕관 보석 — 왕홀(Sovereign's Sceptre with Cross)에 세계에서 가장 큰 투명 컷 다이아몬드, 제국관에 붉은 스피넬(https://en.wikipedia.org/wiki/Crown_Jewels_of_the_United_Kingdom), 템스 방벽 — 밀물 · 해일 때 닫는 강 위 수문(https://en.wikipedia.org/wiki/Thames_Barrier), 붉은 런던 버스가 도시의 상징(https://en.wikipedia.org/wiki/Bus_transport_in_London — 2층 뒤 승강대 버스가 전형). 상징은 넷에 「빨간 이층 버스」 하나를 더해 다섯(검사기 상한) — 스팀펑크 2층이 트인 빨간 증기 승합차와 생활 장면의 이층 버스 맨 앞자리가 이 상징을 싣는다. 왕관 보석 · 까마귀 · 열쇠 의식은 런던 탑 근거 안에서 세계 글 · 직업에만 실었다. 까마귀는 생물이라(지시문 Avoid 의 living creature) 그림에 넣지 않고 사이버펑크 망토의 깃 결 직물로만, 근위병 · 요먼 워더 제복은 옮기지 않았다(옷은 도시 상징을 실은 한두 가지 장식). 빅벤 문자판의 라틴 글귀와 로마 숫자는 글자라 그림에 싣지 않았다(펜던트는 숫자 없는 문자판). 옛 「완두콩 수프 안개」 는 1956년 청정대기법 전 스모그라(https://en.wikipedia.org/wiki/London) 날씨표에 넣지 않았고, 스팀펑크의 안개는 그을음 없는 옅은 금빛 분위기로만. 지시문에 상표 · 실존 인물 이름은 쓰지 않는다(퓨진 · 배리 · 빅토리아 여왕 · 루트마스터 · 런던 아이 · 더 샤드 같은 이름도 생김새로 — 빅벤 시계탑은 「the clock tower of the Gothic palace」, 타워 브리지는 「twin-towered bascule bridge」). 판타지 · 스팀펑크만 세계 palette 를 따로 둔다(palette.why). 사이버펑크 세계 글 · 장면엔 비를 박지 않았다(날씨는 생활 장면표).",
+      "card_ko": {
+        "symbols": "빅벤 · 타워 브리지 · 런던 탑 · 템스강 · 빨간 이층 버스"
+      },
+      "worlds": {
+        "fantasy": {
+          "ko": "시간의 대종이 울리는 강가의 고딕 왕도 런던 — 장밋빛 금빛 황혼, 넓게 빛나는 강가에 꿀빛 돌의 거대한 궁전이 레이스 같은 고딕 창살과 가는 작은 첨탑들을 세우고, 그 끝에 금박 첨탑을 인 시계탑이 솟아 금 · 프러시안 블루 테두리의 진줏빛 유리 문자판 넷이 빛나며 트인 종루의 큰 청동 종이 울린다, 강 아래쪽엔 높은 두 통로로 이어진 옅은 돌의 고딕 쌍탑 성문이 물에서 솟아 푸른 · 흰 쇠사슬을 양쪽 둑으로 드리우고, 강가엔 총안 흉벽과 네 모서리 탑을 두른 흰 성벽의 옛 요새, 지붕들 너머 언덕엔 큰 돔 대성당, 빛 구슬 등불과 비단 깃발을 단 돌다리들, 물 위엔 은빛 옅은 안개",
+          "en": "a radiant Gothic capital of a Western myth-world on a broad, shining river at a rose-gold dusk: along the riverbank a vast palace of honey-gold stone bristling with slender pinnacles and lace-like Gothic tracery, and at its end a soaring clock tower crowned with a gilded spire, its four great dials of glowing pearl-white glass ringed in gold and Prussian blue and a great bronze bell ringing in its open belfry; downstream twin Gothic gate towers of pale stone rising from the water, joined high up by two walkways, with blue-and-white chains sweeping down from them to the banks; on the riverbank an ancient white-walled fortress keep with crenellated battlements and four corner turrets; on a hill above the rooftops a great domed cathedral; stone bridges strung with lantern-orbs and silk banners, and a soft silver mist on the water",
+          "scenes": [
+            {
+              "key": "belfry",
+              "ko": "시계탑 트인 종루, 큰 청동 종 곁",
+              "en": "in the open belfry of the great clock tower beside the huge bronze bell, the glowing back of a pearl-white dial ringed in gold behind her and the Gothic palace and the shining river far below in the rose-gold dusk"
+            },
+            {
+              "key": "terrace",
+              "ko": "강가 궁전의 꿀빛 돌 테라스",
+              "en": "on the palace's riverside terrace of honey-gold stone, lace-like Gothic tracery and slender pinnacles rising behind her, the clock tower's glowing dials above and lantern-boats gliding on the shining river"
+            },
+            {
+              "key": "jewelhall",
+              "ko": "흰 요새의 둥근 천장 보석 전당",
+              "en": "in the vaulted jewel hall of the white fortress, crowns, orbs and sceptres glowing on deep blue velvet behind her in pools of soft golden light"
+            }
+          ],
+          "look": {
+            "face": {
+              "face_shape": "diamond",
+              "eyes": "almond_wide",
+              "brows": "angled_sharp",
+              "nose": "straight_narrow",
+              "lips": "small_bow",
+              "eye_color": "emerald",
+              "age": "late_20s",
+              "impression": "regal",
+              "skin_tone": "fair",
+              "eye_size": "medium",
+              "eye_tilt": "up",
+              "mark": "freckles",
+              "expr": "proud"
+            },
+            "silhouette": {
+              "body": "busty_slender",
+              "hair": "half_up",
+              "hair_color": "copper",
+              "bangs": "curtain"
+            },
+            "why": "시간의 대종을 다스리는 강가 고딕 왕도의 시간 여군주 — 길고 위엄 있게 선 사람. 가는 팔다리에 풍만한 가슴 · 둥근 엉덩이 · 가는 허리(busty_slender) · 반쯤 올려 묶고 나머지를 길게 내린 구릿빛 붉은 머리(half_up · copper — 문자판 금테와 어울리는 구리빛) · 가운데를 가른 커튼 앞머리(curtain) · 무릎 아래까지 내려오는 긴 궁정 코트에 허리띠 · 장갑 · 높은 장화(noble_coat)로 실루엣이 곧고 길게 선다. 광대가 또렷하고 턱으로 좁아지는 다이아몬드형 얼굴 · 자연스러운 크기의 아몬드 눈에 살짝 올라간 눈꼬리 · 깔끔하게 각이 선 눈썹 · 콧대가 곧고 가는 코 · 큐피드 활이 또렷한 입술, 에메랄드 눈(emerald), 흰 피부에 옅은 주근깨(freckles), 20대 후반, 위엄 있는 인상(regal)에 입을 다문 채 옅게 웃는 자부심(proud). 스팀펑크(하트형 · 크림 금발 볼륨 머리 · 작은 굴곡 몸 · 따뜻한 베이지 피부) · 사이버펑크(달걀형 · 로열 퍼플 레이어드 · 탄탄한 굴곡 몸 · 짙은 갈색 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울 · 도쿄 · 파리 · 로마 · 뉴욕 사람(랜드마크 포함)과도 셋 이상 다르다."
+          },
+          "hold": {
+            "en": "a tall gold sceptre crowned with a great clear-cut diamond that glows with soft white light, a small ruby set beneath it"
+          },
+          "motif": {
+            "ko": "프러시안 블루 비단 브로케이드의 긴 궁정 코트 드레스 — 몸판과 긴 앞자락에 고딕 궁전의 가는 세로 판 · 뾰족 아치 · 레이스 같은 창살을 금실로 수놓고, 가슴께엔 진줏빛 유리가 은은히 빛나는 큰 시계 문자판 모양의 둥근 금 펜던트(숫자 · 글자 없이 금 바늘과 금세공 테만) — 손에는 큰 투명 다이아몬드를 인 금 홀(왕관 보석)",
+            "en": "a long court coat-gown of Prussian-blue silk brocade whose bodice and long front panels are worked in gold thread with the slender upright panels, pointed arches and lace-like tracery of a Gothic palace; at her breast a round gilded pendant shaped like a great clock dial of softly glowing pearl-white glass, its gold hands and filigree rim bare of any numerals"
+          },
+          "palette": {
+            "en": "Prussian blue, burnished gold and Portland-stone ivory, with ruby red only in the jewels",
+            "hex": [
+              "#1B3A5C",
+              "#C9A13B",
+              "#EFE8D6",
+              "#A3162B"
+            ],
+            "why": "판타지만 따로 — 도시 palette 의 우체통 빨강을 금빛 궁정 옷에 함께 실으면 붉은 금빛으로 몰려 다른 나라 궁궐로 읽힐 수 있고(서울 판타지 「너무 붉은색이라 중국 느낌」 을 처음부터 따름), 템스 회색은 화려한 하이판타지 옷엔 수수해서, 빅벤 문자판 틀의 처음 색이자 복원에서 되살린 프러시안 블루와 문자판 금박 테의 금 · 포틀랜드 돌 상아색을 바탕으로 두고 빨강은 보석(루비)에만."
+          },
+          "card_ko": {
+            "look": "구리빛 반묶음 · 늘씬 글래머",
+            "motif": "고딕 창살 코트 · 문자판 펜던트"
+          },
+          "sil": "noble_coat"
+        },
+        "steampunk": {
+          "ko": "가스등 동화 런던 — 부드러운 금빛 저녁, 강 위로 옅은 돌과 푸른 · 흰 철 장식의 고딕 쌍탑 도개교가 서서 두 도로 날개를 높이 들어 돛대 높은 범선을 지나보내고 다리 밑 기관실에선 깨끗한 흰 증기가 피어오른다, 강 위쪽엔 고딕 궁전의 시계탑이 네 문자판을 안에서 가스등으로 따뜻하게 밝히고, 검은 철 난간과 반들거리는 현관문의 크림빛 테라스 집들, 돌 강둑을 따라 선 가스등, 2층이 트인 작은 빨간 증기 승합차, 줄무늬 기구의 비행선, 강 위엔 등불에 금빛으로 물든 부드러운 안개가 옅게 깔린다",
+          "en": "a storybook gaslamp-fantasy London on a soft golden evening: the great twin-towered bascule bridge of pale stone and blue-and-white painted ironwork standing over the river, its two road leaves lifted high to let a tall-masted sailing ship glide through while clean white steam puffs from its engine house below; upriver the clock tower of the Gothic palace, its four great dials glowing warm with gaslight from within; rows of cream-stuccoed terraced houses with black iron railings and glossy front doors; gas lamps along the stone embankment; a little red steam omnibus with an open top deck puffing along the street; airships with striped balloons drifting overhead; and a soft, pale fog lying lightly on the river, lit gold by the lamps",
+          "scenes": [
+            {
+              "key": "walkway",
+              "ko": "도개교 두 탑 사이 높은 통로",
+              "en": "on the high walkway between the twin towers of the great bascule bridge, blue-and-white ironwork arching around her, the road leaves lifting below as a tall-masted ship glides through and soft golden fog on the river"
+            },
+            {
+              "key": "engineroom",
+              "ko": "도개교 밑 놋쇠 기관실",
+              "en": "in the bridge's engine room beneath the road, gleaming brass pressure gauges, great green-painted flywheels and polished pistons around her and clean white steam curling in the warm lamplight"
+            },
+            {
+              "key": "embankment",
+              "ko": "가스등 켜진 돌 강둑",
+              "en": "on the gas-lit stone embankment at dusk, an iron lamp post and the river wall beside her, the clock tower's glowing dials across the water and a little red steam omnibus puffing past"
+            }
+          ],
+          "look": {
+            "face": {
+              "face_shape": "heart",
+              "eyes": "deep_set",
+              "brows": "soft_round",
+              "nose": "upturned",
+              "lips": "full_wide",
+              "eye_color": "sky_blue",
+              "age": "early_20s",
+              "impression": "cheerful",
+              "skin_tone": "warm_beige",
+              "eye_size": "large",
+              "eye_tilt": "level",
+              "mark": "blush",
+              "expr": "soft_smile"
+            },
+            "silhouette": {
+              "body": "petite_curvy",
+              "hair": "voluminous",
+              "hair_color": "cream",
+              "bangs": "straight"
+            },
+            "why": "도개교를 여는 다리의 신호수 — 작고 동글동글하고 생기 있는 사람. 작은 키에 풍만한 가슴 · 둥근 엉덩이(petite_curvy) · 크게 부풀린 크림 금발(voluminous · cream — 포틀랜드 돌의 크림빛) · 일자 앞머리 · 짧게 떨어지는 연미복과 조끼 · 비스듬히 쓴 작은 실크해트 · 짧은 하의와 긴 장화(top_hat_coat — 가스등 시대 런던의 실크해트)로 실루엣이 위는 풍성하고 아래는 가볍고 경쾌하다. 하트형 얼굴 · 부드럽게 깊은 눈 · 둥근 눈썹 · 끝이 살짝 들린 코 · 도톰한 입술, 하늘빛 눈(sky_blue — 다리의 하늘색 철 장식), 따뜻한 베이지 피부에 발그레한 볼(blush), 20대 초반, 밝은 인상(cheerful)에 입을 다문 옅은 미소(soft_smile). 판타지(다이아몬드형 · 구리빛 반묶음 · 늘씬 글래머 · 흰 피부) · 사이버펑크(달걀형 · 로열 퍼플 레이어드 · 탄탄한 굴곡 몸 · 짙은 갈색 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울 · 도쿄 · 파리 · 로마 · 뉴욕 사람(랜드마크 포함)과도 셋 이상 다르다."
+          },
+          "hold": {
+            "en": "a brass signal lantern with panes of blue and white glass, glowing warm"
+          },
+          "motif": {
+            "ko": "물망초빛 푸른 비단 연미복에 흰 테 — 옷깃과 연미 자락을 따라 다리의 현수 쇠사슬처럼 처졌다 오르는 놋쇠 · 흰 법랑 고리 사슬 장식, 작은 실크해트엔 높은 통로로 이어진 두 고딕 탑 모양의 놋쇠 모자핀 — 손에는 푸른 · 흰 유리의 놋쇠 신호등",
+            "en": "a cornflower-blue silk tailcoat piped in white, its lapels and tails trimmed with a swooping chain of linked brass and white-enamel links that dips and rises like the bridge's suspension chains; on her small top hat a brass hatpin shaped like the bridge's twin Gothic towers joined by their high walkway"
+          },
+          "palette": {
+            "en": "bridge blue, white and polished brass, with Portland-stone cream",
+            "hex": [
+              "#3E6FA8",
+              "#F4F1EA",
+              "#B5893A",
+              "#E8E0CC"
+            ],
+            "why": "스팀펑크만 따로 — 도시 palette 의 우체통 빨강을 실크해트 · 연미복 차림에 실으면 근위병이나 빨간 연미복의 서커스 단장으로 읽히고, 템스 회색은 동화 같은 밝은 놋쇠 결을 가라앉혀서, 타워 브리지의 지금 색인 파랑 · 흰색과 놋쇠 · 포틀랜드 돌 크림을 바탕으로. 빨강은 배경의 증기 승합차에만."
+          },
+          "card_ko": {
+            "look": "크림 금발 볼륨 · 작은 굴곡",
+            "motif": "다리 쇠사슬 연미복 · 쌍탑 핀"
+          },
+          "sil": "top_hat_coat"
+        },
+        "cyberpunk": {
+          "ko": "두 세기 뒤 런던 — 밀물 드는 강 위의 먼 미래 거대 도시, 고딕 궁전과 시계탑은 거대한 투명 차양 아래 유산의 섬으로 고스란히 남아 네 문자판이 여전히 빛나고, 흉벽을 두른 흰 옛 요새도 그대로 둔 채 천천히 맥박 치는 붉은 빛 고리가 감싼다, 강 너머엔 흰 유리와 살아 있는 초록 테라스의 먼 미래 탑들, 쌍탑 도개교엔 빛의 띠가 감겨 소리 없이 나는 배를 위해 날개를 들고, 강 아래쪽엔 은빛 조개껍데기 같은 거대한 홍수 수문들이 물살 속에 줄지어 선다, 빛의 길을 따라 미끄러지는 조용한 비행 차량, 맑고 깊은 남빛 밤하늘과 물 위의 은빛 옅은 안개",
+          "en": "London two centuries from now, a far-future megacity on its tidal river: the Gothic palace and its clock tower kept whole as a heritage island beneath a vast clear canopy, the four great dials still glowing; the ancient white fortress with its crenellated battlements kept exactly as it was, ringed by a slow-pulsing halo of red light; far-future towers of white glass and living green terraces rising beyond the river; the twin-towered bascule bridge threaded with ribbons of light, its leaves lifting for silent airborne ships; downstream a row of colossal flood gates standing in the current like gleaming silver shells; quiet flying vehicles gliding along lanes of light, under a clear deep-indigo night sky with a soft silver mist on the water",
+          "scenes": [
+            {
+              "key": "battlements",
+              "ko": "붉은 빛 고리 속 흰 요새 흉벽 위",
+              "en": "on the crenellated battlements of the ancient white fortress at night, its halo of red light pulsing softly around her and the far-future towers glowing across the river"
+            },
+            {
+              "key": "gateway",
+              "ko": "반쯤 닫힌 요새의 옛 아치 성문",
+              "en": "at the fortress's old arched gateway at night, the heavy oak gates half closed behind her, lamps of white light along the stone and the clear canopy of the heritage city shimmering overhead"
+            },
+            {
+              "key": "floodgate",
+              "ko": "강 위 은빛 홍수 수문 꼭대기",
+              "en": "on top of one of the colossal silver flood gates standing in the river at night, the row of gleaming shells beside her and the heritage city glowing upstream"
+            }
+          ],
+          "look": {
+            "face": {
+              "face_shape": "oval",
+              "eyes": "narrow_upturned",
+              "brows": "straight_thick",
+              "nose": "small_button",
+              "lips": "heart_full",
+              "eye_color": "gold",
+              "age": "mid_20s",
+              "impression": "cool",
+              "skin_tone": "deep_brown",
+              "eye_size": "medium",
+              "eye_tilt": "up",
+              "mark": "winged_liner",
+              "expr": "confident"
+            },
+            "silhouette": {
+              "body": "curvy_athletic",
+              "hair": "shag_layers",
+              "hair_color": "royal_purple",
+              "bangs": "choppy"
+            },
+            "why": "밤마다 흰 요새의 문을 잠그는 열쇠지기 — 탄탄하고 서늘한 사람. 운동으로 다진 굴곡 몸(curvy_athletic — 풍만한 가슴 · 둥근 엉덩이) · 얼굴을 감싸는 층진 셰그 컷의 로열 퍼플 머리(shag_layers · royal_purple — 왕관 보석의 보랏빛 벨벳과 까마귀 깃의 보랏빛 윤기) · 들쭉날쭉한 앞머리(choppy) · 커다란 두건 망토 아래 몸에 맞는 옷(hacker_cloak — 망토는 까마귀 깃 결의 직물)으로 실루엣이 위가 크고 신비롭다. 갸름한 달걀형 얼굴 · 눈꼬리가 살짝 올라간 아몬드 눈 · 자연스러운 숱의 곧은 눈썹 · 끝이 둥근 코 · 도톰한 하트 입술, 금빛 눈(gold), 짙은 갈색 피부(deep_brown)에 날개 아이라인(winged_liner), 20대 중반, 서늘한 인상(cool)에 침착하고 자신 있는 얼굴(confident — 입은 다문다). 판타지(다이아몬드형 · 구리빛 반묶음 · 늘씬 글래머 · 흰 피부) · 스팀펑크(하트형 · 크림 금발 볼륨 머리 · 작은 굴곡 몸 · 따뜻한 베이지 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울 · 도쿄 · 파리 · 로마 · 뉴욕 사람(랜드마크 포함)과도 셋 이상 다르다."
+          },
+          "hold": {
+            "en": "a long ornate antique iron key traced with fine lines of glowing red light"
+          },
+          "motif": {
+            "ko": "까마귀 깃처럼 겹겹이 결진 검은 스마트 직물의 큰 두건 망토(보랏빛 · 푸른빛 윤기 — 살아 있는 새 없이 재질로만), 높이 선 깃은 흰 요새 흉벽의 총안 윤곽으로 각지고 가장자리마다 우체통 빨강 빛줄이 흐른다 — 손에는 붉은 빛줄이 흐르는 옛 철 열쇠(밤마다 요새 문을 잠그는 열쇠 의식)",
+            "en": "a great hooded cloak of raven-black smart fabric layered like soft overlapping feathers with a blue-violet sheen; its tall standing collar cut in the crenellated outline of a fortress battlement, every edge traced with a fine line of postbox-red light"
+          },
+          "card_ko": {
+            "look": "보라 레이어드 · 탄탄 굴곡",
+            "motif": "까마귀깃 망토 · 흉벽 깃"
+          },
+          "sil": "hacker_cloak"
+        }
+      }
     },
     {
       "key": "rome",

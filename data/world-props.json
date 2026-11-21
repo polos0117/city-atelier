@@ -142,6 +142,22 @@
   "flowers": { "ko": "꽃다발", "worlds": {
    "fantasy": { "en": "a bouquet of fresh flowers with softly glowing petals tied with a silk ribbon" },
    "steampunk": { "en": "a bouquet of fresh flowers wrapped in brown paper and tied with a silk ribbon" },
-   "cyberpunk": { "en": "a bouquet of real fresh flowers in a clear wrap with a softly glowing band" } } }
+   "cyberpunk": { "en": "a bouquet of real fresh flowers in a clear wrap with a softly glowing band" } } },
+  "tea_set": { "ko": "애프터눈 티 차림(찻주전자 · 3단 접시)", "worlds": {
+   "fantasy": { "en": "a gilded porcelain teapot beside a three-tiered stand of scones, little cakes and dainty sandwiches" },
+   "steampunk": { "en": "a flowered bone-china teapot beside a three-tiered stand of scones, little cakes and cucumber sandwiches" },
+   "cyberpunk": { "en": "a porcelain teapot on a softly glowing warming base beside a three-tiered stand of scones and little cakes" } } },
+  "pint": { "ko": "맥주 한 잔(파인트)", "worlds": {
+   "fantasy": { "en": "a pewter tankard of foaming amber ale" },
+   "steampunk": { "en": "a dimpled glass pint mug of amber ale with a foamy head" },
+   "cyberpunk": { "en": "a tall pint glass of amber ale on a softly glowing coaster" } } },
+  "fish_chips": { "ko": "피시 앤드 칩스", "worlds": {
+   "fantasy": { "en": "golden battered fish and thick-cut fried potatoes wrapped hot in waxed paper" },
+   "steampunk": { "en": "hot fish and chips wrapped in a cone of white paper, sprinkled with salt and vinegar" },
+   "cyberpunk": { "en": "hot fish and chips in a softly glowing paper tray" } } },
+  "deckchair": { "ko": "줄무늬 접이 의자", "worlds": {
+   "fantasy": { "en": "a folding wooden lounging chair slung with striped canvas" },
+   "steampunk": { "en": "a striped canvas deckchair on a folding wooden frame" },
+   "cyberpunk": { "en": "a striped smart-fabric deckchair on a slim folding frame" } } }
  }
 }

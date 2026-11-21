@@ -1,5 +1,5 @@
 /* 지시문 조립(lib/prompt-city.js) — 도시 한 층 · 세 세계(계획 Task 3).
-   설계된 도시(서울 · 도쿄 · 뉴욕 2026-11-20 · 로마 · 파리 2026-11-21) × 세 세계 세계 그림(kind 'world')이 (a) 그 세계 표지(vocab.markers.<세계>.en) 셋 이상 (b) 그 도시 motif.en (c) 그 사람 머리색 낱말을 싣고,
+   설계된 도시(서울 · 도쿄 · 뉴욕 2026-11-20 · 로마 · 파리 · 런던 2026-11-21) × 세 세계 세계 그림(kind 'world')이 (a) 그 세계 표지(vocab.markers.<세계>.en) 셋 이상 (b) 그 도시 motif.en (c) 그 사람 머리색 낱말을 싣고,
    (d) 그 세계 banned_en 낱말이 하나도 없다 — 금지 줄(sections.negative, 칸 꼴 5칸의 「Avoid:」 한 줄)만 빼고 본다. 금지 낱말을 「no …」 로 적는 곳은 그 줄뿐이다
        (원소 조립기의 칸 꼴이 「No …」 금지를 5칸 Avoid 로 모으는 꼴을 따랐다 — 판타지 옷 말투의 「no machinery」 는 Avoid 로 간다).
    (e) 상표 · 실존 인물 이름(아래 작은 표)이 없다 (f) world 가 mecha(세 세계 밖)면 던진다 (g) 설계 미정 도시는 던지지 않고 { text: '', missing: ['worlds'] }.
@@ -21,7 +21,9 @@ const NAMES = ['YTN', 'N Seoul Tower', 'Seoul Tower', 'Tokyo Tower', 'Skytree', 
   'Vespa', 'Lambretta', 'Fiat', 'Ferrari', 'Fendi', 'Bulgari', 'Valentino', 'Nutella', 'Peroni', 'Aperol', 'Campari', 'Lazio', 'AS Roma', 'Caritas',
   'Bernini', 'Fellini', 'Augustus', 'Caesar', 'Romulus', 'Remus', 'Nero', 'Oceanus', 'Palazzo Poli',   /* 로마(2026-11-21) — 상표 · 구단 · 실존 인물 · 분수 조각 · 사유 궁전 이름 */
   'Eiffel', 'Dior', 'Louis Vuitton', 'Hermès', 'Hermes', 'Cartier', 'Ladurée', 'Laduree', 'Moulin Rouge', 'Galeries Lafayette', 'Lafayette', 'PSG', 'Paris Saint-Germain', 'Bateaux Mouches',
-  'Napoleon', 'Marie Antoinette', 'Guimard', 'Haussmann', 'Victor Hugo', 'Quasimodo'];   /* 파리(2026-11-21) — 상표 · 사유 카바레 · 백화점 · 구단 · 유람선 상표 · 실존 인물(탑 · 지하철 입구 · 대로를 만든 이 이름도) */
+  'Napoleon', 'Marie Antoinette', 'Guimard', 'Haussmann', 'Victor Hugo', 'Quasimodo',   /* 파리(2026-11-21) — 상표 · 사유 카바레 · 백화점 · 구단 · 유람선 상표 · 실존 인물(탑 · 지하철 입구 · 대로를 만든 이 이름도) */
+  'Harrods', 'Burberry', 'Selfridges', 'Liberty', 'Fortnum', 'London Eye', 'The Shard', 'Shard', 'Gherkin', 'Routemaster', 'Arsenal', 'Chelsea', 'Tottenham',
+  'Sherlock', 'Holmes', 'Harry Potter', 'Hogwarts', 'Paddington', 'Mary Poppins', 'Peter Pan', 'Queen Victoria', 'Victoria', 'Elizabeth', 'Shakespeare', 'Beatles', 'Pugin', 'Big Ben'];   /* 런던(2026-11-21) — 상표 · 사유 건물 · 버스 모델 · 구단 · 꾸민 인물 · 실존 인물(시계탑 설계자 · 탑 이름의 여왕도), 빅벤은 지시문엔 생김새로만 */
 
 /* 세계 사전 — 정확히 세 세계, 표와 설계표가 같다 */
 assert(same(D.vocab.worlds, ['fantasy', 'steampunk', 'cyberpunk']) && same(T.WORLDS.map(w => w.key), D.vocab.worlds), '세계 열쇠 셋(mecha 없음)');
@@ -32,9 +34,9 @@ assert(!S.undecided && S.default === 'kr_drawn_rim_dewy', '화풍 확정 — 기
 const LIVE = Object.keys(S.styles).filter(k => !S.styles[k].retired);
 assert(LIVE.includes(S.default), '기본 화풍이 살아 있다');
 const seoul = D.cities.find(c => c.key === 'seoul');
-/* 설계된 도시 — 서울(2026-11-19) · 도쿄 · 뉴욕(2026-11-20) · 로마 · 파리(2026-11-21). 세계 그림 · 일상컷 단언은 설계된 도시 모두에 */
+/* 설계된 도시 — 서울(2026-11-19) · 도쿄 · 뉴욕(2026-11-20) · 로마 · 파리 · 런던(2026-11-21). 세계 그림 · 일상컷 단언은 설계된 도시 모두에 */
 const DESIGNED = D.cities.filter(c => Object.keys(c.worlds || {}).length);
-assert(['seoul', 'tokyo', 'paris', 'rome', 'newyork'].every(k => DESIGNED.some(c => c.key === k)), '서울 · 도쿄 · 파리 · 로마 · 뉴욕 설계됨');
+assert(['seoul', 'tokyo', 'paris', 'london', 'rome', 'newyork'].every(k => DESIGNED.some(c => c.key === k)), '서울 · 도쿄 · 파리 · 런던 · 로마 · 뉴욕 설계됨');
 let n = 0;
 for (const city of DESIGNED) for (const style of LIVE) for (const w of D.vocab.worlds) {
   const id = city.key + ' ' + style + ' ' + w, r = PC.build({ design: D, styles: S, city: city.key, world: w, style, kind: 'world' }), t = r.text, sw = city.worlds[w], mk = D.vocab.markers[w];
@@ -91,7 +93,7 @@ for (const bad of ['mecha', 'modern', '', undefined]) {
 }
 /* (g) 설계 미정 도시 — 던지지 않고 비운다(mecha 는 먼저 던진다) */
 const undesigned = D.cities.filter(c => !Object.keys(c.worlds || {}).length);
-assert(undesigned.length === 5, '설계 미정 다섯(서울 · 도쿄 · 파리 · 로마 · 뉴욕 말고)');
+assert(undesigned.length === 4, '설계 미정 넷(서울 · 도쿄 · 파리 · 런던 · 로마 · 뉴욕 말고)');
 for (const c of undesigned) for (const w of D.vocab.worlds) {
   const r = PC.build({ design: D, styles: S, city: c.key, world: w });
   assert(r.text === '' && same(r.missing, ['worlds']), '(g) ' + c.key + ' ' + w);
