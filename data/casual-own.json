@@ -111,6 +111,57 @@
     }
    }
   },
+  "paris": {
+   "root": {
+    "ko": "흔들려도 가라앉지 않는 배 — 파리 문장의 물결 위 은빛 범선은 1170년 왕의 특권으로 센강 뱃길을 맡은 뱃사공 조합(마르샹 도)의 배에서 왔고, 그 배가 도시의 문장이 되어 표어 「Fluctuat nec mergitur」(흔들려도 가라앉지 않는다)가 붙었다(https://en.wikipedia.org/wiki/Coat_of_arms_of_Paris) → 강물 위에서 도시를 띄워 두는 사람 — 은빛 배 길드의 강 기수(판타지) · 센강 증기선 도선사(스팀펑크) · 떠 있는 강 구역 부력 관리사(사이버펑크). 2026-11-21 시안 — 시험 그림 전",
+    "from": "story"
+   },
+   "mode": "per_world",
+   "worlds": {
+    "fantasy": {
+     "job_ko": "은빛 배 길드 강 기수",
+     "base": "stage_festival",
+     "place": "the stone quay of the shining river of her world's island capital on a festival morning — the guild's great river barge with a silver sail moored behind her, boats with silver sails gliding past, the twin-towered cathedral with its glowing rose window on the island across the water and long red-and-blue banners fluttering along the quay",
+     "activity": "she is the standard-bearer of the river guild of boatmen, striding along the quay at the head of the river procession with the guild's tall standard held upright beside her",
+     "preset": "stride_prop",
+     "use": "sig_hold",
+     "prop": "a tall gilded standard topped with a small silver sailing ship riding silver waves, a long pennant of red and blue silk streaming from it",
+     "outfit": {
+      "bold": "a river-herald look fitted to her body — a sleeveless doublet of sapphire silk with gold buttons, cut low at the neck, a short pleated skirt of red silk, a silver ship-shaped clasp at her shoulder, leather bracers and laced knee boots",
+      "moderate": "a river-herald look — a sapphire silk doublet with gold buttons over a linen shirt, a knee-length pleated skirt of red silk, a silver ship-shaped clasp at her shoulder and laced boots",
+      "low": "a river-herald look — a long-sleeved sapphire silk coat with gold buttons and a high collar, an ankle-length pleated red skirt, a hooded short mantle and soft boots"
+     }
+    },
+    "steampunk": {
+     "job_ko": "센강 증기선 도선사",
+     "base": "travel_lookout",
+     "place": "the wheelhouse of a little paddle-wheel steamboat on the river of her steam city in the golden evening — polished wood and gleaming brass, a speaking tube and a brass compass, and through the wide windows stone bridges, gas-lit quays and the great iron lattice tower rising over the blue-grey rooftops",
+     "activity": "she is the river pilot, standing at the wheel with both hands on its brass spokes, steering the steamboat steadily under a stone bridge",
+     "preset": "counter_work",
+     "use": "sig_both",
+     "prop": "a big polished ship's wheel of dark wood with brass-capped spokes",
+     "outfit": {
+      "bold": "a river-pilot look fitted to her body — a sleeveless zinc-blue waistcoat with brass buttons over a lace-edged camisole, high-waisted shorts under a short open bustle, a pilot's cap with brass goggles, fingerless gloves and laced boots",
+      "moderate": "a river-pilot look — a fitted zinc-blue double-breasted jacket with brass buttons over a cream blouse, a knee-length bustled skirt, a pilot's cap with brass goggles and laced boots",
+      "low": "a river-pilot look — a long zinc-blue pilot's coat with brass buttons and a high collar over a cream blouse, fitted trousers tucked into laced boots, leather gloves and a pilot's cap"
+     }
+    },
+    "cyberpunk": {
+     "job_ko": "떠 있는 강 구역 부력 관리사",
+     "base": "street_rooftop",
+     "place": "the edge of a floating glass quay on the river of light of her far-future megacity at night — garden districts drifting gently on the water, old stone bridges and cream-stone embankments softly lit, glowing buoyancy nodes set along the quay edge and the old iron lattice tower in its halo of light beyond",
+     "activity": "she keeps the floating districts afloat, down on one knee at the quay edge, tuning a glowing buoyancy node with her slim wand as the water rises around the quay",
+     "preset": "half_kneel_use",
+     "use": "sig_hold",
+     "prop": "a slim calibration wand of silver light",
+     "outfit": {
+      "bold": "a buoyancy-keeper look fitted to her body — a cropped high-collared jacket of zinc blue-grey smart fabric traced with silver light lines, open over a fitted top, high-cut shorts over glowing-seam tights and sleek waterproof boots",
+      "moderate": "a buoyancy-keeper look — a zinc blue-grey smart-fabric jacket traced with silver light lines over a fitted top, slim trousers and sleek waterproof boots",
+      "low": "a buoyancy-keeper look — a long zinc blue-grey smart-fabric coat traced with silver light lines, a high collar, gloves, slim trousers and sleek waterproof boots"
+     }
+    }
+   }
+  },
   "rome": {
    "root": {
     "ko": "영원의 도시로 다시 돌아오게 하는 것 — 트레비 분수에 등을 돌려 동전을 던지면 다시 로마로 돌아온다는 풍습(https://en.wikipedia.org/wiki/Trevi_Fountain), 그 분수에 물을 대는 옛 수도교 아쿠아 비르고(https://en.wikipedia.org/wiki/Aqua_Virgo), 「모든 길은 로마로」 의 뿌리인 포룸의 황금 이정표(https://en.wikipedia.org/wiki/Milliarium_Aureum) → 떠난 이를 다시 로마로 이끄는 사람 — 소원 분수 무녀(판타지) · 수도교 분수 기관사(스팀펑크) · 황금 이정표 빛길 길잡이(사이버펑크). 2026-11-21 시안 — 시험 그림 전",

@@ -126,6 +126,22 @@
   "scooter": { "ko": "스쿠터", "worlds": {
    "fantasy": { "en": "a little two-wheeled rune-glider of carved wood and brass that hums softly over the cobbles" },
    "steampunk": { "en": "a little brass steam scooter puffing soft white steam" },
-   "cyberpunk": { "en": "a hovering electric scooter with glowing rims" } } }
+   "cyberpunk": { "en": "a hovering electric scooter with glowing rims" } } },
+  "croissant": { "ko": "크루아상", "worlds": {
+   "fantasy": { "en": "a flaky golden crescent pastry on a little glazed plate" },
+   "steampunk": { "en": "a flaky golden croissant on a little porcelain plate" },
+   "cyberpunk": { "en": "a warm, flaky croissant in a softly glowing paper sleeve" } } },
+  "baguette": { "ko": "바게트", "worlds": {
+   "fantasy": { "en": "a long golden loaf of crusty bread wrapped in a linen cloth" },
+   "steampunk": { "en": "a long crusty baguette wrapped in a twist of brown paper" },
+   "cyberpunk": { "en": "a long crusty baguette in a slim, softly glowing paper sleeve" } } },
+  "easel": { "ko": "이젤 · 그림 도구", "worlds": {
+   "fantasy": { "en": "a small wooden easel holding a half-painted canvas, with a palette of jewel-bright paints and a brush" },
+   "steampunk": { "en": "a folding easel of polished wood and brass holding a half-painted canvas, with a paint palette and brushes" },
+   "cyberpunk": { "en": "a slim folding light-easel holding a real half-painted canvas, its palette of paints glowing softly" } } },
+  "flowers": { "ko": "꽃다발", "worlds": {
+   "fantasy": { "en": "a bouquet of fresh flowers with softly glowing petals tied with a silk ribbon" },
+   "steampunk": { "en": "a bouquet of fresh flowers wrapped in brown paper and tied with a silk ribbon" },
+   "cyberpunk": { "en": "a bouquet of real fresh flowers in a clear wrap with a softly glowing band" } } }
  }
 }

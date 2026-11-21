@@ -35,6 +35,12 @@
    { "key": "summer", "ko": "한여름", "en": "high summer — hot, dry air under a fierce, cloudless sun", "src": "https://en.wikipedia.org/wiki/Rome" },
    { "key": "autumn", "ko": "가을", "en": "autumn — mild golden days between the year's heaviest rains", "src": "https://en.wikipedia.org/wiki/Rome" },
    { "key": "winter", "ko": "겨울", "en": "winter — mild, cool days and damp air, bare trees beside the evergreen pines", "src": "https://en.wikipedia.org/wiki/Rome" }
+  ],
+  "paris": [
+   { "key": "spring", "ko": "봄", "en": "spring — mild days and cool nights, fresh green leaves on the avenue trees and flowers in the gardens", "src": "https://en.wikipedia.org/wiki/Climate_of_Paris" },
+   { "key": "summer", "ko": "여름", "en": "summer — warm, sunny days, now and then a spell of intense heat", "src": "https://en.wikipedia.org/wiki/Climate_of_Paris" },
+   { "key": "autumn", "ko": "가을", "en": "autumn — mild, changeable days and cool nights, the avenue trees turning gold", "src": "https://en.wikipedia.org/wiki/Climate_of_Paris" },
+   { "key": "winter", "ko": "겨울", "en": "winter — cold, grey days just above freezing, bare trees and a light frost in the morning", "src": "https://en.wikipedia.org/wiki/Climate_of_Paris" }
   ]
  },
  "weather": {
@@ -65,6 +71,12 @@
    { "key": "dry_heat", "ko": "불볕더위", "en": "dry summer heat — a fierce white sun, heat shimmering off the stone and deep shade under the trees", "seasons": ["summer"], "src": "https://en.wikipedia.org/wiki/Rome" },
    { "key": "downpour", "ko": "가을 큰비", "en": "a heavy downpour — dark clouds, rain drumming on the terracotta roofs and the lanes running wet", "seasons": ["autumn", "winter"], "src": "https://en.wikipedia.org/wiki/Rome" },
    { "key": "rare_snow", "ko": "드문 눈", "en": "a rare light snowfall — soft flakes drifting over the domes and melting on the warm stone", "seasons": ["winter"], "src": "https://en.wikipedia.org/wiki/Rome" }
+  ],
+  "paris": [
+   { "key": "drizzle", "ko": "가랑비", "en": "a light rain — fine drops shining on the pavements and the blue-grey roofs", "seasons": ["spring", "summer", "autumn", "winter"], "src": "https://en.wikipedia.org/wiki/Climate_of_Paris" },
+   { "key": "shower", "ko": "갑작스러운 소나기", "en": "a sudden heavy shower — rain bursting down out of nowhere and people ducking under the awnings", "seasons": ["spring", "summer", "autumn"], "src": "https://en.wikipedia.org/wiki/Climate_of_Paris" },
+   { "key": "heat_wave", "ko": "폭염", "en": "a summer heat wave — hot, heavy air, the pale stone glaring in the sun and everyone seeking the shade", "seasons": ["summer"], "src": "https://en.wikipedia.org/wiki/Climate_of_Paris" },
+   { "key": "light_snow", "ko": "가벼운 눈", "en": "a light snowfall — soft flakes drifting down and melting on the pavements before they settle", "seasons": ["winter"], "src": "https://en.wikipedia.org/wiki/Climate_of_Paris" }
   ]
  },
  "cities": {
@@ -1072,6 +1084,183 @@
       "fantasy": { "en": "the capital's own sandy shore on the summer sea — rows of striped linen sunshades, a timber bathing pier and the warm turquoise sea glittering", "props": ["float_ring", "umbrella", "cup", "fan"] },
       "steampunk": { "en": "the city's own seaside on a summer day — rows of striped canvas bathing cabins and sunshades, a long wooden pier and the warm sea glittering", "props": ["float_ring", "umbrella", "cup", "fan"] },
       "cyberpunk": { "en": "the city's own beach two centuries on — rows of smart sunshades glowing softly, a sleek floating pier and the warm turquoise sea glittering", "props": ["float_ring", "drink_glass", "fan", "music"] }
+     }
+    }
+   ]
+  },
+  "paris": {
+   "scenes": [
+    {
+     "key": "cafe_terrace",
+     "ko": "카페 테라스 길가 자리의 크루아상과 카페오레",
+     "src": ["https://en.wikipedia.org/wiki/Parisian_caf%C3%A9", "https://en.wikipedia.org/wiki/Croissant", "https://en.wikipedia.org/wiki/Caf%C3%A9_au_lait"],
+     "base": "street_cafe",
+     "times": ["commute_am", "midday", "commute_pm", "night_out"],
+     "outfits": ["everyday", "workwear", "dongtan", "retro", "evening"],
+     "en": "a small round table on the pavement terrace of a corner café, a croissant and a big cup of milky coffee in front of her, the chairs all facing the street",
+     "worlds": {
+      "fantasy": { "en": "the pavement terrace of a corner tavern-café of the capital — little round marble tables and woven chairs all facing the lantern-lit street, a flaky crescent pastry and a wide bowl of milky brew on each table and passers-by in silk cloaks strolling past", "props": ["croissant", "cup", "book", "money"] },
+      "steampunk": { "en": "the pavement terrace of a corner café under a striped awning — little round marble tables and bentwood chairs all facing the gaslit boulevard, croissants and big cups of milky coffee, a waiter in a long white apron with a brass tray and ladies in feathered hats strolling past", "props": ["croissant", "cup", "watch", "book"] },
+      "cyberpunk": { "en": "the pavement terrace of a corner café kept under the far-future towers — little round tables and woven chairs all facing the street, croissants and big cups of milky coffee, a quiet serving drone gliding between the tables and soft light strips along the old stone front", "props": ["croissant", "cup", "phone", "music"] }
+     }
+    },
+    {
+     "key": "boulangerie",
+     "ko": "동네 빵집에서 막 나온 바게트",
+     "src": ["https://en.wikipedia.org/wiki/Baguette", "https://en.wikipedia.org/wiki/Bakery"],
+     "base": "street_shop",
+     "times": ["dawn", "commute_am", "commute_pm"],
+     "outfits": ["everyday", "workwear", "dongtan", "homewear"],
+     "en": "stepping out of a neighbourhood bakery with a warm baguette under her arm, the shop window full of bread",
+     "worlds": {
+      "fantasy": { "en": "the doorway of a little stone bakehouse of the capital at first light — a wood-fired oven glowing inside, long golden loaves stacked in wicker baskets in the window and the warm smell of bread spilling into the cobbled street", "props": ["baguette", "money", "shopping_bag", "lamp"] },
+      "steampunk": { "en": "the doorway of a little corner bakery at first light — a painted wooden shopfront and etched-glass windows, long crusty loaves stacked upright in baskets, a brass till on the counter and warm steam rising from the ovens behind", "props": ["baguette", "money", "shopping_bag", "watch"] },
+      "cyberpunk": { "en": "the doorway of a little neighbourhood bakery kept two centuries on — a real stone oven glowing behind a curved glass counter, long crusty loaves stacked upright in baskets and a pay pad glowing by the door", "props": ["baguette", "money", "phone", "shopping_bag"] }
+     }
+    },
+    {
+     "key": "bouquinistes",
+     "ko": "센강 둑 헌책 노점의 초록 상자",
+     "src": ["https://en.wikipedia.org/wiki/Bouquinistes"],
+     "base": "street_bookstall",
+     "times": ["midday", "commute_pm"],
+     "outfits": ["everyday", "retro", "dongtan", "workwear"],
+     "en": "browsing the green box stalls of second-hand booksellers along the river wall",
+     "worlds": {
+      "fantasy": { "en": "the stone parapet along the shining river of the capital, lined with little green-painted wooden chests thrown open as book stalls — old leather-bound tomes, maps and prints spread out, booksellers on folding stools and boats with silver sails gliding below", "props": ["book", "bag", "money", "lamp"] },
+      "steampunk": { "en": "the stone parapet along the river, lined with green-painted wooden boxes thrown open as bookstalls — cloth-bound books, old maps and engravings pinned up, a bookseller in a waistcoat and a paddle steamer churning past below", "props": ["book", "bag", "money", "watch"] },
+      "cyberpunk": { "en": "the old stone parapet along the river of light two centuries on, still lined with green-painted wooden boxes thrown open as bookstalls — real paper books and old prints, a few holographic catalogues floating above the lids and floating gardens drifting by on the water", "props": ["book", "bag", "phone", "cup"] }
+     }
+    },
+    {
+     "key": "champ_picnic",
+     "ko": "철탑 아래 샹드마르스 잔디밭 저녁 피크닉",
+     "src": ["https://en.wikipedia.org/wiki/Champ_de_Mars", "https://en.wikipedia.org/wiki/Eiffel_Tower"],
+     "base": "street_park",
+     "times": ["midday", "commute_pm", "night_out"],
+     "seasons": ["spring", "summer", "autumn"],
+     "outfits": ["everyday", "active", "dongtan", "retro", "subculture"],
+     "en": "an evening picnic on the long lawns below the iron lattice tower",
+     "worlds": {
+      "fantasy": { "en": "the long green lawns below the soaring needle of gilded lattice filigree on a summer evening — a woven rush mat on the grass, bread, cheese and a clay jug of wine, lantern-orbs coming alight along the paths", "props": ["mat", "baguette", "drink_glass", "bowl"] },
+      "steampunk": { "en": "the long green lawns below the great iron lattice tower on a summer evening — a canvas groundsheet on the grass, a wicker hamper of bread, cheese and stoneware bottles, gas lamps coming on along the gravel paths and the tower glowing bronze above", "props": ["mat", "baguette", "drink_glass", "umbrella"] },
+      "cyberpunk": { "en": "the long green lawns below the old iron lattice tower two centuries on — a glowing mat on real grass, bread, cheese and a bottle of wine, the tower's halo of light turning slowly overhead", "props": ["mat", "baguette", "drink_glass", "music"] }
+     }
+    },
+    {
+     "key": "metro_ride",
+     "ko": "아르누보 입구로 내려가는 지하철 출퇴근길",
+     "src": ["https://en.wikipedia.org/wiki/Paris_Metro", "https://en.wikipedia.org/wiki/Paris_Metro_entrances_by_Hector_Guimard"],
+     "base": "subway_car",
+     "indoor": true,
+     "times": ["commute_am", "commute_pm"],
+     "outfits": ["everyday", "workwear", "dongtan", "subculture", "retro"],
+     "en": "a crowded underground train carriage at rush hour",
+     "worlds": {
+      "fantasy": { "en": "a packed rune-lit carriage of the deep tunnels beneath the capital at rush hour — fold-down wooden seats, brass hand-rails, travelers in cloaks pressed shoulder to shoulder and curving vaults of white glazed tiles gleaming past the windows", "props": ["ticket", "book", "bag", "lamp"] },
+      "steampunk": { "en": "a packed wooden carriage of the new underground railway at rush hour — folding seats and leather hand-straps from a brass rail, etched-glass lamps, clerks with folded newspapers and ladies in feathered hats, the white-tiled vaulted station sliding past the windows", "props": ["ticket", "watch", "bag", "book"] },
+      "cyberpunk": { "en": "a packed driverless maglev car deep beneath the heritage city at rush hour — a sleek curved cabin of smart glass, chrome grab rails, commuters lit by their wrist screens and the old white-tiled vaults glowing softly as they streak past", "props": ["phone", "music", "ticket", "bag"] }
+     }
+    },
+    {
+     "key": "tertre_painters",
+     "ko": "몽마르트르 테르트르 광장 거리 화가들 사이",
+     "src": ["https://en.wikipedia.org/wiki/Place_du_Tertre", "https://en.wikipedia.org/wiki/Montmartre"],
+     "base": "stage_open_air",
+     "times": ["midday", "commute_pm"],
+     "outfits": ["everyday", "retro", "dongtan", "subculture"],
+     "en": "the hilltop village square where painters set up their easels for passers-by",
+     "worlds": {
+      "fantasy": { "en": "the little hilltop square of the artists' village above the capital — painters at their easels under leafy trees and striped awnings, canvases of the river and its bridges drying in the sun and a white-domed basilica glowing just beyond the rooftops", "props": ["easel", "book", "cup", "bag"] },
+      "steampunk": { "en": "the little hilltop square of the painters' village — artists at their easels under striped café awnings, canvases propped against the trees, gas lamps on curling iron posts and the white dome of the basilica just beyond the rooftops", "props": ["easel", "cup", "watch", "bag"] },
+      "cyberpunk": { "en": "the little hilltop painters' square kept two centuries on — artists at real easels under leafy trees, canvases beside softly glowing portrait frames, the white dome of the basilica beyond and the far-future towers glimmering on the horizon", "props": ["easel", "drink_glass", "phone", "bag"] }
+     }
+    },
+    {
+     "key": "covered_passage",
+     "ko": "유리 지붕 파사주 산책",
+     "src": ["https://en.wikipedia.org/wiki/Covered_passages_of_Paris"],
+     "base": "street_shop",
+     "indoor": true,
+     "times": ["midday", "commute_pm", "night_out"],
+     "outfits": ["everyday", "retro", "dongtan", "evening"],
+     "en": "strolling a glass-roofed covered shopping passage lined with little shops",
+     "worlds": {
+      "fantasy": { "en": "a long glass-vaulted passage of little shops in the capital — a mosaic floor, carved wooden shopfronts of old books, gloves and music boxes, and glowing lantern-orbs hanging under the glass roof", "props": ["shopping_bag", "umbrella", "book", "lamp"] },
+      "steampunk": { "en": "a long glass-roofed shopping arcade — a gleaming mosaic floor, carved wooden shopfronts with brass fittings, gas lamps in etched-glass globes and soft rain pattering on the iron-and-glass roof above", "props": ["shopping_bag", "umbrella", "watch", "bag"] },
+      "cyberpunk": { "en": "a long glass-roofed arcade of little shops kept exactly as it was two centuries on — the old mosaic floor and carved wooden shopfronts, smart glass in the roof glowing softly and tiny holographic tags floating by the doors", "props": ["shopping_bag", "umbrella", "phone", "bag"] }
+     }
+    },
+    {
+     "key": "flower_market",
+     "ko": "시테섬 꽃시장의 아침",
+     "src": ["https://en.wikipedia.org/wiki/March%C3%A9_aux_fleurs_Reine-Elizabeth-II"],
+     "base": "street_market",
+     "times": ["dawn", "commute_am", "midday"],
+     "outfits": ["everyday", "dongtan", "retro", "workwear"],
+     "en": "the flower market on the river island, its stalls overflowing with potted plants and cut flowers",
+     "worlds": {
+      "fantasy": { "en": "the flower market on the island of the capital — little covered stalls overflowing with roses, lilies and potted orange trees, petals glowing softly in the morning light and the cathedral's twin towers rising just beyond", "props": ["flowers", "money", "shopping_bag", "bag"] },
+      "steampunk": { "en": "the flower market on the river island — glass-and-iron stall pavilions overflowing with roses, lilies and potted palms, sellers in long aprons sprinkling the plants and gas lamps still glowing in the morning light", "props": ["flowers", "money", "shopping_bag", "watch"] },
+      "cyberpunk": { "en": "the flower market on the river island kept two centuries on — stalls overflowing with real roses, lilies and potted trees under a soft misting canopy and tiny glowing price tags nodding among the leaves", "props": ["flowers", "money", "phone", "shopping_bag"] }
+     }
+    },
+    {
+     "key": "luxembourg_basin",
+     "ko": "뤽상부르 정원 팔각 연못가 의자",
+     "src": ["https://en.wikipedia.org/wiki/Jardin_du_Luxembourg"],
+     "base": "street_park",
+     "times": ["dawn", "midday", "commute_pm"],
+     "outfits": ["everyday", "active", "dongtan", "retro"],
+     "en": "sitting on a garden chair beside the octagonal pond of a palace garden, toy sailboats on the water",
+     "worlds": {
+      "fantasy": { "en": "the formal garden of a palace in the capital — a great octagonal pond with a leaping fountain, little toy sailboats gliding across the water, garden chairs scattered on the gravel and marble statues of queens along the terraces", "props": ["book", "cup", "bag", "lamp"] },
+      "steampunk": { "en": "the formal palace garden on a fine afternoon — a great octagonal pond with a fountain, little model sailboats gliding across, metal garden chairs on the gravel and stone statues along the balustraded terraces", "props": ["book", "umbrella", "watch", "bag"] },
+      "cyberpunk": { "en": "the formal palace garden kept two centuries on — the great octagonal pond with its fountain, little model sailboats steered across the water, garden chairs on the gravel and soft light along the old balustraded terraces", "props": ["book", "drink_glass", "phone", "bag"] }
+     }
+    },
+    {
+     "key": "seine_cruise",
+     "ko": "센강 유람선 위 갑판의 저녁",
+     "src": ["https://en.wikipedia.org/wiki/Bateaux_Mouches", "https://en.wikipedia.org/wiki/Seine"],
+     "base": "travel_ferry",
+     "times": ["midday", "commute_pm", "night_out"],
+     "outfits": ["everyday", "evening", "dongtan", "retro"],
+     "en": "the open upper deck of a glass-roofed excursion boat on the river at dusk",
+     "worlds": {
+      "fantasy": { "en": "the open upper deck of a long river barge with silver sails gliding through the capital at dusk — stone bridges passing overhead, the island cathedral's rose window glowing and lantern-orbs lighting up along the quays", "props": ["ticket", "drink_glass", "camera", "bag"] },
+      "steampunk": { "en": "the open upper deck of a paddle-wheel excursion steamer on the river at dusk — brass rails, white steam from its funnel, stone bridges sliding overhead and the great iron lattice tower glowing bronze beyond the quays", "props": ["ticket", "camera", "watch", "bag"] },
+      "cyberpunk": { "en": "the open upper deck of a silent glass excursion boat on the river of light two centuries on — glass rails, floating gardens drifting by, old stone bridges overhead and the iron lattice tower's halo turning in the sky", "props": ["ticket", "phone", "camera", "drink_glass"] }
+     }
+    },
+    {
+     "key": "river_beach",
+     "ko": "여름 센강 둑 모래사장(파리 플라주)",
+     "src": ["https://en.wikipedia.org/wiki/Paris-Plages"],
+     "base": "water_beach",
+     "times": ["midday", "commute_pm"],
+     "seasons": ["summer"],
+     "outfits": ["swimwear", "active", "resort"],
+     "en": "a summer day on the sandy beach laid out along the river bank in the middle of the city",
+     "worlds": {
+      "fantasy": { "en": "a summer beach of golden sand laid along the river bank in the heart of the capital — striped silk sunshades, woven deckchairs, potted palms and the shining river with its stone bridges right beside", "props": ["umbrella", "cup", "fan", "book"] },
+      "steampunk": { "en": "a summer beach of golden sand laid along the river embankment in the middle of the city — striped canvas sunshades, wooden deckchairs, potted palms in brass tubs, a lemonade stand and a paddle steamer passing on the river", "props": ["umbrella", "cup", "fan", "watch"] },
+      "cyberpunk": { "en": "a summer beach of warm sand laid along the river of light two centuries on — smart sunshades glowing softly, deckchairs, potted palms, a misting arch and floating gardens drifting past on the water", "props": ["umbrella", "drink_glass", "fan", "music"] }
+     }
+    },
+    {
+     "key": "garret_room",
+     "ko": "망사르드 지붕 밑 다락방 창가의 밤",
+     "src": ["https://en.wikipedia.org/wiki/Haussmann%27s_renovation_of_Paris", "https://en.wikipedia.org/wiki/Mansard_roof"],
+     "base": "home_bedroom",
+     "indoor": true,
+     "times": ["night_out", "past_midnight", "dawn"],
+     "outfits": ["homewear", "lingerie", "everyday"],
+     "en": "a tiny garret room under the slanted roof, the dormer window open over the rooftops at night",
+     "worlds": {
+      "fantasy": { "en": "a tiny garret room under the steep slate roof of a stone mansion in the capital — a slanted ceiling, a narrow bed with linen quilts, a candle-lantern on the sill and the dormer window open over a sea of blue-grey roofs and chimney pots under the stars", "props": ["lamp", "cup", "book", "key"] },
+      "steampunk": { "en": "a tiny garret room under the steep mansard roof — a slanted ceiling, an iron bedstead with lace pillows, a little gas lamp on the sill and the dormer window open over a sea of blue-grey roofs, chimney pots and the iron lattice tower glowing bronze in the night", "props": ["lamp", "cup", "book", "watch"] },
+      "cyberpunk": { "en": "a tiny garret room under the old mansard roof kept two centuries on — a slanted ceiling, a smart bed with a softly glowing quilt, a warm light strip along the sill and the dormer window open over the old blue-grey roofs and the far-future towers glittering beyond", "props": ["lamp", "drink_glass", "phone", "music"] }
      }
     }
    ]
