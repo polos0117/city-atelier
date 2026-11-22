@@ -96,12 +96,12 @@ const settle = p => p.waitForFunction(() => { const k = document.querySelector('
       }
       assert(!ps.rio.front && ps.tokyo.front, '서울 정면 — 리우 뒷면 · 도쿄 앞면'); checks += 4;
       // (b) 앞 · 뒤 단추 — 서에서 동으로
-      await p.tap('.th-mq-next'); assert.deepEqual(await marquee(p), { city: 'tokyo', name: C.tokyo.ko }, '뒤 → 도쿄');
+      await p.tap('.th-mq-next'); assert.deepEqual(await marquee(p), { city: 'busan', name: C.busan.ko }, '뒤 → 부산(2026-11-22 서울 동쪽)'); await p.tap('.th-mq-next'); assert.deepEqual(await marquee(p), { city: 'tokyo', name: C.tokyo.ko }, '뒤 → 도쿄');
       await settle(p);
       assert.equal((await pins(p)).tokyo.on, true, '조명이 도쿄로');
-      await p.tap('.th-mq-prev'); await p.tap('.th-mq-prev'); assert.equal((await marquee(p)).city, 'beijing', '앞 앞 → 베이징');
+      await p.tap('.th-mq-prev'); await p.tap('.th-mq-prev'); await p.tap('.th-mq-prev'); assert.equal((await marquee(p)).city, 'beijing', '앞 셋 → 베이징(부산 · 서울 다음)');
       await settle(p);
-      for (const k of ['cairo', 'istanbul', 'rome', 'paris', 'london', 'rio']) { await p.tap('.th-mq-prev'); assert.equal((await marquee(p)).city, k, '앞으로 → ' + k + '(서에서 동 차례의 거꾸로)'); }   /* 설계 전 예는 리우(2026-11-21 열 곳 모두 설계 — 가로챈 설계표에서만 미정) */
+      for (const k of ['bangkok', 'cairo', 'istanbul', 'rome', 'paris', 'barcelona', 'london', 'rio']) { await p.tap('.th-mq-prev'); assert.equal((await marquee(p)).city, k, '앞으로 → ' + k + '(서에서 동 차례의 거꾸로)'); }   /* 설계 전 예는 리우(2026-11-21 열 곳 모두 설계 — 가로챈 설계표에서만 미정) */
       await settle(p);
       // 설계 전 도시 — 「설계 전」 · 무대로 막힘(짧은 안내, 주소 그대로)
       assert.equal(await p.locator('.th-marquee .th-pre').count(), 1, '설계 전 표지');

@@ -7,6 +7,15 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-22 · claude · 새 도시 다섯 — 부산 · 방콕 · 바르셀로나 · 시드니 · 멕시코시티(시안)
+- 사용자 「다음 도시들 5개정도 만들어줘. 우선은 도시만. 부산 포함해서」 · 「다되면 올려줘」. 랜드마크 없이 도시만, 시험 그림 전 시안. 도시마다 따로 짠 조각을 한 도구로 끼웠다(작업 폴더의 add_city_parts.py — 설계표 · 검사기 도시 목록 · 생활 장면표 · 소품 사전 · 캐릭터만의 컷).
+- data/city-design.json — 도시 다섯 줄(근거 주소 · 위경도 · 상징 · palette · 세 세계 사람 · motif · hold · 실루엣). 세 세계 체형은 굴곡형 위주, 얼굴 칸은 다른 도시 사람과 셋 이상 다름, 부산 · 방콕은 주근깨 없음. 예배 장소 · 종교상 · 왕실 사람 · 건축가 이름(가우디 · 구엘 등)은 안 씀. 합친 뒤 겹친 머리 둘을 바꿈 — 시드니 사이버펑크 올백 → 숏컷(방콕 사이버펑크와 같은 은백 올백), 바르셀로나 스팀펑크 핑거웨이브 → 풍성한 머리(멕시코시티 스팀펑크와 같은 핑거웨이브 · 크리놀린).
+- data/city-life.json — 도시마다 생활 장면 열둘 · 계절 · 날씨(근거 주소), heritage 에 부산 korea · 멕시코시티 mexico. data/world-props.json — 새 소품(도시 열쇠를 앞에 붙임 — busan_eomuk 등). data/casual-own.json — 도시마다 세 세계 직업 셋.
+- tools/city-design.py — CITY_KEYS 열다섯, NO_FRECKLES 에 Thai. IMAGE_RULES.md 1절 주근깨 줄에 태국.
+- data/city-design.json 로마 스팀펑크 eye_size large → medium(눈 모양 narrow_upturned 와 부딪혀 tests/look-spec.cjs 가 전부터 실패하던 것).
+- tests — prompt-city(도시 목록 열다섯 · 이름 표에 다섯 도시의 상표 · 실존 인물 · 구단 · 예배 장소 이름), image-claim(빈 자리 33 · 차례 수 (15+5+27)×3), dex-screen(설계된 도시 열다섯 · 칸 수를 표에서), globe-screen(서에서 동 차례에 부산 · 방콕 · 바르셀로나 — 이 세션에서 cdn 이 막혀 못 돌림).
+- 볼 것: 공용 「전통 문양 수영복」(heritage_pattern_swim) · heritage_couture 가 시드니에서 원주민 무늬로 읽힐 수 있다. 방콕 스팀펑크 배경의 첨탑 셋 궁전 홀(왕실 건물)은 건축 모양만. 부산 판타지 · 스팀펑크 지시문은 1126 · 1127 낱말(상한 1150).
+
 ## 2026-11-22 · claude · 랜드마크 새 그림 표시
 - 사용자 「도시공방 랜드마크에도 신규이미지 등록표시 만들어줘」. 새 그림 점(오늘 · 어제 등록분 중 이 기기에서 안 연 것)이 도시 세계 칸에만 있었고, 도시 무대를 열면 랜드마크 새 그림까지 같이 꺼졌다.
 - lib/city-view.js — 도시 무대 랜드마크 줄의 칸(.th-mark-fig)마다 그 세계 새 그림이면 「새」 점(칸 안쪽), CityStage 가 day 를 받음, markFiles(세계 그림 + 일상컷 파일 — dex-view worldFiles 와 같음).

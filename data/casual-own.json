@@ -518,6 +518,261 @@
      }
     }
    }
+  },
+  "busan": {
+   "root": {
+    "ko": "바다 도시의 밤하늘 · 길 · 짐을 다루는 손 — 가을마다 광안리 해변에선 부산 바다와 광안대교를 배경으로 불꽃축제가 열리고(https://en.wikipedia.org/wiki/Busan_International_Fireworks_Festival), 부산은 1924년 전기화 전까지 한국에서 유일하게 증기 궤도 전차를 쓴 도시로 1915년부터 부산진과 동래 온천 사이를 전차가 다녔으며(https://en.wikipedia.org/wiki/Busan), 부산항은 한국에서 가장 크고 세계 여섯째로 바쁜 컨테이너 항구다(https://en.wikipedia.org/wiki/Port_of_Busan) → 광안 만의 불꽃 마법사(판타지) · 동래 온천행 증기 전차 차장(스팀펑크) · 떠 있는 항구의 크레인 지휘자(사이버펑크). 2026-11-22 시안 — 시험 그림 전",
+    "from": "story"
+   },
+   "mode": "per_world",
+   "worlds": {
+    "fantasy": {
+     "job_ko": "광안 만 불꽃 축제의 불꽃 마법사",
+     "base": "stage_fireworks",
+     "place": "the crescent beach of the great bay of her world's harbour capital on an autumn festival night — crowds sitting on woven mats along the sand, the vast moonstone bridge strung with tiny lights spanning the dark water, lantern boats drifting on the bay and golden fireworks blooming overhead",
+     "activity": "she is the fireworks sorceress of the bay's autumn festival, raising her moonstone wand high to the sky as a new burst of golden, camellia-shaped fireworks blooms above the bridge, the whole beach looking up with her",
+     "preset": "light_check",
+     "use": "sig_raise",
+     "prop": "a slender wand of pale moonstone tipped with a cluster of tiny golden sparks, like a firework caught at the moment it blooms",
+     "outfit": {
+      "bold": "a fireworks-sorceress look fitted to her body — a sleeveless draped bodice of deep night-sea blue silk with a deep open neckline, a long skirt of the same silk slit high to the thigh and embroidered with red camellias whose gold stamens burst into trails of golden sparks along the hem, a jeweled chain at her waist and a long golden camellia hairpin in her updo",
+      "moderate": "a fireworks-sorceress look — a draped gown of deep night-sea blue silk with bare arms and an open collarbone, embroidered with red camellias whose gold stamens burst into trails of golden sparks along the hem, long open sleeves of sheer silk, a jeweled chain at her waist and a long golden camellia hairpin in her updo",
+      "low": "a fireworks-sorceress look — a long-sleeved, high-collared gown of deep night-sea blue silk falling to the ground, embroidered with red camellias whose gold stamens burst into trails of golden sparks along the hem, a jeweled chain at her waist and a long golden camellia hairpin in her updo"
+     }
+    },
+    "steampunk": {
+     "job_ko": "동래 온천행 증기 전차 차장",
+     "base": "street_alley",
+     "place": "the seaside line of the brass-trimmed steam tram of her steam city on a bright afternoon — the little open tram puffing clean white steam along the harbour quay, passengers on its polished wooden benches, gas lamps along the rails, paddle-steamers at the piers and the green hills of the hot-spring town ahead",
+     "activity": "she is the conductor of the steam tram to the hot-spring town, striding along the tram's running board and ringing her brass hand bell to call the next stop",
+     "preset": "stride_prop",
+     "use": "sig_hold",
+     "prop": "a small polished brass conductor's hand bell on a turned wooden handle, a camellia-red silk tassel swinging from it",
+     "outfit": {
+      "bold": "a tram-conductor look fitted to her body — a sleeveless harbour-blue waistcoat with polished brass buttons over a lace-edged camisole, high-waisted shorts, a sash strung with brass tram tokens, a slim belt with a brass ticket punch, fine leather gloves, laced ankle boots, a little round conductor's cap with a steam-tram badge and a red camellia at her collar",
+      "moderate": "a tram-conductor look — a fitted harbour-blue waistcoat with polished brass buttons over a short-sleeved cotton blouse open at the collar, slim knee-length trousers, a sash strung with brass tram tokens, a belt with a brass ticket punch, leather gloves, laced boots, a little round conductor's cap with a steam-tram badge and a red camellia at her collar",
+      "low": "a tram-conductor look — a long-sleeved high-collared blouse under a buttoned harbour-blue waistcoat and a short wool jacket, fitted trousers tucked into tall laced boots, a sash strung with brass tram tokens, leather gloves, a little round conductor's cap with a steam-tram badge and a red camellia at her collar"
+     }
+    },
+    "cyberpunk": {
+     "job_ko": "떠 있는 항구의 크레인 지휘자",
+     "base": "street_rooftop",
+     "place": "the top catwalk of a colossal gantry arm over the floating port of her far-future city at night — glowing cargo pods gliding silently past, stacked terraces of colour stretching to the horizon, the hillside village of softly glowing cube homes and the bridge of light across the bay behind",
+     "activity": "she is the conductor of the port's gantry arms, kneeling on one knee at the catwalk edge with her glass dial raised as she guides a glowing cargo pod down into its place in the stack",
+     "preset": "half_kneel_use",
+     "use": "sig_hold",
+     "prop": "a palm-sized glass dial ringed with light, a tiny glowing grid of stacked cargo pods floating above it",
+     "outfit": {
+      "bold": "a crane-conductor look fitted to her body — a cropped utility vest of small interlocking panels glowing in sky blue, peach, mint and lemon over a fitted bandeau top, a cargo harness crossing her bare midriff, short bottoms, a thin band of shifting light across her shoulders and chunky thruster boots",
+      "moderate": "a crane-conductor look — a utility vest of small interlocking panels glowing in sky blue, peach, mint and lemon over a fitted short-sleeved top, a cargo harness across her body, short bottoms over sheer smart tights, a thin band of shifting light across her shoulders and chunky thruster boots",
+      "low": "a crane-conductor look — a long-sleeved high-necked bodysuit under a utility vest of small interlocking panels glowing in sky blue, peach, mint and lemon, a cargo harness across her body, slim cargo trousers, a thin band of shifting light across her shoulders and chunky thruster boots"
+     }
+    }
+   }
+  },
+  "bangkok": {
+   "root": {
+    "ko": "물길과 골목으로 도시를 실어 나르는 손 — 19세기까지 사람들 대부분이 물가 · 물 위에 살아 「동양의 베네치아」 로 불렸고(https://en.wikipedia.org/wiki/Bangkok), 지금도 짜오프라야 수상 버스(1971년부터)와 쌘쌥 운하 보트(1990년부터)가 하루 수만 명을 나르며(https://en.wikipedia.org/wiki/Chao_Phraya_Express_Boat · https://en.wikipedia.org/wiki/Khlong_Saen_Saep_boat_service), 긴 꼬리 배는 돌아가는 기둥 위 엔진에서 몇 미터 긴 축 끝 프로펠러로 물길을 달리고(https://en.wikipedia.org/wiki/Long-tail_boat), 골목은 지붕만 있는 삼륜 택시 툭툭이 메운다(https://en.wikipedia.org/wiki/Auto_rickshaw) → 황금 강의 등불 물길지기(판타지) · 증기 툭툭 기관사(스팀펑크) · 하늘 운하 긴 꼬리 배 조종사(사이버펑크). 2026-11-22 시안 — 시험 그림 전",
+    "from": "story"
+   },
+   "mode": "per_world",
+   "worlds": {
+    "fantasy": {
+     "job_ko": "황금 강의 등불 물길지기",
+     "base": "travel_lookout",
+     "place": "a high stepped stone landing at the edge of the broad golden river of her world's capital at dusk — lantern-hung barges with gilded prows gliding past, little boats heaped with flowers and fruit drifting along the bank toward the mouths of the canals, and the gilded tiered spires and green-and-orange roofs of the palace glowing across the water",
+     "activity": "she is the lantern warden of the river, raising her lantern-pole high over the water to light the evening boats safely home along the river and into the canals",
+     "preset": "light_check",
+     "use": "sig_raise",
+     "prop": "a slender gilded pole hung with a lantern of glowing mirror-mosaic glass",
+     "outfit": {
+      "bold": "a river-warden look fitted to her body — a strapless bodice of gold brocade inlaid with glittering mirror-glass mosaic, a sheer silk sash over one shoulder, a long wrap skirt of green silk with a high slit and a gold-filigree hem, a slender tiered gold headdress, gold armlets and anklets and bare feet on the warm stone",
+      "moderate": "a river-warden look — a fitted short-sleeved bodice of gold brocade inlaid with glittering mirror-glass mosaic, a silk sash over one shoulder, an ankle-length wrap skirt of green silk with a gold-filigree hem, a slender tiered gold headdress and soft gold slippers",
+      "low": "a river-warden look — a long-sleeved, high-collared jacket of gold brocade inlaid with glittering mirror-glass mosaic over an ankle-length wrap skirt of green silk, a silk sash over one shoulder, a slender tiered gold headdress and soft gold slippers"
+     }
+    },
+    "steampunk": {
+     "job_ko": "증기 툭툭(삼륜 택시) 기관사",
+     "base": "repair_kiosk",
+     "place": "a lane-side steam-cab workshop of her steam city on a warm evening — a gleaming brass three-wheeled steam-cab with a striped canopy parked half inside with its boiler panel open, polished tools hung in rows above the workbench, gas lamps coming on along the lane and soft white steam curling",
+     "activity": "she is the lane's steam-cab mechanic, bent over the workbench fitting a polished brass valve into a little steam engine with both hands, a finished cab waiting outside for its evening run",
+     "preset": "counter_work",
+     "use": "sig_both",
+     "prop": "a polished brass wrench with a little pressure gauge set into its handle",
+     "outfit": {
+      "bold": "a steam-cab mechanic look fitted to her body — a cropped waistcoat-jacket of striped orange, green and gold canopy cloth with polished brass buttons over a fitted bandeau top, a slim tool belt, high-waisted shorts, fingerless leather gloves, three brass spire hairpins and laced ankle boots",
+      "moderate": "a steam-cab mechanic look — a waistcoat-jacket of striped orange, green and gold canopy cloth with polished brass buttons over a fitted cotton blouse with rolled sleeves, a slim tool belt, a knee-length pleated skirt, leather gloves, three brass spire hairpins and laced boots",
+      "low": "a steam-cab mechanic look — a long-sleeved, high-collared blouse under a waistcoat-jacket of striped orange, green and gold canopy cloth with polished brass buttons, a slim tool belt, slim trousers tucked into tall laced boots, leather gloves and three brass spire hairpins"
+     }
+    },
+    "cyberpunk": {
+     "job_ko": "하늘 운하 긴 꼬리 배 조종사",
+     "base": "street_rooftop",
+     "place": "a high floating pier at the edge of a transparent sky canal of her far-future city at night — sleek long-tail boats skimming past in wakes of light, canals of light branching between white garden towers and the broad river glittering far below",
+     "activity": "she is a sky-canal long-tail boat pilot, standing at the stern of her moored boat and gripping its long glowing tiller-shaft with both hands, ready to swing it into the current",
+     "preset": "stand_use",
+     "use": "sig_both",
+     "prop": "the long, slim chrome tiller-shaft of a long-tail boat engine, traced with lines of light",
+     "outfit": {
+      "bold": "a long-tail pilot look fitted to her body — a cropped rider top, a short smart-fabric wrap skirt rippling in mango yellow, mangosteen purple and banana-leaf green, big racing gloves and tall sleek boots traced with slender chrome lines ending at the ankles in little glowing propellers",
+      "moderate": "a long-tail pilot look — a fitted short-sleeved rider top, a short smart-fabric wrap skirt rippling in mango yellow, mangosteen purple and banana-leaf green over sheer smart tights, big racing gloves and tall sleek boots traced with slender chrome lines ending at the ankles in little glowing propellers",
+      "low": "a long-tail pilot look — a full-length rider jumpsuit with slender chrome lines down the outside of both legs ending at the ankles in little glowing propellers, a smart-fabric wrap skirt rippling in mango yellow, mangosteen purple and banana-leaf green tied over it, big racing gloves and tall sleek boots"
+     }
+    }
+   }
+  },
+  "barcelona": {
+   "root": {
+    "ko": "깨진 조각을 모아 하나로 빛나게 쌓는 도시의 손 — 트렌카디스는 깨진 타일 · 도자기 조각을 시멘트로 이어 붙인 모자이크이고(https://en.wikipedia.org/wiki/Trencad%C3%ADs) 언덕 공원의 큰 테라스는 물결치는 긴 모자이크 벤치가 두르며(https://en.wikipedia.org/wiki/Park_G%C3%BCell), 몬주익의 마법 분수는 1929년 박람회 전날 처음 켜져 3620개 물줄기로 빛과 물(1980년대부터 음악도)의 쇼를 하고(https://en.wikipedia.org/wiki/Magic_Fountain_of_Montju%C3%AFc), 카스텔은 수백 명의 바닥(pinya) 위로 사람이 층층이 오르는 사람 탑으로 그랄라가 부는 「토크 데 카스텔스」가 탑 안에서 위를 못 보는 이들에게 탑이 어디까지 올랐는지 알린다(https://en.wikipedia.org/wiki/Castell · https://en.wikipedia.org/wiki/Gralla_(instrument)) → 언덕 공원의 트렌카디스 모자이크 마도 장인(판타지) · 몬주익 큰 빛의 분수 빛 기관사(스팀펑크) · 하늘 광장 카스텔의 그랄라 신호수(사이버펑크). 2026-11-22 시안 — 시험 그림 전",
+    "from": "story"
+   },
+   "mode": "per_world",
+   "worlds": {
+    "fantasy": {
+     "job_ko": "언덕 공원의 트렌카디스 모자이크 마도 장인",
+     "base": "stage_open_air",
+     "place": "the great terrace of the mosaic park on the hill above her world's Mediterranean capital in the golden morning — a long wavy bench clad in glittering broken-tile mosaic curling around the terrace's edge, columns like tree trunks holding up the stone, two whimsical gatehouses below, and the rippling palaces, mosaic rooftops and blue sea spread out beyond",
+     "activity": "she is the mosaic-weaver of the city, kneeling at the curve of the great wavy bench and setting a glowing shard of glazed tile into its mosaic, more broken pieces rising from the stones and fitting themselves together in light",
+     "preset": "half_kneel_use",
+     "use": "sig_hold",
+     "prop": "a slender twisted gold setting-wand tipped with a glowing shard of cobalt glazed tile",
+     "outfit": {
+      "bold": "a mosaic-weaver look fitted to her body — a sleeveless bodice clad in glittering broken-tile mosaic of cobalt, turquoise, white and gold, a short layered skirt of sea-blue silk panels edged in mosaic shards and rippling like waves, a curling gold filigree circlet, gold arm cuffs and laced gold sandals",
+      "moderate": "a mosaic-weaver look — a fitted short-sleeved bodice clad in glittering broken-tile mosaic of cobalt, turquoise, white and gold over a knee-length dress of layered sea-blue silk panels rippling like waves, a curling gold filigree circlet and gold sandals",
+      "low": "a mosaic-weaver look — a long-sleeved, ankle-length gown of layered sea-blue silk panels rippling like waves, its bodice and hem clad in glittering broken-tile mosaic of cobalt, turquoise, white and gold, a curling gold filigree circlet and soft gold slippers"
+     }
+    },
+    "steampunk": {
+     "job_ko": "몬주익 큰 빛의 분수 빛 기관사",
+     "base": "travel_lookout",
+     "place": "the balustraded lamp gallery above the great illuminated fountain at the foot of the exhibition hill of her steam city at dusk — rows of brass lamps behind discs of coloured glass, brass valve wheels along the rail, the fountain's thousands of jets rising below, the domed exhibition palace glowing above and crowds gathering on the wide stone steps",
+     "activity": "she is the light-and-water engineer of the great fountain, raising her brass lantern-lens toward the dusk to test its rose, gold and blue glass before the evening show, fine spray drifting around her",
+     "preset": "light_check",
+     "use": "sig_raise",
+     "prop": "a brass lantern-lens on a slim handle, its disc of rose, gold and blue glass casting coloured light",
+     "outfit": {
+      "bold": "a fountain-engineer look fitted to her body — a fitted corset bodice of curling wrought-iron-black filigree over a silk camisole, a short sheer silk overskirt shimmering rose, gold and blue over open brass crinoline hoops, fingerless lace gloves, drop earrings of coloured glass and laced heeled ankle boots",
+      "moderate": "a fountain-engineer look — a fitted bodice of curling wrought-iron-black filigree over a short-sleeved silk blouse, a knee-length sheer silk overskirt shimmering rose, gold and blue over open brass crinoline hoops and a short underskirt, lace gloves, drop earrings of coloured glass and laced boots",
+      "low": "a fountain-engineer look — a long-sleeved, high-necked silk blouse under a fitted bodice of curling wrought-iron-black filigree, an ankle-length sheer silk overskirt shimmering rose, gold and blue over open brass crinoline hoops and a full underskirt, lace gloves, drop earrings of coloured glass and laced boots"
+     }
+    },
+    "cyberpunk": {
+     "job_ko": "하늘 광장 카스텔(사람 탑)의 그랄라 신호수",
+     "base": "stage_festival",
+     "place": "a floating plaza between the white garden towers of her far-future city at night — a human tower of people in red shirts, white trousers and black sashes rising tier upon tier behind her on a broad base of hundreds of arms, a hushed crowd ringed around it and quiet flying vehicles holding still in their lanes above",
+     "activity": "she is the gralla piper of the tower team, standing at the foot of the human tower and playing the old tower tune on her glass shawm with both hands so the climbers inside, who cannot see, know how high the tower has risen",
+     "preset": "stand_use",
+     "use": "sig_both",
+     "prop": "a gralla, a slender Catalan folk shawm of clear glass with a flared bell ringed in light",
+     "outfit": {
+      "bold": "a tower-piper look fitted to her body — a cropped fitted red top, a wide black sash wound many times around her bare waist with edges traced in thin red light, white high-waisted shorts, a long white smart-fabric coat slung off one shoulder, a red bandana with white spots tied on her upper arm and sleek white boots",
+      "moderate": "a tower-piper look — a fitted red top, a wide black sash wound many times around her waist with edges traced in thin red light, slim white trousers, a long white smart-fabric coat slung off one shoulder, a red bandana with white spots tied on her upper arm and sleek white boots",
+      "low": "a tower-piper look — a long-sleeved, high-necked red top, a wide black sash wound many times around her waist with edges traced in thin red light, loose white trousers, a long white smart-fabric coat worn on both shoulders, a red bandana with white spots tied on her upper arm and sleek white boots"
+     }
+    }
+   }
+  },
+  "sydney": {
+   "root": {
+    "ko": "물가에서 노래하고 · 아치를 지키고 · 바다에서 사람을 지키는 항구 도시의 손 — 돛 같은 조개 지붕의 오페라 하우스는 공연장이고 큰 계단(Monumental Steps)은 야외 공연의 객석이 되며(https://en.wikipedia.org/wiki/Sydney_Opera_House), 별명 「옷걸이」 하버 브리지는 손으로 박은 리벳 육백만 개로 이어졌고 지금도 칠장이 · 철공이 늘 손보며(https://en.wikipedia.org/wiki/Sydney_Harbour_Bridge), 1907년 시드니 해변에서 처음 생긴 서프 라이프세이빙은 빨강 · 노랑 깃발로 안전한 물을 표시하고 순찰대장 아래 해변을 지킨다(https://en.wikipedia.org/wiki/Surf_lifesaving · https://en.wikipedia.org/wiki/Bondi_Beach) → 돛 궁전의 가희(판타지) · 옷걸이 아치의 리벳 장인(스팀펑크) · 본다이 새벽 순찰 구조대장(사이버펑크). 2026-11-22 시안 — 시험 그림 전",
+    "from": "story"
+   },
+   "mode": "per_world",
+   "worlds": {
+    "fantasy": {
+     "job_ko": "돛 궁전의 가희",
+     "base": "stage_open_air",
+     "place": "the great stone steps before the white palace of song on the harbour point of her world's capital at sunset — its huge sail-like shells tiled in glossy white and matte cream glowing gold above, a crowd seated along the broad steps below, the deep-blue harbour and the great arch shining beyond",
+     "activity": "she is the prima songstress of the palace of song, standing at the top of the great steps before her evening song and raising her gold sceptre toward the last light as the crowd on the steps below falls quiet",
+     "preset": "light_check",
+     "use": "sig_raise",
+     "prop": "a slender gold sceptre topped with a pearl-white shell shaped like a furled sail",
+     "outfit": {
+      "bold": "a songstress look fitted to her body — a strapless bodice of layered harbour-blue silk panels rippling like waves, a high-slit skirt of the same panels embroidered in silver with falling jacaranda blossoms, a standing collar of small white sail-shaped shells tiled in glossy white and cream behind her shoulders, strands of pearls and gold sandals",
+      "moderate": "a songstress look — a fitted off-shoulder gown of layered harbour-blue silk panels rippling like waves and embroidered in silver with falling jacaranda blossoms, a standing collar of small white sail-shaped shells tiled in glossy white and cream behind her shoulders, strands of pearls and gold slippers",
+      "low": "a songstress look — a long-sleeved, floor-length gown of layered harbour-blue silk panels rippling like waves and embroidered in silver with falling jacaranda blossoms, a high standing collar of white sail-shaped shells tiled in glossy white and cream, strands of pearls and soft gold slippers"
+     }
+    },
+    "steampunk": {
+     "job_ko": "옷걸이 아치의 리벳 장인",
+     "base": "street_rooftop",
+     "place": "the very top of the great steel arch of the harbour bridge in her steam city on a bright morning — rows of polished rivets and a brass handrail, a little brass rivet forge glowing beside her, the paddle-steamer ferries, the sail-roofed hall and the terrace-house hills far below",
+     "activity": "she is a rivet keeper of the great arch, kneeling on the steel to set a glowing rivet with her brass hammer and checking each one along the arch before the morning ferries pass beneath",
+     "preset": "half_kneel_use",
+     "use": "sig_hold",
+     "prop": "a polished brass riveting hammer with a turned wooden handle",
+     "outfit": {
+      "bold": "a rivet-keeper look fitted to her body — a sleeveless iron-grey waistcoat-corset crossed by a riveted brass arch lattice over her bust, high-waisted work shorts, a slim leather tool belt, fingerless leather gloves, brass goggles on her head, square granite-and-brass wrist cuffs and laced boots",
+      "moderate": "a rivet-keeper look — a sleeveless iron-grey waistcoat-corset crossed by a riveted brass arch lattice over a fitted short-sleeved cotton shirt, fitted knee-length work trousers, a slim leather tool belt, leather gloves, brass goggles on her head, square granite-and-brass wrist cuffs and laced boots",
+      "low": "a rivet-keeper look — an iron-grey waistcoat crossed by a riveted brass arch lattice over a long-sleeved high-collared shirt, fitted full-length work trousers tucked into tall laced boots, a slim leather tool belt, leather gloves, brass goggles on her head and square granite-and-brass wrist cuffs"
+     }
+    },
+    "cyberpunk": {
+     "job_ko": "본다이 새벽 순찰 구조대장",
+     "base": "water_beach",
+     "place": "the golden crescent beach of her far-future city at dawn patrol — rolling surf glowing pink and gold, two tall flags of red and yellow light planted in the sand to mark the guarded water, rescue drones hovering over the waves and a rock-cut ocean pool glowing at the end of the beach",
+     "activity": "she is the patrol captain of the beach's lifesavers, striding along the waterline at dawn with her glowing rescue float in hand, eyes on the surf as she sets the day's flags of red and yellow light",
+     "preset": "stride_prop",
+     "use": "sig_hold",
+     "prop": "a slim rescue float glowing in red and yellow light, its tether coiled at her hip",
+     "outfit": {
+      "bold": "a lifesaver-captain look fitted to her body — a sleek high-cut rescue swimsuit split into red and yellow halves glowing along light seams, small flag-shaped panels of red and yellow light at her shoulders, a slim drone holster on a belt at her hip and light water-shoes",
+      "moderate": "a lifesaver-captain look — a sleek short-sleeved rescue suit with fitted shorts, split into red and yellow halves glowing along light seams, small flag-shaped panels of red and yellow light at her shoulders, a slim drone holster at her hip and light water-shoes",
+      "low": "a lifesaver-captain look — a sleek long-sleeved, full-length rescue suit split into red and yellow halves glowing along light seams, small flag-shaped panels of red and yellow light at her shoulders, a slim drone holster at her hip and sturdy beach boots"
+     }
+    }
+   }
+  },
+  "mexicocity": {
+   "root": {
+    "ko": "물 위의 도시를 꽃과 빛으로 잇는 손 — 테노치티틀란은 텍스코코 호수 섬 위에 세워져 둑길로 뭍과 이어졌고 둑길 사이 다리를 걷어 올려 카누가 지나게 했으며(https://en.wikipedia.org/wiki/Tenochtitlan), 「꽃밭」이라는 뜻의 소치밀코 운하에선 지금도 사공이 노를 젓는 알록달록한 트라히네라가 치남파 사이를 오가고(https://en.wikipedia.org/wiki/Xochimilco · https://en.wikipedia.org/wiki/Trajinera), 예술궁전 극장의 무대 막은 두 화산을 담은 무지갯빛 색유리 백만 조각 가까이로 된 24톤 접이 판이다(https://en.wikipedia.org/wiki/Palacio_de_Bellas_Artes) → 물과 꽃과 빛을 도시에 건네는 사람 — 꽃 운하의 꽃배 길잡이(판타지) · 예술궁전 유리 막 기관사(스팀펑크) · 떠 있는 꽃밭의 하늘 배달부(사이버펑크). 2026-11-22 시안 — 시험 그림 전",
+    "from": "story"
+   },
+   "mode": "per_world",
+   "worlds": {
+    "fantasy": {
+     "job_ko": "꽃 운하의 꽃배 길잡이",
+     "base": "travel_ferry",
+     "place": "the prow deck of a painted flower boat with an arched canopy of marigolds gliding along a canal between the floating gardens of her world's island capital on a festival afternoon — garlands of lace-fine cut-silk banners strung overhead, a line of bright flower boats following behind, a little arched stone bridge ahead and white palaces with gilded domes rising beyond the blossoms",
+     "activity": "she is the flower-boat guide of the lake capital, standing at the prow and working the long gilded oar with both hands to steer the festival boats between the floating gardens",
+     "preset": "stand_use",
+     "use": "sig_both",
+     "prop": "a long slender oar of gilded wood wound with marigold garlands and silk ribbons",
+     "outfit": {
+      "bold": "a flower-boat guide look fitted to her body — a sleeveless bodice of turquoise silk sewn with gold-thread marigolds, a short layered overskirt of marigold and magenta silk panels cut through with lace-fine flower patterns, a gold sash at her waist, a crown of gilded marigolds and laced gold sandals",
+      "moderate": "a flower-boat guide look — a fitted short-sleeved bodice of turquoise silk sewn with gold-thread marigolds over a knee-length overskirt of marigold and magenta silk panels cut through with lace-fine flower patterns, a gold sash, a crown of gilded marigolds and gold sandals",
+      "low": "a flower-boat guide look — a long-sleeved, ankle-length gown of turquoise silk sewn with gold-thread marigolds under flowing marigold and magenta silk panels cut through with lace-fine flower patterns, a gold sash, a crown of gilded marigolds and soft gold slippers"
+     }
+    },
+    "steampunk": {
+     "job_ko": "예술궁전 유리 막 기관사",
+     "base": "stage_open_air",
+     "place": "the stage wings of the grand theatre inside the white marble palace of her steam city just before curtain-up — the great folding curtain of iridescent glass mosaic picturing two snow-capped volcanoes glowing at her side, polished brass winding gears, chains and counterweights rising into the fly tower, gaslight footlights and the gilded hall beyond",
+     "activity": "she is the keeper of the palace's great glass curtain, kneeling on one knee at the brass winding gear and turning its long crank key to lift the glittering glass mosaic before the performance",
+     "preset": "half_kneel_use",
+     "use": "sig_hold",
+     "prop": "a long brass crank key with a curling Art Nouveau handle",
+     "outfit": {
+      "bold": "a curtain-keeper look fitted to her body — a sleeveless bodice traced with flowing Art Nouveau brass filigree, an open crinoline of brass hoops hung with little panels of iridescent glass mosaic over a short silk skirt, fingerless leather gloves, brass goggles pushed up in her hair and laced ankle boots",
+      "moderate": "a curtain-keeper look — a fitted short-sleeved bodice traced with Art Nouveau brass filigree over a cotton blouse, an open crinoline of brass hoops hung with little panels of iridescent glass mosaic over a knee-length silk skirt, leather gloves, brass goggles in her hair and laced boots",
+      "low": "a curtain-keeper look — a long-sleeved, high-collared bodice traced with Art Nouveau brass filigree, an open crinoline of brass hoops hung with little panels of iridescent glass mosaic over an ankle-length silk skirt, leather gloves, brass goggles in her hair and laced boots"
+     }
+    },
+    "cyberpunk": {
+     "job_ko": "떠 있는 꽃밭의 하늘 배달부",
+     "base": "street_rooftop",
+     "place": "a landing deck on a floating garden terrace drifting on the restored lake of her far-future city at dusk — rows of marigold and magenta blooms in softly glowing beds, slender white towers rising from the water around, causeways of light curving across the lake and other sky couriers streaking between the towers",
+     "activity": "she is a sky courier of the floating gardens, striding off the landing deck with a fresh bundle of marigolds to deliver across the city, her thruster boots still glowing from the flight",
+     "preset": "stride_prop",
+     "use": "sig_hold",
+     "prop": "a bundle of fresh marigolds and magenta blossoms bound in a softly glowing ribbon of cut-light lace",
+     "outfit": {
+      "bold": "a sky-courier look fitted to her body — a cropped utility vest of smart fabric glowing with lace-fine cut-paper flower patterns over a fitted bandeau top, a cargo harness across her body, short shorts, thruster boots and shoulder straps flaring with small gilded wing fins",
+      "moderate": "a sky-courier look — a many-pocketed utility vest of smart fabric glowing with lace-fine cut-paper flower patterns over a fitted top, a cargo harness across her body, a short skirt over sheer smart tights, thruster boots and shoulder straps flaring with small gilded wing fins",
+      "low": "a sky-courier look — a long-sleeved fitted flight top under a many-pocketed utility vest of smart fabric glowing with lace-fine cut-paper flower patterns, a cargo harness across her body, slim trousers, thruster boots and shoulder straps flaring with small gilded wing fins"
+     }
+    }
+   }
   }
  }
 }

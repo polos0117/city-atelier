@@ -250,6 +250,102 @@
   "chope": { "ko": "시원한 생맥주(쇼피)", "worlds": {
    "fantasy": { "en": "a small pewter tankard of pale golden ale with a thick white head" },
    "steampunk": { "en": "a slim glass of ice-cold pale lager with a thick white head" },
-   "cyberpunk": { "en": "a slim glass of ice-cold pale lager with a thick white head on a softly glowing coaster" } } }
+   "cyberpunk": { "en": "a slim glass of ice-cold pale lager with a thick white head on a softly glowing coaster" } } },
+  "busan_hoe": { "ko": "회 한 접시(자갈치)", "worlds": {
+   "fantasy": { "en": "a wooden plate of fresh sliced raw fish with lettuce leaves, garlic and a little dish of red chili paste" },
+   "steampunk": { "en": "a porcelain plate of fresh sliced raw fish with lettuce leaves, garlic and a little dish of red chili paste" },
+   "cyberpunk": { "en": "a chilled glass plate of fresh sliced raw fish with lettuce leaves, garlic and a little dish of red chili paste on a softly glowing tray" } } },
+  "busan_eomuk": { "ko": "부산 어묵 꼬치와 국물", "worlds": {
+   "fantasy": { "en": "long skewers of pressed fish cake dripping with hot broth, and a little clay cup of broth" },
+   "steampunk": { "en": "long skewers of pressed fish cake dripping with hot broth, and a little enamel cup of broth" },
+   "cyberpunk": { "en": "long skewers of pressed fish cake dripping with hot broth, and a self-heating cup of broth with a glowing band" } } },
+  "busan_gukbap": { "ko": "돼지국밥 한 그릇", "worlds": {
+   "fantasy": { "en": "a heavy earthenware bowl of steaming milky pork-bone soup with rice and chopped chives" },
+   "steampunk": { "en": "a heavy stoneware bowl of steaming milky pork-bone soup with rice and chopped chives" },
+   "cyberpunk": { "en": "a heavy heat-keeping bowl of steaming milky pork-bone soup with rice and chopped chives, a faint glowing rim" } } },
+  "busan_milmyeon": { "ko": "밀면 한 그릇", "worlds": {
+   "fantasy": { "en": "a brass bowl of cold wheat noodles in icy broth with cucumber and half a boiled egg" },
+   "steampunk": { "en": "a chilled enamel bowl of cold wheat noodles in icy broth with cucumber and half a boiled egg" },
+   "cyberpunk": { "en": "a self-chilling bowl of cold wheat noodles in icy broth with cucumber and half a boiled egg, frost glowing faintly on its rim" } } },
+  "bangkok_tuktuk": { "ko": "툭툭(지붕만 있는 삼륜 택시)", "worlds": {
+   "fantasy": { "en": "a little open three-wheeled rune-cart with a striped silk canopy and lantern trim, humming softly as it glides" },
+   "steampunk": { "en": "a brass three-wheeled steam-cab with a striped canvas canopy, puffing clean white steam" },
+   "cyberpunk": { "en": "a sleek open three-wheeled hover-cab with a softly glowing canopy" } } },
+  "bangkok_boat_noodles": { "ko": "보트 누들(작은 그릇 쌀국수)", "worlds": {
+   "fantasy": { "en": "a tiny glazed bowl of dark, fragrant noodle soup with fresh herbs and crisp garlic" },
+   "steampunk": { "en": "a tiny enamel bowl of dark, fragrant noodle soup with fresh herbs and crisp garlic" },
+   "cyberpunk": { "en": "a tiny self-warming bowl of dark, fragrant noodle soup with fresh herbs and crisp garlic" } } },
+  "bangkok_mango_rice": { "ko": "망고 찰밥", "worlds": {
+   "fantasy": { "en": "ripe golden mango slices beside sweet sticky rice drizzled with coconut cream on a banana leaf" },
+   "steampunk": { "en": "ripe golden mango slices beside sweet sticky rice drizzled with coconut cream on a little enamel plate" },
+   "cyberpunk": { "en": "ripe golden mango slices beside sweet sticky rice drizzled with coconut cream in a molded leaf-fibre tray" } } },
+  "bangkok_thai_tea": { "ko": "차옌(주황빛 타이 아이스 밀크티)", "worlds": {
+   "fantasy": { "en": "a tall glass of bright orange iced tea swirled with cream" },
+   "steampunk": { "en": "a tall glass of bright orange iced milk tea in a brass holder" },
+   "cyberpunk": { "en": "a chilled glass tumbler of bright orange iced milk tea, softly lit from below" } } },
+  "bangkok_garland": { "ko": "재스민 꽃줄(꽃 목걸이)", "worlds": {
+   "fantasy": { "en": "a strung garland of white jasmine buds and rosebuds with a dangling tassel of blossoms" },
+   "steampunk": { "en": "a strung garland of white jasmine buds and rosebuds fastened with a little brass bead" },
+   "cyberpunk": { "en": "a strung garland of fresh white jasmine buds threaded with tiny glowing beads" } } },
+  "bangkok_water_splash": { "ko": "송끄란 물그릇 · 물 뿌리개", "worlds": {
+   "fantasy": { "en": "a small silver bowl brimming with cool water, ready to splash" },
+   "steampunk": { "en": "a polished brass pump-squirter full of cool water" },
+   "cyberpunk": { "en": "a sleek translucent water-blaster glowing softly as it fires an arc of water" } } },
+  "barcelona_tapas": { "ko": "타파스와 판 암 토마켓(토마토 바른 빵)", "worlds": {
+   "fantasy": { "en": "little earthenware plates of olives, cured ham and fried potatoes beside slices of bread rubbed with tomato and olive oil" },
+   "steampunk": { "en": "little glazed plates of olives, cured ham and fried potatoes beside slices of bread rubbed with tomato and olive oil on a marble counter" },
+   "cyberpunk": { "en": "little plates of olives, cured ham and fried potatoes beside slices of bread rubbed with tomato and olive oil on a softly glowing tray" } } },
+  "barcelona_churros": { "ko": "추로스와 핫초콜릿", "worlds": {
+   "fantasy": { "en": "a plate of long ridged fried-dough sticks dusted with sugar beside an earthenware cup of thick dark hot chocolate for dipping" },
+   "steampunk": { "en": "a plate of long ridged churros dusted with sugar beside a porcelain cup of thick dark hot chocolate for dipping" },
+   "cyberpunk": { "en": "a plate of long ridged churros dusted with sugar beside a self-heating cup of thick dark hot chocolate with a glowing rim" } } },
+  "barcelona_rose": { "ko": "밀 이삭을 곁들인 빨간 장미 한 송이", "worlds": {
+   "fantasy": { "en": "a single long-stemmed red rose with an ear of wheat, tied together with a silk ribbon" },
+   "steampunk": { "en": "a single long-stemmed red rose with an ear of wheat, wrapped in a twist of paper and tied with a ribbon" },
+   "cyberpunk": { "en": "a single real long-stemmed red rose with an ear of wheat in a clear sleeve tied with a softly glowing ribbon" } } },
+  "sydney_flat_white": { "ko": "플랫 화이트", "worlds": {
+   "fantasy": { "en": "a small earthenware cup of strong dark brew topped with a thin velvety layer of steamed milk" },
+   "steampunk": { "en": "a white porcelain cup of strong coffee topped with a thin velvety layer of steamed milk, on a brass saucer" },
+   "cyberpunk": { "en": "a warm ceramic cup of flat white, a thin velvety layer of steamed milk with a leaf drawn on top" } } },
+  "sydney_sausage_sizzle": { "ko": "소시지 시즐(빵에 싼 구운 소시지)", "worlds": {
+   "fantasy": { "en": "a sausage grilled over the hearth folded in a slice of fresh bread with fried onions" },
+   "steampunk": { "en": "a sausage hot off the brass griddle folded in a slice of white bread with fried onions" },
+   "cyberpunk": { "en": "a grilled sausage folded in a slice of white bread with fried onions, wrapped in a thin compostable sleeve" } } },
+  "sydney_oysters": { "ko": "굴 한 접시", "worlds": {
+   "fantasy": { "en": "a wooden platter of fresh oysters on crushed ice with lemon wedges" },
+   "steampunk": { "en": "a silver platter of fresh oysters on crushed ice with lemon wedges" },
+   "cyberpunk": { "en": "a chilled glass platter of fresh oysters on softly glowing ice with lemon wedges" } } },
+  "sydney_surfboard": { "ko": "서핑 보드", "worlds": {
+   "fantasy": { "en": "a long surfboard of pale polished wood" },
+   "steampunk": { "en": "a long varnished wooden surfboard with a brass-capped nose" },
+   "cyberpunk": { "en": "a slim surfboard of pale smart composite with a softly glowing fin line" } } },
+  "mexicocity_taco": { "ko": "타코 알 파스토르(트롬포 고기 · 파인애플)", "worlds": {
+   "fantasy": { "en": "two small soft corn flatbreads heaped with spiced meat shaved from a turning spit, a sliver of pineapple, onion and coriander on top" },
+   "steampunk": { "en": "two small corn tortillas heaped with marinated pork shaved from the spit, a sliver of pineapple, onion and coriander, on a little enamel plate" },
+   "cyberpunk": { "en": "two small corn tortillas heaped with marinated pork shaved from the spit, a sliver of pineapple, onion and coriander, on a little softly glowing tray" } } },
+  "mexicocity_tamal": { "ko": "타말과 따뜻한 아톨레", "worlds": {
+   "fantasy": { "en": "a steaming tamal in its corn husk and a clay cup of warm, thick corn drink" },
+   "steampunk": { "en": "a steaming tamal in its corn husk and an enamel cup of hot, thick atole" },
+   "cyberpunk": { "en": "a steaming tamal in its corn husk and a self-warming cup of hot, thick atole" } } },
+  "mexicocity_concha": { "ko": "콘차(조개 무늬 단빵)", "worlds": {
+   "fantasy": { "en": "a round sweet bun with a crackly sugar top scored like a seashell, on a little glazed plate" },
+   "steampunk": { "en": "a round sweet concha bun with a crackly sugar top scored like a seashell, in a twist of brown paper" },
+   "cyberpunk": { "en": "a round sweet concha bun with a crackly sugar top scored like a seashell, in a thin bag of clear smart film" } } },
+  "mexicocity_esquites": { "ko": "에스키테스(컵에 담은 옥수수 알)", "worlds": {
+   "fantasy": { "en": "a little clay cup of warm corn kernels with lime, chili and grated cheese, a carved wooden spoon in it" },
+   "steampunk": { "en": "a paper cup of warm corn kernels with lime, chili and grated cheese, a little tin spoon in it" },
+   "cyberpunk": { "en": "a cup of warm corn kernels with lime, chili and grated cheese, a softly glowing spoon in it" } } },
+  "mexicocity_pulque": { "ko": "풀케(용설란 발효주) — 과일 큐라도", "worlds": {
+   "fantasy": { "en": "a greenish hand-blown glass of milky agave drink swirled pink with fruit" },
+   "steampunk": { "en": "a greenish hand-blown glass of milky pulque, cured pink with fruit" },
+   "cyberpunk": { "en": "a greenish hand-blown glass of milky pulque, cured pink with fruit, on a glowing coaster" } } },
+  "mexicocity_mask": { "ko": "루차 리브레 가면", "worlds": {
+   "fantasy": { "en": "a bright embroidered silk wrestler's mask with flame-shaped trim around the eyes, held in her hand" },
+   "steampunk": { "en": "a bright laced satin wrestler's mask trimmed with little brass eyelets, held in her hand" },
+   "cyberpunk": { "en": "a bright wrestler's mask of smart fabric whose flame patterns slowly shift, held in her hand" } } },
+  "mexicocity_papel_picado": { "ko": "파펠 피카도(오린 종이 깃발 줄)", "worlds": {
+   "fantasy": { "en": "strings of lace-fine cut-silk banners in bright colours fluttering overhead" },
+   "steampunk": { "en": "strings of bright cut tissue-paper banners fluttering overhead" },
+   "cyberpunk": { "en": "strings of cut-light banners in bright colours drifting overhead" } } }
  }
 }

@@ -28,7 +28,7 @@ import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WORLDS = ["fantasy", "steampunk", "cyberpunk"]
-CITY_KEYS = ["seoul", "tokyo", "beijing", "paris", "london", "rome", "newyork", "istanbul", "cairo", "rio"]
+CITY_KEYS = ["seoul", "tokyo", "beijing", "paris", "london", "rome", "newyork", "istanbul", "cairo", "rio", "busan", "bangkok", "barcelona", "sydney", "mexicocity"]
 KEY = re.compile(r"^[a-z0-9]+$")
 HEX = re.compile(r"^#[0-9A-Fa-f]{6}$")
 URL = re.compile(r"^https?://\S+$")
@@ -37,7 +37,7 @@ LOOK = {"face": ("face_shape", "eyes", "brows", "nose", "lips", "eye_color"), "s
 FACE_DESIGN = {"face": ("age", "impression", "skin_tone", "eye_size", "eye_tilt", "mark", "expr"), "silhouette": ("bangs",)}
 FACE_KEYS = ("face_shape", "eyes", "brows", "nose", "lips")
 FACE_DIFF_MIN = 3
-NO_FRECKLES = ("Korean", "Japanese", "Chinese")   # 동양 쪽은 주근깨 없음(사용자 2026-11-22 「설계에 동양쪽은 주근깨 안나오게 해줘」)
+NO_FRECKLES = ("Korean", "Japanese", "Chinese", "Thai")   # 동양 쪽은 주근깨 없음(사용자 2026-11-22 「설계에 동양쪽은 주근깨 안나오게 해줘」)
 DIFFER = (("silhouette", "hair_color"), ("silhouette", "body"), ("face", "face_shape"), ("silhouette", "hair"))
 WEAR = ("costume", "bold", "moderate", "low")
 SHORT_SYMBOLS, SHORT_WORLD = 40, 20
