@@ -37,6 +37,7 @@ LOOK = {"face": ("face_shape", "eyes", "brows", "nose", "lips", "eye_color"), "s
 FACE_DESIGN = {"face": ("age", "impression", "skin_tone", "eye_size", "eye_tilt", "mark", "expr"), "silhouette": ("bangs",)}
 FACE_KEYS = ("face_shape", "eyes", "brows", "nose", "lips")
 FACE_DIFF_MIN = 3
+NO_FRECKLES = ("Korean", "Japanese", "Chinese")   # 동양 쪽은 주근깨 없음(사용자 2026-11-22 「설계에 동양쪽은 주근깨 안나오게 해줘」)
 DIFFER = (("silhouette", "hair_color"), ("silhouette", "body"), ("face", "face_shape"), ("silhouette", "hair"))
 WEAR = ("costume", "bold", "moderate", "low")
 SHORT_SYMBOLS, SHORT_WORLD = 40, 20
@@ -110,7 +111,7 @@ def check(doc):
         if w not in WORLDS:
             errs.append("vocab 의 %r 는 아는 세계가 아니다" % w)
 
-    def worlds_check(here, ws):
+    def worlds_check(here, ws, people=""):
         if sorted(ws) != sorted(WORLDS):
             errs.append(here + " worlds 는 세 세계 다 — %r" % sorted(ws))
         for w, body in ws.items():
@@ -146,6 +147,8 @@ def check(doc):
                         errs.append("%s look.%s.%s 값은 소문자 열쇠 — %r" % (wh, grp, f, val))
             if not (lk.get("why") or "").strip():
                 errs.append(wh + " look.why 가 비었다")
+            if people in NO_FRECKLES and ((lk.get("face") or {}).get("mark") == "freckles" or "주근깨" in (lk.get("why") or "") or "freckl" in json.dumps(body, ensure_ascii=False).lower()):
+                errs.append(wh + " 동양 쪽(%s) 사람에 주근깨 — 다른 표시(mark)로" % people)
             # 옷의 꼴 — 세계별 실루엣 한 칸(2026-11-20 사용자 「안에 입는옷은 다 똑같아보이는데」 → 「응 바꿔줘」). 열쇠는 lib/prompt-spec.js 의 그 세계 *_SILHOUETTES
             if body.get("sil") not in SIL_KEYS.get(w, ()):
                 errs.append("%s sil 이 없거나 그 세계 실루엣 표에 없다 — %r" % (wh, body.get("sil")))
@@ -232,7 +235,7 @@ def check(doc):
         for part in [x.strip() for x in line.split(" · ") if x.strip()]:
             if not any((s.get("ko") or "").startswith(part) for s in sy):
                 errs.append(here + " card_ko.symbols 의 %r 가 symbols[].ko 머리에 없다(지어내지 않는다)" % part)
-        worlds_check(here, ws)
+        worlds_check(here, ws, (c.get("people") or {}).get("en") or "")
         lms = c.get("landmarks") or []
         seen_lm = set()
         for l in lms:
@@ -250,7 +253,7 @@ def check(doc):
             if not isinstance(lw, dict) or not lw:
                 errs.append(lh + " worlds 는 세 세계 다")
                 continue
-            worlds_check(lh, lw)
+            worlds_check(lh, lw, (c.get("people") or {}).get("en") or "")
             for w in WORLDS:
                 mine = (((lw.get(w) or {}).get("look") or {}).get("face") or {})
                 for other, ow in [(here, ws)] + [("랜드마크 %r" % o.get("key"), o.get("worlds") or {}) for o in lms if o is not l and o.get("key") in seen_lm]:

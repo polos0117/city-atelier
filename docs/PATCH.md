@@ -7,6 +7,12 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-22 · claude · 동양 쪽 설계에 주근깨 빼기
+- 사용자 「설계에 동양쪽은 주근깨 안나오게 해줘」. 한국 · 일본 · 중국 사람 설계 가운데 주근깨(mark freckles)가 다섯이었다.
+- data/city-design.json — 서울 스팀펑크 → 입가 점(mole_lip), 남산 판타지 → 눈 밑 점(mole_eye), 한강철교 스팀펑크 → 발그레한 볼(blush), 도쿄 레인보우 브리지 스팀펑크 → 입가 점, 베이징 자금성 스팀펑크 → 눈 밑 점. look.why 의 주근깨 말도 같이. 다른 나라 사람의 주근깨는 그대로.
+- tools/city-design.py — NO_FRECKLES(Korean · Japanese · Chinese): 그 나라 사람 설계(도시 · 랜드마크)에 주근깨(mark · why · 영어 글)가 있으면 오류. tests/city-design.py 에 걸림 하나 더. IMAGE_RULES.md 1절에 한 줄.
+- 한국 · 일본 · 중국 카드 세계 그림 지시문(화풍 셋)에 freckle 이 0 인 것을 뽑아 봤다.
+
 ## 2026-11-21 · claude · 랜드마크 스물일곱 — 서울 빼고 아홉 도시에 셋씩
 - 사용자 「도시공방 서울 제외한 나머지 9나라의 랜드마크를 3개씩 추가해서 업로드까지 해줘」. 카드마다 세 세계 세 사람(도시 사람 · 같은 도시 다른 랜드마크와 얼굴 칸 셋 이상 다름, 굴곡형 위주 · 마른 체형은 도시마다 많아야 하나), 근거 src(위키백과). 예배 장소 · 종교 조각상 · 상표 걸린 사유 건물은 카드로 안 함, 도시 사람과 겹치는 명소는 뺌.
 - data/city-design.json — landmarks: 도쿄 tokyostation · rainbowbridge · uenopark / 뉴욕 liberty · centralpark · grandcentral / 로마 colosseum · spanishsteps · navona / 파리 eiffeltower(en 은 이름 없이 the iron lattice tower on the Champ de Mars) · louvre · opera(en the grand opera house) / 런던 bigben(en the clock tower of Westminster) · towerbridge · buckingham / 베이징 forbiddencity · summerpalace · greatwall / 이스탄불 cistern · grandbazaar · dolmabahce / 카이로 pyramids · sphinx · cairotower / 리우 sugarloaf · copacabana · lapaarches. 부모 도시 palette 가 다른 명소 말(트레비 청록 · 북 · 장미창 등)이면 그 세계에 palette 를 따로.

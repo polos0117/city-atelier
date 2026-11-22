@@ -387,7 +387,7 @@
               "skin_tone": "golden_tan",
               "eye_size": "medium",
               "eye_tilt": "level",
-              "mark": "freckles",
+              "mark": "mole_lip",
               "expr": "confident"
             },
             "silhouette": {
@@ -396,7 +396,7 @@
               "hair_color": "copper",
               "bangs": "side_swept"
             },
-            "why": "가스등 판타지 서울의 비행선 항해사(처음 설계는 철교 정비공) — 2026-11-19 사용자 「이 건장한 느낌말고 설계를 좀 바꾸자. 예쁘게」 로 다시: 날씬하고 탄탄한 몸(lean_toned) · 1900~1920년대 결의 윤기 나는 구리빛 핑거웨이브(finger_waves, 옆으로 쓸어 넘긴 앞머리) · 광대가 살짝 선 다이아몬드형 얼굴 · 크고 둥근 눈 · 부드러운 둥근 눈썹 · 살짝 들린 코 · 도톰한 하트 입술, 우아한 인상에 자신 있는 표정, 20대 중반. 머리색 구리빛(copper) · 호박색 눈 · 그을린 피부의 주근깨는 그대로. 판타지(갸름 · 홑꺼풀 긴 눈 · 남빛 긴 생머리) · 사이버펑크(하트형 · 올라간 눈 · 청록 단발)와 얼굴 칸 다섯 · 머리 · 체형이 다 다르다."
+            "why": "가스등 판타지 서울의 비행선 항해사(처음 설계는 철교 정비공) — 2026-11-19 사용자 「이 건장한 느낌말고 설계를 좀 바꾸자. 예쁘게」 로 다시: 날씬하고 탄탄한 몸(lean_toned) · 1900~1920년대 결의 윤기 나는 구리빛 핑거웨이브(finger_waves, 옆으로 쓸어 넘긴 앞머리) · 광대가 살짝 선 다이아몬드형 얼굴 · 크고 둥근 눈 · 부드러운 둥근 눈썹 · 살짝 들린 코 · 도톰한 하트 입술, 우아한 인상에 자신 있는 표정, 20대 중반. 머리색 구리빛(copper) · 호박색 눈 · 그을린 피부에 입가 점. 판타지(갸름 · 홑꺼풀 긴 눈 · 남빛 긴 생머리) · 사이버펑크(하트형 · 올라간 눈 · 청록 단발)와 얼굴 칸 다섯 · 머리 · 체형이 다 다르다."
           },
           "hold": {
             "en": "an ornate brass spyglass"
@@ -870,7 +870,7 @@
                   "skin_tone": "golden_tan",
                   "eye_size": "medium",
                   "eye_tilt": "up",
-                  "mark": "freckles",
+                  "mark": "mole_eye",
                   "expr": "mischievous"
                 },
                 "silhouette": {
@@ -879,7 +879,7 @@
                   "hair_color": "flame_orange",
                   "bangs": "choppy"
                 },
-                "why": "봉수대의 불을 잇는 정령 — 곧은 남빛 여왕 · 갈기 머리 해치 신수 · 쪽머리 무희와 달리 불꽃처럼 가볍고 활달한 사람. 날씬하고 탄탄한 체형(lean_toned) · 어깨 아래로 불길처럼 일렁이는 긴 웨이브 불꽃 주황(long_wavy · flame_orange) · 들쭉날쭉한 앞머리, 눈은 주홍빛(cinnabar). 하트형 얼굴 · 올라간 가는 눈 · 날 선 눈썹 · 살짝 들린 코 · 가늘고 긴 입술, 그을린 피부에 주근깨, 20대 초반의 명랑한 인상."
+                "why": "봉수대의 불을 잇는 정령 — 곧은 남빛 여왕 · 갈기 머리 해치 신수 · 쪽머리 무희와 달리 불꽃처럼 가볍고 활달한 사람. 날씬하고 탄탄한 체형(lean_toned) · 어깨 아래로 불길처럼 일렁이는 긴 웨이브 불꽃 주황(long_wavy · flame_orange) · 들쭉날쭉한 앞머리, 눈은 주홍빛(cinnabar). 하트형 얼굴 · 올라간 가는 눈 · 날 선 눈썹 · 살짝 들린 코 · 가늘고 긴 입술, 그을린 피부에 눈 밑 점, 20대 초반의 명랑한 인상."
               },
               "hold": {
                 "en": "a small beacon brazier lantern"
@@ -1107,7 +1107,7 @@
                   "skin_tone": "warm_beige",
                   "eye_size": "large",
                   "eye_tilt": "down",
-                  "mark": "freckles",
+                  "mark": "blush",
                   "expr": "laughing"
                 },
                 "silhouette": {
@@ -1116,7 +1116,7 @@
                   "hair_color": "terracotta",
                   "bangs": "baby"
                 },
-                "why": "철교를 달리는 기관사 — 서울 스팀펑크의 구리빛 핑거웨이브 항해사 · 크림빛 안주인 · 재회색 전파 등대지기와 달리 밝고 둥글둥글한 사람. 탄탄한 운동 체형(athletic) · 높이 묶은 두 갈래 테라코타색 머리(twin_tails · terracotta) · 짧은 아기 앞머리, 눈은 꿀빛. 둥근 얼굴 · 처진 부드러운 눈 · 가는 아치 눈썹 · 살짝 들린 코 · 넓고 도톰한 입술, 따뜻한 베이지 피부에 주근깨, 20대 초반의 명랑한 인상."
+                "why": "철교를 달리는 기관사 — 서울 스팀펑크의 구리빛 핑거웨이브 항해사 · 크림빛 안주인 · 재회색 전파 등대지기와 달리 밝고 둥글둥글한 사람. 탄탄한 운동 체형(athletic) · 높이 묶은 두 갈래 테라코타색 머리(twin_tails · terracotta) · 짧은 아기 앞머리, 눈은 꿀빛. 둥근 얼굴 · 처진 부드러운 눈 · 가는 아치 눈썹 · 살짝 들린 코 · 넓고 도톰한 입술, 따뜻한 베이지 피부에 발그레한 볼, 20대 초반의 명랑한 인상."
               },
               "hold": {
                 "en": "a brass locomotive whistle"
@@ -1890,7 +1890,7 @@
                   "skin_tone": "golden_tan",
                   "eye_size": "large",
                   "eye_tilt": "level",
-                  "mark": "freckles",
+                  "mark": "mole_lip",
                   "expr": "soft_smile"
                 },
                 "silhouette": {
@@ -1899,7 +1899,7 @@
                   "hair_color": "rose_gold",
                   "bangs": "choppy"
                 },
-                "why": "케이블 위를 걸으며 햇빛 거울 등을 돌보는 줄타기 정비사 — 도쿄 스팀펑크의 갸름한 얼굴 · 삼나무빛 반묶음 점등원과 달리 탄탄하고 굴곡 있는 활달한 사람. 탄탄한 곡선 체형(curvy_athletic) · 높이 묶은 장밋빛 금발 포니테일(ponytail · rose_gold — 노을 진 다리 빛) · 들쭉날쭉한 앞머리, 눈은 꿀빛. 부드럽게 각진 얼굴 · 크고 둥근 눈 · 낮고 짙은 눈썹 · 살짝 들린 코 · 도톰한 하트 입술, 햇볕에 그은 피부에 주근깨, 20대 초반의 밝은 인상에 옅은 미소."
+                "why": "케이블 위를 걸으며 햇빛 거울 등을 돌보는 줄타기 정비사 — 도쿄 스팀펑크의 갸름한 얼굴 · 삼나무빛 반묶음 점등원과 달리 탄탄하고 굴곡 있는 활달한 사람. 탄탄한 곡선 체형(curvy_athletic) · 높이 묶은 장밋빛 금발 포니테일(ponytail · rose_gold — 노을 진 다리 빛) · 들쭉날쭉한 앞머리, 눈은 꿀빛. 부드럽게 각진 얼굴 · 크고 둥근 눈 · 낮고 짙은 눈썹 · 살짝 들린 코 · 도톰한 하트 입술, 햇볕에 그은 피부에 입가 점, 20대 초반의 밝은 인상에 옅은 미소."
               },
               "hold": {
                 "en": "a small brass sun-mirror lamp that has stored the day's light"
@@ -2506,7 +2506,7 @@
                   "skin_tone": "warm_beige",
                   "eye_size": "large",
                   "eye_tilt": "level",
-                  "mark": "freckles",
+                  "mark": "mole_eye",
                   "expr": "focused"
                 },
                 "silhouette": {
@@ -2515,7 +2515,7 @@
                   "hair_color": "wine_red",
                   "bangs": "curtain"
                 },
-                "why": "궁성 시계 전각의 자동인형 시계를 돌보는 젊은 시계 장인 — 작고 부지런한 사람. 작지만 굴곡 있는 몸(petite_curvy) · 두 갈래로 길게 땋은 짙은 옻칠빛 와인 레드 머리(braids · wine_red) · 커튼 앞머리 · 소매를 걷은 블라우스와 공구 띠의 발명가 실루엣(lady_inventor). 달걀형 얼굴 · 동그란 아몬드 눈 · 부드러운 둥근 눈썹 · 곧고 가는 코 · 가늘고 단정한 입술, 주홍(cinnabar) 눈, 따뜻한 베이지 피부에 주근깨, 20대 초반의 부드러운 인상에 일에 몰두한 표정(focused). 베이징 스팀펑크 고루 북지기(둥근형 · 로열 블루 단발 · 모래시계)와 얼굴 칸 다섯이 다 다르다."
+                "why": "궁성 시계 전각의 자동인형 시계를 돌보는 젊은 시계 장인 — 작고 부지런한 사람. 작지만 굴곡 있는 몸(petite_curvy) · 두 갈래로 길게 땋은 짙은 옻칠빛 와인 레드 머리(braids · wine_red) · 커튼 앞머리 · 소매를 걷은 블라우스와 공구 띠의 발명가 실루엣(lady_inventor). 달걀형 얼굴 · 동그란 아몬드 눈 · 부드러운 둥근 눈썹 · 곧고 가는 코 · 가늘고 단정한 입술, 주홍(cinnabar) 눈, 따뜻한 베이지 피부에 눈 밑 점, 20대 초반의 부드러운 인상에 일에 몰두한 표정(focused). 베이징 스팀펑크 고루 북지기(둥근형 · 로열 블루 단발 · 모래시계)와 얼굴 칸 다섯이 다 다르다."
               },
               "hold": {
                 "en": "a small gilded automaton clock whose top opens into a slowly turning lotus of brass petals"
