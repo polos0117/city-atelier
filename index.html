@@ -17,13 +17,13 @@
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;700&display=swap"></noscript>
 <link rel="stylesheet" href="lib/workspace.css?v=5">
 <script src="lib/workspace-theme.js?v=4"></script>
-<script src="lib/words.js?v=38"></script>
+<script src="lib/words.js?v=39"></script>
 <script src="lib/favorites.js?v=1"></script>
 <script src="lib/patch.js?v=1"></script>
 <script src="lib/walk-core.js?v=9"></script>
 <script src="lib/img.js?v=12"></script>
 <script src="lib/globe-math.js?v=1"></script>
-<link rel="stylesheet" href="lib/room.css?v=8">
+<link rel="stylesheet" href="lib/room.css?v=9">
 <link rel="stylesheet" href="lib/toolbox.css?v=4">
 <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"}}</script>
 </head>
@@ -34,8 +34,8 @@ import {h,render} from 'https://esm.sh/preact@10.24.3';
 import {useState,useEffect,useRef,useMemo} from 'https://esm.sh/preact@10.24.3/hooks';
 import {Toolbox} from './lib/toolbox.js?v=7';
 import {mountGlobe} from './lib/globe.js?v=1';
-import {CityStage,CardView,ready,latlon,known,landmarksOf} from './lib/city-view.js?v=5';
-import {DexView,worldFiles,freshFiles} from './lib/dex-view.js?v=6';
+import {CityStage,CardView,ready,latlon,known,landmarksOf} from './lib/city-view.js?v=6';
+import {DexView,worldFiles,freshFiles} from './lib/dex-view.js?v=7';
 const W = window.W, A = window.AtelierAppearance, R = window.AtelierWalk, GM = window.GlobeMath, IMG = window.AtelierImg;
 const here = () => R.readRoute(location.search);
 const remember = () => { try { sessionStorage.setItem('city_walk_last', location.search); } catch (e) {} };
@@ -81,9 +81,10 @@ function Theater() {
   useEffect(() => {
     if (!data || !route.city) return;
     const c = data.d.cities.find(x => x.key === route.city);
-    const keys = [route.city, ...(c ? landmarksOf(c).map(m => m.key) : [])];   /* 랜드마크 카드 · 줄도 함께 */
+    /* 도시 무대는 그 도시 그림만, 랜드마크는 그 랜드마크 그림을 열 때 꺼진다(2026-11-22 — 전엔 도시를 열면 랜드마크 새 그림도 같이 꺼져 랜드마크 점이 보일 틈이 없었다) */
+    const keys = route.card && c && landmarksOf(c).some(m => m.key === route.card) ? [route.card] : [route.city];
     if (IMG.markSeen(keys.flatMap(k => data.d.vocab.worlds.flatMap(w => worldFiles(data.img[k], w))), TODAY)) setSeen(n => n + 1);
-  }, [data, route.city]);
+  }, [data, route.city, route.card]);
   const fresh = data ? freshFiles(data, TODAY) : [];
   const seenAll = () => { if (IMG.markSeen(fresh, TODAY)) setSeen(n => n + 1); };
   /* 막 내림 — 클래스를 다시 붙여 처음부터. 움직임 끔이면 CSS 가 아무것도 돌리지 않는다 */
@@ -120,7 +121,7 @@ function Theater() {
   let body;
   if (fail) body = [h('section', { class: 'th-marquee', key: 'm' }, h('p', null, W('walk.fail')))];
   else if (!data) body = [h('main', { class: 'th-stage', key: 's' }, h('div', { class: 'th-slot', 'aria-hidden': 'true' })), h('section', { class: 'th-marquee', key: 'm' }, h('p', null, W('walk.loading')))];
-  else if (layer === 'city' || (layer === 'card' && !known(data.img, route.card, route.pic))) body = [h(CityStage, { key: 'c', data, city: route.city, world: look.world, st: route.st, from: route.tab, onBack: leave, onCard: (pic, card) => enter({ tab: route.tab, city: route.city, card, pic }) })];
+  else if (layer === 'city' || (layer === 'card' && !known(data.img, route.card, route.pic))) body = [h(CityStage, { key: 'c', data, city: route.city, world: look.world, st: route.st, from: route.tab, day: TODAY, onBack: leave, onCard: (pic, card) => enter({ tab: route.tab, city: route.city, card, pic }) })];
   else if (layer === 'card') body = [h(CardView, { key: 'k', data, city: route.card, pic: route.pic, st: route.st, onBack: leave,
     onPic: pic => { const next = Object.assign({}, route, { pic }); history.replaceState(history.state, '', location.pathname + R.routeSearch(next)); setRoute(next); } })];
   else if (layer === 'dex') body = [h(DexView, { key: 'd', data, world: look.world, st: route.st, day: TODAY, onCity: k => enter({ city: k, tab: 'dex' }),

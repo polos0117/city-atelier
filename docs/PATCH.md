@@ -7,6 +7,13 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-22 · claude · 랜드마크 새 그림 표시
+- 사용자 「도시공방 랜드마크에도 신규이미지 등록표시 만들어줘」. 새 그림 점(오늘 · 어제 등록분 중 이 기기에서 안 연 것)이 도시 세계 칸에만 있었고, 도시 무대를 열면 랜드마크 새 그림까지 같이 꺼졌다.
+- lib/city-view.js — 도시 무대 랜드마크 줄의 칸(.th-mark-fig)마다 그 세계 새 그림이면 「새」 점(칸 안쪽), CityStage 가 day 를 받음, markFiles(세계 그림 + 일상컷 파일 — dex-view worldFiles 와 같음).
+- lib/dex-view.js — 도감 도시 줄 이름 밑에 「랜드마크 새」(그 도시 랜드마크 어느 세계든 새 그림이면). lib/words.js dex.new.mark · dex.new.mark.label. lib/room.css — 랜드마크 칸 점 자리 · 「랜드마크 새」 꼴.
+- index.html — 도시 무대를 열면 그 도시 그림만 본 것으로, 랜드마크는 그 랜드마크 그림을 열 때 꺼짐(route.card). ?v — words 39 · room.css 9 · city-view 6 · dex-view 7.
+- tests/dex-screen.cjs — 도감 「랜드마크 새」 하나 · 무대 해치 칸 점(도시를 열어도 남음) · 44px · 넘침 · 해치를 열면 꺼짐. 새 점 칸 고르개를 .th-seat 안으로 좁힘.
+
 ## 2026-11-22 · claude · 동양 쪽 설계에 주근깨 빼기
 - 사용자 「설계에 동양쪽은 주근깨 안나오게 해줘」. 한국 · 일본 · 중국 사람 설계 가운데 주근깨(mark freckles)가 다섯이었다.
 - data/city-design.json — 서울 스팀펑크 → 입가 점(mole_lip), 남산 판타지 → 눈 밑 점(mole_eye), 한강철교 스팀펑크 → 발그레한 볼(blush), 도쿄 레인보우 브리지 스팀펑크 → 입가 점, 베이징 자금성 스팀펑크 → 눈 밑 점. look.why 의 주근깨 말도 같이. 다른 나라 사람의 주근깨는 그대로.

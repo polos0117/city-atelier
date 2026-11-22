@@ -27,7 +27,7 @@ const fake = [{ url: /\/data\/img\.json/, body: JSON.stringify(FAKE), contentTyp
 /* 설계 전 판 — 설계표 사본에서 리우만 미정({})으로(2026-11-21 리우까지 열 곳 모두 설계) */
 const DPRE = JSON.parse(JSON.stringify(D)); DPRE.cities.find(c => c.key === 'rio').worlds = {};
 const PRE = [{ url: /\/data\/city-design\.json/, body: JSON.stringify(DPRE), contentType: 'application/json' }];
-const newSeats = p => p.$$eval('.th-ticket .th-new', es => es.map(e => e.closest('.th-ticket').dataset.city + ':' + e.closest('.th-seat').dataset.world));
+const newSeats = p => p.$$eval('.th-ticket .th-seat .th-new', es => es.map(e => e.closest('.th-ticket').dataset.city + ':' + e.closest('.th-seat').dataset.world));
 
 (async () => {
   const srv = await H.serve(), br = await H.launch(), fonts = !!process.env.SHOT_DIR;
@@ -98,6 +98,17 @@ const newSeats = p => p.$$eval('.th-ticket .th-new', es => es.map(e => e.closest
     { const o = await open('/index.html?tab=dex&today=' + DAY, { fulfill: fakeLM }), p = o.page; await p.waitForSelector('.th-ticket');
       assert.equal(await p.textContent('.th-ticket[data-city="seoul"] .th-count b'), '4', '서울 일상컷 = 도시 2 + 해치 2');
       await p.tap('.th-head .tb-open'); assert.equal(await p.textContent('.tb-seen'), '새 그림 모두 확인 5', '랜드마크 새 일상컷도 센다(도시 넷 + 해치 하나)'); checks += 2; await o.ctx.close(); }
+    /* 랜드마크 새 그림 표시(2026-11-22) — 도감 서울 줄 이름 밑 「랜드마크 새」 · 도시 무대 해치 판타지 칸 점(도시를 열어도 안 꺼짐) · 해치 그림을 열면 꺼짐 */
+    { const o = await open('/index.html?tab=dex&today=' + DAY, { fulfill: fakeLM }), p = o.page; await p.waitForSelector('.th-ticket');
+      assert.equal(await p.textContent('.th-ticket[data-city="seoul"] .th-new-mark'), '랜드마크 새', '도감 서울 줄 — 랜드마크 새');
+      assert.equal(await p.locator('.th-new-mark').count(), 1, '랜드마크 새는 서울 줄 하나뿐');
+      await p.tap('.th-ticket[data-city="seoul"] .th-tk-name'); await p.waitForSelector('.th-marks');
+      assert.equal(await p.locator('.th-mark[data-card="seoul-haechi"] .th-mark-fig .th-new').count(), 1, '무대 해치 칸에 새 점 — 도시를 열어도 안 꺼짐');
+      assert.deepEqual(await smallTargets(p), [], '랜드마크 줄 44px'); assert(await H.noOverflow(p), '랜드마크 점 넘침 없음');
+      await p.tap('.th-mark[data-card="seoul-haechi"] .th-mark-fig'); await p.waitForSelector('.th-card'); await p.waitForFunction(() => /seoul-haechi_/.test(localStorage.getItem('city_seen_v1') || ''));
+      await p.goto(srv.base + '/index.html?tab=dex&today=' + DAY); await p.waitForSelector('.th-ticket');
+      assert.equal(await p.locator('.th-new-mark').count(), 0, '해치를 열면 랜드마크 새가 꺼진다');
+      assert.deepEqual(o.errors, [], '랜드마크 새 콘솔'); checks += 6; await o.ctx.close(); }
 
     /* 가짜 등록부 — 그림 · 일상컷 · 새 그림 점 · 열면 꺼짐 · 새로 고쳐도 · 한 장 */
     { const o = await open('/index.html?tab=dex&w=fantasy&today=' + DAY, { fulfill: fake }), p = o.page; await p.waitForSelector('.th-seat.has-pic'); await p.evaluate(() => document.fonts.ready);

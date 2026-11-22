@@ -232,6 +232,8 @@ button.th-fig {padding:0;border-style:solid;cursor:pointer}
 .th-mark-seats {display:flex;gap:6px}
 .th-mark-fig {width:56px;height:56px;padding:0;border-radius:10px;border:1.5px solid var(--rc);background:transparent;overflow:hidden;display:flex;align-items:center;justify-content:center}
 button.th-mark-fig {cursor:pointer}
+.th-mark-fig {position:relative}
+.th-mark-fig .th-new {top:2px;right:2px}   /* 랜드마크 새 그림 점 — 칸이 overflow:hidden 이라 안쪽에(2026-11-22) */
 .th-mark-fig.is-empty {border-style:dashed}
 .th-mark-fig img {width:100%;height:100%;object-fit:cover}
 .th-mark-fig i {width:12px;height:12px;border-radius:50%;background:var(--rc);opacity:.7}
@@ -312,6 +314,7 @@ html[data-motion="on"] .th-role:nth-child(3) .th-beam {animation-delay:.5s}
 .th-seat-n {position:absolute;left:-4px;bottom:-4px;min-width:16px;padding:1px 3px;border-radius:6px;background:var(--card);border:1px solid var(--rc);color:var(--text);font-size:9.5px;line-height:1.2}
 .th-new {position:absolute;top:-7px;right:-7px;padding:2px 4px;border-radius:6px;background:var(--text);color:var(--bg);font-style:normal;font-size:9px;font-weight:800;line-height:1.1;box-shadow:0 0 8px var(--accent2)}
 .th-count {text-align:center;line-height:1}
+.th-new.th-new-mark {position:static;align-self:flex-start;margin-top:3px;box-shadow:none}   /* 도감 도시 이름 밑 「랜드마크 새」(2026-11-22) */
 .th-count b {display:block;font-size:17px}
 .th-count small {display:block;margin-top:2px;font-size:9px;font-weight:700;color:var(--muted)}
 .th-tk-note {grid-column:1/-1;margin:2px 0 2px 16px;font-size:12px;line-height:1.5;color:var(--text)}
