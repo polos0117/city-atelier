@@ -329,6 +329,9 @@ const usageOf = u => {
   return x;
 };
 const pathKey = (preset, place) => preset + '@' + place;
+/* 화면비(2026-11-23 사용자 「배경이 보이니까 더 시원하네」 → 「다른 공방도 조금씩 해보자」) — 눕는 자세 · 환경 컷 3:2, 허리 위 · 3/4 1:1, 나머지 2:3(표 aspect_rules · 공용 모듈 aspectFor).
+   자유 설계 칸 · 게임 코스프레는 2:3. 이미 그린 컷(기록에 aspect 가 없거나 2:3)은 그대로 */
+const aspectOf = sc => C2.aspectFor ? C2.aspectFor(T2, sc) : '2:3';
 
 /* 한 칸 — 칸 갈래(kind: life · 노출 갈래 · cosplay · plain)대로 장소 · 의상 · 옷, 그 장소에서 쓸 수 있는 자세 추천 하나(frame 을 주면 그 프레이밍의 추천만).
    wantSig 면 소품 동작을 그 도시의 물건(설계표 hold)으로. 소품 동작은 덜 쓴 소품 쪽으로(무게 1/(1+횟수)², 따로 된 난수 흐름 — game 과 같다).
@@ -378,7 +381,7 @@ function slot(r, card, kind = 'plain', { frame = '', wantSig = false, usage = {}
   if (!worldOk(world, outfitEn(sc))) return null;
   const body = by(tree2.body, sc.body), head = by(tree2.head, sc.head);
   sc.expr = body && body.face_hidden && !(head && head.look_back) ? '' : pick(r, EXPRS);   /* 표정은 고르게 — 덜 쓴 쪽 무게(lean)를 걸면 덜 쓴 극단 표정으로 쏠렸다(2026-11-03) */
-  sc.axes = { ...FIXED_AXES }; sc.aspect = '2:3'; sc.unlocked = [];
+  sc.axes = { ...FIXED_AXES }; sc.aspect = aspectOf(sc); sc.unlocked = [];   /* 화면비 — 자세 · 프레이밍이 정해진 뒤(공용 모듈 aspectFor, 2026-11-23) */
   return sc;
 }
 
@@ -437,6 +440,8 @@ function check(cuts, card, base = [], others = []) {
     if (c.place && !cosPlace(c.place)) errs.push(`칸 ${c.n || '?'}: 게임 코스프레 장소 ${c.place} 는 그 계열을 받지 않는다`);
     if (cut && !cosCutOk(cut, c.place)) errs.push(`칸 ${c.n || '?'}: 물가 ${c.place} 엔 수영복 재단(${COS_SWIM.join(' · ')})만`);
   }
+  /* 화면비 — 새 컷은 계획대로(aspectFor). 이미 그린 컷은 2:3 이라 2:3 도 받는다. 자유 설계 칸은 칸을 정한 뒤 2:3 으로 맞춘다 */
+  for (const c of cuts) if (c.aspect && c.aspect !== '2:3' && !c.ofree && !c.sfree && c.aspect !== aspectOf(c)) errs.push(`칸 ${c.n || '?'}: 화면비 ${c.aspect} 가 계획(${aspectOf(c)})과 다르다`);
   /* 상황 노출 — 보통 컷 한 장에 늘(원소 SITU_RATE = 1 꼴, 2026-11-20 — 필수 · 코스프레 · 자유 칸엔 없다) */
   over('상황 노출', c => c.situ && 'situ', 1);
   for (const c of cuts) if (c.situ && kindOf(c) !== 'plain') errs.push(`칸 ${c.n || '?'}: 상황 노출은 보통 컷에만(이 컷은 ${kindOf(c)})`);
@@ -695,7 +700,7 @@ function ownCut(card, world, level = OWN_LEVELS[0], rr = Math.random) {
   for (const k of [...AMBIENT, 'season', 'cityWeather']) if (!sc[k]) delete sc[k];
   const body = by(tree2.body, sc.body), head = by(tree2.head, sc.head);
   return { ...sc, n: OWN_N, own: world, ...(row.prop ? { prop: '0', ownProp: row.prop } : {}), placeText: row.place, scene: row.activity, outfit: row.outfit[level] || row.outfit[OWN_LEVELS[0]], preset: row.preset,
-    expr: body && body.face_hidden && !(head && head.look_back) ? '' : EXPRS[Math.floor(rr() * EXPRS.length)], axes: { ...FIXED_AXES, skin_exposure: level }, aspect: '2:3', unlocked: [] };
+    expr: body && body.face_hidden && !(head && head.look_back) ? '' : EXPRS[Math.floor(rr() * EXPRS.length)], axes: { ...FIXED_AXES, skin_exposure: level }, aspect: aspectOf(sc), unlocked: [] };
 }
 const MUST = /^(필수 노출 갈래|먼 컷|가까운 컷|그 도시의 물건을 든 컷이 없다|생활 장면 필수 컷이 없다|게임 코스프레 컷이 없다|상황 노출 컷이 없다|옷 자유 컷이 없다|갈래 자유 컷이 없다)/;
 /* 아직 짤 칸 갈래 — KINDS 에서 이미 있는 컷(old)의 갈래를 하나씩 뺀 것(차례 그대로 — 생활 장면 컷이 맨 앞, 자유 설계 둘이 맨 뒤) */
@@ -859,7 +864,7 @@ function line(c) {
   const ko = (list, k) => (by(list, k) || {}).ko || k || '—', hand = k => k === 'prop' ? '소품' : ko(tree2.hands, k);
   const tko = (by(TIMES, c.time) || {}).ko, sko = (by(SEASONS(lifeOf(c.place) ? lifeOf(c.place).city : ''), c.season) || {}).ko, wko = (by(WEATHERS(lifeOf(c.place) ? lifeOf(c.place).city : ''), c.cityWeather) || {}).ko;
   return `${c.old ? '  (있음)' : '  '} ${c.n} ${requiredType(c) || isCosplay(c) || c.lifeMust ? '★' : ' '}${C2.awkward(T2, c.ofam, c.place).length ? '⚠' : ' '} ${lifeOf(c.place) ? '[장면] ' : '[일반] '}${p.ko} · ${[sko, wko, tko].filter(Boolean).join(' · ') || '—'} · ${f.ko}${it ? '(' + it.ko + ')' : ''} │ ${pr ? pr.ko : '—'} │ ` +
-    `${ko(tree2.postures, c.posture)} · ${c.frame} · ${ko(tree2.body, c.body)} · ${ko(tree2.head, c.head)} · 오른손 ${hand(c.right)} · 왼손 ${hand(c.left)}${u ? ' · ' + ko(tree2.props, u.prop) + ' ' + u.ko : ''}${c.legs ? ' · ' + ko(tree2.legs, c.legs) : ''}${c.gaze ? ' · 시선 ' + ko(tree2.gaze, c.gaze) : ''}${c.situ ? ' · 상황 ' + ko(T.CASUAL.situations, c.situ) : ''}${c.ofree ? ' · 옷 자유(노출 의상을 GPT · Claude 가)' : ''}${isCosplay(c) ? ' · 코스프레 ' + cosplayKo(c.cosplay) : ''}${c.lifeMust ? ' · 생활 장면 필수' : ''}`;
+    `${ko(tree2.postures, c.posture)} · ${c.frame} ${c.aspect || '2:3'} · ${ko(tree2.body, c.body)} · ${ko(tree2.head, c.head)} · 오른손 ${hand(c.right)} · 왼손 ${hand(c.left)}${u ? ' · ' + ko(tree2.props, u.prop) + ' ' + u.ko : ''}${c.legs ? ' · ' + ko(tree2.legs, c.legs) : ''}${c.gaze ? ' · 시선 ' + ko(tree2.gaze, c.gaze) : ''}${c.situ ? ' · 상황 ' + ko(T.CASUAL.situations, c.situ) : ''}${c.ofree ? ' · 옷 자유(노출 의상을 GPT · Claude 가)' : ''}${isCosplay(c) ? ' · 코스프레 ' + cosplayKo(c.cosplay) : ''}${c.lifeMust ? ' · 생활 장면 필수' : ''}`;
 }
 
 const FLAGS = new Set(['fresh']);
@@ -934,6 +939,6 @@ function main(argv) {
   }
   return 0;
 }
-module.exports = { LIFE, PROPS, lifeOf, lifePlaces, lifeAmbience, placeRules, BANNED, worldOk, NOT_USES, famsAt, plainFams, placeCands, openPlaces, GEN, KINDS, kindOf, LIFE_FIRST, ownCut, ownRow, OWN_N, OWN_LEVELS, ambient, POSE_WEIGHT, cardOf, plan, colorize, denierize, situate, makeFree, sceneText, freeText, recentScenes, SITUS, DENIERS, outfitEn, COLORS, check, record, recordRel, oldCuts, freeSlots, registered, requiredType, propUsage, sceneUsage, CASUAL_N, STYLE, WEIGHT_UNUSED, EXPOSE_TYPES,
+module.exports = { aspectOf, LIFE, PROPS, lifeOf, lifePlaces, lifeAmbience, placeRules, BANNED, worldOk, NOT_USES, famsAt, plainFams, placeCands, openPlaces, GEN, KINDS, kindOf, LIFE_FIRST, ownCut, ownRow, OWN_N, OWN_LEVELS, ambient, POSE_WEIGHT, cardOf, plan, colorize, denierize, situate, makeFree, sceneText, freeText, recentScenes, SITUS, DENIERS, outfitEn, COLORS, check, record, recordRel, oldCuts, freeSlots, registered, requiredType, propUsage, sceneUsage, CASUAL_N, STYLE, WEIGHT_UNUSED, EXPOSE_TYPES,
   COSPLAY, COS_FAM, COS_SWIM, COSPLAY_ROOTS, cosplayReposOk, isCosplay, cosItem, cutOfItem, cosCutOk, cosplayRow, cosplayUsage, cosplayTally, cosplayOpen, cosplayFull, cosplayAgain, cosplayWeight, pickCosplay, normName };
 if (require.main === module) process.exit(main(process.argv.slice(2)));

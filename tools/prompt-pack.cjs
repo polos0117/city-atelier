@@ -131,7 +131,7 @@ function recordOf(card, set, s) {
     return { ...P.record(D, S, card.key, s.world, opts), record: `records/${card.key}/${s.world}.${STYLE}-ui.json`, storage: storageOf(card, s, x) };
   }
   const { n, ...cut } = s.cut, x = set.casual[s.slot];
-  const scene = { ...cut, axes: { ...FIXED, ...(cut.axes || {}) }, aspect: '2:3', unlocked: cut.unlocked || [] };
+  const scene = { ...cut, axes: { ...FIXED, ...(cut.axes || {}) }, aspect: cut.aspect || '2:3', unlocked: cut.unlocked || [] };   /* 화면비는 계획대로(2026-11-23 — 옛 계획은 2:3) */
   for (const k of TEXT) if ((x[k] || '').trim()) scene[k] = x[k]; else delete scene[k];
   if (x.exposure) scene.axes.skin_exposure = x.exposure;
   if (x.color) scene.color = x.color;   /* 옷 색 · 데니어 · 상황(2026-11-09 삼국지에서) */
@@ -140,6 +140,9 @@ function recordOf(card, set, s) {
   return { ...P.casualRecord(D, S, card.key, scene, { world: s.world, style: STYLE, tree, tree2, life: PLAN.LIFE, props: PLAN.PROPS, cosplay: PLAN.COSPLAY }, n), record: PLAN.recordRel(card.key, s.world, n), storage: storageOf(card, s, x, scene) };
 }
 
+/* 그 자리의 그림 크기(2026-11-23) — 세계 그림은 2:3, 일상컷은 기록의 scene.aspect(계획) */
+const sizeOf = (s, rec) => { const a = s.kind === 'world' ? '2:3' : ((rec.scene || {}).aspect || '2:3'), wh = C2.aspectSize(T2V, a); return a + ' ' + wh[0] + '×' + wh[1]; };
+const T2V = { v2: tree2, v1: tree };
 function build(dir) {
   const set = JSON.parse(fs.readFileSync(path.join(dir, 'settings.json'), 'utf8'));
   const card = cardOf(set.card), plans = readPlans(set.plans);
@@ -155,13 +158,13 @@ function build(dir) {
   }
   /* 옷 목록(2026-11-09 「일상컷도 우리쪽 의상자료를 참고하라고해서 여기 없는걸 선택하라고 하자」) — 옷 자유 컷은 이 목록에 없는 옷을 짓는다 */
   fs.writeFileSync(path.join(dir, 'outfit-catalog.md'), '# Our outfit catalog — every outfit type we already use for casual cuts\n\nFor a free-design cut, design an outfit that is NOT on this list.\n\n' + (tree.outfits || []).map(f => '## ' + f.key + ' — ' + f.en + '\n' + (f.items || []).map(i => '- ' + i.en).join('\n')).join('\n\n') + '\n');
-  const rows = out.map(({ s, rec }, i) => `| ${i + 1} | ${s.slot} | ${s.kind === 'world' ? '세계 그림(첨부 없이)' : s.cut.sfree ? (s.cut.gfree ? '일상 — 갈래 자유(덩어리 채우기)' : '일상 — 옷 자유(덩어리 채우기)') : PLAN.isCosplay(s.cut) ? '일상 — 게임 코스프레' : '일상(버전2)'} | ${s.attach.join(' + ') || '없음'} | ${rec.file} | ${rec.record} | ${sha(rec.prompt).slice(0, 12)} |`);
+  const rows = out.map(({ s, rec }, i) => `| ${i + 1} | ${s.slot} | ${s.kind === 'world' ? '세계 그림(첨부 없이)' : s.cut.sfree ? (s.cut.gfree ? '일상 — 갈래 자유(덩어리 채우기)' : '일상 — 옷 자유(덩어리 채우기)') : PLAN.isCosplay(s.cut) ? '일상 — 게임 코스프레' : '일상(버전2)'} | ${s.attach.join(' + ') || '없음'} | ${sizeOf(s, rec)} | ${rec.file} | ${rec.record} | ${sha(rec.prompt).slice(0, 12)} |`);
   fs.writeFileSync(path.join(dir, 'INDEX.md'), `# ${card.key}(${card.c.ko}) — 지시문 묶음\n\n만든 때 ${new Date().toISOString()} · 화풍 ${STYLE} · 사는 세계 ${card.worlds.join(' · ')} · 계획 ${plans.map(p => p.world).join(' · ') || '없음(일상 자리 없음)'}\n\n` +
     '**세계 그림 → 멈춤 → 일상컷**(2026-11-09 삼국지와 같이). 세계 그림은 세계마다 **네 장**(기준 그림 없이 한 장씩) — **두 장은 우리 설계 `<세계>-prompt.txt` 그대로, 두 장은 임의 설계 `<세계>-free.txt`**(설계 주문 — **2026-11-20 칸 채우기**(삼국지 공방 2026-11-18 · 11-19 에서 옮김 — 사용자 「칸 채우기로 옮겨줘」): 주문 아래 우리 설계 지시문을 통째로 주고 맡은 쪽은 표시한 칸만 채운다 — [HAIRSTYLE: …](우리와 다르게) · [COSTUME SILHOUETTE: …](그 세계 실루엣 목록에서 하나, 글 그대로) · Design idea(도시 상징 특징 하나를 의상 구조에) 는 반드시, [BUILD: …] 은 우리 체형 목록에서 하나를 글 그대로(우리 것 그대로도 된다), Face 줄은 얼굴 칸 여덟([IMPRESSION] · [SKIN TONE] · [FACE SHAPE] · [EYE SHAPE] · [EYE COLOUR] · [BROWS] · [NOSE] · [LIPS] — 칸마다 우리 목록에서 우리 것 말고 하나를 글 그대로, 두 장도 칸마다 서로 다르게, 웃는 입은 목록에 없다), 표정 줄은 고쳐도 되고, Stance and hands · Setting detail 은 채우거나 지운다. 나머지 줄(화풍 · 피부 마감 · 머리색 · 도시 motif · 세계 표지 · 색 · 소품 · 노출 · 세계 · 장면 · 자세 방향 · 빛 · 구도 · Avoid)은 글자 그대로. 두 장 다 첫 줄 SUMMARY: 다음에 채운 지시문 전체 — 그리기 전에 `node tools/world-fill-check.cjs <카드> <세계> <채운 글> --other <다른 장>` 이 통과해야 한다)). 네 장을 「우리 설계 1 · 2 / GPT 설계 1 · 2」 로 붙여 보이고 **멈추고 묻는다** — 고르기 전엔 일상컷으로 넘어가지 않고 세계 그림도 올리지 않는다. 고른 장만 올리고, 임의 설계 장이면 기록 `generation.design: "gpt_free"` 와 실제로 넘긴 지시문(`generation.free_prompt`)을 남긴다.\n\n' +
     '**일상컷 자유 설계 칸 두 장**(2026-11-11 — 사용자 「장소·활동·자세·구도·의상을 자유롭게 설계해줘 … 필수갈래랑 상황노출 두개를 묶어서 이렇게 가자. 그리고 지금 맡겨놓은 일상컷 1장도 같이 이런식으로」) — 계획에 「옷 자유」 · 「갈래 자유」 로 적힌 컷은 장면 줄 대신 `FREE DESIGN:` 덩어리다. 그 사람(첨부 그림 · 지시문의 그 도시 줄)에서 출발해 장소 · 활동 · 자세 · 구도 · 의상을 지어 **덩어리의 「…」 줄(Place · Activity · Pose · Framing · Outfit)을 채운 뒤** 그린다 — 「Recent scenes to avoid」 와 비슷한 장면은 피하고, 옷은 이 묶음의 `outfit-catalog.md`(우리가 쓰는 옷 전부)에 **없는 것**. 갈래 자유 컷은 `Outfit family (required)` · `Situation (required)` 두 줄을 둘 다 지킨다. 덩어리 밖의 줄(얼굴 · 화풍 · 몸 · 첨부 그림)은 낱말 하나 고치지 않는다. 채운 글은 기록에 남긴다 — `generation.free_prompt`(실제로 넘긴 지시문 통째) · `generation.free_design`(채운 덩어리), `casual-plan.cjs --check` 가 본다.\n\n' +
     '**게임 코스프레 컷**(원소 공방 2026-11-15 에서 옮김 · 도시 2026-11-20 — 일상컷 필수 다섯 중 하나) — 계획에 「게임 코스프레」 로 적힌 컷은 의상 자체가 그 게임 캐릭터를 드러내는 코스튬 컷이다(그녀가 그 캐릭터의 코스프레를 입은 것 — 얼굴 · 머리색 · 몸은 첨부 그림 그대로). 게임 · 캐릭터 이름이 지시문에 들어가는 것은 이 갈래만의 예외(사용자 결정). 캐릭터 · 재단은 **계획기가 정했다**(Outfit 줄에 이미 있다) — 지시문 그대로 그리고 캐릭터를 바꾸지 않는다. 기록에 **`generation.cosplay = { "game": "<게임 열쇠>", "character": "<그린 캐릭터 영어 이름>", "cut": "<재단 열쇠>" }`** 를 꼭 남긴다(장면 `scene.cosplay` 의 game · character · cut 그대로) — 계획기가 이 공방 그림 저장소의 이 칸과 아직 안 그린 계획 파일의 예약을 읽어 다음에 안 쓴 캐릭터 · 재단을 고른다(`casual-plan.cjs --check` 가 본다).\n\n' +
     '차례대로 그린다. 세계 그림은 기준 그림 없이 한 장씩, 일상컷은 그 세계 그림(이 세션의 원본, 이미 등록된 것이면 그림 저장소의 webp)을 붙인다. `<자리>-prompt.txt` 를 고치지 않고 그대로 낸다(임의 설계 주문으로 제 지시문을 쓰는 것 · 자유 설계 칸의 덩어리를 채우는 것만 예외).\n\n' +
-    '| 차례 | 자리 | 갈래 | 첨부 | 올릴 파일 | 기록 자리 | 지시문 sha256 |\n|---|---|---|---|---|---|---|\n' + rows.join('\n') + '\n');
+    '| 차례 | 자리 | 갈래 | 첨부 | 크기 | 올릴 파일 | 기록 자리 | 지시문 sha256 |\n|---|---|---|---|---|---|---|---|\n' + rows.join('\n') + '\n');
   console.log(`${card.key}(${card.c.ko}) — ${out.length} 자리 → ${dir}`);
   return 0;
 }

@@ -186,6 +186,19 @@ with tempfile.TemporaryDirectory() as t:
         with patch.object(reg, 'DEEPEN', deepen[0]), patch.object(reg, 'DEEPEN_MAX', deepen[1]):
             got = reg.history_dates(str(clone))
         assert got == want, (name, got)
+# 크기(2026-11-23 일상컷 화면비) — 세계 그림은 1024×1536 하나, 일상컷은 셋 가운데 하나이고 기록(계획)에 화면비가 있으면 그 크기
+from PIL import Image
+with tempfile.TemporaryDirectory() as t:
+    img, rec = Path(t) / 'img', Path(t) / 'records' / 'seoul'; img.mkdir(); rec.mkdir(parents=True)
+    def pic(name, wh): Image.new('RGB', wh, (90, 90, 90)).save(img / name, 'WEBP')
+    pic(f'seoul_fantasy_{S}_f.webp', (1024, 1536)); pic(f'seoul_steampunk_{S}_f.webp', (1024, 1024))       # 세계 그림이 정사각 — 걸림
+    pic(f'seoul_fantasy_{S}_f_casual1.webp', (1536, 1024)); pic(f'seoul_fantasy_{S}_f_casual2.webp', (1024, 1024))
+    pic(f'seoul_fantasy_{S}_f_casual3.webp', (1024, 1536)); pic(f'seoul_fantasy_{S}_f_casual4.webp', (1200, 900))   # 기록 없는 옛 컷 2:3 · 받지 않는 크기
+    for n, a in [(1, '3:2'), (2, '3:2')]:   # 2 는 계획이 3:2 인데 정사각으로 왔다 — 걸림
+        (rec / f'fantasy-casual{n}.{S}-ui.json').write_text(json.dumps({'file': f'seoul_fantasy_{S}_f_casual{n}.webp', 'scene': {'aspect': a}}), encoding='utf-8')
+    bad = {b[0]: b[3] for b in reg.art_size([str(img)])}
+    assert set(bad) == {f'seoul_steampunk_{S}_f.webp', f'seoul_fantasy_{S}_f_casual2.webp', f'seoul_fantasy_{S}_f_casual4.webp'}, bad
+    assert '3:2' in bad[f'seoul_fantasy_{S}_f_casual2.webp'], bad
 print('PASS 그림 등록: 서울 세 세계 · 도쿄 한 세계의 세계 그림(fantasy·steampunk·cyberpunk)·일상컷(90 번 포함) 자리 · 다시 돌려도 그대로'
       ' · 일상컷은 세계 몫 안 · 없는 세계(mecha)·도시·화풍·성별 표시·남성·대문자·밑줄 도시·세계 없는 그림·특별컷·연출컷·같은 자리는 저장 안 함'
-      ' · 등록한 날(새 것만 오늘·있던 날짜 그대로·지어내지 않음·틀린 날짜 버림·--check·--prune) · git 이력 채우기(교체·지운 것·얕은 저장소 경계)')
+      ' · 크기(세계 그림 2:3 · 일상컷 셋 · 계획 화면비)' ' · 등록한 날(새 것만 오늘·있던 날짜 그대로·지어내지 않음·틀린 날짜 버림·--check·--prune) · git 이력 채우기(교체·지운 것·얕은 저장소 경계)')

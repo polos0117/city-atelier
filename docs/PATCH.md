@@ -7,6 +7,19 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-23 · claude · 일상컷 화면비 — 구도 · 자세에 따라 2:3 / 1:1 / 3:2
+- 사용자 「배경이 보이니까 더 시원하네」 · 「다른 공방도 조금씩 해보자」 → 「응 그렇게 진행해줘」(파리 · 카이로 시험 — 같은 지시문 · 같은 참고 그림에 Output 줄만 바꿈: 눕는 자세 · 환경 컷은 3:2, 허리 위 · 3/4 는 1:1 이 인물 크기 그대로 배경이 열렸다, 선 전신 · 가슴 위 · 얼굴은 2:3). 이미 그린 그림은 2:3 그대로, 새 계획 · 지시문만
+- data/casual-tree-v2.json — aspect_rules(차례 규칙 · 기본 2:3 · 크기 셋 · keep_fams game_cosplay). 표만 고치면 조정된다
+- lib/casual-tree-v2.js — 공용 모듈 aspectFor(t, scene) · aspectSize(t, 화면비) — 원소 · 삼국지 사본과 같은 글자, pkm 사본에도 같은 덩어리
+- tools/casual-plan.cjs — 장면이 정해진 뒤 cut.aspect = aspectFor(자유 설계 칸 · 게임 코스프레 2:3, 캐릭터만의 컷 90 도), 묶음 검사에 화면비, 칸 줄에 화면비를 보인다
+- lib/prompt-spec.js · lib/prompt-city.js — 짧은 판 Output 줄이 화면비대로(CASUAL.short.outputs — 1:1 square 1024×1024 · 3:2 horizontal 1536×1024), 긴 판은 FRAME 줄 그대로. 자유 설계 칸은 늘 2:3. SCENE_V2 에 aspect
+- lib/studio.js — 생성기도 장면을 고치면 aspectFor 로 화면비(지시문 묶음 ↔ 생성기 같은 지시문)
+- tools/prompt-pack.cjs — 계획의 aspect 를 그대로(옛 계획은 2:3), INDEX.md 에 「크기」 칸
+- tools/register-images.py — 세계 그림은 1024×1536 하나, 일상컷은 셋 가운데 하나이고 기록(scene.aspect)이 있으면 그 크기인지 본다(요약 · 경고 글도). tools/make-thumbs.py — 주석만(긴 변 512 는 가로 · 정사각도 그대로)
+- lib/room.css · lib/studio.css · lib/city.css — 한 장 그림 줄 · 생성기 그림 미리보기는 칸 2:3 그대로 object-fit: contain(1:1 · 3:2 를 자르지 않는다). 한 장 큰 그림 · 크게 보기는 원래 비율대로라 그대로. ?v= 올림
+- IMAGE_RULES.md · docs/IMAGE_AUTOMATION.md — 일상컷 크기는 계획 화면비(INDEX 「크기」 칸), 검수 · webp · generation.size 도 그 크기
+- tests/casual-tree-v2.cjs · tests/register-images.py · tests/make-thumbs.py — 화면비 규칙 · 크기 검사 · 가로 · 정사각 썸네일
+
 ## 2026-11-23 · claude · 일상컷 장소 보충 — 놀이 · 겨울 · 물놀이 · 구경 · 관람 · 캠퍼스 장소, 필수 갈래 자리 넓히기 · 소품 · 상황 · 옷
 - 사용자 「장소 보충이랑 필수갈래 장소 넓히기, 소품, 상황, 의상 늘리기 같이 진행해줘. 도시공방 만들면서, 설계에는 장소가 다양하다보니 그전에 있던 장소적인 선택지가 부족한게 눈에 보이네.」 장소 96 → 136, 장소 × 의상 계열 쌍(받침 규칙 통과) 373 → 599, 필수 갈래가 서는 곳 란제리풍 5 → 16 · 수영복 14 → 24 · 역할극 8 → 22 · 게임 코스프레 12 → 25. 네 공방 같이(도구 scratchpad add_places.py).
 - data/casual-tree.json — 새 묶음 다섯: play 실내 놀이 · winter 겨울 놀이 · shop 구경 · 꾸밈 · stadium 관람석 · 경기장 · campus 캠퍼스. 새 장소(지금 현실, 모두 start_median): 영화관 객석 · 로비, 볼링장, 보드게임 카페, 방탈출, 테마 카페, PC방 / 아이스링크, 스키 슬로프 · 리프트, 눈썰매장 / 파도풀, 슬라이드 착수장, 루프탑 풀 파티, 비치 클럽(물가), 온천 리조트 풀, 목욕탕 탈의실(스파) / 글램핑 텐트 · 호숫가 데크, 료칸 객실(여행), 호텔 스위트 발코니(저녁), 창가 자리(집) / 미술관 전시실, 서점 서가, 꽃집, 꽃 시장, 사진 스튜디오, 부두아르 세트, 미용실, 네일숍, 피팅룸 / 야구장 응원석, 축구장 관중석, e스포츠 경기장, 골프 연습장 · 그린, 펜싱장(스키 · 골프 · e스포츠 · 펜싱 옷이 설 자리) / 강의실, 캠퍼스 잔디밭, 대학 축제 부스.

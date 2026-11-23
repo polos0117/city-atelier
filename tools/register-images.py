@@ -36,7 +36,12 @@ import subprocess
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data")
-ART_SIZE = (1024, 1536)          # 2:3 세로. 모든 그림은 이 크기로 맞춘다
+ART_SIZE = (1024, 1536)          # 2:3 세로. 세계 그림은 늘 이 크기
+# 일상컷 화면비(2026-11-23) — 계획(기록 scene.aspect)이 정한다: 눕는 자세 · 환경 컷 3:2, 허리 위 · 3/4 1:1, 나머지 2:3.
+# 그림 API 가 받는 크기 셋뿐. 이미 그린 일상컷은 2:3 그대로
+ASPECT_SIZES = {"2:3": (1024, 1536), "1:1": (1024, 1024), "3:2": (1536, 1024)}
+CASUAL_FILE = re.compile(r"_casual\d+\.webp$")
+CASUAL_RECORD = re.compile(r"-casual\d+\.[a-z0-9_]+-ui\.json$")
 
 # 그림이 사는 곳. GitHub 의 파일 목록 API 가 1000개에서 잘리므로 저장소 최상위가 아니라 img/ 에 둔다. img.json 에는
 # 폴더 없이 파일 이름만 적는다 — 주소는 화면 쪽 lib/img.js 가 붙인다(where 로 저장소를 고른다).
@@ -118,17 +123,53 @@ def _webp_size(path):
     return None
 
 
+def planned_aspects(dirs):
+    """{webp 이름: 화면비} — 그림 저장소의 일상컷 기록(img/ 옆 records/ 의 file · scene.aspect). 기록이 없으면 빈 것"""
+    out = {}
+    for d in dirs:
+        rec = os.path.join(os.path.dirname(os.path.realpath(d)), "records")
+        if not os.path.isdir(rec):
+            continue
+        for base, _, files in os.walk(rec):
+            for f in files:
+                if not CASUAL_RECORD.search(f):
+                    continue
+                try:
+                    r = json.load(open(os.path.join(base, f), encoding="utf-8"))
+                except (OSError, ValueError):
+                    continue
+                a = (r.get("scene") or {}).get("aspect") if isinstance(r, dict) else None
+                if isinstance(r, dict) and r.get("file") and a in ASPECT_SIZES:
+                    out[r["file"]] = a
+    return out
+
+
 def art_size(dirs):
-    """[(이름, 가로, 세로)…] — 그림 자리 안에서 ART_SIZE 가 아닌 그림."""
-    bad = []
+    """[(이름, 가로, 세로, 왜)…] — 크기가 안 맞는 그림. 세계 그림은 ART_SIZE(2:3) 하나, 일상컷은 ASPECT_SIZES 셋 가운데 하나이고
+    기록(계획)에 화면비가 있으면 그 크기(2026-11-23)."""
+    bad, plan = [], None
     for d in dirs:
         if not os.path.isdir(d):
             continue
         for f in sorted(os.listdir(d)):
-            if f.lower().endswith(".webp"):
-                s = _webp_size(os.path.join(d, f))
-                if s and tuple(s) != ART_SIZE:
-                    bad.append((f, s[0], s[1]))
+            if not f.lower().endswith(".webp"):
+                continue
+            s = _webp_size(os.path.join(d, f))
+            if not s:
+                continue
+            s = tuple(s)
+            if not CASUAL_FILE.search(f):
+                if s != ART_SIZE:
+                    bad.append((f, s[0], s[1], "세계 그림은 %d×%d" % ART_SIZE))
+                continue
+            if s not in ASPECT_SIZES.values():
+                bad.append((f, s[0], s[1], "일상컷은 " + " · ".join("%d×%d" % v for v in ASPECT_SIZES.values())))
+                continue
+            if plan is None:
+                plan = planned_aspects(dirs)
+            a = plan.get(f)
+            if a and ASPECT_SIZES[a] != s:
+                bad.append((f, s[0], s[1], "계획 화면비 %s 는 %d×%d" % ((a,) + ASPECT_SIZES[a])))
     return bad
 
 
@@ -450,10 +491,10 @@ def main():
             print("     %-44s %s" % (f, why))
     odd = art_size([IMG_DIR] + [d for d in EXTRA_DIRS if os.path.isdir(d)])
     if odd:
-        print("  새로 들어왔는데 %d×%d 이 아닌 그림 %d"
-              % (ART_SIZE[0], ART_SIZE[1], len(odd)))
-        for name, w, h in odd[:10]:
-            print("     %-44s %d×%d" % (name, w, h))
+        print("  크기가 안 맞는 그림 %d(세계 그림 %d×%d · 일상컷은 계획 화면비대로)"
+              % (len(odd), ART_SIZE[0], ART_SIZE[1]))
+        for name, w, h, why in odd[:10]:
+            print("     %-44s %d×%d — %s" % (name, w, h, why))
     if missing and os.environ.get("GITHUB_ACTIONS"):
         print("::warning::그림 저장소 %s 를 못 받았다 — 그쪽 자리는 그대로 두고, 새 그림은 %s 로 받는다" % (", ".join(missing), SHARDS[open_at]))
     annotate(added, ghosts, unknown, a.prune and not a.check and not unknown, odd)
@@ -472,10 +513,8 @@ def annotate(added, ghosts, unknown, pruned, odd=()):
     for f in ghosts:
         print("::warning::%s 가 img.json 에 적혀 있는데 파일이 없다%s"
               % (f, " (지웠다)" if pruned else " — --prune 으로 지운다"))
-    for name, w, h in odd:
-        print("::warning file=%s::%d×%d 로 들어왔다 — 그림 규격은 %d×%d 다."
-              " 일상컷처럼 일부러 다른 꼴이면 그냥 두라"
-              % (name, w, h, ART_SIZE[0], ART_SIZE[1]))
+    for name, w, h, why in odd:
+        print("::warning file=%s::%d×%d 로 들어왔다 — %s" % (name, w, h, why))
     path = os.environ.get("GITHUB_STEP_SUMMARY")
     if not path:
         return
@@ -492,10 +531,10 @@ def annotate(added, ghosts, unknown, pruned, odd=()):
         if ghosts:
             f.write("- 적혀 있는데 파일이 없는 것 **%d**\n" % len(ghosts))
         if odd:
-            f.write("- 규격(%d×%d) 밖으로 들어온 그림 **%d** — 일부러 그런 것인지 본다\n"
-                    % (ART_SIZE[0], ART_SIZE[1], len(odd)))
-            for name, w, h in odd:
-                f.write("  - `%s` — %d×%d\n" % (name, w, h))
+            f.write("- 크기가 안 맞는 그림 **%d** — 세계 그림은 %d×%d, 일상컷은 계획 화면비대로(1024×1536 · 1024×1024 · 1536×1024)\n"
+                    % (len(odd), ART_SIZE[0], ART_SIZE[1]))
+            for name, w, h, why in odd:
+                f.write("  - `%s` — %d×%d · %s\n" % (name, w, h, why))
 
 
 if __name__ == "__main__":
