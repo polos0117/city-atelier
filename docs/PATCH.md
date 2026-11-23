@@ -7,6 +7,11 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-23 · claude · 도시 사람 나이 — 20대 초 · 중반만
+- data/city-design.json — look.face.age 20대 후반 41 → 중반, 30대 초반 17 → 20대 초반(사용자 「그냥 다 동안이나 20대초중반으로 맞춰주면 안되나」)
+- tools/city-design.py — 나이는 early_20s · mid_20s 만(검사)
+- tests/city-design.py — 20대 후반 나이를 걸리는지 본다
+
 ## 2026-11-23 · claude · 일상컷 크기 — 같은 비율로 더 크게 온 원본(1:1 1254×1254)은 맞는 그림, WebP 로 바꿀 때 표준 크기로 줄인다
 - IMAGE_RULES.md — 크기 규칙에 같은 비율로 더 큰 원본은 맞고 표준 크기로 줄인다는 말
 - docs/IMAGE_AUTOMATION.md — 멈춤 조건 · WebP 바꾸기 줄에 같은 비율 큰 원본(ChatGPT 화면 1:1 1254×1254)은 줄여서 올린다

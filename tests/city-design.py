@@ -82,6 +82,7 @@ cases = {
     "own_vocab.unban_en 에 금지 낱말 밖의 말": lambda d: city(d, "beijing")["worlds"]["fantasy"]["own_vocab"]["unban_en"].append("Forbidden City"),
     "랜드마크 열쇠에 -": lambda d: lm(d).__setitem__("key", "hae-chi"),
     "동양 쪽 사람에 주근깨": lambda d: lm(d, "steampunk")["look"]["face"].__setitem__("mark", "freckles"),
+    "20대 후반 나이": lambda d: lm(d, "fantasy")["look"]["face"].__setitem__("age", "late_20s"),
     "랜드마크 세계 둘뿐": lambda d: lm(d)["worlds"].pop("cyberpunk"),
     "랜드마크 판타지 글에 broadcast tower": lambda d: lm(d, "fantasy").__setitem__("en", lm(d, "fantasy")["en"] + ", beside a broadcast tower"),
     "해치 판타지 얼굴이 서울 판타지와 같음": lambda d: lm(d, "fantasy")["look"].__setitem__("face", dict(sw(d, "fantasy")["look"]["face"])),

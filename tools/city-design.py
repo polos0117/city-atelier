@@ -34,6 +34,7 @@ HEX = re.compile(r"^#[0-9A-Fa-f]{6}$")
 URL = re.compile(r"^https?://\S+$")
 HANGUL = re.compile(r"[가-힣]")
 LOOK = {"face": ("face_shape", "eyes", "brows", "nose", "lips", "eye_color"), "silhouette": ("body", "hair", "hair_color")}
+AGES = ("early_20s", "mid_20s")   # 나이 — 20대 초 · 중반만(2026-11-23)
 FACE_DESIGN = {"face": ("age", "impression", "skin_tone", "eye_size", "eye_tilt", "mark", "expr"), "silhouette": ("bangs",)}
 FACE_KEYS = ("face_shape", "eyes", "brows", "nose", "lips")
 FACE_DIFF_MIN = 3
@@ -147,6 +148,9 @@ def check(doc):
                         errs.append("%s look.%s.%s 값은 소문자 열쇠 — %r" % (wh, grp, f, val))
             if not (lk.get("why") or "").strip():
                 errs.append(wh + " look.why 가 비었다")
+            # 나이는 20대 초 · 중반만(2026-11-23 사용자 「그냥 다 동안이나 20대초중반으로 맞춰주면 안되나」)
+            if (lk.get("face") or {}).get("age") not in AGES:
+                errs.append("%s look.face.age 는 %s 가운데 하나 — %r" % (wh, " · ".join(AGES), (lk.get("face") or {}).get("age")))
             if people in NO_FRECKLES and ((lk.get("face") or {}).get("mark") == "freckles" or "주근깨" in (lk.get("why") or "") or "freckl" in json.dumps(body, ensure_ascii=False).lower()):
                 errs.append(wh + " 동양 쪽(%s) 사람에 주근깨 — 다른 표시(mark)로" % people)
             # 옷의 꼴 — 세계별 실루엣 한 칸(2026-11-20 사용자 「안에 입는옷은 다 똑같아보이는데」 → 「응 바꿔줘」). 열쇠는 lib/prompt-spec.js 의 그 세계 *_SILHOUETTES
