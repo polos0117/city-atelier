@@ -7,6 +7,9 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-24 · claude · 그림 등록 실패 고침 — 등록 검사가 PIL 없이 돈다
+- tests/register-images.py — 크기 시험 그림을 PIL 대신 webp 머리말(VP8X)로 직접 쓴다. Actions 에 PIL 이 없어 화면비 작업(같은 날) 뒤 「그림 등록」 이 검사 단계에서 ModuleNotFoundError 로 모두 멈췄다
+
 ## 2026-11-24 · gpt · 바르셀로나 판타지 도감 등록
 - data/img.json — 대표컷 4번과 일상컷 1~10번, 트렌카디스 모자이크 장인 90번을 등록.
 

@@ -187,10 +187,14 @@ with tempfile.TemporaryDirectory() as t:
             got = reg.history_dates(str(clone))
         assert got == want, (name, got)
 # 크기(2026-11-23 일상컷 화면비) — 세계 그림은 1024×1536 하나, 일상컷은 셋 가운데 하나이고 기록(계획)에 화면비가 있으면 그 크기
-from PIL import Image
+def _webp_head(path, wh):
+    """PIL 없이 webp 머리말(VP8X)만 — 등록기는 머리말에서 크기만 읽는다(Actions 에 PIL 이 없다, 2026-11-23)"""
+    w, h = wh
+    data = b'WEBP' + b'VP8X' + (10).to_bytes(4, 'little') + bytes(4) + (w - 1).to_bytes(3, 'little') + (h - 1).to_bytes(3, 'little')
+    open(path, 'wb').write(b'RIFF' + len(data).to_bytes(4, 'little') + data)
 with tempfile.TemporaryDirectory() as t:
     img, rec = Path(t) / 'img', Path(t) / 'records' / 'seoul'; img.mkdir(); rec.mkdir(parents=True)
-    def pic(name, wh): Image.new('RGB', wh, (90, 90, 90)).save(img / name, 'WEBP')
+    def pic(name, wh): _webp_head(img / name, wh)
     pic(f'seoul_fantasy_{S}_f.webp', (1024, 1536)); pic(f'seoul_steampunk_{S}_f.webp', (1024, 1024))       # 세계 그림이 정사각 — 걸림
     pic(f'seoul_fantasy_{S}_f_casual1.webp', (1536, 1024)); pic(f'seoul_fantasy_{S}_f_casual2.webp', (1024, 1024))
     pic(f'seoul_fantasy_{S}_f_casual3.webp', (1024, 1536)); pic(f'seoul_fantasy_{S}_f_casual4.webp', (1200, 900))   # 기록 없는 옛 컷 2:3 · 받지 않는 크기
