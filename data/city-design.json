@@ -440,7 +440,7 @@
               "lips": "thin_long",
               "eye_color": "violet",
               "age": "early_20s",
-              "impression": "cool",
+              "impression": "femme_fatale",
               "skin_tone": "porcelain",
               "eye_size": "medium",
               "eye_tilt": "up",
@@ -453,7 +453,7 @@
               "hair_color": "cyan",
               "bangs": "one_eye"
             },
-            "why": "네온 골목의 밤 사람 — 가늘고 긴, 비대칭인 사람. 길쭉하고 마른 체형(lanky) · 한쪽만 긴 비대칭 단발 · 한쪽 눈을 가리는 앞머리 · 크게 걸친 반사 비옷으로 실루엣이 한쪽으로 기운 긴 선. 머리색은 네온 시안(cyan), 눈은 옅은 보라(violet) — 서울 빨강은 네온 송신탑 귀걸이로만. 하트형 얼굴 · 가늘게 올라간 눈 · 날 선 눈썹 · 작은 코 · 얇은 입술, 도자기처럼 흰 피부, 날개 아이라인, 20대 초반, 차가운 미소. 판타지 · 스팀펑크와 머리색 · 체형 · 얼굴형 · 헤어스타일이 다 다르다."
+            "why": "네온 골목의 밤 사람 — 가늘고 긴, 비대칭인 사람. 길쭉하고 마른 체형(lanky) · 한쪽만 긴 비대칭 단발 · 한쪽 눈을 가리는 앞머리 · 크게 걸친 반사 비옷으로 실루엣이 한쪽으로 기운 긴 선. 머리색은 네온 시안(cyan), 눈은 옅은 보라(violet) — 서울 빨강은 네온 송신탑 귀걸이로만. 하트형 얼굴 · 가늘게 올라간 눈 · 날 선 눈썹 · 작은 코 · 얇은 입술, 도자기처럼 흰 피부, 날개 아이라인, 20대 초반, 차가운 미소. 판타지 · 스팀펑크와 머리색 · 체형 · 얼굴형 · 헤어스타일이 다 다르다. 2026-11-23 인상 cool → femme_fatale(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
           },
           "hold": {
             "en": "a palm-sized hologram projector showing a tiny glowing tower above her hand"
@@ -620,7 +620,7 @@
                   "lips": "heart_full",
                   "eye_color": "ion_blue",
                   "age": "early_20s",
-                  "impression": "stoic",
+                  "impression": "mysterious",
                   "skin_tone": "fair",
                   "eye_size": "large",
                   "eye_tilt": "level",
@@ -633,7 +633,7 @@
                   "hair_color": "plasma_blue",
                   "bangs": "curtain"
                 },
-                "why": "도시를 지키는 AI가 사람 모습으로 걸어 나온 분신 — 서울 사이버펑크의 비대칭 단발 시안 머리 · 마른 몸 · 날 선 밤 사람과 달리 부드럽고 차분한 사람. 가슴이 도드라진 가는 몸(busty_slender) · 어깨 아래로 흐르는 긴 웨이브 플라즈마 블루(plasma_blue) 머리 · 가르마 커튼 앞머리, 눈은 이온 블루. 갸름한 달걀형 얼굴 · 크고 둥근 눈 · 부드러운 둥근 눈썹 · 하트 입술, 흰 피부, 맨 얼굴, 20대 초반의 감정을 숨긴 무표정(stoic)."
+                "why": "도시를 지키는 AI가 사람 모습으로 걸어 나온 분신 — 서울 사이버펑크의 비대칭 단발 시안 머리 · 마른 몸 · 날 선 밤 사람과 달리 부드럽고 차분한 사람. 가슴이 도드라진 가는 몸(busty_slender) · 어깨 아래로 흐르는 긴 웨이브 플라즈마 블루(plasma_blue) 머리 · 가르마 커튼 앞머리, 눈은 이온 블루. 갸름한 달걀형 얼굴 · 크고 둥근 눈 · 부드러운 둥근 눈썹 · 하트 입술, 흰 피부, 맨 얼굴, 20대 초반의 속을 알 수 없는 신비로운 인상(mysterious). 2026-11-23 인상 stoic → mysterious(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a cat-sized floating holographic haechi"
@@ -686,7 +686,7 @@
                   "lips": "heart_full",
                   "eye_color": "lilac",
                   "age": "early_20s",
-                  "impression": "elegant",
+                  "impression": "seductive",
                   "skin_tone": "porcelain",
                   "eye_size": "medium",
                   "eye_tilt": "down",
@@ -699,7 +699,7 @@
                   "hair_color": "violet",
                   "bangs": "wispy"
                 },
-                "why": "달빛 궁궐에서 춤추는 궁중 무희 — 서울 판타지의 곧은 남빛 여왕 · 갈기 머리 해치 신수와 달리 작고 둥글고 부드러운 사람. 작고 굴곡 있는 몸(petite_curvy) · 단정히 올린 보랏빛 쪽머리(updo_bun · violet) · 비치듯 가는 앞머리, 눈은 연보라(lilac). 둥근 얼굴 · 처진 부드러운 눈 · 둥근 눈썹 · 작은 코 · 도톰한 하트 입술, 도자기 피부에 발그레한 볼, 20대 초반의 우아한 인상에 다정한 표정."
+                "why": "달빛 궁궐에서 춤추는 궁중 무희 — 서울 판타지의 곧은 남빛 여왕 · 갈기 머리 해치 신수와 달리 작고 둥글고 부드러운 사람. 작고 굴곡 있는 몸(petite_curvy) · 단정히 올린 보랏빛 쪽머리(updo_bun · violet) · 비치듯 가는 앞머리, 눈은 연보라(lilac). 둥근 얼굴 · 처진 부드러운 눈 · 둥근 눈썹 · 작은 코 · 도톰한 하트 입술, 도자기 피부에 발그레한 볼, 20대 초반의 관능적이고 섹시한 인상에 다정한 표정. 2026-11-23 인상 elegant → seductive(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a pair of folding fans"
@@ -743,7 +743,7 @@
                   "lips": "thin_long",
                   "eye_color": "sapphire",
                   "age": "mid_20s",
-                  "impression": "glamorous",
+                  "impression": "seductive",
                   "skin_tone": "fair",
                   "eye_size": "medium",
                   "eye_tilt": "level",
@@ -756,7 +756,7 @@
                   "hair_color": "cream",
                   "bangs": "side_swept"
                 },
-                "why": "가스등 궁궐 연회의 안주인 — 서울 스팀펑크의 날씬한 구리빛 항해사 · 옆 땋은 머리 수호수지기와 달리 굴곡이 뚜렷하고 화려한 사람. 모래시계 체형(hourglass) · 허리까지 물결치는 크림빛 인어 웨이브(mermaid_waves · cream) · 옆으로 쓸어 넘긴 앞머리, 눈은 사파이어. 갸름한 달걀형 얼굴 · 깊은 눈매 · 가는 아치 눈썹 · 매부리코 · 가늘고 긴 입술, 입가의 점, 20대 후반의 화려한 인상에 자신 있는 표정."
+                "why": "가스등 궁궐 연회의 안주인 — 서울 스팀펑크의 날씬한 구리빛 항해사 · 옆 땋은 머리 수호수지기와 달리 굴곡이 뚜렷하고 화려한 사람. 모래시계 체형(hourglass) · 허리까지 물결치는 크림빛 인어 웨이브(mermaid_waves · cream) · 옆으로 쓸어 넘긴 앞머리, 눈은 사파이어. 갸름한 달걀형 얼굴 · 깊은 눈매 · 가는 아치 눈썹 · 매부리코 · 가늘고 긴 입술, 입가의 점, 20대 후반의 관능적이고 섹시한 인상에 자신 있는 표정. 2026-11-23 인상 glamorous → seductive(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a small brass banquet bell"
@@ -866,7 +866,7 @@
                   "lips": "thin_long",
                   "eye_color": "cinnabar",
                   "age": "early_20s",
-                  "impression": "cheerful",
+                  "impression": "mischievous",
                   "skin_tone": "golden_tan",
                   "eye_size": "medium",
                   "eye_tilt": "up",
@@ -879,7 +879,7 @@
                   "hair_color": "flame_orange",
                   "bangs": "choppy"
                 },
-                "why": "봉수대의 불을 잇는 정령 — 곧은 남빛 여왕 · 갈기 머리 해치 신수 · 쪽머리 무희와 달리 불꽃처럼 가볍고 활달한 사람. 날씬하고 탄탄한 체형(lean_toned) · 어깨 아래로 불길처럼 일렁이는 긴 웨이브 불꽃 주황(long_wavy · flame_orange) · 들쭉날쭉한 앞머리, 눈은 주홍빛(cinnabar). 하트형 얼굴 · 올라간 가는 눈 · 날 선 눈썹 · 살짝 들린 코 · 가늘고 긴 입술, 그을린 피부에 눈 밑 점, 20대 초반의 명랑한 인상."
+                "why": "봉수대의 불을 잇는 정령 — 곧은 남빛 여왕 · 갈기 머리 해치 신수 · 쪽머리 무희와 달리 불꽃처럼 가볍고 활달한 사람. 날씬하고 탄탄한 체형(lean_toned) · 어깨 아래로 불길처럼 일렁이는 긴 웨이브 불꽃 주황(long_wavy · flame_orange) · 들쭉날쭉한 앞머리, 눈은 주홍빛(cinnabar). 하트형 얼굴 · 올라간 가는 눈 · 날 선 눈썹 · 살짝 들린 코 · 가늘고 긴 입술, 그을린 피부에 눈 밑 점, 20대 초반의 여우 같은 장난기 인상. 2026-11-23 인상 cheerful → mischievous(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a small beacon brazier lantern"
@@ -1340,7 +1340,7 @@
                   "lips": "wide_smile",
                   "eye_color": "sodium_yellow",
                   "age": "mid_20s",
-                  "impression": "soft",
+                  "impression": "shy",
                   "skin_tone": "porcelain",
                   "eye_size": "large",
                   "eye_tilt": "down",
@@ -1353,7 +1353,7 @@
                   "hair_color": "pastel_sky",
                   "bangs": "curtain"
                 },
-                "why": "빛의 방어막 관리자 — 서울 사이버펑크의 시안 단발 시민 · 플라즈마 블루 해치 AI · 얼음 흰색 궁궐 관리자 · 로즈골드 조종사 · 레몬빛 관제사와 달리 부드럽고 풍성한 사람. 모래시계 체형(hourglass) · 윗머리만 묶어 올린 파스텔 하늘색(half_up · pastel_sky) 머리 · 커튼 앞머리, 눈은 나트륨 노랑. 둥근 얼굴 · 처진 부드러운 눈 · 낮고 굵은 눈썹 · 살짝 들린 코 · 시원한 웃는 입, 도자기 피부에 발그레한 볼, 20대 중반의 다정한 인상."
+                "why": "빛의 방어막 관리자 — 서울 사이버펑크의 시안 단발 시민 · 플라즈마 블루 해치 AI · 얼음 흰색 궁궐 관리자 · 로즈골드 조종사 · 레몬빛 관제사와 달리 부드럽고 풍성한 사람. 모래시계 체형(hourglass) · 윗머리만 묶어 올린 파스텔 하늘색(half_up · pastel_sky) 머리 · 커튼 앞머리, 눈은 나트륨 노랑. 둥근 얼굴 · 처진 부드러운 눈 · 낮고 굵은 눈썹 · 살짝 들린 코 · 시원한 웃는 입, 도자기 피부에 발그레한 볼, 20대 중반의 수줍은 인상. 2026-11-23 인상 soft → shy(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a shield-emitter orb"
@@ -1406,7 +1406,7 @@
                   "lips": "thin_long",
                   "eye_color": "storm_grey",
                   "age": "mid_20s",
-                  "impression": "languid",
+                  "impression": "dreamy",
                   "skin_tone": "porcelain",
                   "eye_size": "medium",
                   "eye_tilt": "down",
@@ -1419,7 +1419,7 @@
                   "hair_color": "pale_aqua",
                   "bangs": "straight"
                 },
-                "why": "연못 정자의 시인 악사 — 서울 판타지의 남빛 여왕 · 갈기 머리 해치 · 쪽머리 무희 · 불꽃 정령 · 나무다리 수호자 · 성곽 순찰 기사와 달리 나른하고 생각에 잠긴 사람. 버들처럼 길고 부드러운 굴곡 체형(willowy_curvy) · 볼 옆 머리를 반듯이 자른 옅은 물빛 히메컷(hime_cut · pale_aqua) · 일자 앞머리, 눈은 폭풍 잿빛. 갸름하게 긴 얼굴 · 눈꼬리가 부드럽게 처진 눈 · 가는 아치 눈썹 · 콧대가 살짝 휜 코 · 가늘고 긴 입술, 도자기 피부에 입가 점, 20대 중반. 다른 두 세계와 머리색 · 체형 · 얼굴형 · 헤어스타일이 다 다르다."
+                "why": "연못 정자의 시인 악사 — 서울 판타지의 남빛 여왕 · 갈기 머리 해치 · 쪽머리 무희 · 불꽃 정령 · 나무다리 수호자 · 성곽 순찰 기사와 달리 나른하고 생각에 잠긴 사람. 버들처럼 길고 부드러운 굴곡 체형(willowy_curvy) · 볼 옆 머리를 반듯이 자른 옅은 물빛 히메컷(hime_cut · pale_aqua) · 일자 앞머리, 눈은 폭풍 잿빛. 갸름하게 긴 얼굴 · 눈꼬리가 부드럽게 처진 눈 · 가는 아치 눈썹 · 콧대가 살짝 휜 코 · 가늘고 긴 입술, 도자기 피부에 입가 점, 20대 중반. 다른 두 세계와 머리색 · 체형 · 얼굴형 · 헤어스타일이 다 다르다. 2026-11-23 인상 languid → dreamy(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a long bamboo flute with silk tassels"
@@ -1586,7 +1586,7 @@
                   "lips": "small_bow",
                   "eye_color": "azure",
                   "age": "mid_20s",
-                  "impression": "soft",
+                  "impression": "wistful",
                   "skin_tone": "fair",
                   "eye_size": "medium",
                   "eye_tilt": "level",
@@ -1599,7 +1599,7 @@
                   "hair_color": "moon_silver",
                   "bangs": "side_swept"
                 },
-                "why": "물길 등불지기 — 서울 판타지의 남빛 여왕 · 갈기 머리 해치 · 쪽머리 무희 · 불꽃 정령 · 나무다리 수호자 · 성곽 순찰 기사와 달리 물처럼 부드럽고 아련한 사람. 가슴 · 골반 · 허벅지가 풍성한 굴곡 체형(voluptuous) · 푸른 달빛이 비치는 거울 같은 은빛 허리까지 물결머리(mermaid_waves · moon_silver) · 옆으로 쓸어 넘긴 앞머리, 눈은 하늘빛. 달걀형 얼굴 · 아몬드형 눈 · 부드러운 둥근 눈썹 · 끝이 살짝 들린 코 · 작은 활 입술, 흰 피부에 눈 밑 점, 20대 중반의 그리운 듯한 표정. 다른 두 세계와 머리색 · 체형 · 얼굴형 · 헤어스타일이 다 다르다."
+                "why": "물길 등불지기 — 서울 판타지의 남빛 여왕 · 갈기 머리 해치 · 쪽머리 무희 · 불꽃 정령 · 나무다리 수호자 · 성곽 순찰 기사와 달리 물처럼 부드럽고 아련한 사람. 가슴 · 골반 · 허벅지가 풍성한 굴곡 체형(voluptuous) · 푸른 달빛이 비치는 거울 같은 은빛 허리까지 물결머리(mermaid_waves · moon_silver) · 옆으로 쓸어 넘긴 앞머리, 눈은 하늘빛. 달걀형 얼굴 · 아몬드형 눈 · 부드러운 둥근 눈썹 · 끝이 살짝 들린 코 · 작은 활 입술, 흰 피부에 눈 밑 점, 20대 중반의 그리운 듯한 표정. 다른 두 세계와 머리색 · 체형 · 얼굴형 · 헤어스타일이 다 다르다. 2026-11-23 인상 soft → wistful(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a glowing lotus-shaped lantern on a slender willow rod"
@@ -2303,7 +2303,7 @@
                   "lips": "small_bow",
                   "eye_color": "ice_blue",
                   "age": "mid_20s",
-                  "impression": "sharp",
+                  "impression": "icy",
                   "skin_tone": "porcelain",
                   "eye_size": "medium",
                   "eye_tilt": "up",
@@ -2316,7 +2316,7 @@
                   "hair_color": "white_gold",
                   "bangs": "one_eye"
                 },
-                "why": "대륙 진공관 열차망의 시간 관제사 — 도쿄 사이버펑크의 둥근 얼굴 · 노을분홍 울프컷 글래머 연출가와 달리 탄탄하고 날렵한 사람. 아홉 사람 가운데 하나뿐인 마른 쪽 체형(lean_toned) · 짧게 흐트러진 픽시컷(pixie_cut)에 가장자리가 빛나는 백금빛 머리(white_gold) · 한쪽 눈을 덮는 앞머리, 눈은 얼음 파랑. 부드럽게 각진 얼굴 · 홑꺼풀 긴 눈 · 가는 아치 눈썹 · 곧고 좁은 코 · 또렷한 활 입술, 도자기 피부에 날개 아이라인, 20대 중반의 날카로운 인상에 집중한 표정."
+                "why": "대륙 진공관 열차망의 시간 관제사 — 도쿄 사이버펑크의 둥근 얼굴 · 노을분홍 울프컷 글래머 연출가와 달리 탄탄하고 날렵한 사람. 아홉 사람 가운데 하나뿐인 마른 쪽 체형(lean_toned) · 짧게 흐트러진 픽시컷(pixie_cut)에 가장자리가 빛나는 백금빛 머리(white_gold) · 한쪽 눈을 덮는 앞머리, 눈은 얼음 파랑. 부드럽게 각진 얼굴 · 홑꺼풀 긴 눈 · 가는 아치 눈썹 · 곧고 좁은 코 · 또렷한 활 입술, 도자기 피부에 날개 아이라인, 20대 중반의 얼음처럼 차가운 냉미녀 인상에 집중한 표정. 2026-11-23 인상 sharp → icy(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a slim holographic baton that draws glowing route lines in the air"
@@ -2549,7 +2549,7 @@
                   "lips": "full_wide",
                   "eye_color": "lilac",
                   "age": "early_20s",
-                  "impression": "soft",
+                  "impression": "dreamy",
                   "skin_tone": "warm_beige",
                   "eye_size": "large",
                   "eye_tilt": "down",
@@ -2562,7 +2562,7 @@
                   "hair_color": "pearl_white",
                   "bangs": "side_swept"
                 },
-                "why": "연꽃 연못을 지키는 물의 마녀 — 도쿄 판타지의 가는 몸 · 은백 히메컷 무녀 기사와 달리 아래가 풍성한 부드러운 사람. 서양배 곡선 체형(pear_curvy) · 허리까지 물결치는 진주빛 인어 웨이브(mermaid_waves · pearl_white — 연꽃잎의 분홍 · 은빛 광택) · 옆으로 쓸어 넘긴 앞머리, 눈은 연보라. 둥근 얼굴 · 깊은 눈매 · 낮고 도톰한 눈썹 · 살짝 들린 코 · 도톰한 입술, 따뜻한 베이지 피부에 발그레한 볼, 20대 초반의 부드러운 인상에 다정한 표정."
+                "why": "연꽃 연못을 지키는 물의 마녀 — 도쿄 판타지의 가는 몸 · 은백 히메컷 무녀 기사와 달리 아래가 풍성한 부드러운 사람. 서양배 곡선 체형(pear_curvy) · 허리까지 물결치는 진주빛 인어 웨이브(mermaid_waves · pearl_white — 연꽃잎의 분홍 · 은빛 광택) · 옆으로 쓸어 넘긴 앞머리, 눈은 연보라. 둥근 얼굴 · 깊은 눈매 · 낮고 도톰한 눈썹 · 살짝 들린 코 · 도톰한 입술, 따뜻한 베이지 피부에 발그레한 볼, 20대 초반의 몽환적인 인상에 다정한 표정. 2026-11-23 인상 soft → dreamy(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a long-stemmed glowing lotus bud carried like a lamp"
@@ -2606,7 +2606,7 @@
                   "lips": "thin_long",
                   "eye_color": "amber",
                   "age": "mid_20s",
-                  "impression": "elegant",
+                  "impression": "dreamy",
                   "skin_tone": "fair",
                   "eye_size": "small",
                   "eye_tilt": "level",
@@ -2619,7 +2619,7 @@
                   "hair_color": "bronze",
                   "bangs": "curtain"
                 },
-                "why": "자연과학 박물관의 학예사(광물 · 식물 표본) — 도쿄 스팀펑크의 작고 동그란 반묶음 점등원과 달리 늘씬한 팔다리에 볼륨 있는 생각 많은 사람. 가는 팔다리에 풍만한 가슴 · 둥근 엉덩이(busty_slender) · 단정히 틀어 올린 청동빛 쪽머리(updo_bun · bronze) · 커튼 앞머리, 눈은 호박색. 다이아몬드형 얼굴 · 홑꺼풀 긴 눈 · 각진 눈썹 · 작은 코 · 가늘고 긴 입술, 밝은 피부에 짙은 입술, 20대 후반의 우아한 인상에 생각에 잠긴 표정."
+                "why": "자연과학 박물관의 학예사(광물 · 식물 표본) — 도쿄 스팀펑크의 작고 동그란 반묶음 점등원과 달리 늘씬한 팔다리에 볼륨 있는 생각 많은 사람. 가는 팔다리에 풍만한 가슴 · 둥근 엉덩이(busty_slender) · 단정히 틀어 올린 청동빛 쪽머리(updo_bun · bronze) · 커튼 앞머리, 눈은 호박색. 다이아몬드형 얼굴 · 홑꺼풀 긴 눈 · 각진 눈썹 · 작은 코 · 가늘고 긴 입술, 밝은 피부에 짙은 입술, 20대 후반의 몽환적인 인상에 생각에 잠긴 표정. 2026-11-23 인상 elegant → dreamy(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a small glass specimen jar holding a single lotus seed pod"
@@ -2663,7 +2663,7 @@
                   "lips": "heart_full",
                   "eye_color": "leaf_green",
                   "age": "mid_20s",
-                  "impression": "innocent",
+                  "impression": "wistful",
                   "skin_tone": "golden_tan",
                   "eye_size": "medium",
                   "eye_tilt": "down",
@@ -2676,7 +2676,7 @@
                   "hair_color": "helium_peach",
                   "bangs": "parted"
                 },
-                "why": "벚나무의 기억을 보관하는 숲 관리자 — 도쿄 사이버펑크의 둥근 얼굴 · 노을분홍 울프컷 연출가와 달리 어깨가 넓고 단단한 곡선의 사람. 탄탄하고 어깨 넓은 곡선 체형(strong_curvy) · 길게 늘어진 나선 곱슬(long_curly)에 은은히 빛나는 옅은 복숭앗빛 분홍 머리(helium_peach — 빛의 벚꽃 빛) · 가운데 가르마, 눈은 잎새 초록. 달걀형 얼굴 · 넓은 아몬드 눈 · 가는 아치 눈썹 · 매부리코 · 도톰한 하트 입술, 햇볕에 그은 피부에 눈 밑 점, 20대 중반의 맑은 인상에 아련한 표정."
+                "why": "벚나무의 기억을 보관하는 숲 관리자 — 도쿄 사이버펑크의 둥근 얼굴 · 노을분홍 울프컷 연출가와 달리 어깨가 넓고 단단한 곡선의 사람. 탄탄하고 어깨 넓은 곡선 체형(strong_curvy) · 길게 늘어진 나선 곱슬(long_curly)에 은은히 빛나는 옅은 복숭앗빛 분홍 머리(helium_peach — 빛의 벚꽃 빛) · 가운데 가르마, 눈은 잎새 초록. 달걀형 얼굴 · 넓은 아몬드 눈 · 가는 아치 눈썹 · 매부리코 · 도톰한 하트 입술, 햇볕에 그은 피부에 눈 밑 점, 20대 중반의 아련한 인상에 아련한 표정. 2026-11-23 인상 innocent → wistful(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a glass seed capsule glowing with a single preserved cherry blossom"
@@ -2919,7 +2919,7 @@
               "lips": "full_wide",
               "eye_color": "pale_citrine",
               "age": "mid_20s",
-              "impression": "sharp",
+              "impression": "decadent",
               "skin_tone": "olive",
               "eye_size": "medium",
               "eye_tilt": "level",
@@ -2932,7 +2932,7 @@
               "hair_color": "selenium_ruby",
               "bangs": "none"
             },
-            "why": "북쪽 능선 옛 성벽의 망루마다 빛 신호를 건네는 봉화 관제사 — 키 크고 선명한 사람. 큰 키에 긴 다리 · 풍만한 가슴과 엉덩이 · 가는 허리(tall_curvy) · 높이 묶은 긴 포니테일(ponytail) · 어두운 금속빛 회색이 빛을 받으면 루비빛으로 타오르는 머리(selenium_ruby — 궁성 주홍 담과 봉화 빛) · 앞머리 없이 넘긴 이마(none) · 등줄기 · 팔 · 다리를 따라 가는 외골격 틀을 두른 몸에 붙는 옷(exo_frame — 틀의 마디가 성벽 흉벽 꼴)으로 실루엣이 길고 또렷하다. 갸름한 달걀형 얼굴 · 쌍꺼풀 없는 매끈한 눈 · 깔끔하게 각이 선 눈썹 · 콧대에 부드러운 매부리 곡선 · 도톰하고 자연스러운 폭의 입술, 옅은 시트린빛 노란 눈(pale_citrine — 유리기와 노랑), 올리브빛 피부(olive)에 스모키 눈화장(smoky), 20대 중반, 날카롭고 강렬한 인상(sharp)에 입을 다문 옅은 미소(half_smile). 판타지(다이아몬드형 · 청흑 쪽머리 · 버들 곡선 · 도자기빛 피부) · 스팀펑크(둥근형 · 로열 블루 단발 · 모래시계 몸 · 금빛 도는 밝은 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울 · 도쿄 · 파리 · 런던 · 로마 · 뉴욕 사람(랜드마크 포함)과도 셋 이상 다르다."
+            "why": "북쪽 능선 옛 성벽의 망루마다 빛 신호를 건네는 봉화 관제사 — 키 크고 선명한 사람. 큰 키에 긴 다리 · 풍만한 가슴과 엉덩이 · 가는 허리(tall_curvy) · 높이 묶은 긴 포니테일(ponytail) · 어두운 금속빛 회색이 빛을 받으면 루비빛으로 타오르는 머리(selenium_ruby — 궁성 주홍 담과 봉화 빛) · 앞머리 없이 넘긴 이마(none) · 등줄기 · 팔 · 다리를 따라 가는 외골격 틀을 두른 몸에 붙는 옷(exo_frame — 틀의 마디가 성벽 흉벽 꼴)으로 실루엣이 길고 또렷하다. 갸름한 달걀형 얼굴 · 쌍꺼풀 없는 매끈한 눈 · 깔끔하게 각이 선 눈썹 · 콧대에 부드러운 매부리 곡선 · 도톰하고 자연스러운 폭의 입술, 옅은 시트린빛 노란 눈(pale_citrine — 유리기와 노랑), 올리브빛 피부(olive)에 스모키 눈화장(smoky), 20대 중반, 나른하게 퇴폐적인 인상(decadent)에 입을 다문 옅은 미소(half_smile). 판타지(다이아몬드형 · 청흑 쪽머리 · 버들 곡선 · 도자기빛 피부) · 스팀펑크(둥근형 · 로열 블루 단발 · 모래시계 몸 · 금빛 도는 밝은 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울 · 도쿄 · 파리 · 런던 · 로마 · 뉴욕 사람(랜드마크 포함)과도 셋 이상 다르다. 2026-11-23 인상 sharp → decadent(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
           },
           "hold": {
             "en": "a slim beacon baton of white ceramic and chrome, a steady flame of vermilion light burning at its tip"
@@ -3108,7 +3108,7 @@
                   "lips": "small_bow",
                   "eye_color": "silver_grey",
                   "age": "mid_20s",
-                  "impression": "cool",
+                  "impression": "icy",
                   "skin_tone": "golden_tan",
                   "eye_size": "medium",
                   "eye_tilt": "level",
@@ -3121,7 +3121,7 @@
                   "hair_color": "bright_gold",
                   "bangs": "side_swept"
                 },
-                "why": "궁성 유물 병원의 복원사 — 크롬 의수의 섬세한 손끝으로 오백 년 보물의 금을 메우는 차분한 사람. 가는 팔다리에 가슴이 도드라진 몸(busty_slender) · 목덜미에 낮게 묶은 금빛 머리(low_ponytail · bright_gold — 궁성 지붕의 금) · 옆으로 쓸어 넘긴 앞머리 · 크롬 의수가 드러나는 몸에 붙는 옷(implant_suit). 다이아몬드형 얼굴 · 깊은 눈매 · 자연스러운 숱의 곧은 눈썹 · 끝이 살짝 들린 코 · 큐피드 활 입술, 은회색 눈, 금빛 도는 밝은 피부에 날개 아이라인, 20대 중반의 서늘한 인상에 차분한 표정. 베이징 사이버펑크 봉화 관제사(달걀형 · 루비빛 포니테일 · 큰 키 곡선)와 얼굴 칸 다섯이 다 다르다."
+                "why": "궁성 유물 병원의 복원사 — 크롬 의수의 섬세한 손끝으로 오백 년 보물의 금을 메우는 차분한 사람. 가는 팔다리에 가슴이 도드라진 몸(busty_slender) · 목덜미에 낮게 묶은 금빛 머리(low_ponytail · bright_gold — 궁성 지붕의 금) · 옆으로 쓸어 넘긴 앞머리 · 크롬 의수가 드러나는 몸에 붙는 옷(implant_suit). 다이아몬드형 얼굴 · 깊은 눈매 · 자연스러운 숱의 곧은 눈썹 · 끝이 살짝 들린 코 · 큐피드 활 입술, 은회색 눈, 금빛 도는 밝은 피부에 날개 아이라인, 20대 중반의 얼음처럼 차가운 냉미녀 인상에 차분한 표정. 베이징 사이버펑크 봉화 관제사(달걀형 · 루비빛 포니테일 · 큰 키 곡선)와 얼굴 칸 다섯이 다 다르다. 2026-11-23 인상 cool → icy(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a pen-thin mending tool of white ceramic tipped with a fine point of golden light"
@@ -3174,7 +3174,7 @@
                   "lips": "small_bow",
                   "eye_color": "violet",
                   "age": "early_20s",
-                  "impression": "soft",
+                  "impression": "dreamy",
                   "skin_tone": "porcelain",
                   "eye_size": "large",
                   "eye_tilt": "down",
@@ -3187,7 +3187,7 @@
                   "hair_color": "chlorine_green",
                   "bangs": "curtain"
                 },
-                "why": "달밤 호수 정원의 그림배에서 비파를 타는 악사 — 물안개처럼 부드러운 사람. 작은 키에 풍만한 곡선(petite_voluptuous) · 허리까지 물결치는 물안개처럼 비치는 옅은 버들빛 머리(mermaid_waves · chlorine_green — 호숫가 버들) · 커튼 앞머리 · 몸을 따라 흐르는 비단과 긴 소매의 실루엣(silk_sorceress). 달걀형 얼굴 · 눈꼬리가 순하게 내려간 눈 · 자연스러운 숱의 곧은 눈썹 · 끝이 살짝 들린 코 · 큐피드 활 입술, 옅은 보랏빛 눈, 도자기빛 피부에 발그레한 볼, 20대 초반의 부드러운 인상에 옅은 미소. 베이징 판타지 제사 공주 · 자금성 여제와 얼굴 칸 다섯이 다 다르다."
+                "why": "달밤 호수 정원의 그림배에서 비파를 타는 악사 — 물안개처럼 부드러운 사람. 작은 키에 풍만한 곡선(petite_voluptuous) · 허리까지 물결치는 물안개처럼 비치는 옅은 버들빛 머리(mermaid_waves · chlorine_green — 호숫가 버들) · 커튼 앞머리 · 몸을 따라 흐르는 비단과 긴 소매의 실루엣(silk_sorceress). 달걀형 얼굴 · 눈꼬리가 순하게 내려간 눈 · 자연스러운 숱의 곧은 눈썹 · 끝이 살짝 들린 코 · 큐피드 활 입술, 옅은 보랏빛 눈, 도자기빛 피부에 발그레한 볼, 20대 초반의 몽환적인 인상에 옅은 미소. 베이징 판타지 제사 공주 · 자금성 여제와 얼굴 칸 다섯이 다 다르다. 2026-11-23 인상 soft → dreamy(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a pear-shaped lute of carved rosewood with silk strings, a jade pendant swinging from its neck"
@@ -3240,7 +3240,7 @@
                   "lips": "heart_full",
                   "eye_color": "honey",
                   "age": "mid_20s",
-                  "impression": "glamorous",
+                  "impression": "femme_fatale",
                   "skin_tone": "fair",
                   "eye_size": "medium",
                   "eye_tilt": "up",
@@ -3253,7 +3253,7 @@
                   "hair_color": "rose_gold",
                   "bangs": "side_swept"
                 },
-                "why": "호수 정원 운하 상점가의 찻집 안주인 — 화려하고 느긋한 사람. 좁은 어깨 아래 풍만한 엉덩이와 허벅지의 서양배 곡선(pear_curvy) · 턱선의 윤기 나는 핑거웨이브(finger_waves — 20세기 초 상하이 멋) · 놋쇠 빛과 어울리는 로즈 골드 머리(rose_gold) · 옆으로 쓸어 넘긴 앞머리 · 어깨를 드러낸 긴 드레스와 긴 장갑의 실루엣(opera_diva). 긴 달걀형 얼굴 · 눈꼬리가 살짝 올라간 아몬드 눈 · 가늘게 휜 눈썹 · 부드러운 매부리 코 · 도톰한 하트 입술, 꿀빛 눈, 흰 피부에 입가의 점, 20대 후반의 화려한 인상에 입 다문 옅은 미소. 베이징 스팀펑크 북지기 · 자금성 시계 장인과 얼굴 칸 다섯이 다 다르다."
+                "why": "호수 정원 운하 상점가의 찻집 안주인 — 화려하고 느긋한 사람. 좁은 어깨 아래 풍만한 엉덩이와 허벅지의 서양배 곡선(pear_curvy) · 턱선의 윤기 나는 핑거웨이브(finger_waves — 20세기 초 상하이 멋) · 놋쇠 빛과 어울리는 로즈 골드 머리(rose_gold) · 옆으로 쓸어 넘긴 앞머리 · 어깨를 드러낸 긴 드레스와 긴 장갑의 실루엣(opera_diva). 긴 달걀형 얼굴 · 눈꼬리가 살짝 올라간 아몬드 눈 · 가늘게 휜 눈썹 · 부드러운 매부리 코 · 도톰한 하트 입술, 꿀빛 눈, 흰 피부에 입가의 점, 20대 후반의 위험한 팜파탈 인상에 입 다문 옅은 미소. 베이징 스팀펑크 북지기 · 자금성 시계 장인과 얼굴 칸 다섯이 다 다르다. 2026-11-23 인상 glamorous → femme_fatale(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a long-spouted brass teakettle breathing a thin curl of clean white steam"
@@ -3514,7 +3514,7 @@
                   "lips": "thin_long",
                   "eye_color": "leaf_green",
                   "age": "mid_20s",
-                  "impression": "mature",
+                  "impression": "wistful",
                   "skin_tone": "fair",
                   "eye_size": "medium",
                   "eye_tilt": "down",
@@ -3527,7 +3527,7 @@
                   "hair_color": "boron_green",
                   "bangs": "one_eye"
                 },
-                "why": "옛 성벽 너머 푸른 숲띠와 바람 방패를 지키는 관리자 — 바람을 오래 맞아 온 차분한 사람. 탄탄하고 가는 허리에 풍만한 가슴의 몸(lean_toned — 아홉 사람 가운데 마른 체형 하나) · 한쪽으로 길게 넘긴 머리(side_swept) · 짙은 흑갈색 머리 끝에 초록 불꽃이 핀 머리(boron_green — 푸른 장성) · 한쪽 눈을 덮는 긴 앞머리 · 앞을 연 발목까지의 긴 코트 실루엣(long_raincoat). 하트형 얼굴 · 눈꼬리가 순하게 내려간 눈 · 가늘게 휜 눈썹 · 곧고 가는 코 · 가늘고 단정한 입술, 잎빛 초록 눈, 흰 피부에 눈 밑 점, 20대 후반의 성숙한 인상에 생각에 잠긴 표정. 베이징 사이버펑크 봉화 관제사 · 자금성 복원사와 다섯, 이화원 물길 관리자와 넷이 다르다."
+                "why": "옛 성벽 너머 푸른 숲띠와 바람 방패를 지키는 관리자 — 바람을 오래 맞아 온 차분한 사람. 탄탄하고 가는 허리에 풍만한 가슴의 몸(lean_toned — 아홉 사람 가운데 마른 체형 하나) · 한쪽으로 길게 넘긴 머리(side_swept) · 짙은 흑갈색 머리 끝에 초록 불꽃이 핀 머리(boron_green — 푸른 장성) · 한쪽 눈을 덮는 긴 앞머리 · 앞을 연 발목까지의 긴 코트 실루엣(long_raincoat). 하트형 얼굴 · 눈꼬리가 순하게 내려간 눈 · 가늘게 휜 눈썹 · 곧고 가는 코 · 가늘고 단정한 입술, 잎빛 초록 눈, 흰 피부에 눈 밑 점, 20대 후반의 아련한 인상에 생각에 잠긴 표정. 베이징 사이버펑크 봉화 관제사 · 자금성 복원사와 다섯, 이화원 물길 관리자와 넷이 다르다. 2026-11-23 인상 mature → wistful(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a slim glass seed capsule with a glowing green sapling curled inside it"
@@ -3704,7 +3704,7 @@
               "lips": "heart_full",
               "eye_color": "amber",
               "age": "early_20s",
-              "impression": "cheerful",
+              "impression": "mischievous",
               "skin_tone": "warm_beige",
               "eye_size": "large",
               "eye_tilt": "down",
@@ -3717,7 +3717,7 @@
               "hair_color": "dark_iron",
               "bangs": "straight"
             },
-            "why": "벨 에포크 철탑 거리의 아가씨 — 작고 풍만하고 생기 있는 사람. 작은 키에 풍만한 몸(petite_voluptuous) · 어깨에서 바깥으로 말린 철회색 머리(flipped_shoulder · dark_iron — 철탑의 연철빛) · 일자 앞머리 · 허리 아래 드러난 놋쇠 철테 크리놀린 틀(crinoline_cage — 철탑 격자처럼 엮인 테)로 실루엣이 위는 작고 아래가 새장처럼 둥글게 퍼진다. 하트형 얼굴 · 눈꼬리가 살짝 내려간 부드러운 아몬드 눈 · 자연스러운 숱의 곧은 눈썹 · 살짝 들린 코 · 도톰한 하트 입술, 호박빛 눈(amber), 따뜻한 베이지 피부에 발그레한 볼(blush), 20대 초반, 밝고 활짝 열린 인상(cheerful)에 한쪽으로 밀린 짓궂은 옅은 미소(mischievous — 입은 다문다). 판타지(긴 달걀형 · 금발 옆 넘긴 머리 · 버들 곡선 · 도자기빛 피부) · 사이버펑크(부드럽게 각진 얼굴 · 진홍 올백 · 단단한 굴곡 몸 · 청동빛 갈색 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울 · 도쿄 · 로마 · 뉴욕 사람(랜드마크 포함)과도 셋 이상 다르다."
+            "why": "벨 에포크 철탑 거리의 아가씨 — 작고 풍만하고 생기 있는 사람. 작은 키에 풍만한 몸(petite_voluptuous) · 어깨에서 바깥으로 말린 철회색 머리(flipped_shoulder · dark_iron — 철탑의 연철빛) · 일자 앞머리 · 허리 아래 드러난 놋쇠 철테 크리놀린 틀(crinoline_cage — 철탑 격자처럼 엮인 테)로 실루엣이 위는 작고 아래가 새장처럼 둥글게 퍼진다. 하트형 얼굴 · 눈꼬리가 살짝 내려간 부드러운 아몬드 눈 · 자연스러운 숱의 곧은 눈썹 · 살짝 들린 코 · 도톰한 하트 입술, 호박빛 눈(amber), 따뜻한 베이지 피부에 발그레한 볼(blush), 20대 초반, 여우 같은 장난기 인상(mischievous)에 한쪽으로 밀린 짓궂은 옅은 미소(mischievous — 입은 다문다). 판타지(긴 달걀형 · 금발 옆 넘긴 머리 · 버들 곡선 · 도자기빛 피부) · 사이버펑크(부드럽게 각진 얼굴 · 진홍 올백 · 단단한 굴곡 몸 · 청동빛 갈색 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울 · 도쿄 · 로마 · 뉴욕 사람(랜드마크 포함)과도 셋 이상 다르다. 2026-11-23 인상 cheerful → mischievous(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
           },
           "hold": {
             "en": "a folded parasol of rose-red silk with a curling bronze handle"
@@ -3761,7 +3761,7 @@
               "lips": "full_wide",
               "eye_color": "ice_blue",
               "age": "early_20s",
-              "impression": "mature",
+              "impression": "provocative",
               "skin_tone": "bronze",
               "eye_size": "medium",
               "eye_tilt": "up",
@@ -3774,7 +3774,7 @@
               "hair_color": "crimson",
               "bangs": "none"
             },
-            "why": "가라앉지 않는 빛의 강을 다스리는 수위 지휘관 — 단단하고 매끈한 곡선의 사람. 어깨가 넓고 탄탄하되 풍만한 굴곡 몸(strong_curvy) · 매끈하게 뒤로 넘긴 진홍 머리(slicked_back · crimson — 파리 문장의 붉은 바탕과 장미창의 붉은빛) · 앞머리 없음 · 날 선 어깨에 높은 깃의 매끈한 정장(corporate_sleek)으로 실루엣이 위가 각지고 곧게 선다. 턱 각이 부드럽게 좁아드는 얼굴 · 눈꼬리가 살짝 올라간 아몬드 눈 · 눈 위에 살짝 낮게 놓인 짙은 눈썹 · 부드러운 매부리 곡선의 코 · 도톰한 입술, 얼음빛 푸른 눈(ice_blue), 청동빛 갈색 피부(bronze)에 윤기 나는 누드 입술(gloss), 30대 초반, 성숙하고 침착한 인상(mature)에 다 안다는 듯 한쪽 입꼬리만 올린 미소(smug — 입은 다문다). 판타지(긴 달걀형 · 금발 옆 넘긴 머리 · 버들 곡선 · 도자기빛 피부) · 스팀펑크(하트형 · 철회색 바깥말이 단발 · 작고 풍만한 몸 · 따뜻한 베이지 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울 · 도쿄 · 로마 · 뉴욕 사람(랜드마크 포함)과도 셋 이상 다르다."
+            "why": "가라앉지 않는 빛의 강을 다스리는 수위 지휘관 — 단단하고 매끈한 곡선의 사람. 어깨가 넓고 탄탄하되 풍만한 굴곡 몸(strong_curvy) · 매끈하게 뒤로 넘긴 진홍 머리(slicked_back · crimson — 파리 문장의 붉은 바탕과 장미창의 붉은빛) · 앞머리 없음 · 날 선 어깨에 높은 깃의 매끈한 정장(corporate_sleek)으로 실루엣이 위가 각지고 곧게 선다. 턱 각이 부드럽게 좁아드는 얼굴 · 눈꼬리가 살짝 올라간 아몬드 눈 · 눈 위에 살짝 낮게 놓인 짙은 눈썹 · 부드러운 매부리 곡선의 코 · 도톰한 입술, 얼음빛 푸른 눈(ice_blue), 청동빛 갈색 피부(bronze)에 윤기 나는 누드 입술(gloss), 30대 초반, 도발적인 인상(provocative)에 다 안다는 듯 한쪽 입꼬리만 올린 미소(smug — 입은 다문다). 판타지(긴 달걀형 · 금발 옆 넘긴 머리 · 버들 곡선 · 도자기빛 피부) · 스팀펑크(하트형 · 철회색 바깥말이 단발 · 작고 풍만한 몸 · 따뜻한 베이지 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울 · 도쿄 · 로마 · 뉴욕 사람(랜드마크 포함)과도 셋 이상 다르다. 2026-11-23 인상 mature → provocative(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
           },
           "hold": {
             "en": "a small silver sailing ship made of light, riding a ripple of glowing waves just above her open palm"
@@ -3894,7 +3894,7 @@
                   "lips": "small_bow",
                   "eye_color": "honey",
                   "age": "early_20s",
-                  "impression": "cute",
+                  "impression": "coquettish",
                   "skin_tone": "golden_tan",
                   "eye_size": "large",
                   "eye_tilt": "level",
@@ -3907,7 +3907,7 @@
                   "hair_color": "bronze",
                   "bangs": "choppy"
                 },
-                "why": "만국박람회 밤 탑의 가스등 수백 개를 켜는 점등원 — 작고 재빠른 사람. 작은 키에 굴곡 있는 몸(petite_curvy) · 짧게 헝클어진 픽시 컷(pixie_cut) · 지금 탑빛을 닮은 따뜻한 청동빛 머리(bronze) · 들쭉날쭉한 앞머리, 눈은 가스등 빛 꿀빛 금색(honey). 동글게 좁아드는 얼굴(round) · 둥근 아몬드 눈 · 가늘게 휜 눈썹 · 끝이 둥근 코 · 활 모양 입술, 금빛으로 그을린 피부(golden_tan), 눈 밑 점, 20대 초반, 귀여운 인상(cute)에 장난스러운 옅은 미소(playful — 입은 다문다). 파리 스팀펑크(하트형 · 철회색 바깥말이 단발 · 작고 풍만한 몸 · 따뜻한 베이지 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다."
+                "why": "만국박람회 밤 탑의 가스등 수백 개를 켜는 점등원 — 작고 재빠른 사람. 작은 키에 굴곡 있는 몸(petite_curvy) · 짧게 헝클어진 픽시 컷(pixie_cut) · 지금 탑빛을 닮은 따뜻한 청동빛 머리(bronze) · 들쭉날쭉한 앞머리, 눈은 가스등 빛 꿀빛 금색(honey). 동글게 좁아드는 얼굴(round) · 둥근 아몬드 눈 · 가늘게 휜 눈썹 · 끝이 둥근 코 · 활 모양 입술, 금빛으로 그을린 피부(golden_tan), 눈 밑 점, 20대 초반, 새침하고 애교 있는 인상(coquettish)에 장난스러운 옅은 미소(playful — 입은 다문다). 파리 스팀펑크(하트형 · 철회색 바깥말이 단발 · 작고 풍만한 몸 · 따뜻한 베이지 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 2026-11-23 인상 cute → coquettish(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a long brass lamplighter's pole with a small steady flame glowing in its hooked tip"
@@ -3951,7 +3951,7 @@
                   "lips": "heart_full",
                   "eye_color": "gold",
                   "age": "mid_20s",
-                  "impression": "sharp",
+                  "impression": "confident",
                   "skin_tone": "deep_brown",
                   "eye_size": "medium",
                   "eye_tilt": "up",
@@ -3964,7 +3964,7 @@
                   "hair_color": "tempered_steel",
                   "bangs": "straight"
                 },
-                "why": "철 탑 안테나로 도시의 시각을 하늘 끝까지 보내는 시보 송신관 — 곧고 매끈하게 빛나는 사람. 모래시계 몸(hourglass) · 옆머리를 뺨 길이로 자른 긴 히메 컷(hime_cut) · 담금질한 푸른 결의 강철빛 은발(tempered_steel — 연철 탑의 쇠빛) · 일자 앞머리, 눈은 신호 빛 같은 금빛(gold). 갸름하고 긴 달걀형 얼굴 · 자연스러운 크기의 아몬드 눈 · 자연스러운 숱의 곧은 눈썹 · 콧대가 곧고 가는 코 · 도톰한 하트 입술, 짙은 갈색 피부(deep_brown), 길게 뺀 아이라인, 20대 후반, 날 선 인상(sharp)에 자신 있는 표정(confident). 파리 사이버펑크(부드럽게 각진 얼굴 · 진홍 올백 · 단단한 굴곡 몸 · 청동빛 갈색 피부)과 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다."
+                "why": "철 탑 안테나로 도시의 시각을 하늘 끝까지 보내는 시보 송신관 — 곧고 매끈하게 빛나는 사람. 모래시계 몸(hourglass) · 옆머리를 뺨 길이로 자른 긴 히메 컷(hime_cut) · 담금질한 푸른 결의 강철빛 은발(tempered_steel — 연철 탑의 쇠빛) · 일자 앞머리, 눈은 신호 빛 같은 금빛(gold). 갸름하고 긴 달걀형 얼굴 · 자연스러운 크기의 아몬드 눈 · 자연스러운 숱의 곧은 눈썹 · 콧대가 곧고 가는 코 · 도톰한 하트 입술, 짙은 갈색 피부(deep_brown), 길게 뺀 아이라인, 20대 후반, 당당한 인상(confident)에 자신 있는 표정(confident). 파리 사이버펑크(부드럽게 각진 얼굴 · 진홍 올백 · 단단한 굴곡 몸 · 청동빛 갈색 피부)과 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 2026-11-23 인상 sharp → confident(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a slender antenna wand of bronze lattice whose tip sends out slow rings of soft light like ripples"
@@ -4017,7 +4017,7 @@
                   "lips": "heart_full",
                   "eye_color": "violet",
                   "age": "mid_20s",
-                  "impression": "regal",
+                  "impression": "haughty",
                   "skin_tone": "warm_beige",
                   "eye_size": "large",
                   "eye_tilt": "level",
@@ -4030,7 +4030,7 @@
                   "hair_color": "wine_red",
                   "bangs": "parted"
                 },
-                "why": "성채에서 왕궁이 된 강가 궁전을 지키는 여기사 — 단단하면서 기품 있는 사람. 굴곡 있는 운동 체형(curvy_athletic) · 반쯤 묶어 내린 긴 머리(half_up) · 왕실 벨벳 같은 짙은 와인빛 붉은 머리(wine_red) · 가르마 앞머리, 눈은 옅은 보랏빛(violet). 갸름한 달걀형 얼굴 · 둥근 아몬드 눈 · 부드러운 둥근 눈썹 · 끝이 둥근 코 · 도톰한 하트 입술, 따뜻한 베이지 피부에 발그레한 볼, 20대 중반, 위엄 있는 인상(regal)에 다문 입의 옅은 자부의 미소(proud). 파리 판타지(긴 달걀형 · 금발 옆 넘긴 머리 · 버들 곡선 · 도자기빛 피부)과 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르고, 이 궁전의 스팀펑크 · 사이버펑크 사람과도 얼굴 칸 다섯이 다 다르다."
+                "why": "성채에서 왕궁이 된 강가 궁전을 지키는 여기사 — 단단하면서 기품 있는 사람. 굴곡 있는 운동 체형(curvy_athletic) · 반쯤 묶어 내린 긴 머리(half_up) · 왕실 벨벳 같은 짙은 와인빛 붉은 머리(wine_red) · 가르마 앞머리, 눈은 옅은 보랏빛(violet). 갸름한 달걀형 얼굴 · 둥근 아몬드 눈 · 부드러운 둥근 눈썹 · 끝이 둥근 코 · 도톰한 하트 입술, 따뜻한 베이지 피부에 발그레한 볼, 20대 중반, 도도한 인상(haughty)에 다문 입의 옅은 자부의 미소(proud). 파리 판타지(긴 달걀형 · 금발 옆 넘긴 머리 · 버들 곡선 · 도자기빛 피부)과 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르고, 이 궁전의 스팀펑크 · 사이버펑크 사람과도 얼굴 칸 다섯이 다 다르다. 2026-11-23 인상 regal → haughty(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a small crystal pyramid glowing from within, resting on her open palm"
@@ -4207,7 +4207,7 @@
                   "lips": "heart_full",
                   "eye_color": "azure",
                   "age": "mid_20s",
-                  "impression": "glamorous",
+                  "impression": "seductive",
                   "skin_tone": "olive",
                   "eye_size": "large",
                   "eye_tilt": "down",
@@ -4220,7 +4220,7 @@
                   "hair_color": "rose_gold",
                   "bangs": "none"
                 },
-                "why": "황금 오페라 궁전의 프리마 돈나 — 풍성하고 화려한 사람. 가슴 · 엉덩이 · 허벅지가 풍만한 몸(voluptuous) · 길게 흘러내리는 나선 컬(long_curly) · 금박과 촛불빛을 닮은 장밋빛 금발(rose_gold) · 앞머리 없이 넘긴 이마, 눈은 하늘빛 푸른(azure). 광대가 살짝 선 마름모 얼굴(diamond) · 눈꼬리가 살짝 내려간 부드러운 아몬드 눈 · 자연스러운 숱의 곧은 눈썹 · 콧대가 곧고 가는 코 · 도톰한 하트 입술에 붉은 입술 색(red_lip), 올리브 피부, 20대 후반, 매혹적인 인상(glamorous)에 다문 입의 옅은 미소(half_smile). 파리 판타지(긴 달걀형 · 금발 옆 넘긴 머리 · 버들 곡선 · 도자기빛 피부)과 얼굴 칸 넷(얼굴형 · 눈 · 눈썹 · 입술) · 머리 · 체형 · 피부가 다르고, 이 극장의 스팀펑크 · 사이버펑크 사람과는 얼굴 칸 다섯이 다 다르다."
+                "why": "황금 오페라 궁전의 프리마 돈나 — 풍성하고 화려한 사람. 가슴 · 엉덩이 · 허벅지가 풍만한 몸(voluptuous) · 길게 흘러내리는 나선 컬(long_curly) · 금박과 촛불빛을 닮은 장밋빛 금발(rose_gold) · 앞머리 없이 넘긴 이마, 눈은 하늘빛 푸른(azure). 광대가 살짝 선 마름모 얼굴(diamond) · 눈꼬리가 살짝 내려간 부드러운 아몬드 눈 · 자연스러운 숱의 곧은 눈썹 · 콧대가 곧고 가는 코 · 도톰한 하트 입술에 붉은 입술 색(red_lip), 올리브 피부, 20대 후반, 관능적이고 섹시한 인상(seductive)에 다문 입의 옅은 미소(half_smile). 파리 판타지(긴 달걀형 · 금발 옆 넘긴 머리 · 버들 곡선 · 도자기빛 피부)과 얼굴 칸 넷(얼굴형 · 눈 · 눈썹 · 입술) · 머리 · 체형 · 피부가 다르고, 이 극장의 스팀펑크 · 사이버펑크 사람과는 얼굴 칸 다섯이 다 다르다. 2026-11-23 인상 glamorous → seductive(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a small golden lyre strung with threads of light"
@@ -4579,7 +4579,7 @@
               "lips": "heart_full",
               "eye_color": "gold",
               "age": "mid_20s",
-              "impression": "cool",
+              "impression": "femme_fatale",
               "skin_tone": "deep_brown",
               "eye_size": "medium",
               "eye_tilt": "up",
@@ -4592,7 +4592,7 @@
               "hair_color": "royal_purple",
               "bangs": "choppy"
             },
-            "why": "밤마다 흰 요새의 문을 잠그는 열쇠지기 — 탄탄하고 서늘한 사람. 운동으로 다진 굴곡 몸(curvy_athletic — 풍만한 가슴 · 둥근 엉덩이) · 얼굴을 감싸는 층진 셰그 컷의 로열 퍼플 머리(shag_layers · royal_purple — 왕관 보석의 보랏빛 벨벳과 까마귀 깃의 보랏빛 윤기) · 들쭉날쭉한 앞머리(choppy) · 커다란 두건 망토 아래 몸에 맞는 옷(hacker_cloak — 망토는 까마귀 깃 결의 직물)으로 실루엣이 위가 크고 신비롭다. 갸름한 달걀형 얼굴 · 눈꼬리가 살짝 올라간 아몬드 눈 · 자연스러운 숱의 곧은 눈썹 · 끝이 둥근 코 · 도톰한 하트 입술, 금빛 눈(gold), 짙은 갈색 피부(deep_brown)에 날개 아이라인(winged_liner), 20대 중반, 서늘한 인상(cool)에 침착하고 자신 있는 얼굴(confident — 입은 다문다). 판타지(다이아몬드형 · 구리빛 반묶음 · 늘씬 글래머 · 흰 피부) · 스팀펑크(하트형 · 크림 금발 볼륨 머리 · 작은 굴곡 몸 · 따뜻한 베이지 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울 · 도쿄 · 파리 · 로마 · 뉴욕 사람(랜드마크 포함)과도 셋 이상 다르다."
+            "why": "밤마다 흰 요새의 문을 잠그는 열쇠지기 — 탄탄하고 서늘한 사람. 운동으로 다진 굴곡 몸(curvy_athletic — 풍만한 가슴 · 둥근 엉덩이) · 얼굴을 감싸는 층진 셰그 컷의 로열 퍼플 머리(shag_layers · royal_purple — 왕관 보석의 보랏빛 벨벳과 까마귀 깃의 보랏빛 윤기) · 들쭉날쭉한 앞머리(choppy) · 커다란 두건 망토 아래 몸에 맞는 옷(hacker_cloak — 망토는 까마귀 깃 결의 직물)으로 실루엣이 위가 크고 신비롭다. 갸름한 달걀형 얼굴 · 눈꼬리가 살짝 올라간 아몬드 눈 · 자연스러운 숱의 곧은 눈썹 · 끝이 둥근 코 · 도톰한 하트 입술, 금빛 눈(gold), 짙은 갈색 피부(deep_brown)에 날개 아이라인(winged_liner), 20대 중반, 위험한 팜파탈 인상(femme_fatale)에 침착하고 자신 있는 얼굴(confident — 입은 다문다). 판타지(다이아몬드형 · 구리빛 반묶음 · 늘씬 글래머 · 흰 피부) · 스팀펑크(하트형 · 크림 금발 볼륨 머리 · 작은 굴곡 몸 · 따뜻한 베이지 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울 · 도쿄 · 파리 · 로마 · 뉴욕 사람(랜드마크 포함)과도 셋 이상 다르다. 2026-11-23 인상 cool → femme_fatale(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
           },
           "hold": {
             "en": "a long ornate antique iron key traced with fine lines of glowing red light"
@@ -4769,7 +4769,7 @@
                   "lips": "full_wide",
                   "eye_color": "ice_blue",
                   "age": "mid_20s",
-                  "impression": "soft",
+                  "impression": "dreamy",
                   "skin_tone": "golden_tan",
                   "eye_size": "large",
                   "eye_tilt": "down",
@@ -4782,7 +4782,7 @@
                   "hair_color": "rose_gold",
                   "bangs": "one_eye"
                 },
-                "why": "시계탑 문자판의 오팔 유리 조각과 금박 테를 처음 모습 그대로 되살리는 유산 복원가 — 길고 부드러운 사람. 팔다리가 길고 부드러운 곡선의 몸(willowy_curvy) · 한쪽이 긴 비대칭 단발의 로즈골드 머리(asymmetric_bob · rose_gold — 금박 테의 금빛) · 한쪽 눈을 덮는 앞머리 · 등뼈와 팔다리를 따라 가는 외골격이 그려진 몸에 붙는 옷(exo_frame)으로 실루엣이 선처럼 가늘다. 광대가 부드러운 다이아몬드형 얼굴 · 눈꼬리가 내려간 부드러운 눈 · 둥근 눈썹 · 곧고 가는 코 · 도톰한 입술, 얼음빛 푸른 눈, 황금빛 그을린 피부에 윤기 도는 입술, 20대 후반의 부드러운 인상에 생각에 잠긴 얼굴. 런던 사이버펑크 열쇠지기(달걀형 · 로열 퍼플 셰그 · 탄탄한 굴곡)와 얼굴 칸 다섯이 다 다르다."
+                "why": "시계탑 문자판의 오팔 유리 조각과 금박 테를 처음 모습 그대로 되살리는 유산 복원가 — 길고 부드러운 사람. 팔다리가 길고 부드러운 곡선의 몸(willowy_curvy) · 한쪽이 긴 비대칭 단발의 로즈골드 머리(asymmetric_bob · rose_gold — 금박 테의 금빛) · 한쪽 눈을 덮는 앞머리 · 등뼈와 팔다리를 따라 가는 외골격이 그려진 몸에 붙는 옷(exo_frame)으로 실루엣이 선처럼 가늘다. 광대가 부드러운 다이아몬드형 얼굴 · 눈꼬리가 내려간 부드러운 눈 · 둥근 눈썹 · 곧고 가는 코 · 도톰한 입술, 얼음빛 푸른 눈, 황금빛 그을린 피부에 윤기 도는 입술, 20대 후반의 몽환적인 인상에 생각에 잠긴 얼굴. 런던 사이버펑크 열쇠지기(달걀형 · 로열 퍼플 셰그 · 탄탄한 굴곡)와 얼굴 칸 다섯이 다 다르다. 2026-11-23 인상 soft → dreamy(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a single piece of opalescent dial glass held between her fingertips, glowing softly from within"
@@ -4892,7 +4892,7 @@
                   "lips": "heart_full",
                   "eye_color": "amber",
                   "age": "early_20s",
-                  "impression": "cute",
+                  "impression": "coquettish",
                   "skin_tone": "fair",
                   "eye_size": "large",
                   "eye_tilt": "level",
@@ -4905,7 +4905,7 @@
                   "hair_color": "flame_orange",
                   "bangs": "side_swept"
                 },
-                "why": "쌍탑 도개교의 들린 날개와 높은 통로 사이로 수상 비행기를 몰고 빠져나가는 비행사 — 작고 날렵하고 겁 없는 사람. 굴곡 있는 몸(curvy) · 짧게 헝클어진 불꽃빛 주황 픽시 컷(pixie_cut · flame_orange) · 옆으로 넘긴 앞머리 · 짧은 비행 재킷 · 엇갈린 멜빵 · 바람에 날리는 긴 목도리(aeronaut)로 실루엣이 가볍게 앞으로 쏠린다. 동그란 얼굴 · 동그란 눈 · 곧은 눈썹 · 끝이 둥근 코 · 도톰한 하트 입술, 호박빛 눈, 흰 피부에 주근깨, 20대 초반의 귀여운 인상에 입을 다문 옅은 미소. 런던 스팀펑크 다리 신호수 · 빅벤 시계 조율사와 얼굴 칸 다섯이 다 다르다."
+                "why": "쌍탑 도개교의 들린 날개와 높은 통로 사이로 수상 비행기를 몰고 빠져나가는 비행사 — 작고 날렵하고 겁 없는 사람. 굴곡 있는 몸(curvy) · 짧게 헝클어진 불꽃빛 주황 픽시 컷(pixie_cut · flame_orange) · 옆으로 넘긴 앞머리 · 짧은 비행 재킷 · 엇갈린 멜빵 · 바람에 날리는 긴 목도리(aeronaut)로 실루엣이 가볍게 앞으로 쏠린다. 동그란 얼굴 · 동그란 눈 · 곧은 눈썹 · 끝이 둥근 코 · 도톰한 하트 입술, 호박빛 눈, 흰 피부에 주근깨, 20대 초반의 새침하고 애교 있는 인상에 입을 다문 옅은 미소. 런던 스팀펑크 다리 신호수 · 빅벤 시계 조율사와 얼굴 칸 다섯이 다 다르다. 2026-11-23 인상 cute → coquettish(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a rolled river chart tied with a blue ribbon"
@@ -4949,7 +4949,7 @@
                   "lips": "small_bow",
                   "eye_color": "violet",
                   "age": "early_20s",
-                  "impression": "cool",
+                  "impression": "wistful",
                   "skin_tone": "warm_beige",
                   "eye_size": "medium",
                   "eye_tilt": "up",
@@ -4962,7 +4962,7 @@
                   "hair_color": "teal",
                   "bangs": "none"
                 },
-                "why": "바닥이 유리인 높은 통로를 악기처럼 연주해 소리를 빛으로 오가게 하는 다리의 음향 조각가 — 가늘고 아련한 사람. 가는 팔다리에 풍만한 가슴 · 둥근 엉덩이(busty_slender) · 한쪽 옆을 짧게 밀고 긴 머리를 반대쪽으로 넘긴 청록 머리(undercut_sweep · teal — 강물빛) · 앞머리 없이 · 몸에 붙는 바탕 위로 빛의 자락이 드레스처럼 떠 흐르는 옷(holo_gown)으로 실루엣이 빛 속에 퍼진다. 하트형 얼굴 · 자연스러운 아몬드 눈에 살짝 올라간 눈꼬리 · 각이 선 눈썹 · 살짝 매부리 코 · 큐피드 활 입술, 연보라 눈, 따뜻한 베이지 피부에 스모키 눈화장, 20대 초반의 서늘한 인상에 아련한 옅은 미소. 런던 사이버펑크 열쇠지기 · 빅벤 복원가와 얼굴 칸 다섯이 다 다르다."
+                "why": "바닥이 유리인 높은 통로를 악기처럼 연주해 소리를 빛으로 오가게 하는 다리의 음향 조각가 — 가늘고 아련한 사람. 가는 팔다리에 풍만한 가슴 · 둥근 엉덩이(busty_slender) · 한쪽 옆을 짧게 밀고 긴 머리를 반대쪽으로 넘긴 청록 머리(undercut_sweep · teal — 강물빛) · 앞머리 없이 · 몸에 붙는 바탕 위로 빛의 자락이 드레스처럼 떠 흐르는 옷(holo_gown)으로 실루엣이 빛 속에 퍼진다. 하트형 얼굴 · 자연스러운 아몬드 눈에 살짝 올라간 눈꼬리 · 각이 선 눈썹 · 살짝 매부리 코 · 큐피드 활 입술, 연보라 눈, 따뜻한 베이지 피부에 스모키 눈화장, 20대 초반의 아련한 인상에 아련한 옅은 미소. 런던 사이버펑크 열쇠지기 · 빅벤 복원가와 얼굴 칸 다섯이 다 다르다. 2026-11-23 인상 cool → wistful(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a slender violin-like instrument of clear glass strung with threads of soft light"
@@ -5015,7 +5015,7 @@
                   "lips": "heart_full",
                   "eye_color": "honey",
                   "age": "early_20s",
-                  "impression": "elegant",
+                  "impression": "seductive",
                   "skin_tone": "fair",
                   "eye_size": "large",
                   "eye_tilt": "level",
@@ -5028,7 +5028,7 @@
                   "hair_color": "golden_blonde",
                   "bangs": "curtain"
                 },
-                "why": "저녁 궁정과 무도회를 이끄는 궁정 의전 귀부인 — 화사하고 다정한 사람. 가슴 · 엉덩이 · 허벅지가 풍성한 몸(voluptuous) · 길게 흘러내리는 황금빛 금발 나선 곱슬(long_curly · golden_blonde — 크림과 금빛 방) · 가운데를 가른 커튼 앞머리 · 몸에 맞는 몸판 아래 넓게 퍼지며 긴 끌림 자락을 끄는 치마와 어깨 망토 · 관(crown_regalia)으로 실루엣이 넓고 화려하게 퍼진다. 하트형 얼굴 · 동그란 눈 · 둥근 눈썹 · 끝이 살짝 들린 코 · 도톰한 하트 입술, 꿀빛 눈, 흰 피부에 발그레한 볼, 20대 초반의 우아한 인상에 다정한 옅은 미소. 런던 판타지 시간 여군주 · 빅벤 등불 마법사 · 타워 브리지 성문 여기사와 얼굴 칸 다섯이 다 다르다."
+                "why": "저녁 궁정과 무도회를 이끄는 궁정 의전 귀부인 — 화사하고 다정한 사람. 가슴 · 엉덩이 · 허벅지가 풍성한 몸(voluptuous) · 길게 흘러내리는 황금빛 금발 나선 곱슬(long_curly · golden_blonde — 크림과 금빛 방) · 가운데를 가른 커튼 앞머리 · 몸에 맞는 몸판 아래 넓게 퍼지며 긴 끌림 자락을 끄는 치마와 어깨 망토 · 관(crown_regalia)으로 실루엣이 넓고 화려하게 퍼진다. 하트형 얼굴 · 동그란 눈 · 둥근 눈썹 · 끝이 살짝 들린 코 · 도톰한 하트 입술, 꿀빛 눈, 흰 피부에 발그레한 볼, 20대 초반의 관능적이고 섹시한 인상에 다정한 옅은 미소. 런던 판타지 시간 여군주 · 빅벤 등불 마법사 · 타워 브리지 성문 여기사와 얼굴 칸 다섯이 다 다르다. 2026-11-23 인상 elegant → seductive(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a gilded court wand tipped with a single crystal drop like a chandelier pendant"
@@ -5248,7 +5248,7 @@
               "lips": "heart_full",
               "eye_color": "honey",
               "age": "mid_20s",
-              "impression": "glamorous",
+              "impression": "haughty",
               "skin_tone": "olive",
               "eye_size": "medium",
               "eye_tilt": "down",
@@ -5261,7 +5261,7 @@
               "hair_color": "bronze",
               "bangs": "parted"
             },
-            "why": "살아 있는 빛의 분수를 지키는 소원 분수의 무녀 — 풍만하고 물결처럼 흐르는 사람. 풍만한 몸(voluptuous) · 허리까지 내려오는 따뜻한 청동빛 긴 물결머리(mermaid_waves · bronze — 옛 청동상과 황제의 금빛) · 가운데 가르마 · 분수의 층층 물줄기처럼 겹쳐 흐르는 자락과 조개 머리 장식(tide_oracle)으로 실루엣이 위에서 아래로 물결치며 퍼진다. 고전 조각 같은 갸름하고 긴 달걀형 얼굴 · 눈꼬리가 살짝 내려간 나른한 아몬드 눈 · 가늘게 휜 눈썹 · 부드러운 매부리 곡선의 로마 코 · 도톰한 하트 입술, 꿀빛 금색 눈(honey), 올리브 피부에 은은한 장밋빛 입술, 20대 후반, 화려하고 매혹적인 인상(glamorous)에 자부심 어린 옅은 미소(proud — 입은 다문다). 스팀펑크(둥근 얼굴 · 와인빛 한쪽 땋은머리 · 서양배 굴곡 몸 · 흰 피부) · 사이버펑크(다이아몬드형 · 물빛 단발 · 모래시계 몸 · 햇볕에 그을린 금빛 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울 · 도쿄 · 뉴욕 사람(랜드마크 포함)과도 셋 이상 다르다."
+            "why": "살아 있는 빛의 분수를 지키는 소원 분수의 무녀 — 풍만하고 물결처럼 흐르는 사람. 풍만한 몸(voluptuous) · 허리까지 내려오는 따뜻한 청동빛 긴 물결머리(mermaid_waves · bronze — 옛 청동상과 황제의 금빛) · 가운데 가르마 · 분수의 층층 물줄기처럼 겹쳐 흐르는 자락과 조개 머리 장식(tide_oracle)으로 실루엣이 위에서 아래로 물결치며 퍼진다. 고전 조각 같은 갸름하고 긴 달걀형 얼굴 · 눈꼬리가 살짝 내려간 나른한 아몬드 눈 · 가늘게 휜 눈썹 · 부드러운 매부리 곡선의 로마 코 · 도톰한 하트 입술, 꿀빛 금색 눈(honey), 올리브 피부에 은은한 장밋빛 입술, 20대 후반, 도도한 인상(haughty)에 자부심 어린 옅은 미소(proud — 입은 다문다). 스팀펑크(둥근 얼굴 · 와인빛 한쪽 땋은머리 · 서양배 굴곡 몸 · 흰 피부) · 사이버펑크(다이아몬드형 · 물빛 단발 · 모래시계 몸 · 햇볕에 그을린 금빛 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울 · 도쿄 · 뉴욕 사람(랜드마크 포함)과도 셋 이상 다르다. 2026-11-23 인상 glamorous → haughty(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
           },
           "hold": {
             "en": "a gold scallop-shell chalice brimming with softly glowing fountain water"
@@ -5315,7 +5315,7 @@
               "lips": "small_bow",
               "eye_color": "forest_green",
               "age": "early_20s",
-              "impression": "cute",
+              "impression": "coquettish",
               "skin_tone": "fair",
               "eye_size": "medium",
               "eye_tilt": "up",
@@ -5328,7 +5328,7 @@
               "hair_color": "wine_red",
               "bangs": "straight"
             },
-            "why": "수도교 물길을 돌보는 분수 기관사 아가씨 — 작고 동그랗고 허리 아래가 둥근 사람. 서양배 굴곡 몸(pear_curvy — 좁은 어깨 · 둥근 엉덩이) · 한쪽 어깨로 넘긴 굵은 와인빛 땋은머리(side_braid · wine_red — 로마의 포도주빛)에 놋쇠 월계수 잎 · 일자 앞머리 · 한 팔을 덮는 큰 놋쇠 기계 건틀릿(mech_gauntlet)과 뒤가 부푼 짧은 치마로 실루엣이 한쪽 팔과 허리 아래가 크다. 둥근 얼굴 · 눈꼬리가 살짝 올라간 장난스러운 아몬드 눈 · 둥근 눈썹 · 살짝 들린 코 · 활 모양 입술, 숲빛 초록 눈(forest_green), 흰 피부에 주근깨, 20대 초반, 귀여운 인상(cute)에 장난스러운 옅은 미소(playful — 웃음을 터뜨리지 않는다). 판타지(긴 달걀형 · 청동빛 물결머리 · 풍만 · 올리브 피부) · 사이버펑크(다이아몬드형 · 물빛 단발 · 모래시계 몸 · 그을린 금빛 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울 · 도쿄 · 뉴욕 사람(랜드마크 포함)과도 셋 이상 다르다."
+            "why": "수도교 물길을 돌보는 분수 기관사 아가씨 — 작고 동그랗고 허리 아래가 둥근 사람. 서양배 굴곡 몸(pear_curvy — 좁은 어깨 · 둥근 엉덩이) · 한쪽 어깨로 넘긴 굵은 와인빛 땋은머리(side_braid · wine_red — 로마의 포도주빛)에 놋쇠 월계수 잎 · 일자 앞머리 · 한 팔을 덮는 큰 놋쇠 기계 건틀릿(mech_gauntlet)과 뒤가 부푼 짧은 치마로 실루엣이 한쪽 팔과 허리 아래가 크다. 둥근 얼굴 · 눈꼬리가 살짝 올라간 장난스러운 아몬드 눈 · 둥근 눈썹 · 살짝 들린 코 · 활 모양 입술, 숲빛 초록 눈(forest_green), 흰 피부에 주근깨, 20대 초반, 새침하고 애교 있는 인상(coquettish)에 장난스러운 옅은 미소(playful — 웃음을 터뜨리지 않는다). 판타지(긴 달걀형 · 청동빛 물결머리 · 풍만 · 올리브 피부) · 사이버펑크(다이아몬드형 · 물빛 단발 · 모래시계 몸 · 그을린 금빛 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울 · 도쿄 · 뉴욕 사람(랜드마크 포함)과도 셋 이상 다르다. 2026-11-23 인상 cute → coquettish(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
           },
           "hold": {
             "en": "a polished brass valve wrench with a scallop-shell grip"
@@ -5438,7 +5438,7 @@
                   "lips": "small_bow",
                   "eye_color": "amber",
                   "age": "mid_20s",
-                  "impression": "sharp",
+                  "impression": "confident",
                   "skin_tone": "golden_tan",
                   "eye_size": "medium",
                   "eye_tilt": "level",
@@ -5451,7 +5451,7 @@
                   "hair_color": "copper",
                   "bangs": "none"
                 },
-                "why": "황금 투기장의 무패 여검투사 챔피언 — 로마 판타지의 풍만한 청동빛 물결머리 분수 무녀와 달리 단단하고 곧은 사람. 어깨가 넓고 근육이 단단하면서도 굴곡이 뚜렷한 몸(strong_curvy) · 높이 묶은 구릿빛 포니테일(ponytail · copper) · 앞머리 없이 뒤로 넘긴 이마, 눈은 호박색(amber). 갸름한 달걀형 얼굴 · 자연스러운 아몬드 눈 · 곧고 짙은 눈썹 · 곧은 코 · 활 모양 입술, 햇볕에 그을린 금빛 피부에 맨 얼굴, 20대 중반의 날 선 인상(sharp)에 굳은 표정(determined — 입은 다문다). 스팀펑크(다이아몬드형 · 금빛 핑거 웨이브 · 가슴 풍만한 날씬한 몸 · 도자기 피부) · 사이버펑크(하트형 · 백금빛 긴 생머리 · 버들 곡선 · 베이지 피부)와 얼굴형 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 로마 판타지 사람과 스페인 계단 · 나보나 광장 판타지 사람과 셋 이상 다르다."
+                "why": "황금 투기장의 무패 여검투사 챔피언 — 로마 판타지의 풍만한 청동빛 물결머리 분수 무녀와 달리 단단하고 곧은 사람. 어깨가 넓고 근육이 단단하면서도 굴곡이 뚜렷한 몸(strong_curvy) · 높이 묶은 구릿빛 포니테일(ponytail · copper) · 앞머리 없이 뒤로 넘긴 이마, 눈은 호박색(amber). 갸름한 달걀형 얼굴 · 자연스러운 아몬드 눈 · 곧고 짙은 눈썹 · 곧은 코 · 활 모양 입술, 햇볕에 그을린 금빛 피부에 맨 얼굴, 20대 중반의 당당한 인상(confident)에 굳은 표정(determined — 입은 다문다). 스팀펑크(다이아몬드형 · 금빛 핑거 웨이브 · 가슴 풍만한 날씬한 몸 · 도자기 피부) · 사이버펑크(하트형 · 백금빛 긴 생머리 · 버들 곡선 · 베이지 피부)와 얼굴형 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 로마 판타지 사람과 스페인 계단 · 나보나 광장 판타지 사람과 셋 이상 다르다. 2026-11-23 인상 sharp → confident(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a gilded short sword resting against her shoulder"
@@ -5628,7 +5628,7 @@
                   "lips": "full_wide",
                   "eye_color": "leaf_green",
                   "age": "early_20s",
-                  "impression": "innocent",
+                  "impression": "shy",
                   "skin_tone": "fair",
                   "eye_size": "large",
                   "eye_tilt": "down",
@@ -5641,7 +5641,7 @@
                   "hair_color": "golden_blonde",
                   "bangs": "curtain"
                 },
-                "why": "봄 꽃 축제에서 계단을 내려오는 꽃 계단의 여왕 — 로마 판타지의 청동빛 물결머리 분수 무녀와 달리 밝고 사랑스러운 봄의 사람. 키가 크고 다리가 길며 굴곡이 풍성한 몸(tall_curvy) · 허리까지 내려오는 금발 나선 곱슬(long_curly · golden_blonde) · 커튼 앞머리, 눈은 잎새 초록(leaf_green). 하트형 얼굴 · 동그스름한 큰 눈 · 둥근 눈썹 · 끝이 둥근 코 · 도톰한 입술, 흰 피부에 발그레한 볼, 20대 초반의 맑은 인상(innocent)에 다정한 표정(gentle — 입은 다문다). 스팀펑크(달걀형 · 삼나무빛 반묶음 · 작은 굴곡 몸 · 올리브 피부) · 사이버펑크(긴 얼굴 · 분홍 비대칭 단발 · 날씬한 몸 · 그을린 피부)와 얼굴형 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 로마 판타지 사람과 콜로세움 · 나보나 광장 판타지 사람과 셋 이상 다르다."
+                "why": "봄 꽃 축제에서 계단을 내려오는 꽃 계단의 여왕 — 로마 판타지의 청동빛 물결머리 분수 무녀와 달리 밝고 사랑스러운 봄의 사람. 키가 크고 다리가 길며 굴곡이 풍성한 몸(tall_curvy) · 허리까지 내려오는 금발 나선 곱슬(long_curly · golden_blonde) · 커튼 앞머리, 눈은 잎새 초록(leaf_green). 하트형 얼굴 · 동그스름한 큰 눈 · 둥근 눈썹 · 끝이 둥근 코 · 도톰한 입술, 흰 피부에 발그레한 볼, 20대 초반의 수줍은 인상(shy)에 다정한 표정(gentle — 입은 다문다). 스팀펑크(달걀형 · 삼나무빛 반묶음 · 작은 굴곡 몸 · 올리브 피부) · 사이버펑크(긴 얼굴 · 분홍 비대칭 단발 · 날씬한 몸 · 그을린 피부)와 얼굴형 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 로마 판타지 사람과 콜로세움 · 나보나 광장 판타지 사람과 셋 이상 다르다. 2026-11-23 인상 innocent → shy(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a sheaf of pink azalea branches tied with a gold ribbon"
@@ -5752,7 +5752,7 @@
                   "lips": "thin_long",
                   "eye_color": "azure",
                   "age": "mid_20s",
-                  "impression": "cool",
+                  "impression": "confident",
                   "skin_tone": "golden_tan",
                   "eye_size": "large",
                   "eye_tilt": "level",
@@ -5765,7 +5765,7 @@
                   "hair_color": "sunset_pink",
                   "bangs": "none"
                 },
-                "why": "계단을 야외 극장으로 여는 밤 시사회의 진행자 — 로마 사이버펑크의 물빛 단발 모래시계 길잡이와 달리 날렵하고 세련된 무대의 사람. 허리가 가늘고 단단하며 가슴은 풍만한 몸(lean_toned — 이 로마 아홉 사람 가운데 하나뿐인 마른 쪽 체형) · 한쪽이 긴 아잘레아빛 분홍 비대칭 단발(asymmetric_bob · sunset_pink), 앞머리 없음, 눈은 하늘빛 파랑(azure). 긴 얼굴 · 동그스름한 큰 눈 · 눈 위로 낮게 드리운 짙은 눈썹 · 끝이 둥근 코 · 가늘고 긴 입술에 윤기 나는 누드 입술, 햇볕에 그을린 금빛 피부, 20대 후반의 차가운 인상(cool)에 자신 있는 표정(confident). 판타지(하트형 · 금발 나선 곱슬 · 큰 키 곡선) · 스팀펑크(달걀형 · 삼나무빛 반묶음 · 작은 굴곡 몸)와 얼굴형 · 머리 · 체형이 다 다르다. 얼굴 칸은 로마 사이버펑크 사람과 콜로세움 · 나보나 광장 사이버펑크 사람과 셋 이상 다르다."
+                "why": "계단을 야외 극장으로 여는 밤 시사회의 진행자 — 로마 사이버펑크의 물빛 단발 모래시계 길잡이와 달리 날렵하고 세련된 무대의 사람. 허리가 가늘고 단단하며 가슴은 풍만한 몸(lean_toned — 이 로마 아홉 사람 가운데 하나뿐인 마른 쪽 체형) · 한쪽이 긴 아잘레아빛 분홍 비대칭 단발(asymmetric_bob · sunset_pink), 앞머리 없음, 눈은 하늘빛 파랑(azure). 긴 얼굴 · 동그스름한 큰 눈 · 눈 위로 낮게 드리운 짙은 눈썹 · 끝이 둥근 코 · 가늘고 긴 입술에 윤기 나는 누드 입술, 햇볕에 그을린 금빛 피부, 20대 후반의 당당한 인상(confident)에 자신 있는 표정(confident). 판타지(하트형 · 금발 나선 곱슬 · 큰 키 곡선) · 스팀펑크(달걀형 · 삼나무빛 반묶음 · 작은 굴곡 몸)와 얼굴형 · 머리 · 체형이 다 다르다. 얼굴 칸은 로마 사이버펑크 사람과 콜로세움 · 나보나 광장 사이버펑크 사람과 셋 이상 다르다. 2026-11-23 인상 cool → confident(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a slim projector wand casting a small ribbon of moving light"
@@ -5818,7 +5818,7 @@
                   "lips": "thin_long",
                   "eye_color": "emerald",
                   "age": "mid_20s",
-                  "impression": "elegant",
+                  "impression": "mischievous",
                   "skin_tone": "porcelain",
                   "eye_size": "medium",
                   "eye_tilt": "up",
@@ -5831,7 +5831,7 @@
                   "hair_color": "rose_gold",
                   "bangs": "parted"
                 },
-                "why": "바로크 광장 축제 가면극의 주연 여배우 — 로마 판타지의 청동빛 물결머리 분수 무녀와 달리 연극적이고 장난기 있는 사람. 굴곡 있는 몸(curvy) · 바로크풍으로 풍성하게 부풀린 로즈골드 머리(voluminous · rose_gold) · 가운데 가르마, 눈은 에메랄드(emerald). 광대가 또렷한 다이아몬드형 얼굴 · 눈꼬리가 살짝 올라간 아몬드 눈 · 각이 진 눈썹 · 살짝 들린 코 · 가늘고 긴 입술, 도자기 피부에 스모키 눈화장, 20대 후반의 우아한 인상(elegant)에 장난스러운 작은 미소(mischievous — 입은 다문다). 스팀펑크(긴 얼굴 · 남빛 낮은 포니테일 · 모래시계 몸 · 올리브 피부) · 사이버펑크(달걀형 · 보랏빛 울프컷 · 탄탄한 곡선 · 베이지 피부)와 얼굴형 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 로마 판타지 사람과 콜로세움 · 스페인 계단 판타지 사람과 셋 이상 다르다."
+                "why": "바로크 광장 축제 가면극의 주연 여배우 — 로마 판타지의 청동빛 물결머리 분수 무녀와 달리 연극적이고 장난기 있는 사람. 굴곡 있는 몸(curvy) · 바로크풍으로 풍성하게 부풀린 로즈골드 머리(voluminous · rose_gold) · 가운데 가르마, 눈은 에메랄드(emerald). 광대가 또렷한 다이아몬드형 얼굴 · 눈꼬리가 살짝 올라간 아몬드 눈 · 각이 진 눈썹 · 살짝 들린 코 · 가늘고 긴 입술, 도자기 피부에 스모키 눈화장, 20대 후반의 여우 같은 장난기 인상(mischievous)에 장난스러운 작은 미소(mischievous — 입은 다문다). 스팀펑크(긴 얼굴 · 남빛 낮은 포니테일 · 모래시계 몸 · 올리브 피부) · 사이버펑크(달걀형 · 보랏빛 울프컷 · 탄탄한 곡선 · 베이지 피부)와 얼굴형 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 로마 판타지 사람과 콜로세움 · 스페인 계단 판타지 사람과 셋 이상 다르다. 2026-11-23 인상 elegant → mischievous(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a gilded half-mask on a slender gold stick"
@@ -5875,7 +5875,7 @@
                   "lips": "full_wide",
                   "eye_color": "steel_blue",
                   "age": "mid_20s",
-                  "impression": "regal",
+                  "impression": "haughty",
                   "skin_tone": "olive",
                   "eye_size": "large",
                   "eye_tilt": "level",
@@ -5888,7 +5888,7 @@
                   "hair_color": "navy",
                   "bangs": "straight"
                 },
-                "why": "여름 물 축제 날 물에 잠긴 광장을 모는 증기선 선장 — 로마 스팀펑크의 와인빛 땋은머리 서양배 몸 기관사와 달리 당당하고 시원한 사람. 모래시계 몸(hourglass) · 목덜미에 낮게 묶은 짙은 남빛 포니테일(low_ponytail · navy) · 일자 앞머리, 눈은 강철빛 파랑(steel_blue). 긴 얼굴 · 동그스름한 큰 눈 · 각이 진 눈썹 · 끝이 둥근 코 · 도톰한 입술, 올리브 피부에 맨 얼굴, 20대 중반의 당당한 인상(regal)에 자신 있는 표정(confident). 판타지(다이아몬드형 · 로즈골드 풍성한 머리 · 굴곡 몸 · 도자기 피부) · 사이버펑크(달걀형 · 보랏빛 울프컷 · 탄탄한 곡선)와 얼굴형 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 로마 스팀펑크 사람과 콜로세움 · 스페인 계단 스팀펑크 사람과 셋 이상 다르다."
+                "why": "여름 물 축제 날 물에 잠긴 광장을 모는 증기선 선장 — 로마 스팀펑크의 와인빛 땋은머리 서양배 몸 기관사와 달리 당당하고 시원한 사람. 모래시계 몸(hourglass) · 목덜미에 낮게 묶은 짙은 남빛 포니테일(low_ponytail · navy) · 일자 앞머리, 눈은 강철빛 파랑(steel_blue). 긴 얼굴 · 동그스름한 큰 눈 · 각이 진 눈썹 · 끝이 둥근 코 · 도톰한 입술, 올리브 피부에 맨 얼굴, 20대 중반의 도도한 인상(haughty)에 자신 있는 표정(confident). 판타지(다이아몬드형 · 로즈골드 풍성한 머리 · 굴곡 몸 · 도자기 피부) · 사이버펑크(달걀형 · 보랏빛 울프컷 · 탄탄한 곡선)와 얼굴형 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 로마 스팀펑크 사람과 콜로세움 · 스페인 계단 스팀펑크 사람과 셋 이상 다르다. 2026-11-23 인상 regal → haughty(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a slim brass spyglass"
@@ -6179,7 +6179,7 @@
               "lips": "heart_full",
               "eye_color": "amber",
               "age": "mid_20s",
-              "impression": "sharp",
+              "impression": "provocative",
               "skin_tone": "olive",
               "eye_size": "medium",
               "eye_tilt": "up",
@@ -6192,7 +6192,7 @@
               "hair_color": "cobalt_blue",
               "bangs": "none"
             },
-            "why": "하늘 택시 승강장의 착륙 유도원 — 날렵하고 탄탄한 사람. 탄탄한 몸(athletic) · 코발트빛 긴 땋은머리(braids · cobalt_blue) · 앞머리 없이 드러낸 이마 · 몸에 붙는 코트와 계단처럼 쌓인 높은 깃으로 실루엣이 어깨에서 각지고 아래로 곧다. 다이아몬드형 얼굴 · 눈꼬리가 살짝 올라간 눈 · 각진 눈썹 · 부드러운 매부리 곡선의 코 · 하트형 입술, 호박빛 눈(amber), 올리브 피부에 날개 아이라인, 20대 중반, 강렬한 인상(sharp)에 자신 있는 표정(confident). 판타지(달걀형 · 고금빛 곱슬 · 큰 키 · 짙은 갈색 피부) · 스팀펑크(하트형 · 테라코타 올림머리 · 곡선 몸 · 흰 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다."
+            "why": "하늘 택시 승강장의 착륙 유도원 — 날렵하고 탄탄한 사람. 탄탄한 몸(athletic) · 코발트빛 긴 땋은머리(braids · cobalt_blue) · 앞머리 없이 드러낸 이마 · 몸에 붙는 코트와 계단처럼 쌓인 높은 깃으로 실루엣이 어깨에서 각지고 아래로 곧다. 다이아몬드형 얼굴 · 눈꼬리가 살짝 올라간 눈 · 각진 눈썹 · 부드러운 매부리 곡선의 코 · 하트형 입술, 호박빛 눈(amber), 올리브 피부에 날개 아이라인, 20대 중반, 도발적인 인상(provocative)에 자신 있는 표정(confident). 판타지(달걀형 · 고금빛 곱슬 · 큰 키 · 짙은 갈색 피부) · 스팀펑크(하트형 · 테라코타 올림머리 · 곡선 몸 · 흰 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 2026-11-23 인상 sharp → provocative(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
           },
           "hold": {
             "en": "a slim landing-signal wand whose tip glows taxi yellow"
@@ -6245,7 +6245,7 @@
                   "lips": "small_bow",
                   "eye_color": "honey",
                   "age": "mid_20s",
-                  "impression": "mature",
+                  "impression": "confident",
                   "skin_tone": "bronze",
                   "eye_size": "medium",
                   "eye_tilt": "level",
@@ -6258,7 +6258,7 @@
                   "hair_color": "bright_gold",
                   "bangs": "none"
                 },
-                "why": "끊어진 사슬을 밟고 선 해방의 기사 — 횃불을 높이 든 단단하고 너그러운 사람. 힘 있는 어깨에 굴곡이 풍만한 몸(strong_curvy) · 높이 묶은 금빛 포니테일(ponytail · bright_gold — 금박을 입힌 횃불 불꽃의 메아리) · 이마를 드러낸 머리, 눈은 꿀빛 금색(honey). 긴 달걀형 얼굴 · 깊은 눈매 · 가는 아치 눈썹 · 부드러운 매부리코 · 또렷한 활 입술, 청동빛 갈색 피부에 눈 밑 점, 20대 후반의 성숙한 인상에 굳은 표정. 뉴욕 판타지 여군주(달걀형 · 고금빛 곱슬 · 큰 키 · 짙은 갈색 피부 · 칠 빛살 티아라 · 녹청 비단)와 얼굴 칸 다섯 · 머리 · 체형 · 무늬가 다 다르다 — 티아라 · 녹청 자락 대신 끊어진 사슬 · 횃불."
+                "why": "끊어진 사슬을 밟고 선 해방의 기사 — 횃불을 높이 든 단단하고 너그러운 사람. 힘 있는 어깨에 굴곡이 풍만한 몸(strong_curvy) · 높이 묶은 금빛 포니테일(ponytail · bright_gold — 금박을 입힌 횃불 불꽃의 메아리) · 이마를 드러낸 머리, 눈은 꿀빛 금색(honey). 긴 달걀형 얼굴 · 깊은 눈매 · 가는 아치 눈썹 · 부드러운 매부리코 · 또렷한 활 입술, 청동빛 갈색 피부에 눈 밑 점, 20대 후반의 당당한 인상에 굳은 표정. 뉴욕 판타지 여군주(달걀형 · 고금빛 곱슬 · 큰 키 · 짙은 갈색 피부 · 칠 빛살 티아라 · 녹청 비단)와 얼굴 칸 다섯 · 머리 · 체형 · 무늬가 다 다르다 — 티아라 · 녹청 자락 대신 끊어진 사슬 · 횃불. 2026-11-23 인상 mature → confident(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a raised torch whose flame of living golden light burns bright and steady"
@@ -6312,7 +6312,7 @@
                   "lips": "heart_full",
                   "eye_color": "teal",
                   "age": "early_20s",
-                  "impression": "cheerful",
+                  "impression": "sassy",
                   "skin_tone": "fair",
                   "eye_size": "medium",
                   "eye_tilt": "up",
@@ -6325,7 +6325,7 @@
                   "hair_color": "copper",
                   "bangs": "choppy"
                 },
-                "why": "구리판을 두드려 거상의 옷 주름을 빚는 구리 장인 — 손이 바쁘고 눈이 밝은 사람. 어깨는 가늘고 엉덩이 · 허벅지가 풍만한 서양배 곡선 몸(pear_curvy) · 한쪽 어깨로 넘긴 굵은 구릿빛 땋은 머리(side_braid · copper — 녹청이 되기 전 새 구리의 붉은 갈색) · 들쭉날쭉한 앞머리, 눈은 청록(teal — 앞으로 올 녹청). 달걀형 얼굴 · 눈꼬리가 살짝 올라간 눈 · 곧고 짙은 눈썹 · 곧은 코 · 도톰한 하트 입술, 흰 피부에 입가의 점, 20대 초반의 밝은 인상에 몰두한 표정. 뉴욕 스팀펑크 가스등 아가씨(하트형 · 테라코타 올림머리 · 곡선 몸 · 주근깨)와 얼굴 칸 다섯 · 머리 · 체형이 다 다르다."
+                "why": "구리판을 두드려 거상의 옷 주름을 빚는 구리 장인 — 손이 바쁘고 눈이 밝은 사람. 어깨는 가늘고 엉덩이 · 허벅지가 풍만한 서양배 곡선 몸(pear_curvy) · 한쪽 어깨로 넘긴 굵은 구릿빛 땋은 머리(side_braid · copper — 녹청이 되기 전 새 구리의 붉은 갈색) · 들쭉날쭉한 앞머리, 눈은 청록(teal — 앞으로 올 녹청). 달걀형 얼굴 · 눈꼬리가 살짝 올라간 눈 · 곧고 짙은 눈썹 · 곧은 코 · 도톰한 하트 입술, 흰 피부에 입가의 점, 20대 초반의 당찬 인상에 몰두한 표정. 뉴욕 스팀펑크 가스등 아가씨(하트형 · 테라코타 올림머리 · 곡선 몸 · 주근깨)와 얼굴 칸 다섯 · 머리 · 체형이 다 다르다. 2026-11-23 인상 cheerful → sassy(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a wooden mallet worn smooth from shaping copper"
@@ -6455,7 +6455,7 @@
                   "lips": "heart_full",
                   "eye_color": "leaf_green",
                   "age": "early_20s",
-                  "impression": "innocent",
+                  "impression": "shy",
                   "skin_tone": "porcelain",
                   "eye_size": "large",
                   "eye_tilt": "down",
@@ -6468,7 +6468,7 @@
                   "hair_color": "cedar",
                   "bangs": "curtain"
                 },
-                "why": "숲 정원을 돌보는 숲지기 — 둥글고 다정한 사람. 팔다리가 가늘고 가슴이 풍만한 몸(busty_slender) · 등까지 흐르는 삼나무빛 갈색 웨이브(long_wavy · cedar) · 커튼 앞머리, 눈은 잎새 초록(leaf_green). 둥근 얼굴 · 처진 부드러운 눈 · 둥근 눈썹 · 끝이 살짝 들린 코 · 도톰한 하트 입술, 도자기빛 피부에 발그레한 볼, 20대 초반의 맑은 인상에 다정한 표정. 뉴욕 판타지 여군주(달걀형 · 고금빛 곱슬 · 큰 키 · 짙은 갈색 피부) · 해방 기사(긴 얼굴 · 금빛 포니테일)와 얼굴 칸 다섯 · 머리 · 체형이 다 다르다."
+                "why": "숲 정원을 돌보는 숲지기 — 둥글고 다정한 사람. 팔다리가 가늘고 가슴이 풍만한 몸(busty_slender) · 등까지 흐르는 삼나무빛 갈색 웨이브(long_wavy · cedar) · 커튼 앞머리, 눈은 잎새 초록(leaf_green). 둥근 얼굴 · 처진 부드러운 눈 · 둥근 눈썹 · 끝이 살짝 들린 코 · 도톰한 하트 입술, 도자기빛 피부에 발그레한 볼, 20대 초반의 수줍은 인상에 다정한 표정. 뉴욕 판타지 여군주(달걀형 · 고금빛 곱슬 · 큰 키 · 짙은 갈색 피부) · 해방 기사(긴 얼굴 · 금빛 포니테일)와 얼굴 칸 다섯 · 머리 · 체형이 다 다르다. 2026-11-23 인상 innocent → shy(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a slender staff of pale wood sprouting fresh green leaves and small white blossoms"
@@ -6522,7 +6522,7 @@
                   "lips": "full_wide",
                   "eye_color": "sapphire",
                   "age": "mid_20s",
-                  "impression": "glamorous",
+                  "impression": "coquettish",
                   "skin_tone": "warm_beige",
                   "eye_size": "medium",
                   "eye_tilt": "level",
@@ -6535,7 +6535,7 @@
                   "hair_color": "rose_gold",
                   "bangs": "side_swept"
                 },
-                "why": "얼어붙은 호수의 스케이트 선생 — 겨울 저녁에 가장 눈에 띄는 화사한 사람. 모래시계 체형(hourglass) · 끝이 바깥으로 말린 어깨 길이 로즈골드 머리(flipped_shoulder · rose_gold) · 옆으로 쓸어 넘긴 앞머리, 눈은 사파이어. 다이아몬드형 얼굴 · 아몬드 눈 · 가는 아치 눈썹 · 부드러운 매부리코 · 도톰한 입술, 따뜻한 베이지 피부에 장밋빛 입술, 20대 중반의 화려한 인상에 살짝 다문 미소. 뉴욕 스팀펑크 가스등 아가씨(하트형 · 테라코타 올림머리 · 곡선 몸 · 흰 피부) · 구리 장인(달걀형 · 구릿빛 땋은 머리 · 서양배 몸)과 얼굴 칸 다섯 · 머리 · 체형이 다 다르다."
+                "why": "얼어붙은 호수의 스케이트 선생 — 겨울 저녁에 가장 눈에 띄는 화사한 사람. 모래시계 체형(hourglass) · 끝이 바깥으로 말린 어깨 길이 로즈골드 머리(flipped_shoulder · rose_gold) · 옆으로 쓸어 넘긴 앞머리, 눈은 사파이어. 다이아몬드형 얼굴 · 아몬드 눈 · 가는 아치 눈썹 · 부드러운 매부리코 · 도톰한 입술, 따뜻한 베이지 피부에 장밋빛 입술, 20대 중반의 새침하고 애교 있는 인상에 살짝 다문 미소. 뉴욕 스팀펑크 가스등 아가씨(하트형 · 테라코타 올림머리 · 곡선 몸 · 흰 피부) · 구리 장인(달걀형 · 구릿빛 땋은 머리 · 서양배 몸)과 얼굴 칸 다섯 · 머리 · 체형이 다 다르다. 2026-11-23 인상 glamorous → coquettish(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a small brass hand-warmer lantern glowing amber"
@@ -6664,7 +6664,7 @@
                   "lips": "thin_long",
                   "eye_color": "gold",
                   "age": "mid_20s",
-                  "impression": "elegant",
+                  "impression": "mysterious",
                   "skin_tone": "golden_tan",
                   "eye_size": "medium",
                   "eye_tilt": "up",
@@ -6677,7 +6677,7 @@
                   "hair_color": "navy",
                   "bangs": "straight"
                 },
-                "why": "길손 전당의 별 궁륭을 읽는 성좌 지도사 — 신비롭고 우아한 사람. 가슴 · 엉덩이 · 허벅지가 풍만한 몸(voluptuous) · 허리까지 곧게 떨어지는 남빛 생머리(long_straight · navy — 밤하늘) · 일자 앞머리, 눈은 금색(gold — 천장의 금빛 별). 하트형 얼굴 · 눈꼬리가 살짝 올라간 눈 · 각진 눈썹 · 끝이 둥근 코 · 가늘고 긴 입술, 금빛 도는 밝은 피부에 짙은 베리빛 입술, 20대 중반의 우아한 인상에 생각에 잠긴 표정. 뉴욕 판타지 여군주 · 해방 기사 · 숲지기와 얼굴 칸 다섯 · 머리 · 체형이 다 다르다."
+                "why": "길손 전당의 별 궁륭을 읽는 성좌 지도사 — 신비롭고 우아한 사람. 가슴 · 엉덩이 · 허벅지가 풍만한 몸(voluptuous) · 허리까지 곧게 떨어지는 남빛 생머리(long_straight · navy — 밤하늘) · 일자 앞머리, 눈은 금색(gold — 천장의 금빛 별). 하트형 얼굴 · 눈꼬리가 살짝 올라간 눈 · 각진 눈썹 · 끝이 둥근 코 · 가늘고 긴 입술, 금빛 도는 밝은 피부에 짙은 베리빛 입술, 20대 중반의 속을 알 수 없는 신비로운 인상에 생각에 잠긴 표정. 뉴욕 판타지 여군주 · 해방 기사 · 숲지기와 얼굴 칸 다섯 · 머리 · 체형이 다 다르다. 2026-11-23 인상 elegant → mysterious(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a small gold armillary sphere of star rings turning slowly in her palm"
@@ -6730,7 +6730,7 @@
                   "lips": "full_wide",
                   "eye_color": "hazel",
                   "age": "early_20s",
-                  "impression": "mature",
+                  "impression": "haughty",
                   "skin_tone": "bronze",
                   "eye_size": "medium",
                   "eye_tilt": "down",
@@ -6743,7 +6743,7 @@
                   "hair_color": "wine_red",
                   "bangs": "none"
                 },
-                "why": "증기 열차 대합실을 다스리는 역장 — 작지만 당당한 사람. 키는 작아도 굴곡이 풍만한 몸(petite_voluptuous) · 턱선까지 윤기 나게 물결친 와인빛 핑거웨이브(finger_waves · wine_red) · 앞머리 없이, 눈은 담갈색(hazel). 긴 얼굴 · 처진 부드러운 눈 · 조금 낮게 자리한 짙은 눈썹 · 끝이 살짝 들린 코 · 도톰한 입술, 청동빛 갈색 피부에 눈 밑 점, 30대 초반의 성숙한 인상에 자랑스러운 표정. 뉴욕 스팀펑크 가스등 아가씨 · 구리 장인 · 스케이트 선생과 얼굴 칸 다섯 · 머리 · 체형이 다 다르다."
+                "why": "증기 열차 대합실을 다스리는 역장 — 작지만 당당한 사람. 키는 작아도 굴곡이 풍만한 몸(petite_voluptuous) · 턱선까지 윤기 나게 물결친 와인빛 핑거웨이브(finger_waves · wine_red) · 앞머리 없이, 눈은 담갈색(hazel). 긴 얼굴 · 처진 부드러운 눈 · 조금 낮게 자리한 짙은 눈썹 · 끝이 살짝 들린 코 · 도톰한 입술, 청동빛 갈색 피부에 눈 밑 점, 30대 초반의 도도한 인상에 자랑스러운 표정. 뉴욕 스팀펑크 가스등 아가씨 · 구리 장인 · 스케이트 선생과 얼굴 칸 다섯 · 머리 · 체형이 다 다르다. 2026-11-23 인상 mature → haughty(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a brass signal lantern with a green glass lens"
@@ -6917,7 +6917,7 @@
               "lips": "heart_full",
               "eye_color": "forest_green",
               "age": "mid_20s",
-              "impression": "glamorous",
+              "impression": "seductive",
               "skin_tone": "warm_beige",
               "eye_size": "medium",
               "eye_tilt": "level",
@@ -6930,7 +6930,7 @@
               "hair_color": "bright_red",
               "bangs": "parted"
             },
-            "why": "해협 입구 작은 섬 탑의 등불로 두 대륙 사이 뱃길을 지키는 튤립 궁정의 등불 공주 — 풍만하고 화려한 사람. 가슴 · 엉덩이 · 허벅지가 풍성한 곡선(voluptuous) · 등까지 흘러내리는 긴 나선 곱슬(long_curly) · 이즈니크 타일의 튤립 빛 붉은 머리(bright_red) · 가운데 가르마(parted — 돔 금관이 가운데 선다) · 높이 선 깃에 어깨 망토를 겹치고 넓은 소매가 늘어지는 긴 겉옷(mage_robe — 오스만 카프탄 재단)으로 실루엣이 길고 풍성하다. 턱의 각이 부드러운 얼굴 · 부드럽게 깊은 눈 · 가늘게 휜 눈썹 · 콧대가 곧고 가는 코 · 도톰한 하트 입술, 숲빛 초록 눈(forest_green), 따뜻한 베이지 피부(warm_beige)에 입가의 작은 점(mole_lip), 20대 후반, 화려하고 관능적인 인상(glamorous)에 입을 다문 옅은 미소(soft_smile). 스팀펑크(둥근형 · 납빛 숏컷 · 탄탄한 굴곡 몸 · 금빛 도는 피부) · 사이버펑크(달걀형 · 두 빛깔 긴 생머리 · 늘씬 글래머 · 올리브빛 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울 · 도쿄 · 베이징 · 파리 · 런던 · 로마 · 뉴욕 사람(랜드마크 포함)과도 셋 이상 다르다."
+            "why": "해협 입구 작은 섬 탑의 등불로 두 대륙 사이 뱃길을 지키는 튤립 궁정의 등불 공주 — 풍만하고 화려한 사람. 가슴 · 엉덩이 · 허벅지가 풍성한 곡선(voluptuous) · 등까지 흘러내리는 긴 나선 곱슬(long_curly) · 이즈니크 타일의 튤립 빛 붉은 머리(bright_red) · 가운데 가르마(parted — 돔 금관이 가운데 선다) · 높이 선 깃에 어깨 망토를 겹치고 넓은 소매가 늘어지는 긴 겉옷(mage_robe — 오스만 카프탄 재단)으로 실루엣이 길고 풍성하다. 턱의 각이 부드러운 얼굴 · 부드럽게 깊은 눈 · 가늘게 휜 눈썹 · 콧대가 곧고 가는 코 · 도톰한 하트 입술, 숲빛 초록 눈(forest_green), 따뜻한 베이지 피부(warm_beige)에 입가의 작은 점(mole_lip), 20대 후반, 관능적이고 섹시한 인상(seductive)에 입을 다문 옅은 미소(soft_smile). 스팀펑크(둥근형 · 납빛 숏컷 · 탄탄한 굴곡 몸 · 금빛 도는 피부) · 사이버펑크(달걀형 · 두 빛깔 긴 생머리 · 늘씬 글래머 · 올리브빛 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울 · 도쿄 · 베이징 · 파리 · 런던 · 로마 · 뉴욕 사람(랜드마크 포함)과도 셋 이상 다르다. 2026-11-23 인상 glamorous → seductive(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
           },
           "hold": {
             "en": "a small pierced gold lantern with panes of turquoise glass, a warm light glowing within"
@@ -7047,7 +7047,7 @@
               "lips": "small_bow",
               "eye_color": "iridescent",
               "age": "mid_20s",
-              "impression": "elegant",
+              "impression": "femme_fatale",
               "skin_tone": "olive",
               "eye_size": "medium",
               "eye_tilt": "level",
@@ -7060,7 +7060,7 @@
               "hair_color": "pole_tipped",
               "bangs": "parted"
             },
-            "why": "두 대륙 사이 해협의 빛의 다리 위에서 건너는 길을 지키는 횡단 관제사 — 길고 고요한 사람. 가는 팔다리에 풍만한 가슴 · 둥근 엉덩이 · 가는 허리(busty_slender) · 길게 곧게 내린 생머리(long_straight) · 은회색 머리가 한쪽은 빨강, 다른 쪽은 파랑으로 물든 머리(pole_tipped — 오스만 빨강과 코발트, 해협의 두 기슭) · 가운데 가르마(parted — 두 빛깔이 갈리는 선) · 몸을 따라 흐르며 은은히 빛나는 살아 있는 직물 드레스(biolume_dress)로 실루엣이 길고 부드럽게 흐른다. 갸름한 달걀형 얼굴 · 자연스러운 크기의 둥근 아몬드 눈 · 눈 위에 조금 낮게 놓인 짙은 눈썹 · 콧대에 부드러운 매부리 곡선 · 큐피드 활이 또렷한 입술, 금 · 장미 · 푸른빛으로 바뀌는 무지갯빛 눈(iridescent), 올리브빛 피부(olive)에 윤기 나는 누드 입술(gloss), 20대 중반, 우아한 인상(elegant)에 차분한 얼굴(calm). 판타지(각이 부드러운 얼굴 · 튤립빛 붉은 곱슬 · 풍만한 몸 · 따뜻한 베이지 피부) · 스팀펑크(둥근형 · 납빛 숏컷 · 탄탄한 굴곡 몸 · 금빛 도는 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울 · 도쿄 · 베이징 · 파리 · 런던 · 로마 · 뉴욕 사람(랜드마크 포함)과도 셋 이상 다르다."
+            "why": "두 대륙 사이 해협의 빛의 다리 위에서 건너는 길을 지키는 횡단 관제사 — 길고 고요한 사람. 가는 팔다리에 풍만한 가슴 · 둥근 엉덩이 · 가는 허리(busty_slender) · 길게 곧게 내린 생머리(long_straight) · 은회색 머리가 한쪽은 빨강, 다른 쪽은 파랑으로 물든 머리(pole_tipped — 오스만 빨강과 코발트, 해협의 두 기슭) · 가운데 가르마(parted — 두 빛깔이 갈리는 선) · 몸을 따라 흐르며 은은히 빛나는 살아 있는 직물 드레스(biolume_dress)로 실루엣이 길고 부드럽게 흐른다. 갸름한 달걀형 얼굴 · 자연스러운 크기의 둥근 아몬드 눈 · 눈 위에 조금 낮게 놓인 짙은 눈썹 · 콧대에 부드러운 매부리 곡선 · 큐피드 활이 또렷한 입술, 금 · 장미 · 푸른빛으로 바뀌는 무지갯빛 눈(iridescent), 올리브빛 피부(olive)에 윤기 나는 누드 입술(gloss), 20대 중반, 위험한 팜파탈 인상(femme_fatale)에 차분한 얼굴(calm). 판타지(각이 부드러운 얼굴 · 튤립빛 붉은 곱슬 · 풍만한 몸 · 따뜻한 베이지 피부) · 스팀펑크(둥근형 · 납빛 숏컷 · 탄탄한 굴곡 몸 · 금빛 도는 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울 · 도쿄 · 베이징 · 파리 · 런던 · 로마 · 뉴욕 사람(랜드마크 포함)과도 셋 이상 다르다. 2026-11-23 인상 elegant → femme_fatale(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
           },
           "hold": {
             "en": "a tulip-shaped glass of amber tea in a slim chrome holder, a ring of soft turquoise light glowing at its base"
@@ -7231,7 +7231,7 @@
                   "lips": "heart_full",
                   "eye_color": "silver_grey",
                   "age": "early_20s",
-                  "impression": "cool",
+                  "impression": "mysterious",
                   "skin_tone": "warm_beige",
                   "eye_size": "medium",
                   "eye_tilt": "level",
@@ -7244,7 +7244,7 @@
                   "hair_color": "glass_clear",
                   "bangs": "straight"
                 },
-                "why": "땅 밑 기둥 숲에 도시의 기억을 빛으로 띄우는 빛의 전당 큐레이터 — 이스탄불 사이버펑크의 길고 늘씬한 두 빛깔 생머리 횡단 관제사와 달리 작고 풍만하며 반듯한 사람. 키는 작되 풍만한 몸(petite_voluptuous) · 볼 옆을 반듯하게 자른 히메컷(hime_cut) · 맑은 유리빛 푸른 머리(glass_clear) · 일자 앞머리, 눈은 연한 은회색(silver_grey). 부드럽게 긴 달걀 얼굴 · 자연스러운 크기의 아몬드 눈 · 가늘게 휜 눈썹 · 끝이 살짝 들린 코 · 도톰한 하트 입술, 따뜻한 베이지 피부(warm_beige)에 맨 얼굴, 20대 초반의 서늘한 인상(cool)에 생각에 잠긴 얼굴(pensive). 얼굴 칸 다섯이 이스탄불 사이버펑크 사람과 다 다르다."
+                "why": "땅 밑 기둥 숲에 도시의 기억을 빛으로 띄우는 빛의 전당 큐레이터 — 이스탄불 사이버펑크의 길고 늘씬한 두 빛깔 생머리 횡단 관제사와 달리 작고 풍만하며 반듯한 사람. 키는 작되 풍만한 몸(petite_voluptuous) · 볼 옆을 반듯하게 자른 히메컷(hime_cut) · 맑은 유리빛 푸른 머리(glass_clear) · 일자 앞머리, 눈은 연한 은회색(silver_grey). 부드럽게 긴 달걀 얼굴 · 자연스러운 크기의 아몬드 눈 · 가늘게 휜 눈썹 · 끝이 살짝 들린 코 · 도톰한 하트 입술, 따뜻한 베이지 피부(warm_beige)에 맨 얼굴, 20대 초반의 속을 알 수 없는 신비로운 인상(mysterious)에 생각에 잠긴 얼굴(pensive). 얼굴 칸 다섯이 이스탄불 사이버펑크 사람과 다 다르다. 2026-11-23 인상 cool → mysterious(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a palm-sized sphere of clear water floating above her hand, a soft light drifting inside it"
@@ -7354,7 +7354,7 @@
                   "lips": "heart_full",
                   "eye_color": "hazel",
                   "age": "early_20s",
-                  "impression": "cheerful",
+                  "impression": "sassy",
                   "skin_tone": "porcelain",
                   "eye_size": "large",
                   "eye_tilt": "level",
@@ -7367,7 +7367,7 @@
                   "hair_color": "bronze",
                   "bangs": "parted"
                 },
-                "why": "카펫 경매장이 된 옛 비단 전당에서 망치를 드는 경매사 — 이스탄불 스팀펑크의 납빛 숏컷 날개 비행사 · 구리빛 포니테일 물길 기사와 달리 아래로 풍성하고 말솜씨 좋은 사람. 어깨는 가늘고 엉덩이 · 허벅지가 풍성한 배형 곡선 몸(pear_curvy) · 어깨에 닿아 바깥으로 말린 머리(flipped_shoulder) · 따뜻한 청동빛 갈색(bronze) 머리 · 가운데 가르마 앞머리, 눈은 개암빛(hazel). 턱의 각이 부드럽게 좁아지는 얼굴 · 눈꼬리가 순하게 처진 눈 · 가늘게 휜 눈썹 · 끝이 둥근 코 · 도톰한 하트 입술, 흰 도자기 피부(porcelain)에 짙은 베리빛 입술, 30대 초반의 밝은 인상(cheerful)에 자신 있는 얼굴(confident — 입은 다문다). 얼굴 칸 다섯이 이스탄불 스팀펑크 사람 · 물길 기사와 다 다르다."
+                "why": "카펫 경매장이 된 옛 비단 전당에서 망치를 드는 경매사 — 이스탄불 스팀펑크의 납빛 숏컷 날개 비행사 · 구리빛 포니테일 물길 기사와 달리 아래로 풍성하고 말솜씨 좋은 사람. 어깨는 가늘고 엉덩이 · 허벅지가 풍성한 배형 곡선 몸(pear_curvy) · 어깨에 닿아 바깥으로 말린 머리(flipped_shoulder) · 따뜻한 청동빛 갈색(bronze) 머리 · 가운데 가르마 앞머리, 눈은 개암빛(hazel). 턱의 각이 부드럽게 좁아지는 얼굴 · 눈꼬리가 순하게 처진 눈 · 가늘게 휜 눈썹 · 끝이 둥근 코 · 도톰한 하트 입술, 흰 도자기 피부(porcelain)에 짙은 베리빛 입술, 30대 초반의 당찬 인상(sassy)에 자신 있는 얼굴(confident — 입은 다문다). 얼굴 칸 다섯이 이스탄불 스팀펑크 사람 · 물길 기사와 다 다르다. 2026-11-23 인상 cheerful → sassy(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a small polished brass auction gavel with a turquoise-inlaid head"
@@ -7411,7 +7411,7 @@
                   "lips": "thin_long",
                   "eye_color": "teal",
                   "age": "mid_20s",
-                  "impression": "languid",
+                  "impression": "decadent",
                   "skin_tone": "bronze",
                   "eye_size": "medium",
                   "eye_tilt": "level",
@@ -7424,7 +7424,7 @@
                   "hair_color": "royal_purple",
                   "bangs": "one_eye"
                 },
-                "why": "빛 등불이 뜬 덮인 시장의 보석 감정사 — 이스탄불 사이버펑크의 길고 늘씬한 두 빛깔 생머리 횡단 관제사 · 유리빛 히메컷 큐레이터와 달리 짧고 날렵한 머리에 느긋한 사람. 굴곡 있는 몸(curvy) · 한쪽이 더 긴 비대칭 단발(asymmetric_bob) · 짙은 보랏빛(royal_purple) 머리 · 한쪽 눈을 덮는 긴 앞머리, 눈은 청록(teal — 감정 확대경의 빛 고리와 같은 빛). 부드럽게 둥근 얼굴 · 부드럽게 깊은 눈 · 부드러운 둥근 눈썹 · 콧대가 곧고 가는 코 · 가는 입술, 청동빛 갈색 피부(bronze)에 스모키 눈화장, 20대 중반의 나른하고 느긋한 인상(languid)에 다 안다는 듯한 옅은 미소(smug). 얼굴 칸 다섯이 이스탄불 사이버펑크 사람 · 큐레이터와 다 다르다."
+                "why": "빛 등불이 뜬 덮인 시장의 보석 감정사 — 이스탄불 사이버펑크의 길고 늘씬한 두 빛깔 생머리 횡단 관제사 · 유리빛 히메컷 큐레이터와 달리 짧고 날렵한 머리에 느긋한 사람. 굴곡 있는 몸(curvy) · 한쪽이 더 긴 비대칭 단발(asymmetric_bob) · 짙은 보랏빛(royal_purple) 머리 · 한쪽 눈을 덮는 긴 앞머리, 눈은 청록(teal — 감정 확대경의 빛 고리와 같은 빛). 부드럽게 둥근 얼굴 · 부드럽게 깊은 눈 · 부드러운 둥근 눈썹 · 콧대가 곧고 가는 코 · 가는 입술, 청동빛 갈색 피부(bronze)에 스모키 눈화장, 20대 중반의 나른하게 퇴폐적인 인상(decadent)에 다 안다는 듯한 옅은 미소(smug). 얼굴 칸 다섯이 이스탄불 사이버펑크 사람 · 큐레이터와 다 다르다. 2026-11-23 인상 languid → decadent(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a slim chrome jeweler's loupe glowing with a ring of turquoise light"
@@ -7477,7 +7477,7 @@
                   "lips": "thin_long",
                   "eye_color": "sapphire",
                   "age": "mid_20s",
-                  "impression": "regal",
+                  "impression": "haughty",
                   "skin_tone": "fair",
                   "eye_size": "large",
                   "eye_tilt": "level",
@@ -7490,7 +7490,7 @@
                   "hair_color": "golden_blonde",
                   "bangs": "none"
                 },
-                "why": "수정 궁전 의식의 홀에서 두 대륙의 손님을 맞는 의전장 — 이스탄불 판타지의 풍만한 붉은 곱슬 등불 공주 · 청록 웨이브 물의 마법사 · 로즈골드 땋은 머리 보석 상인과 달리 키가 크고 단정하게 올린 사람. 키 크고 다리가 길며 풍성한 곡선 몸(tall_curvy) · 단정히 틀어 올린 머리(updo_bun) · 금발(golden_blonde) · 앞머리 없이 드러낸 이마, 눈은 사파이어. 갸름한 달걀형 얼굴 · 둥근 아몬드 눈 · 끝이 또렷이 꺾인 눈썹 · 콧대가 곧고 가는 코 · 가는 입술, 흰 피부(fair)에 발그레한 볼, 20대 중반의 기품 있는 인상(regal)에 입을 다문 옅은 자부의 미소(proud). 얼굴 칸이 이스탄불 판타지 사람과 넷, 다른 랜드마크 둘과 다섯 다르다."
+                "why": "수정 궁전 의식의 홀에서 두 대륙의 손님을 맞는 의전장 — 이스탄불 판타지의 풍만한 붉은 곱슬 등불 공주 · 청록 웨이브 물의 마법사 · 로즈골드 땋은 머리 보석 상인과 달리 키가 크고 단정하게 올린 사람. 키 크고 다리가 길며 풍성한 곡선 몸(tall_curvy) · 단정히 틀어 올린 머리(updo_bun) · 금발(golden_blonde) · 앞머리 없이 드러낸 이마, 눈은 사파이어. 갸름한 달걀형 얼굴 · 둥근 아몬드 눈 · 끝이 또렷이 꺾인 눈썹 · 콧대가 곧고 가는 코 · 가는 입술, 흰 피부(fair)에 발그레한 볼, 20대 중반의 도도한 인상(haughty)에 입을 다문 옅은 자부의 미소(proud). 얼굴 칸이 이스탄불 판타지 사람과 넷, 다른 랜드마크 둘과 다섯 다르다. 2026-11-23 인상 regal → haughty(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a slender gold ceremonial staff crowned with a cluster of crystal drops"
@@ -7534,7 +7534,7 @@
                   "lips": "small_bow",
                   "eye_color": "emerald",
                   "age": "early_20s",
-                  "impression": "soft",
+                  "impression": "shy",
                   "skin_tone": "warm_beige",
                   "eye_size": "large",
                   "eye_tilt": "level",
@@ -7547,7 +7547,7 @@
                   "hair_color": "sunset_pink",
                   "bangs": "straight"
                 },
-                "why": "궁전의 샹들리에 가스 불을 하나씩 켜고 관을 돌보는 가스등 기사 — 이스탄불 스팀펑크의 납빛 숏컷 비행사 · 구리빛 포니테일 물길 기사 · 청동빛 단발 경매사와 달리 작고 동글동글한 사람. 작고 아담하되 굴곡 있는 몸(petite_curvy) · 한쪽 어깨로 굵게 땋아 내린 머리(side_braid) · 노을빛 분홍(sunset_pink) 머리 · 일자 앞머리, 눈은 에메랄드. 하트형 얼굴 · 부드럽게 깊은 눈 · 부드러운 둥근 눈썹 · 끝이 살짝 들린 코 · 큐피드 활이 또렷한 입술, 따뜻한 베이지 피부(warm_beige)에 주근깨, 20대 초반의 부드럽고 따뜻한 인상(soft)에 궁금한 듯한 얼굴(curious). 얼굴 칸 다섯이 이스탄불 스팀펑크 사람 · 다른 랜드마크 둘과 다 다르다."
+                "why": "궁전의 샹들리에 가스 불을 하나씩 켜고 관을 돌보는 가스등 기사 — 이스탄불 스팀펑크의 납빛 숏컷 비행사 · 구리빛 포니테일 물길 기사 · 청동빛 단발 경매사와 달리 작고 동글동글한 사람. 작고 아담하되 굴곡 있는 몸(petite_curvy) · 한쪽 어깨로 굵게 땋아 내린 머리(side_braid) · 노을빛 분홍(sunset_pink) 머리 · 일자 앞머리, 눈은 에메랄드. 하트형 얼굴 · 부드럽게 깊은 눈 · 부드러운 둥근 눈썹 · 끝이 살짝 들린 코 · 큐피드 활이 또렷한 입술, 따뜻한 베이지 피부(warm_beige)에 주근깨, 20대 초반의 수줍은 인상(shy)에 궁금한 듯한 얼굴(curious). 얼굴 칸 다섯이 이스탄불 스팀펑크 사람 · 다른 랜드마크 둘과 다 다르다. 2026-11-23 인상 soft → shy(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a long slim brass lighting pole tipped with a small, steady flame"
@@ -7764,7 +7764,7 @@
               "lips": "full_wide",
               "eye_color": "amber",
               "age": "early_20s",
-              "impression": "cheerful",
+              "impression": "sassy",
               "skin_tone": "warm_beige",
               "eye_size": "large",
               "eye_tilt": "level",
@@ -7777,7 +7777,7 @@
               "hair_color": "plutonium_ember",
               "bangs": "curtain"
             },
-            "why": "칸 엘칼릴리의 지붕 덮인 시장 골목에서 별 무늬를 뚫은 놋쇠 등불을 만들고 색유리를 끼우는 등불 장인 — 다정하고 손이 야무진 사람. 좁은 어깨 아래 가는 허리, 풍성하고 둥근 엉덩이와 굵은 허벅지, 풍만한 가슴의 서양배 몸(pear_curvy) · 등까지 흐르는 긴 물결머리(long_wavy) · 짙은 쇳빛 머리끝이 등불 불씨처럼 붉은 주황으로 달아오른 머리(plutonium_ember — 놋쇠 등불의 불빛, 다른 도시가 안 쓴 색) · 커튼 앞머리(curtain) · 유리병 띠를 두른 긴 코트에 고글 · 긴 장갑(alchemist_coat — 병엔 등불 색유리 조각, 처음 쓰는 실루엣)으로 실루엣이 길고 신비롭다. 하트형 얼굴 · 자연스러운 크기의 둥근 아몬드 눈 · 가늘게 휜 눈썹 · 콧대가 곧고 가는 코 · 도톰하고 자연스러운 폭의 입술, 호박빛 눈(amber), 따뜻한 베이지 피부(warm_beige)에 발그레한 볼(blush), 20대 초반, 밝고 다정한 인상(cheerful)에 입을 다문 눈웃음(amused). 판타지(긴 달걀형 · 청금석빛 땋은 머리 · 근육 곡선 · 구릿빛 피부) · 사이버펑크(달걀형 · 아쿠아빛 넘긴 머리 · 버들 곡선 · 올리브빛 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울 · 도쿄 · 베이징 · 파리 · 런던 · 로마 · 뉴욕 · 이스탄불 사람(랜드마크 포함)과도 셋 이상 다르다."
+            "why": "칸 엘칼릴리의 지붕 덮인 시장 골목에서 별 무늬를 뚫은 놋쇠 등불을 만들고 색유리를 끼우는 등불 장인 — 다정하고 손이 야무진 사람. 좁은 어깨 아래 가는 허리, 풍성하고 둥근 엉덩이와 굵은 허벅지, 풍만한 가슴의 서양배 몸(pear_curvy) · 등까지 흐르는 긴 물결머리(long_wavy) · 짙은 쇳빛 머리끝이 등불 불씨처럼 붉은 주황으로 달아오른 머리(plutonium_ember — 놋쇠 등불의 불빛, 다른 도시가 안 쓴 색) · 커튼 앞머리(curtain) · 유리병 띠를 두른 긴 코트에 고글 · 긴 장갑(alchemist_coat — 병엔 등불 색유리 조각, 처음 쓰는 실루엣)으로 실루엣이 길고 신비롭다. 하트형 얼굴 · 자연스러운 크기의 둥근 아몬드 눈 · 가늘게 휜 눈썹 · 콧대가 곧고 가는 코 · 도톰하고 자연스러운 폭의 입술, 호박빛 눈(amber), 따뜻한 베이지 피부(warm_beige)에 발그레한 볼(blush), 20대 초반, 당찬 인상(sassy)에 입을 다문 눈웃음(amused). 판타지(긴 달걀형 · 청금석빛 땋은 머리 · 근육 곡선 · 구릿빛 피부) · 사이버펑크(달걀형 · 아쿠아빛 넘긴 머리 · 버들 곡선 · 올리브빛 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울 · 도쿄 · 베이징 · 파리 · 런던 · 로마 · 뉴욕 · 이스탄불 사람(랜드마크 포함)과도 셋 이상 다르다. 2026-11-23 인상 cheerful → sassy(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
           },
           "hold": {
             "en": "a small brass lantern with a pointed domed cap, its sides pierced with stars and set with ruby, emerald and amber glass, a warm flame glowing within"
@@ -7821,7 +7821,7 @@
               "lips": "small_bow",
               "eye_color": "dichroic",
               "age": "mid_20s",
-              "impression": "cool",
+              "impression": "icy",
               "skin_tone": "olive",
               "eye_size": "medium",
               "eye_tilt": "up",
@@ -7834,7 +7834,7 @@
               "hair_color": "beryl_aqua",
               "bangs": "none"
             },
-            "why": "피라미드를 지은 이들이 별로 참북쪽을 찾았듯, 별을 겨눠 하늘 비행 길의 방위를 맞추는 먼 미래 카이로의 별빛 측량사 — 길고 서늘한 사람. 팔다리가 길고 부드러운 곡선에 풍만한 가슴 · 둥근 엉덩이 · 가는 허리(willowy_curvy) · 매끈하게 뒤로 넘긴 머리(slicked_back — 스핑크스 머릿수건 같은 줄무늬 빛 띠가 머리를 감싼다) · 옛 파이앙스 터키석빛을 닮은 투명한 아쿠아마린 머리(beryl_aqua — 다른 도시가 안 쓴 색) · 앞머리 없이 이마를 드러낸 머리(none) · 기하학적으로 솟은 어깨의 조형 코트(runway_avantgarde — 어깨와 깃이 피라미드 돌 단처럼 계단진 삼각 층)로 실루엣이 각지고 높다. 갸름한 달걀형 얼굴 · 부드럽게 깊은 눈에 살짝 올라간 눈꼬리 · 깔끔하게 각이 선 눈썹 · 끝이 살짝 들린 코 · 큐피드 활이 또렷한 입술, 연보라와 푸른빛 사이로 바뀌는 눈(dichroic), 올리브빛 피부(olive)에 눈 밑의 작은 점(mole_eye), 20대 중반, 서늘한 인상(cool)에 입을 다문 집중한 얼굴(focused). 판타지(긴 달걀형 · 청금석빛 땋은 머리 · 근육 곡선 · 구릿빛 피부) · 스팀펑크(하트형 · 불씨 끝 짙은 물결머리 · 서양배 굴곡 몸 · 따뜻한 베이지 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울 · 도쿄 · 베이징 · 파리 · 런던 · 로마 · 뉴욕 · 이스탄불 사람(랜드마크 포함)과도 셋 이상 다르다."
+            "why": "피라미드를 지은 이들이 별로 참북쪽을 찾았듯, 별을 겨눠 하늘 비행 길의 방위를 맞추는 먼 미래 카이로의 별빛 측량사 — 길고 서늘한 사람. 팔다리가 길고 부드러운 곡선에 풍만한 가슴 · 둥근 엉덩이 · 가는 허리(willowy_curvy) · 매끈하게 뒤로 넘긴 머리(slicked_back — 스핑크스 머릿수건 같은 줄무늬 빛 띠가 머리를 감싼다) · 옛 파이앙스 터키석빛을 닮은 투명한 아쿠아마린 머리(beryl_aqua — 다른 도시가 안 쓴 색) · 앞머리 없이 이마를 드러낸 머리(none) · 기하학적으로 솟은 어깨의 조형 코트(runway_avantgarde — 어깨와 깃이 피라미드 돌 단처럼 계단진 삼각 층)로 실루엣이 각지고 높다. 갸름한 달걀형 얼굴 · 부드럽게 깊은 눈에 살짝 올라간 눈꼬리 · 깔끔하게 각이 선 눈썹 · 끝이 살짝 들린 코 · 큐피드 활이 또렷한 입술, 연보라와 푸른빛 사이로 바뀌는 눈(dichroic), 올리브빛 피부(olive)에 눈 밑의 작은 점(mole_eye), 20대 중반, 얼음처럼 차가운 냉미녀 인상(icy)에 입을 다문 집중한 얼굴(focused). 판타지(긴 달걀형 · 청금석빛 땋은 머리 · 근육 곡선 · 구릿빛 피부) · 스팀펑크(하트형 · 불씨 끝 짙은 물결머리 · 서양배 굴곡 몸 · 따뜻한 베이지 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울 · 도쿄 · 베이징 · 파리 · 런던 · 로마 · 뉴욕 · 이스탄불 사람(랜드마크 포함)과도 셋 이상 다르다. 2026-11-23 인상 cool → icy(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
           },
           "hold": {
             "en": "a slim sighting rod of clear glass and gold, a thin pale beam of light running from its tip toward the stars"
@@ -8005,7 +8005,7 @@
                   "lips": "full_wide",
                   "eye_color": "silver_grey",
                   "age": "mid_20s",
-                  "impression": "elegant",
+                  "impression": "mysterious",
                   "skin_tone": "warm_beige",
                   "eye_size": "large",
                   "eye_tilt": "level",
@@ -8018,7 +8018,7 @@
                   "hair_color": "iridium_white",
                   "bangs": "side_swept"
                 },
-                "why": "피라미드의 돌 하나하나를 빛으로 재고 잃어버린 흰 껍데기를 빛으로 되살려 두 세기 뒤에도 지키는 깊은 시간 보존 기술자 — 조용하고 꼼꼼한 사람. 가슴과 엉덩이가 풍만하고 허리가 뚜렷이 가는 모래시계 몸(hourglass) · 한쪽이 긴 비대칭 단발(asymmetric_bob) · 가장자리에 무지개 결이 도는 밝은 백금빛 머리(iridium_white — 흰 석회암 껍데기) · 옆으로 넘긴 앞머리(side_swept) · 등뼈와 팔다리를 따라가는 가는 외골격(exo_frame)으로 실루엣이 선으로 그린 듯하다. 하트형 얼굴 · 자연스러운 크기의 둥근 아몬드 눈 · 부드러운 둥근 눈썹 · 콧대가 곧고 가는 코 · 도톰하고 자연스러운 폭의 입술, 옅은 은회색 눈, 따뜻한 베이지 피부(warm_beige)에 맨 얼굴, 20대 중반, 우아한 인상(elegant)에 생각에 잠긴 표정. 카이로 사이버펑크의 별빛 측량사(달걀형 · 아쿠아빛 넘긴 머리 · 버들 곡선 · 올리브 피부)와 얼굴 칸 다섯이 모두 다르고, 이 랜드마크의 다른 두 세계와는 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다."
+                "why": "피라미드의 돌 하나하나를 빛으로 재고 잃어버린 흰 껍데기를 빛으로 되살려 두 세기 뒤에도 지키는 깊은 시간 보존 기술자 — 조용하고 꼼꼼한 사람. 가슴과 엉덩이가 풍만하고 허리가 뚜렷이 가는 모래시계 몸(hourglass) · 한쪽이 긴 비대칭 단발(asymmetric_bob) · 가장자리에 무지개 결이 도는 밝은 백금빛 머리(iridium_white — 흰 석회암 껍데기) · 옆으로 넘긴 앞머리(side_swept) · 등뼈와 팔다리를 따라가는 가는 외골격(exo_frame)으로 실루엣이 선으로 그린 듯하다. 하트형 얼굴 · 자연스러운 크기의 둥근 아몬드 눈 · 부드러운 둥근 눈썹 · 콧대가 곧고 가는 코 · 도톰하고 자연스러운 폭의 입술, 옅은 은회색 눈, 따뜻한 베이지 피부(warm_beige)에 맨 얼굴, 20대 중반, 속을 알 수 없는 신비로운 인상(mysterious)에 생각에 잠긴 표정. 카이로 사이버펑크의 별빛 측량사(달걀형 · 아쿠아빛 넘긴 머리 · 버들 곡선 · 올리브 피부)와 얼굴 칸 다섯이 모두 다르고, 이 랜드마크의 다른 두 세계와는 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 2026-11-23 인상 elegant → mysterious(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a palm-sized scanning lens of clear glass casting a fan of pale light"
@@ -8071,7 +8071,7 @@
                   "lips": "full_wide",
                   "eye_color": "honey",
                   "age": "mid_20s",
-                  "impression": "glamorous",
+                  "impression": "mysterious",
                   "skin_tone": "olive",
                   "eye_size": "medium",
                   "eye_tilt": "up",
@@ -8084,7 +8084,7 @@
                   "hair_color": "bright_gold",
                   "bangs": "parted"
                 },
-                "why": "모래에 어깨까지 묻혔던 큰 상 곁에서 새벽마다 모래바람을 춤으로 돌려보내는 파수 무희 — 느긋하고 끈질긴 사람. 가슴 · 엉덩이 · 허벅지가 넉넉하게 굴곡진 풍만한 몸(voluptuous) · 긴 나선 곱슬머리(long_curly) · 새벽 햇빛 같은 밝은 금빛 머리(bright_gold) · 가운데 가르마 앞머리(parted) · 몸에 붙는 옷에 나부끼는 베일 띠와 깊은 두건(shadow_dancer — 두건은 뒤로 내림)으로 실루엣이 움직인다. 각이 부드러운 얼굴 · 부드럽게 깊은 눈에 살짝 올라간 눈꼬리 · 곧고 자연스러운 숱의 눈썹 · 끝이 둥근 작은 코 · 도톰하고 자연스러운 폭의 입술, 꿀빛 눈, 올리브 피부(olive)에 옅은 장밋빛 입술, 20대 후반, 화려한 인상(glamorous)에 입을 다문 옅은 미소. 카이로 판타지의 물때 수호자와 얼굴 칸 다섯이 모두 다르고, 같은 세계 피라미드 수호 기사와도 다섯이 다르며, 이 랜드마크의 다른 두 세계와는 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다."
+                "why": "모래에 어깨까지 묻혔던 큰 상 곁에서 새벽마다 모래바람을 춤으로 돌려보내는 파수 무희 — 느긋하고 끈질긴 사람. 가슴 · 엉덩이 · 허벅지가 넉넉하게 굴곡진 풍만한 몸(voluptuous) · 긴 나선 곱슬머리(long_curly) · 새벽 햇빛 같은 밝은 금빛 머리(bright_gold) · 가운데 가르마 앞머리(parted) · 몸에 붙는 옷에 나부끼는 베일 띠와 깊은 두건(shadow_dancer — 두건은 뒤로 내림)으로 실루엣이 움직인다. 각이 부드러운 얼굴 · 부드럽게 깊은 눈에 살짝 올라간 눈꼬리 · 곧고 자연스러운 숱의 눈썹 · 끝이 둥근 작은 코 · 도톰하고 자연스러운 폭의 입술, 꿀빛 눈, 올리브 피부(olive)에 옅은 장밋빛 입술, 20대 후반, 속을 알 수 없는 신비로운 인상(mysterious)에 입을 다문 옅은 미소. 카이로 판타지의 물때 수호자와 얼굴 칸 다섯이 모두 다르고, 같은 세계 피라미드 수호 기사와도 다섯이 다르며, 이 랜드마크의 다른 두 세계와는 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 2026-11-23 인상 glamorous → mysterious(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a slender gold staff trailing a ribbon of golden light that sweeps the sand aside"
@@ -8308,7 +8308,7 @@
                   "lips": "heart_full",
                   "eye_color": "rose",
                   "age": "mid_20s",
-                  "impression": "glamorous",
+                  "impression": "mischievous",
                   "skin_tone": "olive",
                   "eye_size": "medium",
                   "eye_tilt": "up",
@@ -8321,7 +8321,7 @@
                   "hair_color": "helium_peach",
                   "bangs": "side_swept"
                 },
-                "why": "탑 꼭대기에서 태엽으로 천천히 도는 유리 연꽃 온실을 가꾸는 식물학자 — 재치 있고 멋을 아는 사람. 작은 키에 가슴이 풍만하고 허리가 가늘며 엉덩이가 넉넉한 몸(petite_voluptuous) · 턱 길이의 윤기 나는 핑거 웨이브(finger_waves) · 가스 방전관처럼 은은히 빛나는 옅은 복숭앗빛 머리(helium_peach) · 옆으로 넘긴 앞머리(side_swept) · 겹 리넨에 넓은 챙 모자, 유리 표본병 허리띠(botanist)로 실루엣이 부드럽다. 마름모꼴 얼굴 · 눈꼬리가 살짝 올라간 아몬드 눈 · 곧고 자연스러운 숱의 눈썹 · 끝이 살짝 들린 코 · 도톰한 하트 입술, 장밋빛 눈, 올리브 피부(olive)에 눈 밑 작은 점, 20대 후반, 화려한 인상(glamorous)에 입을 다문 장난스러운 미소. 카이로 스팀펑크의 등불 장인 · 같은 세계 바지선 기관장 · 발굴단 기관사와 얼굴 칸 넷 이상이 다르고, 이 랜드마크의 다른 두 세계와는 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다."
+                "why": "탑 꼭대기에서 태엽으로 천천히 도는 유리 연꽃 온실을 가꾸는 식물학자 — 재치 있고 멋을 아는 사람. 작은 키에 가슴이 풍만하고 허리가 가늘며 엉덩이가 넉넉한 몸(petite_voluptuous) · 턱 길이의 윤기 나는 핑거 웨이브(finger_waves) · 가스 방전관처럼 은은히 빛나는 옅은 복숭앗빛 머리(helium_peach) · 옆으로 넘긴 앞머리(side_swept) · 겹 리넨에 넓은 챙 모자, 유리 표본병 허리띠(botanist)로 실루엣이 부드럽다. 마름모꼴 얼굴 · 눈꼬리가 살짝 올라간 아몬드 눈 · 곧고 자연스러운 숱의 눈썹 · 끝이 살짝 들린 코 · 도톰한 하트 입술, 장밋빛 눈, 올리브 피부(olive)에 눈 밑 작은 점, 20대 후반, 여우 같은 장난기 인상(mischievous)에 입을 다문 장난스러운 미소. 카이로 스팀펑크의 등불 장인 · 같은 세계 바지선 기관장 · 발굴단 기관사와 얼굴 칸 넷 이상이 다르고, 이 랜드마크의 다른 두 세계와는 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 2026-11-23 인상 glamorous → mischievous(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a blue lotus blossom under a small glass bell jar"
@@ -8365,7 +8365,7 @@
                   "lips": "thin_long",
                   "eye_color": "anodized_violet",
                   "age": "mid_20s",
-                  "impression": "sharp",
+                  "impression": "provocative",
                   "skin_tone": "deep_brown",
                   "eye_size": "medium",
                   "eye_tilt": "up",
@@ -8378,7 +8378,7 @@
                   "hair_color": "fluorite_violet",
                   "bangs": "parted"
                 },
-                "why": "밤마다 탑의 격자 빛을 지휘해 도시에 빛 공연을 펼치는 빛 연출가 — 무대 위에서 빛나는 당찬 사람. 작고 다부지면서 가슴과 엉덩이가 둥근 몸(petite_curvy) · 높이 묶은 긴 포니테일(ponytail) · 바다초록 띠가 든 보랏빛 머리(fluorite_violet — 탑의 밤 조명) · 가운데 가르마 앞머리(parted) · 크롭 무대 상의에 빛나는 겹치마, 마이크 헤드셋과 긴 부츠(cyber_idol)로 실루엣이 반짝인다. 부드럽게 긴 달걀형 얼굴 · 자연스러운 크기의 아몬드 눈 · 조금 낮게 놓인 짙은 눈썹 · 부드러운 매부리코 · 가늘고 자연스러운 폭의 입술, 금테 두른 보랏빛 푸른 눈, 짙은 갈색 피부(deep_brown)에 윤기 나는 입술, 20대 중반, 또렷한 인상(sharp)에 자신 있는 표정. 카이로 사이버펑크의 별빛 측량사 · 같은 세계 보존 기술자와 얼굴 칸 다섯이, 색 복원가와 넷이 다르고, 이 랜드마크의 다른 두 세계와는 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다."
+                "why": "밤마다 탑의 격자 빛을 지휘해 도시에 빛 공연을 펼치는 빛 연출가 — 무대 위에서 빛나는 당찬 사람. 작고 다부지면서 가슴과 엉덩이가 둥근 몸(petite_curvy) · 높이 묶은 긴 포니테일(ponytail) · 바다초록 띠가 든 보랏빛 머리(fluorite_violet — 탑의 밤 조명) · 가운데 가르마 앞머리(parted) · 크롭 무대 상의에 빛나는 겹치마, 마이크 헤드셋과 긴 부츠(cyber_idol)로 실루엣이 반짝인다. 부드럽게 긴 달걀형 얼굴 · 자연스러운 크기의 아몬드 눈 · 조금 낮게 놓인 짙은 눈썹 · 부드러운 매부리코 · 가늘고 자연스러운 폭의 입술, 금테 두른 보랏빛 푸른 눈, 짙은 갈색 피부(deep_brown)에 윤기 나는 입술, 20대 중반, 도발적인 인상(provocative)에 자신 있는 표정. 카이로 사이버펑크의 별빛 측량사 · 같은 세계 보존 기술자와 얼굴 칸 다섯이, 색 복원가와 넷이 다르고, 이 랜드마크의 다른 두 세계와는 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 2026-11-23 인상 sharp → provocative(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a slim conductor's baton of light"
@@ -8475,7 +8475,7 @@
               "lips": "full_wide",
               "eye_color": "coral",
               "age": "mid_20s",
-              "impression": "glamorous",
+              "impression": "seductive",
               "skin_tone": "deep_brown",
               "eye_size": "medium",
               "eye_tilt": "down",
@@ -8488,7 +8488,7 @@
               "hair_color": "permanganate",
               "bangs": "parted"
             },
-            "why": "바다로 뻗은 바위 곶(아르포아도르)에서 해를 바다로 보내고 도시가 환호로 답하게 하는 경이로운 도시의 해넘이 전령 — 화려하고 따뜻한 사람. 가슴 · 엉덩이 · 허벅지가 넉넉하게 둥근 풍만한 몸(voluptuous — 판타지 서울 · 뉴욕 큰 키 곡선, 파리 · 베이징 버들 곡선, 런던 늘씬 글래머, 카이로 근육 곡선과 다른 몸, 로마 · 이스탄불 풍만과는 머리 · 피부 · 얼굴이 다르다) · 구름처럼 부풀어 오른 숱 많은 곱슬머리(voluminous) · 짙은 보랏빛에서 끝으로 갈수록 장밋빛으로 번지는 해 질 녘 하늘빛 머리(permanganate — 다른 도시가 안 쓴 색) · 가운데 가르마 앞머리(parted) · 가벼운 판갑에 어깨 뒤로 펼친 깃털 날개와 바람에 날리는 긴 겉옷(winged — 날개는 축제 깃털 부채의 결, 처음 쓰는 실루엣)으로 실루엣은 날개가 정한다. 갸름한 달걀형 얼굴 · 눈꼬리가 부드럽게 처진 아몬드 눈 · 자연스러운 숱의 곧은 눈썹 · 끝이 둥글고 자연스러운 폭의 코 · 도톰하고 자연스러운 폭의 입술, 산호빛 주황 눈(coral — 노을빛), 짙은 갈색 피부(deep_brown)에 윤기 나는 누드 입술(gloss), 20대 후반, 매혹적인 인상(glamorous)에 입을 다문 옅은 미소(soft_smile). 스팀펑크(부드럽게 각진 얼굴 · 초록 낮은 포니테일 · 작은 곡선 몸 · 금빛 도는 밝은 피부) · 사이버펑크(하트형 · 크롬 무지개 언더컷 · 큰 키 곡선 · 구릿빛 갈색 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울 · 도쿄 · 베이징 · 파리 · 런던 · 로마 · 뉴욕 · 이스탄불 · 카이로 사람(랜드마크 포함)과도 셋 이상 다르다."
+            "why": "바다로 뻗은 바위 곶(아르포아도르)에서 해를 바다로 보내고 도시가 환호로 답하게 하는 경이로운 도시의 해넘이 전령 — 화려하고 따뜻한 사람. 가슴 · 엉덩이 · 허벅지가 넉넉하게 둥근 풍만한 몸(voluptuous — 판타지 서울 · 뉴욕 큰 키 곡선, 파리 · 베이징 버들 곡선, 런던 늘씬 글래머, 카이로 근육 곡선과 다른 몸, 로마 · 이스탄불 풍만과는 머리 · 피부 · 얼굴이 다르다) · 구름처럼 부풀어 오른 숱 많은 곱슬머리(voluminous) · 짙은 보랏빛에서 끝으로 갈수록 장밋빛으로 번지는 해 질 녘 하늘빛 머리(permanganate — 다른 도시가 안 쓴 색) · 가운데 가르마 앞머리(parted) · 가벼운 판갑에 어깨 뒤로 펼친 깃털 날개와 바람에 날리는 긴 겉옷(winged — 날개는 축제 깃털 부채의 결, 처음 쓰는 실루엣)으로 실루엣은 날개가 정한다. 갸름한 달걀형 얼굴 · 눈꼬리가 부드럽게 처진 아몬드 눈 · 자연스러운 숱의 곧은 눈썹 · 끝이 둥글고 자연스러운 폭의 코 · 도톰하고 자연스러운 폭의 입술, 산호빛 주황 눈(coral — 노을빛), 짙은 갈색 피부(deep_brown)에 윤기 나는 누드 입술(gloss), 20대 후반, 관능적이고 섹시한 인상(seductive)에 입을 다문 옅은 미소(soft_smile). 스팀펑크(부드럽게 각진 얼굴 · 초록 낮은 포니테일 · 작은 곡선 몸 · 금빛 도는 밝은 피부) · 사이버펑크(하트형 · 크롬 무지개 언더컷 · 큰 키 곡선 · 구릿빛 갈색 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울 · 도쿄 · 베이징 · 파리 · 런던 · 로마 · 뉴욕 · 이스탄불 · 카이로 사람(랜드마크 포함)과도 셋 이상 다르다. 2026-11-23 인상 glamorous → seductive(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
           },
           "hold": {
             "en": "a slender gold herald's staff topped with a glowing disc of sunset-orange glass ringed with fine gold rays"
@@ -8605,7 +8605,7 @@
               "lips": "thin_long",
               "eye_color": "ruby",
               "age": "mid_20s",
-              "impression": "sharp",
+              "impression": "provocative",
               "skin_tone": "bronze",
               "eye_size": "medium",
               "eye_tilt": "up",
@@ -8618,7 +8618,7 @@
               "hair_color": "chrome_prism",
               "bangs": "one_eye"
             },
-            "why": "삼바 학교 행진에서 수백 북잡이의 장단을 이끄는 바테리아(북 패) 지휘자를 두 세기 뒤로 옮긴, 빛의 대로의 바테리아 지휘자 — 날카롭고 당당한 사람. 키가 크고 다리가 길며 가슴 · 엉덩이가 풍만하고 허리가 가는 큰 키 곡선(tall_curvy) · 한쪽을 짧게 밀고 긴 머리를 반대로 쓸어 넘긴 머리(undercut_sweep) · 거울 같은 크롬 은빛에 노랑 · 루비 빨강 · 초록 줄이 흐르는 머리(chrome_prism — 행진의 빛깔, 다른 도시가 안 쓴 색) · 한쪽 눈을 덮는 긴 앞머리(one_eye) · 엇갈린 끈과 버클의 짧은 재킷 · 짧은 아래옷 · 긴 부츠(cropped_jacket — 재킷이 타일 모자이크, 처음 쓰는 실루엣)로 실루엣이 짧고 날카롭다. 하트형 얼굴 · 부드럽게 깊은 눈에 살짝 올라간 눈꼬리 · 눈 위에 조금 낮게 놓인 짙은 눈썹 · 콧대가 곧고 가는 코 · 가늘고 자연스러운 폭의 입술, 루비빛 붉은 눈(ruby), 구릿빛 갈색 피부(bronze)에 짙은 스모키 눈화장(smoky), 20대 중반, 날카롭고 강렬한 인상(sharp)에 침착하고 자신 있는 얼굴(confident). 판타지(달걀형 · 보랏빛 노을 곱슬 · 풍만 · 짙은 갈색 피부) · 스팀펑크(부드럽게 각진 얼굴 · 초록 낮은 포니테일 · 작은 곡선 몸 · 금빛 도는 밝은 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울 · 도쿄 · 베이징 · 파리 · 런던 · 로마 · 뉴욕 · 이스탄불 · 카이로 사람(랜드마크 포함)과도 셋 이상 다르다."
+            "why": "삼바 학교 행진에서 수백 북잡이의 장단을 이끄는 바테리아(북 패) 지휘자를 두 세기 뒤로 옮긴, 빛의 대로의 바테리아 지휘자 — 날카롭고 당당한 사람. 키가 크고 다리가 길며 가슴 · 엉덩이가 풍만하고 허리가 가는 큰 키 곡선(tall_curvy) · 한쪽을 짧게 밀고 긴 머리를 반대로 쓸어 넘긴 머리(undercut_sweep) · 거울 같은 크롬 은빛에 노랑 · 루비 빨강 · 초록 줄이 흐르는 머리(chrome_prism — 행진의 빛깔, 다른 도시가 안 쓴 색) · 한쪽 눈을 덮는 긴 앞머리(one_eye) · 엇갈린 끈과 버클의 짧은 재킷 · 짧은 아래옷 · 긴 부츠(cropped_jacket — 재킷이 타일 모자이크, 처음 쓰는 실루엣)로 실루엣이 짧고 날카롭다. 하트형 얼굴 · 부드럽게 깊은 눈에 살짝 올라간 눈꼬리 · 눈 위에 조금 낮게 놓인 짙은 눈썹 · 콧대가 곧고 가는 코 · 가늘고 자연스러운 폭의 입술, 루비빛 붉은 눈(ruby), 구릿빛 갈색 피부(bronze)에 짙은 스모키 눈화장(smoky), 20대 중반, 도발적인 인상(provocative)에 침착하고 자신 있는 얼굴(confident). 판타지(달걀형 · 보랏빛 노을 곱슬 · 풍만 · 짙은 갈색 피부) · 스팀펑크(부드럽게 각진 얼굴 · 초록 낮은 포니테일 · 작은 곡선 몸 · 금빛 도는 밝은 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울 · 도쿄 · 베이징 · 파리 · 런던 · 로마 · 뉴욕 · 이스탄불 · 카이로 사람(랜드마크 포함)과도 셋 이상 다르다. 2026-11-23 인상 sharp → provocative(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
           },
           "hold": {
             "en": "a slim conductor's baton of clear glass, a bead of light at its tip pulsing to the beat"
@@ -9035,7 +9035,7 @@
                   "lips": "full_wide",
                   "eye_color": "sky_blue",
                   "age": "early_20s",
-                  "impression": "soft",
+                  "impression": "shy",
                   "skin_tone": "warm_beige",
                   "eye_size": "large",
                   "eye_tilt": "down",
@@ -9048,7 +9048,7 @@
                   "hair_color": "pale_aqua",
                   "bangs": "parted"
                 },
-                "why": "우림 언덕 카리오카 강의 샘물을 아치 위 물길로 도시 분수까지 이끄는 물길의 마법사 — 수도교는 1750년에 열려 카리오카 강의 물을 도시 분수로 날랐다. 리우 판타지의 해넘이 전령(풍만 · 보랏빛 구름 곱슬 · 달걀형)과 달리 작고 부드러운 사람. 작은 키에 가슴 · 엉덩이가 넉넉한 몸(petite_voluptuous) · 반만 묶어 내린 긴 머리(half_up) · 맑은 물빛 엷은 청록 머리(pale_aqua) · 가운데 가르마. 둥근 얼굴 · 크고 둥근 눈 · 조금 낮게 놓인 짙은 눈썹 · 작은 코 · 도톰하고 넓은 입술, 하늘빛 눈, 따뜻한 베이지 피부에 발그레한 볼, 20대 초반의 부드러운 인상에 다정한 표정. 얼굴 칸이 리우 판타지 사람 · 빵 산 · 코파카바나 판타지 사람과 넷 이상 다르다."
+                "why": "우림 언덕 카리오카 강의 샘물을 아치 위 물길로 도시 분수까지 이끄는 물길의 마법사 — 수도교는 1750년에 열려 카리오카 강의 물을 도시 분수로 날랐다. 리우 판타지의 해넘이 전령(풍만 · 보랏빛 구름 곱슬 · 달걀형)과 달리 작고 부드러운 사람. 작은 키에 가슴 · 엉덩이가 넉넉한 몸(petite_voluptuous) · 반만 묶어 내린 긴 머리(half_up) · 맑은 물빛 엷은 청록 머리(pale_aqua) · 가운데 가르마. 둥근 얼굴 · 크고 둥근 눈 · 조금 낮게 놓인 짙은 눈썹 · 작은 코 · 도톰하고 넓은 입술, 하늘빛 눈, 따뜻한 베이지 피부에 발그레한 볼, 20대 초반의 수줍은 인상에 다정한 표정. 얼굴 칸이 리우 판타지 사람 · 빵 산 · 코파카바나 판타지 사람과 넷 이상 다르다. 2026-11-23 인상 soft → shy(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a slender silver ewer pouring an endless thread of clear spring water"
@@ -9149,7 +9149,7 @@
                   "lips": "small_bow",
                   "eye_color": "rose",
                   "age": "early_20s",
-                  "impression": "languid",
+                  "impression": "decadent",
                   "skin_tone": "bronze",
                   "eye_size": "medium",
                   "eye_tilt": "down",
@@ -9162,7 +9162,7 @@
                   "hair_color": "cobalt_blue",
                   "bangs": "side_swept"
                 },
-                "why": "1950년대부터 노래와 음악의 밤으로 이름난 라파에서 아치 아래 무대에 서는 두 세기 뒤의 밤 가수 — 라파엔 삼바 · 쇼루 무대가 이어진다. 리우 사이버펑크의 바테리아 지휘자(큰 키 곡선 · 크롬 무지개 언더컷 · 하트형 · 날 선 인상)와 달리 느긋하고 깊은 사람. 가슴 · 엉덩이 · 허벅지가 넉넉한 풍만한 몸(voluptuous) · 길게 내려오는 나선 곱슬(long_curly) · 유리 같은 윤이 도는 짙은 코발트 블루 머리(cobalt_blue) · 옆으로 넘긴 앞머리. 긴 얼굴 · 눈꼬리가 부드럽게 처진 눈 · 부드러운 둥근 눈썹 · 매부리코 · 작은 활 입술, 장밋빛 눈, 구릿빛 갈색 피부(bronze)에 짙은 입술, 30대 초반의 나른한 인상(languid)에 아련한 표정. 얼굴 칸이 리우 사이버펑크 사람 · 빵 산 · 코파카바나 사이버펑크 사람과 넷 이상 다르다."
+                "why": "1950년대부터 노래와 음악의 밤으로 이름난 라파에서 아치 아래 무대에 서는 두 세기 뒤의 밤 가수 — 라파엔 삼바 · 쇼루 무대가 이어진다. 리우 사이버펑크의 바테리아 지휘자(큰 키 곡선 · 크롬 무지개 언더컷 · 하트형 · 날 선 인상)와 달리 느긋하고 깊은 사람. 가슴 · 엉덩이 · 허벅지가 넉넉한 풍만한 몸(voluptuous) · 길게 내려오는 나선 곱슬(long_curly) · 유리 같은 윤이 도는 짙은 코발트 블루 머리(cobalt_blue) · 옆으로 넘긴 앞머리. 긴 얼굴 · 눈꼬리가 부드럽게 처진 눈 · 부드러운 둥근 눈썹 · 매부리코 · 작은 활 입술, 장밋빛 눈, 구릿빛 갈색 피부(bronze)에 짙은 입술, 30대 초반의 나른하게 퇴폐적인 인상(decadent)에 아련한 표정. 얼굴 칸이 리우 사이버펑크 사람 · 빵 산 · 코파카바나 사이버펑크 사람과 넷 이상 다르다. 2026-11-23 인상 languid → decadent(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a slim microphone of clear glass with a soft glow at its tip"
@@ -9389,7 +9389,7 @@
               "lips": "wide_smile",
               "eye_color": "cherenkov_blue",
               "age": "mid_20s",
-              "impression": "cool",
+              "impression": "icy",
               "skin_tone": "golden_tan",
               "eye_size": "medium",
               "eye_tilt": "up",
@@ -9402,7 +9402,7 @@
               "hair_color": "bismuth_rainbow",
               "bangs": "choppy"
             },
-            "why": "부산항은 한국에서 가장 크고 세계 여섯째로 바쁜 컨테이너 항구다 — 두 세기 뒤 떠 있는 항구에서 거대한 갠트리 팔들을 다루며 빛나는 화물을 계단 탑으로 쌓는 크레인 지휘자 — 차분하고 손이 정확한 사람. 어깨가 넓고 근육이 단단하면서도 가슴이 풍만하고 엉덩이가 둥근 근육 곡선 몸(strong_curvy) · 층층이 거칠게 친 울프컷(wolf_cut) · 분홍빛 은색에 금 · 장밋빛 · 파랑이 계단처럼 층져 무지갯빛으로 도는 머리(bismuth_rainbow — 산비탈 계단 마을과 쌓인 화물의 빛깔, 다른 도시가 안 쓴 색) · 삐죽삐죽한 앞머리(choppy) · 주머니 많은 기능 조끼와 몸을 가로지르는 짐 하네스 · 짧은 하의 · 추진 부츠(sky_courier — 처음 쓰는 실루엣)로 실루엣이 앞으로 달린다. 길쭉한 달걀형 얼굴 · 눈꼬리가 살짝 올라간 아몬드 눈 · 눈 위에 조금 낮게 놓인 짙은 눈썹 · 콧대가 곧고 가는 코 · 입꼬리가 쉽게 올라가는 자연스러운 폭의 입술, 체렌코프빛 푸른 눈(cherenkov_blue), 금빛 도는 밝은 피부(golden_tan)에 짙은 베리빛 입술(dark_lip), 20대 중반, 서늘한 인상(cool)에 입을 다문 집중한 눈(focused). 판타지(다이아몬드형 · 처진 눈 · 불씨 끝 올림머리 · 모래시계 · 따뜻한 베이지 피부) · 스팀펑크(둥근 얼굴 · 홑꺼풀 긴 눈 · 라벤더 단발 · 작은 풍만 · 흰 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울(랜드마크 포함)을 비롯한 열 도시 사람 누구와도 셋 이상 다르다."
+            "why": "부산항은 한국에서 가장 크고 세계 여섯째로 바쁜 컨테이너 항구다 — 두 세기 뒤 떠 있는 항구에서 거대한 갠트리 팔들을 다루며 빛나는 화물을 계단 탑으로 쌓는 크레인 지휘자 — 차분하고 손이 정확한 사람. 어깨가 넓고 근육이 단단하면서도 가슴이 풍만하고 엉덩이가 둥근 근육 곡선 몸(strong_curvy) · 층층이 거칠게 친 울프컷(wolf_cut) · 분홍빛 은색에 금 · 장밋빛 · 파랑이 계단처럼 층져 무지갯빛으로 도는 머리(bismuth_rainbow — 산비탈 계단 마을과 쌓인 화물의 빛깔, 다른 도시가 안 쓴 색) · 삐죽삐죽한 앞머리(choppy) · 주머니 많은 기능 조끼와 몸을 가로지르는 짐 하네스 · 짧은 하의 · 추진 부츠(sky_courier — 처음 쓰는 실루엣)로 실루엣이 앞으로 달린다. 길쭉한 달걀형 얼굴 · 눈꼬리가 살짝 올라간 아몬드 눈 · 눈 위에 조금 낮게 놓인 짙은 눈썹 · 콧대가 곧고 가는 코 · 입꼬리가 쉽게 올라가는 자연스러운 폭의 입술, 체렌코프빛 푸른 눈(cherenkov_blue), 금빛 도는 밝은 피부(golden_tan)에 짙은 베리빛 입술(dark_lip), 20대 중반, 얼음처럼 차가운 냉미녀 인상(icy)에 입을 다문 집중한 눈(focused). 판타지(다이아몬드형 · 처진 눈 · 불씨 끝 올림머리 · 모래시계 · 따뜻한 베이지 피부) · 스팀펑크(둥근 얼굴 · 홑꺼풀 긴 눈 · 라벤더 단발 · 작은 풍만 · 흰 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울(랜드마크 포함)을 비롯한 열 도시 사람 누구와도 셋 이상 다르다. 2026-11-23 인상 cool → icy(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
           },
           "hold": {
             "en": "a palm-sized glass dial ringed with light, a tiny glowing grid of stacked cargo pods floating above it"
@@ -9535,7 +9535,7 @@
                   "lips": "wide_smile",
                   "eye_color": "amber",
                   "age": "early_20s",
-                  "impression": "cute",
+                  "impression": "sassy",
                   "skin_tone": "warm_beige",
                   "eye_size": "medium",
                   "eye_tilt": "up",
@@ -9548,7 +9548,7 @@
                   "hair_color": "copper",
                   "bangs": "side_swept"
                 },
-                "why": "해 질 녘 놋쇠 다리의 가스등을 하나씩 켜는 등불지기 — 부산 스팀펑크의 증기 전차 차장(작은 풍만 몸 · 라벤더 단발 · 둥근 얼굴 · 흰 피부)과 달리 탑을 오르내리는 탄탄한 사람. 굴곡 있는 운동 체형(curvy_athletic) · 목덜미에 낮게 묶은 머리(low_ponytail) · 윤나는 구리빛 머리(copper) · 옆으로 넘긴 앞머리, 눈은 호박빛(amber). 하트형 얼굴 · 눈꼬리가 살짝 올라간 아몬드 눈 · 가늘게 휜 눈썹 · 끝이 둥근 작은 코 · 입꼬리가 잘 올라가는 입술, 따뜻한 베이지 피부(warm_beige)에 날개 아이라인(winged_liner), 20대 초반의 귀여운 인상(cute)에 자신 있는 표정(confident). 실루엣은 태엽 멜빵(clockwork_harness). 도시 스팀펑크와 얼굴 칸 다섯이 다 다르다."
+                "why": "해 질 녘 놋쇠 다리의 가스등을 하나씩 켜는 등불지기 — 부산 스팀펑크의 증기 전차 차장(작은 풍만 몸 · 라벤더 단발 · 둥근 얼굴 · 흰 피부)과 달리 탑을 오르내리는 탄탄한 사람. 굴곡 있는 운동 체형(curvy_athletic) · 목덜미에 낮게 묶은 머리(low_ponytail) · 윤나는 구리빛 머리(copper) · 옆으로 넘긴 앞머리, 눈은 호박빛(amber). 하트형 얼굴 · 눈꼬리가 살짝 올라간 아몬드 눈 · 가늘게 휜 눈썹 · 끝이 둥근 작은 코 · 입꼬리가 잘 올라가는 입술, 따뜻한 베이지 피부(warm_beige)에 날개 아이라인(winged_liner), 20대 초반의 당찬 인상(sassy)에 자신 있는 표정(confident). 실루엣은 태엽 멜빵(clockwork_harness). 도시 스팀펑크와 얼굴 칸 다섯이 다 다르다. 2026-11-23 인상 cute → sassy(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a long polished brass lamplighter's pole with a small flame hooded in glass at its tip"
@@ -9922,7 +9922,7 @@
                   "lips": "heart_full",
                   "eye_color": "storm_grey",
                   "age": "mid_20s",
-                  "impression": "stoic",
+                  "impression": "wistful",
                   "skin_tone": "olive",
                   "eye_size": "medium",
                   "eye_tilt": "down",
@@ -9935,7 +9935,7 @@
                   "hair_color": "salt_white",
                   "bangs": "curtain"
                 },
-                "why": "절벽 끝 태엽 등대의 등대지기 — 부산 스팀펑크의 증기 전차 차장(작은 풍만 · 라벤더 단발 · 둥근 얼굴 · 흰 피부)과 달리 바닷바람에 단련된 고요한 사람. 날씬하고 단단한 몸(lean_toned — 이 공방 아홉 사람 가운데 하나뿐인 마른 쪽 체형) · 한쪽 어깨로 내린 굵은 땋은 머리(side_braid) · 바다 소금빛 흰 머리(salt_white) · 커튼 앞머리, 눈은 폭풍 잿빛(storm_grey). 달걀형 얼굴 · 눈꼬리가 순하게 처진 눈 · 부드러운 둥근 눈썹 · 끝이 둥근 자연스러운 폭의 코 · 하트 입술, 올리브 피부(olive)에 스모키 화장(smoky), 20대 중반의 담담한 인상(stoic)에 생각에 잠긴 표정(pensive). 실루엣은 해군 장교(naval_officer). 도시 스팀펑크 · 광안대교 · 감천 스팀펑크와 얼굴 칸 다섯이 다 다르다."
+                "why": "절벽 끝 태엽 등대의 등대지기 — 부산 스팀펑크의 증기 전차 차장(작은 풍만 · 라벤더 단발 · 둥근 얼굴 · 흰 피부)과 달리 바닷바람에 단련된 고요한 사람. 날씬하고 단단한 몸(lean_toned — 이 공방 아홉 사람 가운데 하나뿐인 마른 쪽 체형) · 한쪽 어깨로 내린 굵은 땋은 머리(side_braid) · 바다 소금빛 흰 머리(salt_white) · 커튼 앞머리, 눈은 폭풍 잿빛(storm_grey). 달걀형 얼굴 · 눈꼬리가 순하게 처진 눈 · 부드러운 둥근 눈썹 · 끝이 둥근 자연스러운 폭의 코 · 하트 입술, 올리브 피부(olive)에 스모키 화장(smoky), 20대 중반의 아련한 인상(wistful)에 생각에 잠긴 표정(pensive). 실루엣은 해군 장교(naval_officer). 도시 스팀펑크 · 광안대교 · 감천 스팀펑크와 얼굴 칸 다섯이 다 다르다. 2026-11-23 인상 stoic → wistful(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a polished brass storm lantern with a faceted glass chimney"
@@ -10162,7 +10162,7 @@
               "lips": "wide_smile",
               "eye_color": "teal",
               "age": "early_20s",
-              "impression": "cheerful",
+              "impression": "coquettish",
               "skin_tone": "golden_tan",
               "eye_size": "medium",
               "eye_tilt": "up",
@@ -10175,7 +10175,7 @@
               "hair_color": "pewter",
               "bangs": "choppy"
             },
-            "why": "골목마다 통통거리는 놋쇠 증기 삼륜 택시(툭툭)를 손보고 저녁 운행에 내보내는 증기 툭툭 기관사 — 씩씩하고 밝은 사람. 가슴 · 엉덩이가 둥근 곡선 몸(curvy) · 얼굴을 감싸는 층층 셰그(shag_layers — 일하다 흐트러져도 예쁜 머리) · 놋쇠 곁에서 은은히 빛나는 부드러운 백랍 은빛 머리(pewter — 다른 도시가 안 쓴 색) · 짧게 툭툭 자른 앞머리(choppy) · 소매 없는 놋쇠 단추 조끼 · 고운 가죽 장갑 · 몸에 맞는 바지와 끈 부츠 · 허리의 가는 공구 띠(engineer)로 실루엣이 날렵하게 일한다. 아래로 갸름해지는 둥근 얼굴 · 눈꼬리가 살짝 올라간 아몬드 눈 · 자연스러운 숱의 곧은 눈썹 · 콧대가 살짝 휜 코 · 입꼬리가 잘 올라가는 입, 청록 눈(teal), 금빛 도는 밝은 피부(golden_tan)에 입가 점(mole_lip), 20대 초반, 밝고 시원한 인상(cheerful)에 입을 다문 장난스러운 미소(playful). 판타지(다이아몬드형 · 무지갯빛 은발 옆머리 · 버들 곡선 · 따뜻한 베이지 피부) · 사이버펑크(달걀형 · 제논 은발 올백 · 단단한 굴곡 몸 · 구릿빛 갈색 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 다른 열 도시 사람(랜드마크 포함) 누구와도 셋 이상 다르다."
+            "why": "골목마다 통통거리는 놋쇠 증기 삼륜 택시(툭툭)를 손보고 저녁 운행에 내보내는 증기 툭툭 기관사 — 씩씩하고 밝은 사람. 가슴 · 엉덩이가 둥근 곡선 몸(curvy) · 얼굴을 감싸는 층층 셰그(shag_layers — 일하다 흐트러져도 예쁜 머리) · 놋쇠 곁에서 은은히 빛나는 부드러운 백랍 은빛 머리(pewter — 다른 도시가 안 쓴 색) · 짧게 툭툭 자른 앞머리(choppy) · 소매 없는 놋쇠 단추 조끼 · 고운 가죽 장갑 · 몸에 맞는 바지와 끈 부츠 · 허리의 가는 공구 띠(engineer)로 실루엣이 날렵하게 일한다. 아래로 갸름해지는 둥근 얼굴 · 눈꼬리가 살짝 올라간 아몬드 눈 · 자연스러운 숱의 곧은 눈썹 · 콧대가 살짝 휜 코 · 입꼬리가 잘 올라가는 입, 청록 눈(teal), 금빛 도는 밝은 피부(golden_tan)에 입가 점(mole_lip), 20대 초반, 새침하고 애교 있는 인상(coquettish)에 입을 다문 장난스러운 미소(playful). 판타지(다이아몬드형 · 무지갯빛 은발 옆머리 · 버들 곡선 · 따뜻한 베이지 피부) · 사이버펑크(달걀형 · 제논 은발 올백 · 단단한 굴곡 몸 · 구릿빛 갈색 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 다른 열 도시 사람(랜드마크 포함) 누구와도 셋 이상 다르다. 2026-11-23 인상 cheerful → coquettish(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
           },
           "hold": {
             "en": "a polished brass wrench with a little pressure gauge set into its handle"
@@ -10219,7 +10219,7 @@
               "lips": "thin_long",
               "eye_color": "ion_blue",
               "age": "mid_20s",
-              "impression": "cool",
+              "impression": "decadent",
               "skin_tone": "bronze",
               "eye_size": "medium",
               "eye_tilt": "level",
@@ -10232,7 +10232,7 @@
               "hair_color": "xenon_flash",
               "bangs": "none"
             },
-            "why": "층층이 하늘로 오른 빛의 운하를 긴 꼬리 배로 달리는 하늘 운하 긴 꼬리 배 조종사 — 차갑고 당당한 사람. 어깨가 넓고 탄탄하면서 가슴 · 엉덩이가 둥근 단단한 굴곡 몸(strong_curvy — 긴 키 손잡이를 버티는 몸) · 바람에 흐트러지지 않게 매끈하게 넘긴 머리(slicked_back) · 은백색 끝이 섬광처럼 옅은 이온 파랑으로 번쩍이는 머리(xenon_flash — 다른 도시가 안 쓴 색) · 앞머리 없음(none) · 몸에 맞는 라이더 점프슈트와 큰 장갑 · 목에 건 바이저(racer_jumpsuit)로 실루엣이 앞으로 기울어 빠르다. 달걀형 얼굴 · 쌍꺼풀 없는 긴 눈 · 눈 위에 조금 낮게 놓인 짙은 눈썹 · 끝이 살짝 들린 코 · 가늘고 자연스러운 폭의 입술, 옅게 빛나는 이온 파랑 눈(ion_blue), 구릿빛 갈색 피부(bronze)에 날렵한 아이라인(winged_liner), 20대 중반, 차갑고 도도한 인상(cool)에 침착하고 자신 있는 얼굴(confident). 판타지(다이아몬드형 · 무지갯빛 은발 옆머리 · 버들 곡선 · 따뜻한 베이지 피부) · 스팀펑크(둥근 얼굴 · 백랍 은빛 셰그 · 곡선 몸 · 금빛 도는 밝은 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 다른 열 도시 사람(랜드마크 포함) 누구와도 셋 이상 다르다."
+            "why": "층층이 하늘로 오른 빛의 운하를 긴 꼬리 배로 달리는 하늘 운하 긴 꼬리 배 조종사 — 차갑고 당당한 사람. 어깨가 넓고 탄탄하면서 가슴 · 엉덩이가 둥근 단단한 굴곡 몸(strong_curvy — 긴 키 손잡이를 버티는 몸) · 바람에 흐트러지지 않게 매끈하게 넘긴 머리(slicked_back) · 은백색 끝이 섬광처럼 옅은 이온 파랑으로 번쩍이는 머리(xenon_flash — 다른 도시가 안 쓴 색) · 앞머리 없음(none) · 몸에 맞는 라이더 점프슈트와 큰 장갑 · 목에 건 바이저(racer_jumpsuit)로 실루엣이 앞으로 기울어 빠르다. 달걀형 얼굴 · 쌍꺼풀 없는 긴 눈 · 눈 위에 조금 낮게 놓인 짙은 눈썹 · 끝이 살짝 들린 코 · 가늘고 자연스러운 폭의 입술, 옅게 빛나는 이온 파랑 눈(ion_blue), 구릿빛 갈색 피부(bronze)에 날렵한 아이라인(winged_liner), 20대 중반, 나른하게 퇴폐적인 인상(decadent)에 침착하고 자신 있는 얼굴(confident). 판타지(다이아몬드형 · 무지갯빛 은발 옆머리 · 버들 곡선 · 따뜻한 베이지 피부) · 스팀펑크(둥근 얼굴 · 백랍 은빛 셰그 · 곡선 몸 · 금빛 도는 밝은 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 다른 열 도시 사람(랜드마크 포함) 누구와도 셋 이상 다르다. 2026-11-23 인상 cool → decadent(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
           },
           "hold": {
             "en": "the long, slim chrome tiller-shaft of a long-tail boat engine, traced with lines of light"
@@ -10614,7 +10614,7 @@
               "lips": "thin_long",
               "eye_color": "steel_blue",
               "age": "mid_20s",
-              "impression": "cool",
+              "impression": "confident",
               "skin_tone": "fair",
               "eye_size": "large",
               "eye_tilt": "level",
@@ -10627,7 +10627,7 @@
               "hair_color": "iron_grey",
               "bangs": "side_swept"
             },
-            "why": "손으로 박은 리벳 육백만 개로 이은 하버 브리지(1932년 개통)의 아치 꼭대기를 오르내리며 리벳을 살피는 옷걸이 아치의 리벳 장인 — 씩씩하고 시원한 사람. 어깨가 넓고 근육이 단단하면서도 가슴과 엉덩이가 둥근 근육 곡선 몸(strong_curvy — 아치를 오르는 손) · 바람에 날리지 않게 길게 땋아 내린 머리(braids) · 갓 칠한 다리 강철을 닮은 강철빛 회색 머리(iron_grey — 다른 도시가 안 쓴 색) · 옆으로 넘긴 앞머리(side_swept) · 소매 없는 놋쇠 단추 조끼에 가는 가죽 장갑 · 몸에 붙는 바지 · 끈 부츠 · 가는 공구 띠(engineer)로 실루엣이 단정하고 날렵하다. 하트형 얼굴 · 동그스름한 큰 아몬드 눈 · 자연스러운 숱의 곧은 눈썹 · 부드러운 매부리 코 · 가늘고 자연스러운 폭의 입술, 강철빛 푸른 눈(steel_blue), 흰 피부(fair)에 햇살 주근깨(freckles — 오스트레일리아 사람이라 동양 쪽 규칙 밖), 20대 중반, 시원한 인상(cool)에 침착하고 자신 있는 얼굴(confident). 판타지(마름모 얼굴 · 자카란다빛 물결머리 · 모래시계 · 따뜻한 베이지 피부) · 사이버펑크(긴 얼굴 · 섬광 은빛 올백 · 탄탄한 곡선 · 짙은 갈색 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 다른 열 도시 사람(랜드마크 포함)과도 셋 이상 다르다."
+            "why": "손으로 박은 리벳 육백만 개로 이은 하버 브리지(1932년 개통)의 아치 꼭대기를 오르내리며 리벳을 살피는 옷걸이 아치의 리벳 장인 — 씩씩하고 시원한 사람. 어깨가 넓고 근육이 단단하면서도 가슴과 엉덩이가 둥근 근육 곡선 몸(strong_curvy — 아치를 오르는 손) · 바람에 날리지 않게 길게 땋아 내린 머리(braids) · 갓 칠한 다리 강철을 닮은 강철빛 회색 머리(iron_grey — 다른 도시가 안 쓴 색) · 옆으로 넘긴 앞머리(side_swept) · 소매 없는 놋쇠 단추 조끼에 가는 가죽 장갑 · 몸에 붙는 바지 · 끈 부츠 · 가는 공구 띠(engineer)로 실루엣이 단정하고 날렵하다. 하트형 얼굴 · 동그스름한 큰 아몬드 눈 · 자연스러운 숱의 곧은 눈썹 · 부드러운 매부리 코 · 가늘고 자연스러운 폭의 입술, 강철빛 푸른 눈(steel_blue), 흰 피부(fair)에 햇살 주근깨(freckles — 오스트레일리아 사람이라 동양 쪽 규칙 밖), 20대 중반, 당당한 인상(confident)에 침착하고 자신 있는 얼굴(confident). 판타지(마름모 얼굴 · 자카란다빛 물결머리 · 모래시계 · 따뜻한 베이지 피부) · 사이버펑크(긴 얼굴 · 섬광 은빛 올백 · 탄탄한 곡선 · 짙은 갈색 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 다른 열 도시 사람(랜드마크 포함)과도 셋 이상 다르다. 2026-11-23 인상 cool → confident(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
           },
           "hold": {
             "en": "a polished brass riveting hammer with a turned wooden handle"
@@ -10846,7 +10846,7 @@
               "lips": "thin_long",
               "eye_color": "tyrian_purple",
               "age": "early_20s",
-              "impression": "elegant",
+              "impression": "femme_fatale",
               "skin_tone": "warm_beige",
               "eye_size": "large",
               "eye_tilt": "level",
@@ -10859,7 +10859,7 @@
               "hair_color": "bismuth_rainbow",
               "bangs": "side_swept"
             },
-            "why": "예술궁전 극장의 24톤짜리 접히는 유리 무대 막(두 화산을 담은 무지갯빛 색유리 백만 조각 가까이)을 놋쇠 태엽으로 올리고 내리는 유리 막 기관사 — 우아하고 손이 정확한 사람. 키는 작지만 가슴이 아주 풍만하고 허리가 가늘며 엉덩이가 둥근 작은 풍만한 몸(petite_voluptuous) · 1930년대 아르데코 극장 안을 닮은 턱선 길이의 반들거리는 핑거웨이브(finger_waves) · 분홍빛 은에 금 · 장밋빛 · 파랑 무지개 띠가 층층이 지는 머리(bismuth_rainbow — 무지갯빛 색유리, 다른 도시가 안 쓴 색) · 옆으로 넘긴 앞머리(side_swept) · 허리 아래 놋쇠 철테가 드러난 크리놀린 철테형(crinoline_cage — 철테 사이에 유리 모자이크 판을 단다)으로 실루엣이 새장처럼 퍼진다. 하트형 얼굴 · 동그란 큰 눈 · 자연스러운 숱의 곧은 눈썹 · 부드러운 매부리코 · 가늘고 자연스러운 폭의 입술, 짙은 보랏빛 눈(tyrian_purple), 따뜻한 베이지 피부(warm_beige)에 아르데코풍 날개 아이라인(winged_liner), 30대 초반, 우아한 인상(elegant)에 입을 다문 반쯤의 미소(half_smile). 판타지(마름모형 · 금잔화 주황 곱슬 · 모래시계 · 구릿빛 피부) · 사이버펑크(달걀형 · 초록 불꽃 땋은머리 · 탄탄한 곡선 · 올리브빛 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 다른 열 도시 사람(랜드마크 포함) 누구와도 셋 이상 다르다."
+            "why": "예술궁전 극장의 24톤짜리 접히는 유리 무대 막(두 화산을 담은 무지갯빛 색유리 백만 조각 가까이)을 놋쇠 태엽으로 올리고 내리는 유리 막 기관사 — 우아하고 손이 정확한 사람. 키는 작지만 가슴이 아주 풍만하고 허리가 가늘며 엉덩이가 둥근 작은 풍만한 몸(petite_voluptuous) · 1930년대 아르데코 극장 안을 닮은 턱선 길이의 반들거리는 핑거웨이브(finger_waves) · 분홍빛 은에 금 · 장밋빛 · 파랑 무지개 띠가 층층이 지는 머리(bismuth_rainbow — 무지갯빛 색유리, 다른 도시가 안 쓴 색) · 옆으로 넘긴 앞머리(side_swept) · 허리 아래 놋쇠 철테가 드러난 크리놀린 철테형(crinoline_cage — 철테 사이에 유리 모자이크 판을 단다)으로 실루엣이 새장처럼 퍼진다. 하트형 얼굴 · 동그란 큰 눈 · 자연스러운 숱의 곧은 눈썹 · 부드러운 매부리코 · 가늘고 자연스러운 폭의 입술, 짙은 보랏빛 눈(tyrian_purple), 따뜻한 베이지 피부(warm_beige)에 아르데코풍 날개 아이라인(winged_liner), 30대 초반, 위험한 팜파탈 인상(femme_fatale)에 입을 다문 반쯤의 미소(half_smile). 판타지(마름모형 · 금잔화 주황 곱슬 · 모래시계 · 구릿빛 피부) · 사이버펑크(달걀형 · 초록 불꽃 땋은머리 · 탄탄한 곡선 · 올리브빛 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 다른 열 도시 사람(랜드마크 포함) 누구와도 셋 이상 다르다. 2026-11-23 인상 elegant → femme_fatale(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
           },
           "hold": {
             "en": "a long brass crank key with a curling Art Nouveau handle, made for winding the great glass curtain"
@@ -10912,7 +10912,7 @@
               "lips": "wide_smile",
               "eye_color": "ember",
               "age": "early_20s",
-              "impression": "cheerful",
+              "impression": "mischievous",
               "skin_tone": "olive",
               "eye_size": "medium",
               "eye_tilt": "up",
@@ -10925,7 +10925,7 @@
               "hair_color": "boron_green",
               "bangs": "straight"
             },
-            "why": "되살린 호수 위 떠 있는 꽃밭(옛 치남파를 두 세기 뒤로 옮긴 것) 사이를 추진 장화로 날며 갓 딴 금잔화를 도시 곳곳에 나르는 하늘 배달부 — 밝고 장난기 있는 사람. 가슴이 풍만하고 엉덩이가 둥근 탄탄한 곡선 몸(curvy_athletic) · 길게 땋아 내린 두 갈래 땋은머리(braids) · 짙은 흑갈색에 끝이 선명한 초록 불꽃으로 물든 머리(boron_green — 떠 있는 꽃밭의 잎빛, 같은 머리 · 체형 조합은 다른 도시에 없다) · 일자 앞머리(straight) · 주머니 많은 기능 조끼와 짐 하네스 · 짧은 하의 · 추진 장화의 공중 배달 질주형(sky_courier — 처음 쓰는 실루엣)으로 실루엣이 앞으로 달린다. 달걀형 얼굴 · 자연스러운 크기의 아몬드 눈에 살짝 올라간 눈꼬리 · 부드럽고 둥근 눈썹 · 끝이 살짝 들린 코 · 입꼬리가 잘 올라가는 자연스러운 폭의 입, 금잔화빛 주황 눈(ember), 올리브빛 피부(olive)에 주근깨(freckles — 동양 쪽이 아니라 그대로), 20대 초반, 밝고 시원한 인상(cheerful)에 입을 다문 장난스러운 얼굴(mischievous). 판타지(마름모형 · 금잔화 주황 곱슬 · 모래시계 · 구릿빛 피부) · 스팀펑크(하트형 · 무지갯빛 핑거웨이브 · 작은 풍만 · 따뜻한 베이지 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 다른 열 도시 사람(랜드마크 포함) 누구와도 셋 이상 다르다."
+            "why": "되살린 호수 위 떠 있는 꽃밭(옛 치남파를 두 세기 뒤로 옮긴 것) 사이를 추진 장화로 날며 갓 딴 금잔화를 도시 곳곳에 나르는 하늘 배달부 — 밝고 장난기 있는 사람. 가슴이 풍만하고 엉덩이가 둥근 탄탄한 곡선 몸(curvy_athletic) · 길게 땋아 내린 두 갈래 땋은머리(braids) · 짙은 흑갈색에 끝이 선명한 초록 불꽃으로 물든 머리(boron_green — 떠 있는 꽃밭의 잎빛, 같은 머리 · 체형 조합은 다른 도시에 없다) · 일자 앞머리(straight) · 주머니 많은 기능 조끼와 짐 하네스 · 짧은 하의 · 추진 장화의 공중 배달 질주형(sky_courier — 처음 쓰는 실루엣)으로 실루엣이 앞으로 달린다. 달걀형 얼굴 · 자연스러운 크기의 아몬드 눈에 살짝 올라간 눈꼬리 · 부드럽고 둥근 눈썹 · 끝이 살짝 들린 코 · 입꼬리가 잘 올라가는 자연스러운 폭의 입, 금잔화빛 주황 눈(ember), 올리브빛 피부(olive)에 주근깨(freckles — 동양 쪽이 아니라 그대로), 20대 초반, 여우 같은 장난기 인상(mischievous)에 입을 다문 장난스러운 얼굴(mischievous). 판타지(마름모형 · 금잔화 주황 곱슬 · 모래시계 · 구릿빛 피부) · 스팀펑크(하트형 · 무지갯빛 핑거웨이브 · 작은 풍만 · 따뜻한 베이지 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 다른 열 도시 사람(랜드마크 포함) 누구와도 셋 이상 다르다. 2026-11-23 인상 cheerful → mischievous(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
           },
           "hold": {
             "en": "a bundle of fresh marigolds and magenta blossoms bound in a softly glowing ribbon of cut-light lace"
@@ -11087,7 +11087,7 @@
               "lips": "full_wide",
               "eye_color": "amber",
               "age": "early_20s",
-              "impression": "sharp",
+              "impression": "sassy",
               "skin_tone": "warm_beige",
               "eye_size": "medium",
               "eye_tilt": "up",
@@ -11100,7 +11100,7 @@
               "hair_color": "mirror_steel",
               "bangs": "side_swept"
             },
-            "why": "대전은 1905년 경부선 대전역이 들어서며 자란 철도 도시로 경부선 · 호남선이 여기서 만나고 갈리며, 옛 호남선 열차는 대전역에서 기관차의 방향을 바꾸느라 오래 섰고 그 사이 승강장 가락국수가 명물이 되었다 — 그 분기점의 놋쇠 전차대 신호수 — 손이 빠르고 당찬 사람. 가슴과 엉덩이가 둥글면서 몸이 탄탄한 굴곡 몸(curvy_athletic — 서울 · 부산 스팀펑크와 다른 몸) · 어깨에 닿아 끝이 바깥으로 말린 머리(flipped_shoulder) · 잘 닦은 레일처럼 푸른 빛이 도는 거울 강철빛 머리(mirror_steel — 처음 쓰는 색) · 옆으로 넘긴 앞머리(side_swept) · 어깨 케이프가 겹친 긴 코트와 모자 · 장갑(detective_cape — 처음 쓰는 실루엣)으로 곧고 날렵하다. 광대가 살짝 선 다이아몬드형 얼굴 · 눈꼬리가 살짝 올라간 아몬드 눈 · 조금 낮게 놓인 짙은 눈썹 · 끝이 둥근 작은 코 · 도톰하고 자연스러운 폭의 입술, 호박빛 눈(amber), 따뜻한 베이지 피부(warm_beige)에 장밋빛 입술(red_lip), 20대 초반, 날 선 인상(sharp)에 자신 있는 얼굴(confident). 판타지(달걀형 · 홑꺼풀 눈 · 빗빛 물결머리 · 버들 곡선 · 흰 피부) · 사이버펑크(부드러운 각진 얼굴 · 아몬드 눈 · 제논빛 포니테일 · 늘씬 글래머 · 금빛 도는 피부)와 얼굴 칸 넷 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 다른 도시 스팀펑크 사람(랜드마크 포함) 누구와도 셋 이상 다르다."
+            "why": "대전은 1905년 경부선 대전역이 들어서며 자란 철도 도시로 경부선 · 호남선이 여기서 만나고 갈리며, 옛 호남선 열차는 대전역에서 기관차의 방향을 바꾸느라 오래 섰고 그 사이 승강장 가락국수가 명물이 되었다 — 그 분기점의 놋쇠 전차대 신호수 — 손이 빠르고 당찬 사람. 가슴과 엉덩이가 둥글면서 몸이 탄탄한 굴곡 몸(curvy_athletic — 서울 · 부산 스팀펑크와 다른 몸) · 어깨에 닿아 끝이 바깥으로 말린 머리(flipped_shoulder) · 잘 닦은 레일처럼 푸른 빛이 도는 거울 강철빛 머리(mirror_steel — 처음 쓰는 색) · 옆으로 넘긴 앞머리(side_swept) · 어깨 케이프가 겹친 긴 코트와 모자 · 장갑(detective_cape — 처음 쓰는 실루엣)으로 곧고 날렵하다. 광대가 살짝 선 다이아몬드형 얼굴 · 눈꼬리가 살짝 올라간 아몬드 눈 · 조금 낮게 놓인 짙은 눈썹 · 끝이 둥근 작은 코 · 도톰하고 자연스러운 폭의 입술, 호박빛 눈(amber), 따뜻한 베이지 피부(warm_beige)에 장밋빛 입술(red_lip), 20대 초반, 당찬 인상(sassy)에 자신 있는 얼굴(confident). 판타지(달걀형 · 홑꺼풀 눈 · 빗빛 물결머리 · 버들 곡선 · 흰 피부) · 사이버펑크(부드러운 각진 얼굴 · 아몬드 눈 · 제논빛 포니테일 · 늘씬 글래머 · 금빛 도는 피부)와 얼굴 칸 넷 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 다른 도시 스팀펑크 사람(랜드마크 포함) 누구와도 셋 이상 다르다. 2026-11-23 인상 sharp → sassy(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
           },
           "hold": {
             "en": "a polished brass railway signal lantern with a ring handle and a lens of clear and deep blue glass"
@@ -11144,7 +11144,7 @@
               "lips": "thin_long",
               "eye_color": "pale_citrine",
               "age": "mid_20s",
-              "impression": "cool",
+              "impression": "icy",
               "skin_tone": "golden_tan",
               "eye_size": "medium",
               "eye_tilt": "level",
@@ -11157,7 +11157,7 @@
               "hair_color": "xenon_flash",
               "bangs": "none"
             },
-            "why": "대전은 대덕연구개발특구를 중심으로 한 한국의 연구 도시이고 연구 분야엔 핵융합이 있다 — 두 세기 뒤 도시 한가운데의 고리 핵융합로에서 작은 인공 태양을 돌보는 인공 태양 지기 — 차분하고 정확한 사람. 팔다리는 가늘면서 가슴이 풍만하고 엉덩이가 둥근 늘씬 글래머 몸(busty_slender — 서울 · 부산 사이버펑크와 다른 몸) · 높이 묶은 긴 포니테일(ponytail) · 끝이 이온빛 푸르게 번쩍이는 은백 제논빛 머리(xenon_flash — 플라스마의 빛, 서울 · 부산 사람이 안 쓴 색) · 이마를 드러낸 머리(none) · 링 칼라의 매끈한 비행복(orbital_pilot)으로 곧고 매끈한 실루엣. 각이 부드럽게 다듬어진 얼굴 · 자연스러운 크기의 아몬드 눈 · 자연스러운 숱의 곧은 눈썹 · 끝이 둥근 자연스러운 폭의 코 · 가늘고 자연스러운 폭의 입술, 작은 해 같은 옅은 시트린빛 눈(pale_citrine), 금빛 도는 밝은 피부(golden_tan)에 날렵한 아이라인(winged_liner), 20대 중반, 서늘한 인상(cool)에 입을 다문 집중한 눈(focused). 판타지(달걀형 · 홑꺼풀 눈 · 빗빛 물결머리 · 버들 곡선 · 흰 피부) · 스팀펑크(다이아몬드형 · 올라간 눈 · 강철빛 바깥말이 · 탄탄한 곡선 · 따뜻한 베이지 피부)와 얼굴 칸 넷 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 다른 도시 사이버펑크 사람(랜드마크 포함) 누구와도 셋 이상 다르다."
+            "why": "대전은 대덕연구개발특구를 중심으로 한 한국의 연구 도시이고 연구 분야엔 핵융합이 있다 — 두 세기 뒤 도시 한가운데의 고리 핵융합로에서 작은 인공 태양을 돌보는 인공 태양 지기 — 차분하고 정확한 사람. 팔다리는 가늘면서 가슴이 풍만하고 엉덩이가 둥근 늘씬 글래머 몸(busty_slender — 서울 · 부산 사이버펑크와 다른 몸) · 높이 묶은 긴 포니테일(ponytail) · 끝이 이온빛 푸르게 번쩍이는 은백 제논빛 머리(xenon_flash — 플라스마의 빛, 서울 · 부산 사람이 안 쓴 색) · 이마를 드러낸 머리(none) · 링 칼라의 매끈한 비행복(orbital_pilot)으로 곧고 매끈한 실루엣. 각이 부드럽게 다듬어진 얼굴 · 자연스러운 크기의 아몬드 눈 · 자연스러운 숱의 곧은 눈썹 · 끝이 둥근 자연스러운 폭의 코 · 가늘고 자연스러운 폭의 입술, 작은 해 같은 옅은 시트린빛 눈(pale_citrine), 금빛 도는 밝은 피부(golden_tan)에 날렵한 아이라인(winged_liner), 20대 중반, 얼음처럼 차가운 냉미녀 인상(icy)에 입을 다문 집중한 눈(focused). 판타지(달걀형 · 홑꺼풀 눈 · 빗빛 물결머리 · 버들 곡선 · 흰 피부) · 스팀펑크(다이아몬드형 · 올라간 눈 · 강철빛 바깥말이 · 탄탄한 곡선 · 따뜻한 베이지 피부)와 얼굴 칸 넷 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 다른 도시 사이버펑크 사람(랜드마크 포함) 누구와도 셋 이상 다르다. 2026-11-23 인상 cool → icy(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
           },
           "hold": {
             "en": "a palm-sized glass sphere holding a tiny captive sun of swirling golden plasma, ringed by a thin band of light"
@@ -11214,7 +11214,7 @@
                   "lips": "thin_long",
                   "eye_color": "navy",
                   "age": "mid_20s",
-                  "impression": "elegant",
+                  "impression": "dreamy",
                   "skin_tone": "porcelain",
                   "eye_size": "medium",
                   "eye_tilt": "level",
@@ -11227,7 +11227,7 @@
                   "hair_color": "violet_white",
                   "bangs": "parted"
                 },
-                "why": "한빛탑은 옛 별 관측대를 본떠 아랫단에 화강암 1,993개를 쌓고(첨성대 · 개최 해), 꼭대기 원뿔은 미래로 뻗는 뜻이다 — 그 탑을 하이판타지로 옮긴, 탑 허리 별 보는 단에서 별을 읽는 이 — 조용히 생각에 잠기는 우아한 사람. 키가 크고 다리가 길면서 가슴과 엉덩이가 풍만한 큰 키 곡선 몸(tall_curvy) · 허리까지 흘러내리는 인어 물결머리(mermaid_waves) · 끝이 빛으로 녹아드는 옅은 보랏빛 흰 머리(violet_white — 별빛, 처음 쓰는 색) · 가운데 가른 앞머리(parted) · 별 자수 높은 깃의 긴 로브와 겹 어깨 망토(mage_robe)로 길고 신비롭다. 갸름한 달걀형 얼굴 · 자연스러운 크기의 아몬드 눈 · 둥근 눈썹 · 끝이 둥근 자연스러운 폭의 코 · 가늘고 자연스러운 폭의 입술, 밤하늘 같은 짙은 남빛 눈(navy), 도자기빛 피부(porcelain)에 윤기 있는 입술(gloss), 20대 중반, 우아한 인상(elegant)에 생각에 잠긴 얼굴(pensive). 대전 판타지 비 부르는 마법사(달걀형 · 홑꺼풀 눈 · 빗빛 물결머리 · 버들 곡선) · 유성온천 · 대청호 판타지와 얼굴 칸 셋 이상 · 머리 · 체형이 다르고, 이 카드의 스팀펑크(하트형 · 큰 둥근 눈 · 진홍 볼륨 머리 · 모래시계) · 사이버펑크(둥근 얼굴 · 홑꺼풀 눈 · 웨이퍼빛 히메컷 · 작은 곡선)와 얼굴형 · 머리 · 체형이 다 다르다."
+                "why": "한빛탑은 옛 별 관측대를 본떠 아랫단에 화강암 1,993개를 쌓고(첨성대 · 개최 해), 꼭대기 원뿔은 미래로 뻗는 뜻이다 — 그 탑을 하이판타지로 옮긴, 탑 허리 별 보는 단에서 별을 읽는 이 — 조용히 생각에 잠기는 우아한 사람. 키가 크고 다리가 길면서 가슴과 엉덩이가 풍만한 큰 키 곡선 몸(tall_curvy) · 허리까지 흘러내리는 인어 물결머리(mermaid_waves) · 끝이 빛으로 녹아드는 옅은 보랏빛 흰 머리(violet_white — 별빛, 처음 쓰는 색) · 가운데 가른 앞머리(parted) · 별 자수 높은 깃의 긴 로브와 겹 어깨 망토(mage_robe)로 길고 신비롭다. 갸름한 달걀형 얼굴 · 자연스러운 크기의 아몬드 눈 · 둥근 눈썹 · 끝이 둥근 자연스러운 폭의 코 · 가늘고 자연스러운 폭의 입술, 밤하늘 같은 짙은 남빛 눈(navy), 도자기빛 피부(porcelain)에 윤기 있는 입술(gloss), 20대 중반, 몽환적인 인상(dreamy)에 생각에 잠긴 얼굴(pensive). 대전 판타지 비 부르는 마법사(달걀형 · 홑꺼풀 눈 · 빗빛 물결머리 · 버들 곡선) · 유성온천 · 대청호 판타지와 얼굴 칸 셋 이상 · 머리 · 체형이 다르고, 이 카드의 스팀펑크(하트형 · 큰 둥근 눈 · 진홍 볼륨 머리 · 모래시계) · 사이버펑크(둥근 얼굴 · 홑꺼풀 눈 · 웨이퍼빛 히메컷 · 작은 곡선)와 얼굴형 · 머리 · 체형이 다 다르다. 2026-11-23 인상 elegant → dreamy(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
               },
               "hold": {
                 "en": "a small celestial globe of clear crystal set in silver rings, tiny stars drifting inside it"
