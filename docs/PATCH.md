@@ -7,6 +7,12 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-23 · claude · 일상컷 자세 — 기도꼴 · 쉿 줄이기, 가까운 컷에 허리 위, 가슴 위 · 허리 위 추천 열
+- 사용자 「무릎꿇고 기도하는 장면이나, 손으로 쉿 하는 포즈가 자주 나오는 기분」 → 원인(조건 없는 추천이 거의 모든 칸 후보라 「덜 쓴 것 먼저」 로도 안 눌림 — 기록에서 평균의 1.4 ~ 2.1 배, 필수 컷은 후보가 좁아 몰림, 가까운 컷 규칙이 얼굴 클로즈업 여섯에 몰림) → 「1,2,3 은 해주고, 4번은 자세도 늘리고 클로즈업을 가슴 위 아니면 허리 위까지해서 같이 묶는」. 네 공방 같이.
+- lib/casual-tree-v2.js — presetBreadth(시대 × 장소 가운데 그 추천이 되는 몫) · presetBias(log2(몫 / 가운데 값), -1 ~ 1.5) · presetOnce(표 preset_once).
+- data/casual-tree-v2.json — preset_once [clasp_low · kneel_clasp · shush_close](한 캐릭터 한 장까지). 손 clasp_both 「가슴 앞에 두 손 모으기」 → 「허리 앞 깍지」(zone waist), kneel_clasp 손 → 한 손 무릎 위(lap · natural — 기도로 읽혔다, 한 손 동작은 양쪽에 같이 못 쓴다). 조건 없는 가슴 위 · 허리 위 추천 열(collarbone_chest · cheek_hip_waist · wave_waist · thumbs_chest · crossed_tilt_waist · behind_head_chest · hair_hip_waist · reach_chest · strap_chest(어깨끈 옷) · collar_waist(깃 옷)).
+- tools/casual-plan.cjs — 자세 추천 무게에 2^-presetBias, preset_once 는 묶음 · 다른 세계 · 옛 컷에 있으면 후보에서 빼고 check 도 잡음, 가까운 컷(NEAR)에 허리 위. ?v casual-tree-v2 10.
+
 ## 2026-11-23 · claude · README 를 지금 상태로
 - 사용자 「README 고쳐줘」 — 첫머리가 11-19(도시 열 곳 · 「공방이 서는 중」 · Pages 아직)에 머물러 있었다. README.md — 도시 열다섯 · 랜드마크 카드 · 공방 모음 지도의 문이 열린 것 · 새 다섯 도시는 도시 설계만 된 시안 · 생성기 주소로 고쳤다.
 
