@@ -773,6 +773,57 @@
      }
     }
    }
+  },
+  "daejeon": {
+   "root": {
+    "ko": "큰 들 한가운데서 비 · 길 · 빛을 다루는 손 — 계족산은 가뭄에 산이 울면 비가 온다는 전설로 ‘비 오는 봉우리’라 불렸고 대전의 옛 이름 우술(雨述)도 ‘비’의 뜻을 땄으며(https://en.wikipedia.org/wiki/Daejeon), 대전은 경부선 · 호남선이 만나고 갈리는 철도 도시로 옛 호남선 열차는 대전역에서 기관차의 방향을 바꾸었고(https://ko.wikipedia.org/wiki/대전역_가락국수), 대덕연구개발특구에선 핵융합을 비롯한 연구가 이어진다(https://en.wikipedia.org/wiki/Daejeon) → 한밭의 비 부르는 마법사(판타지) · 철도 분기점 전차대 신호수(스팀펑크) · 인공 태양 지기(사이버펑크). 2026-11-23 시안 — 시험 그림 전",
+    "from": "story"
+   },
+   "mode": "per_world",
+   "worlds": {
+    "fantasy": {
+     "job_ko": "한밭의 비 부르는 마법사",
+     "base": "travel_lookout",
+     "place": "the old stone fortress wall on the cloud-wrapped peak of the eastern mountain above her world's capital on a dry summer evening — the endless golden fields of the great plain and three silver rivers spread far below, dark rain clouds gathering around the peak",
+     "activity": "she is the rain-caller of the great fields, lifting her staff high to the gathering clouds as the mountain begins to sing and the first silver veils of rain sweep down over the thirsty plain",
+     "preset": "light_check",
+     "use": "sig_raise",
+     "prop": "a slender silver staff crowned with a small raincloud of clear crystal that lets fall a fine thread of glittering rain",
+     "outfit": {
+      "bold": "a rain-caller look fitted to her body — a sleeveless wrap bodice of misty grey-blue silk with a deep open neckline, a long silk skirt slit high to the thigh and embroidered in gold thread with a patchwork of golden fields crossed by three silver rivers, long sheer sleeves floating from her shoulders like rain and a silver hairpin trailing strings of crystal raindrops in her long wavy hair",
+      "moderate": "a rain-caller look — a misty grey-blue silk robe with bare arms and an open collarbone, embroidered in gold thread with a patchwork of golden fields crossed by three silver rivers, long trailing sheer sleeves and a silver hairpin trailing strings of crystal raindrops in her long wavy hair",
+      "low": "a rain-caller look — a long-sleeved, high-collared robe of misty grey-blue silk falling to the ground, embroidered in gold thread with a patchwork of golden fields crossed by three silver rivers, long trailing sleeves and a silver hairpin trailing strings of crystal raindrops in her long wavy hair"
+     }
+    },
+    "steampunk": {
+     "job_ko": "철도 분기점 전차대 신호수",
+     "base": "street_station",
+     "place": "the great brass turntable at the railway junction of her steam city on a bright afternoon — a gleaming steam locomotive standing on the turning bridge in soft white steam, two great railway lines fanning away beyond, the glass-roofed station hall and its brass dome behind",
+     "activity": "she is the turntable signaller of the junction, standing at the brass control post and holding up her signal lantern in both hands as the locomotive slowly turns to head down the other line",
+     "preset": "stand_use",
+     "use": "sig_both",
+     "prop": "a polished brass railway signal lantern with a ring handle and a lens of clear and deep blue glass",
+     "outfit": {
+      "bold": "a junction-signaller look fitted to her body — a short deep navy capelet over a fitted brass-buttoned bodice with a low square neckline, high-waisted shorts, two lines of silver rails embroidered down the front parting into a Y at her waist, fine leather gloves, laced ankle boots and a little cap with an enamel turntable badge",
+      "moderate": "a junction-signaller look — a fitted deep navy jacket with a short shoulder cape over a cotton blouse open at the collar, slim knee-length trousers, two lines of silver rails embroidered down the front parting into a Y at her waist, leather gloves, laced boots and a little cap with an enamel turntable badge",
+      "low": "a junction-signaller look — a long deep navy wool coat with a layered shoulder cape buttoned to the throat over a high-collared blouse, fitted trousers tucked into tall laced boots, two lines of silver rails embroidered down the front parting into a Y at her waist, leather gloves and a little cap with an enamel turntable badge"
+     }
+    },
+    "cyberpunk": {
+     "job_ko": "인공 태양 지기",
+     "base": "street_rooftop",
+     "place": "the inner gallery of the colossal ring-shaped fusion reactor of her far-future city at night — the small artificial sun glowing gold behind curved clear shielding, rings of light pulsing along the walls and the whole basin city lit gold far below the windows",
+     "activity": "she is the keeper of the artificial sun, kneeling on one knee at the gallery rail and steadying the glowing sphere in her palm as she tunes the sun's light to a softer gold",
+     "preset": "half_kneel_use",
+     "use": "sig_hold",
+     "prop": "a palm-sized glass sphere holding a tiny captive sun of swirling golden plasma, ringed by a thin band of light",
+     "outfit": {
+      "bold": "an artificial-sun-keeper look fitted to her body — a sleek pale cropped flight top and high-cut shorts traced with fine golden lines laid out in rows like fields seen from above, a glowing ring collar of golden plasma light circling her bare shoulders, control bands on her forearms and slim light-soled boots",
+      "moderate": "an artificial-sun-keeper look — a sleek pale short-sleeved flight suit cut short at the thigh, traced with fine golden lines laid out in rows like fields seen from above, a glowing ring collar of golden plasma light around her shoulders, control bands on her forearms and slim light-soled boots",
+      "low": "an artificial-sun-keeper look — a sleek pale long-sleeved flight suit to the ankle, traced with fine golden lines laid out in rows like fields seen from above, a glowing ring collar of golden plasma light around her neck and shoulders, control bands on her forearms and slim boots"
+     }
+    }
+   }
   }
  }
 }

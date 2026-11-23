@@ -104,6 +104,13 @@
    { "key": "warm_spring", "ko": "따뜻한 봄", "en": "the warm dry spring — March to May, bright warm days before the rains, the air still dry", "src": "https://en.wikipedia.org/wiki/Mexico_City" },
    { "key": "jacaranda", "ko": "자카란다 철", "en": "jacaranda time in March — the city's jacaranda trees in full violet bloom, purple blossoms carpeting the pavements", "src": "https://en.wikipedia.org/wiki/Jacaranda_mimosifolia" },
    { "key": "rainy_summer", "ko": "우기 여름", "en": "the rainy summer — May to October, mild green days and heavy rains, the wettest in July", "src": "https://en.wikipedia.org/wiki/Mexico_City" }
+  ],
+  "daejeon": [
+   { "key": "spring", "ko": "봄 벚꽃", "en": "spring — mild days and cherry blossoms in bloom along the lakeside roads", "src": "https://en.wikipedia.org/wiki/Dong_District,_Daejeon" },
+   { "key": "monsoon", "ko": "장마", "en": "the monsoon season of high summer — the heaviest rain of the year, warm and wet", "src": "https://en.wikipedia.org/wiki/Daejeon" },
+   { "key": "summer", "ko": "한여름", "en": "high summer — hot and humid, a little milder than the other big cities", "src": "https://ko.wikipedia.org/wiki/대전광역시" },
+   { "key": "autumn", "ko": "가을", "en": "autumn — clear skies with the least cloud of the year and the first frost early in the season", "src": "https://ko.wikipedia.org/wiki/대전광역시" },
+   { "key": "winter", "ko": "겨울", "en": "winter — cold and dry, with a north-west wind", "src": "https://en.wikipedia.org/wiki/Daejeon" }
   ]
  },
  "weather": {
@@ -209,6 +216,14 @@
    { "key": "hail", "ko": "우박 섞인 소나기", "en": "a summer storm with hail — a sudden burst of white hailstones bouncing on the pavement and gathering in the gutters", "seasons": ["rainy_summer"], "src": "https://en.wikipedia.org/wiki/Mexico_City" },
    { "key": "clear_cold", "ko": "맑고 쌀쌀한 날", "en": "a crisp, clear dry-season day — thin cool air, a deep blue sky and long sharp shadows", "seasons": ["cold_dry"], "src": "https://en.wikipedia.org/wiki/Mexico_City" },
    { "key": "warm_dry", "ko": "마르고 따뜻한 날", "en": "a warm, dry, sunny day — bright highland sun and dry air before the rains", "seasons": ["warm_spring", "jacaranda"], "src": "https://en.wikipedia.org/wiki/Mexico_City" }
+  ],
+  "daejeon": [
+   { "key": "monsoon_rain", "ko": "장맛비", "en": "a monsoon downpour — warm, heavy rain and wet streets shining", "seasons": ["monsoon"], "src": "https://en.wikipedia.org/wiki/Daejeon" },
+   { "key": "muggy", "ko": "후텁지근함", "en": "a hot, humid day — heavy air and a hazy sun over the mountains", "seasons": ["monsoon", "summer"], "src": "https://en.wikipedia.org/wiki/Daejeon" },
+   { "key": "clear_sky", "ko": "구름 없는 가을날", "en": "a clear, crisp day — a high, cloudless blue sky over the ring of mountains", "seasons": ["autumn"], "src": "https://ko.wikipedia.org/wiki/대전광역시" },
+   { "key": "lake_fog", "ko": "호수 물안개", "en": "morning fog drifting in from the great lake, softening the hills", "seasons": ["spring", "autumn"], "times": ["dawn", "commute_am"], "src": "https://ko.wikipedia.org/wiki/대청호" },
+   { "key": "northwest_wind", "ko": "마른 북서풍", "en": "a cold, dry day — a sharp north-west wind under a pale sky", "seasons": ["winter"], "src": "https://ko.wikipedia.org/wiki/대전광역시" },
+   { "key": "snowfall", "ko": "눈", "en": "light snow falling through the cold, dry air", "seasons": ["winter"], "src": "https://ko.wikipedia.org/wiki/대전광역시" }
   ]
  },
  "heritage": {
@@ -232,7 +247,7 @@
    "philippines": ["barong_inspired"]
   },
   "never": ["abaya_modern", "burkini_modest"],
-  "cities": { "seoul": ["korea"], "tokyo": ["japan"], "beijing": ["china"], "istanbul": ["turkey"], "cairo": ["egypt"], "busan": ["korea"], "mexicocity": ["mexico"] }
+  "cities": { "seoul": ["korea"], "tokyo": ["japan"], "beijing": ["china"], "istanbul": ["turkey"], "cairo": ["egypt"], "busan": ["korea"], "mexicocity": ["mexico"], "daejeon": ["korea"] }
  },
  "cities": {
   "seoul": {
@@ -5115,6 +5130,579 @@
         "mexicocity_pulque",
         "bowl",
         "music"
+       ]
+      }
+     }
+    }
+   ]
+  },
+  "daejeon": {
+   "scenes": [
+    {
+     "key": "yuseong_footbath",
+     "ko": "유성온천 족욕장 — 따뜻한 온천물 얕은 못에 발 담그기",
+     "src": [
+      "https://en.wikipedia.org/wiki/Yuseong_Hot_Spring",
+      "https://ko.wikipedia.org/wiki/유성온천"
+     ],
+     "base": "spa_footbath",
+     "times": [
+      "midday",
+      "commute_pm",
+      "night_out"
+     ],
+     "seasons": [
+      "spring",
+      "autumn",
+      "winter"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "traditional"
+     ],
+     "en": "the free open-air foot bath of Yuseong Hot Spring, people sitting on its stone edges with their feet in the shallow warm water",
+     "worlds": {
+      "fantasy": {
+       "en": "the open-air warm-spring foot bath of the old hot-spring town of the capital — a long shallow pool of warm mineral water edged with smooth stones and benches, a little wooden pavilion roofing one end, white blossom trees along the street and soft steam drifting up",
+       "props": [
+        "water_bottle",
+        "cup",
+        "fan"
+       ]
+      },
+      "steampunk": {
+       "en": "the open-air foot bath of the hot-spring town — a long shallow pool of warm mineral water edged with stone benches, a little wooden water-wheel turning, folded towels on a brass rack and gas lamps along a street of white blossom trees",
+       "props": [
+        "water_bottle",
+        "cup",
+        "watch"
+       ]
+      },
+      "cyberpunk": {
+       "en": "the open-air foot bath of the hot-spring district two centuries on — a long shallow pool of warm mineral water in smooth pale stone, softly glowing benches and steam drifting through layers of light along a street of white blossom trees",
+       "props": [
+        "water_bottle",
+        "cup",
+        "music"
+       ]
+      }
+     }
+    },
+    {
+     "key": "expo_bridge_night",
+     "ko": "엑스포다리 · 한빛탑 주말 밤 불빛 산책",
+     "src": [
+      "https://ko.wikipedia.org/wiki/한빛탑",
+      "https://ko.wikipedia.org/wiki/갑천"
+     ],
+     "base": "stage_fireworks",
+     "times": [
+      "night_out"
+     ],
+     "outfits": [
+      "everyday",
+      "evening",
+      "dongtan",
+      "subculture"
+     ],
+     "en": "a weekend night walk across the lit Expo Bridge over the Gapcheon, the lit Hanbit Tower glowing beyond",
+     "worlds": {
+      "fantasy": {
+       "en": "a graceful arched bridge over the river of the capital at night, its slender arches and cables glowing with soft enchanted light mirrored in the dark water, and a tall white stone tower lit up across the river",
+       "props": [
+        "lamp",
+        "camera",
+        "cup"
+       ]
+      },
+      "steampunk": {
+       "en": "a graceful iron bridge over the river at night, its arches and cables traced with rows of gas lamps mirrored in the dark water, and across the river a tall white stone tower lit up by limelight",
+       "props": [
+        "lamp",
+        "camera",
+        "watch"
+       ]
+      },
+      "cyberpunk": {
+       "en": "the lit bridge over the river two centuries on, its arches and cables rippling with shifting light mirrored in the black water, and a tall white tower glowing across the river",
+       "props": [
+        "lamp",
+        "camera",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "gapcheon_bike",
+     "ko": "갑천 강변 자전거길 — 공공 자전거로 달리기",
+     "src": [
+      "https://ko.wikipedia.org/wiki/대전광역시",
+      "https://en.wikipedia.org/wiki/Daejeon"
+     ],
+     "base": "street_bike_path",
+     "times": [
+      "dawn",
+      "midday",
+      "commute_pm"
+     ],
+     "outfits": [
+      "active",
+      "everyday",
+      "dongtan",
+      "retro"
+     ],
+     "en": "a ride along the riverside cycle path of the Gapcheon on a public rental bicycle",
+     "worlds": {
+      "fantasy": {
+       "en": "the willow-lined riverside path along the clear river through the capital — people riding light wooden bicycles past reed beds and stepping-stones, green hills beyond",
+       "props": [
+        "daejeon_bicycle",
+        "water_bottle",
+        "bag"
+       ]
+      },
+      "steampunk": {
+       "en": "the riverside cycle path along the willow-lined river — riders on tall brass-trimmed bicycles past iron footbridges and gas lamps, a little paddle-boat on the water",
+       "props": [
+        "daejeon_bicycle",
+        "water_bottle",
+        "bag"
+       ]
+      },
+      "cyberpunk": {
+       "en": "the riverside cycle path two centuries on — a smooth lane lit from beneath along the willow-lined river, riders on slim shared bicycles with glowing rims and bridges of light overhead",
+       "props": [
+        "daejeon_bicycle",
+        "water_bottle",
+        "music"
+       ]
+      }
+     }
+    },
+    {
+     "key": "tofu_duruchigi",
+     "ko": "두부두루치기 — 칼칼한 양념에 졸인 두부 한 판",
+     "src": [
+      "https://ko.wikipedia.org/wiki/두부두루치기"
+     ],
+     "base": "street_diner",
+     "indoor": true,
+     "times": [
+      "midday",
+      "commute_pm",
+      "night_out"
+     ],
+     "outfits": [
+      "everyday",
+      "workwear",
+      "dongtan",
+      "retro"
+     ],
+     "en": "a small local restaurant serving dubu-duruchigi, slices of tofu simmered down with spring onions in a spicy red sauce, a Chungcheong dish said to come from Daejeon",
+     "worlds": {
+      "fantasy": {
+       "en": "a warm low-beamed eating house of the capital — worn wooden tables and a shallow iron pan of tofu slices simmered down in a glossy spicy red sauce with spring onions, little side dishes around it",
+       "props": [
+        "daejeon_duruchigi",
+        "bowl",
+        "cup"
+       ]
+      },
+      "steampunk": {
+       "en": "a bustling little eating house on a gaslit street — marble-topped tables, a copper pan of tofu slices simmered down in a glossy spicy red sauce with spring onions and little enamel side dishes",
+       "props": [
+        "daejeon_duruchigi",
+        "bowl",
+        "cup"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a late-night eatery two centuries on — a warm-lit counter of smart glass, a heat-keeping pan of tofu slices simmered down in a glossy spicy red sauce with spring onions and little side dishes",
+       "props": [
+        "daejeon_duruchigi",
+        "bowl",
+        "drink_glass"
+       ]
+      }
+     }
+    },
+    {
+     "key": "station_noodles",
+     "ko": "대전역 승강장 가락국수 — 열차를 기다리며 한 그릇",
+     "src": [
+      "https://ko.wikipedia.org/wiki/대전역_가락국수",
+      "https://ko.wikipedia.org/wiki/대전역"
+     ],
+     "base": "street_station",
+     "times": [
+      "commute_am",
+      "commute_pm",
+      "night_out",
+      "past_midnight"
+     ],
+     "outfits": [
+      "everyday",
+      "workwear",
+      "dongtan",
+      "retro"
+     ],
+     "en": "a quick bowl of thick wheat noodles at the noodle counter on the platform of Daejeon Station, eaten while the train waits",
+     "worlds": {
+      "fantasy": {
+       "en": "a busy platform of the great waystation of the capital — a little noodle counter steaming under the eaves, travellers slurping bowls of thick wheat noodles in hot broth while the rune-lit carriages wait",
+       "props": [
+        "daejeon_noodles",
+        "ticket",
+        "bag"
+       ]
+      },
+      "steampunk": {
+       "en": "the gaslit platform of the great railway junction — a little noodle counter steaming under the glass roof, travellers slurping bowls of thick wheat noodles in hot broth while the steam locomotive is turned around",
+       "props": [
+        "daejeon_noodles",
+        "ticket",
+        "watch"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a high platform of the great maglev junction two centuries on — a compact noodle counter glowing warm, travellers slurping bowls of thick wheat noodles in hot broth while a sleek train waits",
+       "props": [
+        "daejeon_noodles",
+        "ticket",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "jungang_market",
+     "ko": "대전 중앙시장 — 대전역 앞 큰 재래시장의 거리들",
+     "src": [
+      "https://en.wikipedia.org/wiki/Dong_District,_Daejeon",
+      "https://ko.wikipedia.org/wiki/대전광역시"
+     ],
+     "base": "street_market",
+     "times": [
+      "commute_am",
+      "midday",
+      "commute_pm"
+     ],
+     "outfits": [
+      "everyday",
+      "traditional",
+      "retro",
+      "dongtan"
+     ],
+     "en": "Jungang Market by Daejeon Station, once the largest traditional market of central Korea, with its themed streets of food, fish, tableware and accessories",
+     "worlds": {
+      "fantasy": {
+       "en": "the great old market by the waystation of the capital — lanes of stalls under canvas awnings, rows of food, fish, tableware and trinkets, and vendors calling out",
+       "props": [
+        "money",
+        "shopping_bag",
+        "street_food"
+       ]
+      },
+      "steampunk": {
+       "en": "the great covered market beside the railway station — lanes of stalls under an iron-and-glass roof, rows of food, fish, enamel tableware and trinkets, gas lamps and vendors calling out",
+       "props": [
+        "money",
+        "shopping_bag",
+        "street_food"
+       ]
+      },
+      "cyberpunk": {
+       "en": "the old market by the junction two centuries on — lanes of stalls under a curved glass canopy, price tags glowing in abstract shapes over rows of food, tableware and trinkets",
+       "props": [
+        "money",
+        "shopping_bag",
+        "sign"
+       ]
+      }
+     }
+    },
+    {
+     "key": "skyroad",
+     "ko": "으능정이 거리 스카이로드 — 머리 위 거대한 빛 그림 지붕 아래 밤 나들이",
+     "src": [
+      "https://ko.wikipedia.org/wiki/대전스카이로드"
+     ],
+     "base": "street_alley",
+     "times": [
+      "commute_pm",
+      "night_out"
+     ],
+     "outfits": [
+      "everyday",
+      "subculture",
+      "dongtan",
+      "retro"
+     ],
+     "en": "an evening on the old-town shopping street of Eunhaeng-dong under the Skyroad, a long arcade roof of giant moving light-pictures above the shoppers",
+     "worlds": {
+      "fantasy": {
+       "en": "a busy shopping street of the old town of the capital at night — a vast arched canopy high overhead alive with moving enchanted pictures of light, shoppers and street dancers below",
+       "props": [
+        "shopping_bag",
+        "cup",
+        "camera"
+       ]
+      },
+      "steampunk": {
+       "en": "a busy shopping street at night under a long iron-and-glass arcade roof where a great magic-lantern show plays moving pictures of light overhead, shoppers strolling below under gas lamps",
+       "props": [
+        "shopping_bag",
+        "cup",
+        "camera"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a busy shopping street two centuries on under a vast arched canopy of moving light-pictures, shoppers and street dancers below in a wash of shifting colour",
+       "props": [
+        "shopping_bag",
+        "drink_glass",
+        "camera"
+       ]
+      }
+     }
+    },
+    {
+     "key": "arboretum_walk",
+     "ko": "한밭수목원 산책 — 한국에서 가장 큰 도심 인공 수목원",
+     "src": [
+      "https://en.wikipedia.org/wiki/Daejeon_Hanbat_Arboretum"
+     ],
+     "base": "street_park",
+     "times": [
+      "dawn",
+      "midday",
+      "commute_pm"
+     ],
+     "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+     ],
+     "outfits": [
+      "everyday",
+      "active",
+      "dongtan",
+      "retro"
+     ],
+     "en": "a stroll in the Hanbat Arboretum, the largest man-made urban arboretum in Korea, laid out over the old Expo parking grounds",
+     "worlds": {
+      "fantasy": {
+       "en": "a vast garden of the capital with themed groves of trees and wildflowers, a wetland boardwalk and a glass house of tropical plants, people strolling under the trees",
+       "props": [
+        "camera",
+        "water_bottle",
+        "book"
+       ]
+      },
+      "steampunk": {
+       "en": "a vast arboretum of themed groves, a wetland boardwalk and a great glass-and-iron palm house of tropical plants, people strolling under the trees",
+       "props": [
+        "camera",
+        "water_bottle",
+        "book"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a vast arboretum two centuries on — themed groves of real trees, a wetland boardwalk lit from beneath and a soaring glass dome of tropical plants",
+       "props": [
+        "camera",
+        "water_bottle",
+        "music"
+       ]
+      }
+     }
+    },
+    {
+     "key": "gyejoksan_barefoot",
+     "ko": "계족산 황톳길 — 맨발로 걷는 붉은 흙길",
+     "src": [
+      "https://ko.wikipedia.org/wiki/대전광역시"
+     ],
+     "base": "travel_trail",
+     "times": [
+      "dawn",
+      "midday",
+      "commute_pm"
+     ],
+     "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+     ],
+     "outfits": [
+      "active",
+      "everyday",
+      "dongtan"
+     ],
+     "en": "walking barefoot along the long red-clay trail through the woods of Gyejoksan",
+     "worlds": {
+      "fantasy": {
+       "en": "a soft red-clay path winding through the pine woods of the mountain above the capital — people walking it barefoot with their shoes in hand, sunlight falling through the pines",
+       "props": [
+        "water_bottle",
+        "bag",
+        "cup"
+       ]
+      },
+      "steampunk": {
+       "en": "a soft red-clay path winding through the pine woods above the city — walkers barefoot with their boots tied over their shoulders, a little brass water fountain for rinsing feet beside the path",
+       "props": [
+        "water_bottle",
+        "bag",
+        "watch"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a soft red-clay path through the pine woods above the megacity two centuries on — walkers barefoot on the warm clay, small glowing markers along the trail and a rinsing fountain of clear light",
+       "props": [
+        "water_bottle",
+        "bag",
+        "music"
+       ]
+      }
+     }
+    },
+    {
+     "key": "citizen_observatory",
+     "ko": "대전시민천문대 — 한국 첫 시민 천문대에서 별 보기",
+     "src": [
+      "https://en.wikipedia.org/wiki/Daejeon",
+      "https://ko.wikipedia.org/wiki/대전광역시"
+     ],
+     "base": "travel_lookout",
+     "times": [
+      "night_out"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "retro",
+      "active"
+     ],
+     "en": "a night of stargazing at the Daejeon Citizen's Observatory, the first citizen observatory in Korea, through its refracting telescope",
+     "worlds": {
+      "fantasy": {
+       "en": "a hilltop star-watching hall above the capital at night — a domed roof opened to the sky, a long star-glass of brass and crystal on a carved stand and the lights of the plain far below",
+       "props": [
+        "daejeon_telescope",
+        "lamp",
+        "book"
+       ]
+      },
+      "steampunk": {
+       "en": "a hilltop observatory above the city at night — the brass dome slid open to the stars, a long brass refracting telescope on its iron mount and gas lamps turned low",
+       "props": [
+        "daejeon_telescope",
+        "lamp",
+        "watch"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a hilltop observatory two centuries on — a clear dome opening to the night sky, a slim telescope tracing the stars with a soft ring of light and the glowing city far below",
+       "props": [
+        "daejeon_telescope",
+        "lamp",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "daecheong_cherry",
+     "ko": "대청호 벚꽃길 — 호숫가를 따라 길게 이어진 봄 벚꽃",
+     "src": [
+      "https://en.wikipedia.org/wiki/Dong_District,_Daejeon"
+     ],
+     "base": "travel_lake",
+     "times": [
+      "midday",
+      "commute_pm"
+     ],
+     "seasons": [
+      "spring"
+     ],
+     "outfits": [
+      "everyday",
+      "active",
+      "dongtan"
+     ],
+     "en": "a spring walk on the long cherry-blossom road that winds around Daecheong Lake",
+     "worlds": {
+      "fantasy": {
+       "en": "a lakeside road of cherry trees in full pale pink bloom winding along a wide still lake, petals drifting onto the water and small pine-covered islands offshore",
+       "props": [
+        "camera",
+        "mat",
+        "water_bottle"
+       ]
+      },
+      "steampunk": {
+       "en": "a lakeside road of cherry trees in full pale pink bloom along a wide still lake, a paddle-steamer at a little wooden landing and petals drifting onto the water",
+       "props": [
+        "camera",
+        "mat",
+        "water_bottle"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a lakeside road of real cherry trees in full pale pink bloom two centuries on, a softly glowing walking lane beside it and petals drifting over the clear lake",
+       "props": [
+        "camera",
+        "mat",
+        "water_bottle"
+       ]
+      }
+     }
+    },
+    {
+     "key": "science_campus",
+     "ko": "대덕 연구 단지 과학 대학 캠퍼스 잔디밭의 점심",
+     "src": [
+      "https://en.wikipedia.org/wiki/Korea_Advanced_Institute_of_Science_and_Technology",
+      "https://en.wikipedia.org/wiki/Daedeok_Innopolis"
+     ],
+     "base": "campus_lawn",
+     "times": [
+      "midday",
+      "commute_pm"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "retro",
+      "active"
+     ],
+     "en": "a lunch break on the lawn of the science university campus in the research district",
+     "worlds": {
+      "fantasy": {
+       "en": "the green lawn of the great academy of sages in the capital — scholars' halls of pale granite around it, students in robes reading under old trees",
+       "props": [
+        "book",
+        "cup",
+        "bag"
+       ]
+      },
+      "steampunk": {
+       "en": "the lawn of the university of inventors — red-brick halls with brass-domed laboratories around it, students in waistcoats reading under old trees and a little steam-driven model whirring on the grass",
+       "props": [
+        "book",
+        "cup",
+        "bag"
+       ]
+      },
+      "cyberpunk": {
+       "en": "the lawn of the science university two centuries on — white curved research halls around it, students reading under real old trees beside softly glowing benches",
+       "props": [
+        "book",
+        "cup",
+        "phone"
        ]
       }
      }

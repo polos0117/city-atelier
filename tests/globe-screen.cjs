@@ -96,10 +96,10 @@ const settle = p => p.waitForFunction(() => { const k = document.querySelector('
       }
       assert(!ps.rio.front && ps.tokyo.front, '서울 정면 — 리우 뒷면 · 도쿄 앞면'); checks += 4;
       // (b) 앞 · 뒤 단추 — 서에서 동으로
-      await p.tap('.th-mq-next'); assert.deepEqual(await marquee(p), { city: 'busan', name: C.busan.ko }, '뒤 → 부산(2026-11-22 서울 동쪽)'); await p.tap('.th-mq-next'); assert.deepEqual(await marquee(p), { city: 'tokyo', name: C.tokyo.ko }, '뒤 → 도쿄');
+      await p.tap('.th-mq-next'); assert.deepEqual(await marquee(p), { city: 'daejeon', name: C.daejeon.ko }, '뒤 → 대전(2026-11-23 서울 동쪽)'); await p.tap('.th-mq-next'); assert.deepEqual(await marquee(p), { city: 'busan', name: C.busan.ko }, '뒤 → 부산(2026-11-22 대전 동쪽)'); await p.tap('.th-mq-next'); assert.deepEqual(await marquee(p), { city: 'tokyo', name: C.tokyo.ko }, '뒤 → 도쿄');
       await settle(p);
       assert.equal((await pins(p)).tokyo.on, true, '조명이 도쿄로');
-      await p.tap('.th-mq-prev'); await p.tap('.th-mq-prev'); await p.tap('.th-mq-prev'); assert.equal((await marquee(p)).city, 'beijing', '앞 셋 → 베이징(부산 · 서울 다음)');
+      await p.tap('.th-mq-prev'); await p.tap('.th-mq-prev'); await p.tap('.th-mq-prev'); await p.tap('.th-mq-prev'); assert.equal((await marquee(p)).city, 'beijing', '앞 넷 → 베이징(부산 · 대전 · 서울 다음)');
       await settle(p);
       for (const k of ['bangkok', 'cairo', 'istanbul', 'rome', 'paris', 'barcelona', 'london', 'rio']) { await p.tap('.th-mq-prev'); assert.equal((await marquee(p)).city, k, '앞으로 → ' + k + '(서에서 동 차례의 거꾸로)'); }   /* 설계 전 예는 리우(2026-11-21 열 곳 모두 설계 — 가로챈 설계표에서만 미정) */
       await settle(p);
@@ -203,7 +203,7 @@ const settle = p => p.waitForFunction(() => { const k = document.querySelector('
         assert.equal(await p.locator('.gl-canvas').count(), 1, '(a) glb 있음 → 캔버스');
         assert.equal(await p.locator('.gl-ball').evaluate(e => getComputedStyle(e).display), 'none', '모형이면 SVG 공은 숨김');
         assert.equal((await pins(p)).seoul.on, true, '모형 위에도 도시 점');
-        await p.tap('.th-mq-next'); assert.equal((await marquee(p)).city, 'tokyo');
+        await p.tap('.th-mq-next'); assert.equal((await marquee(p)).city, 'daejeon', '서울 다음 → 대전(2026-11-23 — 서울 동쪽, 그 뒤 부산 · 도쿄)');
         await p.tap('.th-worlds [data-world="fantasy"]'); await globeIs(p, 'svg'); await globeIs(p, 'model', 30000);   // 세계 바꿈 — 새 모형
         assert.equal(await p.locator('.gl-canvas').count(), 1, '캔버스는 하나'); checks += 5;
       } else console.log('  (알림) 이 브라우저는 WebGL 이 없어 모형 길은 (d) 로만 본다');
@@ -222,7 +222,7 @@ const settle = p => p.waitForFunction(() => { const k = document.querySelector('
     { const o = await open('/index.html?w=fantasy', { blockCDN: true }), p = o.page;
       await globeIs(p, 'none');
       assert.notEqual(await p.locator('.th-slot').evaluate(e => getComputedStyle(e, '::before').content), 'none', 'CSS 공 자리');
-      await p.tap('.th-mq-next'); assert.equal((await marquee(p)).city, 'tokyo');
+      await p.tap('.th-mq-next'); assert.equal((await marquee(p)).city, 'daejeon', '서울 다음 → 대전(2026-11-23 — 서울 동쪽, 그 뒤 부산 · 도쿄)');
       await p.tap('.th-mq-prev'); await p.tap('.th-go'); await p.waitForSelector('.th-cast');
       assert.deepEqual(o.errors, [], 'CDN 막힘 콘솔'); checks += 3; await o.ctx.close(); }
 
@@ -274,7 +274,7 @@ const settle = p => p.waitForFunction(() => { const k = document.querySelector('
       const fl = [{ url: /\/data\/img\.json/, body: JSON.stringify(img), contentType: 'application/json' }];
       const o = await open('/index.html?city=seoul&w=fantasy', { fulfill: fl }), p = o.page;
       await p.waitForSelector('.th-cast'); await calm(p);
-      assert.equal(await p.locator('.th-marks .th-mark').count(), 5, '랜드마크 다섯(해치 · 경복궁 · 남산 송신탑 · 한강철교 · 한양도성)'); assert.equal(await p.locator('.th-mark[data-card="seoul-haechi"]').count(), 1);
+      assert.equal(await p.locator('.th-marks .th-mark').count(), 8, '랜드마크 여덟(해치 · 경복궁 · 남산 송신탑 · 한강철교 · 한양도성 · 창덕궁 후원 · 청계천 · 북촌 — 2026-11-23 셋 더)'); assert.equal(await p.locator('.th-mark[data-card="seoul-haechi"]').count(), 1);
       assert.equal(await p.locator('.th-mark[data-card="seoul-haechi"] button').count(), 1, '그림 있는 세계 하나만 누를 수 있다');
       assert.equal(await p.locator('.th-mark[data-card="seoul-haechi"] .is-empty').count(), 2, '빈 자리 둘');
       assert.deepEqual(await smallTargets(p), [], '랜드마크 줄 44px'); assert(await H.noOverflow(p), '랜드마크 줄 넘침 없음');
@@ -299,8 +299,8 @@ const settle = p => p.waitForFunction(() => { const k = document.querySelector('
     /* 움직임 줄이기 — 효과 없음(조명 따라감 · 세 조명 · 이름 깜빡임), 앞 · 뒤는 곧바로 그 도시가 가운데 */
     { const o = await open('/index.html?w=cyberpunk', { reduced: true }), p = o.page; await globeIs(p, 'svg');
       await p.tap('.th-mq-next'); await p.waitForTimeout(50);
-      const t = (await pins(p)).tokyo, bc = await ballCenter(p);
-      assert(Math.abs(t.x - bc.x) < 1, '움직임 끔 — 곧바로 도쿄가 가운데');
+      const t = (await pins(p)).daejeon, bc = await ballCenter(p);
+      assert(Math.abs(t.x - bc.x) < 1, '움직임 끔 — 곧바로 대전(서울 다음, 2026-11-23)이 가운데');
       assert.equal(await p.evaluate(() => document.getAnimations().length), 0, '움직임 끔 — 효과 없음');
       await p.tap('.th-mq-prev'); await p.tap('.th-go'); await p.waitForSelector('.th-cast');
       assert.equal(await p.evaluate(() => document.getAnimations().length), 0, '움직임 끔 — 세 조명 효과 없음');

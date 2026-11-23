@@ -7,6 +7,15 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-23 · claude · 대전 설계 · 서울 랜드마크 셋 더(여덟) · 부산 · 대전 랜드마크 셋씩
+- data/city-design.json — 대전(daejeon, 36.35 · 127.38 — 비 · 길 · 빛을 다루는 손: 판타지 한밭의 비 부르는 마법사 · 스팀펑크 철도 분기점 신호수 · 사이버펑크 인공 태양 지기) 설계. 랜드마크 서울 changdeokgung(창덕궁 후원) · cheonggyecheon(청계천) · bukchon(북촌 한옥마을), 부산 gwanganbridge(광안대교) · gamcheon(감천문화마을) · taejongdae(태종대), 대전 hanbittower(한빛탑) · yuseongspa(유성온천) · daecheonglake(대청호) — 세 세계 세 사람씩(사용자 「도시에 대전 추가해주고 서울,부산,대전 랜드마크 세 개정도 추가해줘.」). 경복궁 판타지 card_ko.look 을 실제 설계(보랏빛 올림머리 · 연보라 눈)에 맞춤
+- data/city-life.json — 대전 생활 장면 열둘 · 계절 다섯 · 날씨 여섯, heritage korea
+- data/world-props.json — daejeon_noodles · daejeon_duruchigi · daejeon_bicycle · daejeon_telescope
+- data/casual-own.json — 대전 90번(비 부르는 마법사 · 전차대 신호수 · 인공 태양 지기)
+- tools/city-design.py — CITY_KEYS 에 daejeon
+- tests/image-claim.cjs · dex-screen.cjs · globe-screen.cjs — 도시 열여섯 · 서울 랜드마크 여덟 · 부산 · 대전 랜드마크, 지구본 차례 서울 → 대전 → 부산 → 도쿄(전부터 부산에서 깨지던 두 자리도 함께)
+- tests/prompt-city.cjs — NAMES 에 대전 쪽 이름(상호 · 구단 · 인물 등)
+
 ## 2026-11-23 · gpt · 시드니 판타지 이미지 등록
 - data/img.json — 대표컷 5번과 캐릭터 전용 컷을 포함한 일상컷 11장을 도감에 등록.
 

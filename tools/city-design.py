@@ -28,7 +28,7 @@ import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WORLDS = ["fantasy", "steampunk", "cyberpunk"]
-CITY_KEYS = ["seoul", "tokyo", "beijing", "paris", "london", "rome", "newyork", "istanbul", "cairo", "rio", "busan", "bangkok", "barcelona", "sydney", "mexicocity"]
+CITY_KEYS = ["seoul", "tokyo", "beijing", "paris", "london", "rome", "newyork", "istanbul", "cairo", "rio", "busan", "bangkok", "barcelona", "sydney", "mexicocity", "daejeon"]
 KEY = re.compile(r"^[a-z0-9]+$")
 HEX = re.compile(r"^#[0-9A-Fa-f]{6}$")
 URL = re.compile(r"^https?://\S+$")

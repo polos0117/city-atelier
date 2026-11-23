@@ -62,8 +62,8 @@ const newSeats = p => p.$$eval('.th-ticket .th-seat .th-new', es => es.map(e => 
           } else { assert(/is-pre/.test(s.cls) && s.tag === 'SPAN' && !s.href, at + ' 설계 전 칸 ' + r.city); assert.equal(s.text.replace(/\s/g, ''), '설계전'); }
         }
       }
-      assert.deepEqual(READY, ['seoul', 'tokyo', 'beijing', 'paris', 'london', 'rome', 'newyork', 'istanbul', 'cairo', 'rio', 'busan', 'bangkok', 'barcelona', 'sydney', 'mexicocity'], '설계된 도시는 열 곳 모두(도쿄 · 뉴욕 2026-11-20 · 로마 · 파리 · 런던 · 베이징 · 이스탄불 · 카이로 · 리우데자네이루 2026-11-21)');
-      assert.deepEqual(await p.$$eval('.th-stats b', bs => bs.map(b => b.textContent.replace(/\s/g, ''))), [READY.length + '/15', '0/45', '0'], at + ' 위 머리');
+      assert.deepEqual(READY, ['seoul', 'tokyo', 'beijing', 'paris', 'london', 'rome', 'newyork', 'istanbul', 'cairo', 'rio', 'busan', 'bangkok', 'barcelona', 'sydney', 'mexicocity', 'daejeon'], '설계된 도시는 열여섯 곳 모두(대전 2026-11-23 · 도쿄 · 뉴욕 2026-11-20 · 로마 · 파리 · 런던 · 베이징 · 이스탄불 · 카이로 · 리우데자네이루 2026-11-21)');
+      assert.deepEqual(await p.$$eval('.th-stats b', bs => bs.map(b => b.textContent.replace(/\s/g, ''))), [READY.length + '/16', '0/48', '0'], at + ' 위 머리');
       assert.equal(await p.locator('.th-new').count(), 1, at + ' 새 그림 점은 범례 하나뿐');
       assert.match(await p.getAttribute('.th-tk-cols span.is-cur', 'style'), new RegExp('--w-' + w + '\\)'), at + ' 고른 세계 머리 강조');
       assert.deepEqual(await smallTargets(p), [], at + ' 44px');
@@ -77,7 +77,7 @@ const newSeats = p => p.$$eval('.th-ticket .th-seat .th-new', es => es.map(e => 
     /* 줄 누르기 — 설계 전은 짧은 안내, 서울은 무대(돌아오면 도감). 2026-11-21 리우까지 열 곳이 다 설계돼 설계표(data/city-design.json)를 가로채 리우를 미정({})으로 되돌린다 — 실제 파일은 안 고친다 */
     { const o = await open('/index.html?tab=dex&w=fantasy', { fulfill: PRE }), p = o.page; await p.waitForSelector('.th-ticket');
       for (const wk of WORLDS) { const c = await p.getAttribute('.th-ticket[data-city="rio"] .th-seat[data-world="' + wk + '"]', 'class'); assert(/is-pre/.test(c), '가로챈 설계표 — 리우 ' + wk + ' 설계 전 칸'); }
-      assert.deepEqual(await p.$$eval('.th-stats b', bs => bs.map(b => b.textContent.replace(/\s/g, ''))).then(x => x[0]), (READY.length - 1) + '/15', '가로챈 설계표 — 설계된 도시 열넷(리우만 비움)');
+      assert.deepEqual(await p.$$eval('.th-stats b', bs => bs.map(b => b.textContent.replace(/\s/g, ''))).then(x => x[0]), (READY.length - 1) + '/16', '가로챈 설계표 — 설계된 도시 열다섯(리우만 비움)');
       await p.tap('.th-ticket[data-city="rio"] .th-seat[data-world="steampunk"]');   /* 설계 전 예 — 사본의 리우 */
       assert.match(await p.textContent('.th-ticket[data-city="rio"] .th-tk-note'), /리우데자네이루.*설계 전/, '설계 전 줄 — 짧은 안내');
       assert.equal(await p.evaluate(() => location.search), '?tab=dex&w=fantasy', '설계 전 줄은 주소 그대로');
@@ -116,7 +116,7 @@ const newSeats = p => p.$$eval('.th-ticket .th-seat .th-new', es => es.map(e => 
       WORLDS.forEach((w, i) => { assert.equal(seats[i].tag, 'BUTTON', w + ' 그림 칸'); assert(seats[i].img.endsWith('/thumb/' + F(w)), w + ' 작은 그림 ' + seats[i].img); });
       assert.deepEqual(seats.map(s => s.n), ['2', '', ''], '세계별 일상컷 수');
       assert.equal(await p.textContent('.th-ticket[data-city="seoul"] .th-count b'), '2', '서울 일상컷 수');
-      assert.deepEqual(await p.$$eval('.th-stats b', bs => bs.map(b => b.textContent.replace(/\s/g, ''))), [READY.length + '/15', '3/45', '2'], '위 머리 — 설계된 도시 · 그림 셋 · 일상컷 둘');
+      assert.deepEqual(await p.$$eval('.th-stats b', bs => bs.map(b => b.textContent.replace(/\s/g, ''))), [READY.length + '/16', '3/48', '2'], '위 머리 — 설계된 도시 · 그림 셋 · 일상컷 둘');
       assert.deepEqual(await newSeats(p), ['seoul:fantasy', 'seoul:steampunk'], '새 그림 점 — 오늘 · 어제만(사흘 전 사이버펑크는 아님)');
       assert.deepEqual(await smallTargets(p), [], '그림 칸 44px'); assert(await H.noOverflow(p), '그림 칸 넘침');
       for (const [txt, c] of await H.contrast(p, '.th-new, .th-seat-n, .th-count b')) assert(c >= 4.5, '새 점 대비 ' + c + ' — ' + txt);

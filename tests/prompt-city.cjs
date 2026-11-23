@@ -15,7 +15,7 @@ const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 const word = (w, flags) => new RegExp('\\b' + esc(w) + '\\b', flags);
 
 /* 상표 · 실존 인물 이름 — 서울 상징 · 설계에서 새기 쉬운 것(남산 송신탑의 상표 이름, 대기업 · 가게, 왕 · 장군 · 가수). 대소문자 그대로 낱말 경계로 본다 */
-const NAMES = ['YTN', 'N Seoul Tower', 'Seoul Tower', 'Tokyo Tower', 'Skytree', 'Lotte', 'Samsung', 'Hyundai', 'Kia', 'LG', 'Starbucks', 'Coca-Cola', 'Nike', 'Adidas', 'Apple', 'Gucci', 'Chanel',
+const NAMES = ['YTN', 'Sungsimdang', 'Kumdori', 'Hanwha', 'Eagles', 'Hana Citizen', 'KAIST', 'Shinsegae', 'Expo Tower', 'Korail', 'KTX', 'SRT', 'Tashu', 'Daejeon Blues', 'Song Si-yeol', 'Taejo', 'Taejong', 'Park Chung-hee', 'Lee Ungno', 'O-World', 'Mannyeonjang', 'N Seoul Tower', 'Seoul Tower', 'Tokyo Tower', 'Skytree', 'Lotte', 'Samsung', 'Hyundai', 'Kia', 'LG', 'Starbucks', 'Coca-Cola', 'Nike', 'Adidas', 'Apple', 'Gucci', 'Chanel',
   'Disney', 'Pokemon', 'Hello Kitty', 'BTS', 'BLACKPINK', 'Sejong', 'Yi Sun-sin', 'Taejo', 'Gojong', 'Heungseon',
   'Empire State', 'Chrysler', 'Rockefeller', 'Yankees', 'Macy', 'Tiffany', 'Yellow Cab', 'Broadway',   /* 뉴욕(2026-11-20) — 사유 건물 · 상표 · 극장가 이름 */
   'Vespa', 'Lambretta', 'Fiat', 'Ferrari', 'Fendi', 'Bulgari', 'Valentino', 'Nutella', 'Peroni', 'Aperol', 'Campari', 'Lazio', 'AS Roma', 'Caritas',

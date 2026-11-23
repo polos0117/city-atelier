@@ -1533,6 +1533,22 @@
      "en": "a sleek golf club with a glowing grip"
     }
    }
-  }
+  },
+  "daejeon_noodles": { "ko": "가락국수 한 그릇(대전역)", "worlds": {
+   "fantasy": { "en": "an earthenware bowl of thick wheat noodles in hot clear broth with sliced spring onion" },
+   "steampunk": { "en": "an enamel bowl of thick wheat noodles in hot clear broth with sliced spring onion and a pair of wooden chopsticks" },
+   "cyberpunk": { "en": "a heat-keeping bowl of thick wheat noodles in hot clear broth with sliced spring onion, a faint glowing rim" } } },
+  "daejeon_duruchigi": { "ko": "두부두루치기 한 판", "worlds": {
+   "fantasy": { "en": "a shallow iron pan of tofu slices simmered down in a glossy spicy red sauce with spring onions" },
+   "steampunk": { "en": "a shallow copper pan of tofu slices simmered down in a glossy spicy red sauce with spring onions" },
+   "cyberpunk": { "en": "a heat-keeping pan of tofu slices simmered down in a glossy spicy red sauce with spring onions, a faint glowing rim" } } },
+  "daejeon_bicycle": { "ko": "공공 자전거", "worlds": {
+   "fantasy": { "en": "a light bicycle of carved pale wood with a wicker basket" },
+   "steampunk": { "en": "a tall brass-trimmed bicycle with a wicker basket and a little brass bell" },
+   "cyberpunk": { "en": "a slim shared bicycle with glowing rims and a softly lit frame" } } },
+  "daejeon_telescope": { "ko": "천체 망원경", "worlds": {
+   "fantasy": { "en": "a long star-glass of brass and crystal on a carved wooden stand" },
+   "steampunk": { "en": "a long brass refracting telescope on an iron mount" },
+   "cyberpunk": { "en": "a slim white telescope tracing the stars with a soft ring of light" } } }
  }
 }
