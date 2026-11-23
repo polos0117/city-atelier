@@ -742,6 +742,8 @@ function plan(card, slots, old, { seed = Date.now(), usage = {}, others = [], re
     }
     if (cuts.length !== slots.length || check(cuts, card, old, others).filter(e => !MUST.test(e)).length) continue;
     colorize(cuts, old, others, rng((seed ^ mix ^ 0x27d4eb2f) >>> 0), card.world || ''); denierize(cuts, rng((seed ^ mix ^ 0x165667b1) >>> 0));
+    /* 옷 꾸밈(2026-11-23 — 공용 모듈 spreadStyles, 사용자 「1,3,4,5,6번까지해서 공통으로 해줘」): 소재 · 입은 모양 · 핏 · 겹쳐 입기 · 장신구를 묶음 안에서 덜 쓴 것부터. 코스프레 · 자유 설계 · 직접 쓴 옷 글은 모듈이 뺀다. 두꺼운 겉옷 · 장갑은 눈 · 겨울일 때만 */
+    if (C2.spreadStyles) C2.spreadStyles(T2, cuts.filter(c => !c.sfree), rng((seed ^ mix ^ 0x5bd1e995) >>> 0), old, { ok: en => worldOk(card.world || '', en), cold: sc => /snow|winter|cold|frost|freez/.test([sc.season, sc.weather, sc.cityWeather].join(' ')) });
     /* 상황 노출 — 보통 컷 한 장(얼굴 클로즈업이 아닌, 맞는 상황이 있는 컷)에 늘. 그 세계에 이미 상황 컷이 있으면 없음, 보통 칸이 있는데 맞는 컷이 없으면 다른 묶음으로 */
     const rs = rng((seed ^ mix ^ 0x3c6ef372) >>> 0), plainAt = cuts.map((c, i) => i).filter(i => kindOf(cuts[i]) === 'plain');
     const sPool = old.some(c => c.situ) ? [] : plainAt.filter(i => !SITU_NO_FRAME.includes(cuts[i].frame) && P.situsFor(outfitEn(cuts[i])).some(k => situAtPlace(k, cuts[i])));
