@@ -7,6 +7,9 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-23 · claude · core v7 나이 문장 — 20대 초 youthful · 중반 young-adult · 후반 clear adult
+- lib/prompt-spec.js — 화풍공방 core v7 블록 다시 옮김(나이 문장: 20대 초 youthful · 중반 young-adult · 후반 clear adult). prompt-spec ?v= 올림
+
 ## 2026-11-23 · claude · 도시 사람 나이 — 20대 초 · 중반만
 - data/city-design.json — look.face.age 20대 후반 41 → 중반, 30대 초반 17 → 20대 초반(사용자 「그냥 다 동안이나 20대초중반으로 맞춰주면 안되나」)
 - tools/city-design.py — 나이는 early_20s · mid_20s 만(검사)
