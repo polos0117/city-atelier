@@ -235,6 +235,25 @@ with tempfile.TemporaryDirectory() as t:
     assert set(bad) == {f'seoul_steampunk_{S}_f.webp', f'seoul_fantasy_{S}_f_casual2.webp', f'seoul_fantasy_{S}_f_casual4.webp', f'seoul_steampunk_{S}_vista.webp'}, bad
     assert '전경은 1536×1024' in bad[f'seoul_steampunk_{S}_vista.webp'], bad
     assert '3:2' in bad[f'seoul_fantasy_{S}_f_casual2.webp'], bad
+    # 1254 원본은 사용자 승인과 정사각 계획이 모두 있을 때만 허용한다.
+    approved = f'seoul_fantasy_{S}_f_casual5.webp'
+    pic(approved, (1254, 1254))
+    record = {'file': approved, 'scene': {'aspect': '1:1'}, 'generation': {
+        'size': [1254, 1254], 'size_approval': {'approved_by': 'user',
+        'instruction': '1254로 진행해줘.', 'size': [1254, 1254]}}}
+    rp = rec / f'fantasy-casual5.{S}-ui.json'
+    def save_record(): rp.write_text(json.dumps(record), encoding='utf-8')
+    assert approved in {b[0] for b in reg.art_size([str(img)])}
+    save_record()
+    assert approved not in {b[0] for b in reg.art_size([str(img)])}
+    record['scene']['aspect'] = '3:2'; save_record()
+    assert approved in {b[0] for b in reg.art_size([str(img)])}
+    record['scene']['aspect'] = '1:1'
+    record['generation']['size_approval']['approved_by'] = 'gpt'; save_record()
+    assert approved in {b[0] for b in reg.art_size([str(img)])}
+    record['generation']['size_approval']['approved_by'] = 'user'; save_record()
+    pic(approved, (1254, 1024))
+    assert approved in {b[0] for b in reg.art_size([str(img)])}
 print('PASS 그림 등록: 서울 세 세계 · 도쿄 한 세계의 세계 그림(fantasy·steampunk·cyberpunk)·일상컷(90 번 포함) 자리 · 다시 돌려도 그대로'
       ' · 일상컷은 세계 몫 안 · 없는 세계(mecha)·도시·화풍·성별 표시·남성·대문자·밑줄 도시·세계 없는 그림·특별컷·연출컷·같은 자리는 저장 안 함'
       ' · 전경(_vista — 세계 몫 vista 칸 · 전경만 있는 세계 · --prune · 랜드마크 · 세계 · 화풍 · 성별 표시 · 3:2 크기)' ' · 크기(세계 그림 2:3 · 일상컷 셋 · 계획 화면비)' ' · 등록한 날(새 것만 오늘·있던 날짜 그대로·지어내지 않음·틀린 날짜 버림·--check·--prune) · git 이력 채우기(교체·지운 것·얕은 저장소 경계)')

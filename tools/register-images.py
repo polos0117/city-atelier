@@ -151,10 +151,38 @@ def planned_aspects(dirs):
     return out
 
 
+def approved_square_sizes(dirs):
+    """사용자가 원본 사용을 승인한 1254 정사각 일상컷만 받는다."""
+    out = set()
+    for d in dirs:
+        rec = os.path.join(os.path.dirname(os.path.realpath(d)), "records")
+        if not os.path.isdir(rec):
+            continue
+        for base, _, files in os.walk(rec):
+            for f in files:
+                if not CASUAL_RECORD.search(f):
+                    continue
+                try:
+                    r = json.load(open(os.path.join(base, f), encoding="utf-8"))
+                    g = r.get("generation") or {}
+                    approval = g.get("size_approval") or {}
+                    name = r.get("file", "")
+                    if (CASUAL_FILE.search(name) and (r.get("scene") or {}).get("aspect") == "1:1"
+                            and g.get("size") == [1254, 1254]
+                            and approval.get("approved_by") == "user"
+                            and approval.get("size") == [1254, 1254]
+                            and str(approval.get("instruction", "")).strip()):
+                        out.add(name)
+                except (OSError, ValueError, AttributeError, TypeError):
+                    continue
+    return out
+
+
 def art_size(dirs):
     """[(이름, 가로, 세로, 왜)…] — 크기가 안 맞는 그림. 세계 그림은 ART_SIZE(2:3) 하나, 일상컷은 ASPECT_SIZES 셋 가운데 하나이고
     기록(계획)에 화면비가 있으면 그 크기(2026-11-23)."""
     bad, plan = [], None
+    approved = approved_square_sizes(dirs)
     for d in dirs:
         if not os.path.isdir(d):
             continue
@@ -172,6 +200,8 @@ def art_size(dirs):
             if not CASUAL_FILE.search(f):
                 if s != ART_SIZE:
                     bad.append((f, s[0], s[1], "세계 그림은 %d×%d" % ART_SIZE))
+                continue
+            if s == (1254, 1254) and f in approved:
                 continue
             if s not in ASPECT_SIZES.values():
                 bad.append((f, s[0], s[1], "일상컷은 " + " · ".join("%d×%d" % v for v in ASPECT_SIZES.values())))

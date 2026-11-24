@@ -98,3 +98,6 @@
 ## 화풍 비교 탭에 올리기 (등록 아님)
 
 화풍 비교 그림은 도감 그림이 아니다 — `img/` · `data/img.json` 에 넣지 않고, 화풍 탭(`styles.html`)의 묶음으로만 올린다. 도구: `python3 tools/style-compare.py` (`next` · `put` · `sync` · `check`, 세계 인자는 `fantasy` · `steampunk` · `cyberpunk`, 카드는 도시 열쇠), 그림은 그림 저장소 `style-test/compare/<열쇠>/`, 목록은 `data/style-compare.json`. 서울 묶음은 아직 없다(남은 Task 11 몫 — 지금 목록의 묶음은 원소 것을 옮긴 그대로다).
+
+### 2026-11-24 한빛탑 판타지 정사각 원본 승인
+사용자 「1254로 진행해줘.」에 따라 이 작업의 정사각형 일상컷은 1254×1254 원본을 보존해 등록한다. 기록 `generation.size_approval`에 승인 주체(user)·지시문·크기·날짜를 남긴다. 다른 화면비와 세계컷의 크기는 기존 규칙을 따른다.
