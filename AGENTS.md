@@ -56,7 +56,7 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 맨 위로 간다. `node tests/patch.cjs` 가 모양을 본다. 공용 링크의 `?v=` 는 손으로 올린다.
 
 ### 6. 공용 모듈은 고치지 않는다
-`lib/casual-tree.js` · `lib/casual-tree-v2.js` · `lib/favorites.js` 는 원소 · 삼국지 · 포켓몬 공방과 글자 하나 다르지 않게 복사한 공용 모듈이다. 여기서 따로 고치지 않는다(`node tests/casual-tree-v2.cjs` 가 원소 공방 사본과 sha256 으로 견준다 — 저장소가 옆에 없으면 건너뛴다). `lib/motion-fx.js` 도 sam-atelier 와 같이.
+`lib/casual-tree.js` · `lib/casual-tree-v2.js` · `lib/favorites.js` 는 원소 · 삼국지 · 포켓몬 공방과 글자 하나 다르지 않게 복사한 공용 모듈이다. 여기서 따로 고치지 않는다(`node tests/casual-tree-v2.cjs` 가 원소 공방 사본과 sha256 으로 견준다 — 저장소가 옆에 없으면 건너뛴다). `lib/motion-fx.js` 도 sam-atelier 와 같이. `lib/splash.js` · `lib/splash.css`(들어갈 때 로딩 화면, 2026-11-24)는 원소 공방과 같이.
 
 ### 7. 그림 · 모형은 이 저장소에 두지 않는다
 그림 저장소 `city-atelier-img`(`polos0117/city-atelier-img` — 2026-11-20 만듦, Pages 켬, 썸네일 워크플로가 Actions 비밀 `CODE_REPO_TOKEN` 으로 이 저장소의 `그림 등록` 을 깨운다 · 뒤받침 한 시간마다). `img/` 는 `.gitignore` 에 있다. 원본 PNG 는 올리지 않는다. 그림 규칙은 `IMAGE_RULES.md`. `data/img.json` 은 손으로 고치지 않는다.
@@ -93,6 +93,7 @@ node tests/globe-math.cjs            # 지구본 순수 함수(좌표 약속 · 
 node tests/theme.cjs                 # 공간 여섯 · 세계 따라감 · 밝기 기억 · 움직임 끔
 node tests/globe-screen.cjs          # 지구본 탭 · 도시 무대 · 한 장(CDN 모듈은 처음 한 번 받아 ESM_DIR 옆 cdn-cache 에)
 node tests/vista-screen.cjs          # 도시 무대 전경(배경 · 작은 지도 · 카드 띠 · 흐름 · 움직임 줄이기)
+node tests/splash-screen.cjs         # 들어갈 때 로딩 화면(lib/splash.js — ESM_DIR 에 pixi.js@8.19.0 사본도): 처음 한 번 · 2초 안에 걷힘 · 건너뛰기 · 움직임 줄이기 · 전경 없음 · PixiJS 막힘 · 느린 그림 · 깊은 주소
 node tests/dex-screen.cjs            # 전체 도감(여섯 판 · 가짜 등록부로 그림 · 새 그림 점, 날짜는 ?today=)
 node tests/screen.cjs                # 화풍 비교 · 생성기 도시 판 · 세계 그림 걸음 · 일상컷 걸음
 node tests/prompt-pack-screen.cjs    # 서울 세계 그림 셋 + 일상 열 장 묶음(폰 344×882)

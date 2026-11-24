@@ -38,8 +38,8 @@ async function cdn(r, u) {
 
 /* fulfill = [{ url: RegExp, status?, body?, contentType? }] — 바깥 주소 하나를 정해 둔 답으로(지구본 glb 있음 · 없음 등) */
 async function open(browser, base, url, opt = {}) {
-  const { viewport = COVER, reduced = false, touch = false, noWebGL = false, blockPixi = false, failURL = null, pref = null, slowImg = 0, fulfill = [], blockCDN = false, fonts = false } = opt;
-  const ctx = await browser.newContext({ viewport, ...(reduced ? { reducedMotion: 'reduce' } : {}), ...(touch ? { hasTouch: true } : {}) });
+  const { viewport = COVER, reduced = false, touch = false, noWebGL = false, blockPixi = false, failURL = null, pref = null, slowImg = 0, fulfill = [], blockCDN = false, fonts = false, scale = 0 } = opt;
+  const ctx = await browser.newContext({ viewport, ...(reduced ? { reducedMotion: 'reduce' } : {}), ...(touch ? { hasTouch: true } : {}), ...(scale ? { deviceScaleFactor: scale } : {}) });   /* scale — 사진용 기기 배율 */
   if (noWebGL) await ctx.addInitScript(() => {
     const get = HTMLCanvasElement.prototype.getContext;
     HTMLCanvasElement.prototype.getContext = function (kind, ...a) { return /webgl/.test(kind) ? null : get.call(this, kind, ...a); };

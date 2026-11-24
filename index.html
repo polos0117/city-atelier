@@ -17,14 +17,15 @@
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;700&display=swap"></noscript>
 <link rel="stylesheet" href="lib/workspace.css?v=5">
 <script src="lib/workspace-theme.js?v=4"></script>
-<script src="lib/words.js?v=41"></script>
+<script src="lib/words.js?v=42"></script>
 <script src="lib/favorites.js?v=1"></script>
 <script src="lib/patch.js?v=1"></script>
 <script src="lib/walk-core.js?v=9"></script>
 <script src="lib/img.js?v=12"></script>
 <script src="lib/globe-math.js?v=1"></script>
-<link rel="stylesheet" href="lib/room.css?v=12">
+<link rel="stylesheet" href="lib/room.css?v=13">
 <link rel="stylesheet" href="lib/toolbox.css?v=4">
+<link rel="stylesheet" href="lib/splash.css?v=1">
 <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"}}</script>
 </head>
 <body class="th-page">
@@ -34,7 +35,9 @@ import {h,render} from 'https://esm.sh/preact@10.24.3';
 import {useState,useEffect,useRef,useMemo} from 'https://esm.sh/preact@10.24.3/hooks';
 import {Toolbox} from './lib/toolbox.js?v=7';
 import {mountGlobe} from './lib/globe.js?v=1';
-import {CityStage,CardView,ready,latlon,known,landmarksOf} from './lib/city-view.js?v=8';
+import {CityStage,CardView,ready,latlon,known,landmarksOf,vistaOf} from './lib/city-view.js?v=8';
+import {enterWithSplash,clause} from './lib/splash.js?v=1';
+import {loadPixi} from './lib/pixi.js?v=1';
 import {DexView,worldFiles,freshFiles} from './lib/dex-view.js?v=9';
 const W = window.W, A = window.AtelierAppearance, R = window.AtelierWalk, GM = window.GlobeMath, IMG = window.AtelierImg;
 const here = () => R.readRoute(location.search);
@@ -116,7 +119,15 @@ function Theater() {
     history.pushState(null, '', tabHref(k)); setRoute(here());
   };
   const cityOf = k => data && data.d.cities.find(c => c.key === k);
-  const goCity = k => { const c = cityOf(k); if (!c) return; if (!ready(c)) { setNote(W('globe.pre.note', { city: c.ko })); return; } enter({ city: k, tab: '' }); };
+  /* 들어갈 때 로딩 화면(2026-11-24, lib/splash.js) — 그 도시 그 세계 전경이 있으면 이름 · 세계 · 설계표 성격 첫 마디 · 빛 입자를 1.6초쯤 띄우고 그 뒤에서 들어간다.
+     이 탭에서 그 도시 그 세계는 한 번만(city_splash_v1), 움직임 끔 · 전경 없음 · 그림이 600ms 안에 안 오면 그냥 들어간다. 끝나면 초점은 무대 제목으로 */
+  const goCity = k => { const c = cityOf(k); if (!c) return; if (!ready(c)) { setNote(W('globe.pre.note', { city: c.ko })); return; }
+    const w = look.world, v = vistaOf(data.img, k, w, route.st), wn = W('world.' + w);
+    enterWithSplash({ url: v && IMG.imgURL(v), id: k + '|' + w, store: 'city_splash_v1', motion: R.motionOn(), world: w, kicker: wn, title: [{ text: c.ko }], n: c.ko.length,
+      line: clause(c.persona), live: W('splash.live', { world: wn, city: c.ko }), skip: W('splash.skip'), loadPixi,
+      go: () => enter({ city: k, tab: '' }),
+      done: () => { const t = document.querySelector('.th-city-title h2'); if (t) { t.setAttribute('tabindex', '-1'); t.focus({ preventScroll: true }); } } });
+  };
 
   let body;
   if (fail) body = [h('section', { class: 'th-marquee', key: 'm' }, h('p', null, W('walk.fail')))];

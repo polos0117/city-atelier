@@ -7,6 +7,16 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-24 · claude · 들어갈 때 로딩 화면 — 전경 · 이름 · 빛 입자(픽시)
+- lib/splash.js — 새 공용 모듈(원소 공방과 글자 하나 다르지 않게). 지구본에서 도시를 고르면 그 세계 전경을 받기 시작 → 600ms 안에 풀리면 어두워졌다가(0.18초) 그 뒤에서 무대로 들어가고, 전경이 어둠에서 떠오르며 천천히 다가온다(1.0 → 1.06) · 세계 줄 · 도시 이름(간판 글씨) · 설계표 성격 첫 마디(40자 이하) · 막대 · 빛 입자(PixiJS — 판타지 빛 알갱이 · 불티, 스팀펑크 김 · 불꽃, 사이버펑크 빛줄 · 자료 알갱이, 150 이하 · 틱 하나 · 끝나면 지움). 모두 1.6초, 누르기 · 아무 키면 곧바로. 움직임 끔 · 전경 없음 · 이 탭에서 본 도시 × 세계(city_splash_v1) · 그림이 늦으면 없음. PixiJS 를 못 받으면 입자만 빠진다. 덮개 aria-hidden + polite 알림 한 줄, 끝나면 초점은 무대 제목(사용자 「진짜 게임 로딩화면 같네」 → 「응 넣어줘. 이미 도구도 있을텐데. 픽시같은거」)
+- lib/splash.css — 덮개 겉모습(공용). 공방 몫은 --sp-display · --sp-weight · --sp-accent · --sp-ink
+- lib/pixi.js — PixiJS 불러오기 한 곳(원소와 같은 판 고정 주소 pixi.js@8.19.0)
+- lib/room.css — 덮개 변수(간판 글씨 · 세계 강조색 객석 불 끔 값) · ?v=13
+- index.html — goCity 가 enterWithSplash 로 들어간다(깊은 주소 · 뒤로 가기 · 도감에서 들어가기는 그대로), splash.css 링크
+- lib/words.js — splash.live · splash.skip(?v=42, 세 쪽)
+- tests/splash-screen.cjs — 새 검사(휴대폰 · PC 처음 한 번 · 다시 · 세계 바꿈 · 건너뛰기 셋 · 움직임 줄이기 · 전경 없는 도시 · PixiJS 막힘 · 느린 그림 · 404 · 깊은 주소). tests/lib/harness.cjs — scale(사진 배율)
+- DESIGN.md · AGENTS.md — 효과 표 · 검사 줄
+
 ## 2026-11-24 · claude · 랜드마크 좌표 스물일곱(도쿄 · 베이징 · 파리 · 런던 · 로마 · 뉴욕 · 이스탄불 · 카이로 · 리우)
 - data/city-design.json — 아홉 도시 랜드마크 셋씩 lat · lon · latlon_src(각 랜드마크 src 영어 위키 문서의 좌표, 2026-11-24 MediaWiki coordinates) — 도시 무대 작은 지도 핀(사용자 「남은 도시 전경이랑 좌표 다 해줘」)
 

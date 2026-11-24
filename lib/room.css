@@ -405,5 +405,9 @@ html[data-motion="on"] .th-role:nth-child(3) .th-beam {animation-delay:.5s}
 .th-count small {display:block;margin-top:2px;font-size:9px;font-weight:700;color:var(--muted)}
 .th-tk-note {grid-column:1/-1;margin:2px 0 2px 16px;font-size:12px;line-height:1.5;color:var(--text)}
 
+/* ── 들어갈 때 로딩 화면(2026-11-24 — lib/splash.js · lib/splash.css, 지구본 → 도시 무대) — 간판 글씨 이름 · 세계 강조색(늘 어두운 판이라 객석 불 끔 값) */
+.sp {--sp-display:var(--display);--sp-weight:400;--sp-ink:#fbf8f2}
+.sp[data-world="fantasy"] {--sp-accent:#f4d54c} .sp[data-world="steampunk"] {--sp-accent:#e8602a} .sp[data-world="cyberpunk"] {--sp-accent:#ff3fae}
+
 @media (min-width:768px) {.th {padding-top:40px} .th-marquee-name {font-size:52px}}
 @media (forced-colors:active) {.th-valance,.th-side,.th-spot,.th-drop {display:none}}
