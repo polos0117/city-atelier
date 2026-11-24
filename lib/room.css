@@ -271,6 +271,19 @@ button.th-mark-fig {cursor:pointer}
 .th-zoom-bar > span:first-child {flex:1 1 auto;min-width:0;font-size:11px;line-height:1.4}
 .th-zoom-bar button {white-space:nowrap;flex:0 0 auto}
 .th-zoom-bar .th-fav {margin-left:auto}
+/* 꽉 채우기(lib/fill-view.js, 2026-11-24) — 휴대폰 세로에서 1:1 · 3:2 그림을 칸 높이에 맞춰 펴고 옆으로 민다. 맞춤 보기의 모양은 그대로 */
+.th-zoom-box img {touch-action:manipulation}   /* 두 번 누르기가 브라우저 확대로 새지 않게 */
+.th-zoom-box.is-fill {overflow:hidden}
+.th-zoom-box .fill-scroll {display:block;flex:none;width:100%;max-width:100%;height:var(--fill-h);overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;touch-action:pan-x pinch-zoom;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.th-zoom-box .fill-scroll > img {display:block;width:var(--fill-w)!important;height:var(--fill-h)!important;max-width:none!important;max-height:none!important;margin:0;cursor:auto;touch-action:pan-x pinch-zoom}
+.th-zoom-bar .fill-toggle[aria-pressed="true"] {background:#fff2;border-color:#fff}
+/* 휴대폰 가로(2026-11-24 「1번도 같이」) — 그림만 화면 가득. 아래 막대(안내 · 몇째 장 · 즐겨찾기)는 숨기고, 닫기(와 꽉 채우기가 뜨면 그것)만 오른쪽 위에 반투명으로 */
+@media (orientation:landscape) and (max-height:500px) {
+  .th-zoom-box {padding:6px}
+  .th-zoom-bar {position:fixed;top:6px;right:6px;z-index:2;padding:0;background:none;gap:6px}
+  .th-zoom-bar > :not(.th-zoom-close):not(.fill-toggle) {display:none}
+  .th-zoom-bar button {min-width:44px;padding:0 14px;background:#0006;border-color:#fff5;backdrop-filter:blur(4px)}
+}
 .th-zoom-bar button {min-height:44px;padding:0 18px;border-radius:22px;border:1px solid #fff8;background:#0008;color:#fff;font-family:inherit;font-weight:800}
 /* 효과 — 「조명이 도시를 따라감」(전광판 이름이 켜지며 바뀐다) · 「세 조명 켜짐」(차례로). 움직임 끔이면 없음 */
 html[data-motion="on"] .th-marquee-name.is-flick {animation:th-flick .4s ease-out}
