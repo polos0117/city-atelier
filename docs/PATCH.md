@@ -7,6 +7,11 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-24 · claude · 대전 전경 셋 · 대전 랜드마크 좌표
+- data/city-design.json — 대전 랜드마크 셋 좌표(사용자 「대전도 전경 만들어줘.」 — 도시 무대 작은 지도 핀): hanbittower 엑스포과학공원 · yuseongspa 유성구 대표점 · daecheonglake 대청댐(문서마다 자기 좌표가 없어 latlon_note 에 까닭)
+- tools/vista-prompt.cjs — 세계 하나면 지시문만 찍는다(파일 이름 머리줄이 그림 API 로 섞여 갔다 — 그림엔 글자 없음)
+- 그림 저장소 — daejeon_{fantasy,steampunk,cyberpunk}_kr_drawn_rim_dewy_vista.webp · records/daejeon/*-vista.*-api.json(API 2.6, 1536×1024)
+
 ## 2026-11-24 · claude · 도시 전경 — 서울 시험(전경 칸 · 랜드마크 좌표 · 도시 무대 전경 · 미니맵 · 카드 띠)
 - tools/register-images.py — `<도시>_<세계>_<화풍>_vista.webp`(성별 표시 없음)를 세계 몫의 `vista` 칸에 적는다. 1536×1024 크기 규칙, 랜드마크 카드 · 세계 · 화풍 없는 이름은 실패, --prune 으로 빠짐, 전경만 있는 세계 칸도 산다. 일상컷이 아니고 열한 장 몫에도 안 센다. 사용자 「랜드마크는 계속 추가할건데 미리 그려놓으면 추가할 때마다 다시 그려야 되지 않나?」 → 전경은 분위기만, 명소 자리는 자료 · 「응 1~4번 진행해줘」
 - lib/prompt-spec.js · lib/prompt-city.js — 전경 지시문 `T.VISTA` · `buildVista` · `vistaRecord` · `PromptCity.vista`(장소 = 설계표 세계 en, 화풍 줄 = 화풍 판 vista 칸 — 없으면 화풍 글 첫 문장, Avoid = 금지 낱말 − unban_en − 옷 낱말). 시험 그림 셋의 build.cjs 를 옮겼고 서울 셋은 그린 글과 글자 하나까지 같다. FILES.vista

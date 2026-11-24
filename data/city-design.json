@@ -11210,6 +11210,10 @@
           "ko": "한빛탑",
           "en": "the Hanbit Tower",
           "src": "https://ko.wikipedia.org/wiki/한빛탑",
+          "lat": 36.377,
+          "lon": 127.385,
+          "latlon_src": "https://en.wikipedia.org/wiki/Expo_Science_Park",
+          "latlon_note": "한빛탑 문서에 좌표가 없어 탑이 선 엑스포과학공원 좌표(위키 문서)",
           "persona": "1993 대전 엑스포 한가운데 선 93미터 ‘큰 빛의 탑’ — 옛 별 관측대(첨성대)를 본뜬 화강암 아랫단에서 미래로 뻗는 원뿔 끝까지, 과거와 오늘과 내일을 한 줄기 빛으로 잇는 사람. 호기심 많고 밝다.",
           "worlds": {
             "fantasy": {
@@ -11390,6 +11394,10 @@
           "ko": "유성온천",
           "en": "Yuseong Hot Spring",
           "src": "https://en.wikipedia.org/wiki/Yuseong_Hot_Spring",
+          "lat": 36.362,
+          "lon": 127.356,
+          "latlon_src": "https://en.wikipedia.org/wiki/Yuseong_District",
+          "latlon_note": "유성온천 문서에 좌표가 없어 온천이 있는 유성구 대표점(위키 문서) — 실제 온천 거리는 그 근처",
           "persona": "조선의 임금도 쉬어 가고 몸을 담근 오래된 온천 — 눈꽃 같은 흰 꽃나무 거리와 누구에게나 열린 따뜻한 족욕장, 지치고 다친 이를 데우는 다정한 사람.",
           "worlds": {
             "fantasy": {
@@ -11570,6 +11578,10 @@
           "ko": "대청호",
           "en": "Daecheong Lake",
           "src": "https://ko.wikipedia.org/wiki/대청호",
+          "lat": 36.4775,
+          "lon": 127.4808,
+          "latlon_src": "https://en.wikipedia.org/wiki/Daecheong_Dam",
+          "latlon_note": "호수 문서에 좌표가 없어 호수를 막은 대청댐 좌표(위키 문서)",
           "persona": "금강을 막아 생긴 나라에서 셋째로 큰 호수 — 물에 잠긴 마을들의 기억과 물안개, 봄이면 호숫가를 길게 잇는 벚꽃길. 조용하고 깊으며, 고향을 잃은 이들의 노래를 품은 사람.",
           "worlds": {
             "fantasy": {
