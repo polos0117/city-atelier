@@ -5706,6 +5706,52 @@
        ]
       }
      }
+    },
+    {
+     "key": "bakery_tour",
+     "ko": "원도심 빵집 순례 — 이름난 오래된 빵집 앞 줄과 갓 튀긴 소보로빵",
+     "src": [
+      "https://ko.wikipedia.org/wiki/성심당",
+      "https://ko.wikipedia.org/wiki/은행동_(대전)"
+     ],
+     "base": "street_shop",
+     "times": [
+      "commute_am",
+      "midday",
+      "commute_pm"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "retro"
+     ],
+     "en": "a bakery pilgrimage in Daejeon's old downtown — a long, cheerful queue outside a beloved old bakery, warm paper bags of freshly fried crumble-topped soboro buns and wooden shelves stacked with breads, no sign or name visible",
+     "worlds": {
+      "fantasy": {
+       "en": "a cobbled lane of the capital's old quarter where a famous old bakers' guildhall sends out the smell of fresh bread — a long, cheerful queue at its carved wooden door, baskets of golden crumble-topped buns cooling on the sill, no sign or lettering",
+       "props": [
+        "daejeon_bread",
+        "bag",
+        "cup"
+       ]
+      },
+      "steampunk": {
+       "en": "a gaslit arcade of the railway town's old quarter where a beloved steam-oven bakery puffs warm white steam — a long, cheerful queue under its glass awning, brass racks of golden crumble-topped buns behind the window, no sign or lettering",
+       "props": [
+        "daejeon_bread",
+        "shopping_bag",
+        "watch"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a preserved old-downtown street two centuries on where a legendary bakery still bakes by hand — a long, cheerful queue under warm glowing awnings, glass shelves of golden crumble-topped buns lit like jewels, no sign or lettering",
+       "props": [
+        "daejeon_bread",
+        "shopping_bag",
+        "phone"
+       ]
+      }
+     }
     }
    ]
   }

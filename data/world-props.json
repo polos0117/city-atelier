@@ -1549,6 +1549,10 @@
   "daejeon_telescope": { "ko": "천체 망원경", "worlds": {
    "fantasy": { "en": "a long star-glass of brass and crystal on a carved wooden stand" },
    "steampunk": { "en": "a long brass refracting telescope on an iron mount" },
-   "cyberpunk": { "en": "a slim white telescope tracing the stars with a soft ring of light" } } }
+   "cyberpunk": { "en": "a slim white telescope tracing the stars with a soft ring of light" } } },
+  "daejeon_bread": { "ko": "튀김 소보로빵 봉투(대전 빵집)", "worlds": {
+   "fantasy": { "en": "a woven bag of warm golden crumble-topped fried buns, a little dusting of sugar" },
+   "steampunk": { "en": "a brown paper bag of warm golden crumble-topped fried buns tied with twine" },
+   "cyberpunk": { "en": "a heat-keeping paper bag of warm golden crumble-topped fried buns with a faint glowing seal, no text" } } }
  }
 }

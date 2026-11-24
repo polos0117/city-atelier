@@ -7,6 +7,10 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-24 · claude · 대전 생활 장면 「빵집 순례」
+- data/city-life.json — daejeon bakery_tour(원도심 이름난 오래된 빵집 앞 줄 · 갓 튀긴 소보로빵, 세 세계 — 빵 굽는 길드 · 증기 오븐 제과점 · 손으로 굽는 전설의 빵집). 가게 이름 · 간판 · 글자는 싣지 않는다(사용자 「성심당은 어디에...」 → 「응 빵집 순례 넣고 올려줘」 — 상표라 이름은 NAMES 에 그대로)
+- data/world-props.json — daejeon_bread(튀김 소보로빵 봉투, 세 세계)
+
 ## 2026-11-24 · claude · 대전 전경 셋 · 대전 랜드마크 좌표
 - data/city-design.json — 대전 랜드마크 셋 좌표(사용자 「대전도 전경 만들어줘.」 — 도시 무대 작은 지도 핀): hanbittower 엑스포과학공원 · yuseongspa 유성구 대표점 · daecheonglake 대청댐(문서마다 자기 좌표가 없어 latlon_note 에 까닭)
 - tools/vista-prompt.cjs — 세계 하나면 지시문만 찍는다(파일 이름 머리줄이 그림 API 로 섞여 갔다 — 그림엔 글자 없음)
