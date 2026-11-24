@@ -7,6 +7,9 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-24 · claude · 랜드마크 좌표 스물일곱(도쿄 · 베이징 · 파리 · 런던 · 로마 · 뉴욕 · 이스탄불 · 카이로 · 리우)
+- data/city-design.json — 아홉 도시 랜드마크 셋씩 lat · lon · latlon_src(각 랜드마크 src 영어 위키 문서의 좌표, 2026-11-24 MediaWiki coordinates) — 도시 무대 작은 지도 핀(사용자 「남은 도시 전경이랑 좌표 다 해줘」)
+
 ## 2026-11-24 · claude · 부산 전경 셋 · 부산 랜드마크 좌표
 - data/city-design.json — 부산 랜드마크 셋 좌표(영어 위키 문서 좌표: 광안대교 · 감천문화마을 · 태종대) — 도시 무대 작은 지도 핀(사용자 「우선 부산만 해줘.」)
 - 그림 저장소 — busan_{fantasy,steampunk,cyberpunk}_kr_drawn_rim_dewy_vista.webp · records/busan/*-vista.*-api.json(API 2.6, 1536×1024, 기록에 usage 토큰)

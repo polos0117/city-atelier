@@ -2175,6 +2175,9 @@
           "ko": "도쿄역",
           "en": "Tokyo Station",
           "src": "https://en.wikipedia.org/wiki/Tokyo_Station",
+          "lat": 35.6808,
+          "lon": 139.7669,
+          "latlon_src": "https://en.wikipedia.org/wiki/Tokyo_Station",
           "persona": "1914년에 문을 연 붉은 벽돌 역사 — 남북 끝의 두 돔(2012년 처음 꼴로 되살림)과 황거를 마주한 마루노우치 얼굴로 떠나는 이와 돌아오는 이를 맞는 사람. 정중하고 시간에 정확하다.",
           "worlds": {
             "fantasy": {
@@ -2365,6 +2368,9 @@
           "ko": "레인보우 브리지",
           "en": "Rainbow Bridge",
           "src": "https://en.wikipedia.org/wiki/Rainbow_Bridge_(Tokyo)",
+          "lat": 35.6364,
+          "lon": 139.7636,
+          "latlon_src": "https://en.wikipedia.org/wiki/Rainbow_Bridge_(Tokyo)",
           "persona": "도쿄만 북쪽을 건너 시바우라와 오다이바를 잇는 흰 탑의 2층 현수교(1993년) — 낮에 모은 햇빛으로 밤마다 케이블 등이 빨강 · 하양 · 초록으로 켜진다. 바다와 도시를 잇는 시원하고 믿음직한 사람.",
           "worlds": {
             "fantasy": {
@@ -2545,6 +2551,9 @@
           "ko": "우에노 공원",
           "en": "Ueno Park",
           "src": "https://en.wikipedia.org/wiki/Ueno_Park",
+          "lat": 35.7122,
+          "lon": 139.7711,
+          "latlon_src": "https://en.wikipedia.org/wiki/Ueno_Park",
           "persona": "1873년 서양을 본떠 연 일본의 첫 공원 가운데 하나 — 시노바즈 연못의 연꽃, 봄의 벚나무 800그루, 국립 박물관과 미술관이 모인 숲. 배움과 꽃놀이를 함께 즐기는 느긋하고 다정한 사람.",
           "worlds": {
             "fantasy": {
@@ -2981,6 +2990,9 @@
           "ko": "자금성",
           "en": "the Forbidden City",
           "src": "https://en.wikipedia.org/wiki/Forbidden_City",
+          "lat": 39.9158,
+          "lon": 116.3908,
+          "latlon_src": "https://en.wikipedia.org/wiki/Forbidden_City",
           "persona": "명 · 청 오백 년 황제의 궁성 — 주홍 담과 금빛 지붕 안에 엄격한 격식과 백만 점이 넘는 보물을 함께 지키며, 문을 쉽게 열지 않는다.",
           "worlds": {
             "fantasy": {
@@ -3170,6 +3182,9 @@
           "ko": "이화원",
           "en": "the Summer Palace",
           "src": "https://en.wikipedia.org/wiki/Summer_Palace",
+          "lat": 39.9975,
+          "lon": 116.2689,
+          "latlon_src": "https://en.wikipedia.org/wiki/Summer_Palace",
           "persona": "호수를 파고 그 흙으로 언덕을 쌓아 신선의 세 섬을 들인 황실 정원 — 물빛처럼 느긋하고 다정하지만, 도시가 마시는 물을 품은 깊이를 지녔다.",
           "worlds": {
             "fantasy": {
@@ -3378,6 +3393,9 @@
           "ko": "만리장성 바다링",
           "en": "the Great Wall at Badaling",
           "src": "https://en.wikipedia.org/wiki/Badaling",
+          "lat": 40.3542,
+          "lon": 116.0069,
+          "latlon_src": "https://en.wikipedia.org/wiki/Badaling",
           "persona": "산마루를 따라 수도 북쪽의 관문을 지켜 온 명나라의 성벽 — 묵묵하고 끈질기며, 바람과 모래 앞에서도 물러서지 않는다.",
           "worlds": {
             "fantasy": {
@@ -3823,6 +3841,9 @@
           "ko": "에펠탑",
           "en": "the iron lattice tower on the Champ de Mars",
           "src": "https://en.wikipedia.org/wiki/Eiffel_Tower",
+          "lat": 48.8582,
+          "lon": 2.2945,
+          "latlon_src": "https://en.wikipedia.org/wiki/Eiffel_Tower",
           "persona": "1889년 만국박람회의 한가운데 선 연철 격자 탑 — 흉물이라는 손가락질을 견디고 끝내 도시의 얼굴이 된 「철의 여인」, 가장 높은 데서 빛과 소식을 멀리 보낸다.",
           "worlds": {
             "fantasy": {
@@ -4013,6 +4034,9 @@
           "ko": "루브르 궁전",
           "en": "the Louvre Palace",
           "src": "https://en.wikipedia.org/wiki/Louvre_Palace",
+          "lat": 48.8611,
+          "lon": 2.3364,
+          "latlon_src": "https://en.wikipedia.org/wiki/Louvre_Palace",
           "persona": "1190년 무렵 센강 가 성채로 시작해 왕궁이 되고 1793년 모두의 미술관이 된 집 — 세 번 모습을 바꾸어도 지닌 보물을 모두에게 열어 보이고, 안뜰 한가운데 유리 피라미드로 빛을 들인다.",
           "worlds": {
             "fantasy": {
@@ -4203,6 +4227,9 @@
           "ko": "오페라 가르니에",
           "en": "the grand opera house",
           "src": "https://en.wikipedia.org/wiki/Palais_Garnier",
+          "lat": 48.8719,
+          "lon": 2.3317,
+          "latlon_src": "https://en.wikipedia.org/wiki/Palais_Garnier",
           "persona": "1875년 문을 연 오페라 극장 — 빈자리 하나 없이 금과 여러 빛깔 대리석으로 꾸민 화려함을 사랑하고, 두 갈래로 갈라지는 대계단과 일곱 톤 샹들리에 아래 오늘 밤도 막을 올린다.",
           "worlds": {
             "fantasy": {
@@ -4641,6 +4668,9 @@
           "ko": "빅벤",
           "en": "the clock tower of Westminster",
           "src": "https://en.wikipedia.org/wiki/Big_Ben",
+          "lat": 51.5007,
+          "lon": -0.1245,
+          "latlon_src": "https://en.wikipedia.org/wiki/Big_Ben",
           "persona": "웨스트민스터 궁 북쪽 끝의 시계탑 — 대종과 네 작은 종, 안에서 빛나는 오팔 유리 문자판, 의회가 밤에 열리면 켜지는 꼭대기 등불을 세 세계의 손으로 지키는 사람. 늘 제시간이고, 그 시간을 지키는 일을 자랑으로 여긴다.",
           "worlds": {
             "fantasy": {
@@ -4831,6 +4861,9 @@
           "ko": "타워 브리지",
           "en": "Tower Bridge",
           "src": "https://en.wikipedia.org/wiki/Tower_Bridge",
+          "lat": 51.5056,
+          "lon": -0.0753,
+          "latlon_src": "https://en.wikipedia.org/wiki/Tower_Bridge",
           "persona": "1894년 문을 연 템스강의 쌍탑 도개교 — 배가 오면 언제든 가운데 두 날개를 들어 길을 내주는 다리를 세 세계에서 지키고 누비는 사람. 비켜 줄 줄 알면서도 물러서지 않는다.",
           "worlds": {
             "fantasy": {
@@ -5011,6 +5044,9 @@
           "ko": "버킹엄 궁전",
           "en": "Buckingham Palace",
           "src": "https://en.wikipedia.org/wiki/Buckingham_Palace",
+          "lat": 51.5008,
+          "lon": -0.1419,
+          "latlon_src": "https://en.wikipedia.org/wiki/Buckingham_Palace",
           "persona": "포틀랜드 돌 앞면과 금빛 철문, 크림과 금빛의 방들 — 나라의 기쁨과 슬픔이 모여드는 왕궁을 세 세계의 의례와 정원으로 꾸리는 사람. 격식을 지키되 문 앞에 모인 사람들을 늘 먼저 본다.",
           "worlds": {
             "fantasy": {
@@ -5434,6 +5470,9 @@
           "ko": "콜로세움",
           "en": "the Colosseum",
           "src": "https://en.wikipedia.org/wiki/Colosseum",
+          "lat": 41.8903,
+          "lon": 12.4922,
+          "latlon_src": "https://en.wikipedia.org/wiki/Colosseum",
           "persona": "수만 관중의 함성을 이천 년 동안 받아 온 원형 투기장 — 무대에 서는 법을 알고, 무너진 반쪽을 숨기지 않은 채 당당하게 서 있는 사람.",
           "worlds": {
             "fantasy": {
@@ -5624,6 +5663,9 @@
           "ko": "스페인 계단",
           "en": "the Spanish Steps",
           "src": "https://en.wikipedia.org/wiki/Spanish_Steps",
+          "lat": 41.9061,
+          "lon": 12.4828,
+          "latlon_src": "https://en.wikipedia.org/wiki/Spanish_Steps",
           "persona": "광장에서 언덕 위까지 굽이쳐 오르는 트래버틴 큰 계단 — 봄이면 아잘레아로 단장하고 늘 사람들이 모여드는, 낭만적이고 사람을 좋아하는 사람.",
           "worlds": {
             "fantasy": {
@@ -5814,6 +5856,9 @@
           "ko": "나보나 광장",
           "en": "Piazza Navona",
           "src": "https://en.wikipedia.org/wiki/Piazza_Navona",
+          "lat": 41.899,
+          "lon": 12.4731,
+          "latlon_src": "https://en.wikipedia.org/wiki/Piazza_Navona",
           "persona": "옛 경기장의 긴 타원을 그대로 품은 바로크 광장 — 분수 셋과 축제 · 연극 · 장이 끊이지 않는, 화려하고 무대 체질인 사람.",
           "worlds": {
             "fantasy": {
@@ -6241,6 +6286,9 @@
           "ko": "자유의 여신상",
           "en": "the Statue of Liberty",
           "src": "https://en.wikipedia.org/wiki/Statue_of_Liberty",
+          "lat": 40.6892,
+          "lon": -74.0444,
+          "latlon_src": "https://en.wikipedia.org/wiki/Statue_of_Liberty",
           "persona": "뉴욕 항구 어귀의 섬에서 금빛 불꽃의 횃불을 들고 끊어진 사슬을 밟고 선 구리 거상 — 바다를 건너오는 이들에게 먼저 빛을 내미는, 단단하고 너그러운 사람.",
           "worlds": {
             "fantasy": {
@@ -6451,6 +6499,9 @@
           "ko": "센트럴 파크",
           "en": "Central Park",
           "src": "https://en.wikipedia.org/wiki/Central_Park",
+          "lat": 40.7822,
+          "lon": -73.9653,
+          "latlon_src": "https://en.wikipedia.org/wiki/Central_Park",
           "persona": "빽빽한 섬 한가운데 사람 손으로 지은 숲과 호수 — 바쁜 도시가 숨을 고르는 곳, 철 따라 옷을 바꾸며 누구에게나 쉴 자리를 내주는 느긋하고 다정한 사람.",
           "worlds": {
             "fantasy": {
@@ -6660,6 +6711,9 @@
           "ko": "그랜드 센트럴 터미널",
           "en": "Grand Central Terminal",
           "src": "https://en.wikipedia.org/wiki/Grand_Central_Terminal",
+          "lat": 40.7528,
+          "lon": -73.9772,
+          "latlon_src": "https://en.wikipedia.org/wiki/Grand_Central_Terminal",
           "persona": "청록 하늘에 금빛 별자리가 흐르는 큰 홀 — 떠나고 돌아오는 수많은 발걸음을 다 기억하는, 우아하고 다감한 사람.",
           "worlds": {
             "fantasy": {
@@ -7113,6 +7167,9 @@
           "ko": "바실리카 저수조",
           "en": "the Basilica Cistern",
           "src": "https://en.wikipedia.org/wiki/Basilica_Cistern",
+          "lat": 41.0081,
+          "lon": 28.9778,
+          "latlon_src": "https://en.wikipedia.org/wiki/Basilica_Cistern",
           "persona": "6세기 옛 도시 땅 밑에 대리석 기둥 336개를 숲처럼 세운 물의 궁전 — 고요하고 깊으며, 오래 잊혔다 다시 찾아진 것을 조용히 지킨다.",
           "worlds": {
             "fantasy": {
@@ -7293,6 +7350,9 @@
           "ko": "그랜드 바자르",
           "en": "the Grand Bazaar",
           "src": "https://en.wikipedia.org/wiki/Grand_Bazaar,_Istanbul",
+          "lat": 41.0106,
+          "lon": 28.9679,
+          "latlon_src": "https://en.wikipedia.org/wiki/Grand_Bazaar,_Istanbul",
           "persona": "15세기부터 지붕 덮인 거리 예순하나에 가게 4천 곳 넘게 모인, 세계에서 가장 크고 오래된 덮인 시장 가운데 하나 — 말솜씨 좋고 셈이 빠르며, 흥정 전에 차부터 내놓는다.",
           "worlds": {
             "fantasy": {
@@ -7473,6 +7533,9 @@
           "ko": "돌마바흐체 궁전",
           "en": "Dolmabahçe Palace",
           "src": "https://en.wikipedia.org/wiki/Dolmabah%C3%A7e_Palace",
+          "lat": 41.0394,
+          "lon": 29.0017,
+          "latlon_src": "https://en.wikipedia.org/wiki/Dolmabah%C3%A7e_Palace",
           "persona": "보스포루스 유럽 기슭, 메운 만의 정원 자리에 금과 크리스털로 지은 19세기 궁전 — 서양과 오스만의 격식을 함께 갖추고, 손님을 맞을 때 가장 빛난다.",
           "worlds": {
             "fantasy": {
@@ -7887,6 +7950,9 @@
           "ko": "기자 피라미드",
           "en": "the Pyramids of Giza",
           "src": "https://en.wikipedia.org/wiki/Giza_pyramid_complex",
+          "lat": 29.9761,
+          "lon": 31.1328,
+          "latlon_src": "https://en.wikipedia.org/wiki/Giza_pyramid_complex",
           "persona": "사천오백 년 가까이 사막 고원에 선 세 피라미드 — 흔들림 없이 묵직하고, 동서남북을 한 치 어긋남 없이 맞추는 꼼꼼한 사람.",
           "worlds": {
             "fantasy": {
@@ -8067,6 +8133,9 @@
           "ko": "기자의 대스핑크스",
           "en": "the Great Sphinx of Giza",
           "src": "https://en.wikipedia.org/wiki/Great_Sphinx_of_Giza",
+          "lat": 29.9753,
+          "lon": 31.1376,
+          "latlon_src": "https://en.wikipedia.org/wiki/Great_Sphinx_of_Giza",
           "persona": "고원의 바위를 통째로 깎아 동쪽을 바라보는 큰 상 — 모래에 어깨까지 묻혀도 기다릴 줄 아는, 말수 적고 끈질긴 파수꾼.",
           "worlds": {
             "fantasy": {
@@ -8247,6 +8316,9 @@
           "ko": "카이로 타워",
           "en": "Cairo Tower",
           "src": "https://en.wikipedia.org/wiki/Cairo_Tower",
+          "lat": 30.0458,
+          "lon": 31.2244,
+          "latlon_src": "https://en.wikipedia.org/wiki/Cairo_Tower",
           "persona": "나일 강 가운데 섬에서 연꽃 줄기처럼 솟은 격자 탑 — 도시를 한눈에 내려다보며, 천천히 도는 꼭대기처럼 느긋하게 모두를 둘러보는 사람.",
           "worlds": {
             "fantasy": {
@@ -8671,6 +8743,9 @@
           "ko": "빵 산(팡 지 아수카르)",
           "en": "Sugarloaf Mountain",
           "src": "https://en.wikipedia.org/wiki/Sugarloaf_Mountain",
+          "lat": -22.9494,
+          "lon": -43.1567,
+          "latlon_src": "https://en.wikipedia.org/wiki/Sugarloaf_Mountain",
           "persona": "구아나바라 만 어귀에 물가에서 곧장 솟은 화강암 · 석영 봉우리 — 바다에서 들어오는 이를 가장 먼저 맞고, 흔들리지 않으며, 오르는 이에게만 꼭대기를 내준다.",
           "worlds": {
             "fantasy": {
@@ -8851,6 +8926,9 @@
           "ko": "코파카바나 해변",
           "en": "Copacabana Beach",
           "src": "https://en.wikipedia.org/wiki/Copacabana,_Rio_de_Janeiro",
+          "lat": -22.9669,
+          "lon": -43.1806,
+          "latlon_src": "https://en.wikipedia.org/wiki/Copacabana,_Rio_de_Janeiro",
           "persona": "대서양에 맞닿은 4킬로미터 초승달 해변과 검고 흰 물결무늬 산책로 — 새해 전야엔 수백만을 품고, 낮엔 바다를 지키며, 늘 몸을 움직이게 한다.",
           "worlds": {
             "fantasy": {
@@ -9031,6 +9109,9 @@
           "ko": "라파 아치(카리오카 수도교)",
           "en": "the Carioca Aqueduct",
           "src": "https://en.wikipedia.org/wiki/Carioca_Aqueduct",
+          "lat": -22.9126,
+          "lon": -43.1799,
+          "latlon_src": "https://en.wikipedia.org/wiki/Carioca_Aqueduct",
           "persona": "우림 언덕의 샘물을 도시의 분수로 날라 온 두 층 흰 아치 마흔둘 — 물길을 다하고는 전차를 실어 나르고, 그 아래 라파의 밤엔 노래가 흐른다.",
           "worlds": {
             "fantasy": {
