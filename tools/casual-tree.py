@@ -321,6 +321,18 @@ def check_life(doc, life, props, design, tree2):
     for w in worlds:
         clean("옷의 결 clothes.%s" % w, w, ((props.get("clothes") or {}).get(w) or {}).get("en"))
     places = {x["key"] for x in doc["places"]} | {x["key"] for x in tree2.get("extra_places", [])}
+    # 일반 장소의 세계 글(2026-11-24 탈 것 — 차 → 판타지 짐마차 · 스팀펑크 증기차 · 사이버펑크 호버카): 세계 열쇠 · ko · 금지 낱말, worlds_only 는 글이 있는 세계만
+    for x in doc["places"]:
+        ws = x.get("worlds") or {}
+        for w, row in ws.items():
+            if w not in worlds:
+                errs.append("장소 %s 의 세계 %s 가 없다" % (x["key"], w)); continue
+            if not row.get("ko"):
+                errs.append("장소 %s.%s 의 ko 가 없다" % (x["key"], w))
+            clean("장소 %s.%s" % (x["key"], w), w, row.get("en"))
+        for w in x.get("worlds_only") or []:
+            if w not in worlds or (ws and w not in ws):
+                errs.append("장소 %s 의 worlds_only %s 에 그 세계 글이 없다" % (x["key"], w))
     fams = {o["key"] for o in doc["outfits"]}
     times = {t["key"] for t in life.get("times", [])}
     # 전통 · 민족 의상 표(2026-11-21) — 옷 열쇠는 트리 옷, 도시는 생활 장면표 도시, 문화는 items 열쇠

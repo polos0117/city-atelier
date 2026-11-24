@@ -104,6 +104,27 @@
   {
    "key": "campus",
    "ko": "캠퍼스"
+  },
+  {
+   "key": "ride",
+   "ko": "탈것 · 길(차 · 바이크 · 자전거 · 트램)"
+  },
+  {
+   "key": "board",
+   "ko": "보드 · 물 위 탈것(서핑 · 웨이크 · 카약 · 요트)"
+  },
+  {
+   "key": "sky",
+   "ko": "하늘 탈것(비행기 · 비행선 · 글라이더 · 열기구)"
+  },
+  {
+   "key": "rides",
+   "ko": "놀이기구 타기(범퍼카 · 바이킹 · 자이로드롭 · 찻잔 · 코스터 · 회전목마)"
+  },
+  {
+   "key": "ride_animal",
+   "ko": "말 · 낙타 타기",
+   "companion": true
   }
  ],
  "places": [
@@ -2267,6 +2288,1462 @@
     "retro"
    ],
    "start_median": true
+  },
+  {
+   "key": "car_kerb",
+   "group": "ride",
+   "ko": "길가에 세운 차",
+   "en": "a quiet tree-lined side street, a small vintage car parked at the kerb beside her, its paint gleaming in the sun",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "everyday",
+    "dongtan",
+    "retro",
+    "evening",
+    "subculture",
+    "adventure"
+   ],
+   "worlds": {
+    "fantasy": {
+     "ko": "돌길에 세운 이륜 마차",
+     "en": "a quiet cobbled lane, a small open two-wheeled gig standing at the kerb beside her, its shafts resting on the cobbles and its painted wheels bright in the sun"
+    },
+    "steampunk": {
+     "ko": "가스등 길의 증기 자동차",
+     "en": "a quiet gaslit side street, a small brass-trimmed steam car parked at the kerb beside her, its boiler gleaming in the sun"
+    },
+    "cyberpunk": {
+     "ko": "유리 탑 거리의 호버카",
+     "en": "a quiet side street between glass towers, a sleek two-seat hover car settled at the kerb beside her, its underglow dimmed"
+    }
+   },
+   "start_median": true
+  },
+  {
+   "key": "car_wash_home",
+   "group": "ride",
+   "ko": "집 앞 세차",
+   "en": "a sunny driveway outside a house, a small car glistening with soap foam beside her, a bucket of suds and a coiled hose on the wet concrete",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "everyday",
+    "dongtan",
+    "active",
+    "retro",
+    "workwear",
+    "subculture"
+   ],
+   "worlds": {
+    "fantasy": {
+     "ko": "여관 마당의 마차 씻기",
+     "en": "a sunny inn yard, a painted wooden carriage glistening wet beside her, a wooden bucket of suds and a well pump on the wet cobbles"
+    },
+    "steampunk": {
+     "ko": "마구간 골목의 증기차 세차",
+     "en": "a sunny mews yard, a brass steam car glistening with suds beside her, a bucket and a coiled canvas hose on the wet cobbles"
+    },
+    "cyberpunk": {
+     "ko": "옥상 세차장의 호버카",
+     "en": "a sunny rooftop wash pad, a sleek hover car beaded with foam beside her, a coiled hose and the city towers beyond"
+    }
+   },
+   "start_median": true
+  },
+  {
+   "key": "car_trunk",
+   "group": "ride",
+   "ko": "트렁크에 짐 싣기",
+   "en": "a hotel forecourt, a small car with its boot lid raised beside her and travel bags waiting on the kerb",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "everyday",
+    "dongtan",
+    "retro",
+    "resort",
+    "adventure",
+    "evening"
+   ],
+   "worlds": {
+    "fantasy": {
+     "ko": "짐마차에 짐 싣기",
+     "en": "an inn yard at dawn, a cargo wagon with its tailboard down beside her and leather travel trunks stacked by its wheel"
+    },
+    "steampunk": {
+     "ko": "증기차 짐칸",
+     "en": "a station forecourt, a brass steam car with its luggage rack open beside her, hatboxes and steamer trunks on the kerb"
+    },
+    "cyberpunk": {
+     "ko": "호버카 뒷문",
+     "en": "a skyport drop-off lane, a hover car with its rear hatch raised beside her, sleek cases waiting on the lit kerb"
+    }
+   },
+   "start_median": true
+  },
+  {
+   "key": "car_door",
+   "group": "ride",
+   "ko": "열린 차 문 앞",
+   "en": "a city street at dusk, the door of a small car swung open beside her as she steps out onto the pavement",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "evening",
+    "everyday",
+    "dongtan",
+    "retro",
+    "subculture",
+    "bridal"
+   ],
+   "worlds": {
+    "fantasy": {
+     "ko": "금빛 마차에서 내리기",
+     "en": "a torchlit palace forecourt at dusk, the little door of a gilded carriage swung open beside her as she steps down onto the cobbles"
+    },
+    "steampunk": {
+     "ko": "극장 앞 증기차",
+     "en": "a gaslit theatre kerb at dusk, the door of a brass steam car swung open beside her as she steps out"
+    },
+    "cyberpunk": {
+     "ko": "타워 입구의 호버카",
+     "en": "a glowing tower entrance at dusk, the gull-wing door of a hover car raised beside her as she steps out"
+    }
+   },
+   "start_median": true
+  },
+  {
+   "key": "car_convertible",
+   "group": "ride",
+   "ko": "오픈카 조수석",
+   "en": "the passenger seat of an open-top car cruising slowly along a sunny coast road, the sea glittering beside the road",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "everyday",
+    "dongtan",
+    "resort",
+    "retro",
+    "evening"
+   ],
+   "worlds": {
+    "steampunk": {
+     "ko": "증기 오픈카 조수석",
+     "en": "the leather passenger seat of an open brass steam car puffing slowly along a sunny coast road, the sea glittering below"
+    },
+    "cyberpunk": {
+     "ko": "오픈 호버카 조수석",
+     "en": "the passenger seat of an open-top hover car gliding slowly along a sunlit coastal skyway, the sea glittering below"
+    }
+   },
+   "worlds_only": [
+    "steampunk",
+    "cyberpunk"
+   ],
+   "start_median": true
+  },
+  {
+   "key": "camper_van",
+   "group": "ride",
+   "ko": "캠핑카의 밤",
+   "en": "the open side door of a camper van parked by a lake at night, fairy lights strung inside, a fold-out step and the stars above",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "homewear",
+    "everyday",
+    "dongtan",
+    "adventure",
+    "active"
+   ],
+   "worlds": {
+    "fantasy": {
+     "ko": "호숫가 포장 짐마차",
+     "en": "the open back of a painted travelling wagon parked by a lake at night, lanterns strung inside, a fold-down step and the stars above"
+    },
+    "steampunk": {
+     "ko": "호숫가 증기 캐러밴",
+     "en": "the open door of a brass-and-wood caravan wagon parked by a lake at night, warm lamps inside, a fold-down step and the stars above"
+    },
+    "cyberpunk": {
+     "ko": "호숫가 캠핑 포드",
+     "en": "the open hatch of a camper pod parked by a lake at night, soft strip lights inside, a fold-out step and the stars above"
+    }
+   },
+   "start_median": true
+  },
+  {
+   "key": "food_truck",
+   "group": "ride",
+   "ko": "푸드트럭 앞",
+   "en": "the serving window of a bright food truck at an evening street market, a counter ledge with paper napkins and string lights overhead",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "everyday",
+    "dongtan",
+    "subculture",
+    "retro",
+    "active",
+    "roleplay"
+   ],
+   "worlds": {
+    "fantasy": {
+     "ko": "저녁 장터의 음식 수레",
+     "en": "the serving hatch of a painted food wagon at an evening market, a ledge of wooden bowls and lanterns overhead"
+    },
+    "steampunk": {
+     "ko": "증기 음식 마차",
+     "en": "the serving hatch of a brass food wagon with a steaming copper kettle at an evening market, string lamps overhead"
+    },
+    "cyberpunk": {
+     "ko": "야시장 호버 푸드트럭",
+     "en": "the glowing serving window of a hover food truck at a night market, a counter ledge and floating lights overhead"
+    }
+   },
+   "start_median": true
+  },
+  {
+   "key": "golf_cart",
+   "group": "ride",
+   "ko": "골프 카트",
+   "en": "the bench seat of a white golf cart parked at the edge of a sunny green, a bag of clubs strapped on the back",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "active",
+    "everyday",
+    "dongtan",
+    "retro"
+   ],
+   "worlds": {
+    "steampunk": {
+     "ko": "증기 런어바웃",
+     "en": "the padded bench of a little brass steam runabout parked at the edge of a sunny green, a bag of clubs strapped on the back"
+    },
+    "cyberpunk": {
+     "ko": "호버 골프 카트",
+     "en": "the bench seat of a hovering golf cart parked at the edge of a sunny green, a bag of clubs strapped on the back"
+    }
+   },
+   "worlds_only": [
+    "steampunk",
+    "cyberpunk"
+   ],
+   "start_median": true
+  },
+  {
+   "key": "scooter_cafe",
+   "group": "ride",
+   "ko": "카페 앞 스쿠터",
+   "en": "a sunny roadside café terrace, a classic motor scooter parked on its stand at the kerb beside her",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "everyday",
+    "dongtan",
+    "subculture",
+    "retro",
+    "adventure"
+   ],
+   "worlds": {
+    "steampunk": {
+     "ko": "카페 앞 증기 벨로시페드",
+     "en": "a sunny café terrace on a gaslit street, a little steam velocipede with brass pipes parked on its stand at the kerb beside her"
+    },
+    "cyberpunk": {
+     "ko": "카페 앞 마그레브 바이크",
+     "en": "a sunny café terrace between glass towers, a maglev bike hovering on its stand at the kerb beside her"
+    }
+   },
+   "worlds_only": [
+    "steampunk",
+    "cyberpunk"
+   ],
+   "start_median": true
+  },
+  {
+   "key": "moto_layby",
+   "group": "ride",
+   "ko": "해안 도로 바이크 쉼터",
+   "en": "a lay-by on a winding coastal road, a classic motorbike parked on its stand beside her and the sea far below",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "subculture",
+    "everyday",
+    "dongtan",
+    "adventure",
+    "active",
+    "retro"
+   ],
+   "worlds": {
+    "steampunk": {
+     "ko": "해안 길 증기 모터 벨로시페드",
+     "en": "a lay-by on a winding coastal road, a steam motor-velocipede with gleaming brass pipes parked beside her and the sea far below"
+    },
+    "cyberpunk": {
+     "ko": "해안 스카이웨이 마그레브 바이크",
+     "en": "a lay-by on a winding coastal skyway, a maglev bike hovering on its stand beside her and the sea far below"
+    }
+   },
+   "worlds_only": [
+    "steampunk",
+    "cyberpunk"
+   ],
+   "start_median": true
+  },
+  {
+   "key": "bike_basket",
+   "group": "ride",
+   "ko": "꽃바구니 자전거 길",
+   "en": "a quiet flower-lined lane, a city bicycle with a wicker front basket full of flowers",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "everyday",
+    "dongtan",
+    "retro",
+    "subculture",
+    "active"
+   ],
+   "worlds": {
+    "steampunk": {
+     "ko": "꽃길의 페니파딩",
+     "en": "a quiet flower-lined lane, a tall penny-farthing with a wicker basket of flowers on its handlebars"
+    },
+    "cyberpunk": {
+     "ko": "꽃길의 라이트휠 전기 자전거",
+     "en": "a quiet flower-lined skywalk, a light-wheel e-bike with a wicker basket of flowers on its handlebars"
+    }
+   },
+   "worlds_only": [
+    "steampunk",
+    "cyberpunk"
+   ],
+   "start_median": true
+  },
+  {
+   "key": "bike_riverside",
+   "group": "ride",
+   "ko": "강변 자전거 길",
+   "en": "a sunny riverside cycle path, a bicycle beneath her, reeds and a low stone wall along the water",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "active",
+    "everyday",
+    "dongtan",
+    "retro"
+   ],
+   "worlds": {
+    "steampunk": {
+     "ko": "강변 길의 증기 자전거",
+     "en": "a sunny riverside path, a brass-trimmed steam bicycle beneath her, reeds and a low stone wall along the water"
+    },
+    "cyberpunk": {
+     "ko": "강변 길의 라이트휠 자전거",
+     "en": "a sunny riverside cycle path, a light-wheel e-bike beneath her, reeds and a glowing guard rail along the water"
+    }
+   },
+   "worlds_only": [
+    "steampunk",
+    "cyberpunk"
+   ],
+   "start_median": true
+  },
+  {
+   "key": "ekick_scooter",
+   "group": "ride",
+   "ko": "전동 킥보드 산책로",
+   "en": "a smooth riverside promenade, an electric kick scooter under her feet and the water glittering beside her",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "everyday",
+    "dongtan",
+    "active",
+    "subculture"
+   ],
+   "worlds": {
+    "steampunk": {
+     "ko": "증기 킥 스쿠터",
+     "en": "a smooth riverside promenade, a little brass steam kick-scooter with a tiny puffing boiler under her feet"
+    },
+    "cyberpunk": {
+     "ko": "라이트휠 킥 스쿠터",
+     "en": "a smooth glowing skywalk by the river, a light-wheel kick scooter under her feet"
+    }
+   },
+   "worlds_only": [
+    "steampunk",
+    "cyberpunk"
+   ],
+   "start_median": true
+  },
+  {
+   "key": "roller_boardwalk",
+   "group": "ride",
+   "ko": "해변 산책로 롤러스케이트",
+   "en": "a sunny seaside boardwalk lined with palms, smooth planks stretching ahead for roller skating",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "active",
+    "everyday",
+    "dongtan",
+    "retro",
+    "subculture"
+   ],
+   "worlds": {
+    "fantasy": {
+     "ko": "바닷가 돌 산책로",
+     "en": "a sunny seaside promenade of smooth pale flagstones lined with palms, stretching ahead for skating"
+    },
+    "steampunk": {
+     "ko": "바닷가 판자 산책로",
+     "en": "a sunny seaside boardwalk of polished planks lined with palms and brass lamp posts, stretching ahead for skating"
+    },
+    "cyberpunk": {
+     "ko": "바닷가 빛 산책로",
+     "en": "a sunny seaside skywalk of smooth glowing panels lined with palms, stretching ahead for skating"
+    }
+   },
+   "start_median": true
+  },
+  {
+   "key": "skate_park",
+   "group": "ride",
+   "ko": "스케이트 파크",
+   "en": "a sunny concrete skate park of smooth bowls and ramps, a low ledge along the edge",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "subculture",
+    "active",
+    "everyday",
+    "dongtan",
+    "retro"
+   ],
+   "worlds": {
+    "fantasy": {
+     "ko": "돌 광장의 마법 파도보드",
+     "en": "a smooth stone plaza of gentle ramps where enchanted wave-boards hover a hand's width above the flagstones"
+    },
+    "steampunk": {
+     "ko": "벽돌 마당의 증기 보드",
+     "en": "a brick yard of smooth wooden ramps where little steam boards roll and puff across the court"
+    },
+    "cyberpunk": {
+     "ko": "빛 경사로의 반중력 보드 광장",
+     "en": "a skate plaza of glowing ramps between glass towers where anti-gravity boards hover above the deck"
+    }
+   },
+   "start_median": true
+  },
+  {
+   "key": "surf_beach",
+   "group": "board",
+   "ko": "서핑 해변",
+   "en": "a surf beach of clean rolling waves under a bright sky, longboards stuck upright in the sand and the white-water line beyond",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "swimwear",
+    "active",
+    "resort",
+    "everyday",
+    "dongtan",
+    "retro"
+   ],
+   "worlds": {
+    "fantasy": {
+     "ko": "파도 해변의 마법 파도보드",
+     "en": "a bright shore of rolling waves, enchanted wave-boards of pale carved wood stuck upright in the sand, their runes glinting"
+    },
+    "steampunk": {
+     "ko": "파도 해변의 증기 보드",
+     "en": "a bright shore of rolling waves, polished wooden steam boards with little brass fins stuck upright in the sand"
+    },
+    "cyberpunk": {
+     "ko": "파도 해변의 반중력 보드",
+     "en": "a bright shore of rolling waves, sleek anti-gravity boards stuck upright in the sand, their edges softly glowing"
+    }
+   },
+   "start_median": true
+  },
+  {
+   "key": "wave_pool_surf",
+   "group": "board",
+   "ko": "워터파크 서핑 풀",
+   "en": "a water park surf pool, a smooth machine-made wave curling along a long tiled lagoon, bodyboards racked by the edge",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "swimwear",
+    "active",
+    "retro"
+   ],
+   "worlds": {
+    "fantasy": {
+     "ko": "마법 파도 연못",
+     "en": "a festival wave lagoon of the realm, a smooth enchanted wave curling along a long pool of pale stone, carved boards racked by the edge"
+    },
+    "steampunk": {
+     "ko": "증기 파도 풀",
+     "en": "a steam-driven wave pool, a smooth wave curling along a long tiled lagoon under a glass-and-iron roof, wooden boards racked by the edge"
+    },
+    "cyberpunk": {
+     "ko": "홀로그램 파도 풀",
+     "en": "a hologram-lit surf pool, a smooth wave curling along a long glowing lagoon, anti-gravity boards racked by the edge"
+    }
+   },
+   "start_median": true
+  },
+  {
+   "key": "wake_lake",
+   "group": "board",
+   "ko": "웨이크보드 호수",
+   "en": "a calm lake behind a tow boat, a long white wake curling behind it and pines along the shore",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "swimwear",
+    "active"
+   ],
+   "worlds": {
+    "fantasy": {
+     "ko": "바람돛 보드 호수",
+     "en": "a calm enchanted lake, a charmed towline drawing her wind-sail board through a long white wake, pines along the shore"
+    },
+    "steampunk": {
+     "ko": "증기 보트 견인 호수",
+     "en": "a calm lake behind a little brass steam launch, its towline drawing her wooden board through a long white wake"
+    },
+    "cyberpunk": {
+     "ko": "호버 견인 드론 호수",
+     "en": "a calm lake behind a sleek tow drone, its glowing towline drawing her board through a long white wake"
+    }
+   },
+   "start_median": true
+  },
+  {
+   "key": "waterski_bay",
+   "group": "board",
+   "ko": "수상스키 만",
+   "en": "a sunny bay behind a speedboat, a towline stretched taut ahead, spray rising from her water skis",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "swimwear",
+    "active",
+    "retro"
+   ],
+   "worlds": {
+    "steampunk": {
+     "ko": "증기 쾌속정 수상스키",
+     "en": "a sunny bay behind a brass steam speedboat, a towline stretched taut ahead, spray rising from her wooden water skis"
+    },
+    "cyberpunk": {
+     "ko": "호버 쾌속정 수상스키",
+     "en": "a sunny bay behind a sleek hover speedboat, a glowing towline stretched taut ahead, spray rising from her skis"
+    }
+   },
+   "worlds_only": [
+    "steampunk",
+    "cyberpunk"
+   ],
+   "start_median": true
+  },
+  {
+   "key": "sup_cove",
+   "group": "board",
+   "ko": "패들보드 만",
+   "en": "a glassy turquoise cove in the morning, a stand-up paddleboard gliding over clear shallow water",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "swimwear",
+    "active"
+   ],
+   "worlds": {
+    "fantasy": {
+     "ko": "바람돛 보드 만",
+     "en": "a glassy turquoise cove in the morning, a long carved wind-sail board gliding over clear water"
+    },
+    "steampunk": {
+     "ko": "놋쇠 장식 패들보드",
+     "en": "a glassy turquoise cove in the morning, a long varnished wooden paddleboard with brass fittings gliding over clear water"
+    },
+    "cyberpunk": {
+     "ko": "빛 테두리 패들보드",
+     "en": "a glassy turquoise cove in the morning, a slim glowing-edged paddleboard gliding over clear water"
+    }
+   },
+   "start_median": true
+  },
+  {
+   "key": "kayak_river",
+   "group": "board",
+   "ko": "카약 강",
+   "en": "a calm green river between wooded banks, a bright kayak drifting on the clear water",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "active",
+    "swimwear",
+    "adventure",
+    "everyday"
+   ],
+   "worlds": {
+    "fantasy": {
+     "ko": "자작나무 카누",
+     "en": "a calm river between ancient wooded banks, a slim birch-bark canoe drifting on the clear water"
+    },
+    "steampunk": {
+     "ko": "놋쇠 장식 카누",
+     "en": "a calm river between wooded banks, a varnished wooden canoe with brass trim drifting on the clear water"
+    },
+    "cyberpunk": {
+     "ko": "빛나는 카약",
+     "en": "a calm river between glass-walled banks, a slim kayak with glowing trim drifting on the clear water"
+    }
+   },
+   "start_median": true
+  },
+  {
+   "key": "raft_river",
+   "group": "board",
+   "ko": "래프팅 협곡",
+   "en": "a rubber raft riding the white water of a rocky river gorge, spray flying off the rocks",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "active",
+    "adventure",
+    "swimwear"
+   ],
+   "worlds": {
+    "fantasy": {
+     "ko": "협곡의 나무 뗏목",
+     "en": "a sturdy wooden raft riding the white water of a rocky gorge, spray flying off the rocks"
+    },
+    "steampunk": {
+     "ko": "협곡의 캔버스 보트",
+     "en": "a canvas-and-brass river boat riding the white water of a rocky gorge, spray flying off the rocks"
+    },
+    "cyberpunk": {
+     "ko": "협곡의 호버 래프트",
+     "en": "a hover-raft skimming the white water of a rocky gorge, spray flying off the rocks"
+    }
+   },
+   "start_median": true
+  },
+  {
+   "key": "jetski_jetty",
+   "group": "board",
+   "ko": "제트스키 선착장",
+   "en": "a sunny marina jetty, a jet ski idling at the dock in turquoise water",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "swimwear",
+    "active",
+    "resort"
+   ],
+   "worlds": {
+    "steampunk": {
+     "ko": "증기 수상 스쿠터",
+     "en": "a sunny harbour jetty, a little brass steam water-scooter idling at the dock in turquoise water"
+    },
+    "cyberpunk": {
+     "ko": "호버 제트스키",
+     "en": "a sunny marina jetty, a sleek hover jet ski idling above the turquoise water"
+    }
+   },
+   "worlds_only": [
+    "steampunk",
+    "cyberpunk"
+   ],
+   "start_median": true
+  },
+  {
+   "key": "banana_boat",
+   "group": "board",
+   "ko": "바나나보트",
+   "en": "a bright yellow banana boat bobbing on a turquoise bay, its grab handles along the top and the beach close behind",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "swimwear",
+    "active",
+    "resort"
+   ],
+   "worlds": {
+    "fantasy": {
+     "ko": "돛천 부표",
+     "en": "a long float of stitched painted sailcloth with rope handles bobbing on a turquoise bay, the beach close behind"
+    },
+    "steampunk": {
+     "ko": "줄무늬 캔버스 부표",
+     "en": "a long striped canvas float with brass grab handles bobbing on a turquoise bay, the beach close behind"
+    },
+    "cyberpunk": {
+     "ko": "빛나는 바나나 부표",
+     "en": "a long glowing inflatable float with grab handles bobbing on a turquoise bay, the beach close behind"
+    }
+   },
+   "start_median": true
+  },
+  {
+   "key": "swan_boat",
+   "group": "board",
+   "ko": "공원 호수 오리배",
+   "en": "a swan-shaped pedal boat on a calm park lake, willow trees along the shore",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "everyday",
+    "dongtan",
+    "retro",
+    "subculture",
+    "evening"
+   ],
+   "worlds": {
+    "fantasy": {
+     "ko": "성 호수의 백조 뱃머리 배",
+     "en": "a little swan-prowed boat on a calm castle lake, willow trees along the shore"
+    },
+    "steampunk": {
+     "ko": "놋쇠 백조 페달 보트",
+     "en": "a swan-shaped brass pedal boat on a calm park lake, willow trees and gas lamps along the shore"
+    },
+    "cyberpunk": {
+     "ko": "빛나는 백조 페달 포드",
+     "en": "a swan-shaped pedal pod with glowing trim on a calm park lake, willow trees along the shore"
+    }
+   },
+   "start_median": true
+  },
+  {
+   "key": "canal_gondola",
+   "group": "board",
+   "ko": "운하 곤돌라",
+   "en": "a cushioned seat in a black gondola gliding along a narrow canal between old pastel houses, its oarsman out of sight behind her",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "everyday",
+    "evening",
+    "dongtan",
+    "retro",
+    "bridal"
+   ],
+   "worlds": {
+    "fantasy": {
+     "ko": "동화 도시 운하의 등불 배",
+     "en": "a cushioned seat in a lantern-hung boat gliding along a canal of a fairy-tale city, its boatman out of sight behind her"
+    },
+    "steampunk": {
+     "ko": "가스등 운하의 증기 곤돌라",
+     "en": "a cushioned seat in a little brass steam gondola puffing along a narrow canal between gaslit houses"
+    },
+    "cyberpunk": {
+     "ko": "유리 탑 운하의 호버 곤돌라",
+     "en": "a cushioned seat in a sleek hover gondola gliding along a glowing canal between glass towers"
+    }
+   },
+   "start_median": true
+  },
+  {
+   "key": "yacht_helm",
+   "group": "board",
+   "ko": "요트 조타석",
+   "en": "the helm of a white sailing yacht heeling gently on a blue sea, the wheel in front of her and taut sails above",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "swimwear",
+    "resort",
+    "everyday",
+    "active",
+    "evening"
+   ],
+   "worlds": {
+    "fantasy": {
+     "ko": "작은 범선의 조타륜",
+     "en": "the carved helm of a small sailing ship on a blue sea, the wheel in front of her and white sails above"
+    },
+    "steampunk": {
+     "ko": "증기 요트의 놋쇠 조타륜",
+     "en": "the brass helm of a steam yacht on a blue sea, the wheel in front of her and striped sails above"
+    },
+    "cyberpunk": {
+     "ko": "수중익 요트 조타석",
+     "en": "the helm of a sleek hydrofoil yacht skimming a blue sea, a glowing wheel in front of her"
+    }
+   },
+   "start_median": true
+  },
+  {
+   "key": "plane_window",
+   "group": "sky",
+   "ko": "비행기 창가 자리",
+   "en": "a window seat in an airplane cabin above the clouds, sunlight through the small oval window and a fold-down tray",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "everyday",
+    "dongtan",
+    "evening",
+    "retro",
+    "resort"
+   ],
+   "worlds": {
+    "fantasy": {
+     "ko": "하늘 범선 선실 창가",
+     "en": "a cushioned window seat in the cabin of a winged sky-galleon above the clouds, sunlight through a round porthole"
+    },
+    "steampunk": {
+     "ko": "놋쇠 비행정 선실 창가",
+     "en": "a padded window seat in the cabin of a brass flying boat above the clouds, a round porthole and a fold-down table"
+    },
+    "cyberpunk": {
+     "ko": "VTOL 셔틀 창가",
+     "en": "a window seat in a VTOL shuttle cabin above the clouds, a wide window and a fold-down tray"
+    }
+   },
+   "start_median": true
+  },
+  {
+   "key": "plane_stairs",
+   "group": "sky",
+   "ko": "비행기 트랩",
+   "en": "the boarding stairs of a small plane on a sunny airfield, the open cabin door at the top and a hand rail",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "everyday",
+    "dongtan",
+    "evening",
+    "retro",
+    "roleplay",
+    "resort"
+   ],
+   "worlds": {
+    "fantasy": {
+     "ko": "하늘 선착장의 승선 다리",
+     "en": "the boarding gangway of a winged sky-galleon moored at a cliffside sky-dock, a rope rail and the clouds below"
+    },
+    "steampunk": {
+     "ko": "잔디 비행장의 복엽기 트랩",
+     "en": "the boarding steps of a biplane on a sunny grass airfield, the open cabin door at the top and a brass hand rail"
+    },
+    "cyberpunk": {
+     "ko": "옥상 VTOL 승강 램프",
+     "en": "the boarding ramp of a VTOL craft on a rooftop pad, the open hatch at the top and a glowing hand rail"
+    }
+   },
+   "start_median": true
+  },
+  {
+   "key": "plane_cockpit",
+   "group": "sky",
+   "ko": "비행기 조종석",
+   "en": "the cockpit of a small propeller plane resting on the airfield before take-off, the control yoke in front of her and blue sky through the windscreen",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "roleplay",
+    "everyday",
+    "adventure",
+    "active",
+    "retro"
+   ],
+   "worlds": {
+    "fantasy": {
+     "ko": "하늘 범선 조타 갑판",
+     "en": "the helm deck of a winged sky-galleon moored at a sky-dock, its carved steering wheel in front of her and clouds beyond the bow"
+    },
+    "steampunk": {
+     "ko": "복엽기 조종석",
+     "en": "the open cockpit of a brass biplane resting on a grass airfield, the control stick in front of her and dials gleaming"
+    },
+    "cyberpunk": {
+     "ko": "VTOL 조종석",
+     "en": "the cockpit of a VTOL craft resting on a rooftop pad, the control yoke in front of her and holographic gauges glowing softly"
+    }
+   },
+   "start_median": true
+  },
+  {
+   "key": "airship_deck",
+   "group": "sky",
+   "ko": "비행선 갑판",
+   "en": "the open promenade deck of a passenger airship drifting above the clouds, a polished wooden rail and the sky all around",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "everyday",
+    "evening",
+    "dongtan",
+    "retro",
+    "adventure",
+    "costume"
+   ],
+   "worlds": {
+    "fantasy": {
+     "ko": "마법 하늘배 갑판",
+     "en": "the deck of a magic sky-ship sailing above the clouds, a carved rail and billowing sails overhead"
+    },
+    "steampunk": {
+     "ko": "놋쇠 비행선 산책 갑판",
+     "en": "the promenade deck of a brass dirigible above the clouds, a polished wooden rail and the great gasbag overhead"
+    },
+    "cyberpunk": {
+     "ko": "스카이 요트 갑판",
+     "en": "the open deck of a sleek sky yacht drifting above the cloud layer, a glass rail and the sky all around"
+    }
+   },
+   "start_median": true
+  },
+  {
+   "key": "airship_cabin",
+   "group": "sky",
+   "ko": "비행선 곤돌라 라운지",
+   "en": "the lounge of an airship gondola, armchairs before wide slanted windows and clouds drifting below",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "evening",
+    "everyday",
+    "dongtan",
+    "retro"
+   ],
+   "worlds": {
+    "fantasy": {
+     "ko": "하늘배 선실 라운지",
+     "en": "the lounge of a magic sky-ship, carved armchairs before tall leaded windows and clouds drifting below"
+    },
+    "steampunk": {
+     "ko": "비행선 곤돌라 라운지",
+     "en": "the lounge of a brass dirigible gondola, velvet armchairs before wide slanted windows and clouds drifting below"
+    },
+    "cyberpunk": {
+     "ko": "스카이 요트 라운지",
+     "en": "the lounge of a sky yacht, sleek armchairs before a curved glass wall and clouds drifting below"
+    }
+   },
+   "start_median": true
+  },
+  {
+   "key": "glider_launch",
+   "group": "sky",
+   "ko": "행글라이더 이륙장",
+   "en": "a grassy hilltop launch ramp above a wide valley, a hang glider's bright wing above her and its control bar in front of her",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "active",
+    "adventure"
+   ],
+   "worlds": {
+    "fantasy": {
+     "ko": "깃털 비단 글라이더 이륙",
+     "en": "a grassy clifftop launch above a wide valley, a feather-silk glider wing above her and its wooden bar in front of her"
+    },
+    "steampunk": {
+     "ko": "오니솝터 날개 이륙",
+     "en": "a grassy hilltop launch above a wide valley, the brass-ribbed wing of an ornithopter glider above her and its bar in front of her"
+    },
+    "cyberpunk": {
+     "ko": "라이트윙 글라이더 이륙",
+     "en": "a rooftop launch edge above a wide valley of towers, a light-wing glider frame above her and its bar in front of her"
+    }
+   },
+   "start_median": true
+  },
+  {
+   "key": "paraglider_sky",
+   "group": "sky",
+   "ko": "패러글라이딩",
+   "en": "high above a green valley under a bright paraglider canopy, the lines rising from her harness",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "active",
+    "adventure",
+    "everyday"
+   ],
+   "worlds": {
+    "fantasy": {
+     "ko": "깃털 비단 날개",
+     "en": "high above a green valley under a feather-silk glider canopy, the silk lines rising from her harness"
+    },
+    "steampunk": {
+     "ko": "기운 비단 글라이더",
+     "en": "high above a green valley under a patched silk glider canopy with brass fittings, the lines rising from her harness"
+    },
+    "cyberpunk": {
+     "ko": "라이트윙 캐노피",
+     "en": "high above a valley of towers under a light-wing glider canopy, glowing lines rising from her harness"
+    }
+   },
+   "start_median": true
+  },
+  {
+   "key": "zipline",
+   "group": "sky",
+   "ko": "짚라인",
+   "en": "a zipline across a forested gorge, a steel cable stretching ahead and treetops far below",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "active",
+    "adventure",
+    "everyday"
+   ],
+   "worlds": {
+    "fantasy": {
+     "ko": "협곡을 건너는 밧줄 활강",
+     "en": "a rope slide across a forested gorge, a thick rope stretching ahead and treetops far below"
+    },
+    "steampunk": {
+     "ko": "놋쇠 도르래 줄",
+     "en": "a brass pulley line across a forested gorge, a cable stretching ahead and treetops far below"
+    },
+    "cyberpunk": {
+     "ko": "빛나는 케이블 라인",
+     "en": "a glowing cable line across a gorge between towers, the line stretching ahead and treetops far below"
+    }
+   },
+   "start_median": true
+  },
+  {
+   "key": "balloon_basket",
+   "group": "sky",
+   "ko": "열기구 바구니",
+   "en": "the wicker basket of a hot-air balloon drifting at sunrise, the rim at her waist, the bright envelope above and valleys far below",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "everyday",
+    "dongtan",
+    "adventure",
+    "retro",
+    "resort"
+   ],
+   "worlds": {
+    "fantasy": {
+     "ko": "등불 풍선 바구니",
+     "en": "the woven basket of a lantern balloon drifting at sunrise, a great glowing paper envelope above and valleys far below"
+    },
+    "steampunk": {
+     "ko": "놋쇠 조각보 풍선",
+     "en": "the basket of a patchwork balloon with brass fittings drifting at sunrise, its striped envelope above and valleys far below"
+    },
+    "cyberpunk": {
+     "ko": "홀로 풍선",
+     "en": "the rim of a holo-balloon cabin drifting at sunrise, its shimmering envelope above and valleys far below"
+    }
+   },
+   "start_median": true
+  },
+  {
+   "key": "snowboard_slope",
+   "group": "winter",
+   "ko": "스노보드 슬로프",
+   "en": "a sunny snowboard run with soft powder along its edges, pines and a lift line beyond",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "active",
+    "everyday",
+    "dongtan",
+    "retro",
+    "adventure"
+   ],
+   "worlds": {
+    "fantasy": {
+     "ko": "눈 비탈의 마법 눈보드",
+     "en": "a sunny snowy slope where enchanted snow-boards of carved wood glide over the powder, pines beyond"
+    },
+    "steampunk": {
+     "ko": "눈 비탈의 증기 보드",
+     "en": "a sunny snowy slope, polished wooden snow boards with brass bindings waiting at the top, pines beyond"
+    },
+    "cyberpunk": {
+     "ko": "눈 비탈의 반중력 보드",
+     "en": "a sunny snow slope, anti-gravity snowboards hovering over the powder, pines and a glowing lift line beyond"
+    }
+   },
+   "start_median": true
+  },
+  {
+   "key": "ride_bumper",
+   "group": "rides",
+   "ko": "범퍼카",
+   "en": "a bumper-car arena under a ring of coloured bulb lights, little padded cars with tall poles on a shiny floor",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "everyday",
+    "dongtan",
+    "subculture",
+    "retro"
+   ],
+   "worlds": {
+    "fantasy": {
+     "ko": "축제 천막의 범퍼 수레",
+     "en": "a festival tent of the realm, little padded wooden bump-carts gliding on a polished floor under strings of lanterns"
+    },
+    "steampunk": {
+     "ko": "태엽 범퍼카 홀",
+     "en": "a clockwork bump-car hall, little brass carts with tall rods on a polished floor under glowing gas globes"
+    },
+    "cyberpunk": {
+     "ko": "홀로그램 범퍼 아레나",
+     "en": "a hologram bumper arena of glowing hover pods on a mirror floor under rings of coloured light"
+    }
+   },
+   "start_median": true
+  },
+  {
+   "key": "ride_pirate",
+   "group": "rides",
+   "ko": "바이킹",
+   "en": "a swinging pirate-ship ride high in its arc above an amusement park, rows of benches with padded lap bars",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "everyday",
+    "dongtan",
+    "subculture",
+    "retro",
+    "active"
+   ],
+   "worlds": {
+    "fantasy": {
+     "ko": "축제의 흔들 배",
+     "en": "a carved wooden swing-ship ride high in its arc above a carnival of the realm, benches with padded bars"
+    },
+    "steampunk": {
+     "ko": "태엽 흔들 배",
+     "en": "a clockwork swinging ship-ride of brass and timber high in its arc above a fairground, benches with padded bars"
+    },
+    "cyberpunk": {
+     "ko": "홀로그램 흔들 배",
+     "en": "a hologram-lit swinging ship-ride high in its arc above a glowing fairground, benches with padded bars"
+    }
+   },
+   "start_median": true
+  },
+  {
+   "key": "ride_droptower",
+   "group": "rides",
+   "ko": "자이로드롭",
+   "en": "the seat of a drop-tower ride paused at the very top, padded shoulder bars and the whole park spread far below",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "everyday",
+    "dongtan",
+    "subculture",
+    "active"
+   ],
+   "worlds": {
+    "fantasy": {
+     "ko": "축제 탑 놀이기구",
+     "en": "the seat of a tall carved festival tower-ride paused at the very top, padded bars and the carnival far below"
+    },
+    "steampunk": {
+     "ko": "증기 승강 탑",
+     "en": "the seat of a steam-lift tower ride paused at the very top, brass gears beside her and the fairground far below"
+    },
+    "cyberpunk": {
+     "ko": "홀로그램 드롭 타워",
+     "en": "the seat of a hologram drop tower paused at the very top, padded bars and the glowing park far below"
+    }
+   },
+   "start_median": true
+  },
+  {
+   "key": "ride_teacup",
+   "group": "rides",
+   "ko": "회전찻잔",
+   "en": "a giant spinning teacup ride, a curved padded bench inside the cup and a round wheel in the middle to spin it",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "everyday",
+    "dongtan",
+    "retro",
+    "subculture"
+   ],
+   "worlds": {
+    "fantasy": {
+     "ko": "축제의 도자기 찻잔",
+     "en": "a giant painted porcelain teacup ride of a festival of the realm, a curved bench inside and a round wheel in the middle"
+    },
+    "steampunk": {
+     "ko": "태엽 찻잔 놀이기구",
+     "en": "a clockwork teacup ride of enamelled cups on a brass turntable, a curved bench inside and a round wheel in the middle"
+    },
+    "cyberpunk": {
+     "ko": "홀로그램 찻잔",
+     "en": "a hologram teacup ride of glowing cups, a curved padded bench inside and a round wheel in the middle"
+    }
+   },
+   "start_median": true
+  },
+  {
+   "key": "ride_coaster",
+   "group": "rides",
+   "ko": "롤러코스터 맨 앞 칸",
+   "en": "the front car of a roller coaster at the top of its first climb, a padded lap bar across her and the track dropping away ahead",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "everyday",
+    "dongtan",
+    "subculture",
+    "active",
+    "retro"
+   ],
+   "worlds": {
+    "fantasy": {
+     "ko": "축제의 나무 코스터",
+     "en": "the front seat of a carved wooden coaster of a festival of the realm at the top of its climb, a padded bar across her"
+    },
+    "steampunk": {
+     "ko": "태엽 놋쇠 코스터",
+     "en": "the front seat of a clockwork brass roller coaster at the top of its climb, a padded bar across her"
+    },
+    "cyberpunk": {
+     "ko": "마그레브 코스터",
+     "en": "the front seat of a hologram-lit maglev coaster at the top of its climb, a padded bar across her"
+    }
+   },
+   "start_median": true
+  },
+  {
+   "key": "ride_carousel",
+   "group": "rides",
+   "ko": "회전목마 타기",
+   "en": "a painted carousel horse on its brass pole, the carousel turning slowly under warm bulb lights",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "everyday",
+    "dongtan",
+    "retro",
+    "subculture",
+    "roleplay",
+    "costume"
+   ],
+   "worlds": {
+    "fantasy": {
+     "ko": "축제의 나무 회전목마",
+     "en": "a carved wooden carousel horse on a gilded pole, a festival carousel turning slowly under lanterns"
+    },
+    "steampunk": {
+     "ko": "증기 회전목마",
+     "en": "a brass-and-enamel carousel horse on a twisted brass pole, a steam carousel turning slowly under gas globes"
+    },
+    "cyberpunk": {
+     "ko": "홀로그램 회전목마",
+     "en": "a glowing carousel mount on a light pole, a hologram carousel turning slowly under rings of light"
+    }
+   },
+   "start_median": true
+  },
+  {
+   "key": "tram_stop",
+   "group": "ride",
+   "ko": "트램 정류장",
+   "en": "a tram stop on a leafy boulevard, a bench under a glass shelter and a vintage tram gliding in along the rails",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "everyday",
+    "dongtan",
+    "retro",
+    "evening",
+    "subculture"
+   ],
+   "worlds": {
+    "fantasy": {
+     "ko": "마법 케이블 수레 정류장",
+     "en": "a stop of the realm's enchanted cable-tram on a leafy boulevard, a carved bench under a vine canopy and the tram gliding in"
+    },
+    "steampunk": {
+     "ko": "증기 트램 정류장",
+     "en": "a steam tram stop on a leafy boulevard, a wrought-iron bench and a brass steam tram gliding in along the rails"
+    },
+    "cyberpunk": {
+     "ko": "마그레브 트램 정류장",
+     "en": "a maglev tram stop on a leafy boulevard, a glass bench under a lit shelter and a sleek tram gliding in"
+    }
+   },
+   "start_median": true
+  },
+  {
+   "key": "tram_inside",
+   "group": "ride",
+   "ko": "트램 안",
+   "en": "inside a vintage tram rolling through the city, wooden bench seats, brass grab poles and sunlight through the windows",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "everyday",
+    "dongtan",
+    "retro",
+    "evening",
+    "subculture"
+   ],
+   "worlds": {
+    "fantasy": {
+     "ko": "마법 케이블 수레 안",
+     "en": "inside an enchanted cable-tram gliding over the rooftops, carved bench seats, brass poles and sunlight through the windows"
+    },
+    "steampunk": {
+     "ko": "증기 트램 안",
+     "en": "inside a brass steam tram rolling through the gaslit city, wooden bench seats, brass grab poles and sunlight through the windows"
+    },
+    "cyberpunk": {
+     "ko": "마그레브 트램 안",
+     "en": "inside a sleek maglev tram gliding between glass towers, padded bench seats, grab poles and light through the windows"
+    }
+   },
+   "start_median": true
+  },
+  {
+   "key": "pedicab",
+   "group": "ride",
+   "ko": "세워 둔 인력거",
+   "en": "the cushioned passenger seat of a parked pedicab on a sunny old-town street, its canopy above her",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "everyday",
+    "dongtan",
+    "traditional",
+    "retro",
+    "evening"
+   ],
+   "worlds": {
+    "fantasy": {
+     "ko": "세워 둔 덮개 손수레",
+     "en": "the cushioned seat of a little canopied hand-cart parked on a sunny cobbled street, its striped canopy above her"
+    },
+    "steampunk": {
+     "ko": "세워 둔 놋쇠 인력거",
+     "en": "the cushioned seat of a brass pedal-rickshaw parked on a sunny gaslit street, its leather hood above her"
+    },
+    "cyberpunk": {
+     "ko": "세워 둔 호버 인력거",
+     "en": "the seat of a canopied hover-rickshaw pod parked on a sunny street between glass towers"
+    }
+   },
+   "start_median": true
+  },
+  {
+   "key": "horse_trail",
+   "group": "ride_animal",
+   "ko": "말 타기",
+   "en": "a meadow trail at the edge of a ranch, her own chestnut horse walking calmly beneath her saddle",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "active",
+    "everyday",
+    "adventure",
+    "retro",
+    "dongtan"
+   ],
+   "start_median": true
+  },
+  {
+   "key": "camel_ride",
+   "group": "ride_animal",
+   "ko": "낙타 타기",
+   "en": "a golden desert dune at sunset, her own camel walking slowly beneath its fringed saddle",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "everyday",
+    "adventure",
+    "resort",
+    "dongtan",
+    "traditional"
+   ],
+   "start_median": true
+  },
+  {
+   "key": "carriage_ride",
+   "group": "ride_animal",
+   "ko": "말 한 마리 마차",
+   "en": "the cushioned seat of an open carriage on a park road, one calm white horse ahead of it and old trees along the way",
+   "eras": [
+    "now"
+   ],
+   "outfits": [
+    "everyday",
+    "evening",
+    "dongtan",
+    "retro",
+    "bridal"
+   ],
+   "start_median": true
   }
  ],
  "families": {
@@ -2696,7 +4173,10 @@
     "fencing_piste",
     "campus_lawn",
     "festival_booth",
-    "bath_changing"
+    "bath_changing",
+    "tram_stop",
+    "scooter_cafe",
+    "golf_cart"
    ],
    "en": "resting on a seat for a moment, catching her breath",
    "seat": [
@@ -2726,7 +4206,13 @@
     "suite_balcony",
     "window_seat",
     "glamping_deck",
-    "lecture_hall"
+    "lecture_hall",
+    "plane_window",
+    "airship_cabin",
+    "tram_inside",
+    "airship_deck",
+    "balloon_basket",
+    "car_convertible"
    ],
    "en": "looking out at the view, one hand resting on the nearest ledge"
   },
@@ -2757,7 +4243,12 @@
     "flower_market",
     "campus_lawn",
     "festival_booth",
-    "bookstore_aisle"
+    "bookstore_aisle",
+    "car_kerb",
+    "food_truck",
+    "tram_stop",
+    "roller_boardwalk",
+    "plane_stairs"
    ],
    "en": "strolling through the place at an easy pace",
    "hands": "free"
@@ -2795,7 +4286,35 @@
     "waterpark_wave",
     "pool_party",
     "beach_club",
-    "suite_balcony"
+    "suite_balcony",
+    "plane_cockpit",
+    "car_kerb",
+    "car_convertible",
+    "camper_van",
+    "moto_layby",
+    "bike_basket",
+    "bike_riverside",
+    "roller_boardwalk",
+    "skate_park",
+    "surf_beach",
+    "yacht_helm",
+    "plane_window",
+    "airship_deck",
+    "airship_cabin",
+    "balloon_basket",
+    "glider_launch",
+    "snowboard_slope",
+    "ride_carousel",
+    "ride_teacup",
+    "tram_stop",
+    "tram_inside",
+    "pedicab",
+    "camel_ride",
+    "carriage_ride",
+    "canal_gondola",
+    "swan_boat",
+    "golf_cart",
+    "travel_cablecar"
    ],
    "en": "taking a photo of the scenery with a small camera"
   },
@@ -3064,7 +4583,9 @@
     "cafe_cat",
     "cinema_lobby",
     "theme_cafe",
-    "flower_market"
+    "flower_market",
+    "food_truck",
+    "scooter_cafe"
    ],
    "en": "picking up a takeout cup at the counter and fixing the lid"
   },
@@ -3229,7 +4750,11 @@
     "pool_party",
     "waterpark_wave",
     "beach_club",
-    "glamping_deck"
+    "glamping_deck",
+    "surf_beach",
+    "wave_pool_surf",
+    "sup_cove",
+    "jetski_jetty"
    ],
    "en": "swimming breaststroke, her head and shoulders above the water",
    "outfits": [
@@ -3260,7 +4785,8 @@
     "pool_party",
     "beach_club",
     "hotspring_pool",
-    "waterpark_wave"
+    "waterpark_wave",
+    "surf_beach"
    ],
    "en": "lying back on a sunbed with a cold drink beside her",
    "hands": "free"
@@ -3273,7 +4799,8 @@
     "water_beach",
     "travel_coast",
     "travel_lake",
-    "beach_club"
+    "beach_club",
+    "surf_beach"
    ],
    "en": "walking along the water's edge, shallow water at her ankles",
    "hands": "free"
@@ -3302,7 +4829,9 @@
     "travel_lake",
     "water_pool",
     "glamping_deck",
-    "waterpark_slide"
+    "waterpark_slide",
+    "jetski_jetty",
+    "yacht_helm"
    ],
    "en": "sitting on the edge with her feet over the water",
    "seat": [
@@ -3349,7 +4878,9 @@
    "ko": "서핑 준비",
    "family": "stand",
    "places": [
-    "water_beach"
+    "water_beach",
+    "surf_beach",
+    "wave_pool_surf"
    ],
    "en": "waxing a surfboard at the water's edge",
    "outfits": [
@@ -3384,7 +4915,15 @@
     "spa_onsen",
     "waterpark_wave",
     "waterpark_slide",
-    "hotspring_pool"
+    "hotspring_pool",
+    "surf_beach",
+    "wave_pool_surf",
+    "wake_lake",
+    "waterski_bay",
+    "banana_boat",
+    "raft_river",
+    "jetski_jetty",
+    "sup_cove"
    ],
    "en": "pushing her wet hair back with both hands"
   },
@@ -3633,7 +5172,8 @@
    "ko": "롤러 타기",
    "family": "move",
    "places": [
-    "sports_rink"
+    "sports_rink",
+    "roller_boardwalk"
    ],
    "en": "gliding slowly on roller skates, arms out for balance",
    "prefer": [
@@ -3655,7 +5195,14 @@
     "fencing_piste",
     "ice_rink",
     "ski_slope",
-    "bowling_lane"
+    "bowling_lane",
+    "skate_park",
+    "roller_boardwalk",
+    "bike_riverside",
+    "snowboard_slope",
+    "glider_launch",
+    "golf_cart",
+    "kayak_river"
    ],
    "en": "catching her breath with a water bottle"
   },
@@ -3747,7 +5294,9 @@
     "night_karaoke",
     "pool_party",
     "beach_club",
-    "suite_balcony"
+    "suite_balcony",
+    "airship_cabin",
+    "airship_deck"
    ],
    "en": "raising a glass in a toast"
   },
@@ -4383,7 +5932,9 @@
    "family": "stand",
    "places": [
     "street_park",
-    "travel_trail"
+    "travel_trail",
+    "bike_basket",
+    "bike_riverside"
    ],
    "en": "checking her bicycle and buckling a helmet",
    "outfits": [
@@ -4448,7 +5999,11 @@
     "street_park",
     "travel_dunes",
     "street_diner",
-    "street_office"
+    "street_office",
+    "car_door",
+    "car_kerb",
+    "scooter_cafe",
+    "moto_layby"
    ],
    "en": "leaning against a parked classic car or motorcycle",
    "hands": "free"
@@ -4482,7 +6037,8 @@
    "ko": "스케이트보드",
    "family": "move",
    "places": [
-    "street_park"
+    "street_park",
+    "skate_park"
    ],
    "en": "dropping into a skate bowl on a skateboard"
   },
@@ -4639,7 +6195,13 @@
    "places": [
     "amuse_carousel",
     "amuse_coaster",
-    "ski_lift"
+    "ski_lift",
+    "ride_bumper",
+    "ride_pirate",
+    "ride_droptower",
+    "ride_teacup",
+    "ride_coaster",
+    "ride_carousel"
    ],
    "en": "waiting her turn by the ride, looking up at it with a bright grin"
   },
@@ -4816,7 +6378,8 @@
    "family": "sit",
    "places": [
     "ski_slope",
-    "sled_hill"
+    "sled_hill",
+    "snowboard_slope"
    ],
    "en": "sitting back in the snow after a run, catching her breath and laughing",
    "seat": [
@@ -4862,7 +6425,8 @@
    "family": "stand",
    "places": [
     "ski_slope",
-    "sled_hill"
+    "sled_hill",
+    "snowboard_slope"
    ],
    "en": "catching falling snowflakes on her mitten, looking up into the flurry"
   },
@@ -5052,6 +6616,507 @@
    ],
    "en": "calling out to passers-by from behind the booth counter with a bright smile",
    "mood": true
+  },
+  {
+   "key": "vehicle_wash",
+   "ko": "세차하기",
+   "family": "stand",
+   "places": [
+    "car_wash_home"
+   ],
+   "en": "washing the vehicle outside, sweeping a soapy sponge along its gleaming side",
+   "outfits": [
+    "everyday",
+    "dongtan",
+    "active",
+    "workwear",
+    "subculture",
+    "retro"
+   ]
+  },
+  {
+   "key": "vehicle_rinse",
+   "ko": "호스로 헹구기",
+   "family": "stand",
+   "places": [
+    "car_wash_home"
+   ],
+   "en": "rinsing the suds away with a fan of spray from the hose, laughing at the splash"
+  },
+  {
+   "key": "trunk_load",
+   "ko": "짐 싣기",
+   "family": "stand",
+   "places": [
+    "car_trunk"
+   ],
+   "en": "lifting a travel bag into the open luggage space"
+  },
+  {
+   "key": "tailgate_sit",
+   "ko": "트렁크에 걸터앉기",
+   "family": "sit",
+   "places": [
+    "car_trunk"
+   ],
+   "en": "perched on the edge of the open luggage space, swinging her feet",
+   "seat": [
+    "edge"
+   ]
+  },
+  {
+   "key": "door_step",
+   "ko": "차에서 내리기",
+   "family": "stand",
+   "places": [
+    "car_door"
+   ],
+   "en": "stepping out through the open door onto the pavement, one hand on the door frame"
+  },
+  {
+   "key": "passenger_breeze",
+   "ko": "조수석 바람",
+   "family": "sit",
+   "places": [
+    "car_convertible",
+    "carriage_ride",
+    "pedicab"
+   ],
+   "en": "riding in the passenger seat, her hair streaming in the warm wind",
+   "seat": [
+    "chair"
+   ]
+  },
+  {
+   "key": "van_door_sit",
+   "ko": "문간에 앉아 별 보기",
+   "family": "sit",
+   "places": [
+    "camper_van"
+   ],
+   "en": "sitting in the open door with a warm drink, watching the stars",
+   "seat": [
+    "edge"
+   ]
+  },
+  {
+   "key": "van_bunk",
+   "ko": "침상에서 뒹굴기",
+   "family": "lie",
+   "places": [
+    "camper_van"
+   ],
+   "en": "curled up on the little bunk under the strung lights"
+  },
+  {
+   "key": "truck_order",
+   "ko": "주문하기",
+   "family": "stand",
+   "places": [
+    "food_truck"
+   ],
+   "en": "ordering at the serving window, leaning on the ledge"
+  },
+  {
+   "key": "cart_wait",
+   "ko": "카트에 앉아 기다리기",
+   "family": "sit",
+   "places": [
+    "golf_cart"
+   ],
+   "en": "sitting on the bench seat between holes, one foot up on the step",
+   "seat": [
+    "chair"
+   ]
+  },
+  {
+   "key": "bike_perch",
+   "ko": "바이크에 걸터앉기",
+   "family": "sit",
+   "places": [
+    "scooter_cafe",
+    "moto_layby"
+   ],
+   "en": "perched side-saddle on the parked bike, her helmet in her lap",
+   "seat": [
+    "edge"
+   ]
+  },
+  {
+   "key": "helmet_off",
+   "ko": "헬멧 벗기",
+   "family": "stand",
+   "places": [
+    "scooter_cafe",
+    "moto_layby",
+    "ekick_scooter",
+    "glider_launch"
+   ],
+   "en": "pulling off her helmet, shaking out her hair"
+  },
+  {
+   "key": "bike_walk",
+   "ko": "자전거 끌고 걷기",
+   "family": "walk",
+   "places": [
+    "bike_basket",
+    "bike_riverside"
+   ],
+   "en": "walking her bicycle along by the handlebars"
+  },
+  {
+   "key": "bike_ride",
+   "ko": "천천히 자전거 타기",
+   "family": "move",
+   "places": [
+    "bike_basket",
+    "bike_riverside"
+   ],
+   "en": "riding her bicycle slowly along, sitting upright with both hands on the handlebars"
+  },
+  {
+   "key": "scooter_glide",
+   "ko": "킥보드 타기",
+   "family": "move",
+   "places": [
+    "ekick_scooter"
+   ],
+   "en": "gliding along on the kick scooter, both hands on the handlebar"
+  },
+  {
+   "key": "board_carry",
+   "ko": "보드 들고 걷기",
+   "family": "walk",
+   "places": [
+    "skate_park",
+    "surf_beach",
+    "wave_pool_surf",
+    "snowboard_slope"
+   ],
+   "en": "walking with her board tucked under one arm"
+  },
+  {
+   "key": "board_ride",
+   "ko": "보드 타기",
+   "family": "move",
+   "places": [
+    "skate_park",
+    "surf_beach",
+    "wave_pool_surf",
+    "snowboard_slope",
+    "wake_lake",
+    "sup_cove"
+   ],
+   "en": "riding her board with knees softly bent, arms out for balance"
+  },
+  {
+   "key": "wave_wait",
+   "ko": "파도 기다리기",
+   "family": "sit",
+   "places": [
+    "surf_beach",
+    "wave_pool_surf"
+   ],
+   "en": "sitting astride her board on the water, waiting for the next wave",
+   "outfits": [
+    "swimwear",
+    "active"
+   ]
+  },
+  {
+   "key": "tow_ride",
+   "ko": "견인줄 잡고 타기",
+   "family": "move",
+   "places": [
+    "wake_lake",
+    "waterski_bay"
+   ],
+   "en": "carving across the water behind the towline, holding the handle with both hands"
+  },
+  {
+   "key": "paddle_glide",
+   "ko": "노 젓기",
+   "family": "move",
+   "places": [
+    "sup_cove",
+    "kayak_river",
+    "raft_river"
+   ],
+   "en": "paddling slowly across the calm water"
+  },
+  {
+   "key": "boat_drift",
+   "ko": "배에 앉아 쉬기",
+   "family": "sit",
+   "places": [
+    "kayak_river",
+    "swan_boat",
+    "canal_gondola"
+   ],
+   "en": "drifting in the boat, trailing her fingertips in the water",
+   "seat": [
+    "chair"
+   ]
+  },
+  {
+   "key": "jetski_sit",
+   "ko": "제트스키에 앉기",
+   "family": "sit",
+   "places": [
+    "jetski_jetty"
+   ],
+   "en": "sitting on the idling jet ski at the dock, both hands on the handlebars"
+  },
+  {
+   "key": "float_hold",
+   "ko": "손잡이 꼭 잡기",
+   "family": "sit",
+   "places": [
+    "banana_boat"
+   ],
+   "en": "holding tight to the grab handles as the float bounces over the waves"
+  },
+  {
+   "key": "helm_steer",
+   "ko": "키 잡기",
+   "family": "stand",
+   "places": [
+    "yacht_helm"
+   ],
+   "en": "steering at the helm, both hands on the wheel"
+  },
+  {
+   "key": "cockpit_check",
+   "ko": "이륙 전 점검",
+   "family": "sit",
+   "places": [
+    "plane_cockpit"
+   ],
+   "en": "running through the checklist before take-off, fingertips on a switch",
+   "seat": [
+    "chair"
+   ],
+   "prefer": [
+    "cabin_crew_retro"
+   ]
+  },
+  {
+   "key": "window_clouds",
+   "ko": "창밖 구름 보기",
+   "family": "sit",
+   "places": [
+    "plane_window",
+    "airship_cabin"
+   ],
+   "en": "gazing out of the window at the sea of clouds",
+   "seat": [
+    "chair"
+   ]
+  },
+  {
+   "key": "board_stairs",
+   "ko": "트랩 오르기",
+   "family": "walk",
+   "places": [
+    "plane_stairs"
+   ],
+   "en": "climbing the boarding stairs with her bag, glancing back",
+   "prefer": [
+    "cabin_crew_retro"
+   ]
+  },
+  {
+   "key": "deck_rail",
+   "ko": "갑판 난간에 기대기",
+   "family": "stand",
+   "places": [
+    "airship_deck"
+   ],
+   "en": "leaning on the rail as the wind tugs at her hair"
+  },
+  {
+   "key": "glider_run",
+   "ko": "이륙 달리기",
+   "family": "move",
+   "places": [
+    "glider_launch"
+   ],
+   "en": "running down the slope beneath the wing, the bar gripped in both hands"
+  },
+  {
+   "key": "harness_check",
+   "ko": "하네스 점검",
+   "family": "stand",
+   "places": [
+    "glider_launch"
+   ],
+   "en": "checking the buckles of her harness before the launch"
+  },
+  {
+   "key": "fly_view",
+   "ko": "하늘에서 내려다보기",
+   "family": "sit",
+   "places": [
+    "paraglider_sky",
+    "zipline"
+   ],
+   "en": "hanging in the harness, looking down at the valley far below"
+  },
+  {
+   "key": "zip_whoosh",
+   "ko": "짚라인 타기",
+   "family": "move",
+   "places": [
+    "zipline",
+    "paraglider_sky"
+   ],
+   "en": "whizzing along the line, legs swinging, mid-laugh"
+  },
+  {
+   "key": "balloon_dawn",
+   "ko": "열기구 일출",
+   "family": "stand",
+   "places": [
+    "balloon_basket"
+   ],
+   "en": "watching the sunrise from the basket, the burner glowing overhead"
+  },
+  {
+   "key": "snowboard_strap",
+   "ko": "바인딩 조이기",
+   "family": "sit",
+   "places": [
+    "snowboard_slope"
+   ],
+   "en": "sitting in the snow, buckling her board's bindings",
+   "seat": [
+    "floor"
+   ]
+  },
+  {
+   "key": "bumper_drive",
+   "ko": "범퍼카 운전",
+   "family": "sit",
+   "places": [
+    "ride_bumper"
+   ],
+   "en": "steering her little car with both hands, laughing at a bump",
+   "seat": [
+    "chair"
+   ]
+  },
+  {
+   "key": "ride_scream",
+   "ko": "놀이기구 비명",
+   "family": "sit",
+   "places": [
+    "ride_pirate",
+    "ride_droptower",
+    "ride_coaster"
+   ],
+   "en": "gripping the bar, mid-scream with delight as the ride swings",
+   "seat": [
+    "chair"
+   ]
+  },
+  {
+   "key": "cup_spin",
+   "ko": "찻잔 돌리기",
+   "family": "sit",
+   "places": [
+    "ride_teacup"
+   ],
+   "en": "spinning the wheel in the middle of the teacup, giggling",
+   "seat": [
+    "chair"
+   ]
+  },
+  {
+   "key": "carousel_ride",
+   "ko": "회전목마 타기",
+   "family": "sit",
+   "places": [
+    "ride_carousel"
+   ],
+   "en": "riding the carousel horse, one hand on the brass pole"
+  },
+  {
+   "key": "tram_wait",
+   "ko": "트램 기다리기",
+   "family": "stand",
+   "places": [
+    "tram_stop"
+   ],
+   "en": "waiting at the stop as the tram glides in"
+  },
+  {
+   "key": "tram_ride",
+   "ko": "트램 타고 가기",
+   "family": "sit",
+   "places": [
+    "tram_inside"
+   ],
+   "en": "riding the tram, watching the street slide past the window",
+   "seat": [
+    "chair"
+   ]
+  },
+  {
+   "key": "animal_ride",
+   "ko": "타고 천천히 가기",
+   "family": "sit",
+   "places": [
+    "horse_trail",
+    "camel_ride"
+   ],
+   "en": "riding at an easy walk, the reins loose in her hands"
+  },
+  {
+   "key": "animal_pat",
+   "ko": "목 쓰다듬기",
+   "family": "sit",
+   "places": [
+    "horse_trail",
+    "camel_ride"
+   ],
+   "en": "leaning forward in the saddle to pat its neck"
+  },
+  {
+   "key": "carriage_wave",
+   "ko": "마차에서 손 흔들기",
+   "family": "sit",
+   "places": [
+    "carriage_ride"
+   ],
+   "en": "waving from the carriage seat as it rolls along",
+   "seat": [
+    "chair"
+   ]
+  },
+  {
+   "key": "boat_seat_view",
+   "ko": "배 위에서 풍경 보기",
+   "family": "sit",
+   "places": [
+    "canal_gondola",
+    "swan_boat"
+   ],
+   "en": "sitting back in the cushioned seat, taking in the view",
+   "seat": [
+    "chair"
+   ]
+  },
+  {
+   "key": "cable_view",
+   "ko": "케이블카 창밖 보기",
+   "family": "sit",
+   "places": [
+    "travel_cablecar"
+   ],
+   "en": "sitting by the cabin window, gazing down at the valley gliding past",
+   "seat": [
+    "chair"
+   ]
   }
  ],
  "outfits": [

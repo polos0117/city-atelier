@@ -244,13 +244,15 @@ const herOk = (city, item) => !item || !HER_ALL.has(item) || (!HER_NEVER.include
 const famHerOk = (city, fam) => { const f = (tree.outfits || []).find(o => o.key === fam); return !f || !(f.items || []).length || f.items.some(it => herOk(city, it.key)); };
 /* 일반 장소 — 버전1 트리 장소(data/casual-tree.json places). 버전2 표의 새 장소(extra_places)는 안 쓴다 */
 const GEN = new Set((tree.places || []).map(p => p.key));
+/* 일반 장소의 그 세계 글(트리 장소 worlds — 2026-11-24 탈 것, 조립기 placeEn 과 같다) — 금지 낱말은 그 세계 글로 본다 */
+const placeText = (k, world) => P.placeEn(C2.place(T2, k), world);
 /* 그 세계 그 도시의 장소 풀 — 생활 장면(그 도시) · 일반 장소(그 세계 금지 낱말이 글에 없는 곳) */
 const POOL = new Map();
 function poolOf(card) {
   const k = card.key + '|' + (card.world || '');
   if (!POOL.has(k)) {
     const all = C2.choices(T2, { era: ERA }, 'place', card.g), lp = lifePlaces(card);
-    POOL.set(k, { life: all.filter(p => lp.includes(p)), gen: all.filter(p => GEN.has(p) && worldOk(card.world || '', (C2.place(T2, p) || {}).en)) });
+    POOL.set(k, { life: all.filter(p => lp.includes(p)), gen: all.filter(p => GEN.has(p) && worldOk(card.world || '', placeText(p, card.world))) });
   }
   return POOL.get(k);
 }
@@ -475,7 +477,7 @@ function check(cuts, card, base = [], others = []) {
   for (const c of sCuts) {
     const ls = lifeOf(c.place), pr = placeRules(c.place), where = ls ? '장면 ' + ls.key : '장소 ' + c.place;
     if (ls ? ls.city !== card.city : !GEN.has(c.place)) { errs.push(`칸 ${c.n || '?'}: 장소 ${c.place} 는 ${card.city} 생활 장면도 일반 장소(버전1 트리 장소)도 아니다`); continue; }
-    if (!ls && !worldOk(world, (C2.place(T2, c.place) || {}).en)) errs.push(`칸 ${c.n || '?'}: 일반 장소 ${c.place} 의 글에 ${world} 금지 낱말`);
+    if (!ls && !worldOk(world, placeText(c.place, world))) errs.push(`칸 ${c.n || '?'}: 일반 장소 ${c.place} 의 글에 ${world} 금지 낱말`);
     if (ls && ls.outfits && !ls.outfits.includes(c.ofam)) errs.push(`칸 ${c.n || '?'}: 장면 ${ls.key} 에서 의상 계열 ${c.ofam} 은 안 고른다(장면표 outfits)`);
     if (!worldOk(world, outfitEn(c))) errs.push(`칸 ${c.n || '?'}: 옷 「${outfitEn(c)}」 에 ${world} 금지 낱말`);
     if (!herOk(card.city, c.item) || (!c.item && !c.outfit && !famHerOk(card.city, c.ofam))) errs.push(`칸 ${c.n || '?'}: 전통 의상 ${c.item || c.ofam} 은 ${card.city} 것이 아니다(data/city-life.json heritage)`);
@@ -626,8 +628,8 @@ function situate(cuts, at, old = [], others = [], rs = Math.random) {
    둘 다 장면 줄을 짜지 않는다(sfree — 장소 · 활동 · 자세 · 구도 · 의상을 맡은 쪽이 T.FREE_DESIGN 덩어리에 채운다), 옷 색 · 데니어는 없다.
    갈래 자유 칸은 노출 갈래 셋 가운데 다른 세계 묶음이 덜 쓴 것(같으면 무작위 — 세계 셋이면 돌아간다) + 열린 상황(gsitu 'free'). 노출 갈래가 다 필수라(2026-11-20) 그 갈래 필수 컷과 같은 갈래다 —
    그 컷의 옷(gnot)은 안 쓰게 지시문에 적는다. recent 는 최근 장면 — 그림 저장소 기록의 최근 장면(recentScenes)에 같은 묶음의 장면 컷을 더한 것 */
-function makeFree(cardKey, nums, kinds, cuts, old = [], others = [], recentList = [], rf = Math.random) {
-  const all = [...old, ...cuts], bundle = all.filter(c => !c.sfree).sort((a, b) => a.n - b.n).map(c => sceneText(c, holdOfKey(cardKey))).filter(Boolean);
+function makeFree(cardKey, nums, kinds, cuts, old = [], others = [], recentList = [], rf = Math.random, world = '') {
+  const all = [...old, ...cuts], bundle = all.filter(c => !c.sfree).sort((a, b) => a.n - b.n).map(c => sceneText(c, holdOfKey(cardKey), world)).filter(Boolean);
   const recent = [...new Set([...recentList, ...bundle])], out = [];
   for (let i = 0; i < kinds.length; i++) {
     const c = { n: nums[i], treeV: 2, sfree: true };
@@ -647,12 +649,12 @@ function makeFree(cardKey, nums, kinds, cuts, old = [], others = [], recentList 
 /* 장면 한 줄(영어, 트리 표 이름) — 장소 + 하는 일(소품 동작, 없으면 자세). 최근 장면 · 같은 묶음 장면을 자유 설계 칸에 적을 때 */
 const HOLD = new Map();
 function holdOfKey(key) { if (!key) return ''; if (!HOLD.has(key)) { const c = P.card(D, key); HOLD.set(key, c ? P.holdOf(c) : ''); } return HOLD.get(key); }
-function sceneText(sc, hold = '') {
+function sceneText(sc, hold = '', world = '') {
   const p = C2.place(T2, sc.place); if (!p) return '';
   const u = C2.use(T2, sc.use), pr = u && C2.prop(T2, u.prop), po = C2.posture(T2, sc.posture);
   const act = u && pr ? u.en.replace('{prop}', pr.signature ? (String(hold).split(/ with |, /)[0] || 'her own object') : pr.en) : (po && po.en) || '';
   const short = t => String(t).split(/ — |, /)[0].replace(/\s+/g, ' ').trim();   /* 짧게 — 첫 덩어리만(「a mine gallery of rough rock walls, timber props, …」 → 앞 말) */
-  return short(p.en) + (act ? ' — ' + short(act) : '');
+  return short(P.placeEn(p, world)) + (act ? ' — ' + short(act) : '');   /* 장소는 그 세계 글(트리 장소 worlds, 2026-11-24) */
 }
 /* 자유 설계 기록의 장면 — 채운 덩어리의 Place · Activity 줄(「…」 그대로면 없음) */
 function freeText(text) {
@@ -670,7 +672,7 @@ function recentScenes(dir, n = RECENT_N) {
     for (const f of fs.readdirSync(path.join(dir, k)).filter(x => /-casual\d+\.[a-z0-9_]+-ui\.json$/.test(x))) {
       let r; try { r = JSON.parse(fs.readFileSync(path.join(dir, k, f), 'utf8')); } catch (e) { continue; }
       if (!r || !r.scene) continue;
-      const gen = r.generation || {}, text = r.scene.sfree ? freeText(gen.free_design || gen.free_prompt) : sceneText(r.scene, holdOfKey(r.card || k));
+      const gen = r.generation || {}, text = r.scene.sfree ? freeText(gen.free_design || gen.free_prompt) : sceneText(r.scene, holdOfKey(r.card || k), r.world || '');
       if (text) rows.push({ when: String(r.imported || r.date || ''), at: k + '/' + f, text });
     }
   }
@@ -765,7 +767,7 @@ function plan(card, slots, old, { seed = Date.now(), usage = {}, others = [], re
     situate(cuts, sPool.length ? sPool[Math.floor(rs() * sPool.length)] : -1, old, others, rs);
     if (sPool.length && !cuts.some(c => c.situ)) continue;
     ambient(cuts, old, rng((seed ^ mix ^ 0x7f4a7c15) >>> 0), card.city, usage); momentize(cuts, old, rng((seed ^ mix ^ 0x61c88647) >>> 0), usage, card.world || '');
-    const free = makeFree(card.key, freeNums, freeKinds, cuts, old, others, recent, rng((seed ^ mix ^ 0x1b873593) >>> 0));
+    const free = makeFree(card.key, freeNums, freeKinds, cuts, old, others, recent, rng((seed ^ mix ^ 0x1b873593) >>> 0), card.world || '');
     ambient(free, [...old, ...cuts], rng((seed ^ mix ^ 0x68e31da4) >>> 0), card.city, usage);   /* 자유 설계 칸의 시간대(원소 B) — 자유 칸은 ambient 뒤에 생겨 원소 계획기에선 시간대가 안 붙었다. 장면 컷과 덜 겹치는 시간대 */
     if (check([...cuts, ...free], card, old, others).length) continue;
     const all = [...old, ...cuts, ...free];

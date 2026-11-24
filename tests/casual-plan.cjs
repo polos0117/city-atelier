@@ -94,7 +94,7 @@ for (const seed of [3, 11, 29]) {
         assert(t.includes('\nPlace: ' + sw.en.replace(/\.$/, '') + '.\n'), id + ' 그 장면의 그 세계 글');
         const own = (((D.cities.find(x => x.key === card.key) || {}).worlds || {})[w] || {}).own_vocab || {};   /* 도시별 말(2026-11-20) */
         for (const k of sw.props) assert(t.includes((own.props || {})[k] || PROPS.props[k].worlds[w].en), id + ' 소품 ' + k + ' 의 그 세계 낱말');
-      } else assert(t.includes('\nPlace: ' + T1.places.find(p => p.key === c.place).en + '\n'), id + ' 일반 장소 글 그대로');
+      } else assert(t.includes('\nPlace: ' + P.placeEn(T1.places.find(p => p.key === c.place), w) + '\n'), id + ' 일반 장소 글 그대로(세계 글이 있으면 그 세계 글 — 2026-11-24 탈 것)');
       assert(t.includes(PROPS.clothes[w].en) === !C.isCosplay(c), id + ' 옷의 결 — 그 세계 평상복(코스프레 컷은 없음)');
       /* 실내면 계절 이름만 · 창밖 · 옷차림(2026-11-20 「실내공간까지 따라들어오는것 같아」), 바깥이면 계절 글 그대로 */
       const sea = byKey(LIFE.seasons.seoul, c.season), inSeason = 'Season: ' + sea.en.split(' — ')[0] + ' — but she is indoors';
@@ -140,12 +140,15 @@ try {
 } finally { fs.rmSync(tmp, { recursive: true, force: true }); }
 /* 금지 장소 — 판타지 · 스팀펑크는 글에 그 세계 금지 낱말이 든 일반 장소를 풀에서 뺀다 */
 {
-  const ban = w => T1.places.filter(p => C.BANNED[w] && C.BANNED[w].test(p.en)).map(p => p.key);
+  const ban = w => T1.places.filter(p => C.BANNED[w] && C.BANNED[w].test(P.placeEn(p, w))).map(p => p.key);
   for (const w of ['fantasy', 'steampunk']) {
     card.world = w; card.g.world = w;
     const b = ban(w); assert(b.length >= 3, w + ' 금지 낱말이 든 일반 장소 ' + b);
     const pool = C.placeCands(card, 'plain');
     assert(!b.some(k => pool.gen.includes(k)) && pool.gen.length > 50, w + ' 일반 장소 풀에 금지 장소 없음');
+    /* 세계 글(worlds — 2026-11-24 탈 것): 판타지 길가 마차는 장소 글에 car 가 있어도 그 세계 글로 풀에 든다, 그 세계 글이 없는 곳(worlds_only 밖 — 판타지 바이크)은 빠진다 */
+    assert(pool.gen.includes('car_kerb') && !C.BANNED[w].test(P.placeEn(T1.places.find(p => p.key === 'car_kerb'), w)) && C.BANNED.fantasy.test(T1.places.find(p => p.key === 'car_kerb').en), w + ' 길가 탈것은 그 세계 글로(장소 글엔 판타지 금지 낱말 car)');
+    for (const p of T1.places.filter(p => p.worlds_only && !p.worlds_only.includes(w))) assert(!pool.gen.includes(p.key), w + ' 세계 밖 장소 ' + p.key);
   }
   card.world = 'cyberpunk'; card.g.world = 'cyberpunk';
   assert(ban('fantasy').every(k => C.placeCands(card, 'plain').gen.includes(k)), '사이버펑크는 그 장소들을 쓴다');
@@ -214,7 +217,7 @@ for (const w of ['fantasy', 'steampunk']) {
     for (const c of C.plan(card, TEN, [], { seed }).cuts) {
       assert(!re.test(C.outfitEn(c)), `${w} 씨앗 ${seed} 칸 ${c.n}: 옷 「${C.outfitEn(c)}」 에 금지 낱말`);
       if (C.EXPOSE_TYPES.includes(C.requiredType(c)) || C.isCosplay(c)) assert(c.frame !== 'face_close', `${w} 씨앗 ${seed} 칸 ${c.n}: 노출 갈래 · 코스프레가 얼굴 클로즈업`);
-      if (!c.sfree && !C.lifeOf(c.place)) assert(!re.test(T1.places.find(p => p.key === c.place).en), `${w} 씨앗 ${seed} 칸 ${c.n}: 일반 장소 ${c.place} 에 금지 낱말`);
+      if (!c.sfree && !C.lifeOf(c.place)) assert(!re.test(P.placeEn(T1.places.find(p => p.key === c.place), w)), `${w} 씨앗 ${seed} 칸 ${c.n}: 일반 장소 ${c.place} 에 금지 낱말`);
     }
   }
 }
