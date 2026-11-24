@@ -43,6 +43,12 @@ const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'image-claim-'));
   /* 캐릭터만의 컷(casual90)은 일상 열 장에 세지 않는다 */
   assert.equal(K.casualGap('seoul', st, [`seoul_fantasy_${st}_f_casual90.webp`], 10).length, 10);
   assert.deepEqual(K.casualGap('seoul', st, ['x_casual1.webp', 'x_casual2.webp', 'x_casual4.webp'], 5), [3, 5]);
+  /* 전경(_vista, 2026-11-24)은 몫에 들지 않는다 — 전경만 있는 세계도 빈 자리 열하나, 세계 그림 + 전경이면 일상 열 장만 */
+  fs.writeFileSync(path.join(emptyRoot, 'data', 'img.json'), JSON.stringify({ img: { seoul: { byStyle: { [st]: { byForm: {
+    fantasy: { vista: `seoul_fantasy_${st}_vista.webp` }, steampunk: { f: `seoul_steampunk_${st}_f.webp`, vista: `seoul_steampunk_${st}_vista.webp` } } } } } } }));
+  assert.equal(K.missing('seoul_fantasy').length, 11, '전경만 있는 세계 = 빈 자리 열하나');
+  assert.equal(K.missing('seoul_steampunk').length, 10, '세계 그림 + 전경 = 일상 열 장만');
+  assert(!K.missing('seoul').some(f => /vista/.test(f)), '전경은 빈 자리로 안 센다');
   delete process.env.CITY_DATA_ROOT;
 }
 /* 설계 미정 도시는 빈 자리 · 몫이 없다(건너뛴다) — 2026-11-21 리우까지 열 곳이 다 설계돼, 설계표 사본에서 리우의 worlds 를 {} 로 비워 본다(저장소 자료는 안 건드림) */

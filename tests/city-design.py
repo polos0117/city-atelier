@@ -85,10 +85,19 @@ cases = {
     "20대 후반 나이": lambda d: lm(d, "fantasy")["look"]["face"].__setitem__("age", "late_20s"),
     "랜드마크 세계 둘뿐": lambda d: lm(d)["worlds"].pop("cyberpunk"),
     "랜드마크 판타지 글에 broadcast tower": lambda d: lm(d, "fantasy").__setitem__("en", lm(d, "fantasy")["en"] + ", beside a broadcast tower"),
+    "랜드마크 lat 이 글자": lambda d: lm(d).update(lat="37.57", lon=126.977, latlon_src="https://en.wikipedia.org/wiki/Gwanghwamun"),
+    "랜드마크 lon 만 있고 lat 없음": lambda d: (lm(d).pop("lat", None), lm(d).update(lon=126.977, latlon_src="https://en.wikipedia.org/wiki/Gwanghwamun")),
+    "랜드마크 좌표가 도시에서 멂": lambda d: city(d, "seoul")["landmarks"][1].update(lat=35.1796, lon=129.0756),
+    "랜드마크 좌표 근거 없음": lambda d: city(d, "seoul")["landmarks"][1].pop("latlon_src"),
+    "랜드마크 lat 소수 다섯째": lambda d: city(d, "seoul")["landmarks"][1].update(lat=37.57988),
+    "랜드마크 latlon_note 빔": lambda d: city(d, "seoul")["landmarks"][1].update(latlon_note=" "),
     "해치 판타지 얼굴이 서울 판타지와 같음": lambda d: lm(d, "fantasy")["look"].__setitem__("face", dict(sw(d, "fantasy")["look"]["face"])),
 }
 for name, mut in cases.items():
     assert broken(mut), "검사기가 못 걸었다: " + name
+# 좌표는 고를 수 있는 칸 — 없는 랜드마크는 오류가 아니다(한 자리에 없는 상징은 비워 둔다)
+assert not broken(lambda d: [l.pop(k, None) for l in city(d, "seoul")["landmarks"] for k in ("lat", "lon", "latlon_src", "latlon_note")]), "좌표 없는 랜드마크가 걸린다"
+assert sum(1 for l in city(doc, "seoul")["landmarks"] if "lat" in l) >= 7, "서울 랜드마크 좌표(2026-11-24)"
 # 미정 도시(worlds {})는 그것만으로는 오류가 아니다(알림) — 위 「미정 도시에 랜드마크」 가 랜드마크 규칙으로 걸린 것인지 본다
 assert not broken(lambda d: (city(d, "rio").__setitem__("worlds", {}), city(d, "rio").pop("landmarks", None))), "설계 미정 도시 하나가 오류로 걸린다"   # 2026-11-21 리우에도 랜드마크가 생겨 같이 비운다
 

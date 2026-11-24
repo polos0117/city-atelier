@@ -8,7 +8,10 @@
     <도시>_<세계>_<화풍>_f_casual3.webp   일상컷 3 — 그 세계 그림을 참고 그림으로 붙인 것이라 세계를 탄다. 그 세계 몫(byForm) 안의 casual 에 든다
                                          번호 90 은 캐릭터만의 컷(IMAGE_RULES 2절) — 같은 꼴, 번호만 90
   예) seoul_fantasy_jp_paint_anime_f.webp · seoul_cyberpunk_jp_paint_anime_f.webp · seoul_steampunk_jp_paint_anime_f_casual1.webp
-세계 없는 일상컷 · 특별컷 · 연출컷 · 개방은 없다 — 도시 하나에 세계 셋과 일상컷이 전부다.
+    <도시>_<세계>_<화풍>_vista.webp     전경(2026-11-24) — 그 도시 그 세계의 풍경 한 장, 사람 없음 · 3:2 1536×1024. 도시 무대의 배경.
+                                         그 세계 몫(byForm) 안의 vista 에 든다. 일상컷이 아니고 열한 장 몫(세계 그림 + 일상 10)에도 안 세며,
+                                         성별 표시가 없다(사람이 아니다). 도시 열쇠만 — 랜드마크 카드(<도시>-<랜드마크>)에는 전경이 없다
+세계 없는 일상컷 · 특별컷 · 연출컷 · 개방은 없다 — 도시 하나에 세계 셋과 일상컷(+ 세계마다 전경)이 전부다.
 성별 표시(_f)는 반드시 붙인다(남성 _m 은 없다 — 이름 꼴 오류). 이름은 모두 소문자다.
 화풍·세계는 목록에 있는 열쇠일 때만 떼어 낸다. 뒤에서부터 성별 → 화풍 → 세계 순으로 벗기고 남는 것이 도시 열쇠여야 한다.
 그 밖의 토막이 끼면 도시 이름으로 읽히다 실패해 "그런 도시가 없다" 로 남는다 — 오타를 잡으려고 일부러 통과시키지 않는다.
@@ -37,10 +40,12 @@ import subprocess
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data")
 ART_SIZE = (1024, 1536)          # 2:3 세로. 세계 그림은 늘 이 크기
+VISTA_SIZE = (1536, 1024)        # 3:2 가로. 전경(_vista)은 늘 이 크기(2026-11-24)
 # 일상컷 화면비(2026-11-23) — 계획(기록 scene.aspect)이 정한다: 눕는 자세 · 환경 컷 3:2, 허리 위 · 3/4 1:1, 나머지 2:3.
 # 그림 API 가 받는 크기 셋뿐. 이미 그린 일상컷은 2:3 그대로
 ASPECT_SIZES = {"2:3": (1024, 1536), "1:1": (1024, 1024), "3:2": (1536, 1024)}
 CASUAL_FILE = re.compile(r"_casual\d+\.webp$")
+VISTA_FILE = re.compile(r"_vista\.webp$")
 CASUAL_RECORD = re.compile(r"-casual\d+\.[a-z0-9_]+-ui\.json$")
 
 # 그림이 사는 곳. GitHub 의 파일 목록 API 가 1000개에서 잘리므로 저장소 최상위가 아니라 img/ 에 둔다. img.json 에는
@@ -57,6 +62,8 @@ EXTRA_DIRS = []
 
 # 세계 그림 · 일상컷만 받는다. 성별은 _f 하나 · 이름은 소문자 — 남성 _m · 특별컷 · 연출컷 · 대문자는 "이름 꼴이 안 맞는다" 로 선다
 PAT = re.compile(r"^(.+)_f(?:_casual(\d+))?\.webp$")
+# 전경 — 사람이 아니라 성별 표시가 없다. <도시>_<세계>_<화풍>_vista.webp
+VISTA = re.compile(r"^(.+)_vista\.webp$")
 # 화풍 견본. 도시 그림이 아니다
 SKIP = re.compile(r"^style-")
 DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
@@ -158,6 +165,10 @@ def art_size(dirs):
             if not s:
                 continue
             s = tuple(s)
+            if VISTA_FILE.search(f):
+                if s != VISTA_SIZE:
+                    bad.append((f, s[0], s[1], "전경은 %d×%d" % VISTA_SIZE))
+                continue
             if not CASUAL_FILE.search(f):
                 if s != ART_SIZE:
                     bad.append((f, s[0], s[1], "세계 그림은 %d×%d" % ART_SIZE))
@@ -257,7 +268,7 @@ def buckets(img):
             yield x
 
 
-SLOTS = ("m", "f", "face", "casual", "extra", "byForm")   # lib/img.js 가 읽는 칸 — 이 공방은 f · casual · byForm 만 쓴다
+SLOTS = ("m", "f", "face", "casual", "extra", "vista", "byForm")   # lib/img.js 가 읽는 칸 — 이 공방은 f · casual · vista(세계 몫의 전경) · byForm 만 쓴다
 
 
 def tidy(img, styles, forms=()):
@@ -292,7 +303,7 @@ def listed_files(img):
     out = set()
 
     def take(d):
-        for k in ("m", "f"):
+        for k in ("m", "f", "vista"):
             if d.get(k):
                 out.add(d[k])
         for k in ("casual", "extra"):
@@ -348,9 +359,29 @@ def main():
             unknown.append((f, "닫힌 그림 저장소 %s 에 새 그림 — 새 그림은 %s 에 올린다(이미 있는 이름의 교체만 닫힌 저장소에 둔다)"
                             % (SHARDS[owner[f]], SHARDS[open_at])))
             continue
+        v = VISTA.match(f)
+        if v:
+            head, style = split_style(v.group(1), styles)
+            head, form = split_form(head, forms)
+            if "-" in head and head in known:
+                unknown.append((f, "전경은 도시에만 — 랜드마크 카드에는 전경이 없다(<도시>_<세계>_<화풍>_vista.webp)"))
+                continue
+            if head not in known:
+                unknown.append((f, "그런 도시가 없다 — 전경은 <도시>_<세계>_<화풍>_vista.webp(도시 열쇠는 소문자 영문)"))
+                continue
+            if not style or not form:
+                unknown.append((f, "전경에 %s 열쇠가 없다 — <도시>_<세계>_<화풍>_vista.webp" % ("화풍" if not style else "세계")))
+                continue
+            e = img.setdefault(head, {}).setdefault("byStyle", {}).setdefault(style, {}).setdefault("byForm", {}).setdefault(form, {})
+            if e.get("vista"):
+                unknown.append((f, "전경 슬롯 중복: " + e["vista"]))
+                continue
+            e["vista"] = f
+            added.append((head + " · " + styles[style] + " · " + form + " · vista", f))
+            continue
         m = PAT.match(f)
         if not m:
-            unknown.append((f, "이름 꼴이 안 맞는다(<도시>_<세계>_<화풍>_f.webp · <도시>_<세계>_<화풍>_f_casualN.webp — 소문자, 성별은 _f 만)"))
+            unknown.append((f, "이름 꼴이 안 맞는다(<도시>_<세계>_<화풍>_f.webp · <도시>_<세계>_<화풍>_f_casualN.webp · 전경 <도시>_<세계>_<화풍>_vista.webp — 소문자, 성별은 _f 만)"))
             continue
         head, style = split_style(m.group(1), styles)
         head, form = split_form(head, forms)
@@ -408,7 +439,7 @@ def main():
     if a.prune and ghosts:
         gone = set(ghosts)
         for e in buckets(img):
-            for k in ("m", "f"):
+            for k in ("m", "f", "vista"):
                 if e.get(k) in gone:
                     del e[k]
             for k in ("casual", "extra"):
@@ -430,7 +461,7 @@ def main():
         for b in bs.values():
             bf = b.get("byForm")
             if bf is not None:
-                for k in [k for k, x in bf.items() if not x or not any(x.get(s) for s in ("m", "f", "casual"))]:
+                for k in [k for k, x in bf.items() if not x or not any(x.get(s) for s in ("m", "f", "casual", "vista"))]:
                     del bf[k]
                 if not bf:
                     del b["byForm"]
@@ -491,7 +522,7 @@ def main():
             print("     %-44s %s" % (f, why))
     odd = art_size([IMG_DIR] + [d for d in EXTRA_DIRS if os.path.isdir(d)])
     if odd:
-        print("  크기가 안 맞는 그림 %d(세계 그림 %d×%d · 일상컷은 계획 화면비대로)"
+        print("  크기가 안 맞는 그림 %d(세계 그림 %d×%d · 일상컷은 계획 화면비대로 · 전경 1536×1024)"
               % (len(odd), ART_SIZE[0], ART_SIZE[1]))
         for name, w, h, why in odd[:10]:
             print("     %-44s %d×%d — %s" % (name, w, h, why))

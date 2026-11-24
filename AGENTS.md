@@ -19,7 +19,7 @@
 
 | 화면 | 파일 | 무엇 |
 |---|---|---|
-| 첫 화면 | `index.html` · `lib/globe.js` · `lib/globe-math.js` · `lib/city-view.js` · `lib/dex-view.js` | 도시 극장(막 · 조명 · 세계 고르개 · 도구 단추 · 아래 탭 둘). 지구본 탭 = 회전 무대 위 SVG 지구본(끌어 돌림 — Blender glb 가 오면 three.js, `docs/PORT_NOTES.md` 끝) + 전광판(앞 · 뒤 · 「세 사람 무대로」). 도시 무대 = 세 세계 세 사람(글은 설계표 `card_ko` · 직업표), 한 장. 전체 도감(`?tab=dex`) = 도시마다 표 한 장(색 띠 · 세계 세 칸 · 일상컷 수 · 「그림 없음」 → 생성기 · 「설계 전」 · 새 그림 점 — 오늘 · 어제 등록분, 그 도시를 열면 꺼짐, 도구 상자 「새 그림 모두 확인」) |
+| 첫 화면 | `index.html` · `lib/globe.js` · `lib/globe-math.js` · `lib/city-view.js` · `lib/dex-view.js` | 도시 극장(막 · 조명 · 세계 고르개 · 도구 단추 · 아래 탭 둘). 지구본 탭 = 회전 무대 위 SVG 지구본(끌어 돌림 — Blender glb 가 오면 three.js, `docs/PORT_NOTES.md` 끝) + 전광판(앞 · 뒤 · 「세 사람 무대로」). 도시 무대 = 세 세계 세 사람(글은 설계표 `card_ko` · 직업표) — 그 세계 전경이 있으면 그 위에 작은 지도(랜드마크 좌표) · 카드 띠(2026-11-24), 한 장. 전체 도감(`?tab=dex`) = 도시마다 표 한 장(색 띠 · 세계 세 칸 · 일상컷 수 · 「그림 없음」 → 생성기 · 「설계 전」 · 새 그림 점 — 오늘 · 어제 등록분, 그 도시를 열면 꺼짐, 도구 상자 「새 그림 모두 확인」) |
 | 공간 | `lib/room.css` · `lib/workspace-theme.js` | 공간 여섯 = 세계 셋 × 객석 불 끔/켬. 세계는 주소 · 고르개를 따라 저절로, 밝기는 도구 상자(`city_room_v1`). 변수는 `room.css` 한 곳 |
 | 도구 상자 | `lib/toolbox.js` · `lib/toolbox.css` | 「도구」 단추(공방은 머리 오른쪽 위) → 화풍 · 프롬프트 · 즐겨찾기 · 설정(객석 불 · 밀도 · 움직임) · 패치 기록. 도구 화면의 머리는 가는 막대 `ToolBar` |
 | 화풍 비교 | `styles.html` · `data/style-compare.json` · `tools/style-compare.py` | 같은 카드를 화풍별로 — 서울 묶음은 Task 11 |
@@ -82,6 +82,7 @@ node tests/casual-tree-v2.cjs        # 일상컷 트리 v2 + 공용 모듈 동�
 node tests/walk-core.cjs             # 주소 순수 함수
 node tests/look-spec.cjs             # 외형 표 = game 표 + 도시 × 세계 어휘
 node tests/prompt-city.cjs           # 서울 × 세 세계 × 화풍 지시문(표지 · 금지 낱말 · 설계 미정)
+node tests/prompt-vista.cjs          # 전경 지시문(설계된 도시 모두 · 금지 낱말은 Avoid 만 · 옷 낱말 뺌 · 그린 서울 기록 = 조립기) — 뽑기는 node tools/vista-prompt.cjs <도시> [세계]
 node tests/prompt-sections.cjs       # 지시문 칸 꼴
 node tests/prompt-short-look.cjs     # 짧은 판의 도시 칸
 node tests/casual-plan.cjs           # 일상컷 계획기(서울 세 세계 × 씨앗)
@@ -91,6 +92,7 @@ node tests/globe-math.cjs            # 지구본 순수 함수(좌표 약속 · 
 # 브라우저 (NODE_PATH · ESM_DIR · CHROMIUM_PATH)
 node tests/theme.cjs                 # 공간 여섯 · 세계 따라감 · 밝기 기억 · 움직임 끔
 node tests/globe-screen.cjs          # 지구본 탭 · 도시 무대 · 한 장(CDN 모듈은 처음 한 번 받아 ESM_DIR 옆 cdn-cache 에)
+node tests/vista-screen.cjs          # 도시 무대 전경(배경 · 작은 지도 · 카드 띠 · 흐름 · 움직임 줄이기)
 node tests/dex-screen.cjs            # 전체 도감(여섯 판 · 가짜 등록부로 그림 · 새 그림 점, 날짜는 ?today=)
 node tests/screen.cjs                # 화풍 비교 · 생성기 도시 판 · 세계 그림 걸음 · 일상컷 걸음
 node tests/prompt-pack-screen.cjs    # 서울 세계 그림 셋 + 일상 열 장 묶음(폰 344×882)

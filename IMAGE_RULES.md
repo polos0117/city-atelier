@@ -66,12 +66,15 @@
 <도시>_<세계>_<화풍>_f.webp           세계 그림
 <도시>_<세계>_<화풍>_f_casual3.webp   일상컷 3 (번호는 세계마다 따로 1 부터, 90 = 캐릭터만의 컷)
 랜드마크는 <도시> 자리에 카드 열쇠: seoul-haechi_fantasy_kr_drawn_rim_dewy_f.webp · seoul-haechi_fantasy_kr_drawn_rim_dewy_f_casual4.webp
+<도시>_<세계>_<화풍>_vista.webp       전경(2026-11-24) — 사람 없는 도시 풍경 한 장, 가로 3:2 1536×1024, 성별 표시 없음. 도시 열쇠만(랜드마크 카드엔 없다)
 예) seoul_fantasy_kr_drawn_rim_dewy_f.webp · seoul_cyberpunk_kr_drawn_rim_dewy_f.webp · seoul_steampunk_kr_drawn_rim_dewy_f_casual1.webp · seoul_fantasy_kr_drawn_rim_dewy_f_casual90.webp
 ```
 
 - `<도시>` = 설계표 열쇠(소문자 영문 — `seoul` · `newyork` …, 밑줄 없음). `<세계>` = `fantasy` · `steampunk` · `cyberpunk` 만. `<화풍>` = `data/style.json` 의 화풍 열쇠(밑줄이 들어 있어도 된다). 칸 사이는 밑줄 `_`, 이름은 모두 소문자.
 - 틀린 이름(세계 `mecha` · 없는 도시 · 남성 `_m` · 성별 표시 없음 · 세계 없는 그림 · 특별컷 · 연출컷 · 같은 자리)은 등록기가 아무것도 저장하지 않고 실패한다.
 - 생성기의 "올릴 파일 이름" 이 이 꼴로 보여 준다.
+
+**전경**(2026-11-24 — 사용자 「랜드마크는 계속 추가할건데 미리 그려놓으면 추가할 때마다 다시 그려야 되지 않나?」 → 전경은 분위기만, 명소 자리는 자료): 도시 × 세계 × 화풍마다 한 장, 도시 무대(`lib/city-view.js`)의 배경. 지시문은 `node tools/vista-prompt.cjs <도시> [세계]`(조립 `lib/prompt-city.js` `buildVista` — 장소는 설계표 `worlds.<세계>.en`, 화풍 줄은 `data/style.json` 판의 `vista` 칸, Avoid 는 그 세계 금지 낱말에서 옷 낱말을 뺀 것). 기준 그림 없이 `images/generations` 한 장. 등록은 세계 몫의 `vista` 칸(`data/img.json` `img.<도시>.byStyle.<화풍>.byForm.<세계>.vista`) — 열한 장 몫 · 잠금 · 진행에 안 센다. 명소 자리는 그림에 박지 않는다 — 설계표 `landmarks[].lat · lon`(근거 `latlon_src`)이 화면의 작은 지도를 그린다. 기록은 `records/<도시>/<세계>-vista.<화풍>-api.json`(지시문 · 모델 · 크기 · 품질 · 원본 sha256). 서울 셋이 첫 시험(2026-11-24).
 
 **기록**: 생성기의 "기록 내보내기" 가 주는 JSON 을 그림 저장소의 `records/<도시>/<세계>.<화풍>-ui.json` 에 둔다(일상컷은 `<세계>-casualN.<화풍>-ui.json` — `ref` 칸이 참고 그림 파일 이름). 화풍은 늘 붙인다. 원본 PNG 의 sha256 과 만들 때 쓴 크기 · 품질 · 사용량은 올릴 때 `generation` 칸으로 더한다.
 

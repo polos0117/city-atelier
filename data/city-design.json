@@ -475,6 +475,10 @@
           "ko": "해치",
           "en": "Haechi",
           "src": "https://ko.wikipedia.org/wiki/해치",
+          "lat": 37.576,
+          "lon": 126.977,
+          "latlon_src": "https://en.wikipedia.org/wiki/Gwanghwamun",
+          "latlon_note": "해치는 한 자리에 있는 것이 아니라 상징이라, 광화문 앞 해치상 자리 — 광화문 문서의 좌표(그 문서가 문 앞 해치상을 적는다)",
           "persona": "불과 재앙을 물리치고 옳고 그름을 가려 서울의 궁궐 문을 지켜 온 외뿔 신수 — 사납고 곧으며, 한 번 지키기로 한 것은 끝까지 지킨다.",
           "worlds": {
             "fantasy": {
@@ -655,6 +659,9 @@
           "ko": "경복궁",
           "en": "Gyeongbokgung",
           "src": "https://ko.wikipedia.org/wiki/경복궁",
+          "lat": 37.5799,
+          "lon": 126.9768,
+          "latlon_src": "https://en.wikipedia.org/wiki/Gyeongbokgung",
           "persona": "조선의 정궁 경복궁의 근정전 마당과 연못 누각을 세 세계의 빛으로 되살리는 사람 — 궁의 격식과 한 줄기 쓸쓸함을 함께 품는다.",
           "worlds": {
             "fantasy": {
@@ -835,6 +842,9 @@
           "ko": "남산 송신탑",
           "en": "Namsan",
           "src": "https://ko.wikipedia.org/wiki/남산서울타워",
+          "lat": 37.5512,
+          "lon": 126.9883,
+          "latlon_src": "https://en.wikipedia.org/wiki/N_Seoul_Tower",
           "persona": "옛 남산 봉수대 자리에 선 송신탑 — 멀리 소식을 전하던 불과 전파의 계보를 이어 한 번 받은 신호는 끝까지 이어 주는 사람.",
           "worlds": {
             "fantasy": {
@@ -1015,6 +1025,9 @@
           "ko": "한강철교",
           "en": "Hangang Railway Bridge",
           "src": "https://ko.wikipedia.org/wiki/한강철교",
+          "lat": 37.5196,
+          "lon": 126.9518,
+          "latlon_src": "https://en.wikipedia.org/wiki/Hangang_Railway_Bridge",
           "persona": "1900년 한강 위에 처음 놓인 철교 — 강 이편과 저편을 잇는 일을 한 번도 쉬지 않은 믿음직한 사람.",
           "worlds": {
             "fantasy": {
@@ -1195,6 +1208,10 @@
           "ko": "한양도성",
           "en": "Seoul City Wall",
           "src": "https://ko.wikipedia.org/wiki/한양도성",
+          "lat": 37.5728,
+          "lon": 127.0085,
+          "latlon_src": "https://en.wikipedia.org/wiki/Seoul_City_Wall",
+          "latlon_note": "성곽은 18.6km 고리라 한 점이 아니다 — 위키 문서의 대표점(흥인지문 부근)",
           "persona": "북악 · 인왕 · 남산 · 낙산 능선을 따라 도읍을 두른 성곽 — 안과 밖을 가르되 문을 닫아걸지만은 않는, 묵묵히 지켜 서 있는 사람.",
           "worlds": {
             "fantasy": {
@@ -1375,6 +1392,10 @@
           "ko": "창덕궁 후원",
           "en": "the Secret Garden of Changdeokgung",
           "src": "https://ko.wikipedia.org/wiki/창덕궁_후원",
+          "lat": 37.5794,
+          "lon": 126.9928,
+          "latlon_src": "https://en.wikipedia.org/wiki/Changdeokgung",
+          "latlon_note": "후원 문서(한국어 · 영어)에 좌표가 없어 후원을 품은 창덕궁 문서의 좌표 — 후원은 이 점의 북쪽 뒤",
           "persona": "창덕궁 북쪽 언덕 너머, 산과 골짜기를 그대로 두고 네모난 연못과 정자만 얹은 왕실 정원 — 말수는 적어도 계절마다 다른 얼굴을 보여 주는, 사려 깊고 느긋한 사람.",
           "worlds": {
             "fantasy": {
@@ -1555,6 +1576,9 @@
           "ko": "청계천",
           "en": "Cheonggyecheon",
           "src": "https://ko.wikipedia.org/wiki/청계천",
+          "lat": 37.57,
+          "lon": 127.0064,
+          "latlon_src": "https://en.wikipedia.org/wiki/Cheonggyecheon",
           "persona": "도심 한가운데를 흐르다 반세기 가까이 길 아래 덮였고, 2005년 다시 열린 물길 — 빌딩 사이 낮은 곳으로 흐르며 지나는 사람의 발을 쉬게 하는, 맑고 다시 숨 쉬는 사람.",
           "worlds": {
             "fantasy": {
@@ -1735,6 +1759,9 @@
           "ko": "북촌 한옥마을",
           "en": "Bukchon Hanok Village",
           "src": "https://ko.wikipedia.org/wiki/북촌_한옥마을",
+          "lat": 37.5831,
+          "lon": 126.9836,
+          "latlon_src": "https://en.wikipedia.org/wiki/Bukchon_Hanok_Village",
           "persona": "경복궁과 창덕궁 사이, 북악 자락 남쪽 비탈에 기와지붕을 맞대고 앉은 옛 양반 동네 — 좁은 오르막 골목 끝에서 손님을 맞되 문 안쪽 마당은 아끼는, 정갈하고 다정한 사람.",
           "worlds": {
             "fantasy": {

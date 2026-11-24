@@ -12,7 +12,7 @@
 - cities 열쇠는 CITY_KEYS 와 같은 열 개 같은 차례. 도시마다 ko · en · country · persona, lat · lon(범위 안, 소수 둘째 자리까지) · latlon_src(주소),
   palette { en, hex 2~3개 #RRGGBB }, symbols 3~5개(ko · en · src 주소).
 - landmarks(고를 수 있는 칸) 가 있으면 랜드마크마다 key(소문자 · 숫자 — '-' '_' 없음, 도시 안에서 겹침 없음) · ko · en · persona · src(주소) · worlds 를
-  도시 worlds 와 같은 검사로 보고, 같은 도시 · 같은 세계 사람끼리(도시 사람 + 랜드마크 전부) 얼굴 칸이 FACE_DIFF_MIN 개 이상 다르지 않으면 오류.
+  도시 worlds 와 같은 검사로 보고(좌표 lat · lon · latlon_src 는 고를 수 있는 칸 — 있으면 숫자 · 소수 넷째 자리까지 · 도시에서 0.5도 안 · 근거 주소, latlon_note 는 대표점을 쓴 까닭), 같은 도시 · 같은 세계 사람끼리(도시 사람 + 랜드마크 전부) 얼굴 칸이 FACE_DIFF_MIN 개 이상 다르지 않으면 오류.
 - worlds 가 {} 면 설계 미정. 채우면 세 세계 다: ko · en(40자 이상, 한국어 없음) · scenes 셋(key · ko · en) ·
   look { face 여섯, silhouette 셋, why } · hold.en · motif { ko, en }. 세 세계는 다른 사람 — 머리색 · 체형 · 얼굴형 · 헤어스타일이 세계끼리 모두 다르고, 얼굴 칸(face_shape · eyes · brows · nose · lips) 가운데
   셋 이상이 세 세계 모두 다르다(미형이되 같은 얼굴은 피한다 — 사용자 2026-11-19). 도시마다 people { ko, en }(그 나라 사람, 조립기 머리 줄 「an adult <en> woman」).
@@ -28,6 +28,7 @@ import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WORLDS = ["fantasy", "steampunk", "cyberpunk"]
+LANDMARK_NEAR = 0.5   # 랜드마크 좌표는 그 도시 lat · lon 에서 각 0.5도 안(2026-11-24)
 CITY_KEYS = ["seoul", "tokyo", "beijing", "paris", "london", "rome", "newyork", "istanbul", "cairo", "rio", "busan", "bangkok", "barcelona", "sydney", "mexicocity", "daejeon"]
 KEY = re.compile(r"^[a-z0-9]+$")
 HEX = re.compile(r"^#[0-9A-Fa-f]{6}$")
@@ -253,6 +254,22 @@ def check(doc):
                     errs.append(lh + " %s 가 비었다" % col)
             if not URL.match(l.get("src") or ""):
                 errs.append(lh + " src 가 주소가 아니다")
+            # 좌표(2026-11-24 — 도시 무대의 작은 지도)는 고를 수 있는 칸: 있으면 lat · lon 둘 다 숫자(소수 넷째 자리까지) · 도시에서 LANDMARK_NEAR 도 안 · latlon_src 주소.
+            # 한 자리에 없는 것(해치 같은 상징)은 비워 둔다 — 지어내지 않는다
+            has = [col for col in ("lat", "lon", "latlon_src", "latlon_note") if col in l]
+            if has:
+                for col in ("lat", "lon"):
+                    x = l.get(col)
+                    if not isinstance(x, (int, float)) or isinstance(x, bool):
+                        errs.append(lh + " %s 가 숫자가 아니다 — %r(좌표는 lat · lon · latlon_src 셋이 같이)" % (col, x))
+                    elif round(x, 4) != x:
+                        errs.append(lh + " %s 는 소수 넷째 자리까지 — %r" % (col, x))
+                    elif isinstance(c.get(col), (int, float)) and abs(x - c[col]) > LANDMARK_NEAR:
+                        errs.append(lh + " %s %r 가 도시(%r)에서 %.1f도 넘게 떨어졌다" % (col, x, c[col], LANDMARK_NEAR))
+                if not URL.match(l.get("latlon_src") or ""):
+                    errs.append(lh + " latlon_src 가 주소가 아니다(좌표를 둘 때는 근거 주소도)")
+                if "latlon_note" in l and not (isinstance(l["latlon_note"], str) and l["latlon_note"].strip()):
+                    errs.append(lh + " latlon_note 가 비었다")
             lw = l.get("worlds")
             if not isinstance(lw, dict) or not lw:
                 errs.append(lh + " worlds 는 세 세계 다")

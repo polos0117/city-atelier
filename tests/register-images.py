@@ -87,6 +87,36 @@ with tempfile.TemporaryDirectory() as d:
     assert code == 1 and s3 is None and '90번' in out, out
     (Path(d) / f'seoul-haechi_fantasy_{S}_f_casual90.webp').unlink()
 
+    # 전경(2026-11-24) — <도시>_<세계>_<화풍>_vista.webp 는 그 세계 몫의 vista 칸. 세계 그림 · 일상컷과 따로, 세계 그림 없는 세계에도 산다
+    vis = {w: f'seoul_{w}_{S}_vista.webp' for w in ('fantasy', 'cyberpunk')}
+    rv = f'rome_fantasy_{S}_vista.webp'
+    for n in (*vis.values(), rv): (Path(d) / n).touch()
+    code, s_v, out = run(saved, d, day='2026-11-24')
+    assert code == 0, out
+    sv = s_v['img']['seoul']['byStyle'][S]['byForm']
+    assert {w: sv[w].get('vista') for w in sv} == {'fantasy': vis['fantasy'], 'steampunk': None, 'cyberpunk': vis['cyberpunk']}, sv
+    assert sv['fantasy']['f'] == seoul['fantasy'] and sv['cyberpunk']['casual']['f'] == [cas[1], cas[0], cas[2]], '전경이 세계 그림 · 일상컷 자리를 건드리지 않는다'
+    assert list(sv['fantasy']) == ['f', 'casual', 'vista'], ('칸 차례', list(sv['fantasy']))
+    assert s_v['img']['rome']['byStyle'][S]['byForm'] == {'fantasy': {'vista': rv}}, '세계 그림 없이 전경만 있는 세계 칸'
+    assert {f: s_v['added'][f] for f in (*vis.values(), rv)} == {f: '2026-11-24' for f in (*vis.values(), rv)} and '· vista' in out, out
+    code, again, out = run(s_v, d)
+    assert code == 0 and again == s_v | {'added': again['added']} and again['img'] == s_v['img'], ('다시 돌려도 그대로', out)
+    for n in (*vis.values(), rv): (Path(d) / n).unlink()
+    code, s_vp, out = run(s_v, d, ['--prune'])
+    assert code == 0 and 'rome' not in s_vp['img'] and not any('vista' in x for x in s_vp['img']['seoul']['byStyle'][S]['byForm'].values()), out
+    assert not any(f in s_vp['added'] for f in (*vis.values(), rv)), '지운 전경은 날짜도 빠진다'
+    for bad, why in [(f'seoul-haechi_fantasy_{S}_vista.webp', '전경은 도시에만'),     # 랜드마크 카드에는 전경이 없다
+                     (f'seoul_{S}_vista.webp', '세계 열쇠가 없다'),
+                     (f'seoul_fantasy_vista.webp', '화풍 열쇠가 없다'),
+                     (f'seoul_mecha_{S}_vista.webp', '그런 도시가 없다'),
+                     (f'zz_fantasy_{S}_vista.webp', '그런 도시가 없다'),
+                     (f'seoul_fantasy_{S}_f_vista.webp', '그런 도시가 없다'),      # 성별 표시를 붙이지 않는다
+                     (f'seoul_fantasy_{S}_vista2.webp', '이름 꼴')]:
+        p = Path(d) / bad; p.touch()
+        code, s2, out = run(saved, d)
+        assert code == 1 and s2 is None and why in out, (bad, out)
+        p.unlink()
+
     # 틀린 이름은 하나라도 있으면 아무것도 저장하지 않는다
     for bad, why in [(f'seoul_mecha_{S}_f.webp', '그런 도시가 없다'),            # 없는 세계(원소의 mecha) → 도시 이름으로 읽혀 실패
                      (f'seoul_modern_{S}_f.webp', '그런 도시가 없다'),
@@ -200,9 +230,11 @@ with tempfile.TemporaryDirectory() as t:
     pic(f'seoul_fantasy_{S}_f_casual3.webp', (1024, 1536)); pic(f'seoul_fantasy_{S}_f_casual4.webp', (1200, 900))   # 기록 없는 옛 컷 2:3 · 받지 않는 크기
     for n, a in [(1, '3:2'), (2, '3:2')]:   # 2 는 계획이 3:2 인데 정사각으로 왔다 — 걸림
         (rec / f'fantasy-casual{n}.{S}-ui.json').write_text(json.dumps({'file': f'seoul_fantasy_{S}_f_casual{n}.webp', 'scene': {'aspect': a}}), encoding='utf-8')
+    pic(f'seoul_fantasy_{S}_vista.webp', (1536, 1024)); pic(f'seoul_steampunk_{S}_vista.webp', (1024, 1536))   # 전경은 3:2 하나 — 세로 전경은 걸림
     bad = {b[0]: b[3] for b in reg.art_size([str(img)])}
-    assert set(bad) == {f'seoul_steampunk_{S}_f.webp', f'seoul_fantasy_{S}_f_casual2.webp', f'seoul_fantasy_{S}_f_casual4.webp'}, bad
+    assert set(bad) == {f'seoul_steampunk_{S}_f.webp', f'seoul_fantasy_{S}_f_casual2.webp', f'seoul_fantasy_{S}_f_casual4.webp', f'seoul_steampunk_{S}_vista.webp'}, bad
+    assert '전경은 1536×1024' in bad[f'seoul_steampunk_{S}_vista.webp'], bad
     assert '3:2' in bad[f'seoul_fantasy_{S}_f_casual2.webp'], bad
 print('PASS 그림 등록: 서울 세 세계 · 도쿄 한 세계의 세계 그림(fantasy·steampunk·cyberpunk)·일상컷(90 번 포함) 자리 · 다시 돌려도 그대로'
       ' · 일상컷은 세계 몫 안 · 없는 세계(mecha)·도시·화풍·성별 표시·남성·대문자·밑줄 도시·세계 없는 그림·특별컷·연출컷·같은 자리는 저장 안 함'
-      ' · 크기(세계 그림 2:3 · 일상컷 셋 · 계획 화면비)' ' · 등록한 날(새 것만 오늘·있던 날짜 그대로·지어내지 않음·틀린 날짜 버림·--check·--prune) · git 이력 채우기(교체·지운 것·얕은 저장소 경계)')
+      ' · 전경(_vista — 세계 몫 vista 칸 · 전경만 있는 세계 · --prune · 랜드마크 · 세계 · 화풍 · 성별 표시 · 3:2 크기)' ' · 크기(세계 그림 2:3 · 일상컷 셋 · 계획 화면비)' ' · 등록한 날(새 것만 오늘·있던 날짜 그대로·지어내지 않음·틀린 날짜 버림·--check·--prune) · git 이력 채우기(교체·지운 것·얕은 저장소 경계)')
