@@ -7,6 +7,10 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-24 · claude · 부산 전경 셋 · 부산 랜드마크 좌표
+- data/city-design.json — 부산 랜드마크 셋 좌표(영어 위키 문서 좌표: 광안대교 · 감천문화마을 · 태종대) — 도시 무대 작은 지도 핀(사용자 「우선 부산만 해줘.」)
+- 그림 저장소 — busan_{fantasy,steampunk,cyberpunk}_kr_drawn_rim_dewy_vista.webp · records/busan/*-vista.*-api.json(API 2.6, 1536×1024, 기록에 usage 토큰)
+
 ## 2026-11-24 · claude · 대전 생활 장면 「빵집 순례」
 - data/city-life.json — daejeon bakery_tour(원도심 이름난 오래된 빵집 앞 줄 · 갓 튀긴 소보로빵, 세 세계 — 빵 굽는 길드 · 증기 오븐 제과점 · 손으로 굽는 전설의 빵집). 가게 이름 · 간판 · 글자는 싣지 않는다(사용자 「성심당은 어디에...」 → 「응 빵집 순례 넣고 올려줘」 — 상표라 이름은 NAMES 에 그대로)
 - data/world-props.json — daejeon_bread(튀김 소보로빵 봉투, 세 세계)

@@ -9465,6 +9465,9 @@
           "ko": "광안대교",
           "en": "Gwangan Bridge",
           "src": "https://ko.wikipedia.org/wiki/광안대교",
+          "lat": 35.1463,
+          "lon": 129.1286,
+          "latlon_src": "https://en.wikipedia.org/wiki/Gwangan_Bridge",
           "persona": "광안리 바다를 건너 해운대와 수영을 잇는 총길이 7.42킬로미터의 이층 현수교(2003년 정식 개통) — 십만 가지가 넘는 빛깔로 연출하는 밤 경관 조명으로 이름났고, 해마다 가을 광안리 불꽃축제의 배경이 된다. 낮엔 시원하고 밤엔 화사한, 두 얼굴을 가진 사람.",
           "worlds": {
             "fantasy": {
@@ -9663,6 +9666,9 @@
           "ko": "감천문화마을",
           "en": "Gamcheon Culture Village",
           "src": "https://en.wikipedia.org/wiki/Gamcheon_Culture_Village",
+          "lat": 35.097,
+          "lon": 129.009,
+          "latlon_src": "https://en.wikipedia.org/wiki/Gamcheon_Culture_Village",
           "persona": "가파른 산비탈에 층층이 오른 거리와 미로 같은 골목, 밝게 칠한 집들의 마을 — 1920~30년대 항구 일꾼들이 옮겨 와 살던 가난한 동네가 2009년부터 주민 · 예술가 · 미대생이 함께 칠하고 꾸며 「부산의 마추픽추」가 됐다. 손재주 좋고 다정하며 골목마다 이야기를 숨겨 둔 사람.",
           "worlds": {
             "fantasy": {
@@ -9852,6 +9858,9 @@
           "ko": "태종대",
           "en": "Taejongdae",
           "src": "https://en.wikipedia.org/wiki/Taejongdae",
+          "lat": 35.05,
+          "lon": 129.0831,
+          "latlon_src": "https://en.wikipedia.org/wiki/Taejongdae",
           "persona": "영도 남쪽 끝, 짙은 상록수 숲 아래 바다를 마주한 깎아지른 절벽과 그 위 등대가 서 있는 자연공원(명승, 2005년) — 삼국을 통일한 뒤 신라의 한 왕이 이곳에서 활쏘기를 즐겼다는 이야기가 이름에 남았다. 바람과 파도 앞에서도 흔들리지 않는 곧고 단단한 사람.",
           "worlds": {
             "fantasy": {
