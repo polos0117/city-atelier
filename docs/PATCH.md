@@ -8,6 +8,10 @@
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
 
+## 2026-11-26 · gpt · 카탈루냐음악당 스팀펑크 대표컷 1번과 일상컷 등록
+- data/img.json · data/casual-index.json — 선택 1번 세계컷과 참조 일상컷 10장의 자동 등록 및 설명 색인을 확인했다.
+- city-atelier-img/img · records/barcelona-palaumusica — 세계컷 원본 픽셀 복원 경위와 실제 생성 지시문·자유 설계·검수 기록을 보존했다.
+
 ## 2026-11-26 · gpt · 일상컷 색인 정렬을 등록기와 일치
 - data/casual-index.json — 기존 줄을 보존하고 자동 색인기의 날짜·카드·세계·번호 순서로 맞췄다.
 
