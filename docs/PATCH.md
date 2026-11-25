@@ -14,6 +14,9 @@
 - lib/casual-note.js(세 공방 사본) · lib/city-view.js · lib/room.css · lib/words.js · lib/dex-view.js · index.html — 한 장 그림 아래 · 크게 보기에 두 줄 + 「더 보기」(44px), 휴대폰 가로 크게 보기엔 숨김. city-view ?v=10 · room.css ?v=14 · words ?v=44
 - tests/globe-screen.cjs — 일상컷 설명(세계 그림엔 없음 · 두 줄 · 더 보기 · 캐릭터만의 컷 · 가로 숨김)
 
+## 2026-11-25 · claude · 즐겨찾기 알림 말 — 공용 파일에서 빼서 낱말 표로
+- lib/words.js · lib/favorites.js(공용 사본) · ?v — 공용 favorites.js 에 박혀 「화면 코드에 한글 금지」 검사(words)를 깨던 가득 · 저장 공간 알림 말을 빼고 낱말 표 dex.fav.full · dex.fav.quota 로
+
 ## 2026-11-25 · claude · 허브 즐겨찾기 — 크게 보기 꽉 채우기 · 가로 보기 · 한도
 - lib/favorites.js — style-atelier shared 판(원본이 공방 모음에서 shared 로): 3000칸, 가득이면 오래된 것을 빼지 않고 거절 · error() · message() · room(), 저장 공간 모자람(QuotaExceededError)은 'quota'(담아 둔 칸 그대로)
 - lib/fill-view.js · lib/fill-core.js(새) — shared 판: 셈 · 두 번 누르기를 몸통 fill-core.js 로 뗐다(동작 같음 — tests/fill-view.cjs 통과)
