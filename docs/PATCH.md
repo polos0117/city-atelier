@@ -7,6 +7,13 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-25 · claude · 새 도시 다섯 — 베네치아 · 프라하 · 두바이 · 홍콩 · 샌프란시스코
+- data/city-design.json — 다섯 도시 설계(세 세계 · 좌표 · 생김새 · 실루엣), 랜드마크 · 전경은 아직 없음
+- data/city-life.json · data/world-props.json · data/casual-own.json — 생활 장면 · 계절 · 날씨 · 새 소품 · 도시 일상컷 줄
+- tools/city-design.py — CITY_KEYS 에 다섯 도시
+- tests/prompt-city.cjs — 다섯 도시 상표 · 인물 · 건물 이름(흔한 낱말 Select · Salute · Basilica · Emirates · Anchor · Ellis · Morrow · Karl · Giants 는 뺐다)
+- tests/image-claim.cjs · tests/dex-screen.cjs · tests/globe-screen.cjs — 도시 21 · 빈 자리 · 지구본 서→동 차례
+
 ## 2026-11-25 · claude · 랜드마크 열둘 — 방콕 · 바르셀로나 · 시드니 · 멕시코시티 셋씩 · 랜드마크 외형 어휘 검사
 - data/city-design.json — 방콕 lumphini(룸피니 공원) · chatuchak(짜뚜짝 주말시장) · democracymonument(민주기념탑), 바르셀로나 palaumusica(카탈루냐 음악당) · boqueria(보케리아 시장) · arctriomf(개선문), 시드니 therocks(더 록스) · botanicgarden(왕립 식물원) · fortdenison(포트 데니슨 — en 은 별명 Pinchgut), 멕시코시티 chapultepec(차풀테펙 성) · zocalo(소칼로) · postalpalace(우체국 궁전) — 세 세계 세 사람씩 · 좌표(위키 문서)(사용자 「도시 랜드마크 설계 추가해줘.」). 서울 랜드마크 앞머리 셋(경복궁 판타지 wispy → curtain · 남산 사이버펑크 swept_back → none · 한강철교 스팀펑크 baby → straight)과 눈 크기 셋(북촌 사이버펑크 · 레인보우브리지 판타지 · 만리장성 스팀펑크 → medium)을 어휘 · 눈 모양에 맞춤 — 없는 열쇠가 지시문에 날 영어로 샜다
 - tests/look-spec.cjs — 랜드마크 카드의 look 도 어휘 · 눈 모양 충돌을 본다(전엔 도시만 봐서 못 잡았다)

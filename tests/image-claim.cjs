@@ -29,10 +29,10 @@ const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'image-claim-'));
   assert.equal(K.missing('istanbul').length, 33, '이스탄불(2026-11-21 설계) 빈 자리 33');
   assert.equal(K.missing('cairo').length, 33, '카이로(2026-11-21 설계) 빈 자리 33');
   assert.equal(K.missing('rio').length, 33, '리우데자네이루(2026-11-21 설계) 빈 자리 33');
-  for (const k of ['busan', 'bangkok', 'barcelona', 'sydney', 'mexicocity', 'daejeon']) assert.equal(K.missing(k).length, 33, k + '(2026-11-22 · 대전 2026-11-23 설계) 빈 자리 33');
+  for (const k of ['busan', 'bangkok', 'barcelona', 'sydney', 'mexicocity', 'daejeon', 'venice', 'prague', 'dubai', 'hongkong', 'sanfrancisco']) assert.equal(K.missing(k).length, 33, k + '(2026-11-22 · 대전 2026-11-23 · 다섯 도시 2026-11-25 설계) 빈 자리 33');
   { const DD = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'city-design.json'), 'utf8')), W = ['fantasy', 'steampunk', 'cyberpunk'];   /* 2026-11-21 서울 빼고 아홉 도시에 랜드마크 셋씩 — 표에서 차례를 따로 세운다 */
     const want = DD.cities.flatMap(c => [c.key, ...(c.landmarks || []).map(l => c.key + '-' + l.key)].flatMap(k => W.map(w => k + '_' + w)));
-    assert.equal(want.length, (16 + 8 + 27 + 6 + 12) * 3, '도시 열여섯 · 서울 랜드마크 여덟 · 아홉 도시 랜드마크 스물일곱 · 부산 · 대전 여섯(2026-11-23) · 방콕 · 바르셀로나 · 시드니 · 멕시코시티 열둘(2026-11-25) × 세 세계');
+    assert.equal(want.length, (21 + 8 + 27 + 6 + 12) * 3, '도시 스물하나(베네치아 · 프라하 · 두바이 · 홍콩 · 샌프란시스코 2026-11-25) · 서울 랜드마크 여덟 · 아홉 도시 랜드마크 스물일곱 · 부산 · 대전 여섯(2026-11-23) · 방콕 · 바르셀로나 · 시드니 · 멕시코시티 열둘(2026-11-25) × 세 세계');
     assert.deepEqual(K.order().map(x => x.key), want, '설계표 차례 × 세계 차례(리우까지 열 곳 모두 설계 — 2026-11-21)'); }
   assert.deepEqual(K.order().map(x => x.key).slice(0, 6), ['seoul_fantasy', 'seoul_steampunk', 'seoul_cyberpunk', 'seoul-haechi_fantasy', 'seoul-haechi_steampunk', 'seoul-haechi_cyberpunk'], '도시 세 세계 다음 그 랜드마크');
   assert.equal(K.order()[3].title, '서울 해치 판타지');

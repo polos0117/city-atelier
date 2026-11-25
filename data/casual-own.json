@@ -824,6 +824,261 @@
      }
     }
    }
+  },
+  "venice": {
+   "root": {
+    "ko": "물 위의 도시를 빛나게 하는 손 — 가면 · 유리 · 노. 카니발엔 금박 · 석고 · 깃털로 꾸민 가면을 쓰고, 가면장(mascherari)은 1436년 규약을 가진 제 조합이 있었으며(https://en.wikipedia.org/wiki/Carnival_of_Venice), 유리장들은 1291년부터 석호의 유리섬 무라노에 모여 색유리 · 샹들리에 · 밀레피오리를 불었고(https://en.wikipedia.org/wiki/Murano_glass), 곤돌리에는 고물에 서서 노받이(포르콜라)에 얹은 노 하나로 곤돌라를 젓는다 — 줄무늬 윗옷 · 빨간 목수건 · 밀짚모자(https://en.wikipedia.org/wiki/Gondola) → 카니발 가면 공방의 마도 가면장(판타지) · 유리섬 샹들리에 유리장(스팀펑크) · 두 세기 뒤 석호의 곤돌리에(사이버펑크). 2026-11-25 시안 — 시험 그림 전",
+    "from": "use"
+   },
+   "mode": "per_world",
+   "worlds": {
+    "fantasy": {
+     "job_ko": "카니발 가면 공방의 마도 가면장",
+     "base": "repair_kiosk",
+     "place": "a maskmakers' workshop on a little canal of her world's floating capital at candlelit night — walls hung with gilded and painted carnival masks, plumes and silk ribbons, pots of gold leaf and white gesso on the workbench, and a window open onto lantern-lit water and gliding black boats",
+     "activity": "she is the mask-enchantress of the carnival, cradling a white half-mask in both hands at her bench and pressing gold leaf onto its brow, each touch waking a faint golden light in it so that whoever wears it will have a new face for the night",
+     "preset": "counter_work",
+     "use": "sig_both",
+     "prop": "a white carnival half-mask half-covered in gold leaf, a curl of gold leaf lifting from its brow",
+     "outfit": {
+      "bold": "a mask-enchantress look fitted to her body — a sleeveless bodice of midnight velvet traced with gold leaf, a short skirt of layered Venetian-red silk edged in raised needle lace, long veil sashes drifting from her hips, a headdress of gilded lace and curling plumes and laced velvet heels",
+      "moderate": "a mask-enchantress look — a fitted short-sleeved gown of midnight velvet traced with gold leaf, falling to the knee in layers of Venetian-red silk edged in raised needle lace, veil sashes drifting from her shoulders and a headdress of gilded lace and curling plumes",
+      "low": "a mask-enchantress look — a long-sleeved, high-necked, floor-length gown of midnight velvet traced with gold leaf, its sleeves and hem edged in raised Venetian needle lace, long Venetian-red silk veil sashes and a headdress of gilded lace and curling plumes"
+     }
+    },
+    "steampunk": {
+     "job_ko": "유리섬 샹들리에 유리장",
+     "base": "museum_workshop",
+     "place": "a glass-furnace workshop on the glass island of her steam city at dusk — the round mouth of the furnace glowing amber, brass blowpipes in racks, a great half-finished chandelier of coloured glass hanging from a brass hoist, and through the arched doorway the lagoon and the gaslit palaces across the water",
+     "activity": "she is the chandelier glassmaker of the island, lifting a freshly blown glass flower on the end of her brass pipe toward the gaslight to check its cobalt and ruby colours before it joins the chandelier",
+     "preset": "light_check",
+     "use": "sig_raise",
+     "prop": "a long brass blowpipe tipped with a glowing glass flower of cobalt and ruby",
+     "outfit": {
+      "bold": "a glassmaker look fitted to her body — a short honey-brown leather work apron over a fitted sleeveless bodice fastened with millefiori glass studs, high-waisted short bloomers, a brass tool harness, one big brass gauntlet glove, earrings like tiny glass chandeliers and laced ankle boots",
+      "moderate": "a glassmaker look — a honey-brown leather work apron over a fitted bodice fastened with millefiori glass studs and a short-sleeved linen blouse, a knee-length skirt, a brass tool harness, one big brass gauntlet glove, earrings like tiny glass chandeliers and laced boots",
+      "low": "a glassmaker look — a long honey-brown leather work apron over a high-necked linen blouse with sleeves rolled to the elbow, a fitted bodice fastened with millefiori glass studs, a full ankle-length skirt, a brass tool harness, one big brass gauntlet glove and laced boots"
+     }
+    },
+    "cyberpunk": {
+     "job_ko": "두 세기 뒤 석호의 곤돌리에(곤돌라 사공)",
+     "base": "travel_ferry",
+     "place": "the great canal of her far-future floating city at dawn — the old lace-arched palaces kept as heritage on both banks, soft route lines of light glowing under the jade water, silent glowing water-taxis passing and slender white glass towers far off at the lagoon's edge",
+     "activity": "she is a gondolier of the lagoon, standing at the stern of her black gondola and rowing with one long oar set in its carved oarlock, steering the boat round the bend of the canal",
+     "preset": "stand_use",
+     "use": "sig_both",
+     "prop": "a long slim black gondola oar ringed with soft light near its blade",
+     "outfit": {
+      "bold": "a gondolier look fitted to her body — a cropped fitted top of blue-and-white gondolier stripes in smart fabric, a short translucent vinyl cape, a red neckerchief knotted at her throat, black high-waisted shorts with a mesh overlay, a chrome prow-shaped hair ornament and sleek platform boots",
+      "moderate": "a gondolier look — a fitted top of blue-and-white gondolier stripes in smart fabric, a short translucent vinyl cape, a red neckerchief knotted at her throat, slim black cropped trousers layered with mesh, a chrome prow-shaped hair ornament and sleek platform boots",
+      "low": "a gondolier look — a long-sleeved, high-necked fitted top of blue-and-white gondolier stripes in smart fabric, a long translucent vinyl coat, a red neckerchief knotted at her throat, loose black trousers, a chrome prow-shaped hair ornament and sleek platform boots"
+     }
+    }
+   }
+  },
+  "prague": {
+   "root": {
+    "ko": "빛을 깎고 · 시간을 감고 · 실로 이야기를 움직이는 황금 도시의 손 — 보헤미안 유리는 손으로 깎고 새기고 불어 샴페인 잔부터 큰 샹들리에까지 만들고(https://en.wikipedia.org/wiki/Bohemian_glass), 구시청사의 천문시계는 1410년부터 도는 중세 천문시계로 해 · 달 · 황도 고리가 톱니로 움직이며(https://en.wikipedia.org/wiki/Prague_astronomical_clock), 체코 마리오네트는 손으로 깎은 줄인형이고(https://en.wikipedia.org/wiki/Marionette) 블랙라이트 극장은 검은 무대에서 자외선 빛 받은 것만 떠 보이게 하는 프라하의 특기다(https://en.wikipedia.org/wiki/Black_light_theatre) → 성 궁전 홀의 보헤미안 크리스털 샹들리에 마도사(판타지) · 구시청사 천문시계의 시계지기(스팀펑크) · 강 위 블랙라이트 극장의 줄인형사(사이버펑크). 2026-11-25 시안 — 시험 그림 전",
+    "from": "story"
+   },
+   "mode": "per_world",
+   "worlds": {
+    "fantasy": {
+     "job_ko": "성 궁전 홀의 보헤미안 크리스털 샹들리에 마도사",
+     "base": "evening_gala",
+     "place": "the vast vaulted hall of the castle-palace of her world's golden winter capital at dusk — slender stone ribs looping like vines across the ceiling, a great chandelier of cut crystal lowered on its chain beside her, more chandeliers blazing ruby and gold overhead and tall windows showing the snowy red rooftops and towers below",
+     "activity": "she is the crystal-mage of the castle, raising a freshly cut ruby crystal drop beside her face to test its facets before hanging it on the great chandelier, the crystal scattering red and gold sparks across the hall",
+     "preset": "raise_chest",
+     "use": "sig_raise",
+     "prop": "a long faceted drop of ruby-flashed cut crystal on a fine gold hook, glowing from within",
+     "outfit": {
+      "bold": "a crystal-mage look fitted to her body — a sleeveless bodice of faceted ruby-flashed cut crystal set in fine gold filigree, a short white silk skirt trimmed with soft white fur, a long white fur-trimmed cape clasped with deep-red garnets, chandelier earrings of crystal drops and white heeled slippers",
+      "moderate": "a crystal-mage look — a fitted short-sleeved bodice of faceted ruby-flashed cut crystal set in fine gold filigree over a knee-length white silk gown trimmed with soft white fur, a long fur-trimmed cape clasped with deep-red garnets and chandelier earrings of crystal drops",
+      "low": "a crystal-mage look — a long-sleeved, high-necked floor-length white silk gown trimmed with soft white fur, its bodice set with faceted ruby-flashed cut crystal in gold filigree, a long fur-trimmed cape clasped with deep-red garnets and chandelier earrings of crystal drops"
+     }
+    },
+    "steampunk": {
+     "job_ko": "구시청사 천문시계의 시계지기",
+     "base": "museum_workshop",
+     "place": "the clock chamber high inside the Gothic town-hall tower of her steam city in the morning — great polished brass gear wheels turning slowly around her, a toothed ring of hundreds of teeth, long pendulum rods, warm gaslight and a small window showing the back of the great blue-and-gold astronomical dial and the pastel square below",
+     "activity": "she is the keeper of the astronomical clock, sitting sideways on a polished oak beam and adjusting the little silver-and-black moon sphere with both hands, a brass oil can and tiny tools beside her",
+     "preset": "bench_fix",
+     "use": "sig_both",
+     "prop": "a little moon sphere of the astronomical clock, half silver and half black, on its brass spindle",
+     "outfit": {
+      "bold": "a clock-keeper look fitted to her body — a fitted corset bodice with visible brass boning whose front panel is a little enamelled astronomical dial in sky blue, red, black and gold, a short ruffled skirt hemmed with tiny brass gears, striped stockings, fingerless leather gloves and laced ankle boots",
+      "moderate": "a clock-keeper look — a fitted bodice with visible brass boning whose front panel is a little enamelled astronomical dial in sky blue, red, black and gold over a short-sleeved cream blouse, a knee-length skirt hemmed with tiny brass gears, leather gloves and laced boots",
+      "low": "a clock-keeper look — a long-sleeved, high-necked cream blouse under a fitted bodice with brass boning whose front panel is a little enamelled astronomical dial in sky blue, red, black and gold, an ankle-length skirt hemmed with tiny brass gears, leather gloves and laced boots"
+     }
+    },
+    "cyberpunk": {
+     "job_ko": "강 위 블랙라이트 극장의 줄인형사",
+     "base": "stage_open_air",
+     "place": "a floating black-velvet stage over the river of her far-future city at night — total darkness around her lit only by ultraviolet light, giant marionettes of light dancing on glowing threads above the stage, an audience hushed on tiered floating seats and the old stone bridge and the castle on the ridge glimmering behind",
+     "activity": "she is the black-light puppeteer, standing at the front of the dark stage and working the carved control bar with both hands so the giant marionette of light above her dances, her black suit melting into the darkness",
+     "preset": "stand_use",
+     "use": "sig_both",
+     "prop": "a carved wooden marionette control bar strung with glowing ultraviolet threads rising to a giant marionette of light",
+     "outfit": {
+      "bold": "a black-light puppeteer look fitted to her body — a sleek matte black bodysuit with a plunging back and light-bending panels, hood pushed back, thin rings on every fingertip trailing threads of ultraviolet light, a choker of tiny fluorescent marionette joints and sleek black heeled boots",
+      "moderate": "a black-light puppeteer look — a matte black bodysuit with light-bending panels under a short open black jacket, hood pushed back, thin rings on every fingertip trailing threads of ultraviolet light, a choker of tiny fluorescent marionette joints and sleek black boots",
+      "low": "a black-light puppeteer look — a long-sleeved, high-necked matte black bodysuit under a long black hooded coat with light-bending panels, hood pushed back, thin rings on every fingertip trailing threads of ultraviolet light and sleek black boots"
+     }
+    }
+   }
+  },
+  "dubai": {
+   "root": {
+    "ko": "물길과 진주와 빛으로 사막 바닷가를 일으킨 손 — 두바이는 18세기 초 크릭가의 진주잡이 · 고기잡이 마을로 시작해 진주를 모으고 사고파는 걸프의 중심이 되었고(https://en.wikipedia.org/wiki/Dubai), 크릭의 아브라 나룻배는 두바이에서 가장 오래된 대중교통으로 지금도 두 옛 동네를 잇고(https://en.wikipedia.org/wiki/Abra_(boat)), 가장 높은 건물 아래 호수의 분수는 음악에 맞춰 물줄기를 150m 넘게 쏘아 올린다(https://en.wikipedia.org/wiki/Dubai_Fountain) → 물 위에서 일하는 사람 — 크릭 부두의 진주 감정사(판타지) · 증기 아브라 나룻배 선장(스팀펑크) · 호수 분수의 안무가(사이버펑크). 2026-11-25 시안 — 시험 그림 전",
+    "from": "story"
+   },
+   "mode": "per_world",
+   "worlds": {
+    "fantasy": {
+     "job_ko": "크릭 부두 다우 배의 진주 감정사",
+     "base": "street_rooftop",
+     "place": "the deck of a great wooden dhow moored at the wharf of her world's capital on its glittering creek at morning — its tall slanting sail furled above, baskets of opened pearl shells and little trays of pearls set out on a woven mat, and square wind towers rising over the coral-stone houses across the water",
+     "activity": "she is the pearl appraiser of the wharf, kneeling on one knee on the deck to weigh a great lustrous pearl on her little gold scale, holding it up to the morning light to judge its glow",
+     "preset": "half_kneel_use",
+     "use": "sig_hold",
+     "prop": "a delicate gold balance scale hanging from her fingers, a single great lustrous pearl glowing in one of its little pans",
+     "outfit": {
+      "bold": "a pearl-appraiser look fitted to her body — a sea-turquoise silk bandeau top netted with strands of pearls, a low-slung sheer silk wrap skirt slit to the hip and embroidered with gold palm fronds, a slender pearl circlet at her brow and gold anklets",
+      "moderate": "a pearl-appraiser look — a fitted short-sleeved sea-turquoise silk top netted with strands of pearls, a knee-length skirt of layered sheer silk embroidered with gold palm fronds, a slender pearl circlet at her brow and soft gold sandals",
+      "low": "a pearl-appraiser look — a long-sleeved, ankle-length gown of sea-turquoise silk with its bodice netted with strands of pearls, a long sheer overskirt embroidered with gold palm fronds, a slender pearl circlet at her brow and soft gold slippers"
+     }
+    },
+    "steampunk": {
+     "job_ko": "크릭의 증기 아브라 나룻배 선장",
+     "base": "travel_ferry",
+     "place": "the brass-railed stern of her little wooden ferry boat at the landing on the busy creek of her steam city at dusk — its polished brass funnel puffing clean white steam, passengers settling onto the low benches, dhows with tall slanting sails unloading at the wharf and gas lamps coming on beneath the square wind towers of the old quarter",
+     "activity": "she is the creek's ferry captain, standing at the stern with both hands on her long brass-banded boat pole to push off from the landing for the next crossing",
+     "preset": "stand_use",
+     "use": "sig_both",
+     "prop": "a long wooden boat pole banded with polished brass, a little brass bell hanging near its top",
+     "outfit": {
+      "bold": "a ferry-captain look fitted to her body — a cropped sea-turquoise naval jacket with gold braid and a high collar of pierced brass lattice, a sash woven in narrow red, black and white geometric bands knotted at her hip over short fitted shorts, a captain's cap and laced ankle boots",
+      "moderate": "a ferry-captain look — a fitted sea-turquoise naval frock coat with gold braid and a high collar of pierced brass lattice over a cotton blouse, a sash woven in narrow red, black and white geometric bands, knee-length fitted trousers, a captain's cap and laced boots",
+      "low": "a ferry-captain look — a long sea-turquoise naval coat with gold braid and a high collar of pierced brass lattice over a high-necked blouse, a sash woven in narrow red, black and white geometric bands, long trousers, leather gloves, a captain's cap and laced boots"
+     }
+    },
+    "cyberpunk": {
+     "job_ko": "가장 높은 탑 아래 호수 분수의 안무가",
+     "base": "stage_open_air",
+     "place": "a glass walkway skimming the fountain lake at the foot of the needle-tall supertall tower in her far-future city at night — jets of water rising hundreds of metres around her in glowing arcs of light, the tower shining above and the crowd's lights glittering along the shore",
+     "activity": "she is the fountain's choreographer, raising her glass baton to call the next jets of water into the air in time to the music, a ribbon of glowing water trailing from its tip",
+     "preset": "light_check",
+     "use": "sig_raise",
+     "prop": "a slim baton of clear glass trailing a ribbon of glowing water through the air from its tip",
+     "outfit": {
+      "bold": "a fountain-choreographer look fitted to her body — a sleek bodysuit of pale silver smart fabric cut high at the hip, panels of projected light floating around her in spiralling stepped tiers like a gown, a headpiece of glowing white desert-lily petals and tall sleek boots",
+      "moderate": "a fountain-choreographer look — a fitted mid-thigh dress of pale silver smart fabric, panels of projected light floating around her in spiralling stepped tiers, a headpiece of glowing white desert-lily petals and sleek heeled boots",
+      "low": "a fountain-choreographer look — a long-sleeved, high-necked gown of pale silver smart fabric falling to the ankle, panels of projected light floating around it in spiralling stepped tiers, a headpiece of glowing white desert-lily petals and sleek boots"
+     }
+    }
+   }
+  },
+  "hongkong": {
+   "root": {
+    "ko": "향기로운 항구 · 대나무 비계 · 건너는 배 — 이름 「홍콩(香港)」은 「향기로운 항구」로, 북쪽 주룽 해안의 향 공장과 애버딘 항구에 쌓아 내보내던 향에서 왔다는 설이 있고(https://en.wikipedia.org/wiki/Hong_Kong), 그 향은 이 땅의 침향나무에서 났다(https://en.wikipedia.org/wiki/Aquilaria_sinensis). 가파른 땅에 대나무 비계로 건물을 감싸 올리는 솜씨는 지금도 남았고(https://en.wikipedia.org/wiki/Bamboo_scaffolding), 항구엔 대나무 살 돛의 정크선(https://en.wikipedia.org/wiki/Junk_(ship))과 1888년부터 건너는 페리(https://en.wikipedia.org/wiki/Star_Ferry) → 침향 조향사(판타지) · 대나무 비계 장인(스팀펑크) · 빛 돛 정크선 선장(사이버펑크). 2026-11-25 시안 — 시험 그림 전",
+    "from": "story"
+   },
+   "mode": "per_world",
+   "worlds": {
+    "fantasy": {
+     "job_ko": "향기로운 항구의 침향 조향사",
+     "base": "street_shop",
+     "place": "a perfumer's pavilion on the quay of the fragrant harbour of her world's capital at dusk — shelves of carved red-lacquered wood lined with pearl-glass flasks, blocks of fragrant agarwood stacked on a granite counter, and a golden haze of scent drifting out over the water where lantern-hung junks glide past",
+     "activity": "she is the agarwood perfumer of the fragrant harbour, leaning over her granite counter and blending a ribbon of glowing golden fragrance into a pearl-glass flask with both hands",
+     "preset": "counter_work",
+     "use": "sig_both",
+     "prop": "a slender flask of pearl-white glass, a ribbon of glowing, fragrant golden mist curling from its stopper",
+     "outfit": {
+      "bold": "an agarwood-perfumer look fitted to her body — a strapless bodice of purple-red silk embroidered with gold bauhinia blossoms and twin-lobed leaves, a long wrap skirt of purple-red silk with a high slit and a hem of seed pearls, strands of pearls draped from her shoulders, a gold bauhinia crown with pearl centres in her half-up hair and soft gold slippers",
+      "moderate": "an agarwood-perfumer look — a fitted short-sleeved bodice of purple-red silk embroidered with gold bauhinia blossoms and twin-lobed leaves, an ankle-length skirt of purple-red silk with a hem of seed pearls, a short shoulder cape edged with pearls, a gold bauhinia crown with pearl centres and soft gold slippers",
+      "low": "an agarwood-perfumer look — a long-sleeved, high-collared silk robe of purple-red embroidered with gold bauhinia blossoms and twin-lobed leaves over an ankle-length skirt, a shoulder cape edged with pearls, a gold bauhinia crown with pearl centres and soft gold slippers"
+     }
+    },
+    "steampunk": {
+     "job_ko": "대나무 비계 장인",
+     "base": "street_rooftop",
+     "place": "the top of a lattice of golden bamboo scaffolding wrapped around a new shophouse of her steam city on a bright afternoon — bamboo poles lashed with black ties climbing past arcaded balconies, a brass double-decker tram ringing its bell on the street far below and the harbour full of steam ferries shining beyond the rooftops",
+     "activity": "she is the master bamboo scaffolder of the street, kneeling on one knee on a plank high on the scaffold and lashing a fresh golden pole into place with a black binding strip",
+     "preset": "half_kneel_use",
+     "use": "sig_hold",
+     "prop": "a long, slim pole of golden bamboo capped and banded with polished brass",
+     "outfit": {
+      "bold": "a bamboo-scaffolder look fitted to her body — a cropped leather flight jacket over a fitted bandeau top, crossing black leather harness straps fastened with polished brass knot-rings, a brass-banded belt with a coil of black binding strip, high-waisted shorts, fingerless gloves, goggles with tiny red storm-signal charms pushed up on her head and laced ankle boots",
+      "moderate": "a bamboo-scaffolder look — a cropped leather flight jacket over a fitted cotton blouse, crossing black leather harness straps fastened with polished brass knot-rings, a brass-banded belt with a coil of black binding strip, fitted knee-length breeches, leather gloves, goggles with tiny red storm-signal charms pushed up on her head and laced boots",
+      "low": "a bamboo-scaffolder look — a long-sleeved, high-collared blouse under a leather flight jacket, crossing black leather harness straps fastened with polished brass knot-rings, a brass-banded belt with a coil of black binding strip, slim trousers tucked into tall laced boots, leather gloves and goggles with tiny red storm-signal charms"
+     }
+    },
+    "cyberpunk": {
+     "job_ko": "빛 돛 정크선 선장",
+     "base": "travel_ferry",
+     "place": "the bow deck of a sky-junk moored at a high harbour pier of her far-future city at night — ribbed, fan-shaped sails of glowing red light folded above, terraced towers of white light glittering on both shores and the old green-and-white ferries crossing the dark water far below",
+     "activity": "she is a sky-junk captain, striding along the bow deck with her glowing captain's baton in one hand as the red light-sails unfurl above her for the night crossing",
+     "preset": "stride_prop",
+     "use": "sig_hold",
+     "prop": "a slim captain's baton of white ceramic and chrome, its tip unfolding into a tiny fan-shaped sail of red light",
+     "outfit": {
+      "bold": "a sky-junk captain look fitted to her body — a sculpted cropped coat whose raised shoulders spread like ribbed, fan-shaped sails of red light, over a fitted strapless bodysuit, a short asymmetric skirt where bauhinia blossoms of light slowly bloom and fade, and tall sleek boots",
+      "moderate": "a sky-junk captain look — a sculpted knee-length coat whose raised shoulders spread like ribbed, fan-shaped sails of red light, over a fitted bodysuit with a modest neckline, bauhinia blossoms of light slowly blooming and fading on the coat panels, sheer smart tights and tall sleek boots",
+      "low": "a sky-junk captain look — a sculpted ankle-length coat closed to the throat, its raised shoulders spread like ribbed, fan-shaped sails of red light, bauhinia blossoms of light slowly blooming and fading on its long panels, slim trousers and tall sleek boots"
+     }
+    }
+   }
+  },
+  "sanfrancisco": {
+   "root": {
+    "ko": "안개를 알리고 · 언덕을 오르고 · 담을 칠하는 만의 도시의 손 — 금문교에는 1937년부터 손으로 켜고 끄는 공기 안개 나팔 다섯이 있고 여름 안개는 다리를 다 가릴 만큼 해협을 덮으며(https://en.wikipedia.org/wiki/Golden_Gate_Bridge), 세계에 하나 남은 손으로 모는 케이블카(1873년)는 그립이 거리 밑의 줄을 붙잡고 놓는 힘 · 손발 맞춤 · 균형의 일이고 해마다 7월 종 치기 대회가 열리며(https://en.wikipedia.org/wiki/San_Francisco_cable_car_system), 미션 지구 밸미 앨리는 1973년부터 담과 차고 문마다 벽화를 그려 왔다(https://en.wikipedia.org/wiki/Balmy_Alley) → 금빛 해협의 안개 나팔 지기(판타지) · 케이블카 그립 조종사(스팀펑크) · 미션의 빛 벽화가(사이버펑크). 2026-11-25 시안 — 시험 그림 전",
+    "from": "story"
+   },
+   "mode": "per_world",
+   "worlds": {
+    "fantasy": {
+     "job_ko": "금빛 해협의 안개 나팔 지기",
+     "base": "travel_lookout",
+     "place": "a stone bastion at the foot of the great vermilion bridge tower over the golden strait of her world's capital at sunset — the huge cables sweeping up into a river of silver fog rolling in from the sea, the strait glittering gold below and the painted hills of the city fading into the mist",
+     "activity": "she is the keeper of the fog horns of the golden strait, raising her great gold horn toward the incoming fog to sound the warning that guides the ships safely between the headlands",
+     "preset": "light_check",
+     "use": "sig_raise",
+     "prop": "a long spiralled horn of polished gold bound with vermilion silk cord, its wide bell engraved with swirls of fog",
+     "outfit": {
+      "bold": "a fog-keeper look fitted to her body — a strapless bodice of vermilion-orange silk crossed by fine gold chains draped from shoulder to shoulder like a suspension bridge's cables, a high-slit layered skirt of the same silk, a sheer silver-grey chiffon veil trailing from her shoulders like fog and gold sandals",
+      "moderate": "a fog-keeper look — a fitted off-shoulder gown of layered vermilion-orange silk with gold chains draped from shoulder to shoulder like a suspension bridge's cables and fine gold threads falling from them, a long silver-grey chiffon veil trailing like fog and gold slippers",
+      "low": "a fog-keeper look — a high-collared, long-sleeved, floor-length gown of layered vermilion-orange silk with gold chains draped across the shoulders like a suspension bridge's cables, a long silver-grey chiffon veil trailing like fog and soft gold slippers"
+     }
+    },
+    "steampunk": {
+     "job_ko": "케이블카 그립 조종사",
+     "base": "subway_car",
+     "place": "the open front of a little wooden cable car climbing an impossibly steep street of her steam city on a bright morning — polished brass poles and the long grip lever before her, riders on the running boards, bright-painted wooden houses on both sides and the misty bay with white sails far below",
+     "activity": "she is the gripwoman of the cable car, standing at the grip with both hands on its polished brass lever to take hold of the humming cable beneath the street, ringing the bell as the car starts up the hill",
+     "preset": "stand_use",
+     "use": "sig_both",
+     "prop": "a long polished brass grip lever with a worn wooden handle",
+     "outfit": {
+      "bold": "a gripwoman look fitted to her body — a sleeveless waistcoat-corset panelled in honey-varnished wood with brass rail trim, high-waisted work shorts, one large brass gauntlet shaped like a grip lever, a small brass bell at her throat, a coil of braided steel cable at her hip and laced boots",
+      "moderate": "a gripwoman look — a waistcoat-corset panelled in honey-varnished wood with brass rail trim over a fitted short-sleeved shirt, fitted knee-length work trousers, one large brass gauntlet shaped like a grip lever, a small brass bell at her throat and laced boots",
+      "low": "a gripwoman look — a waistcoat panelled in honey-varnished wood with brass rail trim over a long-sleeved high-collared shirt, fitted full-length trousers tucked into tall laced boots, one large brass gauntlet shaped like a grip lever and a small brass bell at her throat"
+     }
+    },
+    "cyberpunk": {
+     "job_ko": "미션의 빛 벽화가",
+     "base": "street_alley",
+     "place": "a narrow alley of her far-future city two centuries on where every wall and garage door is a mural of glowing, slowly moving colour — a half-finished mural of bold light-paint on the wall before her, pots of glowing paint on the ground and fog drifting at the end of the alley",
+     "activity": "she is a muralist of light, kneeling at the foot of the wall to paint the last bright stroke of a new mural with her light-paint brush, the colours spreading and starting to move across the wall",
+     "preset": "half_kneel_use",
+     "use": "sig_hold",
+     "prop": "a slim chrome light-paint brush trailing a ribbon of glowing colour from its tip",
+     "outfit": {
+      "bold": "a muralist look fitted to her body — an oversized padded jacket slipping off her shoulders, its back carrying a living mural in bold glowing colours and its hem edged with scalloped pastel light trim like painted Victorian houses, over a cropped bandeau top, tiny paint-splashed shorts and chunky boots",
+      "moderate": "a muralist look — an oversized padded jacket whose back carries a living mural in bold glowing colours, edged with scalloped pastel light trim like painted Victorian houses, over a fitted tank top, paint-splashed cargo shorts and chunky boots",
+      "low": "a muralist look — an oversized padded jacket zipped up, its back carrying a living mural in bold glowing colours and its collar edged with scalloped pastel light trim like painted Victorian houses, over slim paint-splashed full-length trousers and chunky boots"
+     }
+    }
+   }
   }
  }
 }

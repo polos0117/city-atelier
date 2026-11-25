@@ -29,7 +29,7 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WORLDS = ["fantasy", "steampunk", "cyberpunk"]
 LANDMARK_NEAR = 0.5   # 랜드마크 좌표는 그 도시 lat · lon 에서 각 0.5도 안(2026-11-24)
-CITY_KEYS = ["seoul", "tokyo", "beijing", "paris", "london", "rome", "newyork", "istanbul", "cairo", "rio", "busan", "bangkok", "barcelona", "sydney", "mexicocity", "daejeon"]
+CITY_KEYS = ["seoul", "tokyo", "beijing", "paris", "london", "rome", "newyork", "istanbul", "cairo", "rio", "busan", "bangkok", "barcelona", "sydney", "mexicocity", "daejeon", "venice", "prague", "dubai", "hongkong", "sanfrancisco"]
 KEY = re.compile(r"^[a-z0-9]+$")
 HEX = re.compile(r"^#[0-9A-Fa-f]{6}$")
 URL = re.compile(r"^https?://\S+$")

@@ -1945,6 +1945,98 @@
      "en": "a light racket with glowing strings"
     }
    }
-  }
+  },
+  "venice_cicchetti": { "ko": "치케티와 옴브라(작은 잔 백포도주)", "worlds": {
+   "fantasy": { "en": "a wooden board of little bites on bread — creamed salt cod, sweet-and-sour sardines with onions, olives — beside a small glass of white wine" },
+   "steampunk": { "en": "a marble counter of little bites on bread — creamed salt cod, sweet-and-sour sardines with onions, olives — beside a small glass of white wine" },
+   "cyberpunk": { "en": "a softly glowing tray of little bites on bread — creamed salt cod, sweet-and-sour sardines with onions, olives — beside a small glass of white wine" } } },
+  "venice_spritz": { "ko": "스프리츠(프로세코 · 탄산수 · 쓴 아페리티프)", "worlds": {
+   "fantasy": { "en": "a crystal goblet of sparkling orange-red wine spritz with a slice of orange and a green olive" },
+   "steampunk": { "en": "a stemmed glass of sparkling orange-red spritz with a slice of orange and a green olive on a little silver pick" },
+   "cyberpunk": { "en": "a stemmed glass of sparkling orange-red spritz with a slice of orange and a green olive, its rim faintly glowing" } } },
+  "venice_fritole": { "ko": "프리톨레(카니발 철 둥근 튀김 과자)", "worlds": {
+   "fantasy": { "en": "a little basket of round golden fritters studded with raisins and pine nuts and dusted with sugar" },
+   "steampunk": { "en": "a paper cone of round golden fritters studded with raisins and pine nuts and dusted with sugar" },
+   "cyberpunk": { "en": "a warm self-heating cone of round golden fritters studded with raisins and pine nuts and dusted with sugar" } } },
+  "venice_mask": { "ko": "막대에 단 카니발 반가면", "worlds": {
+   "fantasy": { "en": "a gilded carnival half-mask on a slender baton, trimmed with plumes, crystals and silk ribbons" },
+   "steampunk": { "en": "a gilded carnival half-mask with brass filigree and plumes on a slender baton" },
+   "cyberpunk": { "en": "a carnival half-mask of gold leaf and light-catching glass with a faint glowing trim, on a slender baton" } } },
+  "venice_glass": { "ko": "밀레피오리 유리 펜던트", "worlds": {
+   "fantasy": { "en": "a glass pendant on a fine gold chain — a clear drop holding a thousand tiny flowers of coloured glass" },
+   "steampunk": { "en": "a glass pendant on a brass chain — a clear drop holding a thousand tiny flowers of coloured glass" },
+   "cyberpunk": { "en": "a glass pendant on a thin chain — a clear drop holding a thousand tiny flowers of coloured glass, lit softly from within" } } },
+  "prague_pilsner": { "ko": "거품 두껍게 올린 황금빛 체코 라거 한 잔", "worlds": {
+   "fantasy": { "en": "a tall stoneware mug of pale golden lager with a thick, creamy white foam head" },
+   "steampunk": { "en": "a dimpled glass mug of pale golden lager with a thick, creamy white foam head" },
+   "cyberpunk": { "en": "a tall glass of pale golden lager with a thick, creamy white foam head on a softly glowing coaster" } } },
+  "prague_svickova": { "ko": "크네들리키를 곁들인 스비치코바", "worlds": {
+   "fantasy": { "en": "an earthenware plate of marinated beef in a golden cream sauce with sliced bread dumplings, a spoon of cranberries and a dollop of cream" },
+   "steampunk": { "en": "a china plate of marinated beef in a golden cream sauce with sliced bread dumplings, a spoon of cranberries, a dollop of cream and a slice of lemon" },
+   "cyberpunk": { "en": "a plate of marinated beef in a golden cream sauce with sliced bread dumplings, a spoon of cranberries and a dollop of cream on a softly glowing tray" } } },
+  "prague_crystal": { "ko": "손으로 깎은 보헤미안 크리스털 잔", "worlds": {
+   "fantasy": { "en": "a hand-cut crystal goblet of ruby-flashed glass, its star-cut facets scattering red and gold light" },
+   "steampunk": { "en": "a hand-cut crystal goblet of ruby-flashed glass, finely engraved and scattering red light" },
+   "cyberpunk": { "en": "a real hand-cut crystal goblet of ruby-flashed glass, scattering red light over a softly glowing surface" } } },
+  "prague_marionette": { "ko": "손으로 깎은 나무 마리오네트", "worlds": {
+   "fantasy": { "en": "a small hand-carved wooden marionette in a silk court costume, hanging on fine strings from a carved control bar" },
+   "steampunk": { "en": "a small hand-carved wooden marionette in a velvet costume with tiny brass buttons, hanging on fine strings from a wooden control bar" },
+   "cyberpunk": { "en": "a small hand-carved wooden marionette hanging from a control bar on threads of soft glowing light" } } },
+  "dubai_karak": { "ko": "카락 차(카다몸 향 밀크티)", "worlds": {
+   "fantasy": { "en": "a small glass cup of sweet milky tea brewed strong with cardamom, steaming" },
+   "steampunk": { "en": "a small glass cup of sweet milky tea brewed strong with cardamom on a little brass saucer, steaming" },
+   "cyberpunk": { "en": "a small self-warming glass cup of sweet milky tea brewed strong with cardamom, a thin glowing ring at its base" } } },
+  "dubai_gahwa": { "ko": "가흐와(긴 부리 커피 주전자와 손잡이 없는 작은 잔)", "worlds": {
+   "fantasy": { "en": "a long-spouted gold coffee pot and tiny handleless cups of pale, saffron-gold coffee" },
+   "steampunk": { "en": "a long-spouted polished brass coffee pot and tiny handleless porcelain cups of pale, saffron-gold coffee" },
+   "cyberpunk": { "en": "a long-spouted coffee pot of brushed gold on a softly glowing warming base and tiny handleless cups of pale, saffron-gold coffee" } } },
+  "dubai_dates": { "ko": "대추야자 한 접시", "worlds": {
+   "fantasy": { "en": "a little gilded dish of glossy dark dates" },
+   "steampunk": { "en": "a little engraved brass dish of glossy dark dates" },
+   "cyberpunk": { "en": "a little glass dish of glossy dark dates on a softly lit tray" } } },
+  "dubai_luqaimat": { "ko": "루카이마트(대추야자 시럽 튀김 경단)", "worlds": {
+   "fantasy": { "en": "a cone of woven palm leaf filled with golden fried dough balls drizzled with date syrup and sprinkled with sesame" },
+   "steampunk": { "en": "a paper cone of golden fried dough balls drizzled with date syrup and sprinkled with sesame" },
+   "cyberpunk": { "en": "a slim glowing cup of golden fried dough balls drizzled with date syrup and sprinkled with sesame" } } },
+  "dubai_gold": { "ko": "금 장신구(팔찌 · 세공 목걸이)", "worlds": {
+   "fantasy": { "en": "stacks of gleaming gold bangles and gold filigree necklaces" },
+   "steampunk": { "en": "gleaming gold bangles and gold filigree necklaces in a glass-fronted case with a polished brass frame" },
+   "cyberpunk": { "en": "gleaming gold bangles and gold filigree necklaces turning slowly on softly glowing display rings" } } },
+  "hongkong_milk_tea": { "ko": "홍콩식 밀크티(스타킹 밀크티)", "worlds": {
+   "fantasy": { "en": "a heavy porcelain cup of strong, creamy milk tea the colour of polished teak" },
+   "steampunk": { "en": "a thick porcelain cup of strong, silky milk tea strained through a cotton bag, beside a little brass milk jug" },
+   "cyberpunk": { "en": "a self-warming ceramic cup of strong, silky milk tea, softly lit from below" } } },
+  "hongkong_pineapple_bun": { "ko": "파인애플 번(보로바오)과 버터 한 조각", "worlds": {
+   "fantasy": { "en": "a warm golden bun with a crackly, sugary crust cracked into little squares, a thick slab of cold butter tucked inside" },
+   "steampunk": { "en": "a warm golden bun with a crackly, sugary crust cracked into little squares and a thick slab of cold butter, on a little enamel plate" },
+   "cyberpunk": { "en": "a warm golden bun with a crackly, sugary crust cracked into little squares and a thick slab of cold butter, in a molded fibre tray" } } },
+  "hongkong_dim_sum": { "ko": "대나무 찜통 딤섬(새우 만두 · 시우마이)", "worlds": {
+   "fantasy": { "en": "a stack of round bamboo steamers of translucent shrimp dumplings and open-topped pork dumplings, a porcelain teapot steaming beside them" },
+   "steampunk": { "en": "a stack of round bamboo steamers of translucent shrimp dumplings and open-topped pork dumplings, a brass-lidded teapot steaming beside them" },
+   "cyberpunk": { "en": "a stack of round bamboo steamers of translucent shrimp dumplings and open-topped pork dumplings, a slim self-warming teapot beside them" } } },
+  "hongkong_egg_waffle": { "ko": "까이딴자이(동글동글 달걀 와플)", "worlds": {
+   "fantasy": { "en": "a warm golden egg waffle of little round puffs, folded into a cone of waxed paper" },
+   "steampunk": { "en": "a warm golden egg waffle of little round puffs, folded into a twist of brown paper" },
+   "cyberpunk": { "en": "a warm golden egg waffle of little round puffs, in a slim recycled-fibre sleeve" } } },
+  "hongkong_lantern": { "ko": "중추절 등불", "worlds": {
+   "fantasy": { "en": "a glowing silk lantern shaped like a star fruit, hung from a slender bamboo stick" },
+   "steampunk": { "en": "a round paper lantern with a little brass candle-cup inside, hung from a bamboo stick" },
+   "cyberpunk": { "en": "a paper-thin lantern of softly glowing smart fibre on a slim stick" } } },
+  "hongkong_mooncake": { "ko": "월병", "worlds": {
+   "fantasy": { "en": "a round mooncake with a golden crust pressed with a flower pattern, cut to show a salted egg yolk inside" },
+   "steampunk": { "en": "a round mooncake with a golden crust pressed with a flower pattern, cut to show a salted egg yolk inside, on a little porcelain plate" },
+   "cyberpunk": { "en": "a round mooncake with a golden crust pressed with a flower pattern, cut to show a salted egg yolk inside, in a slim lacquered box" } } },
+  "sanfrancisco_chowder": { "ko": "사워도우 빵 그릇 클램 차우더", "worlds": {
+   "fantasy": { "en": "a round loaf of tangy sourdough bread hollowed into a bowl and filled with creamy clam stew" },
+   "steampunk": { "en": "a round sourdough loaf hollowed into a bowl of steaming creamy clam chowder, on a tin tray with a spoon" },
+   "cyberpunk": { "en": "a round sourdough bread bowl of steaming creamy clam chowder in a warm compostable tray" } } },
+  "sanfrancisco_sourdough": { "ko": "사워도우 빵", "worlds": {
+   "fantasy": { "en": "a crusty round loaf of tangy sourdough bread wrapped in a linen cloth" },
+   "steampunk": { "en": "a crusty round loaf of sourdough bread in brown paper tied with string" },
+   "cyberpunk": { "en": "a crusty round loaf of sourdough bread in a thin paper sleeve" } } },
+  "sanfrancisco_burrito": { "ko": "미션 부리토", "worlds": {
+   "fantasy": { "en": "a huge flatbread wrapped around rice, beans and spiced meat, folded in waxed cloth" },
+   "steampunk": { "en": "a huge tortilla wrapped around rice, beans and grilled meat, half peeled out of a sheet of foil" },
+   "cyberpunk": { "en": "a huge burrito of rice, beans and grilled meat half unwrapped from its foil" } } }
  }
 }
