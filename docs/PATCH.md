@@ -7,6 +7,9 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-25 · gpt · 바실리카 저수조 스팀펑크 대표 4번과 일상컷 10장
+- data/img.json — 그림 등록기로 대표컷 1장과 일상컷 10장을 추가했다. 생성·참조 원본 해시, 계획, 자유 설계·코스프레와 검수 기록은 그림 저장소에 보존했다. 정사각 원본은 등록용 1024×1024로 비례 축소했다.
+
 ## 2026-11-25 · claude · 공용 파일 한 곳에서 — style-atelier shared · sync
 - lib/casual-tree-v2.js — style-atelier shared 판(표 `raise_one` 이 있을 때만 거르는 줄 하나 더함 — 이 공방 표엔 없어 동작 그대로)
 - AGENTS.md 6 — 공용 파일(트리 둘 · fill-view · splash)은 style-atelier `shared/` 에서만 고치고 `node shared/sync.cjs` 로 옮긴다
