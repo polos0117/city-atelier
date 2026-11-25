@@ -7,6 +7,16 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-25 · claude · 일상컷 몸짓 — 빵 물기 · 가슴 사이 물건 · 경례 · 가로 브이 · 갸루 피스 · 눈가리기 브이
+- data/casual-tree-v2.json — 사용자 「일상컷에 입에 빵물고 있기, 가슴 사이에 물병이나 다른 물건 끼우거나 올리기, 경례하기, 가로브이, 갸루피스, 눈가리기 브이 장면도 넣어줘」 · 「아 게임기나 pc로 게임하는 장면도」 · 「스포츠경기 관람은 있는데 실제로 하는건 없네」 · 「수영, 테니스, 요가, 놀이터 …, 놀이기구, 워터파크, 자전거, 조깅, 모래성」 · 「수영쪽에서 공기매트 띄워서 누워있는 것」. 손 몸짓 넷(salute 경례 · v_side 가로 브이 · gyaru_peace 갸루 피스 · v_eye 눈가리기 브이)과 자세 추천 여덟(가슴 위 · 얼굴 클로즈업 · 허리 위, 서서 · 앉아 — preset_once 무리라 한 캐릭터 한 장까지, exprs 장난 · 당당 · 윙크). 빵 물기(소품 toast · toast_mouth — 입을 쓰는 동작, exprs 는 입을 벌리지 않는 표정). 가슴 사이 물건 끼우기 · 얹기(물병 · 휴대폰 · 부채 · 선글라스 *_tuck · *_chest — 옷 특징 cleavage 인 옷만, 놀이터 안 됨). 게임(휴대용 게임기 · 패드 · 게임용 컴퓨터 handheld · gamepad · pc_rig). 운동 경기 하기(농구 · 야구 · 축구 · 배구 · 배드민턴 · 탁구 · 테니스 포핸드 · 준비 자세 · 골프 어드레스 · 피니시 · 볼링 굴리기)와 장소 넷(야구장 · 축구장 · 비치발리볼 코트 · 실내 체육관). 수영(자유형 · 물에 누워 뜨기) · 워터 슬라이드 착수 · 공기매트(float_lounge · float_front, 받침 float_raft, 3:2) · 요가 셋 · 조깅(장소 특징 run_path) · 놀이터(그네 · 미끄럼틀 · 시소 · 정글짐, 장소 playground) · 모래성(sand_bucket). 하는 일 갈래 sport(운동 · 놀이). 새 추천 · 소품 · 장소는 start_median.
+- data/casual-tree-v2.json — once_groups: 몸짓 · 가슴 사이 물건만 한 묶음 한 장까지. 운동 · 놀이 · 게임 · 빵 물기는 보통 빈도(사용자 「몇 개는 일상적으로 흔하게 하는 것들인데, 특히 운동은 … 이제는 신경안쓰려고」 — 활동 장면의 그림 오류를 받아들인다). 요가 · 조깅 자세는 운동복(sportswear), 헤엄 · 공기매트는 수영복(swimsuit) 옷 특징이 있어야(자세 outfit — 손 칸을 비워도 걸린다).
+- data/casual-tree-v2.json · data/casual-tree.json — 놀이터(장소 특징 k_kids): 아이들이 배경에 작게만 나올 수 있어 평상복 · 운동복 · 레트로만(outfit_rules not_has k_kids), 상황 노출 없음(situ_not_has), 가슴 사이 물건 동작 없음(not_has). 조립기가 Place 뒤에 People(배경 아이들) · Coverage(덮인 옷) 두 줄을 싣고 노출 축은 적게(kids_place).
+- lib/casual-tree-v2.js — style-atelier shared 원본에서 sync: 소품 동작 · 자세의 outfit(옷 특징) · 소품 동작 not_has · 표 situ_not_has, FEATURES 에 cleavage · sportswear · swimsuit · underlayer.
+- tools/casual-tree-v2.py — 같은 규칙(옷 특징 셋 · 소품 동작 outfit · not_has · 자세 outfit). tests/casual-tree-v2.cjs — 견주기의 옷 계열이 소품 동작 · 자세의 옷 특징도 보게, 놀이터 규칙 검사(옷 계열 · 랜덤 · 상황 노출 · 가슴 사이 물건 · once_groups 열쇠).
+- data/world-props.json — 새 소품의 세 세계 글(토스트 → 꿀빵 · 버터 토스트 · 프린트 빵, 게임기 → 룬 퍼즐판 · 태엽 놋쇠 게임 상자 · 홀로 콘솔, 컴퓨터 → 수정 게임 책상 · 차분 기관 게임 책상 · 뉴럴 바이저 리그, 공 · 라켓 · 배트 · 글러브 · 모래 양동이 · 공기매트(연잎 뗏목 · 놋쇠 테 코르크 · 빛나는 호버 매트) · 물총, 라켓도). 새 장소 다섯의 세 세계 글(마상 시합장 · 스포츠 클럽 · 라이트 코트).
+- tools/casual-plan.cjs — 한 묶음 한 장까지(once_groups) · 추천 · 소품 start_median · 고를 표정(exprs) · 놀이터(목선이 열린 옷 · 상황 노출 없음) — 고르기와 check 둘 다.
+- lib/prompt-city.js — 놀이터 줄 두 개 · 노출 적게(kidsScene · kidsLines). tests/prompt-city.cjs — 놀이터 지시문에 노출 글 · 상황 줄이 없고 아이 · 덮인 옷 줄이 있다. prompt.html — ?v= 올림.
+
 ## 2026-11-25 · claude · 크게 보기 일상컷 설명 — 장소 · 하는 일 · 구도 + 더 보기
 - tools/casual-index.cjs · tests/casual-index.cjs · data/casual-index.json(새) — 사용자 「포켓몬, 원소, 삼국지에는 있는 기능인데 … 도시공방이랑 즐겨찾기에도」: 세 공방과 같은 꼴의 일상컷 색인(필수 — 도시 생활 · 노출 갈래 · 코스프레 · 상황 · 90번, 계획 required 글로)
 - tools/casual-detail.cjs(새, 네 공방 같은 파일) — 장면 풀이 s(둘째 줄 장소 · 하는 일 · 구도, 더 보기 표정 · 시선 · 몸 방향 · 카메라 · 렌즈 · 빛 · 시간대 · 계절 · 날씨 · 순간 · 화면 구성 · 상황 노출 · 옷 꾸밈 · 시대 · 화면비 — 생활 장면 · 시간대 · 계절 · 날씨는 data/city-life.json ko). 손 · 받침 · 고개는 뺐다

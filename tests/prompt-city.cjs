@@ -257,5 +257,13 @@ for (const w of T.WORLDS.map(x => x.key)) { const t = PC.build({ design: D, styl
   assert(t.includes(sf.palette.en) && !t.includes('Seoul red (dancheong red)'), '해치 판타지 — 서울 판타지 palette 를 물려받음');
   const s0 = LIFE.cities.seoul.scenes[0], r = cas('fantasy', { place: P.lifeKey('seoul', s0.key), time: (s0.times || [])[0], season: (s0.seasons || ['autumn'])[0] }, S['default'], 'seoul-haechi').text;
   assert(r.split('\n').some(l => l.startsWith('World: ') && l.includes(sf.own_vocab.casual_world.en)), '해치 판타지 일상컷 World 줄 — 서울 own_vocab'); }
+
+/* 놀이터(k_kids, 2026-11-25) — 노출 축을 많이(bold)로 줘도 지시문에 드러내는 노출 글이 없고, 배경 아이들 · 덮인 옷 줄이 실린다. 상황 노출도 안 실린다 */
+for (const style of LIVE) for (const w of D.vocab.worlds) {
+  const o = cas(w, { place: 'playground', ofam: 'everyday', situ: 'wet', axes: { skin_exposure: 'bold' }, posture: 'swing_sit', frame: 'full_body' }, style), txt = typeof o === 'string' ? o : o.text;
+  assert(/children may appear only as small, soft-focus background figures/.test(txt) && /fully non-revealing/.test(txt), 'playground kids lines ' + style + ' ' + w);
+  assert(!/most revealing|natural cleavage|more scene-appropriate shoulder|skin clearly showing|Situation: right now/i.test(txt), 'playground bold exposure ' + style + ' ' + w + '\n' + txt);
+}
+
 console.log('PASS 지시문 조립: ' + DESIGNED.map(c => c.ko).join(' · ') + ' × 세 세계 × 화풍 ' + LIVE.length + ' = ' + n + '장 — 표지 · motif · 머리색 · 금지 낱말(Avoid 줄 밖) · 이름 · mecha 던짐 · 설계 미정 ' + undesigned.length + '곳(사본) · 노출 · 고른 칸; ' +
   '일상컷 ' + nc + '장(' + DESIGNED.map(c => c.ko + ' 생활 장면 ' + LIFE.cities[c.key].scenes.length).join(' · ') + ' × 세 세계 × 화풍) — 그 세계 장면 글 · 소품 · 옷의 결 · 금지 낱말(Avoid 단락 밖) · 휴대폰 사전 · lifeTree');

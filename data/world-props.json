@@ -1735,6 +1735,216 @@
      "en": "a light paddle with a glowing grip"
     }
    }
+  },
+  "toast": {
+   "ko": "토스트",
+   "worlds": {
+    "fantasy": {
+     "en": "a slice of warm honey bread"
+    },
+    "steampunk": {
+     "en": "a slice of buttered toast"
+    },
+    "cyberpunk": {
+     "en": "a square of printed bread with a glowing jam stripe"
+    }
+   }
+  },
+  "handheld": {
+   "ko": "휴대용 게임기",
+   "worlds": {
+    "fantasy": {
+     "en": "a palm-sized rune puzzle-board whose glowing tiles slide under her thumbs"
+    },
+    "steampunk": {
+     "en": "a clockwork brass pocket game box with tiny levers and a ticking dial"
+    },
+    "cyberpunk": {
+     "en": "a slim holo-console projecting a little glowing game field above her hands"
+    }
+   }
+  },
+  "gamepad": {
+   "ko": "게임 패드",
+   "worlds": {
+    "fantasy": {
+     "en": "a carved crystal game orb that lights up under her thumbs"
+    },
+    "steampunk": {
+     "en": "a brass lever box wired to a clockwork game cabinet"
+    },
+    "cyberpunk": {
+     "en": "a light holo-controller linked to a wall-sized game projection"
+    }
+   }
+  },
+  "pc_rig": {
+   "ko": "게임용 컴퓨터",
+   "worlds": {
+    "fantasy": {
+     "en": "a scrying-glass game desk — rows of glowing rune keys under her fingers before a shimmering crystal pane"
+    },
+    "steampunk": {
+     "en": "a difference-engine game desk — brass typewriter keys under her fingers before a glowing glass dial pane"
+    },
+    "cyberpunk": {
+     "en": "a neural-visor gaming rig — a backlit keyboard under her fingers, a slim visor pushed up on her head, floating game panes with no readable text"
+    }
+   }
+  },
+  "basketball": {
+   "ko": "농구공",
+   "worlds": {
+    "fantasy": {
+     "en": "a stitched leather ball"
+    },
+    "steampunk": {
+     "en": "a panelled leather ball with brass-ringed seams"
+    },
+    "cyberpunk": {
+     "en": "a glowing light-ball"
+    }
+   }
+  },
+  "bat": {
+   "ko": "야구 배트",
+   "worlds": {
+    "fantasy": {
+     "en": "a turned wooden club-bat"
+    },
+    "steampunk": {
+     "en": "a lacquered ash bat with a brass end cap"
+    },
+    "cyberpunk": {
+     "en": "a carbon bat with a glowing grip"
+    }
+   }
+  },
+  "mitt": {
+   "ko": "야구 글러브",
+   "worlds": {
+    "fantasy": {
+     "en": "a stitched leather catching glove"
+    },
+    "steampunk": {
+     "en": "a padded catching glove with brass buckles"
+    },
+    "cyberpunk": {
+     "en": "a smart catching glove with a glowing palm"
+    }
+   }
+  },
+  "soccer_ball": {
+   "ko": "축구공",
+   "worlds": {
+    "fantasy": {
+     "en": "a stitched leather ball"
+    },
+    "steampunk": {
+     "en": "a laced leather football"
+    },
+    "cyberpunk": {
+     "en": "a glowing light-ball"
+    }
+   }
+  },
+  "volleyball": {
+   "ko": "배구공",
+   "worlds": {
+    "fantasy": {
+     "en": "a soft stitched leather ball"
+    },
+    "steampunk": {
+     "en": "a panelled kid-leather ball"
+    },
+    "cyberpunk": {
+     "en": "a glowing light-ball"
+    }
+   }
+  },
+  "badminton_racket": {
+   "ko": "배드민턴 라켓",
+   "worlds": {
+    "fantasy": {
+     "en": "a gut-strung light racket and a feathered shuttlecock"
+    },
+    "steampunk": {
+     "en": "a wooden battledore and a feathered shuttlecock"
+    },
+    "cyberpunk": {
+     "en": "a feather-light racket and a glowing shuttle"
+    }
+   }
+  },
+  "pingpong_paddle": {
+   "ko": "탁구채",
+   "worlds": {
+    "fantasy": {
+     "en": "a small wooden paddle and a polished ball"
+    },
+    "steampunk": {
+     "en": "a vellum-faced paddle and a little ivory-white ball"
+    },
+    "cyberpunk": {
+     "en": "a slim paddle and a glowing ball"
+    }
+   }
+  },
+  "sand_bucket": {
+   "ko": "모래 양동이",
+   "worlds": {
+    "fantasy": {
+     "en": "a little wooden pail and a carved spade"
+    },
+    "steampunk": {
+     "en": "a tin pail and a brass-edged spade"
+    },
+    "cyberpunk": {
+     "en": "a softly glowing pail and a light-edged spade"
+    }
+   }
+  },
+  "air_float": {
+   "ko": "공기매트",
+   "worlds": {
+    "fantasy": {
+     "en": "a floating lily-pad raft heaped with silk cushions"
+    },
+    "steampunk": {
+     "en": "a brass-ringed cork float"
+    },
+    "cyberpunk": {
+     "en": "a glowing hover-float skimming the water"
+    }
+   }
+  },
+  "water_gun": {
+   "ko": "물총",
+   "worlds": {
+    "fantasy": {
+     "en": "a carved wooden water squirter"
+    },
+    "steampunk": {
+     "en": "a brass pump water pistol"
+    },
+    "cyberpunk": {
+     "en": "a glowing water blaster"
+    }
+   }
+  },
+  "racket": {
+   "ko": "라켓",
+   "worlds": {
+    "fantasy": {
+     "en": "a gut-strung wooden racket"
+    },
+    "steampunk": {
+     "en": "a wooden racket with a brass-bound frame"
+    },
+    "cyberpunk": {
+     "en": "a light racket with glowing strings"
+    }
+   }
   }
  }
 }
