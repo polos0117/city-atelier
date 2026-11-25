@@ -8,6 +8,11 @@
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
 
+## 2026-11-26 · gpt · 대청호 스팀펑크 1번 대표컷과 일상컷 묶음
+- city-atelier-img/img · records/daejeon-daecheonglake — 선택 1번 세계컷과 참조 일상컷 10장, 계획·실제 생성 지시문·검수 기록을 보존해 등록
+- data/img.json · data/casual-index.json — 그림 저장소 반영 후 자동 등록과 일상컷 상세 색인으로 연결
+- docs/PATCH.md — 구도·의상·손 역할·소품의 계획 차이는 검수 기록에 남기고 생성된 이미지를 재생성하지 않은 작업 내역 기록
+
 ## 2026-11-26 · gpt · 대청호 판타지 4번 선택 묶음 등록
 - data/img.json — 선택한 GPT 설계 4번 대표컷과 참고 일상컷 10장을 등록기로 추가, 기존 등록 유지
 - docs/PATCH.md — 이미지 생성·검수 및 등록 내역 기록
