@@ -7,6 +7,11 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-25 · gpt · 샌프란시스코 판타지 대표 1번과 일상 묶음
+- city-atelier-img/img/sanfrancisco_fantasy_kr_drawn_rim_dewy_f*.webp — 대표 1번 · 일상 10장 · 안개 나팔 지기 전용컷 90, 총 12장 등록
+- city-atelier-img/records/sanfrancisco/fantasy* — 선택 승인 · 원본 해시 · 계획 · 화풍 · 자유 설계와 코스프레 · 검수 차이 기록, 재생성 없음
+- data/img.json · data/casual-index.json — 자동 등록 및 일상 정보 색인 반영
+
 ## 2026-11-25 · claude · 새 도시 다섯 — 베네치아 · 프라하 · 두바이 · 홍콩 · 샌프란시스코
 - data/city-design.json — 다섯 도시 설계(세 세계 · 좌표 · 생김새 · 실루엣), 랜드마크 · 전경은 아직 없음
 - data/city-life.json · data/world-props.json · data/casual-own.json — 생활 장면 · 계절 · 날씨 · 새 소품 · 도시 일상컷 줄
