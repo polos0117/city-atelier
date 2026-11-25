@@ -8,6 +8,10 @@
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
 
+## 2026-11-26 · gpt · 대청호 판타지 4번 선택 묶음 등록
+- data/img.json — 선택한 GPT 설계 4번 대표컷과 참고 일상컷 10장을 등록기로 추가, 기존 등록 유지
+- docs/PATCH.md — 이미지 생성·검수 및 등록 내역 기록
+
 ## 2026-11-26 · claude · GPT 세계컷 주문서 머리 갈래 — 네 공방 같은 꼴
 - lib/prompt-spec.js · lib/prompt-city.js — 사용자 「아 gpt 헤어스타일 패치안. 삼국지, 포켓몬, 도시 쪽도 그런지 같이 검토해줘」 → 「꼴 맞추는게 나을거 같아 1-4 다 해줘」: 같은 꼴의 머리 갈래(222 짝에 갈래마다 44~64번). 도시 GPT 56장이 허리까지 푼 웨이브 + 머리 장식으로 쏠려 있었다
 - docs/IMAGE_AUTOMATION.md — GPT 설계 기록: free_prompt(채운 지시문) · summary · hair_family
