@@ -16,7 +16,7 @@ const D = J('data/city-design.json'), LIFE = J('data/city-life.json'), PROPS = J
 const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), word = w => new RegExp('\\b' + esc(w) + '\\b', 'i');
 const SCENES = LIFE.cities.seoul.scenes, byKey = (l, k) => (l || []).find(r => r.key === k);
 const TEN = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-const T1 = J('data/casual-tree.json'), GENERIC = new Set(T1.places.map(p => p.key)), COSP = J('data/game-cosplay.json');
+const T1 = J('data/casual-tree.json'), GENERIC = new Set([...T1.places, ...(J('data/casual-tree-v2.json').extra_places || [])].map(p => p.key)), COSP = J('data/game-cosplay.json');   /* 일반 장소 = 버전1 + 버전2 새 장소(2026-11-26 — 계획기 GEN 과 같게) */
 
 let n = 0;
 const card = C.cardOf('seoul');
@@ -94,7 +94,7 @@ for (const seed of [3, 11, 29]) {
         assert(t.includes('\nPlace: ' + sw.en.replace(/\.$/, '') + '.\n'), id + ' 그 장면의 그 세계 글');
         const own = (((D.cities.find(x => x.key === card.key) || {}).worlds || {})[w] || {}).own_vocab || {};   /* 도시별 말(2026-11-20) */
         for (const k of sw.props) assert(t.includes((own.props || {})[k] || PROPS.props[k].worlds[w].en), id + ' 소품 ' + k + ' 의 그 세계 낱말');
-      } else assert(t.includes('\nPlace: ' + P.placeEn(T1.places.find(p => p.key === c.place), w) + '\n'), id + ' 일반 장소 글 그대로(세계 글이 있으면 그 세계 글 — 2026-11-24 탈 것)');
+      } else assert(t.includes('\nPlace: ' + P.placeEn(T1.places.find(p => p.key === c.place) || (J('data/casual-tree-v2.json').extra_places || []).find(p => p.key === c.place), w) + '\n'), id + ' 일반 장소 글 그대로(세계 글이 있으면 그 세계 글 — 2026-11-24 탈 것)');
       assert(t.includes(PROPS.clothes[w].en) === !C.isCosplay(c), id + ' 옷의 결 — 그 세계 평상복(코스프레 컷은 없음)');
       /* 실내면 계절 이름만 · 창밖 · 옷차림(2026-11-20 「실내공간까지 따라들어오는것 같아」), 바깥이면 계절 글 그대로 */
       const sea = byKey(LIFE.seasons.seoul, c.season), inSeason = 'Season: ' + sea.en.split(' — ')[0] + ' — but she is indoors';
@@ -164,7 +164,9 @@ try {
   assert.deepEqual(a, C.plan(card, TEN, [], { seed: 7 }).cuts, '같은 답');
   const c0 = a.find(c => C.kindOf(c) === 'plain' && !c.situ), at = i => a.map((c, j) => (j === i ? { ...c } : c)), i0 = a.indexOf(c0);
   const bad = (patch, re, why, i = i0) => { const x = at(i); Object.assign(x[i], patch); assert(C.check(x, card, []).some(e => re.test(e)), why); };
-  bad({ place: 'library_reading' }, /생활 장면도 일반 장소/, '버전2 새 장소는 안 쓴다');
+  bad({ place: 'no_such_place' }, /생활 장면도 일반 장소/, '표에 없는 장소');
+  bad({ place: 'orbit_lounge' }, /cyberpunk 세계에만 있다/, '궤도 정거장은 사이버펑크만(2026-11-26)');
+  assert(!C.check(at(i0).map((c, j) => (j === i0 ? { ...c, place: 'library_reading' } : c)), card, []).some(e => /생활 장면도 일반 장소/.test(e)), '버전2 새 장소(열람실)도 일반 장소(2026-11-26 사용자 「응 24개도 같이 열고」)');
   bad({ place: 'night_bar' }, /일반 장소 night_bar 의 글에 fantasy 금지 낱말/, '판타지에 네온 바');
   bad({ ofam: 'everyday', item: 'jeans_tee' }, /금지 낱말/, '판타지에 청바지');
   bad({ season: 'winter', place: 'seoul_river_pool' }, /계절 winter/, '여름 수영장에 겨울');
@@ -217,7 +219,7 @@ for (const w of ['fantasy', 'steampunk']) {
     for (const c of C.plan(card, TEN, [], { seed }).cuts) {
       assert(!re.test(C.outfitEn(c)), `${w} 씨앗 ${seed} 칸 ${c.n}: 옷 「${C.outfitEn(c)}」 에 금지 낱말`);
       if (C.EXPOSE_TYPES.includes(C.requiredType(c)) || C.isCosplay(c)) assert(c.frame !== 'face_close', `${w} 씨앗 ${seed} 칸 ${c.n}: 노출 갈래 · 코스프레가 얼굴 클로즈업`);
-      if (!c.sfree && !C.lifeOf(c.place)) assert(!re.test(P.placeEn(T1.places.find(p => p.key === c.place), w)), `${w} 씨앗 ${seed} 칸 ${c.n}: 일반 장소 ${c.place} 에 금지 낱말`);
+      if (!c.sfree && !C.lifeOf(c.place)) assert(!re.test(P.placeEn(T1.places.find(p => p.key === c.place) || (J('data/casual-tree-v2.json').extra_places || []).find(p => p.key === c.place), w)), `${w} 씨앗 ${seed} 칸 ${c.n}: 일반 장소 ${c.place} 에 금지 낱말`);
     }
   }
 }

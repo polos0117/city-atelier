@@ -243,8 +243,9 @@ const HER = LIFE.heritage || {}, HER_ITEMS = HER.items || {}, HER_NEVER = HER.ne
 const HER_ALL = new Set([...Object.values(HER_ITEMS).flat(), ...HER_NEVER]);
 const herOk = (city, item) => !item || !HER_ALL.has(item) || (!HER_NEVER.includes(item) && ((HER.cities || {})[city] || []).some(c => (HER_ITEMS[c] || []).includes(item)));
 const famHerOk = (city, fam) => { const f = (tree.outfits || []).find(o => o.key === fam); return !f || !(f.items || []).length || f.items.some(it => herOk(city, it.key)); };
-/* 일반 장소 — 버전1 트리 장소(data/casual-tree.json places). 버전2 표의 새 장소(extra_places)는 안 쓴다 */
-const GEN = new Set((tree.places || []).map(p => p.key));
+/* 일반 장소 — 버전1 트리 장소(data/casual-tree.json places) + 버전2 표의 새 장소(extra_places — 2026-11-26 사용자 「응 24개도 같이 열고 무중력 진행해줘」:
+   열람실 · 온실 · 빵집 작업실 · 야간열차 침대칸 · 의상 수선실 … 24곳이 도시 일상컷에만 빠져 있었다). 세계 전용 자리(worlds_only — 궤도 정거장은 사이버펑크만)는 C2.choices 가 거른다 */
+const GEN = new Set([...(tree.places || []), ...(tree2.extra_places || [])].map(p => p.key));
 /* 일반 장소의 그 세계 글(트리 장소 worlds — 2026-11-24 탈 것, 조립기 placeEn 과 같다) — 금지 낱말은 그 세계 글로 본다 */
 const placeText = (k, world) => P.placeEn(C2.place(T2, k), world);
 /* 그 세계 그 도시의 장소 풀 — 생활 장면(그 도시) · 일반 장소(그 세계 금지 낱말이 글에 없는 곳) */
@@ -280,7 +281,7 @@ function pickPlace(r, card, kind, { cut = '', taken = new Set(), others = [], U 
   }
   const lifeFirst = kind === 'life' || r() < LIFE_FIRST;
   const pool = lifeFirst ? (L.length ? L : G) : (G.length ? G : L);
-  return lean(r, pool, U.place);
+  return lean(r, pool, U.place, x => x, p => ZG_PLACES.has(p) ? ZG_BOOST : 1);
 }
 const MEMO = new Map();
 function presetsAt(sc, g) {
@@ -307,6 +308,8 @@ const standFrontEye = c => c.posture === 'stand' && (c.body === 'front' || c.bod
    목욕 계열 장소 · 세계 안 목욕탕이 많아 그렇다 — 고를 때 무게를 줄이고, 한 카드의 세 세계 통틀어 한 장까지(check) */
 const FAM_WEIGHT = { bath: 0.25 };
 const famW = sc => FAM_WEIGHT[(sc && sc.ofam) || sc] || 1;
+/* 세계 특징 장소(장소 특징 zero_g — 궤도 정거장, 2026-11-26 사용자 「각 세계만의 독특한 특징을 보여줄 수 있는 씬」 → 「무중력은 메카 세계, 사이버펑크도」)에 무게 — 100~200곳 가운데 3곳이라 250컷에 1컷꼴이었다. 메카 · 사이버펑크 묶음에 한 장 안팎 */
+const ZG_BOOST = 20, ZG_PLACES = new Set(Object.entries(tree2.places || {}).filter(([, f]) => (f || []).includes('zero_g')).map(([k]) => k));
 function lean(r, list, count, key = x => x, factor = () => 1) {
   if (!list.length) return undefined;
   const w = list.map(x => wOf((count || {})[key(x)] || 0) * factor(x)), sum = w.reduce((a, b) => a + b, 0);
@@ -501,7 +504,8 @@ function check(cuts, card, base = [], others = []) {
   const world = card.world || '', noUse = NOT_USES(world), seasons = SEASONS(card.city), weathers = WEATHERS(card.city);
   for (const c of sCuts) {
     const ls = lifeOf(c.place), pr = placeRules(c.place), where = ls ? '장면 ' + ls.key : '장소 ' + c.place;
-    if (ls ? ls.city !== card.city : !GEN.has(c.place)) { errs.push(`칸 ${c.n || '?'}: 장소 ${c.place} 는 ${card.city} 생활 장면도 일반 장소(버전1 트리 장소)도 아니다`); continue; }
+    if (ls ? ls.city !== card.city : !GEN.has(c.place)) { errs.push(`칸 ${c.n || '?'}: 장소 ${c.place} 는 ${card.city} 생활 장면도 일반 장소(버전1 트리 장소 · 버전2 새 장소)도 아니다`); continue; }
+    { const only = (C2.place(T2, c.place) || {}).worlds_only; if (!ls && only && !only.includes(world)) { errs.push(`칸 ${c.n || '?'}: 장소 ${c.place} 는 ${only.join(' · ')} 세계에만 있다(${world})`); continue; } }   /* 궤도 정거장은 사이버펑크만(2026-11-26) */
     if (!ls && !worldOk(world, placeText(c.place, world))) errs.push(`칸 ${c.n || '?'}: 일반 장소 ${c.place} 의 글에 ${world} 금지 낱말`);
     if (ls && ls.outfits && !ls.outfits.includes(c.ofam)) errs.push(`칸 ${c.n || '?'}: 장면 ${ls.key} 에서 의상 계열 ${c.ofam} 은 안 고른다(장면표 outfits)`);
     if (!worldOk(world, outfitEn(c))) errs.push(`칸 ${c.n || '?'}: 옷 「${outfitEn(c)}」 에 ${world} 금지 낱말`);
