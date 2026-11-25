@@ -67,7 +67,7 @@ jobs:
       # 저장소가 없으면 쓰지 않는다(반쪽 색인 막기). 줄이 같으면 파일을 안 바꾼다. 깨져도 등록(img.json)은 그대로 커밋한다
       - name: 일상컷 색인
         continue-on-error: true
-        run: node tests/casual-index.cjs && node tools/casual-index.cjs --repos img-repo
+        run: node tools/casual-index.cjs --repos img-repo && node tests/casual-index.cjs
 
       # 자료·등록기·화면이 같은 말을 하는지 — 깨지면 커밋하지 않는다
       - name: 검사
