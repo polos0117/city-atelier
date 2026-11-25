@@ -7,6 +7,10 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-25 · gpt · 프라하 사이버펑크 12장 등록
+- data/img.json — 선택한 세계컷 2번과 같은 인물의 일상컷 10장·줄인형사 직업컷 90번을 등록기로 반영.
+- 그림과 생성·검수 기록은 city-atelier-img에 저장. 목장 배경의 말과 트램 창밖 랜드마크는 검수에 남기고 재생성 없이 보존.
+
 ## 2026-11-25 · gpt · 샌프란시스코 판타지 대표 1번과 일상 묶음
 - city-atelier-img/img/sanfrancisco_fantasy_kr_drawn_rim_dewy_f*.webp — 대표 1번 · 일상 10장 · 안개 나팔 지기 전용컷 90, 총 12장 등록
 - city-atelier-img/records/sanfrancisco/fantasy* — 선택 승인 · 원본 해시 · 계획 · 화풍 · 자유 설계와 코스프레 · 검수 차이 기록, 재생성 없음
