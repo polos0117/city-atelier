@@ -50,6 +50,14 @@ function cardKo(card) {
   return card;
 }
 const famKo = k => { const f = k && (C2.family(T2, k) || CT.family(tree, k)); return (f && f.ko) || null; };
+/* 실루엣 갈래(2026-11-25 사용자 「실루엣 갈래도 색인에 넣어줘」) — 옷의 cls(수영복 · 란제리 · 역할극 … 계열의 classes) · 한글 이름 */
+const CLS_TREE = JSON.parse(require('fs').readFileSync(require('path').join(__dirname, '..', 'data', 'casual-tree.json'), 'utf8'));
+function clsOf(fam, k) {
+  const f = fam && (CLS_TREE.outfits || []).find((o) => o.key === fam), it = f && k && (f.items || []).find((i) => i.key === k), c = it && it.cls;
+  if (!c) return {};
+  const cl = (f.classes || []).find((x) => x.key === c);
+  return { cls: c, clsKo: (cl && cl.ko) || c };
+}
 const itemKo = (fam, k) => { const it = fam && k && (C2.item(T2, fam, k) || CT.item(tree, fam, k)); return (it && it.ko) || null; };
 const colorKo = k => (by((T.CASUAL || {}).colors, k) || {}).ko || null;
 const situKo = k => String((by((T.CASUAL || {}).situations, k) || {}).ko || k).split(' — ')[0];
@@ -137,7 +145,7 @@ function rowOf(x, required, gc = GC0) {
   } else {
     row.family = nz(s.ofam); row.familyKo = famKo(s.ofam);
     if (s.ofam === COS_FAM) row.cosplay = cosplayOf(r, gc);
-    else { row.item = nz(s.item); row.itemKo = itemKo(s.ofam, s.item); row.shade = nz(s.shade || s.color); row.shadeKo = row.shade ? colorKo(s.color) : null; }
+    else { row.item = nz(s.item); row.itemKo = itemKo(s.ofam, s.item); Object.assign(row, clsOf(s.ofam, s.item)); row.shade = nz(s.shade || s.color); row.shadeKo = row.shade ? colorKo(s.color) : null; }
   }
   const det = DETAIL(s, r, x.card); if (det) row.s = det;
   return row;
