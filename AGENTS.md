@@ -56,7 +56,7 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 맨 위로 간다. `node tests/patch.cjs` 가 모양을 본다. 공용 링크의 `?v=` 는 손으로 올린다.
 
 ### 6. 공용 모듈은 고치지 않는다
-`lib/casual-tree.js` · `lib/casual-tree-v2.js` · `lib/favorites.js` 는 원소 · 삼국지 · 포켓몬 공방과 글자 하나 다르지 않게 복사한 공용 모듈이다. 여기서 따로 고치지 않는다(`node tests/casual-tree-v2.cjs` 가 원소 공방 사본과 sha256 으로 견준다 — 저장소가 옆에 없으면 건너뛴다). `lib/motion-fx.js` 도 sam-atelier 와 같이. `lib/splash.js` · `lib/splash.css`(들어갈 때 로딩 화면, 2026-11-24)는 원소 공방과 같이.
+공용 파일(`lib/casual-tree.js` · `lib/casual-tree-v2.js` · `lib/fill-view.js` · `lib/splash.js` · `lib/splash.css`)은 **style-atelier `shared/` 에서만 고치고** `node shared/sync.cjs` 로 옮긴다 — 여기서 고친 것은 다음 sync 가 덮는다(2026-11-25, 대조는 style-atelier `node tests/shared.cjs`). `lib/favorites.js` 는 원소 · 삼국지 · 포켓몬 공방과 글자 하나 다르지 않게 복사한 공용 모듈이다. 여기서 따로 고치지 않는다(`node tests/casual-tree-v2.cjs` 가 원소 공방 사본과 sha256 으로 견준다 — 저장소가 옆에 없으면 건너뛴다). `lib/motion-fx.js` 도 sam-atelier 와 같이. `lib/splash.js` · `lib/splash.css`(들어갈 때 로딩 화면, 2026-11-24)는 원소 공방과 같이.
 
 ### 7. 그림 · 모형은 이 저장소에 두지 않는다
 그림 저장소 `city-atelier-img`(`polos0117/city-atelier-img` — 2026-11-20 만듦, Pages 켬, 썸네일 워크플로가 Actions 비밀 `CODE_REPO_TOKEN` 으로 이 저장소의 `그림 등록` 을 깨운다 · 뒤받침 한 시간마다). `img/` 는 `.gitignore` 에 있다. 원본 PNG 는 올리지 않는다. 그림 규칙은 `IMAGE_RULES.md`. `data/img.json` 은 손으로 고치지 않는다.
