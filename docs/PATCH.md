@@ -7,6 +7,9 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-25 · claude · 생성기 옷 특징 낱말 — 운동복 · 수영복 · 열린 목선
+- lib/words.js — 오늘 몸짓 · 운동 작업이 더한 옷 특징(sportswear · swimsuit · cleavage)의 화면 이름이 없어 생성기 콘솔에 빠진 낱말 경고(도시 screen 검사 실패). 세 낱말을 더하고 words ?v 올림
+
 ## 2026-11-25 · claude · 일상컷 — 세계 그림의 손 물건은 액세서리로(삼국지처럼)
 - lib/prompt-city.js — 사용자 「도시공방에 소품 드는것중에 장면에 안어울리는 소품을 들 때가 있거든. 카페에서 랜치라든가 … 삼국지나 포켓몬처럼 악세사리 형식으로」: casualCard 가 세계 그림의 손 물건(worlds.<세계>.hold)을 알아볼 거리(signature · signature_hold)로 주지 않는다 — 트리가 「그 물건 들기」 를 어느 장소에서나 고르던 것(카페 → 렌치)이 없어지고, 손 소품은 장소의 소품 동작에서만. 새 줄 SIGNATURE ACCESSORY(holdAccessory — hold 의 첫 마디, 그 세계 금지 낱말이 들면 뺌): 짧은 꼴은 머리 장식 줄 뒤, 긴 꼴은 CHARACTER 뒤, 코스프레 컷엔 없음. casualCard · holdAccessory 내보냄
 - lib/prompt-spec.js — CASUAL.accessory(작은 장신구 · 곁에 둔 물건으로만, PROP 이 이름 부르지 않으면 들지 않는다). 머리 장식 줄 · 코스프레 줄 · 긴 꼴 WARDROBE 셋에 「참고 그림에서 든 물건도 두고 온다」(the object she holds in it)
