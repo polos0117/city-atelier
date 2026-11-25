@@ -7,6 +7,12 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-25 · claude · 허브 즐겨찾기 — 크게 보기 꽉 채우기 · 가로 보기 · 한도
+- lib/favorites.js — style-atelier shared 판(원본이 공방 모음에서 shared 로): 3000칸, 가득이면 오래된 것을 빼지 않고 거절 · error() · message() · room(), 저장 공간 모자람(QuotaExceededError)은 'quota'(담아 둔 칸 그대로)
+- lib/fill-view.js · lib/fill-core.js(새) — shared 판: 셈 · 두 번 누르기를 몸통 fill-core.js 로 뗐다(동작 같음 — tests/fill-view.cjs 통과)
+- lib/city-view.js — 하트 알림이 가득 · 저장 공간이면 그 말(FAV.message()), fill-view ?v=2 · city-view ?v=9(index.html · lib/dex-view.js) · favorites ?v=2(index.html · styles.html; prompt.html 은 읽기만이라 그대로)
+- AGENTS.md — 공용 파일 목록에 fill-core.js · favorites.js
+
 ## 2026-11-25 · gpt · 바실리카 저수조 스팀펑크 대표 4번과 일상컷 10장
 - data/img.json — 그림 등록기로 대표컷 1장과 일상컷 10장을 추가했다. 생성·참조 원본 해시, 계획, 자유 설계·코스프레와 검수 기록은 그림 저장소에 보존했다. 정사각 원본은 등록용 1024×1024로 비례 축소했다.
 
