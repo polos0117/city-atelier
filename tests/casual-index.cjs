@@ -37,7 +37,7 @@ const KEYS = ['card', 'name', 'world', 'worldKo', 'n', 'date', 'style', 'path', 
 const S_KEYS = ['pl', 'act', 'fr', 'ex', 'gz', 'bd', 'cam', 'ln', 'lt', 'mo', 'cp', 'si', 'os', 'tm', 'ss', 'wt', 'era', 'ar', 'en'];
 const HAN = /[가-힣]/;
 for (const r of doc.rows) {
-  assert.deepEqual(Object.keys(r).filter(k => k !== 's'), KEYS, r.path + ' 칸');
+  assert.deepEqual(Object.keys(r).filter((k) => k !== 's' && k !== 'cls' && k !== 'clsKo'), KEYS, r.path + ' 칸');
   for (const k of ['required', 'family', 'item', 'shade', 'world']) if (r[k]) assert.match(r[k + 'Ko'] || '', HAN, `${r.path} ${k}Ko 는 한글`);
   if (!('s' in r)) continue;
   assert.equal(Object.keys(r).pop(), 's', 's 는 줄 끝');
@@ -77,3 +77,5 @@ assert.equal(fs.readFileSync(out, 'utf8').split('\n').length, 2, '한 줄 JSON')
 
 fs.rmSync(tmp, { recursive: true, force: true });
 console.log(`PASS 일상컷 색인(도시): 줄 ${doc.rows.length} · 꼴 · 한글 칸 · 계획 필수 표시 · 코스프레 · 자유 설계 · 장면 풀이 · 그대로 두기`);
+/* 실루엣 갈래(2026-11-25) — cls 가 있으면 한글 clsKo 도 있다, 수영복 · 란제리 줄 가운데 얼마는 cls 를 가진다 */
+{ const R = JSON.parse(require('fs').readFileSync(require('path').join(__dirname, '..', 'data', 'casual-index.json'), 'utf8')).rows; for (const r of R) if (r.cls) require('assert').ok(r.clsKo, 'clsKo ' + r.path); require('assert').ok(R.some((r) => r.cls), '실루엣 갈래 줄이 하나도 없다'); }
