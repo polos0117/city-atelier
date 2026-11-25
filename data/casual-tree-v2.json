@@ -218,6 +218,26 @@
   "berth": {
    "ko": "벽에 묶은 침낭",
    "en": "a sleeping bag strapped to the wall"
+  },
+  "levitate": {
+   "ko": "마법으로 떠오를 수 있는 곳",
+   "en": "a place where magic lets her float"
+  },
+  "wfeat": {
+   "ko": "세계 특징 장소",
+   "en": "a place that shows a feature only this world has"
+  },
+  "magic": {
+   "ko": "마법 세계 장소",
+   "en": "a place of the magic world"
+  },
+  "steam": {
+   "ko": "증기 세계 장소",
+   "en": "a place of the steam world"
+  },
+  "neon": {
+   "ko": "네온 도시 장소",
+   "en": "a place of the neon city"
   }
  },
  "frames": {
@@ -582,6 +602,14 @@
    "en": "nothing holds her up — she floats free in weightlessness",
    "needs": [
     "zero_g"
+   ]
+  },
+  {
+   "key": "levitate",
+   "ko": "마법으로 받침",
+   "en": "a soft glow of magic holds her up — nothing else supports her",
+   "needs": [
+    "levitate"
    ]
   }
  ],
@@ -1601,6 +1629,43 @@
     "full_body",
     "environmental"
    ]
+  },
+  {
+   "key": "levitate",
+   "ko": "마법으로 살짝 떠오르기",
+   "family": "float",
+   "en": "levitating a hand's breadth above the ground, held up by a soft magical glow beneath her, her hair and clothes stirring gently",
+   "needs": [
+    "levitate"
+   ],
+   "supports": [
+    "levitate"
+   ],
+   "frames": [
+    "waist_up",
+    "three_quarter",
+    "full_body",
+    "environmental"
+   ]
+  },
+  {
+   "key": "levitate_cross",
+   "ko": "떠올라 책상다리로 명상",
+   "family": "float",
+   "en": "levitating cross-legged in calm meditation a little above the ground, a soft glow beneath her",
+   "needs": [
+    "levitate"
+   ],
+   "supports": [
+    "levitate"
+   ],
+   "frames": [
+    "chest_up",
+    "waist_up",
+    "three_quarter",
+    "full_body",
+    "environmental"
+   ]
   }
  ],
  "hands": [
@@ -1632,7 +1697,9 @@
     "skate_glide",
     "lean_in",
     "float_zg",
-    "float_cross"
+    "float_cross",
+    "levitate",
+    "levitate_cross"
    ]
   },
   {
@@ -1649,7 +1716,9 @@
     "lean_vehicle",
     "lean_in",
     "float_zg",
-    "float_cross"
+    "float_cross",
+    "levitate",
+    "levitate_cross"
    ]
   },
   {
@@ -1671,7 +1740,9 @@
     "lean_vehicle",
     "ride_side",
     "float_zg",
-    "float_cross"
+    "float_cross",
+    "levitate",
+    "levitate_cross"
    ],
    "outfit": "pocket"
   },
@@ -1782,7 +1853,9 @@
     "step_up",
     "ride_side",
     "float_zg",
-    "float_cross"
+    "float_cross",
+    "levitate",
+    "levitate_cross"
    ]
   },
   {
@@ -1970,7 +2043,9 @@
     "step_up",
     "lean_vehicle",
     "float_zg",
-    "float_cross"
+    "float_cross",
+    "levitate",
+    "levitate_cross"
    ]
   },
   {
@@ -2294,6 +2369,51 @@
     "climb_frame"
    ],
    "en": "her own {side} hand grips a bar of the climbing frame above her head"
+  },
+  {
+   "key": "conjure_orb",
+   "ko": "손바닥 위 빛 구슬",
+   "zone": "chest",
+   "en": "her own {side} palm turned up, a small glowing orb of light floating just above it",
+   "needs": [
+    "magic"
+   ]
+  },
+  {
+   "key": "rune_draw",
+   "ko": "손끝으로 빛 글자 그리기",
+   "zone": "chest",
+   "en": "her own {side} fingertip drawing a trail of glowing runes in the air",
+   "needs": [
+    "magic"
+   ]
+  },
+  {
+   "key": "goggles_up",
+   "ko": "고글을 이마로 밀어 올리기",
+   "zone": "face",
+   "en": "her own {side} hand pushes a pair of brass goggles up onto her forehead",
+   "needs": [
+    "steam"
+   ]
+  },
+  {
+   "key": "ar_swipe",
+   "ko": "허공의 증강현실 창 넘기기",
+   "zone": "chest",
+   "en": "her own {side} hand swipes through a floating translucent AR window in the air",
+   "needs": [
+    "neon"
+   ]
+  },
+  {
+   "key": "wrist_holo",
+   "ko": "손목 기기 홀로그램",
+   "zone": "chest",
+   "en": "her own {side} wrist device projects a small glowing hologram just above it",
+   "needs": [
+    "neon"
+   ]
   }
  ],
  "legs": [
@@ -2655,7 +2775,8 @@
    "feet": false,
    "en": "knees loosely drawn up, lower legs relaxed in the air",
    "postures": [
-    "float_zg"
+    "float_zg",
+    "levitate"
    ]
   },
   {
@@ -2667,7 +2788,8 @@
    "feet": true,
    "en": "legs drifting loosely apart behind her, toes softly pointed",
    "postures": [
-    "float_zg"
+    "float_zg",
+    "levitate"
    ]
   }
  ],
@@ -4647,13 +4769,15 @@
    "window",
    "wall",
    "timed",
-   "rail_waist"
+   "rail_waist",
+   "wfeat"
   ],
   "orbit_cupola": [
    "zero_g",
    "indoor",
    "window",
-   "timed"
+   "timed",
+   "wfeat"
   ],
   "orbit_berth": [
    "zero_g",
@@ -4661,7 +4785,8 @@
    "wall",
    "berth",
    "timed",
-   "k_private"
+   "k_private",
+   "wfeat"
   ],
   "orbit_elevator_car": [
    "chair",
@@ -4670,6 +4795,157 @@
    "wall",
    "upright",
    "rail_waist"
+  ],
+  "isle_edge": [
+   "edge",
+   "floor",
+   "sky",
+   "upright",
+   "soft",
+   "levitate",
+   "wfeat",
+   "magic"
+  ],
+  "magic_library": [
+   "chair",
+   "table",
+   "shelf_high",
+   "indoor",
+   "wall",
+   "upright",
+   "window",
+   "levitate",
+   "wfeat",
+   "magic"
+  ],
+  "spirit_spring": [
+   "water",
+   "edge",
+   "floor",
+   "soft",
+   "upright",
+   "wfeat",
+   "magic"
+  ],
+  "moon_glade": [
+   "floor",
+   "soft",
+   "sky",
+   "upright",
+   "night",
+   "levitate",
+   "wfeat",
+   "magic"
+  ],
+  "potion_lab": [
+   "worktable",
+   "table",
+   "chair",
+   "indoor",
+   "wall",
+   "upright",
+   "shelf_high",
+   "wfeat",
+   "magic"
+  ],
+  "steam_balloon": [
+   "rail_waist",
+   "upright",
+   "sky",
+   "wfeat",
+   "steam"
+  ],
+  "clock_gears": [
+   "edge",
+   "upright",
+   "rail_waist",
+   "wall",
+   "indoor",
+   "window",
+   "wfeat",
+   "steam"
+  ],
+  "diving_bell": [
+   "chair",
+   "wall",
+   "indoor",
+   "window",
+   "timed",
+   "wfeat",
+   "steam"
+  ],
+  "inventor_lab": [
+   "worktable",
+   "table",
+   "chair",
+   "indoor",
+   "wall",
+   "upright",
+   "shelf_high",
+   "window",
+   "wfeat",
+   "steam"
+  ],
+  "tube_post": [
+   "wall",
+   "indoor",
+   "upright",
+   "rail_waist",
+   "wfeat",
+   "steam"
+  ],
+  "neon_roof": [
+   "floor",
+   "rail_waist",
+   "sky",
+   "upright",
+   "edge",
+   "night",
+   "wfeat",
+   "neon"
+  ],
+  "capsule_hotel": [
+   "lie",
+   "soft",
+   "indoor",
+   "wall",
+   "k_private",
+   "timed",
+   "wfeat",
+   "neon"
+  ],
+  "dive_den": [
+   "lie",
+   "chair",
+   "indoor",
+   "wall",
+   "wfeat",
+   "neon"
+  ],
+  "sky_dome": [
+   "chair",
+   "floor",
+   "soft",
+   "upright",
+   "sky",
+   "wfeat",
+   "neon"
+  ],
+  "vending_alley": [
+   "wall",
+   "upright",
+   "floor",
+   "night",
+   "wfeat",
+   "neon"
+  ],
+  "cyber_clinic": [
+   "chair",
+   "indoor",
+   "wall",
+   "upright",
+   "wfeat",
+   "neon"
   ]
  },
  "props": [
@@ -4711,7 +4987,10 @@
     "airship_cabin",
     "tram_stop",
     "scooter_cafe",
-    "car_kerb"
+    "car_kerb",
+    "steam_balloon",
+    "inventor_lab",
+    "diving_bell"
    ]
   },
   {
@@ -6053,6 +6332,191 @@
     "orbit_cupola",
     "orbit_berth"
    ]
+  },
+  {
+   "key": "spellbook",
+   "ko": "빛나는 마법서",
+   "en": "a glowing spellbook with drifting rune light",
+   "places": [
+    "isle_edge",
+    "magic_library",
+    "spirit_spring",
+    "moon_glade",
+    "potion_lab"
+   ]
+  },
+  {
+   "key": "potion",
+   "ko": "물약 병",
+   "en": "a small potion bottle of glowing liquid",
+   "places": [
+    "isle_edge",
+    "magic_library",
+    "spirit_spring",
+    "moon_glade",
+    "potion_lab"
+   ]
+  },
+  {
+   "key": "wand",
+   "ko": "작은 지팡이",
+   "en": "a slender wooden wand",
+   "places": [
+    "isle_edge",
+    "magic_library",
+    "spirit_spring",
+    "moon_glade",
+    "potion_lab"
+   ]
+  },
+  {
+   "key": "star_lantern",
+   "ko": "별 모양 등불",
+   "en": "a star-shaped lantern glowing softly",
+   "places": [
+    "isle_edge",
+    "magic_library",
+    "spirit_spring",
+    "moon_glade",
+    "potion_lab"
+   ]
+  },
+  {
+   "key": "pocket_watch",
+   "ko": "회중시계",
+   "en": "a brass pocket watch on a chain",
+   "places": [
+    "steam_balloon",
+    "clock_gears",
+    "diving_bell",
+    "inventor_lab",
+    "tube_post"
+   ]
+  },
+  {
+   "key": "wind_key",
+   "ko": "태엽 열쇠",
+   "en": "a brass wind-up key",
+   "places": [
+    "steam_balloon",
+    "clock_gears",
+    "diving_bell",
+    "inventor_lab",
+    "tube_post"
+   ]
+  },
+  {
+   "key": "spyglass",
+   "ko": "놋쇠 망원경",
+   "en": "a brass spyglass",
+   "places": [
+    "steam_balloon",
+    "clock_gears",
+    "diving_bell",
+    "inventor_lab",
+    "tube_post"
+   ]
+  },
+  {
+   "key": "tube_capsule",
+   "ko": "기압 튜브 통",
+   "en": "a brass pneumatic-tube capsule",
+   "places": [
+    "steam_balloon",
+    "clock_gears",
+    "diving_bell",
+    "inventor_lab",
+    "tube_post"
+   ]
+  },
+  {
+   "key": "blueprint",
+   "ko": "설계도 두루마리",
+   "en": "a rolled blueprint",
+   "places": [
+    "steam_balloon",
+    "clock_gears",
+    "diving_bell",
+    "inventor_lab",
+    "tube_post"
+   ]
+  },
+  {
+   "key": "wrench",
+   "ko": "놋쇠 렌치",
+   "en": "a brass wrench",
+   "places": [
+    "steam_balloon",
+    "clock_gears",
+    "diving_bell",
+    "inventor_lab",
+    "tube_post"
+   ]
+  },
+  {
+   "key": "neon_umbrella",
+   "ko": "빛나는 우산",
+   "en": "a clear umbrella with a glowing neon rim",
+   "places": [
+    "neon_roof",
+    "capsule_hotel",
+    "dive_den",
+    "sky_dome",
+    "vending_alley",
+    "cyber_clinic"
+   ]
+  },
+  {
+   "key": "ar_glasses",
+   "ko": "증강현실 안경",
+   "en": "slim AR glasses",
+   "places": [
+    "neon_roof",
+    "capsule_hotel",
+    "dive_den",
+    "sky_dome",
+    "vending_alley",
+    "cyber_clinic"
+   ]
+  },
+  {
+   "key": "can_drink",
+   "ko": "캔 음료",
+   "en": "a can of soda",
+   "places": [
+    "neon_roof",
+    "capsule_hotel",
+    "dive_den",
+    "sky_dome",
+    "vending_alley",
+    "cyber_clinic"
+   ]
+  },
+  {
+   "key": "drone_parcel",
+   "ko": "드론 택배 상자",
+   "en": "a small parcel just delivered by a hovering drone",
+   "places": [
+    "neon_roof",
+    "capsule_hotel",
+    "dive_den",
+    "sky_dome",
+    "vending_alley",
+    "cyber_clinic"
+   ]
+  },
+  {
+   "key": "cup_noodle",
+   "ko": "컵라면",
+   "en": "a steaming cup of instant noodles with chopsticks",
+   "places": [
+    "neon_roof",
+    "capsule_hotel",
+    "dive_den",
+    "sky_dome",
+    "vending_alley",
+    "cyber_clinic"
+   ]
   }
  ],
  "prop_uses": [
@@ -6092,7 +6556,8 @@
     "half_kneel",
     "step_up",
     "lean_vehicle",
-    "ride_side"
+    "ride_side",
+    "levitate_cross"
    ]
   },
   {
@@ -6131,7 +6596,8 @@
     "half_kneel",
     "step_up",
     "lean_vehicle",
-    "ride_side"
+    "ride_side",
+    "levitate_cross"
    ]
   },
   {
@@ -6319,7 +6785,8 @@
     "half_kneel",
     "step_up",
     "float_cross",
-    "float_zg"
+    "float_zg",
+    "levitate_cross"
    ]
   },
   {
@@ -6357,7 +6824,8 @@
     "half_kneel",
     "sit_boat",
     "float_cross",
-    "float_zg"
+    "float_zg",
+    "levitate_cross"
    ],
    "gaze": "at_prop"
   },
@@ -7359,7 +7827,8 @@
     "sit_sideways",
     "half_kneel",
     "float_cross",
-    "float_zg"
+    "float_zg",
+    "levitate_cross"
    ],
    "gaze": "at_prop",
    "needs_any": [
@@ -11992,6 +12461,530 @@
     "float_zg",
     "float_cross"
    ]
+  },
+  {
+   "key": "spellbook_read",
+   "prop": "spellbook",
+   "kind": "both",
+   "hands": "both",
+   "zone": "chest",
+   "ko": "마법서를 펼쳐 읽는다",
+   "en": "reads {prop} held open in both hands",
+   "frames": [
+    "face_close",
+    "detail",
+    "chest_up",
+    "waist_up",
+    "three_quarter",
+    "full_body",
+    "environmental"
+   ],
+   "postures": [
+    "sit_chair",
+    "sit_edge",
+    "sit_floor",
+    "sit_lean",
+    "levitate_cross",
+    "stand"
+   ],
+   "grip": {
+    "right": "holds the right page",
+    "left": "holds the left page"
+   }
+  },
+  {
+   "key": "spellbook_hold",
+   "prop": "spellbook",
+   "kind": "hold",
+   "hands": "one",
+   "zone": "chest",
+   "ko": "마법서를 안는다",
+   "en": "holds {prop} against her chest",
+   "frames": [
+    "face_close",
+    "detail",
+    "chest_up",
+    "waist_up",
+    "three_quarter",
+    "full_body",
+    "environmental"
+   ],
+   "postures": [
+    "stand",
+    "walk",
+    "lean_rail",
+    "lean_wall",
+    "lean_counter",
+    "step_up",
+    "sit_chair",
+    "sit_edge",
+    "sit_floor",
+    "sit_lean",
+    "sit_sideways",
+    "kneel",
+    "half_kneel",
+    "levitate",
+    "levitate_cross"
+   ]
+  },
+  {
+   "key": "potion_light",
+   "prop": "potion",
+   "kind": "raise",
+   "hands": "one",
+   "zone": "face",
+   "ko": "물약 병을 빛에 비춰 본다",
+   "en": "holds {prop} up to the light, looking into it",
+   "frames": [
+    "face_close",
+    "detail",
+    "chest_up",
+    "waist_up",
+    "three_quarter",
+    "full_body",
+    "environmental"
+   ],
+   "postures": [
+    "stand",
+    "walk",
+    "lean_rail",
+    "lean_wall",
+    "lean_counter",
+    "step_up",
+    "sit_chair",
+    "sit_edge",
+    "sit_floor",
+    "sit_lean",
+    "sit_sideways",
+    "kneel",
+    "half_kneel",
+    "levitate"
+   ]
+  },
+  {
+   "key": "potion_hold",
+   "prop": "potion",
+   "kind": "hold",
+   "hands": "one",
+   "zone": "chest",
+   "ko": "물약 병을 든다",
+   "en": "holds {prop} loosely",
+   "frames": [
+    "face_close",
+    "detail",
+    "chest_up",
+    "waist_up",
+    "three_quarter",
+    "full_body",
+    "environmental"
+   ],
+   "postures": [
+    "stand",
+    "walk",
+    "lean_rail",
+    "lean_wall",
+    "lean_counter",
+    "step_up",
+    "sit_chair",
+    "sit_edge",
+    "sit_floor",
+    "sit_lean",
+    "sit_sideways",
+    "kneel",
+    "half_kneel",
+    "levitate",
+    "levitate_cross"
+   ]
+  },
+  {
+   "key": "wand_flick",
+   "prop": "wand",
+   "kind": "hold",
+   "hands": "one",
+   "zone": "chest",
+   "ko": "지팡이를 휘두른다",
+   "en": "flicks {prop}, a few sparks trailing from its tip",
+   "frames": [
+    "face_close",
+    "detail",
+    "chest_up",
+    "waist_up",
+    "three_quarter",
+    "full_body",
+    "environmental"
+   ],
+   "postures": [
+    "stand",
+    "walk",
+    "lean_rail",
+    "lean_wall",
+    "lean_counter",
+    "step_up",
+    "levitate"
+   ]
+  },
+  {
+   "key": "star_lantern_carry",
+   "prop": "star_lantern",
+   "kind": "hold",
+   "hands": "one",
+   "zone": "hips",
+   "ko": "별 등불을 옆에 든다",
+   "en": "carries {prop} low at her side",
+   "frames": [
+    "face_close",
+    "detail",
+    "chest_up",
+    "waist_up",
+    "three_quarter",
+    "full_body",
+    "environmental"
+   ],
+   "postures": [
+    "stand",
+    "walk",
+    "levitate"
+   ]
+  },
+  {
+   "key": "watch_open",
+   "prop": "pocket_watch",
+   "kind": "hold",
+   "hands": "one",
+   "zone": "chest",
+   "ko": "회중시계를 열어 본다",
+   "en": "flips open {prop} to check the time",
+   "frames": [
+    "face_close",
+    "detail",
+    "chest_up",
+    "waist_up",
+    "three_quarter",
+    "full_body",
+    "environmental"
+   ],
+   "postures": [
+    "stand",
+    "walk",
+    "lean_rail",
+    "lean_wall",
+    "lean_counter",
+    "step_up",
+    "sit_chair",
+    "sit_edge",
+    "sit_floor",
+    "sit_lean",
+    "sit_sideways",
+    "kneel",
+    "half_kneel"
+   ]
+  },
+  {
+   "key": "key_wind",
+   "prop": "wind_key",
+   "kind": "hold",
+   "hands": "one",
+   "zone": "chest",
+   "ko": "태엽을 감는다",
+   "en": "winds a small clockwork device with {prop}",
+   "frames": [
+    "face_close",
+    "detail",
+    "chest_up",
+    "waist_up",
+    "three_quarter",
+    "full_body",
+    "environmental"
+   ],
+   "postures": [
+    "stand",
+    "walk",
+    "lean_rail",
+    "lean_wall",
+    "lean_counter",
+    "step_up",
+    "sit_chair",
+    "sit_edge",
+    "sit_floor",
+    "sit_lean",
+    "sit_sideways",
+    "kneel",
+    "half_kneel"
+   ]
+  },
+  {
+   "key": "spyglass_look",
+   "prop": "spyglass",
+   "kind": "raise",
+   "hands": "one",
+   "zone": "face",
+   "ko": "망원경을 들여다본다",
+   "en": "looks through {prop} with one eye",
+   "frames": [
+    "face_close",
+    "detail",
+    "chest_up",
+    "waist_up",
+    "three_quarter",
+    "full_body",
+    "environmental"
+   ],
+   "postures": [
+    "stand",
+    "lean_rail",
+    "sit_edge"
+   ]
+  },
+  {
+   "key": "capsule_catch",
+   "prop": "tube_capsule",
+   "kind": "hold",
+   "hands": "one",
+   "zone": "chest",
+   "ko": "튜브 통을 받는다",
+   "en": "catches {prop} as it pops out of the tube",
+   "frames": [
+    "face_close",
+    "detail",
+    "chest_up",
+    "waist_up",
+    "three_quarter",
+    "full_body",
+    "environmental"
+   ],
+   "postures": [
+    "stand",
+    "lean_rail"
+   ]
+  },
+  {
+   "key": "blueprint_open",
+   "prop": "blueprint",
+   "kind": "both",
+   "hands": "both",
+   "zone": "chest",
+   "ko": "설계도를 펼친다",
+   "en": "unrolls {prop} in both hands",
+   "frames": [
+    "face_close",
+    "detail",
+    "chest_up",
+    "waist_up",
+    "three_quarter",
+    "full_body",
+    "environmental"
+   ],
+   "postures": [
+    "stand",
+    "lean_counter",
+    "sit_chair",
+    "sit_lean"
+   ],
+   "grip": {
+    "right": "holds one end of the sheet",
+    "left": "holds the other end"
+   }
+  },
+  {
+   "key": "wrench_turn",
+   "prop": "wrench",
+   "kind": "hold",
+   "hands": "one",
+   "zone": "chest",
+   "ko": "렌치로 밸브를 조인다",
+   "en": "tightens a brass valve with {prop}",
+   "frames": [
+    "face_close",
+    "detail",
+    "chest_up",
+    "waist_up",
+    "three_quarter",
+    "full_body",
+    "environmental"
+   ],
+   "postures": [
+    "stand",
+    "sit_edge",
+    "lean_rail",
+    "kneel"
+   ]
+  },
+  {
+   "key": "umbrella_over",
+   "prop": "neon_umbrella",
+   "kind": "hold",
+   "hands": "one",
+   "zone": "overhead",
+   "ko": "우산을 쓴다",
+   "en": "holds {prop} over her head",
+   "frames": [
+    "face_close",
+    "detail",
+    "chest_up",
+    "waist_up",
+    "three_quarter",
+    "full_body",
+    "environmental"
+   ],
+   "postures": [
+    "stand",
+    "walk",
+    "lean_rail"
+   ]
+  },
+  {
+   "key": "glasses_slide",
+   "prop": "ar_glasses",
+   "kind": "raise",
+   "hands": "one",
+   "zone": "face",
+   "ko": "증강현실 안경을 내려 본다",
+   "en": "slides {prop} down her nose to look over them",
+   "frames": [
+    "face_close",
+    "detail",
+    "chest_up",
+    "waist_up",
+    "three_quarter",
+    "full_body",
+    "environmental"
+   ],
+   "postures": [
+    "stand",
+    "walk",
+    "lean_rail",
+    "lean_wall",
+    "lean_counter",
+    "step_up",
+    "sit_chair",
+    "sit_edge",
+    "sit_floor",
+    "sit_lean",
+    "sit_sideways",
+    "kneel",
+    "half_kneel"
+   ]
+  },
+  {
+   "key": "can_sip",
+   "prop": "can_drink",
+   "kind": "raise",
+   "hands": "one",
+   "zone": "face",
+   "ko": "캔 음료를 마신다",
+   "en": "sips from {prop}",
+   "frames": [
+    "face_close",
+    "detail",
+    "chest_up",
+    "waist_up",
+    "three_quarter",
+    "full_body",
+    "environmental"
+   ],
+   "postures": [
+    "stand",
+    "walk",
+    "lean_rail",
+    "lean_wall",
+    "lean_counter",
+    "step_up",
+    "sit_chair",
+    "sit_edge",
+    "sit_floor",
+    "sit_lean",
+    "sit_sideways",
+    "kneel",
+    "half_kneel"
+   ]
+  },
+  {
+   "key": "can_hold",
+   "prop": "can_drink",
+   "kind": "hold",
+   "hands": "one",
+   "zone": "chest",
+   "ko": "캔 음료를 든다",
+   "en": "holds {prop} loosely",
+   "frames": [
+    "face_close",
+    "detail",
+    "chest_up",
+    "waist_up",
+    "three_quarter",
+    "full_body",
+    "environmental"
+   ],
+   "postures": [
+    "stand",
+    "walk",
+    "lean_rail",
+    "lean_wall",
+    "lean_counter",
+    "step_up",
+    "sit_chair",
+    "sit_edge",
+    "sit_floor",
+    "sit_lean",
+    "sit_sideways",
+    "kneel",
+    "half_kneel"
+   ]
+  },
+  {
+   "key": "parcel_take",
+   "prop": "drone_parcel",
+   "kind": "both",
+   "hands": "both",
+   "zone": "chest",
+   "ko": "드론 택배를 받는다",
+   "en": "takes {prop} from a hovering delivery drone",
+   "frames": [
+    "face_close",
+    "detail",
+    "chest_up",
+    "waist_up",
+    "three_quarter",
+    "full_body",
+    "environmental"
+   ],
+   "postures": [
+    "stand",
+    "lean_rail"
+   ],
+   "grip": {
+    "right": "supports the parcel from one side",
+    "left": "supports it from the other side"
+   }
+  },
+  {
+   "key": "cupnoodle_eat",
+   "prop": "cup_noodle",
+   "kind": "both",
+   "hands": "both",
+   "zone": "chest",
+   "ko": "컵라면을 먹는다",
+   "en": "eats from {prop} with chopsticks",
+   "frames": [
+    "face_close",
+    "detail",
+    "chest_up",
+    "waist_up",
+    "three_quarter",
+    "full_body",
+    "environmental"
+   ],
+   "postures": [
+    "sit_chair",
+    "sit_edge",
+    "sit_floor",
+    "stand",
+    "lean_rail"
+   ],
+   "grip": {
+    "right": "holds the chopsticks",
+    "left": "holds the cup"
+   }
   }
  ],
  "outfit_features": {
@@ -12828,6 +13821,44 @@
     "orbit_elevator_car"
    ],
    "ko": "목욕 · 수영복 · 웨딩 차림으로 궤도 정거장 · 엘리베이터"
+  },
+  {
+   "outfits": [
+    "bath",
+    "swimwear"
+   ],
+   "places": [
+    "magic_library",
+    "potion_lab"
+   ],
+   "ko": "목욕 · 수영복으로 마법 서고 · 물약 공방"
+  },
+  {
+   "outfits": [
+    "bath",
+    "swimwear",
+    "bridal"
+   ],
+   "places": [
+    "clock_gears",
+    "inventor_lab",
+    "tube_post",
+    "steam_balloon"
+   ],
+   "ko": "목욕 · 수영복 · 웨딩으로 톱니탑 · 작업실 · 우편실 · 열기구"
+  },
+  {
+   "outfits": [
+    "bath",
+    "swimwear",
+    "bridal"
+   ],
+   "places": [
+    "vending_alley",
+    "cyber_clinic",
+    "dive_den"
+   ],
+   "ko": "목욕 · 수영복 · 웨딩으로 자판기 골목 · 의체 정비소 · 접속방"
   }
  ],
  "presets": [
@@ -15573,6 +16604,502 @@
    "legs": "float_drift",
    "gaze": "camera",
    "act": "pose"
+  },
+  {
+   "key": "mg_orb",
+   "ko": "손바닥 위 빛 구슬 바라보기",
+   "posture": "stand",
+   "support": "none",
+   "frame": "waist_up",
+   "body": "front_3q",
+   "head": "tilt",
+   "camera": "eye",
+   "right": "conjure_orb",
+   "left": "natural",
+   "legs": "",
+   "gaze": "down",
+   "act": "look"
+  },
+  {
+   "key": "mg_rune",
+   "ko": "공중에 빛 글자 그리기",
+   "posture": "stand",
+   "support": "none",
+   "frame": "three_quarter",
+   "body": "front_3q",
+   "head": "turn_side",
+   "camera": "eye",
+   "right": "rune_draw",
+   "left": "natural",
+   "legs": "",
+   "gaze": "screen_right",
+   "act": "pose"
+  },
+  {
+   "key": "mg_lev",
+   "ko": "마법으로 살짝 떠오르기",
+   "posture": "levitate",
+   "support": "levitate",
+   "frame": "full_body",
+   "body": "front",
+   "head": "tilt",
+   "camera": "low",
+   "right": "natural",
+   "left": "natural",
+   "legs": "float_drift",
+   "gaze": "camera",
+   "act": "pose"
+  },
+  {
+   "key": "mg_meditate",
+   "ko": "떠올라 명상",
+   "posture": "levitate_cross",
+   "support": "levitate",
+   "frame": "full_body",
+   "body": "front",
+   "head": "with_body",
+   "camera": "eye",
+   "right": "natural",
+   "left": "natural",
+   "legs": "",
+   "gaze": "down",
+   "act": "rest"
+  },
+  {
+   "key": "mg_lev_read",
+   "ko": "떠서 마법서 읽기",
+   "posture": "levitate_cross",
+   "support": "levitate",
+   "frame": "three_quarter",
+   "body": "front_3q",
+   "head": "tilt",
+   "camera": "eye",
+   "right": "prop",
+   "left": "prop",
+   "prop_kind": "both",
+   "legs": "",
+   "gaze": "at_prop",
+   "act": "rest"
+  },
+  {
+   "key": "mg_library",
+   "ko": "서고 의자에서 마법서",
+   "posture": "sit_chair",
+   "support": "back_seat",
+   "frame": "waist_up",
+   "body": "front_3q",
+   "head": "tilt",
+   "camera": "eye",
+   "right": "prop",
+   "left": "prop",
+   "prop_kind": "both",
+   "legs": "",
+   "gaze": "at_prop",
+   "act": "rest"
+  },
+  {
+   "key": "mg_isle",
+   "ko": "섬 가장자리에서 구름바다",
+   "posture": "sit_edge",
+   "support": "hip_edge",
+   "frame": "full_body",
+   "body": "rear_3q",
+   "head": "turn_side",
+   "camera": "eye",
+   "right": "natural",
+   "left": "natural",
+   "legs": "dangle",
+   "gaze": "horizon",
+   "act": "rest"
+  },
+  {
+   "key": "mg_spring",
+   "ko": "정령의 샘에 발 담그기",
+   "posture": "sit_edge",
+   "support": "hip_edge",
+   "frame": "three_quarter",
+   "body": "front_3q",
+   "head": "tilt",
+   "camera": "eye",
+   "right": "natural",
+   "left": "natural",
+   "legs": "",
+   "gaze": "down",
+   "act": "rest"
+  },
+  {
+   "key": "mg_potion",
+   "ko": "물약 병 비춰 보기",
+   "posture": "stand",
+   "support": "none",
+   "frame": "chest_up",
+   "body": "front_3q",
+   "head": "tilt",
+   "camera": "eye",
+   "right": "prop",
+   "left": "natural",
+   "prop_kind": "raise",
+   "legs": "",
+   "gaze": "at_prop",
+   "act": "look"
+  },
+  {
+   "key": "mg_wand",
+   "ko": "지팡이 휘두르기",
+   "posture": "stand",
+   "support": "none",
+   "frame": "three_quarter",
+   "body": "front_3q",
+   "head": "tilt",
+   "camera": "eye",
+   "right": "prop",
+   "left": "natural",
+   "prop_kind": "hold",
+   "legs": "",
+   "gaze": "camera",
+   "act": "pose"
+  },
+  {
+   "key": "mg_lantern",
+   "ko": "별 등불 들고 숲길",
+   "posture": "walk",
+   "support": "none",
+   "frame": "full_body",
+   "body": "front_3q",
+   "head": "tilt",
+   "camera": "eye",
+   "right": "prop",
+   "left": "natural",
+   "prop_kind": "hold",
+   "legs": "walk_stride",
+   "gaze": "camera",
+   "act": "walk"
+  },
+  {
+   "key": "sp_balloon",
+   "ko": "열기구 난간에서 구름 보기",
+   "posture": "lean_rail",
+   "support": "none",
+   "frame": "three_quarter",
+   "body": "rear_3q",
+   "head": "over_shoulder",
+   "camera": "eye",
+   "right": "natural",
+   "left": "natural",
+   "legs": "",
+   "gaze": "camera",
+   "act": "look"
+  },
+  {
+   "key": "sp_spyglass",
+   "ko": "망원경으로 하늘 보기",
+   "posture": "stand",
+   "support": "none",
+   "frame": "waist_up",
+   "body": "side",
+   "head": "with_body",
+   "camera": "eye",
+   "right": "prop",
+   "left": "natural",
+   "prop_kind": "raise",
+   "legs": "",
+   "gaze": "into_prop",
+   "act": "look"
+  },
+  {
+   "key": "sp_gears",
+   "ko": "톱니 사이 걸터앉아 렌치",
+   "posture": "sit_edge",
+   "support": "hip_edge",
+   "frame": "full_body",
+   "body": "front_3q",
+   "head": "tilt",
+   "camera": "eye",
+   "right": "prop",
+   "left": "natural",
+   "prop_kind": "hold",
+   "legs": "dangle",
+   "gaze": "at_prop",
+   "act": "fix"
+  },
+  {
+   "key": "sp_watch",
+   "ko": "회중시계 열어 보기",
+   "posture": "stand",
+   "support": "none",
+   "frame": "chest_up",
+   "body": "front_3q",
+   "head": "tilt",
+   "camera": "eye",
+   "right": "prop",
+   "left": "natural",
+   "prop_kind": "hold",
+   "legs": "",
+   "gaze": "at_prop",
+   "act": "look"
+  },
+  {
+   "key": "sp_bell",
+   "ko": "잠수종 둥근 창 들여다보기",
+   "posture": "sit_chair",
+   "support": "none",
+   "frame": "waist_up",
+   "body": "side",
+   "head": "with_body",
+   "camera": "eye",
+   "right": "natural",
+   "left": "natural",
+   "legs": "",
+   "gaze": "window",
+   "act": "look"
+  },
+  {
+   "key": "sp_goggles",
+   "ko": "고글 올리며 웃기",
+   "posture": "stand",
+   "support": "none",
+   "frame": "chest_up",
+   "body": "front",
+   "head": "tilt",
+   "camera": "eye",
+   "right": "goggles_up",
+   "left": "natural",
+   "legs": "",
+   "gaze": "camera",
+   "act": "pose"
+  },
+  {
+   "key": "sp_blueprint",
+   "ko": "작업대에 설계도 펼치기",
+   "posture": "lean_counter",
+   "support": "none",
+   "frame": "three_quarter",
+   "body": "front_3q",
+   "head": "tilt",
+   "camera": "eye",
+   "right": "prop",
+   "left": "prop",
+   "prop_kind": "both",
+   "legs": "",
+   "gaze": "at_prop",
+   "act": "chore"
+  },
+  {
+   "key": "sp_key",
+   "ko": "태엽 감기",
+   "posture": "sit_chair",
+   "support": "none",
+   "frame": "waist_up",
+   "body": "front_3q",
+   "head": "tilt",
+   "camera": "eye",
+   "right": "prop",
+   "left": "natural",
+   "prop_kind": "hold",
+   "legs": "",
+   "gaze": "at_prop",
+   "act": "fix"
+  },
+  {
+   "key": "sp_capsule",
+   "ko": "튜브 우편 받기",
+   "posture": "stand",
+   "support": "none",
+   "frame": "waist_up",
+   "body": "front_3q",
+   "head": "tilt",
+   "camera": "eye",
+   "right": "prop",
+   "left": "natural",
+   "prop_kind": "hold",
+   "legs": "",
+   "gaze": "at_prop",
+   "act": "chore"
+  },
+  {
+   "key": "sp_basket_wave",
+   "ko": "열기구에서 손 흔들기",
+   "posture": "lean_rail",
+   "support": "none",
+   "frame": "waist_up",
+   "body": "front",
+   "head": "tilt",
+   "camera": "eye",
+   "right": "wave",
+   "left": "rail",
+   "legs": "",
+   "gaze": "camera",
+   "act": "pose"
+  },
+  {
+   "key": "cp_umbrella",
+   "ko": "네온 비 옥상에서 우산",
+   "posture": "stand",
+   "support": "none",
+   "frame": "full_body",
+   "body": "front_3q",
+   "head": "tilt",
+   "camera": "low",
+   "right": "prop",
+   "left": "natural",
+   "prop_kind": "hold",
+   "legs": "contrapposto",
+   "gaze": "camera",
+   "act": "pose"
+  },
+  {
+   "key": "cp_roof_rail",
+   "ko": "옥상 난간에서 네온 도시 보기",
+   "posture": "lean_rail",
+   "support": "none",
+   "frame": "three_quarter",
+   "body": "rear_3q",
+   "head": "over_shoulder",
+   "camera": "eye",
+   "right": "natural",
+   "left": "natural",
+   "legs": "",
+   "gaze": "camera",
+   "act": "look"
+  },
+  {
+   "key": "cp_ar",
+   "ko": "허공 증강현실 창 넘기기",
+   "posture": "stand",
+   "support": "none",
+   "frame": "waist_up",
+   "body": "front_3q",
+   "head": "turn_side",
+   "camera": "eye",
+   "right": "ar_swipe",
+   "left": "natural",
+   "legs": "",
+   "gaze": "screen_right",
+   "act": "pose"
+  },
+  {
+   "key": "cp_capsule",
+   "ko": "캡슐에서 엎드려 홀로그램",
+   "posture": "lie_front",
+   "support": "front_floor",
+   "frame": "full_body",
+   "body": "front_3q",
+   "head": "tilt",
+   "camera": "eye",
+   "right": "natural",
+   "left": "natural",
+   "legs": "feet_up",
+   "gaze": "camera",
+   "act": "rest"
+  },
+  {
+   "key": "cp_dive",
+   "ko": "접속 의자에 기대 눈 감기",
+   "posture": "recline",
+   "support": "back_lounger",
+   "frame": "three_quarter",
+   "body": "front_3q",
+   "head": "tilt",
+   "camera": "high",
+   "right": "natural",
+   "left": "natural",
+   "legs": "",
+   "gaze": "down",
+   "act": "rest"
+  },
+  {
+   "key": "cp_can",
+   "ko": "자판기 옆 캔 음료",
+   "posture": "lean_wall",
+   "support": "back_wall",
+   "frame": "three_quarter",
+   "body": "front_3q",
+   "head": "tilt",
+   "camera": "eye",
+   "right": "prop",
+   "left": "natural",
+   "prop_kind": "raise",
+   "legs": "",
+   "gaze": "camera",
+   "act": "sip"
+  },
+  {
+   "key": "cp_noodle",
+   "ko": "돔 벤치에서 컵라면",
+   "posture": "sit_chair",
+   "support": "none",
+   "frame": "waist_up",
+   "body": "front_3q",
+   "head": "tilt",
+   "camera": "eye",
+   "right": "prop",
+   "left": "prop",
+   "prop_kind": "both",
+   "legs": "",
+   "gaze": "at_prop",
+   "act": "sip"
+  },
+  {
+   "key": "cp_drone",
+   "ko": "드론 택배 받기",
+   "posture": "stand",
+   "support": "none",
+   "frame": "waist_up",
+   "body": "front_3q",
+   "head": "tilt",
+   "camera": "eye",
+   "right": "prop",
+   "left": "prop",
+   "prop_kind": "both",
+   "legs": "",
+   "gaze": "at_prop",
+   "act": "chore"
+  },
+  {
+   "key": "cp_glasses",
+   "ko": "증강현실 안경 내려 보기",
+   "posture": "stand",
+   "support": "none",
+   "frame": "chest_up",
+   "body": "front",
+   "head": "tilt",
+   "camera": "eye",
+   "right": "prop",
+   "left": "natural",
+   "prop_kind": "raise",
+   "legs": "",
+   "gaze": "camera",
+   "act": "pose"
+  },
+  {
+   "key": "cp_wrist",
+   "ko": "의체 정비소에서 손목 홀로그램",
+   "posture": "sit_chair",
+   "support": "none",
+   "frame": "waist_up",
+   "body": "front_3q",
+   "head": "tilt",
+   "camera": "eye",
+   "right": "wrist_holo",
+   "left": "natural",
+   "legs": "",
+   "gaze": "down",
+   "act": "rest"
+  },
+  {
+   "key": "cp_dome",
+   "ko": "인공 하늘 올려다보기",
+   "posture": "sit_floor",
+   "support": "none",
+   "frame": "full_body",
+   "body": "front_3q",
+   "head": "tilt",
+   "camera": "eye",
+   "right": "natural",
+   "left": "natural",
+   "legs": "",
+   "gaze": "up",
+   "act": "rest"
   }
  ],
  "expressions": {
@@ -16039,6 +17566,214 @@
     "cyberpunk"
    ],
    "note": "2026-11-26 사용자 「우주공간이나, 무중력 상태에서 할 수 있는 일(공중에 떠서 음료마시기) 같은 각 세계만의 독특한 특징을 보여줄 수 있는 씬」 → 「무중력은 메카 세계, 사이버펑크도 될 거 같은데, 사이버펑크에 우주궤도 엘리베이터가 있어서」"
+  },
+  {
+   "key": "isle_edge",
+   "group": "magic",
+   "ko": "떠 있는 섬 가장자리",
+   "en": "the grassy edge of a floating island high in the sky — a sheer drop to a sea of clouds below, other islands drifting in the distance",
+   "eras": [
+    "now"
+   ],
+   "note": "2026-11-26 사용자 「판타지랑 스팀펑크,사이버펑크도 이런식으로 추가안 만들어줘. 판타지는 마법이나 정령같은 요소 넣으면 될거같은데」 → 「응 추가안 진행해줘」",
+   "worlds_only": [
+    "fantasy"
+   ]
+  },
+  {
+   "key": "magic_library",
+   "group": "magic",
+   "ko": "떠다니는 책들의 마법 서고",
+   "en": "a towering magic library where books drift slowly through the air between tall shelves, lit by floating candles",
+   "eras": [
+    "now"
+   ],
+   "note": "2026-11-26 사용자 「판타지랑 스팀펑크,사이버펑크도 이런식으로 추가안 만들어줘. 판타지는 마법이나 정령같은 요소 넣으면 될거같은데」 → 「응 추가안 진행해줘」",
+   "worlds_only": [
+    "fantasy"
+   ]
+  },
+  {
+   "key": "spirit_spring",
+   "group": "magic",
+   "ko": "정령의 샘",
+   "en": "a clear spring glowing with soft blue light in a mossy grotto, tiny spirit creatures of light hovering over the water",
+   "eras": [
+    "now"
+   ],
+   "note": "2026-11-26 사용자 「판타지랑 스팀펑크,사이버펑크도 이런식으로 추가안 만들어줘. 판타지는 마법이나 정령같은 요소 넣으면 될거같은데」 → 「응 추가안 진행해줘」",
+   "worlds_only": [
+    "fantasy"
+   ]
+  },
+  {
+   "key": "moon_glade",
+   "group": "magic",
+   "ko": "달빛 숲 빈터",
+   "en": "a moonlit forest glade carpeted with softly glowing mushrooms and flowers, two moons above the trees",
+   "eras": [
+    "now"
+   ],
+   "note": "2026-11-26 사용자 「판타지랑 스팀펑크,사이버펑크도 이런식으로 추가안 만들어줘. 판타지는 마법이나 정령같은 요소 넣으면 될거같은데」 → 「응 추가안 진행해줘」",
+   "worlds_only": [
+    "fantasy"
+   ]
+  },
+  {
+   "key": "potion_lab",
+   "group": "magic",
+   "ko": "물약 공방",
+   "en": "an alchemist's potion workshop — a bubbling cauldron, shelves of glowing bottles and bundles of dried herbs hanging from the beams",
+   "eras": [
+    "now"
+   ],
+   "note": "2026-11-26 사용자 「판타지랑 스팀펑크,사이버펑크도 이런식으로 추가안 만들어줘. 판타지는 마법이나 정령같은 요소 넣으면 될거같은데」 → 「응 추가안 진행해줘」",
+   "worlds_only": [
+    "fantasy"
+   ]
+  },
+  {
+   "key": "steam_balloon",
+   "group": "steam",
+   "ko": "열기구 바구니",
+   "en": "the wicker basket of a hot-air balloon drifting high above the clouds — a brass burner roaring overhead, ropes and sandbags on the rim",
+   "eras": [
+    "now"
+   ],
+   "note": "2026-11-26 사용자 「판타지랑 스팀펑크,사이버펑크도 이런식으로 추가안 만들어줘. 판타지는 마법이나 정령같은 요소 넣으면 될거같은데」 → 「응 추가안 진행해줘」",
+   "worlds_only": [
+    "steampunk"
+   ]
+  },
+  {
+   "key": "clock_gears",
+   "group": "steam",
+   "ko": "시계탑 톱니 내부",
+   "en": "inside a great clock tower — giant turning brass gears, a narrow iron walkway and the back of the glowing clock face",
+   "eras": [
+    "now"
+   ],
+   "note": "2026-11-26 사용자 「판타지랑 스팀펑크,사이버펑크도 이런식으로 추가안 만들어줘. 판타지는 마법이나 정령같은 요소 넣으면 될거같은데」 → 「응 추가안 진행해줘」",
+   "worlds_only": [
+    "steampunk"
+   ]
+  },
+  {
+   "key": "diving_bell",
+   "group": "steam",
+   "ko": "놋쇠 잠수종",
+   "en": "inside a brass diving bell resting on the sea floor — riveted walls, a small bench and a round porthole onto fish and swaying kelp",
+   "eras": [
+    "now"
+   ],
+   "note": "2026-11-26 사용자 「판타지랑 스팀펑크,사이버펑크도 이런식으로 추가안 만들어줘. 판타지는 마법이나 정령같은 요소 넣으면 될거같은데」 → 「응 추가안 진행해줘」",
+   "worlds_only": [
+    "steampunk"
+   ]
+  },
+  {
+   "key": "inventor_lab",
+   "group": "steam",
+   "ko": "발명가 작업실",
+   "en": "an inventor's workshop — blueprints pinned to the walls, half-built clockwork machines, brass tools and a steaming kettle",
+   "eras": [
+    "now"
+   ],
+   "note": "2026-11-26 사용자 「판타지랑 스팀펑크,사이버펑크도 이런식으로 추가안 만들어줘. 판타지는 마법이나 정령같은 요소 넣으면 될거같은데」 → 「응 추가안 진행해줘」",
+   "worlds_only": [
+    "steampunk"
+   ]
+  },
+  {
+   "key": "tube_post",
+   "group": "steam",
+   "ko": "기압 튜브 우편실",
+   "en": "a pneumatic-tube post room — walls of brass tubes and pressure dials, capsules arriving with a puff of steam",
+   "eras": [
+    "now"
+   ],
+   "note": "2026-11-26 사용자 「판타지랑 스팀펑크,사이버펑크도 이런식으로 추가안 만들어줘. 판타지는 마법이나 정령같은 요소 넣으면 될거같은데」 → 「응 추가안 진행해줘」",
+   "worlds_only": [
+    "steampunk"
+   ]
+  },
+  {
+   "key": "neon_roof",
+   "group": "neon",
+   "ko": "네온 비 옥상",
+   "en": "a rain-slick rooftop under towering holographic billboards, neon light reflecting in the puddles",
+   "eras": [
+    "now"
+   ],
+   "note": "2026-11-26 사용자 「판타지랑 스팀펑크,사이버펑크도 이런식으로 추가안 만들어줘. 판타지는 마법이나 정령같은 요소 넣으면 될거같은데」 → 「응 추가안 진행해줘」",
+   "worlds_only": [
+    "cyberpunk"
+   ]
+  },
+  {
+   "key": "capsule_hotel",
+   "group": "neon",
+   "ko": "캡슐 호텔 칸",
+   "en": "the inside of a capsule-hotel pod — a padded mattress, a glowing control panel and a small screen in the low ceiling",
+   "eras": [
+    "now"
+   ],
+   "note": "2026-11-26 사용자 「판타지랑 스팀펑크,사이버펑크도 이런식으로 추가안 만들어줘. 판타지는 마법이나 정령같은 요소 넣으면 될거같은데」 → 「응 추가안 진행해줘」",
+   "worlds_only": [
+    "cyberpunk"
+   ]
+  },
+  {
+   "key": "dive_den",
+   "group": "neon",
+   "ko": "신경 접속 의자방",
+   "en": "a dim neural-dive den — a reclining interface chair trailing cables, glowing monitors and a humming cooling fan",
+   "eras": [
+    "now"
+   ],
+   "note": "2026-11-26 사용자 「판타지랑 스팀펑크,사이버펑크도 이런식으로 추가안 만들어줘. 판타지는 마법이나 정령같은 요소 넣으면 될거같은데」 → 「응 추가안 진행해줘」",
+   "worlds_only": [
+    "cyberpunk"
+   ]
+  },
+  {
+   "key": "sky_dome",
+   "group": "neon",
+   "ko": "인공 하늘 돔 공원",
+   "en": "a park under a giant dome whose ceiling shows a projected blue sky, neat trees and benches",
+   "eras": [
+    "now"
+   ],
+   "note": "2026-11-26 사용자 「판타지랑 스팀펑크,사이버펑크도 이런식으로 추가안 만들어줘. 판타지는 마법이나 정령같은 요소 넣으면 될거같은데」 → 「응 추가안 진행해줘」",
+   "worlds_only": [
+    "cyberpunk"
+   ]
+  },
+  {
+   "key": "vending_alley",
+   "group": "neon",
+   "ko": "자판기 골목",
+   "en": "a narrow back alley lined with glowing vending machines, steam rising from a grate",
+   "eras": [
+    "now"
+   ],
+   "note": "2026-11-26 사용자 「판타지랑 스팀펑크,사이버펑크도 이런식으로 추가안 만들어줘. 판타지는 마법이나 정령같은 요소 넣으면 될거같은데」 → 「응 추가안 진행해줘」",
+   "worlds_only": [
+    "cyberpunk"
+   ]
+  },
+  {
+   "key": "cyber_clinic",
+   "group": "neon",
+   "ko": "의체 정비소",
+   "en": "a cramped cyber-clinic — a reclining treatment chair, robotic arms and screens of body scans",
+   "eras": [
+    "now"
+   ],
+   "note": "2026-11-26 사용자 「판타지랑 스팀펑크,사이버펑크도 이런식으로 추가안 만들어줘. 판타지는 마법이나 정령같은 요소 넣으면 될거같은데」 → 「응 추가안 진행해줘」",
+   "worlds_only": [
+    "cyberpunk"
+   ]
   }
  ],
  "weather": [
@@ -17273,6 +19008,226 @@
     "orbit_lounge",
     "orbit_cupola",
     "orbit_berth"
+   ]
+  },
+  {
+   "key": "teapot_pour",
+   "ko": "혼자 차를 따르는 찻주전자",
+   "en": "a teapot nearby pours tea into a cup all by itself, floating in the air",
+   "frames": [
+    "chest_up",
+    "waist_up",
+    "three_quarter",
+    "full_body"
+   ],
+   "places": [
+    "isle_edge",
+    "magic_library",
+    "spirit_spring",
+    "moon_glade",
+    "potion_lab"
+   ]
+  },
+  {
+   "key": "drifting_books",
+   "ko": "떠다니는 책과 촛불",
+   "en": "a few books and candles drift slowly through the air around her",
+   "frames": [
+    "waist_up",
+    "three_quarter",
+    "full_body",
+    "environmental"
+   ],
+   "places": [
+    "isle_edge",
+    "magic_library",
+    "spirit_spring",
+    "moon_glade",
+    "potion_lab"
+   ]
+  },
+  {
+   "key": "spirit_wisps",
+   "ko": "작은 정령들",
+   "en": "tiny spirit creatures of light — small glowing wisps with soft translucent wings — hover around her",
+   "frames": [
+    "chest_up",
+    "waist_up",
+    "three_quarter",
+    "full_body",
+    "environmental"
+   ],
+   "places": [
+    "isle_edge",
+    "magic_library",
+    "spirit_spring",
+    "moon_glade",
+    "potion_lab"
+   ]
+  },
+  {
+   "key": "magic_circle",
+   "ko": "발밑의 마법진",
+   "en": "a faint glowing magic circle turns slowly on the ground beneath her",
+   "frames": [
+    "three_quarter",
+    "full_body",
+    "environmental"
+   ],
+   "places": [
+    "isle_edge",
+    "magic_library",
+    "spirit_spring",
+    "moon_glade",
+    "potion_lab"
+   ]
+  },
+  {
+   "key": "petals_rise",
+   "ko": "위로 떠오르는 꽃잎",
+   "en": "flower petals drift upward around her instead of falling",
+   "frames": [
+    "chest_up",
+    "waist_up",
+    "three_quarter",
+    "full_body",
+    "environmental"
+   ],
+   "places": [
+    "isle_edge",
+    "magic_library",
+    "spirit_spring",
+    "moon_glade",
+    "potion_lab"
+   ]
+  },
+  {
+   "key": "steam_puff",
+   "ko": "뿜어 나오는 흰 김",
+   "en": "a clean puff of white steam bursts from a brass pipe beside her",
+   "frames": [
+    "chest_up",
+    "waist_up",
+    "three_quarter",
+    "full_body",
+    "environmental"
+   ],
+   "places": [
+    "steam_balloon",
+    "clock_gears",
+    "diving_bell",
+    "inventor_lab",
+    "tube_post"
+   ]
+  },
+  {
+   "key": "gear_shadow",
+   "ko": "톱니 그림자",
+   "en": "the shadows of turning gears slide across her",
+   "frames": [
+    "chest_up",
+    "waist_up",
+    "three_quarter",
+    "full_body"
+   ],
+   "places": [
+    "steam_balloon",
+    "clock_gears",
+    "diving_bell",
+    "inventor_lab",
+    "tube_post"
+   ]
+  },
+  {
+   "key": "airship_shadow",
+   "ko": "비행선 그림자",
+   "en": "the shadow of a passing airship sweeps over the scene",
+   "frames": [
+    "three_quarter",
+    "full_body",
+    "environmental"
+   ],
+   "places": [
+    "steam_balloon",
+    "clock_gears",
+    "diving_bell",
+    "inventor_lab",
+    "tube_post"
+   ]
+  },
+  {
+   "key": "holo_light",
+   "ko": "홀로그램 광고 빛",
+   "en": "shifting colours of holographic advertisement light wash over her",
+   "frames": [
+    "face_close",
+    "chest_up",
+    "waist_up",
+    "three_quarter",
+    "full_body"
+   ],
+   "places": [
+    "neon_roof",
+    "capsule_hotel",
+    "dive_den",
+    "sky_dome",
+    "vending_alley",
+    "cyber_clinic"
+   ]
+  },
+  {
+   "key": "neon_puddle",
+   "ko": "젖은 바닥의 네온",
+   "en": "neon light reflects in the wet ground at her feet",
+   "frames": [
+    "three_quarter",
+    "full_body",
+    "environmental"
+   ],
+   "places": [
+    "neon_roof",
+    "capsule_hotel",
+    "dive_den",
+    "sky_dome",
+    "vending_alley",
+    "cyber_clinic"
+   ]
+  },
+  {
+   "key": "ar_window",
+   "ko": "떠 있는 증강현실 창",
+   "en": "a small translucent AR window floats in the air beside her",
+   "frames": [
+    "chest_up",
+    "waist_up",
+    "three_quarter"
+   ],
+   "places": [
+    "neon_roof",
+    "capsule_hotel",
+    "dive_den",
+    "sky_dome",
+    "vending_alley",
+    "cyber_clinic"
+   ]
+  },
+  {
+   "key": "drone_light",
+   "ko": "창밖 드론 불빛",
+   "en": "the blinking lights of a delivery drone hover just beyond her",
+   "frames": [
+    "waist_up",
+    "three_quarter",
+    "full_body",
+    "environmental"
+   ],
+   "places": [
+    "neon_roof",
+    "capsule_hotel",
+    "dive_den",
+    "sky_dome",
+    "vending_alley",
+    "cyber_clinic"
    ]
   }
  ],

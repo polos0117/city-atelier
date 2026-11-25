@@ -281,7 +281,8 @@ function pickPlace(r, card, kind, { cut = '', taken = new Set(), others = [], U 
   }
   const lifeFirst = kind === 'life' || r() < LIFE_FIRST;
   const pool = lifeFirst ? (L.length ? L : G) : (G.length ? G : L);
-  return lean(r, pool, U.place, x => x, p => ZG_PLACES.has(p) ? ZG_BOOST : 1);
+  const nZ = pool.filter(p => ZG_PLACES.has(p)).length;
+  return lean(r, pool, U.place, x => x, p => ZG_PLACES.has(p) ? ZG_TOTAL / Math.max(1, nZ) : 1);
 }
 const MEMO = new Map();
 function presetsAt(sc, g) {
@@ -309,7 +310,8 @@ const standFrontEye = c => c.posture === 'stand' && (c.body === 'front' || c.bod
 const FAM_WEIGHT = { bath: 0.25 };
 const famW = sc => FAM_WEIGHT[(sc && sc.ofam) || sc] || 1;
 /* 세계 특징 장소(장소 특징 zero_g — 궤도 정거장, 2026-11-26 사용자 「각 세계만의 독특한 특징을 보여줄 수 있는 씬」 → 「무중력은 메카 세계, 사이버펑크도」)에 무게 — 100~200곳 가운데 3곳이라 250컷에 1컷꼴이었다. 메카 · 사이버펑크 묶음에 한 장 안팎 */
-const ZG_BOOST = 20, ZG_PLACES = new Set(Object.entries(tree2.places || {}).filter(([, f]) => (f || []).includes('zero_g')).map(([k]) => k));
+/* 세계 특징 장소(wfeat — 궤도 정거장 · 마법 세계 · 증기 세계 · 네온 도시, 2026-11-26): 세계마다 장소 수가 달라(사이버펑크 9 · 판타지 5) 그 풀의 세계 특징 장소 무게 합이 ZG_TOTAL 이 되게 나눈다 */
+const ZG_TOTAL = 30, ZG_PLACES = new Set(Object.entries(tree2.places || {}).filter(([, f]) => (f || []).includes('wfeat')).map(([k]) => k));
 function lean(r, list, count, key = x => x, factor = () => 1) {
   if (!list.length) return undefined;
   const w = list.map(x => wOf((count || {})[key(x)] || 0) * factor(x)), sum = w.reduce((a, b) => a + b, 0);
