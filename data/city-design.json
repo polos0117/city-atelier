@@ -3156,11 +3156,11 @@
                 },
                 "silhouette": {
                   "body": "busty_slender",
-                  "hair": "low_ponytail",
+                  "hair": "twin_loops",
                   "hair_color": "bright_gold",
                   "bangs": "side_swept"
                 },
-                "why": "궁성 유물 병원의 복원사 — 크롬 의수의 섬세한 손끝으로 오백 년 보물의 금을 메우는 차분한 사람. 가는 팔다리에 가슴이 도드라진 몸(busty_slender) · 목덜미에 낮게 묶은 금빛 머리(low_ponytail · bright_gold — 궁성 지붕의 금) · 옆으로 쓸어 넘긴 앞머리 · 크롬 의수가 드러나는 몸에 붙는 옷(implant_suit). 다이아몬드형 얼굴 · 깊은 눈매 · 자연스러운 숱의 곧은 눈썹 · 끝이 살짝 들린 코 · 큐피드 활 입술, 은회색 눈, 금빛 도는 밝은 피부에 날개 아이라인, 20대 중반의 얼음처럼 차가운 냉미녀 인상에 차분한 표정. 베이징 사이버펑크 봉화 관제사(달걀형 · 루비빛 포니테일 · 큰 키 곡선)와 얼굴 칸 다섯이 다 다르다. 2026-11-23 인상 cool → icy(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
+                "why": "궁성 유물 병원의 복원사 — 크롬 의수의 섬세한 손끝으로 오백 년 보물의 금을 메우는 차분한 사람. 가는 팔다리에 가슴이 도드라진 몸(busty_slender) · 목덜미에 낮게 묶은 금빛 머리(low_ponytail · bright_gold — 궁성 지붕의 금) · 옆으로 쓸어 넘긴 앞머리 · 크롬 의수가 드러나는 몸에 붙는 옷(implant_suit). 다이아몬드형 얼굴 · 깊은 눈매 · 자연스러운 숱의 곧은 눈썹 · 끝이 살짝 들린 코 · 큐피드 활 입술, 은회색 눈, 금빛 도는 밝은 피부에 날개 아이라인, 20대 중반의 얼음처럼 차가운 냉미녀 인상에 차분한 표정. 베이징 사이버펑크 봉화 관제사(달걀형 · 루비빛 포니테일 · 큰 키 곡선)와 얼굴 칸 다섯이 다 다르다. 2026-11-23 인상 cool → icy(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔). · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 헤어스타일 low_ponytail → twin_loops"
               },
               "hold": {
                 "en": "a pen-thin mending tool of white ceramic tipped with a fine point of golden light"
@@ -3170,7 +3170,7 @@
                 "en": "a chrome cybernetic arm with jeweller-fine fingers, inlaid with vermilion lacquer and gold cloud scrolls like the painted beams of the palace, a high mandarin collar of smart fabric traced with fine gold seams, and a clear magnifying visor shaped like the many-ridged roof of a corner tower"
               },
               "card_ko": {
-                "look": "금빛 낮은 묶음 · 가는 곡선",
+                "look": "금빛 고리 양머리 · 가는 곡선",
                 "motif": "옻칠 크롬 의수 · 각루 바이저"
               },
               "sil": "implant_suit"
@@ -3291,11 +3291,11 @@
                 },
                 "silhouette": {
                   "body": "pear_curvy",
-                  "hair": "finger_waves",
-                  "hair_color": "rose_gold",
+                  "hair": "twin_loops",
+                  "hair_color": "jet_black",
                   "bangs": "side_swept"
                 },
-                "why": "호수 정원 운하 상점가의 찻집 안주인 — 화려하고 느긋한 사람. 좁은 어깨 아래 풍만한 엉덩이와 허벅지의 서양배 곡선(pear_curvy) · 턱선의 윤기 나는 핑거웨이브(finger_waves — 20세기 초 상하이 멋) · 놋쇠 빛과 어울리는 로즈 골드 머리(rose_gold) · 옆으로 쓸어 넘긴 앞머리 · 어깨를 드러낸 긴 드레스와 긴 장갑의 실루엣(opera_diva). 긴 달걀형 얼굴 · 눈꼬리가 살짝 올라간 아몬드 눈 · 가늘게 휜 눈썹 · 부드러운 매부리 코 · 도톰한 하트 입술, 꿀빛 눈, 흰 피부에 입가의 점, 20대 후반의 위험한 팜파탈 인상에 입 다문 옅은 미소. 베이징 스팀펑크 북지기 · 자금성 시계 장인과 얼굴 칸 다섯이 다 다르다. 2026-11-23 인상 glamorous → femme_fatale(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
+                "why": "호수 정원 운하 상점가의 찻집 안주인 — 화려하고 느긋한 사람. 좁은 어깨 아래 풍만한 엉덩이와 허벅지의 서양배 곡선(pear_curvy) · 턱선의 윤기 나는 핑거웨이브(finger_waves — 20세기 초 상하이 멋) · 놋쇠 빛과 어울리는 로즈 골드 머리(rose_gold) · 옆으로 쓸어 넘긴 앞머리 · 어깨를 드러낸 긴 드레스와 긴 장갑의 실루엣(opera_diva). 긴 달걀형 얼굴 · 눈꼬리가 살짝 올라간 아몬드 눈 · 가늘게 휜 눈썹 · 부드러운 매부리 코 · 도톰한 하트 입술, 꿀빛 눈, 흰 피부에 입가의 점, 20대 후반의 위험한 팜파탈 인상에 입 다문 옅은 미소. 베이징 스팀펑크 북지기 · 자금성 시계 장인과 얼굴 칸 다섯이 다 다르다. 2026-11-23 인상 glamorous → femme_fatale(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔). · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 rose_gold → jet_black, 헤어스타일 finger_waves → twin_loops"
               },
               "hold": {
                 "en": "a long-spouted brass teakettle breathing a thin curl of clean white steam"
@@ -3315,7 +3315,7 @@
                 "why": "도시 스팀펑크 palette 는 고루 북지기 것(빨강은 북 · 대문에만)이라 — 호수 정원의 버들 · 물빛과 놋쇠, 등롱 빨강은 조금."
               },
               "card_ko": {
-                "look": "로즈 골드 핑거웨이브",
+                "look": "칠흑 고리 양머리",
                 "motif": "버들 치파오 · 십칠공교 자수"
               },
               "sil": "opera_diva"
@@ -3436,11 +3436,11 @@
                 },
                 "silhouette": {
                   "body": "strong_curvy",
-                  "hair": "ponytail",
+                  "hair": "chignon",
                   "hair_color": "lithium_crimson",
                   "bangs": "choppy"
                 },
-                "why": "북쪽 산마루 성벽을 지키는 수비 여장군 — 굳세고 묵묵한 사람. 어깨가 넓고 단단한 근육에 풍만한 가슴 · 넓은 엉덩이의 몸(strong_curvy) · 높이 묶은 긴 포니테일(ponytail) · 성벽 돌빛 은백 머리가 끝에서 진홍으로 타는 머리(lithium_crimson — 단풍 든 산과 봉화) · 들쭉날쭉한 앞머리 · 가벼운 흉갑과 허리에서 갈라지는 겉옷의 실루엣(battle_mage). 긴 달걀형 얼굴 · 자연스러운 크기의 아몬드 눈에 살짝 올라간 눈꼬리 · 각이 선 눈썹 · 부드러운 매부리 코 · 자연스러운 폭의 도톰한 입술, 폭풍 회색 눈, 따뜻한 베이지 피부, 눈썹을 가로지르는 옅은 흉터, 20대 중반의 굳은 무표정(stoic)에 결연한 얼굴. 베이징 판타지 제사 공주 · 자금성 여제 · 이화원 악사와 얼굴 칸 다섯이 다 다르다."
+                "why": "북쪽 산마루 성벽을 지키는 수비 여장군 — 굳세고 묵묵한 사람. 어깨가 넓고 단단한 근육에 풍만한 가슴 · 넓은 엉덩이의 몸(strong_curvy) · 높이 묶은 긴 포니테일(ponytail) · 성벽 돌빛 은백 머리가 끝에서 진홍으로 타는 머리(lithium_crimson — 단풍 든 산과 봉화) · 들쭉날쭉한 앞머리 · 가벼운 흉갑과 허리에서 갈라지는 겉옷의 실루엣(battle_mage). 긴 달걀형 얼굴 · 자연스러운 크기의 아몬드 눈에 살짝 올라간 눈꼬리 · 각이 선 눈썹 · 부드러운 매부리 코 · 자연스러운 폭의 도톰한 입술, 폭풍 회색 눈, 따뜻한 베이지 피부, 눈썹을 가로지르는 옅은 흉터, 20대 중반의 굳은 무표정(stoic)에 결연한 얼굴. 베이징 판타지 제사 공주 · 자금성 여제 · 이화원 악사와 얼굴 칸 다섯이 다 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 헤어스타일 ponytail → chignon"
               },
               "hold": {
                 "en": "a long-handled glaive with a broad curved blade, a red silk tassel tied below its head"
@@ -3459,7 +3459,7 @@
                 "why": "궁성 축선의 주홍 · 노랑 · 천단 남빛 대신 산마루 성벽의 돌빛 · 단풍 진홍 · 봉화 금빛."
               },
               "card_ko": {
-                "look": "진홍 끝 은백 포니테일",
+                "look": "진홍 끝 은백 쪽머리",
                 "motif": "진홍 정갑 · 성벽 자수 망토"
               },
               "sil": "battle_mage"
@@ -3502,11 +3502,11 @@
                 },
                 "silhouette": {
                   "body": "tall_curvy",
-                  "hair": "pixie_cut",
-                  "hair_color": "copper",
+                  "hair": "cloud_updo",
+                  "hair_color": "blue_black",
                   "bangs": "side_swept"
                 },
-                "why": "성벽 아래 갈지자 산악 철도의 기관사 — 시원하고 씩씩한 사람. 큰 키에 긴 다리 · 풍만한 곡선의 몸(tall_curvy) · 짧게 흐트러진 픽시 컷(pixie_cut) · 윤나는 구릿빛 붉은 머리(copper) · 옆으로 넘긴 앞머리 · 한 팔을 다 덮는 큰 놋쇠 기계 장갑의 실루엣(mech_gauntlet). 각진 듯 부드러운 얼굴 · 홑꺼풀 매끈한 눈 · 각이 선 눈썹 · 끝이 살짝 들린 코 · 큐피드 활 입술(넓적해 보이지 않게 넓은 코 · 넓은 입은 피함), 강철빛 푸른 눈, 금빛 도는 밝은 피부에 맨 얼굴, 20대 초반의 소년 같은 생기에 자신 있는 표정. 베이징 스팀펑크 북지기와 얼굴 칸 넷, 자금성 시계 장인 · 이화원 찻집 안주인과 다섯이 다르다."
+                "why": "성벽 아래 갈지자 산악 철도의 기관사 — 시원하고 씩씩한 사람. 큰 키에 긴 다리 · 풍만한 곡선의 몸(tall_curvy) · 짧게 흐트러진 픽시 컷(pixie_cut) · 윤나는 구릿빛 붉은 머리(copper) · 옆으로 넘긴 앞머리 · 한 팔을 다 덮는 큰 놋쇠 기계 장갑의 실루엣(mech_gauntlet). 각진 듯 부드러운 얼굴 · 홑꺼풀 매끈한 눈 · 각이 선 눈썹 · 끝이 살짝 들린 코 · 큐피드 활 입술(넓적해 보이지 않게 넓은 코 · 넓은 입은 피함), 강철빛 푸른 눈, 금빛 도는 밝은 피부에 맨 얼굴, 20대 초반의 소년 같은 생기에 자신 있는 표정. 베이징 스팀펑크 북지기와 얼굴 칸 넷, 자금성 시계 장인 · 이화원 찻집 안주인과 다섯이 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 copper → blue_black, 헤어스타일 pixie_cut → cloud_updo"
               },
               "hold": {
                 "en": "a brass railway lantern with a ruby-red glass lens, swinging from its handle"
@@ -3525,7 +3525,7 @@
                 "why": "도시 스팀펑크 palette 는 고루 북지기 것(빨강은 북 · 대문에만)이라 — 산 고개의 석판 회색 · 놋쇠 · 단풍 빨강으로."
               },
               "card_ko": {
-                "look": "구릿빛 픽시 · 큰 키 곡선",
+                "look": "푸른 흑발 구름 올림머리",
                 "motif": "성벽 자수 재킷 · 놋쇠 장갑"
               },
               "sil": "mech_gauntlet"
@@ -3568,11 +3568,11 @@
                 },
                 "silhouette": {
                   "body": "lean_toned",
-                  "hair": "side_swept",
+                  "hair": "long_layered",
                   "hair_color": "boron_green",
                   "bangs": "one_eye"
                 },
-                "why": "옛 성벽 너머 푸른 숲띠와 바람 방패를 지키는 관리자 — 바람을 오래 맞아 온 차분한 사람. 탄탄하고 가는 허리에 풍만한 가슴의 몸(lean_toned — 아홉 사람 가운데 마른 체형 하나) · 한쪽으로 길게 넘긴 머리(side_swept) · 짙은 흑갈색 머리 끝에 초록 불꽃이 핀 머리(boron_green — 푸른 장성) · 한쪽 눈을 덮는 긴 앞머리 · 앞을 연 발목까지의 긴 코트 실루엣(long_raincoat). 하트형 얼굴 · 눈꼬리가 순하게 내려간 눈 · 가늘게 휜 눈썹 · 곧고 가는 코 · 가늘고 단정한 입술, 잎빛 초록 눈, 흰 피부에 눈 밑 점, 20대 후반의 아련한 인상에 생각에 잠긴 표정. 베이징 사이버펑크 봉화 관제사 · 자금성 복원사와 다섯, 이화원 물길 관리자와 넷이 다르다. 2026-11-23 인상 mature → wistful(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
+                "why": "옛 성벽 너머 푸른 숲띠와 바람 방패를 지키는 관리자 — 바람을 오래 맞아 온 차분한 사람. 탄탄하고 가는 허리에 풍만한 가슴의 몸(lean_toned — 아홉 사람 가운데 마른 체형 하나) · 한쪽으로 길게 넘긴 머리(side_swept) · 짙은 흑갈색 머리 끝에 초록 불꽃이 핀 머리(boron_green — 푸른 장성) · 한쪽 눈을 덮는 긴 앞머리 · 앞을 연 발목까지의 긴 코트 실루엣(long_raincoat). 하트형 얼굴 · 눈꼬리가 순하게 내려간 눈 · 가늘게 휜 눈썹 · 곧고 가는 코 · 가늘고 단정한 입술, 잎빛 초록 눈, 흰 피부에 눈 밑 점, 20대 후반의 아련한 인상에 생각에 잠긴 표정. 베이징 사이버펑크 봉화 관제사 · 자금성 복원사와 다섯, 이화원 물길 관리자와 넷이 다르다. 2026-11-23 인상 mature → wistful(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔). · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 헤어스타일 side_swept → long_layered"
               },
               "hold": {
                 "en": "a slim glass seed capsule with a glowing green sapling curled inside it"
@@ -3591,7 +3591,7 @@
                 "why": "봉화 관제사(주홍 빛 신호)와 겹치지 않게 — 옛 벽돌 회색과 숲띠의 초록, 새벽 금빛."
               },
               "card_ko": {
-                "look": "초록 끝 옆머리 · 탄탄",
+                "look": "초록 끝 긴 층머리 · 탄탄",
                 "motif": "이끼 자라는 벽돌빛 코트"
               },
               "sil": "long_raincoat"
@@ -4201,11 +4201,11 @@
                 },
                 "silhouette": {
                   "body": "willowy_curvy",
-                  "hair": "asymmetric_bob",
+                  "hair": "giant_braid",
                   "hair_color": "glass_clear",
                   "bangs": "one_eye"
                 },
-                "why": "빛의 피라미드 아래 지하 보존고의 보존관 — 맑고 조용히 빛나는 사람. 버들처럼 긴 팔다리에 부드러운 곡선(willowy_curvy) · 한쪽이 긴 비대칭 단발(asymmetric_bob) · 유리 피라미드 같은 맑은 유리빛 푸른 머리(glass_clear) · 한쪽 눈을 덮는 앞머리, 눈은 옅은 하늘빛(sky_blue). 광대가 살짝 선 마름모 얼굴(diamond) · 살짝 깊은 눈 · 자연스러운 숱의 곧은 눈썹 · 끝이 살짝 들린 코 · 활 모양 입술, 도자기처럼 흰 피부, 눈가의 스모키 화장, 20대 후반, 감정을 숨긴 차분한 인상(stoic)에 편안한 표정(calm). 파리 사이버펑크(부드럽게 각진 얼굴 · 진홍 올백 · 단단한 굴곡 몸 · 청동빛 갈색 피부)과 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다."
+                "why": "빛의 피라미드 아래 지하 보존고의 보존관 — 맑고 조용히 빛나는 사람. 버들처럼 긴 팔다리에 부드러운 곡선(willowy_curvy) · 한쪽이 긴 비대칭 단발(asymmetric_bob) · 유리 피라미드 같은 맑은 유리빛 푸른 머리(glass_clear) · 한쪽 눈을 덮는 앞머리, 눈은 옅은 하늘빛(sky_blue). 광대가 살짝 선 마름모 얼굴(diamond) · 살짝 깊은 눈 · 자연스러운 숱의 곧은 눈썹 · 끝이 살짝 들린 코 · 활 모양 입술, 도자기처럼 흰 피부, 눈가의 스모키 화장, 20대 후반, 감정을 숨긴 차분한 인상(stoic)에 편안한 표정(calm). 파리 사이버펑크(부드럽게 각진 얼굴 · 진홍 올백 · 단단한 굴곡 몸 · 청동빛 갈색 피부)과 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 헤어스타일 asymmetric_bob → giant_braid"
               },
               "hold": {
                 "en": "a palm-sized glass pyramid unfolding a slowly turning lattice of light"
@@ -4215,7 +4215,7 @@
                 "en": "a sculptural coat of clear smart-glass panes joined in a rhombus lattice like the glass pyramid, its shoulders raised into sharp pyramid peaks, over a fitted cream underlayer where the carved reliefs of the palace stone surface in soft light"
               },
               "card_ko": {
-                "look": "유리빛 비대칭 단발",
+                "look": "유리빛 큰 땋은 머리",
                 "motif": "마름모 유리 코트 · 피라미드 어깨"
               },
               "sil": "runway_avantgarde"
@@ -4337,11 +4337,11 @@
                 },
                 "silhouette": {
                   "body": "curvy",
-                  "hair": "side_braid",
-                  "hair_color": "navy",
+                  "hair": "floor_length",
+                  "hair_color": "caramel",
                   "bangs": "parted"
                 },
-                "why": "무대 위아래 장치를 다루고 샹들리에를 올리고 내리는 무대 기계 감독 — 손이 크고 침착한 사람. 굴곡 있는 몸(curvy) · 한쪽 어깨로 굵게 땋아 내린 머리(side_braid) · 짙은 남빛 머리(navy — 객석 위 밤빛) · 가르마 앞머리, 눈은 개암빛(hazel). 갸름한 달걀형 얼굴 · 눈꼬리가 살짝 올라간 아몬드 눈 · 눈 위에 살짝 낮게 놓인 짙은 눈썹 · 부드러운 매부리 곡선 코 · 도톰한 입술, 짙은 갈색 피부(deep_brown), 맨 얼굴, 30대 초반, 성숙한 인상(mature)에 집중한 표정(focused). 파리 스팀펑크(하트형 · 철회색 바깥말이 단발 · 작고 풍만한 몸 · 따뜻한 베이지 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다."
+                "why": "무대 위아래 장치를 다루고 샹들리에를 올리고 내리는 무대 기계 감독 — 손이 크고 침착한 사람. 굴곡 있는 몸(curvy) · 한쪽 어깨로 굵게 땋아 내린 머리(side_braid) · 짙은 남빛 머리(navy — 객석 위 밤빛) · 가르마 앞머리, 눈은 개암빛(hazel). 갸름한 달걀형 얼굴 · 눈꼬리가 살짝 올라간 아몬드 눈 · 눈 위에 살짝 낮게 놓인 짙은 눈썹 · 부드러운 매부리 곡선 코 · 도톰한 입술, 짙은 갈색 피부(deep_brown), 맨 얼굴, 30대 초반, 성숙한 인상(mature)에 집중한 표정(focused). 파리 스팀펑크(하트형 · 철회색 바깥말이 단발 · 작고 풍만한 몸 · 따뜻한 베이지 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 navy → caramel, 헤어스타일 side_braid → floor_length"
               },
               "hold": {
                 "en": "a brass cue lantern with a hinged shutter"
@@ -4351,7 +4351,7 @@
                 "en": "a fitted waistcoat of deep green velvet trimmed with gilt braid, a bustled half-skirt draped like a stage curtain with golden tassels and braid, one large brass mechanical gauntlet fitted with little pulley wheels, and earrings of tiny crystal chandelier drops"
               },
               "card_ko": {
-                "look": "남빛 옆 땋은 머리",
+                "look": "캐러멜 바닥 긴 머리",
                 "motif": "막 자락 반치마 · 도르래 건틀릿"
               },
               "sil": "mech_gauntlet"
@@ -4904,11 +4904,11 @@
                 },
                 "silhouette": {
                   "body": "strong_curvy",
-                  "hair": "side_braid",
+                  "hair": "spiky_wild",
                   "hair_color": "silver_white",
                   "bangs": "none"
                 },
-                "why": "배가 오면 언제든 두 날개를 들어 길을 내주고 안개 속에 징을 울리는 강의 성문 여기사 — 단단하고 듬직한 사람. 어깨가 넓고 탄탄하면서 굴곡 있는 몸(strong_curvy) · 한쪽 어깨로 굵게 땋아 내린 은백 머리(side_braid · silver_white — 안개의 은빛) · 앞머리 없이 · 가슴판과 견갑 아래 바닥까지 퍼지는 드레스 치마(gown_armor)로 위는 단단하고 아래는 넓게 선다. 부드러운 턱선의 얼굴 · 눈꼬리가 살짝 올라간 눈 · 곧은 눈썹 · 끝이 둥근 코 · 도톰한 입술, 하늘빛 푸른 눈, 청동빛 피부에 맨 얼굴, 20대 중반의 묵직한 인상에 굳은 얼굴. 런던 판타지 시간 여군주 · 빅벤 등불 마법사와 얼굴 칸 다섯이 다 다르다."
+                "why": "배가 오면 언제든 두 날개를 들어 길을 내주고 안개 속에 징을 울리는 강의 성문 여기사 — 단단하고 듬직한 사람. 어깨가 넓고 탄탄하면서 굴곡 있는 몸(strong_curvy) · 한쪽 어깨로 굵게 땋아 내린 은백 머리(side_braid · silver_white — 안개의 은빛) · 앞머리 없이 · 가슴판과 견갑 아래 바닥까지 퍼지는 드레스 치마(gown_armor)로 위는 단단하고 아래는 넓게 선다. 부드러운 턱선의 얼굴 · 눈꼬리가 살짝 올라간 눈 · 곧은 눈썹 · 끝이 둥근 코 · 도톰한 입술, 하늘빛 푸른 눈, 청동빛 피부에 맨 얼굴, 20대 중반의 묵직한 인상에 굳은 얼굴. 런던 판타지 시간 여군주 · 빅벤 등불 마법사와 얼굴 칸 다섯이 다 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 헤어스타일 side_braid → spiky_wild"
               },
               "hold": {
                 "en": "a heavy bronze gong mallet wrapped in blue and white silk"
@@ -4918,7 +4918,7 @@
                 "en": "a breastplate and pauldrons of pale stone-white enamel and blue steel, the pauldrons shaped like the pointed turret roofs of the twin Gothic towers and edged in gold, and two front panels of her gown skirt that part and lift like the raised leaves of a bascule bridge, showing a lining of blue and white silk"
               },
               "card_ko": {
-                "look": "은백 옆 땋기 · 탄탄 굴곡",
+                "look": "은백 삐죽 머리 · 탄탄 굴곡",
                 "motif": "도개 치맛자락 · 쌍탑 견갑"
               },
               "sil": "gown_armor"
@@ -4961,11 +4961,11 @@
                 },
                 "silhouette": {
                   "body": "curvy",
-                  "hair": "pixie_cut",
-                  "hair_color": "flame_orange",
+                  "hair": "tilted_bun",
+                  "hair_color": "ink_blue",
                   "bangs": "side_swept"
                 },
-                "why": "쌍탑 도개교의 들린 날개와 높은 통로 사이로 수상 비행기를 몰고 빠져나가는 비행사 — 작고 날렵하고 겁 없는 사람. 굴곡 있는 몸(curvy) · 짧게 헝클어진 불꽃빛 주황 픽시 컷(pixie_cut · flame_orange) · 옆으로 넘긴 앞머리 · 짧은 비행 재킷 · 엇갈린 멜빵 · 바람에 날리는 긴 목도리(aeronaut)로 실루엣이 가볍게 앞으로 쏠린다. 동그란 얼굴 · 동그란 눈 · 곧은 눈썹 · 끝이 둥근 코 · 도톰한 하트 입술, 호박빛 눈, 흰 피부에 주근깨, 20대 초반의 새침하고 애교 있는 인상에 입을 다문 옅은 미소. 런던 스팀펑크 다리 신호수 · 빅벤 시계 조율사와 얼굴 칸 다섯이 다 다르다. 2026-11-23 인상 cute → coquettish(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
+                "why": "쌍탑 도개교의 들린 날개와 높은 통로 사이로 수상 비행기를 몰고 빠져나가는 비행사 — 작고 날렵하고 겁 없는 사람. 굴곡 있는 몸(curvy) · 짧게 헝클어진 불꽃빛 주황 픽시 컷(pixie_cut · flame_orange) · 옆으로 넘긴 앞머리 · 짧은 비행 재킷 · 엇갈린 멜빵 · 바람에 날리는 긴 목도리(aeronaut)로 실루엣이 가볍게 앞으로 쏠린다. 동그란 얼굴 · 동그란 눈 · 곧은 눈썹 · 끝이 둥근 코 · 도톰한 하트 입술, 호박빛 눈, 흰 피부에 주근깨, 20대 초반의 새침하고 애교 있는 인상에 입을 다문 옅은 미소. 런던 스팀펑크 다리 신호수 · 빅벤 시계 조율사와 얼굴 칸 다섯이 다 다르다. 2026-11-23 인상 cute → coquettish(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔). · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 flame_orange → ink_blue, 헤어스타일 pixie_cut → tilted_bun"
               },
               "hold": {
                 "en": "a rolled river chart tied with a blue ribbon"
@@ -4975,7 +4975,7 @@
                 "en": "a short cream leather flying jacket whose shoulder yoke is riveted in the blue-and-white criss-cross lattice of the bridge's painted ironwork, and a long white silk scarf pinned with a brass brooch shaped like the twin Gothic towers joined by their high walkway"
               },
               "card_ko": {
-                "look": "주황 픽시 컷 · 굴곡",
+                "look": "먹청색 기운 똥머리 · 굴곡",
                 "motif": "다리 격자 비행 재킷"
               },
               "sil": "aeronaut"
@@ -5018,11 +5018,11 @@
                 },
                 "silhouette": {
                   "body": "busty_slender",
-                  "hair": "undercut_sweep",
+                  "hair": "topknot_tails",
                   "hair_color": "teal",
                   "bangs": "none"
                 },
-                "why": "바닥이 유리인 높은 통로를 악기처럼 연주해 소리를 빛으로 오가게 하는 다리의 음향 조각가 — 가늘고 아련한 사람. 가는 팔다리에 풍만한 가슴 · 둥근 엉덩이(busty_slender) · 한쪽 옆을 짧게 밀고 긴 머리를 반대쪽으로 넘긴 청록 머리(undercut_sweep · teal — 강물빛) · 앞머리 없이 · 몸에 붙는 바탕 위로 빛의 자락이 드레스처럼 떠 흐르는 옷(holo_gown)으로 실루엣이 빛 속에 퍼진다. 하트형 얼굴 · 자연스러운 아몬드 눈에 살짝 올라간 눈꼬리 · 각이 선 눈썹 · 살짝 매부리 코 · 큐피드 활 입술, 연보라 눈, 따뜻한 베이지 피부에 스모키 눈화장, 20대 초반의 아련한 인상에 아련한 옅은 미소. 런던 사이버펑크 열쇠지기 · 빅벤 복원가와 얼굴 칸 다섯이 다 다르다. 2026-11-23 인상 cool → wistful(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
+                "why": "바닥이 유리인 높은 통로를 악기처럼 연주해 소리를 빛으로 오가게 하는 다리의 음향 조각가 — 가늘고 아련한 사람. 가는 팔다리에 풍만한 가슴 · 둥근 엉덩이(busty_slender) · 한쪽 옆을 짧게 밀고 긴 머리를 반대쪽으로 넘긴 청록 머리(undercut_sweep · teal — 강물빛) · 앞머리 없이 · 몸에 붙는 바탕 위로 빛의 자락이 드레스처럼 떠 흐르는 옷(holo_gown)으로 실루엣이 빛 속에 퍼진다. 하트형 얼굴 · 자연스러운 아몬드 눈에 살짝 올라간 눈꼬리 · 각이 선 눈썹 · 살짝 매부리 코 · 큐피드 활 입술, 연보라 눈, 따뜻한 베이지 피부에 스모키 눈화장, 20대 초반의 아련한 인상에 아련한 옅은 미소. 런던 사이버펑크 열쇠지기 · 빅벤 복원가와 얼굴 칸 다섯이 다 다르다. 2026-11-23 인상 cool → wistful(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔). · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 헤어스타일 undercut_sweep → topknot_tails"
               },
               "hold": {
                 "en": "a slender violin-like instrument of clear glass strung with threads of soft light"
@@ -5032,7 +5032,7 @@
                 "en": "a gown of far-future smart fabric through which the blue-and-white lattice of the bridge's ironwork flows as light, swooping lines of light running from shoulder to hem like the bridge's suspension chains, and slim earrings shaped like the twin towers joined by their high walkway"
               },
               "card_ko": {
-                "look": "청록 언더컷 · 늘씬 글래머",
+                "look": "청록 상투 꼬리머리 · 늘씬 글래머",
                 "motif": "빛 격자 드레스 · 쌍탑 귀걸이"
               },
               "sil": "holo_gown"
@@ -5144,11 +5144,11 @@
                 },
                 "silhouette": {
                   "body": "hourglass",
-                  "hair": "low_ponytail",
-                  "hair_color": "bronze",
+                  "hair": "cloud_updo",
+                  "hair_color": "caramel",
                   "bangs": "parted"
                 },
-                "why": "말 없이 증기로 가는 왕실 황금 마차를 모는 마차 기관사 — 키 있고 늠름한 사람. 모래시계 체형(hourglass) · 목덜미에 낮게 묶은 따뜻한 청동빛 포니테일(low_ponytail · bronze — 금박 마차의 금빛) · 가운데 가르마 · 바람에 날리는 제비 꼬리 긴 외투에 놋쇠 견장과 선장 모자(officer_greatcoat)로 실루엣이 길고 당당하다. 갸름하게 긴 얼굴 · 눈꼬리가 내려간 부드러운 눈 · 각이 선 눈썹 · 살짝 매부리 코 · 가는 입술에 짙은 입술 화장, 숲빛 초록 눈, 짙은 갈색 피부, 20대 후반의 성숙한 인상에 자신 있는 얼굴. 런던 스팀펑크 다리 신호수 · 빅벤 시계 조율사 · 타워 브리지 비행사와 얼굴 칸 다섯이 다 다르다."
+                "why": "말 없이 증기로 가는 왕실 황금 마차를 모는 마차 기관사 — 키 있고 늠름한 사람. 모래시계 체형(hourglass) · 목덜미에 낮게 묶은 따뜻한 청동빛 포니테일(low_ponytail · bronze — 금박 마차의 금빛) · 가운데 가르마 · 바람에 날리는 제비 꼬리 긴 외투에 놋쇠 견장과 선장 모자(officer_greatcoat)로 실루엣이 길고 당당하다. 갸름하게 긴 얼굴 · 눈꼬리가 내려간 부드러운 눈 · 각이 선 눈썹 · 살짝 매부리 코 · 가는 입술에 짙은 입술 화장, 숲빛 초록 눈, 짙은 갈색 피부, 20대 후반의 성숙한 인상에 자신 있는 얼굴. 런던 스팀펑크 다리 신호수 · 빅벤 시계 조율사 · 타워 브리지 비행사와 얼굴 칸 다섯이 다 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 bronze → caramel, 헤어스타일 low_ponytail → cloud_updo"
               },
               "hold": {
                 "en": "a gilded brass steering lever topped with a small round knob of cut crystal"
@@ -5168,7 +5168,7 @@
                 "why": "이 카드의 스팀펑크만 따로 — 런던 스팀펑크 palette 는 타워 브리지의 파랑 · 흰색(bridge blue)이라 왕궁 카드에 실으면 다리 이야기가 섞인다. 왕궁 방의 크림과 금빛(벨 에포크 색), 금박 철문 · 황금 마차의 금, 놋쇠, 깊이를 주는 로열 블루. 근위병 제복의 빨강은 싣지 않는다(옷이 제복으로 읽히지 않게)."
               },
               "card_ko": {
-                "look": "청동빛 낮은 묶음 · 모래시계",
+                "look": "캐러멜 구름 올림머리 · 모래시계",
                 "motif": "로코코 금박 외투 · 메달"
               },
               "sil": "officer_greatcoat"
@@ -5211,11 +5211,11 @@
                 },
                 "silhouette": {
                   "body": "pear_curvy",
-                  "hair": "long_wavy",
+                  "hair": "lob",
                   "hair_color": "sunset_pink",
                   "bangs": "parted"
                 },
-                "why": "먼 미래 도시 한가운데 가장 큰 정원 — 왕궁 정원의 옛 나무와 들꽃을 지키는 정원 숲지기 — 맑고 부드러운 사람. 어깨는 가늘고 엉덩이 · 허벅지가 둥근 서양배 굴곡 몸(pear_curvy) · 길게 물결치는 노을 분홍 머리(long_wavy · sunset_pink — 정원의 장미빛) · 가운데 가르마 · 살아 있는 생체 직물이 은은히 빛나며 몸을 따라 흐르는 드레스(biolume_dress)로 실루엣이 부드럽게 흐른다. 부드러운 턱선의 얼굴 · 부드럽게 깊은 눈 · 가는 아치 눈썹 · 끝이 둥근 코 · 큐피드 활 입술, 잎빛 초록 눈, 도자기 피부에 입가 점, 20대 중반의 순한 인상에 옅은 미소. 런던 사이버펑크 열쇠지기 · 빅벤 복원가 · 타워 브리지 음향 조각가와 얼굴 칸 다섯이 다 다르다."
+                "why": "먼 미래 도시 한가운데 가장 큰 정원 — 왕궁 정원의 옛 나무와 들꽃을 지키는 정원 숲지기 — 맑고 부드러운 사람. 어깨는 가늘고 엉덩이 · 허벅지가 둥근 서양배 굴곡 몸(pear_curvy) · 길게 물결치는 노을 분홍 머리(long_wavy · sunset_pink — 정원의 장미빛) · 가운데 가르마 · 살아 있는 생체 직물이 은은히 빛나며 몸을 따라 흐르는 드레스(biolume_dress)로 실루엣이 부드럽게 흐른다. 부드러운 턱선의 얼굴 · 부드럽게 깊은 눈 · 가는 아치 눈썹 · 끝이 둥근 코 · 큐피드 활 입술, 잎빛 초록 눈, 도자기 피부에 입가 점, 20대 중반의 순한 인상에 옅은 미소. 런던 사이버펑크 열쇠지기 · 빅벤 복원가 · 타워 브리지 음향 조각가와 얼굴 칸 다섯이 다 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 헤어스타일 long_wavy → lob"
               },
               "hold": {
                 "en": "a glass orb holding a tiny living oak sapling that glows softly green"
@@ -5225,7 +5225,7 @@
                 "en": "a dress of living bio-fabric in panels of Portland-stone cream framed by fine glowing gold lines that trace the palace's gilded railings and gates, with small living leaves and rosebuds growing along its neckline and hem"
               },
               "card_ko": {
-                "look": "분홍 웨이브 · 서양배 굴곡",
+                "look": "분홍 어깨 단발 · 서양배 굴곡",
                 "motif": "금빛 철문 선 · 살아 있는 잎"
               },
               "sil": "biolume_dress"
@@ -5773,11 +5773,11 @@
                 },
                 "silhouette": {
                   "body": "petite_curvy",
-                  "hair": "half_up",
-                  "hair_color": "cedar",
+                  "hair": "lion_mane",
+                  "hair_color": "ink_blue",
                   "bangs": "side_swept"
                 },
-                "why": "계단 발치 가스등 꽃시장의 꽃 장수 — 로마 스팀펑크의 와인빛 땋은머리 서양배 몸 기관사와 달리 작고 다정한 사람. 작고 다부지면서 굴곡 있는 몸(petite_curvy) · 반묶음으로 내린 삼나무빛 갈색 머리(half_up · cedar) · 옆으로 쓸어 넘긴 앞머리, 눈은 헤이즐(hazel). 갸름한 달걀형 얼굴 · 눈꼬리가 처진 부드러운 눈 · 곧고 짙은 눈썹 · 부드러운 매부리 곡선의 로마 코 · 도톰한 하트 입술, 올리브 피부에 눈 밑 점, 20대 중반의 따뜻한 인상(soft)에 입을 다문 옅은 미소(half_smile). 판타지(하트형 · 금발 나선 곱슬 · 큰 키 곡선 · 흰 피부) · 사이버펑크(긴 얼굴 · 분홍 비대칭 단발 · 날씬한 몸)와 얼굴형 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 로마 스팀펑크 사람과 콜로세움 · 나보나 광장 스팀펑크 사람과 셋 이상 다르다."
+                "why": "계단 발치 가스등 꽃시장의 꽃 장수 — 로마 스팀펑크의 와인빛 땋은머리 서양배 몸 기관사와 달리 작고 다정한 사람. 작고 다부지면서 굴곡 있는 몸(petite_curvy) · 반묶음으로 내린 삼나무빛 갈색 머리(half_up · cedar) · 옆으로 쓸어 넘긴 앞머리, 눈은 헤이즐(hazel). 갸름한 달걀형 얼굴 · 눈꼬리가 처진 부드러운 눈 · 곧고 짙은 눈썹 · 부드러운 매부리 곡선의 로마 코 · 도톰한 하트 입술, 올리브 피부에 눈 밑 점, 20대 중반의 따뜻한 인상(soft)에 입을 다문 옅은 미소(half_smile). 판타지(하트형 · 금발 나선 곱슬 · 큰 키 곡선 · 흰 피부) · 사이버펑크(긴 얼굴 · 분홍 비대칭 단발 · 날씬한 몸)와 얼굴형 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 로마 스팀펑크 사람과 콜로세움 · 나보나 광장 스팀펑크 사람과 셋 이상 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 cedar → ink_blue, 헤어스타일 half_up → lion_mane"
               },
               "hold": {
                 "en": "a small brass watering can with a hand-pumped steam mister"
@@ -5787,7 +5787,7 @@
                 "en": "a wide-brimmed hat heaped with pink azalea blossoms; a bustled skirt folded in stepped tiers like the stairway's flights, each tier edged with a row of small brass buttons"
               },
               "card_ko": {
-                "look": "삼나무빛 반묶음 · 작은 굴곡",
+                "look": "먹청색 사자 갈기 머리 · 작은 굴곡",
                 "motif": "아잘레아 모자 · 계단 층 치마"
               },
               "sil": "botanist"
@@ -5830,11 +5830,11 @@
                 },
                 "silhouette": {
                   "body": "lean_toned",
-                  "hair": "asymmetric_bob",
+                  "hair": "jellyfish_cut",
                   "hair_color": "sunset_pink",
                   "bangs": "none"
                 },
-                "why": "계단을 야외 극장으로 여는 밤 시사회의 진행자 — 로마 사이버펑크의 물빛 단발 모래시계 길잡이와 달리 날렵하고 세련된 무대의 사람. 허리가 가늘고 단단하며 가슴은 풍만한 몸(lean_toned — 이 로마 아홉 사람 가운데 하나뿐인 마른 쪽 체형) · 한쪽이 긴 아잘레아빛 분홍 비대칭 단발(asymmetric_bob · sunset_pink), 앞머리 없음, 눈은 하늘빛 파랑(azure). 긴 얼굴 · 동그스름한 큰 눈 · 눈 위로 낮게 드리운 짙은 눈썹 · 끝이 둥근 코 · 가늘고 긴 입술에 윤기 나는 누드 입술, 햇볕에 그을린 금빛 피부, 20대 후반의 당당한 인상(confident)에 자신 있는 표정(confident). 판타지(하트형 · 금발 나선 곱슬 · 큰 키 곡선) · 스팀펑크(달걀형 · 삼나무빛 반묶음 · 작은 굴곡 몸)와 얼굴형 · 머리 · 체형이 다 다르다. 얼굴 칸은 로마 사이버펑크 사람과 콜로세움 · 나보나 광장 사이버펑크 사람과 셋 이상 다르다. 2026-11-23 인상 cool → confident(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
+                "why": "계단을 야외 극장으로 여는 밤 시사회의 진행자 — 로마 사이버펑크의 물빛 단발 모래시계 길잡이와 달리 날렵하고 세련된 무대의 사람. 허리가 가늘고 단단하며 가슴은 풍만한 몸(lean_toned — 이 로마 아홉 사람 가운데 하나뿐인 마른 쪽 체형) · 한쪽이 긴 아잘레아빛 분홍 비대칭 단발(asymmetric_bob · sunset_pink), 앞머리 없음, 눈은 하늘빛 파랑(azure). 긴 얼굴 · 동그스름한 큰 눈 · 눈 위로 낮게 드리운 짙은 눈썹 · 끝이 둥근 코 · 가늘고 긴 입술에 윤기 나는 누드 입술, 햇볕에 그을린 금빛 피부, 20대 후반의 당당한 인상(confident)에 자신 있는 표정(confident). 판타지(하트형 · 금발 나선 곱슬 · 큰 키 곡선) · 스팀펑크(달걀형 · 삼나무빛 반묶음 · 작은 굴곡 몸)와 얼굴형 · 머리 · 체형이 다 다르다. 얼굴 칸은 로마 사이버펑크 사람과 콜로세움 · 나보나 광장 사이버펑크 사람과 셋 이상 다르다. 2026-11-23 인상 cool → confident(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔). · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 헤어스타일 asymmetric_bob → jellyfish_cut"
               },
               "hold": {
                 "en": "a slim projector wand casting a small ribbon of moving light"
@@ -5844,7 +5844,7 @@
                 "en": "a sculptural avant-garde coat whose hem steps down in curving terraces like the stairway, each edge glowing azalea pink; a single azalea blossom of light pinned above one ear"
               },
               "card_ko": {
-                "look": "분홍 비대칭 단발 · 날씬한 몸",
+                "look": "분홍 해파리컷 · 날씬한 몸",
                 "motif": "계단 층 코트 · 빛 아잘레아"
               },
               "sil": "runway_avantgarde"
@@ -5956,11 +5956,11 @@
                 },
                 "silhouette": {
                   "body": "hourglass",
-                  "hair": "low_ponytail",
-                  "hair_color": "navy",
+                  "hair": "tilted_bun",
+                  "hair_color": "ink_green",
                   "bangs": "straight"
                 },
-                "why": "여름 물 축제 날 물에 잠긴 광장을 모는 증기선 선장 — 로마 스팀펑크의 와인빛 땋은머리 서양배 몸 기관사와 달리 당당하고 시원한 사람. 모래시계 몸(hourglass) · 목덜미에 낮게 묶은 짙은 남빛 포니테일(low_ponytail · navy) · 일자 앞머리, 눈은 강철빛 파랑(steel_blue). 긴 얼굴 · 동그스름한 큰 눈 · 각이 진 눈썹 · 끝이 둥근 코 · 도톰한 입술, 올리브 피부에 맨 얼굴, 20대 중반의 도도한 인상(haughty)에 자신 있는 표정(confident). 판타지(다이아몬드형 · 로즈골드 풍성한 머리 · 굴곡 몸 · 도자기 피부) · 사이버펑크(달걀형 · 보랏빛 울프컷 · 탄탄한 곡선)와 얼굴형 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 로마 스팀펑크 사람과 콜로세움 · 스페인 계단 스팀펑크 사람과 셋 이상 다르다. 2026-11-23 인상 regal → haughty(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
+                "why": "여름 물 축제 날 물에 잠긴 광장을 모는 증기선 선장 — 로마 스팀펑크의 와인빛 땋은머리 서양배 몸 기관사와 달리 당당하고 시원한 사람. 모래시계 몸(hourglass) · 목덜미에 낮게 묶은 짙은 남빛 포니테일(low_ponytail · navy) · 일자 앞머리, 눈은 강철빛 파랑(steel_blue). 긴 얼굴 · 동그스름한 큰 눈 · 각이 진 눈썹 · 끝이 둥근 코 · 도톰한 입술, 올리브 피부에 맨 얼굴, 20대 중반의 도도한 인상(haughty)에 자신 있는 표정(confident). 판타지(다이아몬드형 · 로즈골드 풍성한 머리 · 굴곡 몸 · 도자기 피부) · 사이버펑크(달걀형 · 보랏빛 울프컷 · 탄탄한 곡선)와 얼굴형 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 로마 스팀펑크 사람과 콜로세움 · 스페인 계단 스팀펑크 사람과 셋 이상 다르다. 2026-11-23 인상 regal → haughty(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔). · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 navy → ink_green, 헤어스타일 low_ponytail → tilted_bun"
               },
               "hold": {
                 "en": "a slim brass spyglass"
@@ -5970,7 +5970,7 @@
                 "en": "a short frock coat of Roman ochre whose skirts are traced with brass piping in the long oval of the ancient stadium; a sash braided from four ribbons in the colours of the fountain's four rivers"
               },
               "card_ko": {
-                "look": "남빛 낮은 포니테일 · 모래시계",
+                "look": "먹녹 흑발 기운 똥머리 · 모래시계",
                 "motif": "타원 놋쇠 테 · 네 빛 리본"
               },
               "sil": "naval_officer"
@@ -6609,11 +6609,11 @@
                 },
                 "silhouette": {
                   "body": "hourglass",
-                  "hair": "flipped_shoulder",
-                  "hair_color": "rose_gold",
+                  "hair": "ribbon_low_tail",
+                  "hair_color": "dark_brown",
                   "bangs": "side_swept"
                 },
-                "why": "얼어붙은 호수의 스케이트 선생 — 겨울 저녁에 가장 눈에 띄는 화사한 사람. 모래시계 체형(hourglass) · 끝이 바깥으로 말린 어깨 길이 로즈골드 머리(flipped_shoulder · rose_gold) · 옆으로 쓸어 넘긴 앞머리, 눈은 사파이어. 다이아몬드형 얼굴 · 아몬드 눈 · 가는 아치 눈썹 · 부드러운 매부리코 · 도톰한 입술, 따뜻한 베이지 피부에 장밋빛 입술, 20대 중반의 새침하고 애교 있는 인상에 살짝 다문 미소. 뉴욕 스팀펑크 가스등 아가씨(하트형 · 테라코타 올림머리 · 곡선 몸 · 흰 피부) · 구리 장인(달걀형 · 구릿빛 땋은 머리 · 서양배 몸)과 얼굴 칸 다섯 · 머리 · 체형이 다 다르다. 2026-11-23 인상 glamorous → coquettish(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
+                "why": "얼어붙은 호수의 스케이트 선생 — 겨울 저녁에 가장 눈에 띄는 화사한 사람. 모래시계 체형(hourglass) · 끝이 바깥으로 말린 어깨 길이 로즈골드 머리(flipped_shoulder · rose_gold) · 옆으로 쓸어 넘긴 앞머리, 눈은 사파이어. 다이아몬드형 얼굴 · 아몬드 눈 · 가는 아치 눈썹 · 부드러운 매부리코 · 도톰한 입술, 따뜻한 베이지 피부에 장밋빛 입술, 20대 중반의 새침하고 애교 있는 인상에 살짝 다문 미소. 뉴욕 스팀펑크 가스등 아가씨(하트형 · 테라코타 올림머리 · 곡선 몸 · 흰 피부) · 구리 장인(달걀형 · 구릿빛 땋은 머리 · 서양배 몸)과 얼굴 칸 다섯 · 머리 · 체형이 다 다르다. 2026-11-23 인상 glamorous → coquettish(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔). · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 rose_gold → dark_brown, 헤어스타일 flipped_shoulder → ribbon_low_tail"
               },
               "hold": {
                 "en": "a small brass hand-warmer lantern glowing amber"
@@ -6633,7 +6633,7 @@
                 "why": "겨울 공원 — 상록 초록 · 놋쇠 가스등 · 눈 바탕에 브라운스톤 빨강은 조금만(도시 스팀펑크 palette 에서 한 색만 남김)."
               },
               "card_ko": {
-                "look": "로즈골드 단발 · 모래시계",
+                "look": "흑갈색 리본 낮은 묶음 · 모래시계",
                 "motif": "타일 자수 재킷 · 털 망토"
               },
               "sil": "top_hat_coat"
@@ -6676,11 +6676,11 @@
                 },
                 "silhouette": {
                   "body": "curvy_athletic",
-                  "hair": "undercut_sweep",
+                  "hair": "twin_loops",
                   "hair_color": "rain_grey",
                   "bangs": "choppy"
                 },
-                "why": "옛 돌 성에서 돔 안의 날씨를 짓는 기상관 — 서늘하고 차분한 사람. 탄탄하면서 굴곡 있는 몸(curvy_athletic) · 한쪽을 밀고 길게 쓸어 넘긴 빗빛 회색 머리(undercut_sweep · rain_grey) · 들쭉날쭉한 앞머리, 눈은 폭풍 회색(storm_grey). 긴 얼굴 · 깊은 눈매 · 곧고 짙은 눈썹 · 곧은 코 · 또렷한 활 입술, 올리브 피부에 맨 얼굴, 20대 후반의 서늘한 인상에 고요한 표정. 뉴욕 사이버펑크 착륙 유도원(다이아몬드형 · 코발트 땋은머리 · 탄탄한 몸) · 보존 기술자(하트형 · 녹청 단발)와 얼굴 칸 다섯 · 머리 · 체형이 다 다르다."
+                "why": "옛 돌 성에서 돔 안의 날씨를 짓는 기상관 — 서늘하고 차분한 사람. 탄탄하면서 굴곡 있는 몸(curvy_athletic) · 한쪽을 밀고 길게 쓸어 넘긴 빗빛 회색 머리(undercut_sweep · rain_grey) · 들쭉날쭉한 앞머리, 눈은 폭풍 회색(storm_grey). 긴 얼굴 · 깊은 눈매 · 곧고 짙은 눈썹 · 곧은 코 · 또렷한 활 입술, 올리브 피부에 맨 얼굴, 20대 후반의 서늘한 인상에 고요한 표정. 뉴욕 사이버펑크 착륙 유도원(다이아몬드형 · 코발트 땋은머리 · 탄탄한 몸) · 보존 기술자(하트형 · 녹청 단발)와 얼굴 칸 다섯 · 머리 · 체형이 다 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 헤어스타일 undercut_sweep → twin_loops"
               },
               "hold": {
                 "en": "a clear glass sphere holding a tiny swirling rain cloud"
@@ -6699,7 +6699,7 @@
                 "why": "도시 palette 의 택시 노랑은 숲 공원과 상관없다 — 빗빛 회색 · 숲 초록 · 돔 빛 하늘색으로."
               },
               "card_ko": {
-                "look": "빗빛 언더컷 · 탄탄한 곡선",
+                "look": "빗빛 고리 양머리 · 탄탄한 곡선",
                 "motif": "빗방울 코트 · 구름 유리구"
               },
               "sil": "long_raincoat"
@@ -6754,11 +6754,11 @@
                 },
                 "silhouette": {
                   "body": "voluptuous",
-                  "hair": "long_straight",
-                  "hair_color": "navy",
+                  "hair": "segmented_tail",
+                  "hair_color": "burgundy",
                   "bangs": "straight"
                 },
-                "why": "길손 전당의 별 궁륭을 읽는 성좌 지도사 — 신비롭고 우아한 사람. 가슴 · 엉덩이 · 허벅지가 풍만한 몸(voluptuous) · 허리까지 곧게 떨어지는 남빛 생머리(long_straight · navy — 밤하늘) · 일자 앞머리, 눈은 금색(gold — 천장의 금빛 별). 하트형 얼굴 · 눈꼬리가 살짝 올라간 눈 · 각진 눈썹 · 끝이 둥근 코 · 가늘고 긴 입술, 금빛 도는 밝은 피부에 짙은 베리빛 입술, 20대 중반의 속을 알 수 없는 신비로운 인상에 생각에 잠긴 표정. 뉴욕 판타지 여군주 · 해방 기사 · 숲지기와 얼굴 칸 다섯 · 머리 · 체형이 다 다르다. 2026-11-23 인상 elegant → mysterious(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
+                "why": "길손 전당의 별 궁륭을 읽는 성좌 지도사 — 신비롭고 우아한 사람. 가슴 · 엉덩이 · 허벅지가 풍만한 몸(voluptuous) · 허리까지 곧게 떨어지는 남빛 생머리(long_straight · navy — 밤하늘) · 일자 앞머리, 눈은 금색(gold — 천장의 금빛 별). 하트형 얼굴 · 눈꼬리가 살짝 올라간 눈 · 각진 눈썹 · 끝이 둥근 코 · 가늘고 긴 입술, 금빛 도는 밝은 피부에 짙은 베리빛 입술, 20대 중반의 속을 알 수 없는 신비로운 인상에 생각에 잠긴 표정. 뉴욕 판타지 여군주 · 해방 기사 · 숲지기와 얼굴 칸 다섯 · 머리 · 체형이 다 다르다. 2026-11-23 인상 elegant → mysterious(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔). · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 navy → burgundy, 헤어스타일 long_straight → segmented_tail"
               },
               "hold": {
                 "en": "a small gold armillary sphere of star rings turning slowly in her palm"
@@ -6777,7 +6777,7 @@
                 "why": "천장 그대로 — 청록 바탕 · 금빛 별과 띠 · 대리석. 판타지 도시 palette(사과 빨강은 홀에만)를 물려받으면 없는 홀을 부른다."
               },
               "card_ko": {
-                "look": "남빛 생머리 · 풍만한 몸",
+                "look": "버건디 마디 묶음머리 · 풍만한 몸",
                 "motif": "황도 금띠 · 별자리 로브"
               },
               "sil": "mage_robe"
@@ -6820,11 +6820,11 @@
                 },
                 "silhouette": {
                   "body": "petite_voluptuous",
-                  "hair": "finger_waves",
-                  "hair_color": "wine_red",
+                  "hair": "drill_curls",
+                  "hair_color": "chestnut",
                   "bangs": "none"
                 },
-                "why": "증기 열차 대합실을 다스리는 역장 — 작지만 당당한 사람. 키는 작아도 굴곡이 풍만한 몸(petite_voluptuous) · 턱선까지 윤기 나게 물결친 와인빛 핑거웨이브(finger_waves · wine_red) · 앞머리 없이, 눈은 담갈색(hazel). 긴 얼굴 · 처진 부드러운 눈 · 조금 낮게 자리한 짙은 눈썹 · 끝이 살짝 들린 코 · 도톰한 입술, 청동빛 갈색 피부에 눈 밑 점, 30대 초반의 도도한 인상에 자랑스러운 표정. 뉴욕 스팀펑크 가스등 아가씨 · 구리 장인 · 스케이트 선생과 얼굴 칸 다섯 · 머리 · 체형이 다 다르다. 2026-11-23 인상 mature → haughty(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
+                "why": "증기 열차 대합실을 다스리는 역장 — 작지만 당당한 사람. 키는 작아도 굴곡이 풍만한 몸(petite_voluptuous) · 턱선까지 윤기 나게 물결친 와인빛 핑거웨이브(finger_waves · wine_red) · 앞머리 없이, 눈은 담갈색(hazel). 긴 얼굴 · 처진 부드러운 눈 · 조금 낮게 자리한 짙은 눈썹 · 끝이 살짝 들린 코 · 도톰한 입술, 청동빛 갈색 피부에 눈 밑 점, 30대 초반의 도도한 인상에 자랑스러운 표정. 뉴욕 스팀펑크 가스등 아가씨 · 구리 장인 · 스케이트 선생과 얼굴 칸 다섯 · 머리 · 체형이 다 다르다. 2026-11-23 인상 mature → haughty(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔). · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 wine_red → chestnut, 헤어스타일 finger_waves → drill_curls"
               },
               "hold": {
                 "en": "a brass signal lantern with a green glass lens"
@@ -6844,7 +6844,7 @@
                 "why": "대합실의 놋쇠 · 대리석에 역장 외투의 짙은 병 초록, 빨강은 와인빛 조금만."
               },
               "card_ko": {
-                "look": "와인빛 핑거웨이브 · 작은 키",
+                "look": "밤색 드릴 컬 · 작은 키",
                 "motif": "청동 창살 깃 · 샹들리에 견장"
               },
               "sil": "officer_greatcoat"
@@ -6887,11 +6887,11 @@
                 },
                 "silhouette": {
                   "body": "petite_curvy",
-                  "hair": "bob",
+                  "hair": "ribbon_low_tail",
                   "hair_color": "white_gold",
                   "bangs": "straight"
                 },
-                "why": "옛 큰 홀에서 궤도 셔틀 손님을 맞는 승무원 — 작고 상냥한 사람. 작지만 굴곡 있는 몸(petite_curvy) · 가장자리가 빛나는 백금빛 단발(bob · white_gold) · 일자 앞머리, 눈은 하늘색(sky_blue). 둥근 얼굴 · 둥근 눈 · 가는 아치 눈썹 · 곧은 코 · 도톰한 하트 입술, 흰 피부에 주근깨, 20대 초반의 귀여운 인상에 옅은 미소. 뉴욕 사이버펑크 착륙 유도원 · 보존 기술자 · 기상관과 얼굴 칸 다섯 · 머리 · 체형이 다 다르다."
+                "why": "옛 큰 홀에서 궤도 셔틀 손님을 맞는 승무원 — 작고 상냥한 사람. 작지만 굴곡 있는 몸(petite_curvy) · 가장자리가 빛나는 백금빛 단발(bob · white_gold) · 일자 앞머리, 눈은 하늘색(sky_blue). 둥근 얼굴 · 둥근 눈 · 가는 아치 눈썹 · 곧은 코 · 도톰한 하트 입술, 흰 피부에 주근깨, 20대 초반의 귀여운 인상에 옅은 미소. 뉴욕 사이버펑크 착륙 유도원 · 보존 기술자 · 기상관과 얼굴 칸 다섯 · 머리 · 체형이 다 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 헤어스타일 bob → ribbon_low_tail"
               },
               "hold": {
                 "en": "a slim boarding wand with a glowing turquoise tip"
@@ -6911,7 +6911,7 @@
                 "why": "도시 palette 의 택시 노랑 · 브라운스톤 빨강 대신 별 천장의 청록 · 금을 빛으로."
               },
               "card_ko": {
-                "look": "백금빛 단발 · 작은 곡선",
+                "look": "백금빛 리본 낮은 묶음 · 작은 곡선",
                 "motif": "타일 깃 · 별 지도 망토"
               },
               "sil": "orbital_pilot"
@@ -7450,11 +7450,11 @@
                 },
                 "silhouette": {
                   "body": "pear_curvy",
-                  "hair": "flipped_shoulder",
-                  "hair_color": "bronze",
+                  "hair": "giant_twin_tails",
+                  "hair_color": "ink_green",
                   "bangs": "parted"
                 },
-                "why": "카펫 경매장이 된 옛 비단 전당에서 망치를 드는 경매사 — 이스탄불 스팀펑크의 납빛 숏컷 날개 비행사 · 구리빛 포니테일 물길 기사와 달리 아래로 풍성하고 말솜씨 좋은 사람. 어깨는 가늘고 엉덩이 · 허벅지가 풍성한 배형 곡선 몸(pear_curvy) · 어깨에 닿아 바깥으로 말린 머리(flipped_shoulder) · 따뜻한 청동빛 갈색(bronze) 머리 · 가운데 가르마 앞머리, 눈은 개암빛(hazel). 턱의 각이 부드럽게 좁아지는 얼굴 · 눈꼬리가 순하게 처진 눈 · 가늘게 휜 눈썹 · 끝이 둥근 코 · 도톰한 하트 입술, 흰 도자기 피부(porcelain)에 짙은 베리빛 입술, 30대 초반의 당찬 인상(sassy)에 자신 있는 얼굴(confident — 입은 다문다). 얼굴 칸 다섯이 이스탄불 스팀펑크 사람 · 물길 기사와 다 다르다. 2026-11-23 인상 cheerful → sassy(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
+                "why": "카펫 경매장이 된 옛 비단 전당에서 망치를 드는 경매사 — 이스탄불 스팀펑크의 납빛 숏컷 날개 비행사 · 구리빛 포니테일 물길 기사와 달리 아래로 풍성하고 말솜씨 좋은 사람. 어깨는 가늘고 엉덩이 · 허벅지가 풍성한 배형 곡선 몸(pear_curvy) · 어깨에 닿아 바깥으로 말린 머리(flipped_shoulder) · 따뜻한 청동빛 갈색(bronze) 머리 · 가운데 가르마 앞머리, 눈은 개암빛(hazel). 턱의 각이 부드럽게 좁아지는 얼굴 · 눈꼬리가 순하게 처진 눈 · 가늘게 휜 눈썹 · 끝이 둥근 코 · 도톰한 하트 입술, 흰 도자기 피부(porcelain)에 짙은 베리빛 입술, 30대 초반의 당찬 인상(sassy)에 자신 있는 얼굴(confident — 입은 다문다). 얼굴 칸 다섯이 이스탄불 스팀펑크 사람 · 물길 기사와 다 다르다. 2026-11-23 인상 cheerful → sassy(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔). · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 bronze → ink_green, 헤어스타일 flipped_shoulder → giant_twin_tails"
               },
               "hold": {
                 "en": "a small polished brass auction gavel with a turquoise-inlaid head"
@@ -7464,7 +7464,7 @@
                 "en": "a fitted Ottoman-red tailcoat woven through with the flowered pattern of a fine carpet, its lapels and cuffs edged with gold-thread carpet borders, and a small silk top hat trimmed with a brass ornament shaped like a rolled carpet and a turquoise tassel"
               },
               "card_ko": {
-                "look": "청동빛 바깥말림 · 배형 곡선",
+                "look": "먹녹 흑발 큰 양갈래 · 배형 곡선",
                 "motif": "카펫 연미복 · 경매 망치"
               },
               "sil": "ringmaster"
@@ -7507,11 +7507,11 @@
                 },
                 "silhouette": {
                   "body": "curvy",
-                  "hair": "asymmetric_bob",
+                  "hair": "windswept_long",
                   "hair_color": "royal_purple",
                   "bangs": "one_eye"
                 },
-                "why": "빛 등불이 뜬 덮인 시장의 보석 감정사 — 이스탄불 사이버펑크의 길고 늘씬한 두 빛깔 생머리 횡단 관제사 · 유리빛 히메컷 큐레이터와 달리 짧고 날렵한 머리에 느긋한 사람. 굴곡 있는 몸(curvy) · 한쪽이 더 긴 비대칭 단발(asymmetric_bob) · 짙은 보랏빛(royal_purple) 머리 · 한쪽 눈을 덮는 긴 앞머리, 눈은 청록(teal — 감정 확대경의 빛 고리와 같은 빛). 부드럽게 둥근 얼굴 · 부드럽게 깊은 눈 · 부드러운 둥근 눈썹 · 콧대가 곧고 가는 코 · 가는 입술, 청동빛 갈색 피부(bronze)에 스모키 눈화장, 20대 중반의 나른하게 퇴폐적인 인상(decadent)에 다 안다는 듯한 옅은 미소(smug). 얼굴 칸 다섯이 이스탄불 사이버펑크 사람 · 큐레이터와 다 다르다. 2026-11-23 인상 languid → decadent(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
+                "why": "빛 등불이 뜬 덮인 시장의 보석 감정사 — 이스탄불 사이버펑크의 길고 늘씬한 두 빛깔 생머리 횡단 관제사 · 유리빛 히메컷 큐레이터와 달리 짧고 날렵한 머리에 느긋한 사람. 굴곡 있는 몸(curvy) · 한쪽이 더 긴 비대칭 단발(asymmetric_bob) · 짙은 보랏빛(royal_purple) 머리 · 한쪽 눈을 덮는 긴 앞머리, 눈은 청록(teal — 감정 확대경의 빛 고리와 같은 빛). 부드럽게 둥근 얼굴 · 부드럽게 깊은 눈 · 부드러운 둥근 눈썹 · 콧대가 곧고 가는 코 · 가는 입술, 청동빛 갈색 피부(bronze)에 스모키 눈화장, 20대 중반의 나른하게 퇴폐적인 인상(decadent)에 다 안다는 듯한 옅은 미소(smug). 얼굴 칸 다섯이 이스탄불 사이버펑크 사람 · 큐레이터와 다 다르다. 2026-11-23 인상 languid → decadent(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔). · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 헤어스타일 asymmetric_bob → windswept_long"
               },
               "hold": {
                 "en": "a slim chrome jeweler's loupe glowing with a ring of turquoise light"
@@ -7521,7 +7521,7 @@
                 "en": "layered silk, mesh and smart-fabric pieces with Iznik tile flowers drifting across them in soft light, many slim chrome rings and earrings each holding a floating point of jewel-coloured light, and a small glowing pouch at her hip shaped like a jewel casket"
               },
               "card_ko": {
-                "look": "보랏빛 비대칭 단발 · 곡선",
+                "look": "보랏빛 바람 긴 머리 · 곡선",
                 "motif": "빛 보석 반지 · 감정 확대경"
               },
               "sil": "layered_street"
@@ -7576,11 +7576,11 @@
                 },
                 "silhouette": {
                   "body": "tall_curvy",
-                  "hair": "updo_bun",
-                  "hair_color": "golden_blonde",
+                  "hair": "triple_tails",
+                  "hair_color": "dark_brown",
                   "bangs": "none"
                 },
-                "why": "수정 궁전 의식의 홀에서 두 대륙의 손님을 맞는 의전장 — 이스탄불 판타지의 풍만한 붉은 곱슬 등불 공주 · 청록 웨이브 물의 마법사 · 로즈골드 땋은 머리 보석 상인과 달리 키가 크고 단정하게 올린 사람. 키 크고 다리가 길며 풍성한 곡선 몸(tall_curvy) · 단정히 틀어 올린 머리(updo_bun) · 금발(golden_blonde) · 앞머리 없이 드러낸 이마, 눈은 사파이어. 갸름한 달걀형 얼굴 · 둥근 아몬드 눈 · 끝이 또렷이 꺾인 눈썹 · 콧대가 곧고 가는 코 · 가는 입술, 흰 피부(fair)에 발그레한 볼, 20대 중반의 도도한 인상(haughty)에 입을 다문 옅은 자부의 미소(proud). 얼굴 칸이 이스탄불 판타지 사람과 넷, 다른 랜드마크 둘과 다섯 다르다. 2026-11-23 인상 regal → haughty(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
+                "why": "수정 궁전 의식의 홀에서 두 대륙의 손님을 맞는 의전장 — 이스탄불 판타지의 풍만한 붉은 곱슬 등불 공주 · 청록 웨이브 물의 마법사 · 로즈골드 땋은 머리 보석 상인과 달리 키가 크고 단정하게 올린 사람. 키 크고 다리가 길며 풍성한 곡선 몸(tall_curvy) · 단정히 틀어 올린 머리(updo_bun) · 금발(golden_blonde) · 앞머리 없이 드러낸 이마, 눈은 사파이어. 갸름한 달걀형 얼굴 · 둥근 아몬드 눈 · 끝이 또렷이 꺾인 눈썹 · 콧대가 곧고 가는 코 · 가는 입술, 흰 피부(fair)에 발그레한 볼, 20대 중반의 도도한 인상(haughty)에 입을 다문 옅은 자부의 미소(proud). 얼굴 칸이 이스탄불 판타지 사람과 넷, 다른 랜드마크 둘과 다섯 다르다. 2026-11-23 인상 regal → haughty(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔). · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 golden_blonde → dark_brown, 헤어스타일 updo_bun → triple_tails"
               },
               "hold": {
                 "en": "a slender gold ceremonial staff crowned with a cluster of crystal drops"
@@ -7590,7 +7590,7 @@
                 "en": "a tiara built in tiers of crystal drops like a great chandelier, an ivory court gown and shoulder cape flowing with gold-thread embroidery in the pattern of gilded palace ceilings, and the flowered border of a palace carpet woven around the hem of her train"
               },
               "card_ko": {
-                "look": "금발 올림머리 · 큰 키 곡선",
+                "look": "흑갈색 세 갈래 묶음 · 큰 키 곡선",
                 "motif": "샹들리에 관 · 금실 드레스"
               },
               "sil": "crown_regalia"
@@ -8176,11 +8176,11 @@
                 },
                 "silhouette": {
                   "body": "voluptuous",
-                  "hair": "long_curly",
-                  "hair_color": "bright_gold",
+                  "hair": "side_ponytail",
+                  "hair_color": "blue_black",
                   "bangs": "parted"
                 },
-                "why": "모래에 어깨까지 묻혔던 큰 상 곁에서 새벽마다 모래바람을 춤으로 돌려보내는 파수 무희 — 느긋하고 끈질긴 사람. 가슴 · 엉덩이 · 허벅지가 넉넉하게 굴곡진 풍만한 몸(voluptuous) · 긴 나선 곱슬머리(long_curly) · 새벽 햇빛 같은 밝은 금빛 머리(bright_gold) · 가운데 가르마 앞머리(parted) · 몸에 붙는 옷에 나부끼는 베일 띠와 깊은 두건(shadow_dancer — 두건은 뒤로 내림)으로 실루엣이 움직인다. 각이 부드러운 얼굴 · 부드럽게 깊은 눈에 살짝 올라간 눈꼬리 · 곧고 자연스러운 숱의 눈썹 · 끝이 둥근 작은 코 · 도톰하고 자연스러운 폭의 입술, 꿀빛 눈, 올리브 피부(olive)에 옅은 장밋빛 입술, 20대 후반, 속을 알 수 없는 신비로운 인상(mysterious)에 입을 다문 옅은 미소. 카이로 판타지의 물때 수호자와 얼굴 칸 다섯이 모두 다르고, 같은 세계 피라미드 수호 기사와도 다섯이 다르며, 이 랜드마크의 다른 두 세계와는 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 2026-11-23 인상 glamorous → mysterious(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
+                "why": "모래에 어깨까지 묻혔던 큰 상 곁에서 새벽마다 모래바람을 춤으로 돌려보내는 파수 무희 — 느긋하고 끈질긴 사람. 가슴 · 엉덩이 · 허벅지가 넉넉하게 굴곡진 풍만한 몸(voluptuous) · 긴 나선 곱슬머리(long_curly) · 새벽 햇빛 같은 밝은 금빛 머리(bright_gold) · 가운데 가르마 앞머리(parted) · 몸에 붙는 옷에 나부끼는 베일 띠와 깊은 두건(shadow_dancer — 두건은 뒤로 내림)으로 실루엣이 움직인다. 각이 부드러운 얼굴 · 부드럽게 깊은 눈에 살짝 올라간 눈꼬리 · 곧고 자연스러운 숱의 눈썹 · 끝이 둥근 작은 코 · 도톰하고 자연스러운 폭의 입술, 꿀빛 눈, 올리브 피부(olive)에 옅은 장밋빛 입술, 20대 후반, 속을 알 수 없는 신비로운 인상(mysterious)에 입을 다문 옅은 미소. 카이로 판타지의 물때 수호자와 얼굴 칸 다섯이 모두 다르고, 같은 세계 피라미드 수호 기사와도 다섯이 다르며, 이 랜드마크의 다른 두 세계와는 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 2026-11-23 인상 glamorous → mysterious(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔). · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 bright_gold → blue_black, 헤어스타일 long_curly → side_ponytail"
               },
               "hold": {
                 "en": "a slender gold staff trailing a ribbon of golden light that sweeps the sand aside"
@@ -8190,7 +8190,7 @@
                 "en": "veil sashes of sand-gold silk banded in pale and golden stripes like the rock layers of the plateau, fluttering from her hips and shoulders, and a broad gold collar of fanning dawn rays across her collarbones"
               },
               "card_ko": {
-                "look": "금빛 나선 곱슬 · 풍만",
+                "look": "푸른 흑발 옆 묶음 · 풍만",
                 "motif": "바위층 베일 띠 · 새벽빛 금 깃"
               },
               "sil": "shadow_dancer"
@@ -8233,11 +8233,11 @@
                 },
                 "silhouette": {
                   "body": "strong_curvy",
-                  "hair": "side_braid",
+                  "hair": "horn_locks",
                   "hair_color": "tempered_steel",
                   "bangs": "side_swept"
                 },
-                "why": "어깨까지 모래에 묻힌 스핑크스를 파내고 바닥 둘레에 새 석회암 블록을 맞춰 넣는 발굴단의 증기 모래 펌프 기관사 — 끈기 있고 날렵한 사람. 어깨가 넓고 근육이 단단하면서 가슴이 풍만하고 엉덩이가 넓은 몸(strong_curvy) · 한쪽 어깨로 내린 굵은 땋은 머리(side_braid) · 푸른 담금빛이 도는 강철빛 은발(tempered_steel) · 옆으로 넘긴 앞머리(side_swept) · 주머니 많은 탐사 재킷에 넓은 챙 모자와 가방(explorer)으로 실루엣이 먼 길을 나선 사람이다. 부드럽게 긴 달걀형 얼굴 · 눈꼬리가 순하게 처진 눈 · 각이 선 눈썹 · 부드러운 매부리코 · 가늘고 자연스러운 폭의 입술, 강철빛 푸른 눈, 금빛 도는 밝은 피부(golden_tan)에 주근깨, 20대 중반, 또렷한 인상(sharp)에 집중한 표정. 카이로 스팀펑크의 등불 장인 · 같은 세계 바지선 기관장과 얼굴 칸 다섯이 모두 다르고, 이 랜드마크의 다른 두 세계와는 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다."
+                "why": "어깨까지 모래에 묻힌 스핑크스를 파내고 바닥 둘레에 새 석회암 블록을 맞춰 넣는 발굴단의 증기 모래 펌프 기관사 — 끈기 있고 날렵한 사람. 어깨가 넓고 근육이 단단하면서 가슴이 풍만하고 엉덩이가 넓은 몸(strong_curvy) · 한쪽 어깨로 내린 굵은 땋은 머리(side_braid) · 푸른 담금빛이 도는 강철빛 은발(tempered_steel) · 옆으로 넘긴 앞머리(side_swept) · 주머니 많은 탐사 재킷에 넓은 챙 모자와 가방(explorer)으로 실루엣이 먼 길을 나선 사람이다. 부드럽게 긴 달걀형 얼굴 · 눈꼬리가 순하게 처진 눈 · 각이 선 눈썹 · 부드러운 매부리코 · 가늘고 자연스러운 폭의 입술, 강철빛 푸른 눈, 금빛 도는 밝은 피부(golden_tan)에 주근깨, 20대 중반, 또렷한 인상(sharp)에 집중한 표정. 카이로 스팀펑크의 등불 장인 · 같은 세계 바지선 기관장과 얼굴 칸 다섯이 모두 다르고, 이 랜드마크의 다른 두 세계와는 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 헤어스타일 side_braid → horn_locks"
               },
               "hold": {
                 "en": "a fine brass-handled excavation brush"
@@ -8247,7 +8247,7 @@
                 "en": "a many-pocketed canvas expedition jacket whose shoulders are quilted in stepped blocks like the restored limestone courses of the sphinx's base, and brass goggles with sand-gold lenses pushed up on her wide-brimmed hat"
               },
               "card_ko": {
-                "look": "강철빛 옆 땋은 머리",
+                "look": "강철빛 뿔 머리",
                 "motif": "석회암 블록 누빔 · 모래 고글"
               },
               "sil": "explorer"
@@ -8290,11 +8290,11 @@
                 },
                 "silhouette": {
                   "body": "busty_slender",
-                  "hair": "hime_cut",
+                  "hair": "giant_braid",
                   "hair_color": "titanium_tint",
                   "bangs": "straight"
                 },
-                "why": "얼굴에 남은 붉은 칠 · 몸에 남은 노랑과 파랑 흔적을 빛으로 되살려 스핑크스에 옛 빛깔을 입히는 색 복원가 — 다정하고 섬세한 사람. 팔다리가 가늘면서 가슴이 풍만하고 엉덩이가 둥근 몸(busty_slender) · 뺨 길이에서 반듯이 자른 옆머리의 긴 생머리(hime_cut — 옛 이집트 가발의 반듯한 선) · 짙은 금속 회색에서 끝으로 갈수록 볏짚 금 · 보라 · 파랑 띠로 피어나는 머리(titanium_tint — 옛 칠의 세 빛깔) · 반듯한 일자 앞머리(straight) · 몸에 붙는 바탕옷 둘레로 빛 자락이 드레스처럼 떠도는 옷(holo_gown)으로 실루엣이 빛으로 퍼진다. 둥글게 갸름해지는 얼굴 · 자연스러운 크기의 아몬드 눈 · 가늘게 휜 눈썹 · 끝이 둥글고 자연스러운 폭의 코 · 도톰한 하트 입술, 진사빛 붉은 눈(cinnabar — 옛 붉은 안료), 구릿빛 갈색 피부(bronze)에 윤기 나는 입술, 20대 초반, 부드러운 인상(soft)에 온화한 표정. 카이로 사이버펑크의 별빛 측량사 · 같은 세계 보존 기술자와 얼굴 칸 다섯이 모두 다르고, 이 랜드마크의 다른 두 세계와는 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다."
+                "why": "얼굴에 남은 붉은 칠 · 몸에 남은 노랑과 파랑 흔적을 빛으로 되살려 스핑크스에 옛 빛깔을 입히는 색 복원가 — 다정하고 섬세한 사람. 팔다리가 가늘면서 가슴이 풍만하고 엉덩이가 둥근 몸(busty_slender) · 뺨 길이에서 반듯이 자른 옆머리의 긴 생머리(hime_cut — 옛 이집트 가발의 반듯한 선) · 짙은 금속 회색에서 끝으로 갈수록 볏짚 금 · 보라 · 파랑 띠로 피어나는 머리(titanium_tint — 옛 칠의 세 빛깔) · 반듯한 일자 앞머리(straight) · 몸에 붙는 바탕옷 둘레로 빛 자락이 드레스처럼 떠도는 옷(holo_gown)으로 실루엣이 빛으로 퍼진다. 둥글게 갸름해지는 얼굴 · 자연스러운 크기의 아몬드 눈 · 가늘게 휜 눈썹 · 끝이 둥글고 자연스러운 폭의 코 · 도톰한 하트 입술, 진사빛 붉은 눈(cinnabar — 옛 붉은 안료), 구릿빛 갈색 피부(bronze)에 윤기 나는 입술, 20대 초반, 부드러운 인상(soft)에 온화한 표정. 카이로 사이버펑크의 별빛 측량사 · 같은 세계 보존 기술자와 얼굴 칸 다섯이 모두 다르고, 이 랜드마크의 다른 두 세계와는 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 헤어스타일 hime_cut → giant_braid"
               },
               "hold": {
                 "en": "a slim brush of light whose tip leaves glowing colour in the air"
@@ -8304,7 +8304,7 @@
                 "en": "flowing panels of projected light in the sphinx's faded ancient colours — warm red, ochre yellow and soft blue — floating around her like a gown, and a slim band of light across her brow striped in the same three colours"
               },
               "card_ko": {
-                "look": "담금빛 띠 히메컷",
+                "look": "담금빛 띠 큰 땋은 머리",
                 "motif": "옛 칠 세 빛 자락 · 빛 이마띠"
               },
               "sil": "holo_gown"
@@ -8416,11 +8416,11 @@
                 },
                 "silhouette": {
                   "body": "petite_voluptuous",
-                  "hair": "finger_waves",
-                  "hair_color": "helium_peach",
+                  "hair": "floor_length",
+                  "hair_color": "dark_brown",
                   "bangs": "side_swept"
                 },
-                "why": "탑 꼭대기에서 태엽으로 천천히 도는 유리 연꽃 온실을 가꾸는 식물학자 — 재치 있고 멋을 아는 사람. 작은 키에 가슴이 풍만하고 허리가 가늘며 엉덩이가 넉넉한 몸(petite_voluptuous) · 턱 길이의 윤기 나는 핑거 웨이브(finger_waves) · 가스 방전관처럼 은은히 빛나는 옅은 복숭앗빛 머리(helium_peach) · 옆으로 넘긴 앞머리(side_swept) · 겹 리넨에 넓은 챙 모자, 유리 표본병 허리띠(botanist)로 실루엣이 부드럽다. 마름모꼴 얼굴 · 눈꼬리가 살짝 올라간 아몬드 눈 · 곧고 자연스러운 숱의 눈썹 · 끝이 살짝 들린 코 · 도톰한 하트 입술, 장밋빛 눈, 올리브 피부(olive)에 눈 밑 작은 점, 20대 후반, 여우 같은 장난기 인상(mischievous)에 입을 다문 장난스러운 미소. 카이로 스팀펑크의 등불 장인 · 같은 세계 바지선 기관장 · 발굴단 기관사와 얼굴 칸 넷 이상이 다르고, 이 랜드마크의 다른 두 세계와는 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 2026-11-23 인상 glamorous → mischievous(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
+                "why": "탑 꼭대기에서 태엽으로 천천히 도는 유리 연꽃 온실을 가꾸는 식물학자 — 재치 있고 멋을 아는 사람. 작은 키에 가슴이 풍만하고 허리가 가늘며 엉덩이가 넉넉한 몸(petite_voluptuous) · 턱 길이의 윤기 나는 핑거 웨이브(finger_waves) · 가스 방전관처럼 은은히 빛나는 옅은 복숭앗빛 머리(helium_peach) · 옆으로 넘긴 앞머리(side_swept) · 겹 리넨에 넓은 챙 모자, 유리 표본병 허리띠(botanist)로 실루엣이 부드럽다. 마름모꼴 얼굴 · 눈꼬리가 살짝 올라간 아몬드 눈 · 곧고 자연스러운 숱의 눈썹 · 끝이 살짝 들린 코 · 도톰한 하트 입술, 장밋빛 눈, 올리브 피부(olive)에 눈 밑 작은 점, 20대 후반, 여우 같은 장난기 인상(mischievous)에 입을 다문 장난스러운 미소. 카이로 스팀펑크의 등불 장인 · 같은 세계 바지선 기관장 · 발굴단 기관사와 얼굴 칸 넷 이상이 다르고, 이 랜드마크의 다른 두 세계와는 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 2026-11-23 인상 glamorous → mischievous(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔). · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 helium_peach → dark_brown, 헤어스타일 finger_waves → floor_length"
               },
               "hold": {
                 "en": "a blue lotus blossom under a small glass bell jar"
@@ -8430,7 +8430,7 @@
                 "en": "a fitted bodice of brass openwork lattice that tapers to her waist like the tower's stem over layered linen, and a wide-brimmed hat crowned with a blue glass lotus"
               },
               "card_ko": {
-                "look": "복숭앗빛 핑거 웨이브",
+                "look": "흑갈색 바닥 긴 머리",
                 "motif": "놋쇠 격자 보디스 · 유리 연꽃"
               },
               "sil": "botanist"
@@ -8473,11 +8473,11 @@
                 },
                 "silhouette": {
                   "body": "petite_curvy",
-                  "hair": "ponytail",
+                  "hair": "long_layered",
                   "hair_color": "fluorite_violet",
                   "bangs": "parted"
                 },
-                "why": "밤마다 탑의 격자 빛을 지휘해 도시에 빛 공연을 펼치는 빛 연출가 — 무대 위에서 빛나는 당찬 사람. 작고 다부지면서 가슴과 엉덩이가 둥근 몸(petite_curvy) · 높이 묶은 긴 포니테일(ponytail) · 바다초록 띠가 든 보랏빛 머리(fluorite_violet — 탑의 밤 조명) · 가운데 가르마 앞머리(parted) · 크롭 무대 상의에 빛나는 겹치마, 마이크 헤드셋과 긴 부츠(cyber_idol)로 실루엣이 반짝인다. 부드럽게 긴 달걀형 얼굴 · 자연스러운 크기의 아몬드 눈 · 조금 낮게 놓인 짙은 눈썹 · 부드러운 매부리코 · 가늘고 자연스러운 폭의 입술, 금테 두른 보랏빛 푸른 눈, 짙은 갈색 피부(deep_brown)에 윤기 나는 입술, 20대 중반, 도발적인 인상(provocative)에 자신 있는 표정. 카이로 사이버펑크의 별빛 측량사 · 같은 세계 보존 기술자와 얼굴 칸 다섯이, 색 복원가와 넷이 다르고, 이 랜드마크의 다른 두 세계와는 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 2026-11-23 인상 sharp → provocative(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
+                "why": "밤마다 탑의 격자 빛을 지휘해 도시에 빛 공연을 펼치는 빛 연출가 — 무대 위에서 빛나는 당찬 사람. 작고 다부지면서 가슴과 엉덩이가 둥근 몸(petite_curvy) · 높이 묶은 긴 포니테일(ponytail) · 바다초록 띠가 든 보랏빛 머리(fluorite_violet — 탑의 밤 조명) · 가운데 가르마 앞머리(parted) · 크롭 무대 상의에 빛나는 겹치마, 마이크 헤드셋과 긴 부츠(cyber_idol)로 실루엣이 반짝인다. 부드럽게 긴 달걀형 얼굴 · 자연스러운 크기의 아몬드 눈 · 조금 낮게 놓인 짙은 눈썹 · 부드러운 매부리코 · 가늘고 자연스러운 폭의 입술, 금테 두른 보랏빛 푸른 눈, 짙은 갈색 피부(deep_brown)에 윤기 나는 입술, 20대 중반, 도발적인 인상(provocative)에 자신 있는 표정. 카이로 사이버펑크의 별빛 측량사 · 같은 세계 보존 기술자와 얼굴 칸 다섯이, 색 복원가와 넷이 다르고, 이 랜드마크의 다른 두 세계와는 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 2026-11-23 인상 sharp → provocative(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔). · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 헤어스타일 ponytail → long_layered"
               },
               "hold": {
                 "en": "a slim conductor's baton of light"
@@ -8487,7 +8487,7 @@
                 "en": "a cropped stage top and a layered glowing skirt traced with the tower's open lattice in shifting violet and sea-green light, and lotus-shaped light earrings"
               },
               "card_ko": {
-                "look": "형석빛 포니테일",
+                "look": "형석빛 긴 층머리",
                 "motif": "격자 빛 치마 · 연꽃 귀걸이"
               },
               "sil": "cyber_idol"
@@ -8969,11 +8969,11 @@
                 },
                 "silhouette": {
                   "body": "willowy_curvy",
-                  "hair": "mermaid_waves",
-                  "hair_color": "rose_gold",
+                  "hair": "giant_twin_tails",
+                  "hair_color": "dark_auburn",
                   "bangs": "side_swept"
                 },
-                "why": "새해 전야 수백만이 모이는 해변에서 바다 위로 불꽃을 띄워 해를 여는 불꽃 축제의 여왕. 리우 판타지의 해넘이 전령(풍만 · 보랏빛 구름 곱슬 · 달걀형 · 짙은 갈색 피부)과 달리 길고 우아한 사람. 팔다리가 길고 부드러운 곡선 체형(willowy_curvy) · 허리까지 물결치는 인어 웨이브(mermaid_waves) · 장밋빛 금 머리(rose_gold — 불꽃 빛) · 옆으로 넘긴 앞머리. 하트형 얼굴 · 자연스러운 아몬드 눈 · 가늘게 휜 눈썹 · 곧고 가는 코 · 작은 활 입술, 금빛 눈, 구릿빛 갈색 피부(bronze)에 붉은 입술, 20대 중반의 우아한 인상에 자신 있는 표정. 얼굴 칸 다섯이 리우 판타지 사람 · 빵 산 판타지 사람과 모두 다르다."
+                "why": "새해 전야 수백만이 모이는 해변에서 바다 위로 불꽃을 띄워 해를 여는 불꽃 축제의 여왕. 리우 판타지의 해넘이 전령(풍만 · 보랏빛 구름 곱슬 · 달걀형 · 짙은 갈색 피부)과 달리 길고 우아한 사람. 팔다리가 길고 부드러운 곡선 체형(willowy_curvy) · 허리까지 물결치는 인어 웨이브(mermaid_waves) · 장밋빛 금 머리(rose_gold — 불꽃 빛) · 옆으로 넘긴 앞머리. 하트형 얼굴 · 자연스러운 아몬드 눈 · 가늘게 휜 눈썹 · 곧고 가는 코 · 작은 활 입술, 금빛 눈, 구릿빛 갈색 피부(bronze)에 붉은 입술, 20대 중반의 우아한 인상에 자신 있는 표정. 얼굴 칸 다섯이 리우 판타지 사람 · 빵 산 판타지 사람과 모두 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 rose_gold → dark_auburn, 헤어스타일 mermaid_waves → giant_twin_tails"
               },
               "hold": {
                 "en": "a slender gold wand trailing sparks that rise and bloom into tiny fireworks"
@@ -8983,7 +8983,7 @@
                 "en": "a tiara of gold and rose jewels shaped like bursting fireworks, and a long train of white silk inlaid along its hem with a black-and-white wave mosaic of jet and pearl"
               },
               "card_ko": {
-                "look": "장밋빛 금 인어 웨이브",
+                "look": "짙은 적갈 큰 양갈래",
                 "motif": "불꽃 관 · 흑백 물결 끌자락"
               },
               "sil": "crown_regalia"
@@ -9026,11 +9026,11 @@
                 },
                 "silhouette": {
                   "body": "pear_curvy",
-                  "hair": "finger_waves",
-                  "hair_color": "wine_red",
+                  "hair": "spiky_wild",
+                  "hair_color": "honey_brown",
                   "bangs": "none"
                 },
-                "why": "해변의 구조대 망루를 지키는 바다 구조대장 — 코파카바나 해변은 구조대 망루(포스투)로 자리를 나눈다. 리우 스팀펑크의 곤돌라 조종사(작은 곡선 · 초록 낮은 포니테일 · 금빛 밝은 피부)와 달리 차분하고 든든한 사람. 어깨가 좁고 엉덩이 · 허벅지가 넉넉한 서양배 굴곡 몸(pear_curvy) · 반들거리는 턱 길이 핑거 웨이브(finger_waves — 해수욕장 옛 시절) · 짙은 와인빛 붉은 머리(wine_red), 앞머리 없음. 갸름한 달걀형 얼굴 · 깊은 눈매 · 곧고 굵은 눈썹 · 매부리코 · 도톰한 하트 입술, 청록 눈, 흰 피부에 입가의 점, 20대 후반의 성숙한 인상에 차분한 표정. 얼굴 칸 다섯이 리우 스팀펑크 사람 · 빵 산 스팀펑크 사람과 모두 다르다."
+                "why": "해변의 구조대 망루를 지키는 바다 구조대장 — 코파카바나 해변은 구조대 망루(포스투)로 자리를 나눈다. 리우 스팀펑크의 곤돌라 조종사(작은 곡선 · 초록 낮은 포니테일 · 금빛 밝은 피부)와 달리 차분하고 든든한 사람. 어깨가 좁고 엉덩이 · 허벅지가 넉넉한 서양배 굴곡 몸(pear_curvy) · 반들거리는 턱 길이 핑거 웨이브(finger_waves — 해수욕장 옛 시절) · 짙은 와인빛 붉은 머리(wine_red), 앞머리 없음. 갸름한 달걀형 얼굴 · 깊은 눈매 · 곧고 굵은 눈썹 · 매부리코 · 도톰한 하트 입술, 청록 눈, 흰 피부에 입가의 점, 20대 후반의 성숙한 인상에 차분한 표정. 얼굴 칸 다섯이 리우 스팀펑크 사람 · 빵 산 스팀펑크 사람과 모두 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 wine_red → honey_brown, 헤어스타일 finger_waves → spiky_wild"
               },
               "hold": {
                 "en": "a cork life ring banded in polished brass"
@@ -9040,7 +9040,7 @@
                 "en": "a short naval frock coat over a navy-and-white striped bathing costume, its lapels edged in a black-and-white wave pattern, and a brass lifeguard's whistle on a fine chain"
               },
               "card_ko": {
-                "look": "와인빛 핑거 웨이브",
+                "look": "꿀갈색 삐죽 머리",
                 "motif": "흑백 물결 깃 · 놋쇠 호루라기"
               },
               "sil": "naval_officer"
@@ -9083,11 +9083,11 @@
                 },
                 "silhouette": {
                   "body": "curvy",
-                  "hair": "pixie_cut",
+                  "hair": "lion_mane",
                   "hair_color": "neon_red",
                   "bangs": "choppy"
                 },
-                "why": "발만 쓰는 해변 배구 풋발리(1965년 리우에서 생겼다)의 두 세기 뒤 챔피언. 리우 사이버펑크의 바테리아 지휘자(큰 키 곡선 · 크롬 무지개 언더컷 · 하트형 · 구릿빛 피부)와 달리 작고 빠른 사람. 굴곡 있는 몸(curvy) · 짧게 헝클어진 픽시 컷(pixie_cut) · 불 켜진 관처럼 빛나는 붉은 주황 머리(neon_red) · 들쭉날쭉한 앞머리. 부드럽게 각진 얼굴 · 크고 둥근 눈 · 가늘게 휜 눈썹 · 끝이 둥근 코 · 도톰하고 넓은 입술, 꿀빛 눈, 짙은 갈색 피부(deep_brown)에 윤기 나는 입술, 20대 초반의 사나운 인상(fierce)에 자랑스러운 표정. 얼굴 칸 다섯이 리우 사이버펑크 사람 · 빵 산 사이버펑크 사람과 모두 다르다."
+                "why": "발만 쓰는 해변 배구 풋발리(1965년 리우에서 생겼다)의 두 세기 뒤 챔피언. 리우 사이버펑크의 바테리아 지휘자(큰 키 곡선 · 크롬 무지개 언더컷 · 하트형 · 구릿빛 피부)와 달리 작고 빠른 사람. 굴곡 있는 몸(curvy) · 짧게 헝클어진 픽시 컷(pixie_cut) · 불 켜진 관처럼 빛나는 붉은 주황 머리(neon_red) · 들쭉날쭉한 앞머리. 부드럽게 각진 얼굴 · 크고 둥근 눈 · 가늘게 휜 눈썹 · 끝이 둥근 코 · 도톰하고 넓은 입술, 꿀빛 눈, 짙은 갈색 피부(deep_brown)에 윤기 나는 입술, 20대 초반의 사나운 인상(fierce)에 자랑스러운 표정. 얼굴 칸 다섯이 리우 사이버펑크 사람 · 빵 산 사이버펑크 사람과 모두 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 헤어스타일 pixie_cut → lion_mane"
               },
               "hold": {
                 "en": "a softly glowing ball of light, smooth and without any markings"
@@ -9097,7 +9097,7 @@
                 "en": "a sleek sports bodysuit cut high at the legs, traced with the black-and-white wave pattern in flowing light that ripples as she moves, and glowing ankle bands that splash light across the sand with every kick"
               },
               "card_ko": {
-                "look": "붉은 빛 픽시 · 굴곡",
+                "look": "붉은 빛 사자 갈기 머리 · 굴곡",
                 "motif": "빛 물결 운동복 · 빛 발목띠"
               },
               "sil": "exo_frame"
@@ -9152,11 +9152,11 @@
                 },
                 "silhouette": {
                   "body": "petite_voluptuous",
-                  "hair": "half_up",
-                  "hair_color": "pale_aqua",
+                  "hair": "side_ponytail",
+                  "hair_color": "chestnut",
                   "bangs": "parted"
                 },
-                "why": "우림 언덕 카리오카 강의 샘물을 아치 위 물길로 도시 분수까지 이끄는 물길의 마법사 — 수도교는 1750년에 열려 카리오카 강의 물을 도시 분수로 날랐다. 리우 판타지의 해넘이 전령(풍만 · 보랏빛 구름 곱슬 · 달걀형)과 달리 작고 부드러운 사람. 작은 키에 가슴 · 엉덩이가 넉넉한 몸(petite_voluptuous) · 반만 묶어 내린 긴 머리(half_up) · 맑은 물빛 엷은 청록 머리(pale_aqua) · 가운데 가르마. 둥근 얼굴 · 크고 둥근 눈 · 조금 낮게 놓인 짙은 눈썹 · 작은 코 · 도톰하고 넓은 입술, 하늘빛 눈, 따뜻한 베이지 피부에 발그레한 볼, 20대 초반의 수줍은 인상에 다정한 표정. 얼굴 칸이 리우 판타지 사람 · 빵 산 · 코파카바나 판타지 사람과 넷 이상 다르다. 2026-11-23 인상 soft → shy(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
+                "why": "우림 언덕 카리오카 강의 샘물을 아치 위 물길로 도시 분수까지 이끄는 물길의 마법사 — 수도교는 1750년에 열려 카리오카 강의 물을 도시 분수로 날랐다. 리우 판타지의 해넘이 전령(풍만 · 보랏빛 구름 곱슬 · 달걀형)과 달리 작고 부드러운 사람. 작은 키에 가슴 · 엉덩이가 넉넉한 몸(petite_voluptuous) · 반만 묶어 내린 긴 머리(half_up) · 맑은 물빛 엷은 청록 머리(pale_aqua) · 가운데 가르마. 둥근 얼굴 · 크고 둥근 눈 · 조금 낮게 놓인 짙은 눈썹 · 작은 코 · 도톰하고 넓은 입술, 하늘빛 눈, 따뜻한 베이지 피부에 발그레한 볼, 20대 초반의 수줍은 인상에 다정한 표정. 얼굴 칸이 리우 판타지 사람 · 빵 산 · 코파카바나 판타지 사람과 넷 이상 다르다. 2026-11-23 인상 soft → shy(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔). · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 pale_aqua → chestnut, 헤어스타일 half_up → side_ponytail"
               },
               "hold": {
                 "en": "a slender silver ewer pouring an endless thread of clear spring water"
@@ -9166,7 +9166,7 @@
                 "en": "a long white robe whose hem is embroidered in gold with a double row of small arches, and a ribbon of living spring water circling her shoulders and arms"
               },
               "card_ko": {
-                "look": "물빛 반묶음 · 작은 풍만",
+                "look": "밤색 옆 묶음 · 작은 풍만",
                 "motif": "두 줄 아치 자수 · 샘물 띠"
               },
               "sil": "mage_robe"
@@ -9209,11 +9209,11 @@
                 },
                 "silhouette": {
                   "body": "busty_slender",
-                  "hair": "bob",
-                  "hair_color": "bronze",
+                  "hair": "segmented_tail",
+                  "hair_color": "burgundy",
                   "bangs": "side_swept"
                 },
-                "why": "1896년 물길을 다한 수도교를 다리로 삼아 언덕 동네로 오르는 전차의 차장 — 그해 전차가 전기로 바뀌며 아치 위를 건너기 시작했고, 차는 옆이 트이고 나무 의자를 가로로 놓았으며 손님이 발판에 서기도 했다. 리우 스팀펑크의 곤돌라 조종사(작은 곡선 · 초록 낮은 포니테일 · 부드럽게 각진 얼굴)와 달리 날렵하고 맵시 있는 사람. 팔다리가 가늘고 가슴이 도드라진 몸(busty_slender) · 단정한 단발(bob) · 따뜻한 청동빛 머리(bronze) · 옆으로 넘긴 앞머리. 하트형 얼굴 · 눈꼬리가 올라간 가는 눈 · 날 선 눈썹 · 곧고 가는 코 · 가늘고 긴 입술, 흑연빛 회색 눈, 금빛 도는 밝은 피부(golden_tan)에 날개 눈매, 20대 후반의 날카로운 인상에 입을 다문 반쯤의 미소. 얼굴 칸 다섯이 리우 스팀펑크 사람 · 빵 산 · 코파카바나 스팀펑크 사람과 모두 다르다."
+                "why": "1896년 물길을 다한 수도교를 다리로 삼아 언덕 동네로 오르는 전차의 차장 — 그해 전차가 전기로 바뀌며 아치 위를 건너기 시작했고, 차는 옆이 트이고 나무 의자를 가로로 놓았으며 손님이 발판에 서기도 했다. 리우 스팀펑크의 곤돌라 조종사(작은 곡선 · 초록 낮은 포니테일 · 부드럽게 각진 얼굴)와 달리 날렵하고 맵시 있는 사람. 팔다리가 가늘고 가슴이 도드라진 몸(busty_slender) · 단정한 단발(bob) · 따뜻한 청동빛 머리(bronze) · 옆으로 넘긴 앞머리. 하트형 얼굴 · 눈꼬리가 올라간 가는 눈 · 날 선 눈썹 · 곧고 가는 코 · 가늘고 긴 입술, 흑연빛 회색 눈, 금빛 도는 밝은 피부(golden_tan)에 날개 눈매, 20대 후반의 날카로운 인상에 입을 다문 반쯤의 미소. 얼굴 칸 다섯이 리우 스팀펑크 사람 · 빵 산 · 코파카바나 스팀펑크 사람과 모두 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 bronze → burgundy, 헤어스타일 bob → segmented_tail"
               },
               "hold": {
                 "en": "a polished brass hand lantern with a small bell hanging beneath it"
@@ -9223,7 +9223,7 @@
                 "en": "a sharp tailcoat with a double row of arch-shaped brass buttons, a small silk top hat with a brass pin shaped like a tram's trolley pole, and a brass ticket punch hanging on a fine chain"
               },
               "card_ko": {
-                "look": "청동빛 단발 · 가는 굴곡",
+                "look": "버건디 마디 묶음머리 · 가는 굴곡",
                 "motif": "아치 놋쇠 단추 · 표 펀치"
               },
               "sil": "top_hat_coat"
@@ -9266,11 +9266,11 @@
                 },
                 "silhouette": {
                   "body": "voluptuous",
-                  "hair": "long_curly",
+                  "hair": "braided_crown",
                   "hair_color": "cobalt_blue",
                   "bangs": "side_swept"
                 },
-                "why": "1950년대부터 노래와 음악의 밤으로 이름난 라파에서 아치 아래 무대에 서는 두 세기 뒤의 밤 가수 — 라파엔 삼바 · 쇼루 무대가 이어진다. 리우 사이버펑크의 바테리아 지휘자(큰 키 곡선 · 크롬 무지개 언더컷 · 하트형 · 날 선 인상)와 달리 느긋하고 깊은 사람. 가슴 · 엉덩이 · 허벅지가 넉넉한 풍만한 몸(voluptuous) · 길게 내려오는 나선 곱슬(long_curly) · 유리 같은 윤이 도는 짙은 코발트 블루 머리(cobalt_blue) · 옆으로 넘긴 앞머리. 긴 얼굴 · 눈꼬리가 부드럽게 처진 눈 · 부드러운 둥근 눈썹 · 매부리코 · 작은 활 입술, 장밋빛 눈, 구릿빛 갈색 피부(bronze)에 짙은 입술, 30대 초반의 나른하게 퇴폐적인 인상(decadent)에 아련한 표정. 얼굴 칸이 리우 사이버펑크 사람 · 빵 산 · 코파카바나 사이버펑크 사람과 넷 이상 다르다. 2026-11-23 인상 languid → decadent(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
+                "why": "1950년대부터 노래와 음악의 밤으로 이름난 라파에서 아치 아래 무대에 서는 두 세기 뒤의 밤 가수 — 라파엔 삼바 · 쇼루 무대가 이어진다. 리우 사이버펑크의 바테리아 지휘자(큰 키 곡선 · 크롬 무지개 언더컷 · 하트형 · 날 선 인상)와 달리 느긋하고 깊은 사람. 가슴 · 엉덩이 · 허벅지가 넉넉한 풍만한 몸(voluptuous) · 길게 내려오는 나선 곱슬(long_curly) · 유리 같은 윤이 도는 짙은 코발트 블루 머리(cobalt_blue) · 옆으로 넘긴 앞머리. 긴 얼굴 · 눈꼬리가 부드럽게 처진 눈 · 부드러운 둥근 눈썹 · 매부리코 · 작은 활 입술, 장밋빛 눈, 구릿빛 갈색 피부(bronze)에 짙은 입술, 30대 초반의 나른하게 퇴폐적인 인상(decadent)에 아련한 표정. 얼굴 칸이 리우 사이버펑크 사람 · 빵 산 · 코파카바나 사이버펑크 사람과 넷 이상 다르다. 2026-11-23 인상 languid → decadent(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔). · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 헤어스타일 long_curly → braided_crown"
               },
               "hold": {
                 "en": "a slim microphone of clear glass with a soft glow at its tip"
@@ -9280,7 +9280,7 @@
                 "en": "a choker and shoulder piece made of two tiers of tiny glowing white arches, and a gown whose soft light pulses gently with her song"
               },
               "card_ko": {
-                "look": "코발트 나선 곱슬 · 풍만",
+                "look": "코발트 왕관 땋은 머리 · 풍만",
                 "motif": "두 층 빛 아치 목걸이"
               },
               "sil": "biolume_dress"
@@ -9790,11 +9790,11 @@
                 },
                 "silhouette": {
                   "body": "petite_curvy",
-                  "hair": "long_curly",
-                  "hair_color": "sunset_pink",
+                  "hair": "double_buns",
+                  "hair_color": "plum_black",
                   "bangs": "curtain"
                 },
-                "why": "계단 마을의 집을 마법 물감으로 칠하는 빛깔 마법사 — 부산 판타지의 불꽃 마법사(모래시계 몸 · 불씨 끝 올림머리 · 다이아몬드형 얼굴 · 밤의 화려함)와 달리 작고 밝은 낮의 사람. 작고 아담하지만 가슴과 엉덩이가 둥근 몸(petite_curvy) · 길게 풀어 내린 나선 곱슬(long_curly) · 노을빛 분홍 머리(sunset_pink) · 커튼 앞머리, 눈은 장밋빛(rose). 하트형 얼굴 · 둥근 아몬드 눈(눈 크게) · 자연스러운 숱의 곧은 눈썹 · 끝이 살짝 들린 코 · 도톰하고 자연스러운 폭의 입술, 흰 피부(fair)에 발그레한 볼(blush), 20대 초반의 귀여운 인상(cute)에 입을 다문 옅은 미소(soft_smile). 실루엣은 마법사 로브(mage_robe). 도시 판타지 · 광안대교 판타지와 얼굴 칸 다섯이 다 다르다."
+                "why": "계단 마을의 집을 마법 물감으로 칠하는 빛깔 마법사 — 부산 판타지의 불꽃 마법사(모래시계 몸 · 불씨 끝 올림머리 · 다이아몬드형 얼굴 · 밤의 화려함)와 달리 작고 밝은 낮의 사람. 작고 아담하지만 가슴과 엉덩이가 둥근 몸(petite_curvy) · 길게 풀어 내린 나선 곱슬(long_curly) · 노을빛 분홍 머리(sunset_pink) · 커튼 앞머리, 눈은 장밋빛(rose). 하트형 얼굴 · 둥근 아몬드 눈(눈 크게) · 자연스러운 숱의 곧은 눈썹 · 끝이 살짝 들린 코 · 도톰하고 자연스러운 폭의 입술, 흰 피부(fair)에 발그레한 볼(blush), 20대 초반의 귀여운 인상(cute)에 입을 다문 옅은 미소(soft_smile). 실루엣은 마법사 로브(mage_robe). 도시 판타지 · 광안대교 판타지와 얼굴 칸 다섯이 다 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 sunset_pink → plum_black, 헤어스타일 long_curly → double_buns"
               },
               "hold": {
                 "en": "a long paintbrush of pale wood whose bristles drip glowing colour that drifts into the air like petals"
@@ -9813,7 +9813,7 @@
                 "why": "판타지만 따로 — 부산 판타지 palette(밤바다 · 동백 · 불티)는 불꽃 마법사의 것이라, 햇빛 아래 계단 마을엔 그 마을 파스텔과 흰 벽 · 항구 남빛."
               },
               "card_ko": {
-                "look": "노을빛 긴 곱슬 · 작은 곡선",
+                "look": "자두빛 흑발 양 똥머리 · 작은 곡선",
                 "motif": "계단 지붕 로브 · 빛 물감"
               },
               "sil": "mage_robe"
@@ -9856,11 +9856,11 @@
                 },
                 "silhouette": {
                   "body": "pear_curvy",
-                  "hair": "flipped_shoulder",
-                  "hair_color": "cedar",
+                  "hair": "jellyfish_cut",
+                  "hair_color": "jet_black",
                   "bangs": "none"
                 },
-                "why": "미로 같은 골목을 걸어 지도로 옮기는 골목 지도 제작자 — 부산 스팀펑크의 증기 전차 차장(작은 풍만 몸 · 라벤더 단발 · 둥근 얼굴 · 흰 피부) · 광안대교 등불지기(탄탄 곡선 · 구리빛 묶음머리)와 달리 차분히 걷고 살피는 사람. 어깨는 좁고 엉덩이 · 허벅지가 풍만한 서양배 곡선 몸(pear_curvy) · 어깨에서 끝이 바깥으로 뻗친 머리(flipped_shoulder) · 삼나무빛 갈색 머리(cedar) · 앞머리 없음, 눈은 개암빛(hazel). 각진 듯 부드러운 얼굴 · 자연스러운 아몬드 눈 · 조금 낮게 놓인 짙은 눈썹 · 곧고 가는 코 · 또렷한 활 입술, 금빛 도는 밝은 피부(golden_tan)에 입가 점(mole_lip), 20대 중반의 성숙한 인상(mature)에 궁금해하는 표정(curious). 실루엣은 탐험가(explorer). 도시 스팀펑크 · 광안대교 스팀펑크와 얼굴 칸 다섯이 다 다르다."
+                "why": "미로 같은 골목을 걸어 지도로 옮기는 골목 지도 제작자 — 부산 스팀펑크의 증기 전차 차장(작은 풍만 몸 · 라벤더 단발 · 둥근 얼굴 · 흰 피부) · 광안대교 등불지기(탄탄 곡선 · 구리빛 묶음머리)와 달리 차분히 걷고 살피는 사람. 어깨는 좁고 엉덩이 · 허벅지가 풍만한 서양배 곡선 몸(pear_curvy) · 어깨에서 끝이 바깥으로 뻗친 머리(flipped_shoulder) · 삼나무빛 갈색 머리(cedar) · 앞머리 없음, 눈은 개암빛(hazel). 각진 듯 부드러운 얼굴 · 자연스러운 아몬드 눈 · 조금 낮게 놓인 짙은 눈썹 · 곧고 가는 코 · 또렷한 활 입술, 금빛 도는 밝은 피부(golden_tan)에 입가 점(mole_lip), 20대 중반의 성숙한 인상(mature)에 궁금해하는 표정(curious). 실루엣은 탐험가(explorer). 도시 스팀펑크 · 광안대교 스팀펑크와 얼굴 칸 다섯이 다 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 cedar → jet_black, 헤어스타일 flipped_shoulder → jellyfish_cut"
               },
               "hold": {
                 "en": "a brass map case with a small glass compass set into its lid"
@@ -9870,7 +9870,7 @@
                 "en": "a belt of linked brass plates etched with the winding lanes of the hillside maze, a folded-map pouch strapped to her thigh, and a short jacket fastened with tiers of tiny enamel buttons painted sky blue, peach, mint and lemon like the village houses"
               },
               "card_ko": {
-                "look": "삼나무빛 뻗친 머리 · 곡선",
+                "look": "칠흑 해파리컷 · 곡선",
                 "motif": "골목 지도 띠 · 네 빛 단추"
               },
               "sil": "explorer"
@@ -10048,11 +10048,11 @@
                 },
                 "silhouette": {
                   "body": "lean_toned",
-                  "hair": "side_braid",
+                  "hair": "braided_crown",
                   "hair_color": "salt_white",
                   "bangs": "curtain"
                 },
-                "why": "절벽 끝 태엽 등대의 등대지기 — 부산 스팀펑크의 증기 전차 차장(작은 풍만 · 라벤더 단발 · 둥근 얼굴 · 흰 피부)과 달리 바닷바람에 단련된 고요한 사람. 날씬하고 단단한 몸(lean_toned — 이 공방 아홉 사람 가운데 하나뿐인 마른 쪽 체형) · 한쪽 어깨로 내린 굵은 땋은 머리(side_braid) · 바다 소금빛 흰 머리(salt_white) · 커튼 앞머리, 눈은 폭풍 잿빛(storm_grey). 달걀형 얼굴 · 눈꼬리가 순하게 처진 눈 · 부드러운 둥근 눈썹 · 끝이 둥근 자연스러운 폭의 코 · 하트 입술, 올리브 피부(olive)에 스모키 화장(smoky), 20대 중반의 아련한 인상(wistful)에 생각에 잠긴 표정(pensive). 실루엣은 해군 장교(naval_officer). 도시 스팀펑크 · 광안대교 · 감천 스팀펑크와 얼굴 칸 다섯이 다 다르다. 2026-11-23 인상 stoic → wistful(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
+                "why": "절벽 끝 태엽 등대의 등대지기 — 부산 스팀펑크의 증기 전차 차장(작은 풍만 · 라벤더 단발 · 둥근 얼굴 · 흰 피부)과 달리 바닷바람에 단련된 고요한 사람. 날씬하고 단단한 몸(lean_toned — 이 공방 아홉 사람 가운데 하나뿐인 마른 쪽 체형) · 한쪽 어깨로 내린 굵은 땋은 머리(side_braid) · 바다 소금빛 흰 머리(salt_white) · 커튼 앞머리, 눈은 폭풍 잿빛(storm_grey). 달걀형 얼굴 · 눈꼬리가 순하게 처진 눈 · 부드러운 둥근 눈썹 · 끝이 둥근 자연스러운 폭의 코 · 하트 입술, 올리브 피부(olive)에 스모키 화장(smoky), 20대 중반의 아련한 인상(wistful)에 생각에 잠긴 표정(pensive). 실루엣은 해군 장교(naval_officer). 도시 스팀펑크 · 광안대교 · 감천 스팀펑크와 얼굴 칸 다섯이 다 다르다. 2026-11-23 인상 stoic → wistful(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔). · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 헤어스타일 side_braid → braided_crown"
               },
               "hold": {
                 "en": "a polished brass storm lantern with a faceted glass chimney"
@@ -10062,7 +10062,7 @@
                 "en": "a harbour-blue keeper's jacket with brass buttons and epaulettes cut like faceted lighthouse lenses, a small clockwork spyglass hung at her hip, and a white sash slanting across her chest like a lighthouse beam"
               },
               "card_ko": {
-                "look": "소금빛 옆 땋은 머리",
+                "look": "소금빛 왕관 땋은 머리",
                 "motif": "렌즈 단추 재킷 · 흰 빛 띠"
               },
               "sil": "naval_officer"
@@ -10105,11 +10105,11 @@
                 },
                 "silhouette": {
                   "body": "curvy",
-                  "hair": "asymmetric_bob",
+                  "hair": "double_buns",
                   "hair_color": "plutonium_ember",
                   "bangs": "side_swept"
                 },
-                "why": "절벽 해양 구조 기지의 구조대원 — 부산 사이버펑크의 크레인 지휘자(근육 곡선 · 비스무트 울프컷 · 긴 얼굴 · 금빛 도는 피부)와 달리 거친 바다로 뛰어드는 날렵한 사람. 굴곡 있는 몸(curvy) · 한쪽이 긴 비대칭 단발(asymmetric_bob) · 짙은 건메탈 머리 끝이 주황 불씨처럼 빛나는 색(plutonium_ember — 구조 신호 빛) · 옆으로 넘긴 앞머리, 눈은 루비빛(ruby). 각진 듯 부드러운 얼굴 · 자연스러운 아몬드 눈 · 곧은 눈썹 · 끝이 둥근 작은 코 · 도톰하고 자연스러운 폭의 입술, 따뜻한 베이지 피부(warm_beige)에 윤기 있는 입술(gloss), 20대 초반의 소년 같은 인상(boyish)에 집중한 표정(focused). 실루엣은 구조복(rescue_suit). 도시 사이버펑크 · 광안대교 · 감천 사이버펑크와 얼굴 칸 다섯이 다 다르다."
+                "why": "절벽 해양 구조 기지의 구조대원 — 부산 사이버펑크의 크레인 지휘자(근육 곡선 · 비스무트 울프컷 · 긴 얼굴 · 금빛 도는 피부)와 달리 거친 바다로 뛰어드는 날렵한 사람. 굴곡 있는 몸(curvy) · 한쪽이 긴 비대칭 단발(asymmetric_bob) · 짙은 건메탈 머리 끝이 주황 불씨처럼 빛나는 색(plutonium_ember — 구조 신호 빛) · 옆으로 넘긴 앞머리, 눈은 루비빛(ruby). 각진 듯 부드러운 얼굴 · 자연스러운 아몬드 눈 · 곧은 눈썹 · 끝이 둥근 작은 코 · 도톰하고 자연스러운 폭의 입술, 따뜻한 베이지 피부(warm_beige)에 윤기 있는 입술(gloss), 20대 초반의 소년 같은 인상(boyish)에 집중한 표정(focused). 실루엣은 구조복(rescue_suit). 도시 사이버펑크 · 광안대교 · 감천 사이버펑크와 얼굴 칸 다섯이 다 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 헤어스타일 asymmetric_bob → double_buns"
               },
               "hold": {
                 "en": "a palm-sized glowing rescue beacon pulsing with warm orange light"
@@ -10128,7 +10128,7 @@
                 "why": "사이버펑크만 따로 — 부산 사이버펑크 palette 는 감천 계단 마을 파스텔이라, 절벽 구조대엔 깊은 바다 남빛 · 절벽 잿빛에 구조 주황 빛."
               },
               "card_ko": {
-                "look": "불씨 끝 비대칭 단발",
+                "look": "불씨 끝 양 똥머리",
                 "motif": "파도 빛 구조복 · 주황 빛 띠"
               },
               "sil": "rescue_suit"
@@ -10418,11 +10418,11 @@
                 },
                 "silhouette": {
                   "body": "pear_curvy",
-                  "hair": "long_wavy",
+                  "hair": "messy_bun",
                   "hair_color": "phosphor_white",
                   "bangs": "parted"
                 },
-                "why": "야자 정원 저녁 음악회에서 노래하는 정원의 가희 — 방콕 판타지의 등불 물길지기(다이아몬드형 · 무지갯빛 은발 옆머리 · 버들 곡선)와 달리 부드럽고 꿈꾸는 사람. 어깨는 가늘고 엉덩이 · 허벅지가 풍성한 배 모양 곡선(pear_curvy) · 허리 아래까지 물결치는 긴 웨이브(long_wavy) · 옅은 초록빛이 은은히 도는 상아빛 흰머리(phosphor_white — 저녁 정원의 빛망울을 머금은 듯) · 가운데 가르마 앞머리(parted), 잎새 초록 눈(leaf_green). 하트형 얼굴 · 조금 둥근 아몬드 눈(round_large) · 둥근 눈썹 · 끝이 둥근 작은 코 · 도톰한 하트 입술, 따뜻한 베이지 피부(warm_beige)에 발그레한 볼(blush), 20대 초반의 몽환적인 인상(dreamy)에 옅은 미소(soft_smile). 실루엣은 음유시인(bard). 도시 판타지와 얼굴 칸 다섯이 다 다르다."
+                "why": "야자 정원 저녁 음악회에서 노래하는 정원의 가희 — 방콕 판타지의 등불 물길지기(다이아몬드형 · 무지갯빛 은발 옆머리 · 버들 곡선)와 달리 부드럽고 꿈꾸는 사람. 어깨는 가늘고 엉덩이 · 허벅지가 풍성한 배 모양 곡선(pear_curvy) · 허리 아래까지 물결치는 긴 웨이브(long_wavy) · 옅은 초록빛이 은은히 도는 상아빛 흰머리(phosphor_white — 저녁 정원의 빛망울을 머금은 듯) · 가운데 가르마 앞머리(parted), 잎새 초록 눈(leaf_green). 하트형 얼굴 · 조금 둥근 아몬드 눈(round_large) · 둥근 눈썹 · 끝이 둥근 작은 코 · 도톰한 하트 입술, 따뜻한 베이지 피부(warm_beige)에 발그레한 볼(blush), 20대 초반의 몽환적인 인상(dreamy)에 옅은 미소(soft_smile). 실루엣은 음유시인(bard). 도시 판타지와 얼굴 칸 다섯이 다 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 헤어스타일 long_wavy → messy_bun"
               },
               "hold": {
                 "en": "a small gilded lute strung with softly glowing strings"
@@ -10432,7 +10432,7 @@
                 "en": "a short cape edged with gilded embroidery in the shape of palm fronds, and a short skirt of layered petal-shaped panels like the little rowing boats drifting on the park lake"
               },
               "card_ko": {
-                "look": "상아빛 웨이브 · 배 곡선",
+                "look": "상아빛 헝클 똥머리 · 배 곡선",
                 "motif": "야자잎 망토 · 꽃잎 치마"
               },
               "sil": "bard"
@@ -10475,11 +10475,11 @@
                 },
                 "silhouette": {
                   "body": "petite_curvy",
-                  "hair": "finger_waves",
+                  "hair": "windswept_long",
                   "hair_color": "zinc_spangle",
                   "bangs": "side_swept"
                 },
-                "why": "호숫가 정자 시계탑의 태엽을 감고 공원의 시간을 맞추는 시계탑 태엽지기 — 방콕 스팀펑크의 증기 툭툭 기관사(둥근 얼굴 · 백랍 은빛 셰그 · 곡선 몸)와 달리 작고 수줍은 사람. 작은 몸에 가슴 · 엉덩이가 둥근 곡선(petite_curvy) · 공원이 문을 연 1920년대풍의 윤나는 턱선 핑거 웨이브(finger_waves) · 결정 무늬 광택이 도는 푸른 회색 머리(zinc_spangle — 놋쇠 톱니 곁에서 차갑게 반짝인다) · 옆으로 넘긴 앞머리(side_swept), 개암빛 눈(hazel). 갸름한 달걀형 얼굴 · 자연스러운 크기의 아몬드 눈 · 눈 위에 조금 낮게 놓인 짙은 눈썹 · 끝이 살짝 들린 코 · 자연스러운 폭의 도톰한 입술, 밝은 피부(fair)에 윤기 나는 누드 입술(gloss), 20대 초반의 수줍은 인상(shy)에 다정한 표정(gentle). 실루엣은 숙녀 발명가(lady_inventor). 도시 스팀펑크와 얼굴 칸 다섯이 다 다르다."
+                "why": "호숫가 정자 시계탑의 태엽을 감고 공원의 시간을 맞추는 시계탑 태엽지기 — 방콕 스팀펑크의 증기 툭툭 기관사(둥근 얼굴 · 백랍 은빛 셰그 · 곡선 몸)와 달리 작고 수줍은 사람. 작은 몸에 가슴 · 엉덩이가 둥근 곡선(petite_curvy) · 공원이 문을 연 1920년대풍의 윤나는 턱선 핑거 웨이브(finger_waves) · 결정 무늬 광택이 도는 푸른 회색 머리(zinc_spangle — 놋쇠 톱니 곁에서 차갑게 반짝인다) · 옆으로 넘긴 앞머리(side_swept), 개암빛 눈(hazel). 갸름한 달걀형 얼굴 · 자연스러운 크기의 아몬드 눈 · 눈 위에 조금 낮게 놓인 짙은 눈썹 · 끝이 살짝 들린 코 · 자연스러운 폭의 도톰한 입술, 밝은 피부(fair)에 윤기 나는 누드 입술(gloss), 20대 초반의 수줍은 인상(shy)에 다정한 표정(gentle). 실루엣은 숙녀 발명가(lady_inventor). 도시 스팀펑크와 얼굴 칸 다섯이 다 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 헤어스타일 finger_waves → windswept_long"
               },
               "hold": {
                 "en": "a long polished brass winding key with a little gear-shaped bow"
@@ -10489,7 +10489,7 @@
                 "en": "a short fitted jacket whose collar and cuffs are trimmed with polished brass bands curving up like the tiered eaves of the park's pavilion clock tower, and a slim brass chain belt hung with several little plain-faced pocket watches"
               },
               "card_ko": {
-                "look": "아연빛 핑거 웨이브 · 작은 곡선",
+                "look": "아연빛 바람 긴 머리 · 작은 곡선",
                 "motif": "겹처마 놋쇠 깃 · 시계 띠"
               },
               "sil": "lady_inventor"
@@ -10532,11 +10532,11 @@
                 },
                 "silhouette": {
                   "body": "curvy_athletic",
-                  "hair": "ponytail",
+                  "hair": "lob",
                   "hair_color": "uranium_green",
                   "bangs": "none"
                 },
-                "why": "새벽마다 녹지 다리와 호수 둘레 길에서 달리는 사람들을 이끄는 새벽 러닝 페이스메이커 — 방콕 사이버펑크의 긴 꼬리 배 조종사(달걀형 · 제논 은발 올백 · 단단한 굴곡 몸)와 달리 가볍게 달리는 사람. 굴곡 있는 운동 체형(curvy_athletic) · 높이 묶은 긴 포니테일(ponytail) · 우라늄 유리처럼 은은히 빛나는 초록 머리(uranium_green — 숲 공원의 빛) · 앞머리 없음(none), 옅게 푸른 빛이 도는 눈(radium_blue). 아래로 갸름해지는 둥근 얼굴 · 살짝 깊은 눈매 · 꺾인 눈썹(angled_sharp) · 콧대가 살짝 휜 코 · 입꼬리가 잘 올라가는 입, 구릿빛 갈색 피부(bronze)에 맨 얼굴(bare), 20대 중반의 당당한 인상(confident)에 결연한 표정(determined). 실루엣은 경장 외골격(exo_frame). 도시 사이버펑크와 얼굴 칸 다섯이 다 다르다."
+                "why": "새벽마다 녹지 다리와 호수 둘레 길에서 달리는 사람들을 이끄는 새벽 러닝 페이스메이커 — 방콕 사이버펑크의 긴 꼬리 배 조종사(달걀형 · 제논 은발 올백 · 단단한 굴곡 몸)와 달리 가볍게 달리는 사람. 굴곡 있는 운동 체형(curvy_athletic) · 높이 묶은 긴 포니테일(ponytail) · 우라늄 유리처럼 은은히 빛나는 초록 머리(uranium_green — 숲 공원의 빛) · 앞머리 없음(none), 옅게 푸른 빛이 도는 눈(radium_blue). 아래로 갸름해지는 둥근 얼굴 · 살짝 깊은 눈매 · 꺾인 눈썹(angled_sharp) · 콧대가 살짝 휜 코 · 입꼬리가 잘 올라가는 입, 구릿빛 갈색 피부(bronze)에 맨 얼굴(bare), 20대 중반의 당당한 인상(confident)에 결연한 표정(determined). 실루엣은 경장 외골격(exo_frame). 도시 사이버펑크와 얼굴 칸 다섯이 다 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 헤어스타일 ponytail → lob"
               },
               "hold": {
                 "en": "a slim glowing pace-light baton that pulses in rhythm with her stride"
@@ -10546,7 +10546,7 @@
                 "en": "leaf-vein lines of light running along her exo-frame like the living green bridge over the park, and a short translucent shoulder wrap where the shadows of great trees ripple slowly as if cast across the lake"
               },
               "card_ko": {
-                "look": "초록빛 포니테일 · 탄탄 곡선",
+                "look": "초록빛 어깨 단발 · 탄탄 곡선",
                 "motif": "잎맥 빛 프레임 · 나무 숄"
               },
               "sil": "exo_frame"
@@ -10715,11 +10715,11 @@
                 },
                 "silhouette": {
                   "body": "busty_slender",
-                  "hair": "asymmetric_bob",
+                  "hair": "chignon",
                   "hair_color": "potash_lilac",
                   "bangs": "choppy"
                 },
-                "why": "장터 골목 끝 좁은 노점에서 옛 옷을 빛 실로 고쳐 새로 짓는 빈티지 옷 재단사 — 방콕 사이버펑크의 긴 꼬리 배 조종사(달걀형 · 제논 은발 올백 · 단단한 굴곡 몸)와 달리 가늘고 도발적인 사람. 팔다리가 가늘면서 가슴이 풍성하고 허리가 잘록한 몸(busty_slender) · 한쪽이 긴 비대칭 단발(asymmetric_bob) · 재처럼 옅은 은색 끝이 연보랏빛 불꽃으로 번지는 머리(potash_lilac) · 툭툭 자른 앞머리(choppy), 라벤더와 파랑 사이를 오가는 눈(dichroic). 하트형 얼굴 · 눈꼬리가 살짝 올라간 아몬드 눈 · 가늘게 휜 눈썹 · 끝이 둥근 작은 코 · 큐피드 활이 또렷한 입술, 올리브빛 피부(olive)에 짙은 베리색 입술(dark_lip), 20대 초반의 도발적인 인상(provocative)에 다 안다는 듯한 얼굴(provocative). 실루엣은 겹겹 스트리트(layered_street). 도시 사이버펑크와 얼굴 칸 다섯이 다 다르다."
+                "why": "장터 골목 끝 좁은 노점에서 옛 옷을 빛 실로 고쳐 새로 짓는 빈티지 옷 재단사 — 방콕 사이버펑크의 긴 꼬리 배 조종사(달걀형 · 제논 은발 올백 · 단단한 굴곡 몸)와 달리 가늘고 도발적인 사람. 팔다리가 가늘면서 가슴이 풍성하고 허리가 잘록한 몸(busty_slender) · 한쪽이 긴 비대칭 단발(asymmetric_bob) · 재처럼 옅은 은색 끝이 연보랏빛 불꽃으로 번지는 머리(potash_lilac) · 툭툭 자른 앞머리(choppy), 라벤더와 파랑 사이를 오가는 눈(dichroic). 하트형 얼굴 · 눈꼬리가 살짝 올라간 아몬드 눈 · 가늘게 휜 눈썹 · 끝이 둥근 작은 코 · 큐피드 활이 또렷한 입술, 올리브빛 피부(olive)에 짙은 베리색 입술(dark_lip), 20대 초반의 도발적인 인상(provocative)에 다 안다는 듯한 얼굴(provocative). 실루엣은 겹겹 스트리트(layered_street). 도시 사이버펑크와 얼굴 칸 다섯이 다 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 헤어스타일 asymmetric_bob → chignon"
               },
               "hold": {
                 "en": "a slim glowing needle-wand that stitches seams of light"
@@ -10729,7 +10729,7 @@
                 "en": "a layered patchwork jacket pieced from many different vintage fabrics that glows softly like the market's canopy roofs, and a harness of light at her hips hung with antique buttons and spools of luminous thread"
               },
               "card_ko": {
-                "look": "라일락 비대칭 단발 · 슬림 곡선",
+                "look": "라일락 쪽머리 · 슬림 곡선",
                 "motif": "패치워크 재킷 · 빛 실패"
               },
               "sil": "layered_street"
@@ -10784,11 +10784,11 @@
                 },
                 "silhouette": {
                   "body": "tall_curvy",
-                  "hair": "long_straight",
+                  "hair": "triple_tails",
                   "hair_color": "platinum_white",
                   "bangs": "straight"
                 },
-                "why": "날개탑 위 문서함을 지키며 해 뜰 녘 대로에 소식을 전하는 날개 전령 — 방콕 판타지의 등불 물길지기(다이아몬드형 · 무지갯빛 은발 옆머리 · 버들 곡선)와 달리 곧고 높이 선 신비로운 사람. 키가 크고 가슴 · 엉덩이가 풍성한 곡선 몸(tall_curvy) · 허리까지 곧게 떨어지는 긴 생머리(long_straight) · 서늘한 백금빛 흰머리(platinum_white — 해 뜰 녘 흰 돌 날개의 빛) · 일자로 자른 앞머리(straight), 금빛 눈(gold). 갸름하게 긴 얼굴 · 눈꼬리가 살짝 올라간 아몬드 눈 · 꺾인 눈썹(angled_sharp) · 곧고 좁은 코 · 가늘고 자연스러운 폭의 입술, 구릿빛 갈색 피부(bronze)에 스모키 눈화장(smoky), 20대 중반의 신비로운 인상(mysterious)에 고요한 얼굴(calm). 실루엣은 하늘 기사(winged). 도시 판타지와 얼굴 칸 다섯이 다 다르다."
+                "why": "날개탑 위 문서함을 지키며 해 뜰 녘 대로에 소식을 전하는 날개 전령 — 방콕 판타지의 등불 물길지기(다이아몬드형 · 무지갯빛 은발 옆머리 · 버들 곡선)와 달리 곧고 높이 선 신비로운 사람. 키가 크고 가슴 · 엉덩이가 풍성한 곡선 몸(tall_curvy) · 허리까지 곧게 떨어지는 긴 생머리(long_straight) · 서늘한 백금빛 흰머리(platinum_white — 해 뜰 녘 흰 돌 날개의 빛) · 일자로 자른 앞머리(straight), 금빛 눈(gold). 갸름하게 긴 얼굴 · 눈꼬리가 살짝 올라간 아몬드 눈 · 꺾인 눈썹(angled_sharp) · 곧고 좁은 코 · 가늘고 자연스러운 폭의 입술, 구릿빛 갈색 피부(bronze)에 스모키 눈화장(smoky), 20대 중반의 신비로운 인상(mysterious)에 고요한 얼굴(calm). 실루엣은 하늘 기사(winged). 도시 판타지와 얼굴 칸 다섯이 다 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 헤어스타일 long_straight → triple_tails"
               },
               "hold": {
                 "en": "a small carved palm-leaf manuscript box of gilded wood, tied shut with a silk cord"
@@ -10798,7 +10798,7 @@
                 "en": "tall white metal feathered wings rising straight and high behind her shoulders like the four wings of the monument, and a belt buckle shaped like two small stacked golden bowls"
               },
               "card_ko": {
-                "look": "백금 생머리 · 큰 키 곡선",
+                "look": "백금 세 갈래 묶음 · 큰 키 곡선",
                 "motif": "곧은 흰 날개 · 금 그릇 버클"
               },
               "sil": "winged"
@@ -10841,11 +10841,11 @@
                 },
                 "silhouette": {
                   "body": "petite_voluptuous",
-                  "hair": "side_braid",
-                  "hair_color": "cobalt_blue",
+                  "hair": "long_layered",
+                  "hair_color": "jet_black",
                   "bangs": "side_swept"
                 },
-                "why": "날개탑 원형 교차로 가장자리 신호대에 서서 놋쇠 신호판으로 증기 삼륜 택시와 마차를 이끄는 교차로 신호 지휘수 — 방콕 스팀펑크의 증기 툭툭 기관사(둥근 얼굴 · 백랍 은빛 셰그 · 곡선 몸)와 달리 작고 당찬 사람. 키는 작아도 가슴 · 엉덩이가 아주 풍성한 몸(petite_voluptuous) · 한쪽 어깨로 넘긴 굵은 땋은 머리(side_braid) · 짙은 코발트 파랑 머리(cobalt_blue) · 옆으로 넘긴 앞머리(side_swept), 호박빛 눈(amber). 턱선이 부드럽게 모이는 얼굴(square_soft) · 살짝 깊은 눈매 · 가늘게 휜 눈썹 · 끝이 둥근 작은 코 · 도톰한 하트 입술, 금빛 도는 밝은 피부(golden_tan)에 날렵한 아이라인(winged_liner), 20대 초반의 당찬 인상(sassy)에 자신 있는 얼굴(confident). 실루엣은 하늘 선장 외투(officer_greatcoat). 도시 스팀펑크와 얼굴 칸 다섯이 다 다르다."
+                "why": "날개탑 원형 교차로 가장자리 신호대에 서서 놋쇠 신호판으로 증기 삼륜 택시와 마차를 이끄는 교차로 신호 지휘수 — 방콕 스팀펑크의 증기 툭툭 기관사(둥근 얼굴 · 백랍 은빛 셰그 · 곡선 몸)와 달리 작고 당찬 사람. 키는 작아도 가슴 · 엉덩이가 아주 풍성한 몸(petite_voluptuous) · 한쪽 어깨로 넘긴 굵은 땋은 머리(side_braid) · 짙은 코발트 파랑 머리(cobalt_blue) · 옆으로 넘긴 앞머리(side_swept), 호박빛 눈(amber). 턱선이 부드럽게 모이는 얼굴(square_soft) · 살짝 깊은 눈매 · 가늘게 휜 눈썹 · 끝이 둥근 작은 코 · 도톰한 하트 입술, 금빛 도는 밝은 피부(golden_tan)에 날렵한 아이라인(winged_liner), 20대 초반의 당찬 인상(sassy)에 자신 있는 얼굴(confident). 실루엣은 하늘 선장 외투(officer_greatcoat). 도시 스팀펑크와 얼굴 칸 다섯이 다 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 cobalt_blue → jet_black, 헤어스타일 side_braid → long_layered"
               },
               "hold": {
                 "en": "a pair of polished brass signal paddles with plain white enamel faces"
@@ -10855,7 +10855,7 @@
                 "en": "slim brass epaulette blades standing straight up from both shoulders of her long coat like the wings of the monument, and a little brass signal whistle shaped like the monument's round turret hanging at her waist"
               },
               "card_ko": {
-                "look": "코발트 옆 땋은 머리 · 작은 풍만",
+                "look": "칠흑 긴 층머리 · 작은 풍만",
                 "motif": "날개 견장 · 탑 호루라기"
               },
               "sil": "officer_greatcoat"
@@ -10898,11 +10898,11 @@
                 },
                 "silhouette": {
                   "body": "lean_toned",
-                  "hair": "undercut_sweep",
+                  "hair": "cloud_updo",
                   "hair_color": "nitrogen_frost",
                   "bangs": "one_eye"
                 },
-                "why": "밤마다 기념탑 받침의 낡은 돋을새김을 빛으로 되살려 살피는 기념탑 빛 복원가 — 방콕 사이버펑크의 긴 꼬리 배 조종사(달걀형 · 제논 은발 올백 · 단단한 굴곡 몸)와 달리 가늘고 아련한 사람. 허리가 가늘고 탄탄하며 가슴이 풍성한 몸(lean_toned — 아홉 사람 가운데 하나뿐인 날씬한 체형) · 한쪽을 밀고 길게 넘긴 머리(undercut_sweep) · 끝에 옅은 냉기가 서리는 서리 파랑 머리(nitrogen_frost) · 한쪽 눈을 덮는 긴 앞머리(one_eye), 옅은 시트린빛 눈(pale_citrine). 다이아몬드형 얼굴 · 눈꼬리가 부드럽게 처진 눈 · 자연스러운 숱의 곧은 눈썹 · 끝이 둥글고 자연스러운 폭의 코 · 자연스러운 폭의 도톰한 입술, 밝은 피부(fair)에 입가 점(mole_lip), 20대 중반의 아련한 인상(wistful)에 생각에 잠긴 얼굴(pensive). 실루엣은 반사 롱코트(long_raincoat). 도시 사이버펑크와 얼굴 칸 다섯이 다 다르다."
+                "why": "밤마다 기념탑 받침의 낡은 돋을새김을 빛으로 되살려 살피는 기념탑 빛 복원가 — 방콕 사이버펑크의 긴 꼬리 배 조종사(달걀형 · 제논 은발 올백 · 단단한 굴곡 몸)와 달리 가늘고 아련한 사람. 허리가 가늘고 탄탄하며 가슴이 풍성한 몸(lean_toned — 아홉 사람 가운데 하나뿐인 날씬한 체형) · 한쪽을 밀고 길게 넘긴 머리(undercut_sweep) · 끝에 옅은 냉기가 서리는 서리 파랑 머리(nitrogen_frost) · 한쪽 눈을 덮는 긴 앞머리(one_eye), 옅은 시트린빛 눈(pale_citrine). 다이아몬드형 얼굴 · 눈꼬리가 부드럽게 처진 눈 · 자연스러운 숱의 곧은 눈썹 · 끝이 둥글고 자연스러운 폭의 코 · 자연스러운 폭의 도톰한 입술, 밝은 피부(fair)에 입가 점(mole_lip), 20대 중반의 아련한 인상(wistful)에 생각에 잠긴 얼굴(pensive). 실루엣은 반사 롱코트(long_raincoat). 도시 사이버펑크와 얼굴 칸 다섯이 다 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 헤어스타일 undercut_sweep → cloud_updo"
               },
               "hold": {
                 "en": "a slim chrome light-stylus that casts a fine beam of restoring light"
@@ -10912,7 +10912,7 @@
                 "en": "a high collar ringed by two stacked bands of soft gold light like the golden bowls atop the monument, and a fine lattice of light across her long coat that traces the patterns of old relief carvings"
               },
               "card_ko": {
-                "look": "서리빛 언더컷 · 날씬 탄탄",
+                "look": "서리빛 구름 올림머리 · 날씬 탄탄",
                 "motif": "금빛 고리 깃 · 돋을새김 빛"
               },
               "sil": "long_raincoat"
@@ -11252,11 +11252,11 @@
                 },
                 "silhouette": {
                   "body": "petite_curvy",
-                  "hair": "updo_bun",
-                  "hair_color": "cedar",
+                  "hair": "lob",
+                  "hair_color": "strawberry_blonde",
                   "bangs": "parted"
                 },
-                "why": "음악당 무대 위 놋쇠 파이프 오르간 속에 들어가 바람통과 밸브를 고르는 오르간 조율사 — 파이프 뒤에 숨어 소리만 내보내는 수수께끼 같은 사람. 작고 굴곡 있는 몸(petite_curvy) · 단정히 틀어 올린 올림머리(updo_bun) · 삼나무빛 갈색 머리(cedar) · 가운데 가르마, 눈은 개암빛(hazel). 하트형 얼굴 · 자연스러운 크기의 아몬드 눈 · 가늘게 휜 눈썹 · 부드러운 매부리 코 · 가늘고 긴 입술, 입가의 점(mole_lip), 올리브빛 피부, 20대 중반, 신비로운 인상(mysterious)에 집중한 표정(focused). 바르셀로나 스팀펑크(다이아몬드형 · 무쇠빛 풍성한 머리 · 모래시계 · 따뜻한 베이지)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다."
+                "why": "음악당 무대 위 놋쇠 파이프 오르간 속에 들어가 바람통과 밸브를 고르는 오르간 조율사 — 파이프 뒤에 숨어 소리만 내보내는 수수께끼 같은 사람. 작고 굴곡 있는 몸(petite_curvy) · 단정히 틀어 올린 올림머리(updo_bun) · 삼나무빛 갈색 머리(cedar) · 가운데 가르마, 눈은 개암빛(hazel). 하트형 얼굴 · 자연스러운 크기의 아몬드 눈 · 가늘게 휜 눈썹 · 부드러운 매부리 코 · 가늘고 긴 입술, 입가의 점(mole_lip), 올리브빛 피부, 20대 중반, 신비로운 인상(mysterious)에 집중한 표정(focused). 바르셀로나 스팀펑크(다이아몬드형 · 무쇠빛 풍성한 머리 · 모래시계 · 따뜻한 베이지)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 cedar → strawberry_blonde, 헤어스타일 updo_bun → lob"
               },
               "hold": {
                 "en": "a long brass tuning key with a tiny pressure gauge set in its handle"
@@ -11266,7 +11266,7 @@
                 "en": "a fitted bodice ribbed with slim polished brass tubes of graded lengths like organ pipes, a waist chain of clear yellow glass beads like the staircase balusters, and earrings of glazed ceramic stars"
               },
               "card_ko": {
-                "look": "삼나무빛 올림머리 · 작은 굴곡",
+                "look": "딸기 금발 어깨 단발 · 작은 굴곡",
                 "motif": "오르간 관 몸판 · 노란 유리"
               },
               "sil": "lady_inventor"
@@ -11309,11 +11309,11 @@
                 },
                 "silhouette": {
                   "body": "willowy_curvy",
-                  "hair": "asymmetric_bob",
+                  "hair": "messy_bun",
                   "hair_color": "ice_white",
                   "bangs": "straight"
                 },
-                "why": "두 세기 뒤 옛 음악당에서 노래를 빛으로 바꿔 탑까지 보내는 소리 · 빛 지휘자 — 차갑고 곧은 사람. 팔다리가 길고 부드러운 곡선(willowy_curvy) · 한쪽이 긴 비대칭 단발(asymmetric_bob) · 끝이 옅은 하늘빛인 서리 흰 머리(ice_white — 천장의 푸른 하늘) · 곧은 앞머리, 눈은 얼음빛 푸른(ice_blue). 갸름하게 긴 얼굴 · 부드럽게 깊은 눈 · 자연스러운 숱의 곧은 눈썹 · 콧대가 곧고 가는 코 · 가늘고 긴 입술, 도자기빛 피부(porcelain)에 스모키 눈화장(smoky), 20대 중반, 차가운 인상(icy)에 진지한 얼굴(serious). 바르셀로나 사이버펑크(하트형 · 은빛 옆 땋은 머리 · 근육 곡선 · 금빛 도는 밝은 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다."
+                "why": "두 세기 뒤 옛 음악당에서 노래를 빛으로 바꿔 탑까지 보내는 소리 · 빛 지휘자 — 차갑고 곧은 사람. 팔다리가 길고 부드러운 곡선(willowy_curvy) · 한쪽이 긴 비대칭 단발(asymmetric_bob) · 끝이 옅은 하늘빛인 서리 흰 머리(ice_white — 천장의 푸른 하늘) · 곧은 앞머리, 눈은 얼음빛 푸른(ice_blue). 갸름하게 긴 얼굴 · 부드럽게 깊은 눈 · 자연스러운 숱의 곧은 눈썹 · 콧대가 곧고 가는 코 · 가늘고 긴 입술, 도자기빛 피부(porcelain)에 스모키 눈화장(smoky), 20대 중반, 차가운 인상(icy)에 진지한 얼굴(serious). 바르셀로나 사이버펑크(하트형 · 은빛 옆 땋은 머리 · 근육 곡선 · 금빛 도는 밝은 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 헤어스타일 asymmetric_bob → messy_bun"
               },
               "hold": {
                 "en": "a slender conductor's baton of clear glass with a thread of light running through it"
@@ -11323,7 +11323,7 @@
                 "en": "a tailcoat-cut jacket of smart fabric where gold slowly fades into sky blue like the hall's skylight, its shoulders inlaid with tiny floral glazed tiles, and a fine arc of light curving behind one ear like a sound wave"
               },
               "card_ko": {
-                "look": "서리빛 비대칭 단발 · 버들",
+                "look": "서리빛 헝클 똥머리 · 버들",
                 "motif": "하늘빛 연미 · 꽃 타일 어깨"
               },
               "sil": "corporate_sleek"
@@ -11435,11 +11435,11 @@
                 },
                 "silhouette": {
                   "body": "petite_voluptuous",
-                  "hair": "braids",
-                  "hair_color": "bronze",
+                  "hair": "horn_locks",
+                  "hair_color": "platinum_blonde",
                   "bangs": "curtain"
                 },
-                "why": "큰 시장 좌판에서 놋쇠 저울로 사프란 한 올까지 다는 향신료 상인 겸 저울지기 — 애교 있고 셈이 빠른 사람. 키는 작지만 가슴 · 엉덩이가 풍만한 몸(petite_voluptuous) · 길게 땋아 내린 두 갈래 머리(braids) · 따뜻한 청동빛 머리(bronze) · 커튼 앞머리, 눈은 호박색(amber — 사프란빛). 턱선이 부드럽게 둥글어지는 얼굴 · 눈꼬리가 처진 부드러운 눈 · 부드러운 둥근 눈썹 · 끝이 둥근 코 · 도톰한 하트 입술에 윤기(gloss), 따뜻한 베이지 피부, 20대 초반, 애교 있는 인상(coquettish)에 다문 입의 즐거운 얼굴(amused). 바르셀로나 스팀펑크(다이아몬드형 · 무쇠빛 풍성한 머리 · 모래시계) · 음악당 스팀펑크(하트형 · 삼나무빛 올림머리 · 작은 굴곡)와 얼굴 칸 다섯 · 머리 · 체형이 다 다르다."
+                "why": "큰 시장 좌판에서 놋쇠 저울로 사프란 한 올까지 다는 향신료 상인 겸 저울지기 — 애교 있고 셈이 빠른 사람. 키는 작지만 가슴 · 엉덩이가 풍만한 몸(petite_voluptuous) · 길게 땋아 내린 두 갈래 머리(braids) · 따뜻한 청동빛 머리(bronze) · 커튼 앞머리, 눈은 호박색(amber — 사프란빛). 턱선이 부드럽게 둥글어지는 얼굴 · 눈꼬리가 처진 부드러운 눈 · 부드러운 둥근 눈썹 · 끝이 둥근 코 · 도톰한 하트 입술에 윤기(gloss), 따뜻한 베이지 피부, 20대 초반, 애교 있는 인상(coquettish)에 다문 입의 즐거운 얼굴(amused). 바르셀로나 스팀펑크(다이아몬드형 · 무쇠빛 풍성한 머리 · 모래시계) · 음악당 스팀펑크(하트형 · 삼나무빛 올림머리 · 작은 굴곡)와 얼굴 칸 다섯 · 머리 · 체형이 다 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 bronze → platinum_blonde, 헤어스타일 braids → horn_locks"
               },
               "hold": {
                 "en": "a small brass balance scale with a pan of saffron threads"
@@ -11449,7 +11449,7 @@
                 "en": "a layered linen skirt striped saffron-gold and paprika-red under a short apron with polished brass buttons, a belt of little stoppered glass spice jars, and a wide-brimmed hat trimmed with dried chilli peppers and bay leaves"
               },
               "card_ko": {
-                "look": "청동빛 땋은 머리 · 작은 풍만",
+                "look": "백금발 뿔 머리 · 작은 풍만",
                 "motif": "향신료 줄무늬 · 유리병 띠"
               },
               "sil": "botanist"
@@ -11492,11 +11492,11 @@
                 },
                 "silhouette": {
                   "body": "busty_slender",
-                  "hair": "twin_tails",
+                  "hair": "drill_curls",
                   "hair_color": "sunset_pink",
                   "bangs": "straight"
                 },
-                "why": "두 세기 뒤 큰 시장에서 갓 딴 과일 · 생선을 정원 탑 집마다 하늘 길로 나르는 시장 하늘 배달꾼 — 장난기 많고 날랜 사람. 팔다리는 가늘고 가슴이 풍만한 몸(busty_slender) · 양쪽으로 높이 묶은 트윈테일(twin_tails — 날 때 바람에 날림) · 노을빛 분홍 머리(sunset_pink) · 곧은 앞머리, 눈은 장밋빛(rose). 달걀형 얼굴 · 둥근 아몬드 눈 · 부드러운 둥근 눈썹 · 끝이 살짝 들린 코 · 큐피드 활이 또렷한 입술, 흰 피부(fair)에 눈 밑 점(mole_eye), 20대 초반, 장난스러운 인상(mischievous)에 작은 능청 미소(mischievous). 바르셀로나 사이버펑크(하트형 · 은빛 옆 땋은 머리 · 근육 곡선) · 음악당 사이버펑크(긴 얼굴 · 서리빛 비대칭 단발 · 버들)와 얼굴 칸 다섯 · 머리 · 체형이 다 다르다."
+                "why": "두 세기 뒤 큰 시장에서 갓 딴 과일 · 생선을 정원 탑 집마다 하늘 길로 나르는 시장 하늘 배달꾼 — 장난기 많고 날랜 사람. 팔다리는 가늘고 가슴이 풍만한 몸(busty_slender) · 양쪽으로 높이 묶은 트윈테일(twin_tails — 날 때 바람에 날림) · 노을빛 분홍 머리(sunset_pink) · 곧은 앞머리, 눈은 장밋빛(rose). 달걀형 얼굴 · 둥근 아몬드 눈 · 부드러운 둥근 눈썹 · 끝이 살짝 들린 코 · 큐피드 활이 또렷한 입술, 흰 피부(fair)에 눈 밑 점(mole_eye), 20대 초반, 장난스러운 인상(mischievous)에 작은 능청 미소(mischievous). 바르셀로나 사이버펑크(하트형 · 은빛 옆 땋은 머리 · 근육 곡선) · 음악당 사이버펑크(긴 얼굴 · 서리빛 비대칭 단발 · 버들)와 얼굴 칸 다섯 · 머리 · 체형이 다 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 헤어스타일 twin_tails → drill_curls"
               },
               "hold": {
                 "en": "a translucent cooler case of glowing fruit, balanced on her hip"
@@ -11506,7 +11506,7 @@
                 "en": "a utility vest whose many pockets each glow a different fruit-stall colour — orange, lime and pomegranate red — a cargo harness across her body, and earrings of glowing red beads like pomegranate seeds"
               },
               "card_ko": {
-                "look": "노을분홍 트윈테일 · 가는 몸",
+                "look": "노을분홍 드릴 컬 · 가는 몸",
                 "motif": "과일빛 조끼 · 석류 귀걸이"
               },
               "sil": "sky_courier"
@@ -11561,11 +11561,11 @@
                 },
                 "silhouette": {
                   "body": "curvy_athletic",
-                  "hair": "ponytail",
-                  "hair_color": "terracotta",
+                  "hair": "messy_bun",
+                  "hair_color": "chestnut",
                   "bangs": "side_swept"
                 },
-                "why": "붉은 벽돌 큰 문에서 온 나라의 사절을 맞아 월계관을 건네는 왕도의 전령 — 당당하고 반듯한 사람. 탄탄하면서 가슴 · 엉덩이가 둥근 몸(curvy_athletic) · 높이 묶은 긴 포니테일(ponytail) · 문의 벽돌을 닮은 유약 테라코타빛 갈색 머리(terracotta) · 옆으로 넘긴 앞머리, 눈은 강철빛 푸른(steel_blue). 광대가 부드럽게 선 다이아몬드형 얼굴 · 부드럽게 깊은 눈 · 또렷하게 각진 눈썹 · 콧대가 곧고 가는 코 · 가늘고 긴 입술, 올리브빛 피부에 맨 얼굴(bare), 20대 중반, 자신 있는 인상(confident)에 다문 입의 자부심 어린 얼굴(proud). 바르셀로나 판타지(긴 달걀형 · 물빛 반묶음 · 버들 곡선) · 음악당 판타지(달걀형 · 와인빛 인어 웨이브 · 풍만) · 보케리아 판타지(둥근 얼굴 · 주황 나선 컬 · 서양배 곡선)와 얼굴 칸 다섯 · 머리 · 체형이 다 다르다."
+                "why": "붉은 벽돌 큰 문에서 온 나라의 사절을 맞아 월계관을 건네는 왕도의 전령 — 당당하고 반듯한 사람. 탄탄하면서 가슴 · 엉덩이가 둥근 몸(curvy_athletic) · 높이 묶은 긴 포니테일(ponytail) · 문의 벽돌을 닮은 유약 테라코타빛 갈색 머리(terracotta) · 옆으로 넘긴 앞머리, 눈은 강철빛 푸른(steel_blue). 광대가 부드럽게 선 다이아몬드형 얼굴 · 부드럽게 깊은 눈 · 또렷하게 각진 눈썹 · 콧대가 곧고 가는 코 · 가늘고 긴 입술, 올리브빛 피부에 맨 얼굴(bare), 20대 중반, 자신 있는 인상(confident)에 다문 입의 자부심 어린 얼굴(proud). 바르셀로나 판타지(긴 달걀형 · 물빛 반묶음 · 버들 곡선) · 음악당 판타지(달걀형 · 와인빛 인어 웨이브 · 풍만) · 보케리아 판타지(둥근 얼굴 · 주황 나선 컬 · 서양배 곡선)와 얼굴 칸 다섯 · 머리 · 체형이 다 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 terracotta → chestnut, 헤어스타일 ponytail → messy_bun"
               },
               "hold": {
                 "en": "a laurel wreath of gold leaves, ready to crown an arriving guest"
@@ -11575,7 +11575,7 @@
                 "en": "a long coat of brick-red velvet woven with interlaced Moorish-revival arches in red and gold thread like the gate's brickwork, a collar wreathed in pale gold laurel leaves, and a sash hung with a row of small enamel shields"
               },
               "card_ko": {
-                "look": "테라코타 포니테일 · 탄탄",
+                "look": "밤색 헝클 똥머리 · 탄탄",
                 "motif": "벽돌 아치 코트 · 월계 깃"
               },
               "sil": "noble_coat"
@@ -11619,10 +11619,10 @@
                 "silhouette": {
                   "body": "curvy",
                   "hair": "finger_waves",
-                  "hair_color": "golden_blonde",
+                  "hair_color": "dark_auburn",
                   "bangs": "none"
                 },
-                "why": "박람회 정문을 지나온 출품자들에게 놋쇠 메달과 월계관을 건네는 시상 진행자 — 무대 위에서 시선을 끄는 관능적인 사람. 굴곡 있는 몸(curvy) · 턱선까지 윤기 나게 물결친 핑거 웨이브(finger_waves) · 금발(golden_blonde) · 앞머리 없음, 눈은 폭풍빛 회색(storm_grey). 갸름하게 긴 얼굴 · 눈꼬리가 살짝 올라간 아몬드 눈 · 눈 위에 조금 낮게 놓인 짙은 눈썹 · 끝이 살짝 들린 코 · 도톰하고 자연스러운 폭의 입술에 짙은 입술 색(dark_lip), 도자기빛 피부, 20대 중반, 관능적인 인상(seductive)에 나른한 눈매(sensual). 바르셀로나 스팀펑크(다이아몬드형 · 무쇠빛 풍성한 머리 · 모래시계) · 음악당(하트형 · 삼나무빛 올림머리) · 보케리아(부드러운 각진 얼굴 · 청동빛 땋은 머리) 스팀펑크와 얼굴 칸 다섯 · 머리 · 체형이 다 다르다."
+                "why": "박람회 정문을 지나온 출품자들에게 놋쇠 메달과 월계관을 건네는 시상 진행자 — 무대 위에서 시선을 끄는 관능적인 사람. 굴곡 있는 몸(curvy) · 턱선까지 윤기 나게 물결친 핑거 웨이브(finger_waves) · 금발(golden_blonde) · 앞머리 없음, 눈은 폭풍빛 회색(storm_grey). 갸름하게 긴 얼굴 · 눈꼬리가 살짝 올라간 아몬드 눈 · 눈 위에 조금 낮게 놓인 짙은 눈썹 · 끝이 살짝 들린 코 · 도톰하고 자연스러운 폭의 입술에 짙은 입술 색(dark_lip), 도자기빛 피부, 20대 중반, 관능적인 인상(seductive)에 나른한 눈매(sensual). 바르셀로나 스팀펑크(다이아몬드형 · 무쇠빛 풍성한 머리 · 모래시계) · 음악당(하트형 · 삼나무빛 올림머리) · 보케리아(부드러운 각진 얼굴 · 청동빛 땋은 머리) 스팀펑크와 얼굴 칸 다섯 · 머리 · 체형이 다 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 golden_blonde → dark_auburn"
               },
               "hold": {
                 "en": "a polished brass medal on a silk ribbon, resting in her open palm"
@@ -11632,7 +11632,7 @@
                 "en": "a tailcoat of brick-red silk embroidered with interlaced Moorish-revival arches in gold thread, a collar of fine brass laurel leaves, and a little silk top hat ringed with tiny enamel shields"
               },
               "card_ko": {
-                "look": "금발 핑거 웨이브 · 굴곡",
+                "look": "짙은 적갈 핑거 웨이브 · 굴곡",
                 "motif": "아치 자수 연미복 · 월계 깃"
               },
               "sil": "top_hat_coat"
@@ -12039,10 +12039,10 @@
                 "silhouette": {
                   "body": "pear_curvy",
                   "hair": "finger_waves",
-                  "hair_color": "crimson",
+                  "hair_color": "honey_brown",
                   "bangs": "side_swept"
                 },
-                "why": "부두의 사암 보세 창고(지금도 여럿이 문화재로 남았다)를 가스등 동화로 옮긴, 차 · 양모 · 향신료를 맛보고 값을 매기는 보세 창고의 감정사 — 속을 알 수 없고 위험할 만큼 침착한 사람. 어깨가 좁고 엉덩이 · 허벅지가 넉넉한 서양배 굴곡 몸(pear_curvy) · 반들거리는 턱 길이 핑거 웨이브(finger_waves) · 진홍 머리(crimson) · 옆으로 넘긴 앞머리. 부드럽게 각진 얼굴 · 눈꼬리가 순하게 처진 눈 · 가늘게 휜 눈썹 · 끝이 살짝 들린 코 · 큐피드 활이 또렷한 입술, 폭풍 잿빛 눈(storm_grey), 도자기 피부(porcelain)에 짙은 입술(dark_lip), 20대 중반, 팜 파탈 인상(femme_fatale)에 차가운 미소(cold_smile — 입은 다문다). 시드니 스팀펑크 리벳 장인(하트형 · 강철빛 땋은 머리 · 근육 곡선 · 흰 피부에 주근깨)과 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르고, 이 도시 다른 랜드마크 스팀펑크 사람과도 얼굴 칸 다섯이 다르다."
+                "why": "부두의 사암 보세 창고(지금도 여럿이 문화재로 남았다)를 가스등 동화로 옮긴, 차 · 양모 · 향신료를 맛보고 값을 매기는 보세 창고의 감정사 — 속을 알 수 없고 위험할 만큼 침착한 사람. 어깨가 좁고 엉덩이 · 허벅지가 넉넉한 서양배 굴곡 몸(pear_curvy) · 반들거리는 턱 길이 핑거 웨이브(finger_waves) · 진홍 머리(crimson) · 옆으로 넘긴 앞머리. 부드럽게 각진 얼굴 · 눈꼬리가 순하게 처진 눈 · 가늘게 휜 눈썹 · 끝이 살짝 들린 코 · 큐피드 활이 또렷한 입술, 폭풍 잿빛 눈(storm_grey), 도자기 피부(porcelain)에 짙은 입술(dark_lip), 20대 중반, 팜 파탈 인상(femme_fatale)에 차가운 미소(cold_smile — 입은 다문다). 시드니 스팀펑크 리벳 장인(하트형 · 강철빛 땋은 머리 · 근육 곡선 · 흰 피부에 주근깨)과 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르고, 이 도시 다른 랜드마크 스팀펑크 사람과도 얼굴 칸 다섯이 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 crimson → honey_brown"
               },
               "hold": {
                 "en": "a small porcelain tea-tasting bowl with a polished brass rim"
@@ -12061,7 +12061,7 @@
                 "why": "스팀펑크만 따로 — 부모 도시 palette(항구 파랑 · 돛 흰빛 · 자카란다 보라)는 오페라 하우스 · 자카란다 말이라, 보세 창고엔 사암 · 놋쇠 · 찻잎 갈색에 가스등 호박빛."
               },
               "card_ko": {
-                "look": "진홍 핑거 웨이브 · 서양배",
+                "look": "꿀갈색 핑거 웨이브 · 서양배",
                 "motif": "창고 열쇠 · 찻잎 조끼"
               },
               "sil": "top_hat_coat"
@@ -12230,11 +12230,11 @@
                 },
                 "silhouette": {
                   "body": "petite_curvy",
-                  "hair": "low_ponytail",
-                  "hair_color": "cedar",
+                  "hair": "ribbon_low_tail",
+                  "hair_color": "blue_black",
                   "bangs": "choppy"
                 },
-                "why": "식물원 자리에 섰던 피라미드 유리 온실(1970~71, 지금은 그 자리에 2016년 열대 온실)과 백이십만 장이 넘는 식물 표본을 가진 표본관을 가스등 동화로 옮긴, 유리 온실과 표본관을 오가는 식물학자 — 장난기 어린 눈의 호기심 많은 사람. 작고 굴곡 있는 몸(petite_curvy) · 목덜미에 낮게 묶은 머리(low_ponytail) · 삼나무 갈색 머리(cedar) · 들쭉날쭉한 앞머리(choppy). 광대가 은은한 마름모 얼굴 · 자연스러운 아몬드 눈 · 조금 낮게 놓인 짙은 눈썹 · 끝이 둥근 자연스러운 폭의 코 · 도톰하고 자연스러운 폭의 입술, 개암빛 눈(hazel), 올리브 피부(olive)에 눈 밑 점(mole_eye), 20대 중반, 여우처럼 장난스러운 인상(mischievous)에 호기심 어린 표정(curious). 시드니 스팀펑크 리벳 장인과 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르고, 이 도시 다른 랜드마크 스팀펑크 사람과도 얼굴 칸 다섯이 다르다."
+                "why": "식물원 자리에 섰던 피라미드 유리 온실(1970~71, 지금은 그 자리에 2016년 열대 온실)과 백이십만 장이 넘는 식물 표본을 가진 표본관을 가스등 동화로 옮긴, 유리 온실과 표본관을 오가는 식물학자 — 장난기 어린 눈의 호기심 많은 사람. 작고 굴곡 있는 몸(petite_curvy) · 목덜미에 낮게 묶은 머리(low_ponytail) · 삼나무 갈색 머리(cedar) · 들쭉날쭉한 앞머리(choppy). 광대가 은은한 마름모 얼굴 · 자연스러운 아몬드 눈 · 조금 낮게 놓인 짙은 눈썹 · 끝이 둥근 자연스러운 폭의 코 · 도톰하고 자연스러운 폭의 입술, 개암빛 눈(hazel), 올리브 피부(olive)에 눈 밑 점(mole_eye), 20대 중반, 여우처럼 장난스러운 인상(mischievous)에 호기심 어린 표정(curious). 시드니 스팀펑크 리벳 장인과 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르고, 이 도시 다른 랜드마크 스팀펑크 사람과도 얼굴 칸 다섯이 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 cedar → blue_black, 헤어스타일 low_ponytail → ribbon_low_tail"
               },
               "hold": {
                 "en": "a brass-framed botanist's magnifying lens on a fine chain"
@@ -12244,7 +12244,7 @@
                 "en": "a linen field jacket over a corset embroidered with pressed-fern patterns, a belt of small glass specimen jars holding pressed leaves and seeds, and a wide-brimmed hat circled with a band of tiny brass-framed glass panes like the pyramid glasshouse"
               },
               "card_ko": {
-                "look": "삼나무빛 낮은 묶음",
+                "look": "푸른 흑발 리본 낮은 묶음",
                 "motif": "유리판 모자 · 표본병 띠"
               },
               "sil": "botanist"
@@ -12287,11 +12287,11 @@
                 },
                 "silhouette": {
                   "body": "voluptuous",
-                  "hair": "hime_cut",
+                  "hair": "side_ponytail",
                   "hair_color": "chlorine_green",
                   "bangs": "straight"
                 },
-                "why": "오스트레일리아에서 가장 오래된 과학 기관인 식물원을 두 세기 뒤로 옮긴, 정원 아래 살아 있는 종자 보관소와 생체 빛 숲을 돌보는 생명 정원의 관리자 — 느리고 관능적인 사람. 가슴 · 엉덩이 · 허벅지가 넉넉한 풍만한 몸(voluptuous) · 뺨 길이 옆머리를 일자로 자른 히메 컷(hime_cut) · 안개처럼 비치는 연한 연둣빛 머리(chlorine_green) · 일자 앞머리(straight). 부드럽게 각진 얼굴 · 깊은 눈매 · 가늘게 휜 눈썹 · 끝이 살짝 들린 코 · 가늘고 자연스러운 폭의 입술, 옅은 보랏빛 눈(violet), 짙은 갈색 피부(deep_brown)에 윤기 나는 입술(gloss), 20대 중반, 관능적인 인상(seductive)에 나른하게 유혹하는 표정(sensual). 시드니 사이버펑크 구조대장과 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르고, 이 도시 다른 랜드마크 사이버펑크 사람과도 얼굴 칸 다섯이 다르다."
+                "why": "오스트레일리아에서 가장 오래된 과학 기관인 식물원을 두 세기 뒤로 옮긴, 정원 아래 살아 있는 종자 보관소와 생체 빛 숲을 돌보는 생명 정원의 관리자 — 느리고 관능적인 사람. 가슴 · 엉덩이 · 허벅지가 넉넉한 풍만한 몸(voluptuous) · 뺨 길이 옆머리를 일자로 자른 히메 컷(hime_cut) · 안개처럼 비치는 연한 연둣빛 머리(chlorine_green) · 일자 앞머리(straight). 부드럽게 각진 얼굴 · 깊은 눈매 · 가늘게 휜 눈썹 · 끝이 살짝 들린 코 · 가늘고 자연스러운 폭의 입술, 옅은 보랏빛 눈(violet), 짙은 갈색 피부(deep_brown)에 윤기 나는 입술(gloss), 20대 중반, 관능적인 인상(seductive)에 나른하게 유혹하는 표정(sensual). 시드니 사이버펑크 구조대장과 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르고, 이 도시 다른 랜드마크 사이버펑크 사람과도 얼굴 칸 다섯이 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 헤어스타일 hime_cut → side_ponytail"
               },
               "hold": {
                 "en": "a clear capsule holding a single glowing seed"
@@ -12301,7 +12301,7 @@
                 "en": "a flowing gown of living bio-fabric veined like a palm frond, glowing soft green along every vein, with a high collar of luminous petal-shaped glass panes like the garden's dome"
               },
               "card_ko": {
-                "look": "연둣빛 히메 컷 · 풍만",
+                "look": "연둣빛 옆 묶음 · 풍만",
                 "motif": "잎맥 생체 드레스 · 꽃잎 깃"
               },
               "sil": "biolume_dress"
@@ -12356,11 +12356,11 @@
                 },
                 "silhouette": {
                   "body": "busty_slender",
-                  "hair": "ponytail",
+                  "hair": "topknot_tails",
                   "hair_color": "salt_white",
                   "bangs": "parted"
                 },
-                "why": "항구 한가운데 바위섬에 1857년 세운 사암 요새와 오스트레일리아에 하나뿐인 마텔로 탑(꼭대기엔 1913년부터 등대)을 하이판타지로 옮긴, 홀로 섬 탑의 등불을 지키는 파수 여기사 — 차갑고 꼿꼿한 사람. 팔다리가 가늘면서 가슴이 도드라진 몸(busty_slender) · 높이 묶은 긴 포니테일(ponytail — 바닷바람에 날린다) · 바다 소금 같은 흰 머리(salt_white) · 가운데 가른 앞머리(parted). 갸름하게 긴 얼굴 · 눈꼬리가 살짝 올라간 아몬드 눈 · 각이 진 눈썹 · 부드러운 매부리코 · 가늘고 자연스러운 폭의 입술, 얼음빛 푸른 눈(ice_blue), 따뜻한 베이지 피부(warm_beige)에 날개 아이라인(winged_liner), 20대 중반, 차가운 인상(icy)에 진지한 표정(serious). 시드니 판타지 가희와 얼굴 칸 다섯 · 머리 · 체형이 다르고(피부는 같은 warm_beige), 이 도시 다른 랜드마크 판타지 사람과도 얼굴 칸 다섯이 다르다."
+                "why": "항구 한가운데 바위섬에 1857년 세운 사암 요새와 오스트레일리아에 하나뿐인 마텔로 탑(꼭대기엔 1913년부터 등대)을 하이판타지로 옮긴, 홀로 섬 탑의 등불을 지키는 파수 여기사 — 차갑고 꼿꼿한 사람. 팔다리가 가늘면서 가슴이 도드라진 몸(busty_slender) · 높이 묶은 긴 포니테일(ponytail — 바닷바람에 날린다) · 바다 소금 같은 흰 머리(salt_white) · 가운데 가른 앞머리(parted). 갸름하게 긴 얼굴 · 눈꼬리가 살짝 올라간 아몬드 눈 · 각이 진 눈썹 · 부드러운 매부리코 · 가늘고 자연스러운 폭의 입술, 얼음빛 푸른 눈(ice_blue), 따뜻한 베이지 피부(warm_beige)에 날개 아이라인(winged_liner), 20대 중반, 차가운 인상(icy)에 진지한 표정(serious). 시드니 판타지 가희와 얼굴 칸 다섯 · 머리 · 체형이 다르고(피부는 같은 warm_beige), 이 도시 다른 랜드마크 판타지 사람과도 얼굴 칸 다섯이 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 헤어스타일 ponytail → topknot_tails"
               },
               "hold": {
                 "en": "a tall spear whose head holds a small burning lantern-flame"
@@ -12379,7 +12379,7 @@
                 "why": "판타지만 따로 — 부모 도시 palette(항구 파랑 · 돛 흰빛 · 자카란다 보라)는 오페라 하우스 · 자카란다 말이라, 섬 요새엔 사암 금빛 · 저녁 항구의 짙은 파랑 · 탑 등불의 호박빛."
               },
               "card_ko": {
-                "look": "소금빛 높은 포니테일",
+                "look": "소금빛 상투 꼬리머리",
                 "motif": "둥근 탑 흉갑 · 물때 금실"
               },
               "sil": "gown_armor"
@@ -12422,11 +12422,11 @@
                 },
                 "silhouette": {
                   "body": "curvy",
-                  "hair": "flipped_shoulder",
-                  "hair_color": "flame_orange",
+                  "hair": "braided_crown",
+                  "hair_color": "strawberry_blonde",
                   "bangs": "side_swept"
                 },
-                "why": "1906년부터 배들이 크로노미터를 맞추도록 날마다 오후 1시에 쏘는 시보포(2차 대전 때 멈췄다가 1986년 다시)와 1857년부터 잰 조수 기록을 가스등 동화로 옮긴, 섬 요새의 시보포 포수이자 물때 기록관 — 자부심 높고 콧대 센 사람. 굴곡 있는 몸(curvy) · 어깨 길이에서 끝이 바깥으로 뻗친 머리(flipped_shoulder) · 불꽃빛 주황 머리(flame_orange — 포의 불) · 옆으로 넘긴 앞머리. 둥근 얼굴 · 깊은 눈매 · 부드러운 둥근 눈썹 · 끝이 둥근 작은 코 · 도톰한 하트 입술, 남빛 눈(navy — 항구 물빛), 햇볕에 그을린 금빛 피부(golden_tan)에 스모키 눈화장(smoky), 20대 초반, 도도한 인상(haughty)에 자랑스러운 표정(proud). 시드니 스팀펑크 리벳 장인과 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르고, 이 도시 다른 랜드마크 스팀펑크 사람과도 얼굴 칸 다섯이 다르다."
+                "why": "1906년부터 배들이 크로노미터를 맞추도록 날마다 오후 1시에 쏘는 시보포(2차 대전 때 멈췄다가 1986년 다시)와 1857년부터 잰 조수 기록을 가스등 동화로 옮긴, 섬 요새의 시보포 포수이자 물때 기록관 — 자부심 높고 콧대 센 사람. 굴곡 있는 몸(curvy) · 어깨 길이에서 끝이 바깥으로 뻗친 머리(flipped_shoulder) · 불꽃빛 주황 머리(flame_orange — 포의 불) · 옆으로 넘긴 앞머리. 둥근 얼굴 · 깊은 눈매 · 부드러운 둥근 눈썹 · 끝이 둥근 작은 코 · 도톰한 하트 입술, 남빛 눈(navy — 항구 물빛), 햇볕에 그을린 금빛 피부(golden_tan)에 스모키 눈화장(smoky), 20대 초반, 도도한 인상(haughty)에 자랑스러운 표정(proud). 시드니 스팀펑크 리벳 장인과 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르고, 이 도시 다른 랜드마크 스팀펑크 사람과도 얼굴 칸 다섯이 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 flame_orange → strawberry_blonde, 헤어스타일 flipped_shoulder → braided_crown"
               },
               "hold": {
                 "en": "a coiled firing lanyard ending in a polished brass toggle"
@@ -12436,7 +12436,7 @@
                 "en": "a short harbour-blue frock coat with brass buttons, its high collar banded in honey-sandstone stripes like the stone courses of the round tower, and a brass gunner's gorget engraved with rippling tide lines"
               },
               "card_ko": {
-                "look": "불꽃빛 바깥 뻗침 머리",
+                "look": "딸기 금발 왕관 땋은 머리",
                 "motif": "사암 줄 깃 · 물때 목가리개"
               },
               "sil": "naval_officer"
@@ -12791,11 +12791,11 @@
                 },
                 "silhouette": {
                   "body": "willowy_curvy",
-                  "hair": "half_up",
-                  "hair_color": "violet",
+                  "hair": "topknot_tails",
+                  "hair_color": "dark_auburn",
                   "bangs": "curtain"
                 },
-                "why": "성 지붕의 공중 정원(옥상 정원은 실제로 성에 있다)을 가꾸는 정원 마법사 — 꽃과 빛 속에서 생각에 잠기는 부드러운 사람. 팔다리가 길고 가슴 · 엉덩이가 부드럽게 둥근 몸(willowy_curvy) · 긴 머리를 반만 묶어 올린 반묶음(half_up) · 꽃 덩굴빛 보랏빛 머리(violet) · 가르마 커튼 앞머리(curtain) · 이끼와 잎을 겹친 긴 망토의 숲 드루이드형(elven_leaf — 망토는 색유리 칸 무늬 위로 꽃 덩굴이 뻗은 비단)으로 실루엣이 길게 늘어진다. 달걀형 얼굴 · 자연스러운 크기의 아몬드 눈 · 부드러운 둥근 눈썹 · 끝이 둥근 작은 코 · 하트 입술, 잎빛 초록 눈(leaf_green), 금빛 도는 밝은 피부(golden_tan)에 발그레한 볼(blush), 20대 중반, 몽환 인상(dreamy)에 따뜻하고 순한 얼굴(gentle). 멕시코시티 판타지 꽃배 여왕(마름모형 · 금잔화 주황 곱슬 · 모래시계 · 구릿빛)과 얼굴 칸 다섯이 다 다르고, 소칼로 · 우체국 궁전 판타지 사람과도 다섯이 다 다르다."
+                "why": "성 지붕의 공중 정원(옥상 정원은 실제로 성에 있다)을 가꾸는 정원 마법사 — 꽃과 빛 속에서 생각에 잠기는 부드러운 사람. 팔다리가 길고 가슴 · 엉덩이가 부드럽게 둥근 몸(willowy_curvy) · 긴 머리를 반만 묶어 올린 반묶음(half_up) · 꽃 덩굴빛 보랏빛 머리(violet) · 가르마 커튼 앞머리(curtain) · 이끼와 잎을 겹친 긴 망토의 숲 드루이드형(elven_leaf — 망토는 색유리 칸 무늬 위로 꽃 덩굴이 뻗은 비단)으로 실루엣이 길게 늘어진다. 달걀형 얼굴 · 자연스러운 크기의 아몬드 눈 · 부드러운 둥근 눈썹 · 끝이 둥근 작은 코 · 하트 입술, 잎빛 초록 눈(leaf_green), 금빛 도는 밝은 피부(golden_tan)에 발그레한 볼(blush), 20대 중반, 몽환 인상(dreamy)에 따뜻하고 순한 얼굴(gentle). 멕시코시티 판타지 꽃배 여왕(마름모형 · 금잔화 주황 곱슬 · 모래시계 · 구릿빛)과 얼굴 칸 다섯이 다 다르고, 소칼로 · 우체국 궁전 판타지 사람과도 다섯이 다 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 violet → dark_auburn, 헤어스타일 half_up → topknot_tails"
               },
               "hold": {
                 "en": "a slender silver wand wound with a living flowering vine whose tips glow softly"
@@ -12805,7 +12805,7 @@
                 "en": "a bodice inlaid with polished malachite-green stone and fine gold, like the castle's malachite room; a long trailing cloak of sheer silk patterned in jewel-coloured stained-glass panes overgrown with flowering vines"
               },
               "card_ko": {
-                "look": "보랏빛 반묶음 · 긴 곡선",
+                "look": "짙은 적갈 상투 꼬리머리 · 긴 곡선",
                 "motif": "공작석 보디스 · 색유리 망토"
               },
               "sil": "elven_leaf"
@@ -12848,11 +12848,11 @@
                 },
                 "silhouette": {
                   "body": "pear_curvy",
-                  "hair": "low_ponytail",
-                  "hair_color": "navy",
+                  "hair": "segmented_tail",
+                  "hair_color": "platinum_blonde",
                   "bangs": "side_swept"
                 },
-                "why": "1876년 법령으로 성에 세워 1878년에 연 천문 · 기상 · 지자기 관측소(몇 해 뒤 옮겼다)를 가스등 세계로 옮긴, 성 망루 천문대의 별 · 날씨 관측사 — 밤하늘을 읽는 속을 알 수 없는 사람. 어깨는 가늘고 허리가 잘록하며 엉덩이와 허벅지가 풍만한 배형 곡선 몸(pear_curvy) · 목덜미에 낮게 묶은 포니테일(low_ponytail) · 밤하늘 같은 짙은 남빛 머리(navy) · 옆으로 넘긴 앞머리(side_swept) · 유리병 띠를 두른 긴 코트와 놋쇠 고글의 연금술사 코트형(alchemist_coat — 병은 작은 날씨 유리병)으로 실루엣이 길고 곧다. 갸름하게 긴 얼굴 · 눈꼬리가 살짝 올라간 눈 · 가늘게 휜 눈썹 · 곧고 가는 코 · 큐피드 활 입술, 별빛 같은 은회색 눈(silver_grey), 흰 피부(fair)에 눈 밑 점(mole_eye), 20대 초반, 신비 인상(mysterious)에 별을 좇는 집중한 얼굴(focused). 멕시코시티 스팀펑크 유리 막 기관사(하트형 · 무지갯빛 핑거웨이브 · 작은 풍만 · 따뜻한 베이지)와 얼굴 칸 다섯이 다 다르고, 소칼로 · 우체국 궁전 스팀펑크 사람과도 다섯이 다 다르다."
+                "why": "1876년 법령으로 성에 세워 1878년에 연 천문 · 기상 · 지자기 관측소(몇 해 뒤 옮겼다)를 가스등 세계로 옮긴, 성 망루 천문대의 별 · 날씨 관측사 — 밤하늘을 읽는 속을 알 수 없는 사람. 어깨는 가늘고 허리가 잘록하며 엉덩이와 허벅지가 풍만한 배형 곡선 몸(pear_curvy) · 목덜미에 낮게 묶은 포니테일(low_ponytail) · 밤하늘 같은 짙은 남빛 머리(navy) · 옆으로 넘긴 앞머리(side_swept) · 유리병 띠를 두른 긴 코트와 놋쇠 고글의 연금술사 코트형(alchemist_coat — 병은 작은 날씨 유리병)으로 실루엣이 길고 곧다. 갸름하게 긴 얼굴 · 눈꼬리가 살짝 올라간 눈 · 가늘게 휜 눈썹 · 곧고 가는 코 · 큐피드 활 입술, 별빛 같은 은회색 눈(silver_grey), 흰 피부(fair)에 눈 밑 점(mole_eye), 20대 초반, 신비 인상(mysterious)에 별을 좇는 집중한 얼굴(focused). 멕시코시티 스팀펑크 유리 막 기관사(하트형 · 무지갯빛 핑거웨이브 · 작은 풍만 · 따뜻한 베이지)와 얼굴 칸 다섯이 다 다르고, 소칼로 · 우체국 궁전 스팀펑크 사람과도 다섯이 다 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 navy → platinum_blonde, 헤어스타일 low_ponytail → segmented_tail"
               },
               "hold": {
                 "en": "a polished brass sextant with a tiny compass set into its frame"
@@ -12862,7 +12862,7 @@
                 "en": "a long coat lined with deep-blue silk embroidered as a brass-thread star chart, a bandolier of small glass weather-glasses and a brass compass brooch at her throat; brass goggles fitted with stacked telescope lenses"
               },
               "card_ko": {
-                "look": "남빛 낮은 포니테일 · 배형",
+                "look": "백금발 마디 묶음머리 · 배형",
                 "motif": "별자리 코트 · 망원 고글"
               },
               "sil": "alchemist_coat"
@@ -13031,11 +13031,11 @@
                 },
                 "silhouette": {
                   "body": "strong_curvy",
-                  "hair": "pixie_cut",
-                  "hair_color": "ice_white",
+                  "hair": "double_buns",
+                  "hair_color": "honey_brown",
                   "bangs": "none"
                 },
-                "why": "광장의 겨울 스케이트장(2007년 겨울 처음 3200㎡ 남짓 깔고 그 뒤 여러 해 다시 깔았다)을 가스등 세계로 옮긴, 증기 냉각 빙판의 빙상 곡예사 — 1878년 광장 정원에 들어선 음악당과 전차 정거장도 배경에 둔다. 사람들 앞에서 곁눈질하며 미끄러지는 새침하고 장난스러운 사람. 어깨가 넓고 단단한 근육에 가슴과 엉덩이가 풍만한 몸(strong_curvy) · 짧게 헝클인 픽시 컷(pixie_cut) · 끝이 옅은 파랑인 서리빛 흰 머리(ice_white — 빙판) · 앞머리 없이 이마를 드러냄(none) · 연미복과 조끼 · 짧은 하의와 긴 장화의 연미복 마술사형(top_hat_coat — 무대 곡예사)으로 실루엣이 경쾌하다. 달걀형 얼굴 · 자연스러운 크기의 아몬드 눈 · 부드러운 둥근 눈썹 · 끝이 둥근 자연스러운 폭의 코 · 입꼬리가 잘 올라가는 입, 하늘빛 눈(azure), 따뜻한 베이지 피부(warm_beige)에 주근깨(freckles — 동양 쪽이 아니라 그대로), 20대 중반, 새침 인상(coquettish)에 입을 다문 즐거운 미소(amused). 멕시코시티 스팀펑크 유리 막 기관사와 얼굴 칸 다섯이 다 다르고, 차풀테펙 성 · 우체국 궁전 스팀펑크 사람과도 다섯이 다 다르다."
+                "why": "광장의 겨울 스케이트장(2007년 겨울 처음 3200㎡ 남짓 깔고 그 뒤 여러 해 다시 깔았다)을 가스등 세계로 옮긴, 증기 냉각 빙판의 빙상 곡예사 — 1878년 광장 정원에 들어선 음악당과 전차 정거장도 배경에 둔다. 사람들 앞에서 곁눈질하며 미끄러지는 새침하고 장난스러운 사람. 어깨가 넓고 단단한 근육에 가슴과 엉덩이가 풍만한 몸(strong_curvy) · 짧게 헝클인 픽시 컷(pixie_cut) · 끝이 옅은 파랑인 서리빛 흰 머리(ice_white — 빙판) · 앞머리 없이 이마를 드러냄(none) · 연미복과 조끼 · 짧은 하의와 긴 장화의 연미복 마술사형(top_hat_coat — 무대 곡예사)으로 실루엣이 경쾌하다. 달걀형 얼굴 · 자연스러운 크기의 아몬드 눈 · 부드러운 둥근 눈썹 · 끝이 둥근 자연스러운 폭의 코 · 입꼬리가 잘 올라가는 입, 하늘빛 눈(azure), 따뜻한 베이지 피부(warm_beige)에 주근깨(freckles — 동양 쪽이 아니라 그대로), 20대 중반, 새침 인상(coquettish)에 입을 다문 즐거운 미소(amused). 멕시코시티 스팀펑크 유리 막 기관사와 얼굴 칸 다섯이 다 다르고, 차풀테펙 성 · 우체국 궁전 스팀펑크 사람과도 다섯이 다 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 ice_white → honey_brown, 헤어스타일 pixie_cut → double_buns"
               },
               "hold": {
                 "en": "a little brass hand-warmer lantern on a fine chain, glowing warm amber"
@@ -13045,7 +13045,7 @@
                 "en": "a cropped tailcoat trimmed with soft white fur and frost-patterned brass buttons over short skating skirts; tall laced skating boots fitted with polished brass blades"
               },
               "card_ko": {
-                "look": "서리빛 픽시 · 단단한 곡선",
+                "look": "꿀갈색 양 똥머리 · 단단한 곡선",
                 "motif": "털 장식 연미복 · 놋쇠 날"
               },
               "sil": "top_hat_coat"
@@ -13157,11 +13157,11 @@
                 },
                 "silhouette": {
                   "body": "voluptuous",
-                  "hair": "voluminous",
-                  "hair_color": "pearl_white",
+                  "hair": "tilted_bun",
+                  "hair_color": "caramel",
                   "bangs": "side_swept"
                 },
-                "why": "1907년 연 뒤 한 번도 쉬지 않은 우체국 궁전(「코레오 마요르」 — 큰 우체국)을 신화 세계로 옮긴 전령 길드의 우편 총관 — 왕도의 모든 소식을 쥔 도도한 사람. 가슴 · 엉덩이 · 허벅지가 넉넉하게 굽이치는 풍만한 몸(voluptuous) · 풍성하게 부푼 머리(voluminous) · 반투명에 가까운 밝은 돌(치루카) 겉벽을 닮은 진줏빛 흰 머리(pearl_white) · 옆으로 넘긴 앞머리(side_swept) · 무릎 아래 긴 코트와 견장 · 장화의 귀족 장교 코트형(noble_coat)으로 실루엣이 곧고 권위 있다. 하트형 얼굴 · 동그란 큰 눈 · 자연스러운 숱의 곧은 눈썹 · 곧고 가는 코 · 가늘고 자연스러운 폭의 입술, 호박빛 눈(amber), 흰 피부(fair)에 짙은 베리빛 입술(dark_lip), 20대 중반, 도도한 인상(haughty)에 입을 다문 당당한 얼굴(proud). 멕시코시티 판타지 꽃배 여왕과 얼굴 칸 다섯이 다 다르고, 차풀테펙 성 · 소칼로 판타지 사람과도 다섯이 다 다르다."
+                "why": "1907년 연 뒤 한 번도 쉬지 않은 우체국 궁전(「코레오 마요르」 — 큰 우체국)을 신화 세계로 옮긴 전령 길드의 우편 총관 — 왕도의 모든 소식을 쥔 도도한 사람. 가슴 · 엉덩이 · 허벅지가 넉넉하게 굽이치는 풍만한 몸(voluptuous) · 풍성하게 부푼 머리(voluminous) · 반투명에 가까운 밝은 돌(치루카) 겉벽을 닮은 진줏빛 흰 머리(pearl_white) · 옆으로 넘긴 앞머리(side_swept) · 무릎 아래 긴 코트와 견장 · 장화의 귀족 장교 코트형(noble_coat)으로 실루엣이 곧고 권위 있다. 하트형 얼굴 · 동그란 큰 눈 · 자연스러운 숱의 곧은 눈썹 · 곧고 가는 코 · 가늘고 자연스러운 폭의 입술, 호박빛 눈(amber), 흰 피부(fair)에 짙은 베리빛 입술(dark_lip), 20대 중반, 도도한 인상(haughty)에 입을 다문 당당한 얼굴(proud). 멕시코시티 판타지 꽃배 여왕과 얼굴 칸 다섯이 다 다르고, 차풀테펙 성 · 소칼로 판타지 사람과도 다섯이 다 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 pearl_white → caramel, 헤어스타일 voluminous → tilted_bun"
               },
               "hold": {
                 "en": "a sealed letter glowing with a warm golden wax seal"
@@ -13171,7 +13171,7 @@
                 "en": "a long coat of pale pearl-grey brocade whose edges rise in gilded filigree cresting like the palace roofline; epaulettes and cuffs of fine bronze-and-iron latticework like its Florentine window frames"
               },
               "card_ko": {
-                "look": "진줏빛 풍성한 머리 · 풍만",
+                "look": "캐러멜 기운 똥머리 · 풍만",
                 "motif": "금 세공 코트 · 청동 격자 견장"
               },
               "sil": "noble_coat"
@@ -13214,11 +13214,11 @@
                 },
                 "silhouette": {
                   "body": "curvy",
-                  "hair": "flipped_shoulder",
-                  "hair_color": "brass_gold",
+                  "hair": "chignon",
+                  "hair_color": "plum_black",
                   "bangs": "parted"
                 },
-                "why": "우체국 궁전(이탈리아에서 만든 반짝이는 놋쇠 세공 · 피렌체의 청동 · 쇠 창틀 · 대리석 바닥과 선반)을 가스등 세계로 옮긴, 놋쇠 분류 기관을 다루는 우편 분류 담당관 — 한 손에 도시의 편지를 다 맡는 당당한 사람. 굴곡 있는 몸(curvy) · 어깨 길이에 끝이 바깥으로 뻗친 머리(flipped_shoulder) · 궁전 놋쇠 세공 같은 반들거리는 놋쇠빛 머리(brass_gold) · 가운데 가르마(parted) · 한 팔 전체를 덮는 큰 놋쇠 기계 건틀릿형(mech_gauntlet — 편지를 가르는 손)으로 실루엣이 한쪽으로 묵직하다. 부드럽게 각진 얼굴 · 눈꼬리가 처진 부드러운 눈 · 조금 낮게 놓인 짙은 눈썹 · 끝이 살짝 들린 코 · 도톰한 입술, 개암빛 눈(hazel), 올리브빛 피부(olive)에 스모키 눈매(smoky), 20대 초반, 당당한 인상(confident)에 결연한 얼굴(determined). 멕시코시티 스팀펑크 유리 막 기관사와 얼굴 칸 다섯이 다 다르고, 차풀테펙 성 · 소칼로 스팀펑크 사람과도 다섯이 다 다르다. 공기 우편관은 궁전 문서의 사실이 아니라 세계를 옮긴 꾸밈이다."
+                "why": "우체국 궁전(이탈리아에서 만든 반짝이는 놋쇠 세공 · 피렌체의 청동 · 쇠 창틀 · 대리석 바닥과 선반)을 가스등 세계로 옮긴, 놋쇠 분류 기관을 다루는 우편 분류 담당관 — 한 손에 도시의 편지를 다 맡는 당당한 사람. 굴곡 있는 몸(curvy) · 어깨 길이에 끝이 바깥으로 뻗친 머리(flipped_shoulder) · 궁전 놋쇠 세공 같은 반들거리는 놋쇠빛 머리(brass_gold) · 가운데 가르마(parted) · 한 팔 전체를 덮는 큰 놋쇠 기계 건틀릿형(mech_gauntlet — 편지를 가르는 손)으로 실루엣이 한쪽으로 묵직하다. 부드럽게 각진 얼굴 · 눈꼬리가 처진 부드러운 눈 · 조금 낮게 놓인 짙은 눈썹 · 끝이 살짝 들린 코 · 도톰한 입술, 개암빛 눈(hazel), 올리브빛 피부(olive)에 스모키 눈매(smoky), 20대 초반, 당당한 인상(confident)에 결연한 얼굴(determined). 멕시코시티 스팀펑크 유리 막 기관사와 얼굴 칸 다섯이 다 다르고, 차풀테펙 성 · 소칼로 스팀펑크 사람과도 다섯이 다 다르다. 공기 우편관은 궁전 문서의 사실이 아니라 세계를 옮긴 꾸밈이다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 brass_gold → plum_black, 헤어스타일 flipped_shoulder → chignon"
               },
               "hold": {
                 "en": "a polished brass letter capsule with a small round glass window"
@@ -13228,7 +13228,7 @@
                 "en": "one large brass mechanical sorting gauntlet whose fingers end in fine letter-sorting tines, its plates traced with lattice like the palace's bronze-and-iron window frames; a fitted postmistress jacket with a brass filigree collar"
               },
               "card_ko": {
-                "look": "놋쇠빛 뻗친 단발 · 굴곡",
+                "look": "자두빛 흑발 쪽머리 · 굴곡",
                 "motif": "놋쇠 분류 건틀릿 · 격자"
               },
               "sil": "mech_gauntlet"
@@ -13943,11 +13943,11 @@
                 },
                 "silhouette": {
                   "body": "petite_voluptuous",
-                  "hair": "low_ponytail",
+                  "hair": "drill_curls",
                   "hair_color": "argon_lilac",
                   "bangs": "side_swept"
                 },
-                "why": "대청댐을 지으며 2만 6천 명이 고향을 떠났고 물에 잠긴 마을의 삶은 물문화관에 남았으며, 댐이 생긴 뒤 안개 낀 날이 늘었다 — 그 호수를 하이판타지로 옮긴, 물에 잠긴 마을들의 노래를 부르는 음유시인 — 조용하고 쓸쓸한 사람. 키는 작지만 가슴이 풍만하고 허리가 가늘며 엉덩이가 넉넉한 작은 풍만 몸(petite_voluptuous) · 목덜미에서 낮게 묶은 머리(low_ponytail) · 새벽 물안개처럼 잿빛 도는 라일락빛 머리(argon_lilac — 처음 쓰는 색) · 옆으로 넘긴 앞머리(side_swept) · 끈 조임 튜닉과 짧은 망토 · 장화 위로 겹친 짧은 치마 · 악기 띠(bard)로 가볍게 떠도는 실루엣. 하트형 얼굴 · 눈꼬리가 부드럽게 처진 눈 · 끝이 각진 눈썹 · 끝이 둥근 자연스러운 폭의 코 · 도톰한 하트 입술, 호수 같은 청록 눈(teal), 흰 피부(fair)에 화장기 없는 얼굴(bare), 20대 중반, 쓸쓸한 인상(melancholic)에 옅은 그리운 미소(wistful). 대전 판타지 비 부르는 마법사 · 한빛탑 · 유성온천 판타지와 얼굴 칸 셋 이상 · 머리 · 체형이 다르고, 이 카드의 스팀펑크(긴 달걀형 · 금발 숏컷 · 탄탄 슬림) · 사이버펑크(둥근 얼굴 · 노을빛 트윈테일 · 곡선)와 얼굴형 · 머리 · 체형이 다 다르다."
+                "why": "대청댐을 지으며 2만 6천 명이 고향을 떠났고 물에 잠긴 마을의 삶은 물문화관에 남았으며, 댐이 생긴 뒤 안개 낀 날이 늘었다 — 그 호수를 하이판타지로 옮긴, 물에 잠긴 마을들의 노래를 부르는 음유시인 — 조용하고 쓸쓸한 사람. 키는 작지만 가슴이 풍만하고 허리가 가늘며 엉덩이가 넉넉한 작은 풍만 몸(petite_voluptuous) · 목덜미에서 낮게 묶은 머리(low_ponytail) · 새벽 물안개처럼 잿빛 도는 라일락빛 머리(argon_lilac — 처음 쓰는 색) · 옆으로 넘긴 앞머리(side_swept) · 끈 조임 튜닉과 짧은 망토 · 장화 위로 겹친 짧은 치마 · 악기 띠(bard)로 가볍게 떠도는 실루엣. 하트형 얼굴 · 눈꼬리가 부드럽게 처진 눈 · 끝이 각진 눈썹 · 끝이 둥근 자연스러운 폭의 코 · 도톰한 하트 입술, 호수 같은 청록 눈(teal), 흰 피부(fair)에 화장기 없는 얼굴(bare), 20대 중반, 쓸쓸한 인상(melancholic)에 옅은 그리운 미소(wistful). 대전 판타지 비 부르는 마법사 · 한빛탑 · 유성온천 판타지와 얼굴 칸 셋 이상 · 머리 · 체형이 다르고, 이 카드의 스팀펑크(긴 달걀형 · 금발 숏컷 · 탄탄 슬림) · 사이버펑크(둥근 얼굴 · 노을빛 트윈테일 · 곡선)와 얼굴형 · 머리 · 체형이 다 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 헤어스타일 low_ponytail → drill_curls"
               },
               "hold": {
                 "en": "a small lute of pale wood whose strings shimmer like ripples on still water"
@@ -13957,7 +13957,7 @@
                 "en": "a short misty-blue cape embroidered with the tiled roofs and stone walls of a drowned village seen as if through rippling water; pale pink cherry petals stitched in silver thread drifting across her laced tunic"
               },
               "card_ko": {
-                "look": "라일락빛 낮은 묶음 · 작은 풍만",
+                "look": "라일락빛 드릴 컬 · 작은 풍만",
                 "motif": "잠긴 마을 망토 · 벚꽃 자수"
               },
               "sil": "bard"
@@ -14001,10 +14001,10 @@
                 "silhouette": {
                   "body": "lean_toned",
                   "hair": "short_crop",
-                  "hair_color": "golden_blonde",
+                  "hair_color": "plum_black",
                   "bangs": "parted"
                 },
-                "why": "대청댐은 높이 72미터 · 길이 495미터로 홍수를 막고 물을 대며 수력 발전을 한다 — 그 둑을 가스등 동화로 옮긴, 큰 놋쇠 수문을 여닫는 둑지기 — 말수 적고 꿋꿋한 사람. 허리가 가늘고 단단하며 배에 옅은 세로 근육선이 보이고 가슴은 풍만한 탄탄 슬림 몸(lean_toned — 이 열둘 가운데 하나뿐인 마른 쪽 체형) · 짧게 친 머리(short_crop) · 금빛 금발(golden_blonde) · 가운데 가른 앞머리(parted) · 한 팔을 덮는 큰 놋쇠 기계 건틀릿(mech_gauntlet)으로 크고 작은 대비가 선 실루엣. 길쭉한 달걀형 얼굴 · 자연스러운 크기의 아몬드 눈 · 둥근 눈썹 · 콧대가 곧고 가는 코 · 도톰하고 자연스러운 폭의 입술, 하늘빛 푸른 눈(azure), 금빛 도는 밝은 피부(golden_tan)에 스모키 눈 화장(smoky), 20대 중반, 무심한 인상(stoic)에 입을 다문 당당한 미소(proud). 대전 스팀펑크 전차대 신호수 · 한빛탑 · 유성온천 스팀펑크와 얼굴 칸 셋 이상 · 머리 · 체형이 다르고, 이 카드의 판타지(하트형 · 라일락빛 낮은 묶음 · 작은 풍만) · 사이버펑크(둥근 얼굴 · 노을빛 트윈테일 · 곡선)와 얼굴형 · 머리 · 체형이 다 다르다."
+                "why": "대청댐은 높이 72미터 · 길이 495미터로 홍수를 막고 물을 대며 수력 발전을 한다 — 그 둑을 가스등 동화로 옮긴, 큰 놋쇠 수문을 여닫는 둑지기 — 말수 적고 꿋꿋한 사람. 허리가 가늘고 단단하며 배에 옅은 세로 근육선이 보이고 가슴은 풍만한 탄탄 슬림 몸(lean_toned — 이 열둘 가운데 하나뿐인 마른 쪽 체형) · 짧게 친 머리(short_crop) · 금빛 금발(golden_blonde) · 가운데 가른 앞머리(parted) · 한 팔을 덮는 큰 놋쇠 기계 건틀릿(mech_gauntlet)으로 크고 작은 대비가 선 실루엣. 길쭉한 달걀형 얼굴 · 자연스러운 크기의 아몬드 눈 · 둥근 눈썹 · 콧대가 곧고 가는 코 · 도톰하고 자연스러운 폭의 입술, 하늘빛 푸른 눈(azure), 금빛 도는 밝은 피부(golden_tan)에 스모키 눈 화장(smoky), 20대 중반, 무심한 인상(stoic)에 입을 다문 당당한 미소(proud). 대전 스팀펑크 전차대 신호수 · 한빛탑 · 유성온천 스팀펑크와 얼굴 칸 셋 이상 · 머리 · 체형이 다르고, 이 카드의 판타지(하트형 · 라일락빛 낮은 묶음 · 작은 풍만) · 사이버펑크(둥근 얼굴 · 노을빛 트윈테일 · 곡선)와 얼굴형 · 머리 · 체형이 다 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 golden_blonde → plum_black"
               },
               "hold": {
                 "en": "a heavy brass sluice key with a ring handle, engraved with ripple lines"
@@ -14014,7 +14014,7 @@
                 "en": "one large brass gauntlet whose plates open and close in tiers like the sluice gates of a dam, a fine mist of clean water breathing from its joints; a fitted waistcoat embroidered in brass thread with cherry branches from the lakeshore"
               },
               "card_ko": {
-                "look": "금발 숏컷 · 탄탄 슬림",
+                "look": "자두빛 흑발 짧은 커트 · 탄탄 슬림",
                 "motif": "수문 건틀릿 · 벚꽃 조끼"
               },
               "sil": "mech_gauntlet"

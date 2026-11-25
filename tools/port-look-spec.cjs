@@ -9,7 +9,36 @@ const G = ctx.window.AtelierSpec;
 
 /* 원소 몫 어휘 — 나라·가문 팔레트에서 뽑은 색. game 어휘에 없는 것만(머리색에 검정·쇠빛이 없다) */
 const EXTRA = {
+  /* 도시 머리 넓히기(2026-11-25 사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 설계표가 헤어스타일 24가지 · 자연색 머리 0 에 묶였다. 삼국지 · core 어휘 그대로) */
+  hair: {
+    side_ponytail: 'a side ponytail over one shoulder',
+    braided_crown: 'a braided crown with the rest flowing long',
+    pixie: 'a pixie cut',
+    double_buns: 'twin buns high on the head',
+    chignon: 'an elegant low chignon',
+    long_layered: 'long layered hair',
+    lob: 'a shoulder-length lob',
+    messy_bun: 'a loose messy bun with fallen strands',
+    topknot_tails: 'a high topknot with long tails falling from it',
+    twin_loops: 'two hair loops pinned high on the crown',
+    cloud_updo: 'a tall, swept cloud-shaped updo',
+    tilted_bun: 'a bun tilted to one side with loose strands',
+    ribbon_low_tail: 'very long hair tied low with long flowing ribbons',
+    segmented_tail: 'a very long tail bound at intervals by hair rings',
+    drill_curls: 'glossy spiral drill curls',
+    giant_twin_tails: 'huge voluminous twin tails reaching past the knees',
+    giant_braid: 'one enormous thick braid down to the knees',
+    floor_length: 'floor-length loose hair trailing behind her',
+    spiky_wild: 'big, wild spiky hair',
+    lion_mane: 'a huge mane of voluminous curls',
+    jellyfish_cut: 'a jellyfish cut — a short rounded top layer over long straight lower hair',
+    windswept_long: 'very long hair streaming sideways in the wind',
+    triple_tails: 'three high ponytails fanning out',
+    horn_locks: 'two stiff locks rising from her head like horns',
+  },
   hair_color: {
+    /* 자연색 · 밝은 색(2026-11-25 — 삼국지 · core 어휘 그대로) */
+    jet_black: 'glossy jet-black hair', blue_black: 'blue-black hair with a cold indigo sheen', ink_blue: 'deep ink-blue hair', ink_green: 'ink-black hair with a deep green sheen', jade_green: 'pale jade-green hair', chestnut: 'warm chestnut-brown hair', dark_brown: 'dark brown hair', dark_auburn: 'dark auburn hair with red highlights', plum_black: 'plum-black hair with a violet sheen', platinum_blonde: 'platinum-blonde hair', strawberry_blonde: 'strawberry-blonde hair', honey_brown: 'honey-brown hair', caramel: 'caramel-brown hair', burgundy: 'deep burgundy hair', cherry_pink: 'cherry-blossom pink hair', magenta: 'vivid magenta hair', lavender: 'soft lavender hair', smoky_lilac: 'smoky lilac-gray hair', indigo: 'deep indigo hair', sky_blue: 'pale sky-blue hair', mint: 'pale mint-green hair', emerald_green: 'deep emerald-green hair', ombre_crimson: 'black hair fading to crimson at the tips', ombre_azure: 'silver hair fading to azure at the tips', vivid_purple: 'vivid purple hair', scarlet: 'bright scarlet hair', tangerine: 'tangerine-orange hair', sunflower: 'sunflower-yellow hair', lime: 'lime-green hair', turquoise: 'turquoise hair', electric_blue: 'electric-blue hair', cobalt: 'cobalt-blue hair', fuchsia: 'fuchsia-pink hair', hot_pink: 'hot-pink hair', coral_pink: 'coral-pink hair', amethyst: 'bright amethyst-purple hair', peach: 'peach-blonde hair', snow_white: 'snow-white hair', ombre_pink: 'silver hair fading to pink at the tips', ombre_violet: 'deep violet hair fading to lilac at the tips',
     iron_grey: 'iron-grey hair with a brushed-steel sheen', tempered_steel: 'brushed-steel silver hair with a tempered-blue sheen', rust_orange: 'rust-orange hair',
     soot_black: 'soot-black hair with a graphite sheen', violet_white: 'pale violet-white hair that dissolves into light at the ends',
     rain_blue: 'clear rain-blue hair', pale_aqua: 'pale aqua hair', cream: 'cream-blonde hair', rose_gold: 'rose-gold hair', salt_white: 'salt-white hair',
