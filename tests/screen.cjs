@@ -163,13 +163,15 @@ const lineOf = (txt, head) => (String(txt).split('\n').find(l => l.startsWith(he
       const neg = t1.split('\n\n').filter(b => /^Avoid: /.test(b))[0] || '';
       assert(neg && D.vocab.markers.fantasy.banned_en.every(b => !new RegExp('\\b' + b + '\\b', 'i').test(t1.replace(neg, ''))), '판타지 금지 낱말은 Avoid 단락만');
       assert.match(await p.locator('.hchip[data-open="time"]').textContent(), /한밤/, '시간대 칩(생활 장면표)');
-      /* 손에 드는 그 도시의 물건 — 오른손을 「소품 동작」 으로 하면 「그 물건을 든다」 */
+      /* 세계 그림의 손 물건은 일상컷에서 들지 않는다(2026-11-25 — 카드 signature 비움) — 「그 물건 들기」 는 트리 밖, 장소 소품을 들고 그 물건은 SIGNATURE ACCESSORY 줄에만 */
       await p.click('[data-open="right"]'); await p.click('#panel .opt[data-pick="prop"]'); assert.equal(await openOf(p), 'left', '오른손 다음 왼손');
       await p.click('#panel .opt[data-pick=""]'); assert.equal(await openOf(p), 'use', '소품 동작 칸');
-      if (!(await p.locator('#panel .opt[data-pick^="sig_"]').count()) && (await p.locator('#panel [data-gtab=""]').count())) await p.click('#panel [data-gtab=""]');
-      assert((await p.locator('#panel .opt[data-pick^="sig_"]').count()) >= 1, '그 물건을 드는 동작 선택지');
-      await p.click('#panel .opt[data-pick^="sig_"]'); await toDone(p);
-      assert(lineOf(await promptOf(p), 'PROP: ').includes(D.cities.find(c => c.key === 'seoul').worlds.fantasy.hold.en), '서울 판타지의 물건(해치 금 도장)을 든다 ' + lineOf(await promptOf(p), 'PROP: ').slice(0, 90));
+      if (await p.locator('#panel [data-gtab=""]').count()) await p.click('#panel [data-gtab=""]');
+      assert.equal(await p.locator('#panel .opt[data-pick^="sig_"]:not(.out)').count(), 0, '그 물건을 드는 동작은 트리 밖');
+      await p.locator('#panel .opt[data-pick]:not(.out):not([data-pick=""])').first().click(); await toDone(p);
+      { const hold = D.cities.find(c => c.key === 'seoul').worlds.fantasy.hold.en, tp = await promptOf(p);
+        assert(lineOf(tp, 'PROP: ') && !lineOf(tp, 'PROP: ').includes(hold), '장소 소품을 든다(서울 판타지의 물건이 아니다) ' + lineOf(tp, 'PROP: ').slice(0, 90));
+        assert(lineOf(tp, 'SIGNATURE ACCESSORY: ').includes(hold) && /leave behind the object she holds in it/.test(tp), '그 물건은 장신구 줄 · 참고 그림의 손 물건은 두고 온다'); }
       assert.equal(await promptOf(p), casualOf((await state(p)).scene, 'fantasy'), '소품을 바꿔도 화면 = 조립기');
       assert((await p.locator(mob ? '.hres .file' : '#file-name').textContent()).includes('seoul_fantasy_' + DEF + '_f_casual1.webp'), '일상컷 파일 이름(세계를 탄다)');
       assert.match(p.url(), /card=seoul&o=casual&world=fantasy/, '일상컷도 주소에 세계');

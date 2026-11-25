@@ -7,6 +7,13 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-25 · claude · 일상컷 — 세계 그림의 손 물건은 액세서리로(삼국지처럼)
+- lib/prompt-city.js — 사용자 「도시공방에 소품 드는것중에 장면에 안어울리는 소품을 들 때가 있거든. 카페에서 랜치라든가 … 삼국지나 포켓몬처럼 악세사리 형식으로」: casualCard 가 세계 그림의 손 물건(worlds.<세계>.hold)을 알아볼 거리(signature · signature_hold)로 주지 않는다 — 트리가 「그 물건 들기」 를 어느 장소에서나 고르던 것(카페 → 렌치)이 없어지고, 손 소품은 장소의 소품 동작에서만. 새 줄 SIGNATURE ACCESSORY(holdAccessory — hold 의 첫 마디, 그 세계 금지 낱말이 들면 뺌): 짧은 꼴은 머리 장식 줄 뒤, 긴 꼴은 CHARACTER 뒤, 코스프레 컷엔 없음. casualCard · holdAccessory 내보냄
+- lib/prompt-spec.js — CASUAL.accessory(작은 장신구 · 곁에 둔 물건으로만, PROP 이 이름 부르지 않으면 들지 않는다). 머리 장식 줄 · 코스프레 줄 · 긴 꼴 WARDROBE 셋에 「참고 그림에서 든 물건도 두고 온다」(the object she holds in it)
+- tools/casual-plan.cjs — 계획기 카드 = P.casualCard(같은 카드 — prompt-pack 도 이것). 「그 도시의 물건을 든 컷」 필수 · 검사는 signature_hold 가 비어 저절로 꺼진다. 캐릭터만의 컷(90번)은 직업 도구(ownProp)를 그대로 든다. 자유 설계 칸의 최근 장면 글이 소품을 그 세계 글로(「a bright plastic water gun」 이 스팀펑크 본문에 금지 낱말로 실렸다)
+- lib/studio.js — 생성기 화면도 같은 카드(땅 · 세계 · signature 없음)로 고르기 · 까닭 · 랜덤 · 고치기. tests/screen.cjs — 「그 물건 들기」 는 트리 밖 · 장소 소품을 들고 장신구 줄 · 두고 오기 줄이 있다. prompt.html — prompt-spec ?v=54 · prompt-city ?v=55 · studio ?v=13
+- 그린 기록 · 계획 파일은 그대로(옛 기록의 signature 동작은 signatureProp 자리로 남는다)
+
 ## 2026-11-25 · claude · 일상컷 몸짓 — 빵 물기 · 가슴 사이 물건 · 경례 · 가로 브이 · 갸루 피스 · 눈가리기 브이
 - data/casual-tree-v2.json — 사용자 「일상컷에 입에 빵물고 있기, 가슴 사이에 물병이나 다른 물건 끼우거나 올리기, 경례하기, 가로브이, 갸루피스, 눈가리기 브이 장면도 넣어줘」 · 「아 게임기나 pc로 게임하는 장면도」 · 「스포츠경기 관람은 있는데 실제로 하는건 없네」 · 「수영, 테니스, 요가, 놀이터 …, 놀이기구, 워터파크, 자전거, 조깅, 모래성」 · 「수영쪽에서 공기매트 띄워서 누워있는 것」. 손 몸짓 넷(salute 경례 · v_side 가로 브이 · gyaru_peace 갸루 피스 · v_eye 눈가리기 브이)과 자세 추천 여덟(가슴 위 · 얼굴 클로즈업 · 허리 위, 서서 · 앉아 — preset_once 무리라 한 캐릭터 한 장까지, exprs 장난 · 당당 · 윙크). 빵 물기(소품 toast · toast_mouth — 입을 쓰는 동작, exprs 는 입을 벌리지 않는 표정). 가슴 사이 물건 끼우기 · 얹기(물병 · 휴대폰 · 부채 · 선글라스 *_tuck · *_chest — 옷 특징 cleavage 인 옷만, 놀이터 안 됨). 게임(휴대용 게임기 · 패드 · 게임용 컴퓨터 handheld · gamepad · pc_rig). 운동 경기 하기(농구 · 야구 · 축구 · 배구 · 배드민턴 · 탁구 · 테니스 포핸드 · 준비 자세 · 골프 어드레스 · 피니시 · 볼링 굴리기)와 장소 넷(야구장 · 축구장 · 비치발리볼 코트 · 실내 체육관). 수영(자유형 · 물에 누워 뜨기) · 워터 슬라이드 착수 · 공기매트(float_lounge · float_front, 받침 float_raft, 3:2) · 요가 셋 · 조깅(장소 특징 run_path) · 놀이터(그네 · 미끄럼틀 · 시소 · 정글짐, 장소 playground) · 모래성(sand_bucket). 하는 일 갈래 sport(운동 · 놀이). 새 추천 · 소품 · 장소는 start_median.
 - data/casual-tree-v2.json — once_groups: 몸짓 · 가슴 사이 물건만 한 묶음 한 장까지. 운동 · 놀이 · 게임 · 빵 물기는 보통 빈도(사용자 「몇 개는 일상적으로 흔하게 하는 것들인데, 특히 운동은 … 이제는 신경안쓰려고」 — 활동 장면의 그림 오류를 받아들인다). 요가 · 조깅 자세는 운동복(sportswear), 헤엄 · 공기매트는 수영복(swimsuit) 옷 특징이 있어야(자세 outfit — 손 칸을 비워도 걸린다).

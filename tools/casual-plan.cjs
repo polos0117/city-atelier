@@ -203,13 +203,14 @@ const pick = (r, list) => list[Math.floor(r() * list.length)];
 function weighted(r, weights) { const keys = Object.keys(weights), sum = keys.reduce((s, k) => s + weights[k], 0); let x = r() * sum; for (const k of keys) { x -= weights[k]; if (x < 0) return k; } return keys[0]; }
 const by = (list, k) => (list || []).find(r => r.key === k);
 
-/* 카드 — 생성기 지시문이 쓰는 꼴(prompt-city 의 casualCard): 그 도시의 물건 하나(설계표 hold)가 「알아볼 거리」. 땅 = 도시(생활 장면은 그 도시 카드에만) */
+/* 카드 — 생성기 지시문이 쓰는 꼴 그대로(prompt-city 의 casualCard). 땅 = 도시(생활 장면은 그 도시 카드에만).
+   세계 그림의 손 물건(hold)은 알아볼 거리로 주지 않는다(2026-11-25 — 일상컷에선 들지 않고 SIGNATURE ACCESSORY 줄의 장신구로만). 손 소품은 장소의 소품 동작에서만 */
 function cardOf(key) {
   const c = P.card(D, key);
   if (!c) throw new Error('카드가 없다: ' + key + ' (설계표 data/city-design.json 의 도시 열쇠)');
-  const h = P.holdOf(c);
   const city = c.parent || key;   /* 랜드마크 카드는 생활 장면 · 계절 · 날씨 · 땅이 부모 도시 것 */
-  return { key, city, c, g: { key, signature: h ? [h] : [], signature_hold: h ? [0] : [], land: city }, worlds: P.worldsOf(D, key) };
+  const g = P.casualCard(c); delete g.world;   /* 세계는 묶음을 짤 때(card.g.world) */
+  return { key, city, c, g, worlds: P.worldsOf(D, key) };
 }
 /* 생활 장면 — 트리 장소 열쇠 → 장면 줄 · 그 도시의 장면 장소들 · 장면이 받는 의상 계열 · 시간 · 계절 · 날씨 */
 const LIFE_OF = new Map(), lifeOf = place => { if (!LIFE_OF.has(place)) LIFE_OF.set(place, P.lifeScene(LIFE, place)); return LIFE_OF.get(place); };   /* 표는 안 바뀐다 — 한 번만 찾는다(속도) */
@@ -675,7 +676,8 @@ function holdOfKey(key) { if (!key) return ''; if (!HOLD.has(key)) { const c = P
 function sceneText(sc, hold = '', world = '') {
   const p = C2.place(T2, sc.place); if (!p) return '';
   const u = C2.use(T2, sc.use), pr = u && C2.prop(T2, u.prop), po = C2.posture(T2, sc.posture);
-  const act = u && pr ? u.en.replace('{prop}', pr.signature ? (String(hold).split(/ with |, /)[0] || 'her own object') : pr.en) : (po && po.en) || '';
+  /* 소품은 그 세계 글(세계 소품 사전 — 「a bright plastic water gun」 같은 일반 글이 스팀펑크 자유 설계 칸에 금지 낱말로 실렸다, 2026-11-25) */
+  const act = u && pr ? u.en.replace('{prop}', pr.signature ? (String(hold).split(/ with |, /)[0] || 'her own object') : (P.propWorld(PROPS, pr.key, world) || pr.en)) : (po && po.en) || '';
   const short = t => String(t).split(/ — |, /)[0].replace(/\s+/g, ' ').trim();   /* 짧게 — 첫 덩어리만(「a mine gallery of rough rock walls, timber props, …」 → 앞 말) */
   return short(P.placeEn(p, world)) + (act ? ' — ' + short(act) : '');   /* 장소는 그 세계 글(트리 장소 worlds, 2026-11-24) */
 }
