@@ -44,8 +44,9 @@ const checkBox = (where, grp, box, full) => {
 /* 눈 크기 · 눈꼬리가 그 세계 눈 모양과 부딪치지 않는다 — 삼국지 · 원소 tests/look-spec.cjs 와 같은 짝(감사 E7) */
 const CLASH = [['eye_size', 'small', ['round_large', 'almond_wide']], ['eye_size', 'large', ['narrow_upturned', 'phoenix', 'monolid_long']],
   ['eye_tilt', 'down', ['narrow_upturned', 'phoenix', 'cat']], ['eye_tilt', 'up', ['droopy_soft']]];
-for (const c of D.cities) for (const [w, body] of Object.entries(c.worlds || {})) {
-  const where = '도시 ' + c.key + ' ' + w, lk = body.look || {};
+/* 랜드마크 카드도 같은 어휘(2026-11-25 — 서울 랜드마크 앞머리 wispy · swept_back · baby 가 어휘에 없어 지시문에 날 열쇠로 샜는데 도시만 봐서 못 잡았다) */
+for (const c of D.cities) for (const card of [c].concat(c.landmarks || [])) for (const [w, body] of Object.entries(card.worlds || {})) {
+  const where = '도시 ' + c.key + (card === c ? '' : '-' + card.key) + ' ' + w, lk = body.look || {};
   assert(lk.face && lk.silhouette && lk.why, where + ' look(face · silhouette · why)');
   checkBox(where, 'face', lk.face, true); checkBox(where, 'silhouette', lk.silhouette, true);
   for (const [a, v, shapes] of CLASH) assert(!(lk.face[a] === v && shapes.includes(lk.face.eyes)), where + ' ' + a + ' ' + v + ' 가 눈 모양 ' + lk.face.eyes + ' 와 부딪친다');

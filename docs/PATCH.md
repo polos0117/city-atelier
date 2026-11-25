@@ -7,6 +7,11 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-25 · claude · 랜드마크 열둘 — 방콕 · 바르셀로나 · 시드니 · 멕시코시티 셋씩 · 랜드마크 외형 어휘 검사
+- data/city-design.json — 방콕 lumphini(룸피니 공원) · chatuchak(짜뚜짝 주말시장) · democracymonument(민주기념탑), 바르셀로나 palaumusica(카탈루냐 음악당) · boqueria(보케리아 시장) · arctriomf(개선문), 시드니 therocks(더 록스) · botanicgarden(왕립 식물원) · fortdenison(포트 데니슨 — en 은 별명 Pinchgut), 멕시코시티 chapultepec(차풀테펙 성) · zocalo(소칼로) · postalpalace(우체국 궁전) — 세 세계 세 사람씩 · 좌표(위키 문서)(사용자 「도시 랜드마크 설계 추가해줘.」). 서울 랜드마크 앞머리 셋(경복궁 판타지 wispy → curtain · 남산 사이버펑크 swept_back → none · 한강철교 스팀펑크 baby → straight)과 눈 크기 셋(북촌 사이버펑크 · 레인보우브리지 판타지 · 만리장성 스팀펑크 → medium)을 어휘 · 눈 모양에 맞춤 — 없는 열쇠가 지시문에 날 영어로 샜다
+- tests/look-spec.cjs — 랜드마크 카드의 look 도 어휘 · 눈 모양 충돌을 본다(전엔 도시만 봐서 못 잡았다)
+- tests/image-claim.cjs — 랜드마크 53 × 세 세계
+
 ## 2026-11-25 · claude · 일상컷 색인에 실루엣 갈래
 - tools/casual-index.cjs · data/casual-index.json — 색인 줄에 cls · clsKo(수영복 · 란제리 · 역할극 … 계열의 재단 갈래 — 하드웨어 · 쿠튀르 장식 · 크롭 투피스 …). 공방 허브 「전체 그림 찾기」 의 「실루엣 갈래」 거르기가 읽는다(사용자 「실루엣 갈래도 색인에 넣어줘」)
 
