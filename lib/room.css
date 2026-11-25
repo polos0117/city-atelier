@@ -325,6 +325,19 @@ html[data-motion="on"] .th-vista-look,html[data-motion="on"] .th-look-close,html
 /* 한 장의 그림 줄 · 크게 보기(2026-11-20 — 일상컷 · 확대) */
 .th-zoom-open {display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in}
 .th-card-n {margin-left:8px;color:var(--muted);font-variant-numeric:tabular-nums}
+/* 일상컷 설명(lib/casual-note.js, 2026-11-25 — 세 공방에서 옮김) — 한 장 그림 아래 · 크게 보기 그림 아래에 작게. 첫 줄 갈래 · 옷 · 색, 둘째 줄 장소 · 하는 일 · 구도, 더 보기(44px)에 나머지.
+   우리 값은 한글, GPT 글(Outfit · 자유 설계 장면)은 영어 그대로. 휴대폰 가로의 크게 보기(그림만)에선 숨긴다 */
+.th-cnote {margin:8px auto 0;max-width:72ch;color:var(--muted);font-size:12px;line-height:1.55;text-align:center;word-break:keep-all;overflow-wrap:anywhere}
+.th-cnote b {color:var(--text);font-weight:800}
+.th-cnote .cnote-gpt {margin-left:6px;font-size:11px;opacity:.8}
+.th-cnote .cnote-more {color:var(--text);font-size:12px}
+.th-cnote .cnote-list dd {color:var(--text)}
+.th-zoom-cnote {flex:0 0 auto;margin:0;padding:8px 16px 0;background:#000;color:#cfcfcf;font-size:12px;line-height:1.5;text-align:center;word-break:keep-all;overflow-wrap:anywhere;max-height:40dvh;overflow-y:auto}
+.th-zoom-cnote b {color:#fff;font-weight:800}
+.th-zoom-cnote .cnote-gpt {margin-left:6px;font-size:11px;opacity:.75}
+.th-zoom-cnote .cnote-more {color:#fff;font-size:12px}
+.th-zoom-cnote .cnote-list {max-width:72ch;margin-inline:auto}
+.th-zoom-cnote .cnote-list dd {color:#fff}
 .th-card-worlds {display:flex;gap:6px;margin-top:10px}
 .th-card-worlds button {flex:1 1 0;min-height:44px;border-radius:22px;border:1.5px solid var(--line);background:transparent;color:var(--text);font-family:inherit;font-size:12px;font-weight:800}
 .th-card-worlds button[aria-pressed="true"] {border-color:var(--rc);box-shadow:inset 0 0 0 1.5px var(--rc)}
@@ -355,6 +368,7 @@ html[data-motion="on"] .th-vista-look,html[data-motion="on"] .th-look-close,html
   .th-zoom-box {padding:6px}
   .th-zoom-bar {position:fixed;top:6px;right:6px;z-index:2;padding:0;background:none;gap:6px}
   .th-zoom-bar > :not(.th-zoom-close):not(.fill-toggle) {display:none}
+  .th-zoom-cnote {display:none}
   .th-zoom-bar button {min-width:44px;padding:0 14px;background:#0006;border-color:#fff5;backdrop-filter:blur(4px)}
 }
 .th-zoom-bar button {min-height:44px;padding:0 18px;border-radius:22px;border:1px solid #fff8;background:#0008;color:#fff;font-family:inherit;font-weight:800}

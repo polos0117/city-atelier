@@ -269,6 +269,37 @@ const settle = p => p.waitForFunction(() => { const k = document.querySelector('
       await p.tap('.th-back'); await p.waitForSelector('.th-cast'); assert.equal(await p.evaluate(() => location.search), '?city=seoul&w=cyberpunk', '한 장 → 도시 무대');
       assert.deepEqual(o.errors, [], '한 장 콘솔'); checks += 16; await o.ctx.close(); }
 
+    /* 일상컷 설명(2026-11-25 — 세 공방에서 옮김, lib/casual-note.js · data/casual-index.json) — 세계 그림엔 없음 · 일상컷 한 장 그림 아래 두 줄(갈래 · 옷 · 색 / 장소 · 하는 일 · 구도) ·
+       더 보기 44px(aria-expanded, 펼치면 표정 · 시간대 · 계절 · 날씨 …) · 크게 보기에도 · 캐릭터만의 컷 · 휴대폰 가로 크게 보기(그림만)에선 숨김 */
+    { const img = { img: { seoul: { byStyle: { s1: { byForm: { cyberpunk: { f: 'seoul_cyberpunk_s1_f.webp', casual: { f: ['seoul_cyberpunk_s1_f_casual1.webp', 'seoul_cyberpunk_s1_f_casual90.webp'] } } } } } } }, added: {}, count: 3, where: {} };
+      const base = n => ({ card: 'seoul', name: '서울', world: 'cyberpunk', worldKo: '사이버펑크', n, date: '2026-11-25', style: 's1', path: '', required: null, requiredKo: null, family: null, familyKo: null, item: null, itemKo: null, shade: null, shadeKo: null, cosplay: null, free: null });
+      const idx = { version: 1, atelier: 'city', rows: [
+        Object.assign(base(1), { required: 'life', requiredKo: '도시 생활', family: 'everyday', familyKo: '평상복', item: 'jeans_tee', itemKo: '청바지 + 티셔츠', shade: 'pastel', shadeKo: '파스텔',
+          s: { pl: '한강공원 강변의 밤 돗자리 야식', act: '잔을 든다', fr: '허리 위', ex: '차분함', tm: '저녁 밤', ss: '봄 벚꽃', wt: '지나가는 비', era: '그 세계의 하루', ar: '2:3' } }),
+        Object.assign(base(90), { required: 'own', requiredKo: '캐릭터만의 컷', itemKo: '전파탑 관리자', s: { act: '전파탑 관리자 일', fr: '전신', ar: '2:3' } })] };
+      for (const vp of [{ width: 344, height: 882 }, { width: 882, height: 344 }]) {
+        const o = await open('/index.html?city=seoul&card=seoul&pic=seoul_cyberpunk_s1_f.webp&w=cyberpunk', { viewport: vp, fulfill: [{ url: /\/data\/img\.json/, body: JSON.stringify(img), contentType: 'application/json' }, { url: /\/data\/casual-index\.json/, body: JSON.stringify(idx), contentType: 'application/json' }] }), p = o.page;
+        await p.waitForSelector('.th-card'); await p.waitForTimeout(300); assert.equal(await p.locator('.cnote').count(), 0, '세계 그림엔 설명이 없다');
+        await p.tap('.th-card-nav button:last-child'); const note = p.locator('.th-card .th-cnote'); await note.waitFor();
+        assert.equal((await note.locator('.cnote-l1').textContent()).trim(), '필수 · 도시 생활 — 청바지 + 티셔츠 · 파스텔', '첫 줄');
+        assert.equal((await note.locator('.cnote-l2').textContent()).trim(), '한강공원 강변의 밤 돗자리 야식 · 잔을 든다 · 허리 위', '둘째 줄');
+        const more = note.locator('.cnote-more'); assert.equal(await more.getAttribute('aria-expanded'), 'false');
+        { const bb = await more.boundingBox(); assert(bb.height >= 44 && bb.width >= 44, '더 보기 44px'); }
+        await more.tap(); assert.equal(await more.getAttribute('aria-expanded'), 'true');
+        assert.deepEqual(await note.locator('.cnote-list dt').allTextContents(), ['표정', '시간대', '계절', '날씨', '세계', '시대', '화면비']);
+        assert.deepEqual(await smallTargets(p), [], '한 장 44px(설명 펼침)'); assert(await H.noOverflow(p));
+        if (vp.width < vp.height) await H.shot(p, 'card-cnote-open');
+        await p.tap('.th-zoom-open'); await p.waitForSelector('.th-zoom');
+        const zn = p.locator('.th-zoom .th-zoom-cnote');
+        if (vp.width < vp.height) {
+          await zn.waitFor(); assert.equal(await zn.locator('.cnote-more').getAttribute('aria-expanded'), 'true', '펼침은 이 탭 동안 기억한다');
+          assert.deepEqual(await smallTargets(p), [], '크게 보기 44px(설명)');
+          await p.keyboard.press('ArrowRight'); await p.waitForFunction(() => /캐릭터만의 컷/.test((document.querySelector('.th-zoom-cnote') || {}).textContent || ''));
+          assert.equal((await zn.locator('.cnote-l2').textContent()).trim(), '전파탑 관리자 일 · 전신', '캐릭터만의 컷 — 직업 · 구도');
+        } else { await p.waitForTimeout(400); assert.equal(await zn.count() ? await zn.isVisible() : false, false, '휴대폰 가로 크게 보기 — 그림만(설명 숨김)'); }
+        assert.deepEqual(o.errors, [], '일상컷 설명 콘솔 ' + vp.width); checks += 9; await o.ctx.close();
+      } }
+
     /* 랜드마크 줄 — 서울 무대에 해치(세계 그림 + 일상 둘), 한 장, 돌아가기 · 도쿄엔 줄 없음 */
     { const HF = 'seoul-haechi_fantasy_s1_f', img = { img: { 'seoul-haechi': { byStyle: { s1: { byForm: { fantasy: { f: HF + '.webp', casual: { f: [HF + '_casual2.webp', HF + '_casual1.webp'] } } } } } } }, added: {}, count: 3, where: {} };
       const fl = [{ url: /\/data\/img\.json/, body: JSON.stringify(img), contentType: 'application/json' }];

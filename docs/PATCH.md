@@ -7,6 +7,13 @@
 날짜는 `2026-11-19` 꼴, 누가는 `claude` 또는 `gpt`, 새 칸이 위로 간다.
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
+## 2026-11-25 · claude · 크게 보기 일상컷 설명 — 장소 · 하는 일 · 구도 + 더 보기
+- tools/casual-index.cjs · tests/casual-index.cjs · data/casual-index.json(새) — 사용자 「포켓몬, 원소, 삼국지에는 있는 기능인데 … 도시공방이랑 즐겨찾기에도」: 세 공방과 같은 꼴의 일상컷 색인(필수 — 도시 생활 · 노출 갈래 · 코스프레 · 상황 · 90번, 계획 required 글로)
+- tools/casual-detail.cjs(새, 네 공방 같은 파일) — 장면 풀이 s(둘째 줄 장소 · 하는 일 · 구도, 더 보기 표정 · 시선 · 몸 방향 · 카메라 · 렌즈 · 빛 · 시간대 · 계절 · 날씨 · 순간 · 화면 구성 · 상황 노출 · 옷 꾸밈 · 시대 · 화면비 — 생활 장면 · 시간대 · 계절 · 날씨는 data/city-life.json ko). 손 · 받침 · 고개는 뺐다
+- .github/workflows/register-images.yml — 등록 뒤 일상컷 색인(삼국지와 같은 차례: 등록 → 색인 → 검사 → 커밋, 깨져도 등록은 커밋)
+- lib/casual-note.js(세 공방 사본) · lib/city-view.js · lib/room.css · lib/words.js · lib/dex-view.js · index.html — 한 장 그림 아래 · 크게 보기에 두 줄 + 「더 보기」(44px), 휴대폰 가로 크게 보기엔 숨김. city-view ?v=10 · room.css ?v=14 · words ?v=44
+- tests/globe-screen.cjs — 일상컷 설명(세계 그림엔 없음 · 두 줄 · 더 보기 · 캐릭터만의 컷 · 가로 숨김)
+
 ## 2026-11-25 · claude · 허브 즐겨찾기 — 크게 보기 꽉 채우기 · 가로 보기 · 한도
 - lib/favorites.js — style-atelier shared 판(원본이 공방 모음에서 shared 로): 3000칸, 가득이면 오래된 것을 빼지 않고 거절 · error() · message() · room(), 저장 공간 모자람(QuotaExceededError)은 'quota'(담아 둔 칸 그대로)
 - lib/fill-view.js · lib/fill-core.js(새) — shared 판: 셈 · 두 번 누르기를 몸통 fill-core.js 로 뗐다(동작 같음 — tests/fill-view.cjs 통과)
