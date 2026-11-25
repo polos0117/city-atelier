@@ -8,6 +8,10 @@
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
 
+## 2026-11-26 · gpt · 카탈루냐음악당 판타지 대표컷 2번과 일상컷 등록
+- data/img.json — 선택한 대표컷과 일상컷 10장을 등록기로 추가했다.
+- data/casual-index.json — 새 일상컷 10장의 장소·의상·자세·자유 설계를 색인에 추가했다.
+
 ## 2026-11-26 · gpt · 대청호 스팀펑크 1번 대표컷과 일상컷 묶음
 - .github/workflows/register-images.yml — 깨진 기존 설명 색인 때문에 검사에서 중단되지 않도록 원본 기록으로 색인을 먼저 재생성한 뒤 검사
 - city-atelier-img/img · records/daejeon-daecheonglake — 선택 1번 세계컷과 참조 일상컷 10장, 계획·실제 생성 지시문·검수 기록을 보존해 등록
