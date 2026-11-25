@@ -90,14 +90,19 @@ fails(lambda d: d['extra_places'].append(dict(d['extra_places'][0], key='home_be
 fails(lambda d: d['weather_awkward'][0]['weather'].append('hail'), '날씨 hail')
 fails(lambda d: row(d, 'prop_uses', 'cup_wrap')['postures'].append('stand'), 'cup_wrap 의 postures 에 같은 값이 두 번')
 fails(lambda d: row(d, 'props', 'compass').update(since=1700), 'since')
-fails(lambda d: row(d, 'props', 'test_tube').update(places=['moon_base']), '장소 moon_base')
-fails(lambda d: row(d, 'prop_uses', 'tube_rack').update(needs_any=['anvil']), '받침 anvil')
+fails(lambda d: row(d, 'props', 'hand_tool').update(places=['moon_base']), '장소 moon_base')
+fails(lambda d: row(d, 'prop_uses', 'tool_fix').update(needs_any=['anvil']), '받침 anvil')
+fails(lambda d: row(d, 'prop_uses', 'sheet_hang').update(needs=['clothesline']), '받침 clothesline')   # 도시 생활 소품(빨래 널기)의 needs
 fails(lambda d: row(d, 'prop_uses', 'book_turn').update(needs_any=['sofa_arm']), '받침 sofa_arm')
 # 공방마다 다른 칸(pkm 2026-10-30) — 원소 표엔 없지만 같은 검사기라 적으면 본다
 fails(lambda d: d.update(banned={'body': ['back']}), '추천 walk_away — 이 공방이 안 쓰는 값')
 fails(lambda d: row(d, 'prop_uses', 'cup_hold').update(role='a barista'), '역할에 한국어 이름(role_ko)')
 fails(lambda d: row(d, 'prop_uses', 'cup_hold').update(places=['moon_base']), '장소 moon_base')
-fails(lambda d: row(d, 'hands', 'wave').update(companion=True), '동료가 있어야 하는데 동료 묶음이 없다')
+# 동료 줄 — 도시 표엔 동료 묶음(버전1 pet · ride_animal, 2026-11-23)이 있으니 묶음을 뗀 버전1 사본에서 본다(원소 사본은 원소 표에 묶음이 없어 doc 만 바꿨다)
+v1_nocomp = copy.deepcopy(v1); [g.pop('companion', None) for g in v1_nocomp['groups']]
+assert not any(r.get('companion') for t in ('hands', 'prop_uses') for r in doc[t]) and '동료가 있어야 하는데 동료 묶음이 없다' not in ' | '.join(T.check(doc, v1_nocomp))
+_d = copy.deepcopy(doc); row(_d, 'hands', 'wave').update(companion=True)
+assert 'wave 는 동료가 있어야 하는데 동료 묶음이 없다' in ' | '.join(T.check(_d, v1_nocomp))
 assert 'street_park' not in T.preset_places(doc, v1, pre(doc, 'counter_work')) and 'bakery_kitchen' in T.preset_places(doc, v1, pre(doc, 'counter_work'))
 sip = dict(pre(doc, 'sip_close'), left='shush')
 assert not T.use_fits(doc, row(doc, 'prop_uses', 'cup_sip'), sip) and T.use_fits(doc, row(doc, 'prop_uses', 'cup_sip'), pre(doc, 'sip_close'))
@@ -110,13 +115,16 @@ assert 'night_taxi' not in T.prop_places(doc, v1, row(doc, 'props', 'phone')) or
 lie = T.preset_places(doc, v1, pre(doc, 'recline_head'))
 assert lie and all('lie' in doc['places'][k] for k in lie), lie
 assert all(T.preset_places(doc, v1, p) for p in doc['presets'])
-# 원소 몫 — 현장 · 나라 안 받침, 원소 소품. 실험실 작업대에서 두 손 소품 동작(시험관 거치대), 용광로 작업대에서 망치질, 염전엔 발 담글 물만
-assert 'site_lab' in T.preset_places(doc, v1, pre(doc, 'counter_work')) and 'site_furnace' in T.preset_places(doc, v1, pre(doc, 'counter_work'))
-assert 'site_saltpan' not in T.preset_places(doc, v1, pre(doc, 'swim_close')) and 'site_saltpan' in T.preset_places(doc, v1, pre(doc, 'edge_dangle'))
-assert 'site_lab' in T.prop_places(doc, v1, row(doc, 'props', 'test_tube')) and 'street_park' not in T.prop_places(doc, v1, row(doc, 'props', 'test_tube'))
-assert not {'nation_room', 'nation_inn'} & T.prop_places(doc, v1, row(doc, 'props', 'phone')), '휴대폰은 나라 안에 없다(지금 현실만)'
-assert {'nation_room', 'nation_bath', 'nation_market', 'nation_field', 'nation_square', 'nation_roof', 'nation_inn'} <= set(doc['places'])
-assert {p['key'] for p in doc['props']} >= {'test_tube', 'flask', 'compass', 'magnifier', 'hammer', 'salt_jar'} and not {'gamepad', 'coin', 'handheld', 'arcade_panel'} & {p['key'] for p in doc['props']}
+# 도시 몫(2026-11-24 — 원소 사본의 현장 site_* · 나라 안 nation_* 검사를 도시 것으로) — 생활 장면 받침(extra_places), 생활 소품.
+# 수리 노점 · 정비 창고 작업대에서 일하기, 족욕탕엔 발 담글 물만 · 실내 수영장 가장자리에 걸터앉기, 손 공구는 일하는 곳에만, 세차 스펀지는 세차장에만
+assert {'repair_kiosk', 'maintenance_shed', 'bakery_kitchen'} <= set(T.preset_places(doc, v1, pre(doc, 'counter_work')))
+assert 'spa_footbath' not in T.preset_places(doc, v1, pre(doc, 'swim_close')) and 'spa_footbath' in T.preset_places(doc, v1, pre(doc, 'edge_dangle'))
+assert 'water_indoor_pool' in T.preset_places(doc, v1, pre(doc, 'edge_dangle')) and 'drying_terrace' not in T.preset_places(doc, v1, pre(doc, 'edge_dangle'))
+assert 'repair_kiosk' in T.prop_places(doc, v1, row(doc, 'props', 'hand_tool')) and 'street_park' not in T.prop_places(doc, v1, row(doc, 'props', 'hand_tool'))
+assert T.prop_places(doc, v1, row(doc, 'props', 'wash_sponge')) == {'car_wash', 'car_wash_home'}
+assert 'drying_terrace' in T.prop_places(doc, v1, row(doc, 'props', 'laundry_sheet')) and 'street_noodle_stall' in T.prop_places(doc, v1, row(doc, 'props', 'meal_bowl'))
+assert {'repair_kiosk', 'maintenance_shed', 'drying_terrace', 'stair_landing', 'street_noodle_stall', 'subway_car'} <= {p['key'] for p in doc['extra_places']} <= set(doc['places'])
+assert {p['key'] for p in doc['props']} >= {'hand_tool', 'cloth', 'hand_brush', 'laundry_sheet', 'storage_box', 'meal_bowl', 'wash_sponge'} and not {'gamepad', 'coin', 'handheld', 'arcade_panel'} & {p['key'] for p in doc['props']}
 assert not any('since' in p for p in doc['props'])
 # 그 원소의 물건(2026-10-30 되살림 — 설계표 hold.en · 주민 object.en) — 알아볼 거리 소품은 signature 하나, 모든 장소, 동작 셋(들기 · 얼굴 옆 · 두 손)
 sig = [p for p in doc['props'] if p.get('signature')]
@@ -126,4 +134,4 @@ with multiprocessing.get_context('fork').Pool() as pool:
     bad = [x for x in pool.map(run_case, range(len(CASES))) if x]
 assert not bad, bad
 assert len(CASES) >= 60, len(CASES)
-print('casual-tree-v2 ok — 추천', len(doc['presets']), '· 장소', len(doc['places']), '· 원소 소품 여섯')
+print('casual-tree-v2 ok — 추천', len(doc['presets']), '· 장소', len(doc['places']), '· 도시 생활 소품 일곱')
