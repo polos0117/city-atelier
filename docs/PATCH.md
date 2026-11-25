@@ -8,6 +8,13 @@
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
 
+## 2026-11-26 · claude · 일상컷 머리 연출 13가지 · 짧은 머리 거르기
+- lib/prompt-spec.js — 사용자 「일상컷 머리연출도」: 일상컷 머리 연출 5 → 13(반묶음 · 똥머리 · 옆으로 묶기 · 양갈래 · 핀으로 틀어올림 · 한쪽으로 넘김 · 귀 뒤로 넘김 · 머리띠)
+- data/casual-tree-v2.json — ambience.hair 에 긴 머리만(long — 묶음 · 땋음 · 반묶음 · 똥머리 · 옆 · 양갈래 · 핀), ambience.short_hairs(짧은 커트 · 픽시 · 단발 · 비대칭 단발 · 핑거 웨이브 · 삐죽 · 올백 · 언더컷 · 울프컷)
+- lib/casual-tree-v2.js — style-atelier shared 원본에서 sync: ambience — 설계 헤어스타일(opts.hairKey)이 표 short_hairs 가운데면 긴 머리 연출(hair.*.long)을 안 고른다
+- tools/casual-plan.cjs — 계획기가 그 세계 설계 헤어스타일을 넘긴다(장수 120명 × 일곱 컷 시험: 머리 연출 209컷에 13가지 고르게, 짧은 머리에 긴 연출 0)
+- ?v — prompt-spec 55 · casual-tree-v2 21
+
 ## 2026-11-26 · gpt · 자금성 판타지 대표컷과 일상컷 등록
 - 그림 저장소 img/ · records/beijing-forbiddencity/ — 사용자가 선택한 세계컷 2번과 동일 인물의 일상컷 10장, 생성 계획·지시문·검수 기록을 추가. 기존 이미지 보존, 재생성 없음.
 - data/img.json · data/casual-index.json — 등록기와 일상컷 색인기로 자금성 판타지 11장 및 장면·의상 정보를 반영. 기존 등록 정보와 날짜를 보존.

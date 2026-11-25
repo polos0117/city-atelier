@@ -611,13 +611,13 @@ function momentize(cuts, old = [], ra = Math.random, usage = null, world = '') {
   }
   return cuts;
 }
-function ambient(cuts, old = [], ra = Math.random, city = '', usage = null) {
+function ambient(cuts, old = [], ra = Math.random, city = '', usage = null, hairKey = '') {
   /* 전체 기록 비율(원소 2026-11-18 사용자 A) — 그림 저장소의 다른 카드 컷에서 센 시간대 · 빛 · 날씨 횟수를 0 ~ 1 로(가장 많이 쓴 값이 1). 묶음 안 횟수 다음으로 본다 */
   const U0 = usage ? usageOf(usage) : null, global = {};
   if (U0) for (const k of ['time', 'light', 'cityWeather']) { const m = U0[k] || {}, top = Math.max(1, ...Object.values(m)); global[k] = Object.fromEntries(Object.entries(m).map(([x, n]) => [x, n / top])); }
   const used = {}, note = c => [...AMBIENT, 'season', 'cityWeather', 'camera'].forEach(k => { if (c[k]) { used[k] = used[k] || {}; used[k][c[k]] = (used[k][c[k]] || 0) + 1; } });
   old.filter(c => !c.sfree).forEach(note);
-  const opts = { times: [], hairs: (T.CASUAL.hairs || []).map(x => x.key), used, global };   /* 시간대는 생활 장면표(lifeAmbience) — 트리 시간대 · 날씨는 안 쓴다 */
+  const opts = { times: [], hairs: (T.CASUAL.hairs || []).map(x => x.key), used, global, hairKey };   /* 시간대는 생활 장면표(lifeAmbience) — 트리 시간대 · 날씨는 안 쓴다 */
   for (const c of cuts) {
     /* 장면 자유 칸은 맡은 쪽이 짓는다 — 시간대만 준다(원소 2026-11-18 사용자 B — 비면 늘 따뜻한 밤 실내로 그렸다). 장소가 없어 생활 장면표 시간대 모두에서 */
     if (c.sfree) { const t = leastOf(used, global, ra)('time', timesAt(c.place)); if (t) { c.time = t; note({ time: t }); } else delete c.time; continue; }
@@ -814,9 +814,9 @@ function plan(card, slots, old, { seed = Date.now(), usage = {}, others = [], re
     if (!old.some(c => c.situ) && plainAt.length && !sPool.length) continue;
     situate(cuts, sPool.length ? sPool[Math.floor(rs() * sPool.length)] : -1, old, others, rs);
     if (sPool.length && !cuts.some(c => c.situ)) continue;
-    ambient(cuts, old, rng((seed ^ mix ^ 0x7f4a7c15) >>> 0), card.city, usage); momentize(cuts, old, rng((seed ^ mix ^ 0x61c88647) >>> 0), usage, card.world || '');
+    ambient(cuts, old, rng((seed ^ mix ^ 0x7f4a7c15) >>> 0), card.city, usage, ((P.lookOf(card.c, card.world || '') || {}).silhouette || {}).hair || ''); momentize(cuts, old, rng((seed ^ mix ^ 0x61c88647) >>> 0), usage, card.world || '');
     const free = makeFree(card.key, freeNums, freeKinds, cuts, old, others, recent, rng((seed ^ mix ^ 0x1b873593) >>> 0), card.world || '');
-    ambient(free, [...old, ...cuts], rng((seed ^ mix ^ 0x68e31da4) >>> 0), card.city, usage);   /* 자유 설계 칸의 시간대(원소 B) — 자유 칸은 ambient 뒤에 생겨 원소 계획기에선 시간대가 안 붙었다. 장면 컷과 덜 겹치는 시간대 */
+    ambient(free, [...old, ...cuts], rng((seed ^ mix ^ 0x68e31da4) >>> 0), card.city, usage, ((P.lookOf(card.c, card.world || '') || {}).silhouette || {}).hair || '');   /* 자유 설계 칸의 시간대(원소 B) — 자유 칸은 ambient 뒤에 생겨 원소 계획기에선 시간대가 안 붙었다. 장면 컷과 덜 겹치는 시간대 */
     if (check([...cuts, ...free], card, old, others).length) continue;
     const all = [...old, ...cuts, ...free];
     return { cuts: [...cuts, ...free], attempt: phase * 400 + attempt, prune, required: [...all.filter(c => c.lifeMust).map(c => 'life:' + c.place), ...all.map(requiredType).filter(Boolean), ...all.filter(isCosplay).map(c => 'cosplay:' + (c.cosplay || {}).game + '/' + (c.cosplay || {}).character + '/' + (c.cosplay || {}).cut),
