@@ -185,7 +185,10 @@ try {
   bad({ situ: 'wet' }, /상황 노출은 보통 컷에만/, '코스프레에 상황', iC);
   bad({ gnot: 'x' }, /갈래 자유가 피할 옷/, '갈래 자유 gnot', a.findIndex(c => c.gfree));
   card.world = 'steampunk';
-  const ph = C.check([{ ...c0, use: 'phone_selfie' }], card, []);
+  /* 그 세계에만 있는 장소(worlds_only)의 컷이면 장소에서 먼저 걸려 소품 동작까지 안 간다 — 어느 세계에나 있는 장소의 컷으로(2026-11-26 표본이 바뀌어 c0 이 판타지 장소였다) */
+  const WO = new Set(JSON.parse(fs.readFileSync(path.join(__dirname, '../data/casual-tree-v2.json'), 'utf8')).extra_places.filter(x => x.worlds_only).map(x => x.key));
+  const cAny = a.find(c => C.kindOf(c) === 'plain' && !c.situ && !WO.has(c.place)) || c0;
+  const ph = C.check([{ ...cAny, use: 'phone_selfie' }], card, []);
   assert(ph.some(e => /phone_selfie 는 steampunk 에서 안 쓴다/.test(e)), '스팀펑크 셀카');
 }
 /* 코스프레 고르기 — 주인공 하나 게임은 그 주인공 · 안 입은 재단, 등장인물 많은 게임은 안 쓴 캐릭터, 다 쓰면 2회차, 쓴 것은 그림 저장소 기록 + 계획 예약 */
