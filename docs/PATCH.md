@@ -12,6 +12,9 @@ Total output lines: 925
 
 
 
+## 2026-11-26 · gpt · 더 록스 판타지 등록
+- data/img.json — 사용자가 선택한 세계컷 3번과 일상컷 10장의 자동 등록 및 썸네일 생성 완료를 확인했다.
+
 ## 2026-11-26 · claude · 세계 장면 추천은 그 세계 장소에서만
 - data/casual-tree-v2.json — 사용자 「피티룸에 정령의 숲 발담구기가 왜 나와?」(원소 — 옷가게 피팅룸에 추천 mg_spring 「정령의 샘에 발 담그기」: 추천은 자세 조합뿐이라 걸터앉을 데만 있으면 어디서나 골라졌다): 세계 장면 추천(mg_ · sp_ · cp_ · wx_ · mc_ · zg_)에 needs — 마법 magic · 증기 steam · 네온 neon · 무중력 zero_g, 정령의 샘은 magic + water. 망원경 들여다보기(spyglass_look)에 gaze into_prop(빠져 있어 sp_spyglass 가 증기 장소에서 한 번도 안 맞았다), mc_catwalk 시선 위 → 먼 곳(위는 하늘이 있어야 — 실내 격납고)
 - lib/casual-tree-v2.js — 공용(style-atelier/shared): 추천 needs
