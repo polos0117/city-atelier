@@ -6970,9 +6970,2801 @@
       ],
       "worlds": {
         "fantasy": {
-          "ko": "두 대륙에 걸친 해협의 황금 돔 왕도 이스탄불 — 장밋빛 금빛 새벽, 유럽과 아시아 두 기슭 사이로 빛나는 해협이 흐르고, 옛 도시의 일곱 언덕엔 반쪽 돔이 층층이 흘러내리는 거대한 돔 전각들과 연필처럼 가는 첨탑들이 솟으며, 가장 오래되고 큰 돔은 둘레 아치 창 마흔 개에서 쏟아지는 빛으로 떠 있는 듯하고, 그 맞은편엔 첨탑 여섯을 거느리고 푸른 꽃 타일이 빛나는 돔 전각, 금빛 물길 건너 언덕
-... 259016 bytes omitted ...
-
+          "ko": "두 대륙에 걸친 해협의 황금 돔 왕도 이스탄불 — 장밋빛 금빛 새벽, 유럽과 아시아 두 기슭 사이로 빛나는 해협이 흐르고, 옛 도시의 일곱 언덕엔 반쪽 돔이 층층이 흘러내리는 거대한 돔 전각들과 연필처럼 가는 첨탑들이 솟으며, 가장 오래되고 큰 돔은 둘레 아치 창 마흔 개에서 쏟아지는 빛으로 떠 있는 듯하고, 그 맞은편엔 첨탑 여섯을 거느리고 푸른 꽃 타일이 빛나는 돔 전각, 금빛 물길 건너 언덕엔 높은 원뿔 지붕을 인 둥근 돌탑, 해협 입구 작은 섬엔 꼭대기에 불을 밝힌 흰 탑, 비단 돛 갤리선들이 두 기슭을 오가고 튤립 정원과 비단 등롱이 빛난다",
+          "en": "a radiant capital of a myth-world spanning two continents at a rose-gold dawn: a shining strait running between the shores of Europe and Asia; on the seven hills of the old city vast domed halls with half-domes cascading down their sides and slender, pencil-thin minarets beside them, the oldest and greatest dome seeming to float on a ring of forty arched windows pouring with light, and facing it a domed hall with six slender minarets and walls glowing with blue flowered tiles; across a golden inlet a round stone tower crowned with a tall conical cap on its hill; at the mouth of the strait a small white tower on an islet with a lamp burning at its top; galleys with silk sails crossing between the two shores, tulip gardens in bloom and silk lanterns glowing in the air",
+          "scenes": [
+            {
+              "key": "terrace",
+              "ko": "옛 도시 언덕의 대리석 테라스, 흘러내리는 돔들 앞",
+              "en": "on a high marble terrace of the old city at dawn, great domes with cascading half-domes and slender minarets rising behind her and the shining strait between the two continents glowing gold beyond"
+            },
+            {
+              "key": "tilehall",
+              "ko": "궁전 누각의 타일 방 — 금별 박힌 남빛 천장",
+              "en": "in a palace pavilion walled with turquoise, cobalt and white flowered tiles under a deep-blue ceiling studded with golden stars, silk carpets underfoot and the shining strait glimpsed through its arched windows"
+            },
+            {
+              "key": "islet",
+              "ko": "해협 입구 작은 섬 흰 탑의 돌 선착장",
+              "en": "on the stone landing of the small white tower on its islet at the mouth of the strait, its lamp glowing above her, galleys with silk sails gliding past and the domes of the old city rising gold across the water"
+            }
+          ],
+          "look": {
+            "face": {
+              "face_shape": "square_soft",
+              "eyes": "deep_set",
+              "brows": "arched_thin",
+              "nose": "straight_narrow",
+              "lips": "heart_full",
+              "eye_color": "forest_green",
+              "age": "mid_20s",
+              "impression": "seductive",
+              "skin_tone": "warm_beige",
+              "eye_size": "medium",
+              "eye_tilt": "level",
+              "mark": "mole_lip",
+              "expr": "soft_smile"
+            },
+            "silhouette": {
+              "body": "voluptuous",
+              "hair": "long_curly",
+              "hair_color": "bright_red",
+              "bangs": "parted"
+            },
+            "why": "해협 입구 작은 섬 탑의 등불로 두 대륙 사이 뱃길을 지키는 튤립 궁정의 등불 공주 — 풍만하고 화려한 사람. 가슴 · 엉덩이 · 허벅지가 풍성한 곡선(voluptuous) · 등까지 흘러내리는 긴 나선 곱슬(long_curly) · 이즈니크 타일의 튤립 빛 붉은 머리(bright_red) · 가운데 가르마(parted — 돔 금관이 가운데 선다) · 높이 선 깃에 어깨 망토를 겹치고 넓은 소매가 늘어지는 긴 겉옷(mage_robe — 오스만 카프탄 재단)으로 실루엣이 길고 풍성하다. 턱의 각이 부드러운 얼굴 · 부드럽게 깊은 눈 · 가늘게 휜 눈썹 · 콧대가 곧고 가는 코 · 도톰한 하트 입술, 숲빛 초록 눈(forest_green), 따뜻한 베이지 피부(warm_beige)에 입가의 작은 점(mole_lip), 20대 후반, 관능적이고 섹시한 인상(seductive)에 입을 다문 옅은 미소(soft_smile). 스팀펑크(둥근형 · 납빛 숏컷 · 탄탄한 굴곡 몸 · 금빛 도는 피부) · 사이버펑크(달걀형 · 두 빛깔 긴 생머리 · 늘씬 글래머 · 올리브빛 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울 · 도쿄 · 베이징 · 파리 · 런던 · 로마 · 뉴욕 사람(랜드마크 포함)과도 셋 이상 다르다. 2026-11-23 인상 glamorous → seductive(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
+          },
+          "hold": {
+            "en": "a small pierced gold lantern with panes of turquoise glass, a warm light glowing within"
+          },
+          "motif": {
+            "ko": "이즈니크 꽃무늬의 오스만 카프탄 재단 궁정 겉옷 — 상아빛 비단 금란 앞판과 넓은 소매에 청록 · 코발트 · 산호빛 빨강의 튤립 · 카네이션 · 톱니진 긴 사즈 잎을 짜 넣고 가장자리는 금테, 머리엔 작은 돔과 반쪽 돔이 층층이 올라가 큰 돔 하나로 모이는 금세공 관(아야 소피아 · 블루 모스크의 흘러내리는 돔 꼴)에 터키석 — 손에는 청록 유리를 끼운 구멍 뚫린 작은 금 등불",
+            "en": "an Ottoman kaftan-cut court robe of ivory silk brocade worn open over a long gown, its front panels and wide sleeves woven with Iznik tulips, carnations and long serrated saz leaves in turquoise, cobalt blue and coral red and edged in gold; on her head a gold filigree crown built as a cascade of small domes and half-domes stepping up to one great central dome, set with turquoises"
+          },
+          "palette": {
+            "en": "Iznik turquoise, cobalt blue and burnished gold on ivory, with coral red only in the tulips",
+            "hex": [
+              "#1F9E9A",
+              "#1E3F8F",
+              "#C9A13B",
+              "#D2553F"
+            ],
+            "why": "판타지만 따로 — 도시 palette 의 오스만 빨강을 붉은 곱슬머리 · 금빛 궁정 옷에 함께 실으면 붉은 금빛으로 몰려(서울 판타지 「너무 붉은색이라 중국 느낌」 을 처음부터 따름) 이즈니크 타일의 청록 · 코발트 결이 묻혀서, 청록 · 코발트 · 금을 상아 바탕에 두고 빨강은 튤립 꽃잎(산호빛 볼 레드)에만."
+          },
+          "card_ko": {
+            "look": "튤립빛 붉은 곱슬 · 풍만",
+            "motif": "이즈니크 카프탄 · 돔 금관"
+          },
+          "sil": "mage_robe",
+          "own_vocab": {
+            "casual_world": {
+              "en": "a city of a myth-world where East and West meet across a shining strait: carved stone and painted wood, glazed tiles of turquoise and cobalt flowers, silk and woven carpets, pierced brass lanterns and drifting spirit lights, tulips with softly glowing petals",
+              "guard_en": "Let the place itself carry this world through its materials, fittings and objects; do not add the city's landmarks, the great domes, the minarets or a skyline unless the place below names them."
+            }
+          }
+        },
+        "steampunk": {
+          "ko": "가스등 동화 이스탄불 — 부드러운 금빛 저녁, 깨끗한 흰 김을 뿜는 외륜 연락선들이 유럽과 아시아 사이 해협을 건너고, 금빛 물길 위 긴 두 층 다리엔 위 난간에 낚싯줄이 늘어서고 아래층엔 등불 켠 찻집들, 언덕 위엔 높은 원뿔 지붕을 인 둥근 돌탑이 서서 꼭대기 회랑에서 비단 · 놋쇠 날개의 비행사들이 바람을 타고 떠오른다, 물가엔 칠한 목조 저택들, 건너편엔 돔과 가는 첨탑의 옛 도시가 빛나고, 하늘엔 줄무늬 기구의 비행선, 가파른 계단 골목엔 가스등과 구멍 뚫린 놋쇠 등불",
+          "en": "a storybook gaslamp-fantasy Istanbul on a soft golden evening: paddle-wheel ferries puffing clean white steam as they cross the strait between Europe and Asia; a long two-level bridge over the golden inlet, anglers' lines dangling from its upper rail and lamp-lit tea rooms along its lower deck; on the hill above, a round stone tower crowned with a tall conical cap, flyers on silk-and-brass gliders launching from its high gallery into the wind; painted wooden mansions along the water's edge; the domes and slender minarets of the old city glowing across the water; airships with striped balloons drifting overhead, and gas lamps and pierced brass lanterns lighting the steep stepped lanes",
+          "scenes": [
+            {
+              "key": "gallery",
+              "ko": "원뿔 지붕 돌탑 꼭대기의 돌 회랑",
+              "en": "on the high stone gallery ringing the top of the conical-capped tower at dusk, the gaslit roofs of the hill falling away below her and paddle-wheel ferries crossing the golden strait toward the far shore"
+            },
+            {
+              "key": "ferrydeck",
+              "ko": "두 대륙을 건너는 외륜 연락선 갑판",
+              "en": "on the deck of a paddle-wheel ferry crossing between the two continents, polished brass rails and a tall funnel puffing clean white steam behind her and the domes and minarets of the old city glowing across the water"
+            },
+            {
+              "key": "bridge",
+              "ko": "금빛 물길 위 긴 철 다리 위층, 낚싯줄 늘어선 난간",
+              "en": "on the upper deck of the long iron bridge over the golden inlet at dusk, anglers' lines dangling from the rail beside her, gas lamps coming on and the conical-capped tower rising on the hill beyond"
+            }
+          ],
+          "look": {
+            "face": {
+              "face_shape": "round",
+              "eyes": "almond_wide",
+              "brows": "angled_sharp",
+              "nose": "broad_soft",
+              "lips": "full_wide",
+              "eye_color": "honey",
+              "age": "early_20s",
+              "impression": "boyish",
+              "skin_tone": "golden_tan",
+              "eye_size": "large",
+              "eye_tilt": "up",
+              "mark": "freckles",
+              "expr": "confident"
+            },
+            "silhouette": {
+              "body": "curvy_athletic",
+              "hair": "short_crop",
+              "hair_color": "lead_silver",
+              "bangs": "side_swept"
+            },
+            "why": "갈라타 탑 꼭대기 회랑에서 비단 · 놋쇠 날개로 남서풍을 타고 해협을 건너는 비행사 — 탄탄하고 날렵한 사람. 운동으로 다진 굴곡 몸(curvy_athletic — 풍만한 가슴 · 둥근 엉덩이) · 바람에 걸리지 않게 짧게 친 머리(short_crop) · 갈라타 탑 원뿔 지붕의 납 빛깔인 어두운 납빛 회색에 은빛 윤기(lead_silver) · 옆으로 넘긴 앞머리(side_swept) · 몸에 맞는 조끼 위로 등에서 넓게 펼쳐지는 놋쇠 날개 하네스(clockwork_harness — 날개는 비단 활공 날개)로 실루엣이 날개가 만드는 꼴이다. 부드럽게 둥근 얼굴 · 자연스러운 크기의 아몬드 눈에 살짝 올라간 눈꼬리 · 깔끔하게 각이 선 눈썹 · 끝이 둥글고 자연스러운 폭의 코 · 도톰하고 자연스러운 폭의 입술, 꿀빛 금색 눈(honey), 금빛이 도는 밝은 피부(golden_tan)에 햇볕 주근깨(freckles), 20대 초반, 사내아이 같은 장난기(boyish)에 침착하고 자신 있는 얼굴(confident — 입은 다문다). 판타지(각이 부드러운 얼굴 · 튤립빛 붉은 곱슬 · 풍만한 몸 · 따뜻한 베이지 피부) · 사이버펑크(달걀형 · 두 빛깔 긴 생머리 · 늘씬 글래머 · 올리브빛 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울 · 도쿄 · 베이징 · 파리 · 런던 · 로마 · 뉴욕 사람(랜드마크 포함)과도 셋 이상 다르다."
+          },
+          "hold": {
+            "en": "a little brass wind vane on a short handle, its tiny cups spinning and a tulip-red silk streamer fluttering from its tip"
+          },
+          "motif": {
+            "ko": "갈라타 탑 원뿔 지붕 모양의 작은 모자 — 작은 아치 창들을 두른 코발트 원통 위에 납빛 비단의 높고 뾰족한 원뿔, 끝엔 놋쇠 꼭지, 등엔 반들거리는 놋쇠 살대에 상아빛 비단을 씌워 청록 사즈 잎과 해협의 물결을 그린 접는 활공 날개 — 손에는 작은 컵이 도는 놋쇠 풍향계(남서풍을 읽는다)",
+            "en": "a little hat shaped like the tower's conical cap — a round cobalt band ringed with tiny arched windows under a tall, pointed cone of lead-grey silk tipped with a brass finial; on her back folding glider wings of ivory silk stretched over polished brass ribs, painted with turquoise saz leaves and the curling waves of the strait"
+          },
+          "card_ko": {
+            "look": "납빛 숏컷 · 탄탄한 곡선",
+            "motif": "원뿔 탑 모자 · 비단 날개"
+          },
+          "sil": "clockwork_harness"
+        },
+        "cyberpunk": {
+          "ko": "두 세기 뒤 이스탄불 — 해협 두 기슭에 걸친 먼 미래 거대 도시, 빛의 다리들이 몇 겹으로 유럽과 아시아를 잇고 소리 없는 수중익 연락선과 비행 차량이 빛나는 물길을 따라 두 대륙 사이를 오가며, 옛 도시의 일곱 언덕은 돔과 가는 첨탑 그대로 거대한 투명 차양 아래 금빛으로 빛나고, 원뿔 지붕의 둥근 돌탑도 그대로 선 채 천천히 도는 빛 고리를 두른다, 아시아 기슭엔 흰 도자기와 청록 유리의 먼 미래 탑들이 튤립 · 카네이션 무늬로 빛나는 결을 두르고 솟으며, 해협 입구 작은 섬의 흰 탑은 물 위로 빛줄기를 보낸다, 맑고 깊은 남빛 밤하늘",
+          "en": "Istanbul two centuries from now, a far-future megacity on both shores of its strait: bridges of light spanning the water between Europe and Asia in several tiers, silent hydrofoil ferries and quiet flying vehicles crossing along glowing lanes; the seven hills of the old city kept exactly as they were, their domes and slender minarets glowing gold beneath a vast clear canopy; the round stone tower with its conical cap kept whole, ringed by a slow halo of light; on the Asian shore far-future towers of white ceramic and turquoise glass rising, their facades traced with glowing tulip and carnation patterns; the small white tower on its islet at the mouth of the strait sending a beam of light across the water, under a clear deep-indigo night sky",
+          "scenes": [
+            {
+              "key": "bridgetower",
+              "ko": "해협 위 다리 탑 꼭대기 유리 데크",
+              "en": "on a glass deck at the top of a bridge tower high over the strait at night, bridges of light spanning the water between the two continents below her and the gold domes of the old city glowing beneath their canopy"
+            },
+            {
+              "key": "islet",
+              "ko": "해협 입구 작은 섬 흰 탑의 선착장, 빛줄기 아래",
+              "en": "on the stone landing of the small white tower on its islet at night, its beam sweeping across the strait above her and hydrofoil ferries gliding past along lanes of light"
+            },
+            {
+              "key": "asianshore",
+              "ko": "아시아 기슭 청록 유리 탑의 테라스",
+              "en": "on a terrace of a turquoise-glass tower on the Asian shore at night, glowing tulip patterns flowing across the facade behind her and the old city's domes and minarets shining gold across the water"
+            }
+          ],
+          "look": {
+            "face": {
+              "face_shape": "oval",
+              "eyes": "round_large",
+              "brows": "low_heavy",
+              "nose": "aquiline",
+              "lips": "small_bow",
+              "eye_color": "iridescent",
+              "age": "mid_20s",
+              "impression": "femme_fatale",
+              "skin_tone": "olive",
+              "eye_size": "medium",
+              "eye_tilt": "level",
+              "mark": "gloss",
+              "expr": "calm"
+            },
+            "silhouette": {
+              "body": "busty_slender",
+              "hair": "long_straight",
+              "hair_color": "pole_tipped",
+              "bangs": "parted"
+            },
+            "why": "두 대륙 사이 해협의 빛의 다리 위에서 건너는 길을 지키는 횡단 관제사 — 길고 고요한 사람. 가는 팔다리에 풍만한 가슴 · 둥근 엉덩이 · 가는 허리(busty_slender) · 길게 곧게 내린 생머리(long_straight) · 은회색 머리가 한쪽은 빨강, 다른 쪽은 파랑으로 물든 머리(pole_tipped — 오스만 빨강과 코발트, 해협의 두 기슭) · 가운데 가르마(parted — 두 빛깔이 갈리는 선) · 몸을 따라 흐르며 은은히 빛나는 살아 있는 직물 드레스(biolume_dress)로 실루엣이 길고 부드럽게 흐른다. 갸름한 달걀형 얼굴 · 자연스러운 크기의 둥근 아몬드 눈 · 눈 위에 조금 낮게 놓인 짙은 눈썹 · 콧대에 부드러운 매부리 곡선 · 큐피드 활이 또렷한 입술, 금 · 장미 · 푸른빛으로 바뀌는 무지갯빛 눈(iridescent), 올리브빛 피부(olive)에 윤기 나는 누드 입술(gloss), 20대 중반, 위험한 팜파탈 인상(femme_fatale)에 차분한 얼굴(calm). 판타지(각이 부드러운 얼굴 · 튤립빛 붉은 곱슬 · 풍만한 몸 · 따뜻한 베이지 피부) · 스팀펑크(둥근형 · 납빛 숏컷 · 탄탄한 굴곡 몸 · 금빛 도는 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울 · 도쿄 · 베이징 · 파리 · 런던 · 로마 · 뉴욕 사람(랜드마크 포함)과도 셋 이상 다르다. 2026-11-23 인상 elegant → femme_fatale(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
+          },
+          "hold": {
+            "en": "a tulip-shaped glass of amber tea in a slim chrome holder, a ring of soft turquoise light glowing at its base"
+          },
+          "motif": {
+            "ko": "해협처럼 가운데로 갈린 두 대륙 드레스 — 한쪽은 짙은 코발트, 다른 쪽은 이즈니크 청록의 빛나는 스마트 직물에 둘 사이를 물처럼 흐르는 흰 빛의 솔기, 두 쪽 위로 이즈니크 튤립 · 카네이션 · 사즈 잎 무늬가 은은한 빛으로 떠간다 — 손에는 크롬 받침에 끼운 튤립 잔의 호박빛 차",
+            "en": "a long gown of glowing smart fabric divided down the middle like the strait — one side deep cobalt, the other Iznik turquoise — with a seam of flowing white light running between them like the water, and Iznik tulips, carnations and saz leaves drifting across both halves in soft light"
+          },
+          "card_ko": {
+            "look": "두 빛깔 생머리 · 늘씬 글래머",
+            "motif": "두 대륙 드레스 · 튤립 빛"
+          },
+          "sil": "biolume_dress"
+        }
+      },
+      "design_note": "설계 상태: 시안(claude, 2026-11-21) — 시험 그림 전. 사용자 「남은 도시도 설계해줘」(이스탄불 차례), 베이징 · 런던 · 파리 · 로마 · 뉴욕 · 도쿄 꼴을 따랐다. 세 사람 모두 튀르키예인 성인 여성 — 피부 · 얼굴은 look 이 정하고(판타지 따뜻한 베이지 · 스팀펑크 금빛 도는 밝은 피부 · 사이버펑크 올리브빛) 인종 낱말은 쓰지 않는다. 얼굴 칸 다섯은 세 세계끼리 모두 다르고, 서울 · 도쿄 · 베이징 · 파리 · 런던 · 로마 · 뉴욕 사람(랜드마크 포함) 누구와도 셋 이상 다르다. 체형은 셋 다 굴곡형(풍만 voluptuous · 탄탄한 굴곡 curvy_athletic · 늘씬 글래머 busty_slender — 사용자 2026-11-20), 머리색 셋(튤립 빨강 bright_red · 납빛 회색 lead_silver · 한쪽 빨강 한쪽 파랑으로 물든 은회색 pole_tipped)은 다른 도시가 아직 안 쓴 색이고, 헤어스타일 짧은 머리 short_crop 도 처음 쓴다. 이야기 줄기는 「두 대륙에 걸친 도시 — 해협을 건너는 길」: 판타지는 해협 입구 작은 섬 탑의 등불, 스팀펑크는 갈라타 탑에서 날개로 해협을 건넌 이야기, 사이버펑크는 두 대륙을 잇는 빛의 다리와 두 빛깔로 갈린 옷 · 머리. 아야 소피아 · 블루 모스크는 예배하는 곳이라 돔 · 반쪽 돔이 층층이 흘러내리는 꼴과 이즈니크 타일 꽃무늬만 디자인 모양으로 빌렸다 — 종교 글씨 · 서예 · 기도 · 종교 옷은 싣지 않았고, 장면도 예배당 안이 아니라 테라스 · 궁전 누각 · 바깥 하늘선이다. 사실 근거: 아야 소피아 — 537년 완공, 펜던티브 위 큰 돔이 아치 창 40개 위에 얹혀 빛 때문에 떠 있는 듯 보인다, 높이 55.6m · 지름 약 31m, 동서로 반쪽 돔(https://en.wikipedia.org/wiki/Hagia_Sophia), 블루 모스크 — 1609~1617년, 가운데 큰 돔을 네 반쪽 돔이 둘러싸고 첨탑 여섯, 안은 수천 장의 이즈니크 타일과 푸른 꽃무늬(https://en.wikipedia.org/wiki/Sultan_Ahmed_Mosque), 이즈니크 도자기 — 코발트 · 청록에 뒤에 녹색 · 연보라, 16세기 중반부터 볼 레드(산호빛 빨강), 무늬는 톱니진 긴 사즈 잎과 로제트, 튤립 · 카네이션 · 장미 · 히아신스(https://en.wikipedia.org/wiki/%C4%B0znik_pottery), 보스포루스 — 흑해와 마르마라해를 잇고 서쪽 기슭은 유럽 · 동쪽 기슭은 아시아의 시작, 도시가 두 기슭에 걸친다(https://en.wikipedia.org/wiki/Bosporus), 1973년 첫 다리 전까지 두 쪽을 잇는 길은 배뿐, 1837년 첫 증기 연락선(외륜선)(https://en.wikipedia.org/wiki/Ferries_in_Istanbul · https://en.wikipedia.org/wiki/Bosphorus_Bridge), 갈라타 탑 — 1348년 제노바인이 세운 둥근 돌탑에 원뿔 지붕(지금 것은 납을 입힌 철근 콘크리트), 17세기 이야기로 한 사람이 날개를 달고 탑 꼭대기에서 남서풍을 타고 해협 건너 위스퀴다르까지 날았다고 전한다(https://en.wikipedia.org/wiki/Galata_Tower · https://en.wikipedia.org/wiki/Hez%C3%A2rfen_Ahmed_%C3%87elebi), 처녀의 탑 — 해협 남쪽 입구 위스퀴다르 앞 작은 섬, 1721년 불탄 뒤 다시 지어 등대로 썼다(https://en.wikipedia.org/wiki/Maiden%27s_Tower), 톱카프 궁전 — 짙은 남빛에 금별을 박은 천장 · 푸른 · 흰 · 청록 타일 벽 · 카펫의 방, 이즈니크 타일 서고(https://en.wikipedia.org/wiki/Topkap%C4%B1_Palace), 카프탄 — 오스만 시대 궁정에서 공들여 지어 손님에게 내리던 긴 겉옷(https://en.wikipedia.org/wiki/Kaftan), 갈라타 다리 — 금각만을 건너는 다리, 난간의 낚시꾼(https://en.wikipedia.org/wiki/Galata_Bridge). 상징은 넷에 「처녀의 탑」 하나를 더해 다섯(검사기 상한) — 판타지 세계 · 장면과 등불지기 직업, 사이버펑크 장면이 싣는다. 화면 상징 한 줄이 40자 안에 들게 블루 모스크 줄의 ko 를 「블루 모스크(술탄 아흐메트 모스크) — …」 로 앞뒤만 바꿨다(뜻 · en · src 그대로). 처녀의 탑 전설의 뱀 · 탑 꼭대기 청동 새 장식 같은 생물은 쓰지 않았고(지시문 Avoid 의 living creature), 갈매기도 근거를 못 찾아 넣지 않았다. 그랜드 바자르의 모자이크 등불 가게는 근거를 못 찾아 생활 장면에 넣지 않았다. 지시문에 상표 · 실존 인물 이름은 쓰지 않는다(날아간 이 · 술탄 · 건축가 · 구단 · 항공사 이름도 생김새로 — 아야 소피아는 「the oldest and greatest dome」, 블루 모스크는 「a domed hall with six slender minarets」, 갈라타 탑은 「a round stone tower crowned with a tall conical cap」, 처녀의 탑은 「a small white tower on an islet」). 판타지만 세계 palette(palette.why). 판타지 일상컷 세계 줄은 공용(서양 신화 세계)이 동서가 만나는 이스탄불과 어긋나 own_vocab.casual_world 를 따로 둔다. 사이버펑크 세계 글 · 장면엔 비를 박지 않았다(날씨는 생활 장면표).",
+      "card_ko": {
+        "symbols": "아야 소피아 · 블루 모스크 · 보스포루스 · 갈라타 탑 · 처녀의 탑"
+      },
+      "landmarks": [
+        {
+          "key": "cistern",
+          "ko": "바실리카 저수조",
+          "en": "the Basilica Cistern",
+          "src": "https://en.wikipedia.org/wiki/Basilica_Cistern",
+          "lat": 41.0081,
+          "lon": 28.9778,
+          "latlon_src": "https://en.wikipedia.org/wiki/Basilica_Cistern",
+          "persona": "6세기 옛 도시 땅 밑에 대리석 기둥 336개를 숲처럼 세운 물의 궁전 — 고요하고 깊으며, 오래 잊혔다 다시 찾아진 것을 조용히 지킨다.",
+          "worlds": {
+            "fantasy": {
+              "ko": "물의 지하 궁전 — 두 대륙에 걸친 황금 돔 왕도의 땅 밑, 긴 돌계단을 내려가면 잎 무늬 기둥머리를 인 대리석 기둥 수백 개가 줄지어 숲처럼 선 어둑한 물의 전당이 펼쳐지고, 낮은 벽돌 둥근 천장 아래 고요한 물 위로 영혼의 빛과 작은 등불 배가 기둥 사이를 떠간다",
+              "en": "a hushed underground water palace beneath the golden-domed capital of a myth-world spanning two continents: down a long flight of worn stone steps, hundreds of marble columns crowned with carved leafy and scrolled capitals stand in long, even rows like a stone forest, holding up low vaults of warm brick over a vast still pool; drifting spirit lights and small lantern-lit boats glide between the columns, their glow mirrored in the dark, clear water",
+              "scenes": [
+                {
+                  "key": "boat",
+                  "ko": "기둥 사이를 저어 가는 등불 배",
+                  "en": "rowing a small lantern-lit boat between the rows of marble columns, her light rippling across the still water and the brick vaults above her"
+                },
+                {
+                  "key": "tearcolumn",
+                  "ko": "눈물 무늬가 새겨진 기둥 곁",
+                  "en": "beside the one column carved all over with raised teardrop and eye-like patterns, cool water-light shimmering across its stone"
+                },
+                {
+                  "key": "steps",
+                  "ko": "물의 전당으로 내려가는 돌계단",
+                  "en": "on the long stone steps descending into the hall of water, the forest of columns fading into soft blue darkness below her"
+                }
+              ],
+              "look": {
+                "face": {
+                  "face_shape": "heart",
+                  "eyes": "droopy_soft",
+                  "brows": "soft_round",
+                  "nose": "small_button",
+                  "lips": "small_bow",
+                  "eye_color": "mint",
+                  "age": "mid_20s",
+                  "impression": "melancholic",
+                  "skin_tone": "fair",
+                  "eye_size": "large",
+                  "eye_tilt": "down",
+                  "mark": "mole_eye",
+                  "expr": "wistful"
+                },
+                "silhouette": {
+                  "body": "willowy_curvy",
+                  "hair": "mermaid_waves",
+                  "hair_color": "teal",
+                  "bangs": "curtain"
+                },
+                "why": "땅 밑 물의 전당에서 등불 배를 저어 기둥 사이 물길을 지키는 물의 마법사 — 이스탄불 판타지의 풍만한 튤립빛 붉은 곱슬 등불 공주와 달리 길고 부드럽고 쓸쓸한 사람. 팔다리가 길고 부드러운 곡선 몸(willowy_curvy) · 허리까지 흘러내리는 인어 웨이브(mermaid_waves) · 저수조 물빛 같은 청록(teal) 머리 · 가르마 커튼 앞머리, 눈은 연한 민트빛(mint). 하트형 얼굴 · 눈꼬리가 순하게 처진 눈 · 부드러운 둥근 눈썹 · 끝이 둥근 코 · 큐피드 활이 또렷한 입술, 흰 피부(fair)에 눈 밑 점 하나, 20대 중반의 쓸쓸한 인상(melancholic)에 입을 다문 아련한 미소(wistful). 얼굴 칸 다섯이 이스탄불 판타지 사람과 다 다르다."
+              },
+              "hold": {
+                "en": "a small lantern of pale sea-green glass in which a drop of living water-light drifts"
+              },
+              "motif": {
+                "ko": "물빛 비단 드레스의 가슴판과 소매 끝에 은실로 수놓은 눈물 · 눈 무늬(저수조의 새겨진 기둥), 머리엔 잎이 말린 기둥머리를 작게 깎아 은으로 이은 흰 대리석 관 — 손에는 물빛이 떠도는 연녹 유리 등불",
+                "en": "a gown of water-green silk whose bodice and sleeve ends are embroidered in silver with the raised teardrop and eye-like pattern of the carved column, and a circlet of tiny white-marble column capitals with curling acanthus leaves, joined in silver"
+              },
+              "card_ko": {
+                "look": "청록 인어 웨이브 · 버들 곡선",
+                "motif": "눈물 무늬 비단 · 기둥머리 관"
+              },
+              "sil": "tide_oracle"
+            },
+            "steampunk": {
+              "ko": "가스등 동화 이스탄불의 물길 — 부드러운 금빛 저녁, 북쪽 숲에서 옛 도시로 물을 끌어오는 긴 돌 수도교의 아치를 따라 놋쇠 관과 밸브 바퀴가 이어지고, 땅 밑 기둥 숲 저수조엔 나무 보행로를 따라 가스등이 켜지며, 고요한 물가의 놋쇠 수위계와 펌프가 깨끗한 흰 김을 뿜는다",
+              "en": "the waterworks of a storybook gaslamp-fantasy Istanbul on a soft golden evening: a long stone aqueduct of tall arches carrying water from the northern forest into the old city, polished brass pipes and valve wheels running along its arches; beneath the city, the forest of marble columns in the great underground cistern, raised wooden walkways lit by gas lamps between them, and brass water gauges and pumps puffing clean white steam beside the still water",
+              "scenes": [
+                {
+                  "key": "walkway",
+                  "ko": "가스등 켜진 기둥 숲 저수조의 나무 보행로",
+                  "en": "on a raised wooden walkway between the marble columns of the underground cistern, gas lamps glowing along the rail and their light mirrored in the still water"
+                },
+                {
+                  "key": "valves",
+                  "ko": "수도교 물이 드는 놋쇠 밸브실",
+                  "en": "in the brass valve chamber where the aqueduct water enters the cistern, polished valve wheels, pipes and gauges around her and clean white steam drifting in warm lamplight"
+                },
+                {
+                  "key": "aqueduct",
+                  "ko": "금빛 저녁의 돌 수도교 위",
+                  "en": "on top of the long stone aqueduct at golden dusk, brass pipes running beside her along its arches and the domes and slender minarets of the old city glowing beyond"
+                }
+              ],
+              "look": {
+                "face": {
+                  "face_shape": "diamond",
+                  "eyes": "narrow_upturned",
+                  "brows": "straight_thick",
+                  "nose": "straight_narrow",
+                  "lips": "thin_long",
+                  "eye_color": "amber",
+                  "age": "mid_20s",
+                  "impression": "sharp",
+                  "skin_tone": "olive",
+                  "eye_size": "medium",
+                  "eye_tilt": "up",
+                  "mark": "winged_liner",
+                  "expr": "focused"
+                },
+                "silhouette": {
+                  "body": "strong_curvy",
+                  "hair": "low_ponytail",
+                  "hair_color": "copper",
+                  "bangs": "none"
+                },
+                "why": "숲의 물을 수도교로 끌어와 땅 밑 저수조에 채우는 물길 기사 — 이스탄불 스팀펑크의 납빛 숏컷 날개 비행사와 달리 어깨가 단단하고 곡선이 뚜렷한 일꾼. 어깨 넓고 탄탄하되 풍만한 곡선 몸(strong_curvy) · 목덜미에서 낮게 묶은 포니테일(low_ponytail) · 잘 닦은 구리빛 붉은 머리(copper) · 앞머리 없이 드러낸 이마, 눈은 호박빛(amber). 다이아몬드형 얼굴 · 눈꼬리가 살짝 올라간 아몬드 눈 · 곧고 짙은 눈썹 · 콧대가 곧고 가는 코 · 가는 입술, 올리브빛 피부(olive)에 날렵한 아이라인, 20대 후반의 날 선 인상(sharp)에 일에 집중한 얼굴(focused). 얼굴 칸 다섯이 이스탄불 스팀펑크 사람과 다 다르다."
+              },
+              "hold": {
+                "en": "a long polished brass valve key with a turquoise-enamelled grip"
+              },
+              "motif": {
+                "ko": "기둥 숲을 닮은 세로 홈 놋쇠 단추가 줄지은 몸에 맞는 물빛 조끼와 대리석빛 소매, 허리엔 작은 밸브 바퀴와 수위계를 단 놋쇠 공구 띠, 머리엔 바다빛 렌즈 고글 — 손에는 청록 칠보 손잡이의 긴 놋쇠 밸브 열쇠",
+                "en": "a fitted water-blue waistcoat closed with a row of brass buttons fluted like little marble columns, over marble-white sleeves; a brass tool belt hung with tiny valve wheels and a small water gauge, and goggles with sea-green lenses pushed up on her head"
+              },
+              "card_ko": {
+                "look": "구리빛 낮은 포니테일 · 탄탄",
+                "motif": "기둥 단추 조끼 · 밸브 띠"
+              },
+              "sil": "engineer"
+            },
+            "cyberpunk": {
+              "ko": "두 세기 뒤 이스탄불의 땅 밑 — 먼 미래 거대 도시 아래 기둥 숲 저수조는 옛 모습 그대로 남아 도시의 물과 기억을 품은 빛의 전당이 되고, 대리석 기둥 수백 개와 벽돌 둥근 천장 위로 옛 도시의 기억이 천천히 빛으로 흐르며, 거울 같은 물 위엔 맑은 유리 보행로가 떠 있다",
+              "en": "the underground heart of Istanbul two centuries from now: beneath the far-future megacity the forest of marble columns in the ancient cistern is kept exactly as it was, now a hall of light that holds the city's water and memory; slow projections of the old city's past drift across hundreds of columns and brick vaults, and floating walkways of clear glass hover over the still, mirror-dark water",
+              "scenes": [
+                {
+                  "key": "glasswalk",
+                  "ko": "물 위에 뜬 유리 보행로, 빛이 흐르는 기둥 사이",
+                  "en": "on a floating glass walkway over the still water, projected light flowing slowly up the marble columns around her"
+                },
+                {
+                  "key": "tearcolumn",
+                  "ko": "빛의 눈물이 흐르는 새겨진 기둥",
+                  "en": "beside the column carved with teardrop and eye-like patterns, soft light tracing the carved tears as they seem to flow down the stone"
+                },
+                {
+                  "key": "mirror",
+                  "ko": "기억이 비치는 물거울",
+                  "en": "at the edge of the mirror-dark water, glowing memories of the old city reflected around her between the rows of columns"
+                }
+              ],
+              "look": {
+                "face": {
+                  "face_shape": "long",
+                  "eyes": "almond_wide",
+                  "brows": "arched_thin",
+                  "nose": "upturned",
+                  "lips": "heart_full",
+                  "eye_color": "silver_grey",
+                  "age": "early_20s",
+                  "impression": "mysterious",
+                  "skin_tone": "warm_beige",
+                  "eye_size": "medium",
+                  "eye_tilt": "level",
+                  "mark": "bare",
+                  "expr": "pensive"
+                },
+                "silhouette": {
+                  "body": "petite_voluptuous",
+                  "hair": "hime_cut",
+                  "hair_color": "glass_clear",
+                  "bangs": "straight"
+                },
+                "why": "땅 밑 기둥 숲에 도시의 기억을 빛으로 띄우는 빛의 전당 큐레이터 — 이스탄불 사이버펑크의 길고 늘씬한 두 빛깔 생머리 횡단 관제사와 달리 작고 풍만하며 반듯한 사람. 키는 작되 풍만한 몸(petite_voluptuous) · 볼 옆을 반듯하게 자른 히메컷(hime_cut) · 맑은 유리빛 푸른 머리(glass_clear) · 일자 앞머리, 눈은 연한 은회색(silver_grey). 부드럽게 긴 달걀 얼굴 · 자연스러운 크기의 아몬드 눈 · 가늘게 휜 눈썹 · 끝이 살짝 들린 코 · 도톰한 하트 입술, 따뜻한 베이지 피부(warm_beige)에 맨 얼굴, 20대 초반의 속을 알 수 없는 신비로운 인상(mysterious)에 생각에 잠긴 얼굴(pensive). 얼굴 칸 다섯이 이스탄불 사이버펑크 사람과 다 다르다. 2026-11-23 인상 cool → mysterious(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
+              },
+              "hold": {
+                "en": "a palm-sized sphere of clear water floating above her hand, a soft light drifting inside it"
+              },
+              "motif": {
+                "ko": "물결 그림자가 천천히 흐르는 반투명 빛 패널을 겹친 드레스, 빛줄기가 기둥처럼 줄지어 오르는 높은 깃, 이마엔 눈물 무늬가 빛나는 가는 관 — 손 위엔 빛이 떠도는 맑은 물 구슬",
+                "en": "a fitted gown under sheer panels of projected light that ripple like water reflections, a tall collar of slim light-lines rising in rows like columns, and a fine circlet with a glowing teardrop pattern at her brow"
+              },
+              "card_ko": {
+                "look": "유리빛 히메컷 · 작은 글래머",
+                "motif": "물빛 투사 패널 · 눈물 관"
+              },
+              "sil": "holo_gown"
+            }
+          }
+        },
+        {
+          "key": "grandbazaar",
+          "ko": "그랜드 바자르",
+          "en": "the Grand Bazaar",
+          "src": "https://en.wikipedia.org/wiki/Grand_Bazaar,_Istanbul",
+          "lat": 41.0106,
+          "lon": 28.9679,
+          "latlon_src": "https://en.wikipedia.org/wiki/Grand_Bazaar,_Istanbul",
+          "persona": "15세기부터 지붕 덮인 거리 예순하나에 가게 4천 곳 넘게 모인, 세계에서 가장 크고 오래된 덮인 시장 가운데 하나 — 말솜씨 좋고 셈이 빠르며, 흥정 전에 차부터 내놓는다.",
+          "worlds": {
+            "fantasy": {
+              "ko": "황금 돔 왕도의 덮인 시장 — 작은 벽돌 돔이 줄지은 오래된 보석 전당과 거기서 사방으로 갈라지는 칠한 아치 천장의 덮인 거리들, 비단과 카펫이 길게 걸린 가게마다 상인들이 낮은 나무 의자에 앉아 손님에게 차를 따르고, 회랑 두른 대상 숙소 마당엔 짐을 푸는 행렬, 아치 아래로 영혼의 빛이 떠다닌다",
+              "en": "a great covered market of the golden-domed capital of a myth-world: an old hall of gems roofed with rows of small brick domes on stone piers, and from it a maze of vaulted, painted-arched streets branching in every direction; silks and woven carpets hung in long rows, merchants seated on low wooden divans pouring tea for their guests, porticoed caravan courtyards where trading processions unload their bales, and soft spirit lights drifting beneath the arches",
+              "scenes": [
+                {
+                  "key": "gemhall",
+                  "ko": "벽돌 돔 아래 보석 전당",
+                  "en": "in the old hall of gems beneath rows of small brick domes, jewels and gold laid out on velvet-lined cabinets around her in warm lamplight"
+                },
+                {
+                  "key": "divan",
+                  "ko": "비단 걸린 덮인 거리, 손님에게 차를 내는 나무 의자",
+                  "en": "seated on a low wooden divan before her stall in a vaulted market street, silks hung in long rows behind her and a guest's tea poured on a small brass tray"
+                },
+                {
+                  "key": "han",
+                  "ko": "회랑 두른 대상 숙소 마당",
+                  "en": "in a two-storey porticoed caravan courtyard beside the market, bales of silk and carpets being unloaded under the arches at dawn"
+                }
+              ],
+              "look": {
+                "face": {
+                  "face_shape": "long",
+                  "eyes": "almond_wide",
+                  "brows": "straight_thick",
+                  "nose": "aquiline",
+                  "lips": "full_wide",
+                  "eye_color": "gold",
+                  "age": "mid_20s",
+                  "impression": "elegant",
+                  "skin_tone": "golden_tan",
+                  "eye_size": "medium",
+                  "eye_tilt": "up",
+                  "mark": "red_lip",
+                  "expr": "amused"
+                },
+                "silhouette": {
+                  "body": "hourglass",
+                  "hair": "braids",
+                  "hair_color": "rose_gold",
+                  "bangs": "side_swept"
+                },
+                "why": "보석 전당의 안주인 — 낮은 나무 의자에 앉아 차를 내며 흥정하는 보석 상인. 이스탄불 판타지의 풍만한 튤립빛 붉은 곱슬 등불 공주 · 청록 인어 웨이브 물의 마법사와 달리 허리가 잘록하고 길게 땋아 내린 사람. 가슴과 엉덩이가 풍성하고 허리가 잘록한 모래시계 몸(hourglass) · 길게 땋아 내린 머리(braids) · 로즈골드(rose_gold) 머리 · 옆으로 넘긴 앞머리, 눈은 금빛(gold). 부드럽게 긴 달걀 얼굴 · 자연스러운 크기의 아몬드 눈에 살짝 올라간 눈꼬리 · 곧은 눈썹 · 콧대에 부드러운 매부리 곡선 · 도톰한 보통 폭 입술, 금빛 도는 밝은 피부(golden_tan)에 장밋빛 입술, 20대 후반의 우아한 인상(elegant)에 입을 다문 채 눈까지 웃는 얼굴(amused). 얼굴 칸 다섯이 이스탄불 판타지 사람 · 물의 마법사와 다 다르다."
+              },
+              "hold": {
+                "en": "a large faceted gem glowing with a warm inner light, held up between her fingers"
+              },
+              "motif": {
+                "ko": "겹겹 비단 드레이프의 허리에 길게 늘어뜨린 보석 사슬 — 보석 전당의 작은 벽돌 돔 꼴로 금세공한 장식이 줄지어 달리고, 어깨엔 꽃무늬 카펫처럼 짠 짧은 숄, 땋은 머리엔 터키석 · 석류석 핀 — 손에는 따뜻한 빛을 품은 큰 보석",
+                "en": "layered silk drapery with long jeweled chains at her waist, strung with little gold ornaments shaped like the small brick domes of the hall of gems; a short shawl woven like a flowered carpet over her shoulders, and turquoise and garnet pins woven into her braids"
+              },
+              "card_ko": {
+                "look": "로즈골드 땋은 머리 · 모래시계",
+                "motif": "보석 사슬 · 카펫 숄"
+              },
+              "sil": "silk_sorceress"
+            },
+            "steampunk": {
+              "ko": "가스등 동화 이스탄불의 덮인 시장 — 부드러운 금빛 저녁, 작은 벽돌 돔 스무 칸을 인 옛 비단 전당은 카펫 경매장이 되어 둘둘 만 카펫이 가스 샹들리에 아래 쌓이고, 아치 천장의 덮인 거리엔 구멍 뚫린 놋쇠 등불과 가스등이 켜지며, 밤이 오면 시장의 큰 돌문들이 놋쇠 태엽 경첩으로 천천히 닫힌다",
+              "en": "the great covered market of a storybook gaslamp-fantasy Istanbul on a soft golden evening: an old silk hall under twenty small brick domes turned into a carpet auction house, rolled and stacked carpets piled beneath gas chandeliers; vaulted market streets lit by pierced brass lanterns and gas lamps, polished brass shopfronts and glass cases of jewellery, and at nightfall the market's great stone gates swinging slowly shut on brass clockwork hinges, clean white steam drifting under the arches",
+              "scenes": [
+                {
+                  "key": "auction",
+                  "ko": "벽돌 돔 아래 카펫 경매장",
+                  "en": "at the auction stand in the old silk hall beneath its brick domes, rolled carpets stacked high around her and one great flowered carpet unrolled for the bidders under gas chandeliers"
+                },
+                {
+                  "key": "lanterns",
+                  "ko": "놋쇠 등불 켜진 덮인 거리",
+                  "en": "in a vaulted market street hung with pierced brass lanterns and gas lamps, silks and carpets displayed on either side and white steam drifting along the painted arches"
+                },
+                {
+                  "key": "gate",
+                  "ko": "밤이 오면 닫히는 시장의 큰 문",
+                  "en": "at one of the market's great stone gates at nightfall as its brass-bound doors swing slowly shut on clockwork hinges, gas lamps glowing in the archway"
+                }
+              ],
+              "look": {
+                "face": {
+                  "face_shape": "square_soft",
+                  "eyes": "droopy_soft",
+                  "brows": "arched_thin",
+                  "nose": "small_button",
+                  "lips": "heart_full",
+                  "eye_color": "hazel",
+                  "age": "early_20s",
+                  "impression": "sassy",
+                  "skin_tone": "porcelain",
+                  "eye_size": "large",
+                  "eye_tilt": "level",
+                  "mark": "dark_lip",
+                  "expr": "confident"
+                },
+                "silhouette": {
+                  "body": "pear_curvy",
+                  "hair": "giant_twin_tails",
+                  "hair_color": "ink_green",
+                  "bangs": "parted"
+                },
+                "why": "카펫 경매장이 된 옛 비단 전당에서 망치를 드는 경매사 — 이스탄불 스팀펑크의 납빛 숏컷 날개 비행사 · 구리빛 포니테일 물길 기사와 달리 아래로 풍성하고 말솜씨 좋은 사람. 어깨는 가늘고 엉덩이 · 허벅지가 풍성한 배형 곡선 몸(pear_curvy) · 어깨에 닿아 바깥으로 말린 머리(flipped_shoulder) · 따뜻한 청동빛 갈색(bronze) 머리 · 가운데 가르마 앞머리, 눈은 개암빛(hazel). 턱의 각이 부드럽게 좁아지는 얼굴 · 눈꼬리가 순하게 처진 눈 · 가늘게 휜 눈썹 · 끝이 둥근 코 · 도톰한 하트 입술, 흰 도자기 피부(porcelain)에 짙은 베리빛 입술, 30대 초반의 당찬 인상(sassy)에 자신 있는 얼굴(confident — 입은 다문다). 얼굴 칸 다섯이 이스탄불 스팀펑크 사람 · 물길 기사와 다 다르다. 2026-11-23 인상 cheerful → sassy(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔). · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 bronze → ink_green, 헤어스타일 flipped_shoulder → giant_twin_tails"
+              },
+              "hold": {
+                "en": "a small polished brass auction gavel with a turquoise-inlaid head"
+              },
+              "motif": {
+                "ko": "꽃무늬 카펫 결을 짜 넣은 오스만 빨강 연미복 — 옷깃 · 소매 끝엔 카펫 테두리 무늬의 금실 띠, 작은 비단 모자엔 둘둘 만 카펫 꼴의 놋쇠 장식과 청록 술 — 손에는 터키석 박은 작은 놋쇠 경매 망치",
+                "en": "a fitted Ottoman-red tailcoat woven through with the flowered pattern of a fine carpet, its lapels and cuffs edged with gold-thread carpet borders, and a small silk top hat trimmed with a brass ornament shaped like a rolled carpet and a turquoise tassel"
+              },
+              "card_ko": {
+                "look": "먹녹 흑발 큰 양갈래 · 배형 곡선",
+                "motif": "카펫 연미복 · 경매 망치"
+              },
+              "sil": "ringmaster"
+            },
+            "cyberpunk": {
+              "ko": "두 세기 뒤 이스탄불의 덮인 시장 — 먼 미래 거대 도시 한가운데 아치 천장의 덮인 거리 미로가 옛 모습 그대로 남아 투명한 빛의 차양 아래 놓이고, 가게마다 떠 있는 빛 등불과 작은 진열 드론이 비단 · 카펫 · 보석을 비추며 인파가 흐르고, 옛 보석 전당의 벽돌 돔 아래선 빛줄기로 보석을 감정한다",
+              "en": "the great covered market of Istanbul two centuries from now: deep inside the far-future megacity its maze of vaulted streets is kept exactly as it was, painted arches and small brick domes intact beneath a vast clear canopy of light; floating light-lanterns and small hovering display drones show off silks, carpets and jewels in every shop as crowds stream along the lanes, and under the brick domes of the old hall of gems stones are appraised in beams of light",
+              "scenes": [
+                {
+                  "key": "appraise",
+                  "ko": "보석 전당 돔 아래 빛의 감정대",
+                  "en": "at an appraisal counter beneath the brick domes of the old hall of gems, a beam of light splitting through a jewel into soft colours in front of her"
+                },
+                {
+                  "key": "lanes",
+                  "ko": "빛 등불 떠 있는 덮인 거리의 인파",
+                  "en": "among the crowd in a vaulted market street, floating light-lanterns and hovering display drones glowing over the silks and carpets around her"
+                },
+                {
+                  "key": "rooftop",
+                  "ko": "시장 기와지붕 위, 빛의 차양 아래",
+                  "en": "on the old tiled roofs of the market among its small domes at night, the clear canopy of light above her and the megacity's towers glowing beyond"
+                }
+              ],
+              "look": {
+                "face": {
+                  "face_shape": "round",
+                  "eyes": "deep_set",
+                  "brows": "soft_round",
+                  "nose": "straight_narrow",
+                  "lips": "thin_long",
+                  "eye_color": "teal",
+                  "age": "mid_20s",
+                  "impression": "decadent",
+                  "skin_tone": "bronze",
+                  "eye_size": "medium",
+                  "eye_tilt": "level",
+                  "mark": "smoky",
+                  "expr": "smug"
+                },
+                "silhouette": {
+                  "body": "curvy",
+                  "hair": "windswept_long",
+                  "hair_color": "royal_purple",
+                  "bangs": "one_eye"
+                },
+                "why": "빛 등불이 뜬 덮인 시장의 보석 감정사 — 이스탄불 사이버펑크의 길고 늘씬한 두 빛깔 생머리 횡단 관제사 · 유리빛 히메컷 큐레이터와 달리 짧고 날렵한 머리에 느긋한 사람. 굴곡 있는 몸(curvy) · 한쪽이 더 긴 비대칭 단발(asymmetric_bob) · 짙은 보랏빛(royal_purple) 머리 · 한쪽 눈을 덮는 긴 앞머리, 눈은 청록(teal — 감정 확대경의 빛 고리와 같은 빛). 부드럽게 둥근 얼굴 · 부드럽게 깊은 눈 · 부드러운 둥근 눈썹 · 콧대가 곧고 가는 코 · 가는 입술, 청동빛 갈색 피부(bronze)에 스모키 눈화장, 20대 중반의 나른하게 퇴폐적인 인상(decadent)에 다 안다는 듯한 옅은 미소(smug). 얼굴 칸 다섯이 이스탄불 사이버펑크 사람 · 큐레이터와 다 다르다. 2026-11-23 인상 languid → decadent(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔). · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 헤어스타일 asymmetric_bob → windswept_long"
+              },
+              "hold": {
+                "en": "a slim chrome jeweler's loupe glowing with a ring of turquoise light"
+              },
+              "motif": {
+                "ko": "겹겹 비단 · 메시 · 스마트 직물 조각 위로 이즈니크 타일 꽃무늬가 빛으로 떠가는 차림, 손가락 · 귀엔 보석빛 빛 점을 띄운 가는 크롬 반지와 귀걸이 여럿, 허리엔 보석함 꼴의 작은 빛 주머니 — 손에는 청록 빛 고리가 도는 크롬 감정 확대경",
+                "en": "layered silk, mesh and smart-fabric pieces with Iznik tile flowers drifting across them in soft light, many slim chrome rings and earrings each holding a floating point of jewel-coloured light, and a small glowing pouch at her hip shaped like a jewel casket"
+              },
+              "card_ko": {
+                "look": "보랏빛 바람 긴 머리 · 곡선",
+                "motif": "빛 보석 반지 · 감정 확대경"
+              },
+              "sil": "layered_street"
+            }
+          }
+        },
+        {
+          "key": "dolmabahce",
+          "ko": "돌마바흐체 궁전",
+          "en": "Dolmabahçe Palace",
+          "src": "https://en.wikipedia.org/wiki/Dolmabah%C3%A7e_Palace",
+          "lat": 41.0394,
+          "lon": 29.0017,
+          "latlon_src": "https://en.wikipedia.org/wiki/Dolmabah%C3%A7e_Palace",
+          "persona": "보스포루스 유럽 기슭, 메운 만의 정원 자리에 금과 크리스털로 지은 19세기 궁전 — 서양과 오스만의 격식을 함께 갖추고, 손님을 맞을 때 가장 빛난다.",
+          "worlds": {
+            "fantasy": {
+              "ko": "해협 기슭의 수정 궁전 — 장밋빛 금빛 새벽, 빛나는 해협을 따라 흰 대리석 궁전이 길게 서고, 높은 돔 아래 의식의 홀엔 등불 수백 개를 단 거대한 수정 샹들리에, 금박 천장 아래로 두 갈래로 휘어 오르는 수정 난간 계단, 물가엔 비단 돛 갤리선이 지나는 흰 기둥의 해협 문",
+              "en": "a palace of crystal and gold on the shore of a shining strait in a myth-world, at a rose-gold dawn: a long white marble palace stretching along the water's edge, its great ceremonial hall under a lofty dome lit by an immense crystal chandelier of hundreds of glowing lamps, ceilings gilded in gold leaf, a sweeping double-horseshoe staircase with banisters of cut crystal and polished wood, and an ornate gate of white columns opening onto the strait where silk-sailed galleys glide past",
+              "scenes": [
+                {
+                  "key": "chandelier",
+                  "ko": "거대한 수정 샹들리에 아래 의식의 홀",
+                  "en": "in the ceremonial hall beneath its lofty dome and an immense crystal chandelier of hundreds of glowing lamps, a vast woven carpet spread across the floor"
+                },
+                {
+                  "key": "staircase",
+                  "ko": "두 갈래로 휘어 오르는 수정 계단",
+                  "en": "on the double-horseshoe staircase with its banisters of cut crystal, gilded ceilings above and the light of crystal lamps scattering around her"
+                },
+                {
+                  "key": "seagate",
+                  "ko": "해협으로 열린 흰 기둥의 문",
+                  "en": "at the ornate white-columned gate opening onto the shining strait, silk-sailed galleys gliding past on the water and the palace's long marble front behind her"
+                }
+              ],
+              "look": {
+                "face": {
+                  "face_shape": "oval",
+                  "eyes": "round_large",
+                  "brows": "angled_sharp",
+                  "nose": "straight_narrow",
+                  "lips": "thin_long",
+                  "eye_color": "sapphire",
+                  "age": "mid_20s",
+                  "impression": "haughty",
+                  "skin_tone": "fair",
+                  "eye_size": "large",
+                  "eye_tilt": "level",
+                  "mark": "blush",
+                  "expr": "proud"
+                },
+                "silhouette": {
+                  "body": "tall_curvy",
+                  "hair": "triple_tails",
+                  "hair_color": "dark_brown",
+                  "bangs": "none"
+                },
+                "why": "수정 궁전 의식의 홀에서 두 대륙의 손님을 맞는 의전장 — 이스탄불 판타지의 풍만한 붉은 곱슬 등불 공주 · 청록 웨이브 물의 마법사 · 로즈골드 땋은 머리 보석 상인과 달리 키가 크고 단정하게 올린 사람. 키 크고 다리가 길며 풍성한 곡선 몸(tall_curvy) · 단정히 틀어 올린 머리(updo_bun) · 금발(golden_blonde) · 앞머리 없이 드러낸 이마, 눈은 사파이어. 갸름한 달걀형 얼굴 · 둥근 아몬드 눈 · 끝이 또렷이 꺾인 눈썹 · 콧대가 곧고 가는 코 · 가는 입술, 흰 피부(fair)에 발그레한 볼, 20대 중반의 도도한 인상(haughty)에 입을 다문 옅은 자부의 미소(proud). 얼굴 칸이 이스탄불 판타지 사람과 넷, 다른 랜드마크 둘과 다섯 다르다. 2026-11-23 인상 regal → haughty(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔). · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 golden_blonde → dark_brown, 헤어스타일 updo_bun → triple_tails"
+              },
+              "hold": {
+                "en": "a slender gold ceremonial staff crowned with a cluster of crystal drops"
+              },
+              "motif": {
+                "ko": "샹들리에 층층 꼴로 수정 방울을 겹겹 매단 관, 금박 천장 무늬의 금실 자수가 흐르는 상아빛 궁정 드레스와 어깨 망토, 긴 자락 둘레엔 궁정 카펫의 꽃무늬 테 — 손에는 수정 방울 송이를 얹은 가는 금 의전 지팡이",
+                "en": "a tiara built in tiers of crystal drops like a great chandelier, an ivory court gown and shoulder cape flowing with gold-thread embroidery in the pattern of gilded palace ceilings, and the flowered border of a palace carpet woven around the hem of her train"
+              },
+              "card_ko": {
+                "look": "흑갈색 세 갈래 묶음 · 큰 키 곡선",
+                "motif": "샹들리에 관 · 금실 드레스"
+              },
+              "sil": "crown_regalia"
+            },
+            "steampunk": {
+              "ko": "가스등 동화 이스탄불의 해협 궁전 — 부드러운 금빛 저녁, 해협 기슭에 흰 궁전이 길게 서고, 의식의 홀 거대한 수정 샹들리에와 수정 계단에 가스 불꽃이 하나씩 켜지며, 궁전 아래엔 놋쇠 가스 관 · 밸브 · 압력계가 이어진 가스실, 궁전 문 앞 물가 광장엔 화려한 시계탑, 해협엔 흰 김을 뿜는 외륜 연락선",
+              "en": "a storybook gaslamp-fantasy palace on the shore of Istanbul's strait on a soft golden evening: a long white palace along the water, its ceremonial hall and crystal staircase lit flame by flame by the gas jets of an immense crystal chandelier; beneath the palace a gas room of polished brass pipes, valves and pressure gauges; an ornate clock tower on the waterfront square before the palace gate, and paddle-wheel ferries puffing clean white steam across the strait",
+              "scenes": [
+                {
+                  "key": "lighting",
+                  "ko": "샹들리에 가스 불을 켜는 의식의 홀",
+                  "en": "in the ceremonial hall at dusk, the gas jets of the immense crystal chandelier coming alight one by one above her and their glow scattering through the crystal"
+                },
+                {
+                  "key": "gasroom",
+                  "ko": "궁전 아래 놋쇠 가스실",
+                  "en": "in the gas room beneath the palace, polished brass pipes, valve wheels and gauges gleaming around her in warm lamplight and clean white steam drifting"
+                },
+                {
+                  "key": "clocktower",
+                  "ko": "궁전 문 앞 시계탑 광장, 해협의 외륜선",
+                  "en": "on the waterfront square by the ornate clock tower before the palace gate, gas lamps coming on and paddle-wheel ferries crossing the golden strait behind her"
+                }
+              ],
+              "look": {
+                "face": {
+                  "face_shape": "heart",
+                  "eyes": "deep_set",
+                  "brows": "soft_round",
+                  "nose": "upturned",
+                  "lips": "small_bow",
+                  "eye_color": "emerald",
+                  "age": "early_20s",
+                  "impression": "shy",
+                  "skin_tone": "warm_beige",
+                  "eye_size": "large",
+                  "eye_tilt": "level",
+                  "mark": "freckles",
+                  "expr": "curious"
+                },
+                "silhouette": {
+                  "body": "petite_curvy",
+                  "hair": "side_braid",
+                  "hair_color": "sunset_pink",
+                  "bangs": "straight"
+                },
+                "why": "궁전의 샹들리에 가스 불을 하나씩 켜고 관을 돌보는 가스등 기사 — 이스탄불 스팀펑크의 납빛 숏컷 비행사 · 구리빛 포니테일 물길 기사 · 청동빛 단발 경매사와 달리 작고 동글동글한 사람. 작고 아담하되 굴곡 있는 몸(petite_curvy) · 한쪽 어깨로 굵게 땋아 내린 머리(side_braid) · 노을빛 분홍(sunset_pink) 머리 · 일자 앞머리, 눈은 에메랄드. 하트형 얼굴 · 부드럽게 깊은 눈 · 부드러운 둥근 눈썹 · 끝이 살짝 들린 코 · 큐피드 활이 또렷한 입술, 따뜻한 베이지 피부(warm_beige)에 주근깨, 20대 초반의 수줍은 인상(shy)에 궁금한 듯한 얼굴(curious). 얼굴 칸 다섯이 이스탄불 스팀펑크 사람 · 다른 랜드마크 둘과 다 다르다. 2026-11-23 인상 soft → shy(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
+              },
+              "hold": {
+                "en": "a long slim brass lighting pole tipped with a small, steady flame"
+              },
+              "motif": {
+                "ko": "수정 샹들리에 방울을 매단 놋쇠 고글을 머리에 올리고, 소매 걷은 블라우스 위 크림 조끼엔 금박 천장 무늬 자수와 작은 놋쇠 가스 밸브 꼴 단추, 허리엔 수정 방울과 놋쇠 점등 도구를 단 공구 띠 — 손에는 끝에 작은 불꽃이 켜진 긴 놋쇠 점등 막대",
+                "en": "brass goggles hung with tiny crystal chandelier drops pushed up on her head, a cream waistcoat embroidered with gilded-ceiling scrollwork and fastened with buttons shaped like little brass gas valves, and a tool belt strung with crystal drops and small brass lamp-lighting tools"
+              },
+              "card_ko": {
+                "look": "노을분홍 옆땋기 · 작은 곡선",
+                "motif": "수정 방울 고글 · 밸브 단추"
+              },
+              "sil": "lady_inventor"
+            },
+            "cyberpunk": {
+              "ko": "두 세기 뒤 이스탄불 해협 기슭의 궁전 — 먼 미래 거대 도시 사이로 흰 궁전이 옛 모습 그대로 물가에 남아 두 대륙의 손님을 맞는 외교의 전당이 되고, 금박 돔 아래 거대한 수정 샹들리에엔 빛 데이터 알갱이가 반짝이며, 해협 쪽 흰 기둥 문 앞으로 소리 없는 수중익선이 사절을 내려 준다",
+              "en": "a palace on the shore of Istanbul's strait two centuries from now: amid the far-future megacity the long white palace is kept exactly as it was at the water's edge, now a hall of diplomacy where guests from both continents are received; its immense crystal chandelier glitters with drifting points of data-light under the gilded dome, and at its white-columned gate on the strait silent hydrofoils bring envoys to the marble steps, the luminous towers of both shores rising beyond",
+              "scenes": [
+                {
+                  "key": "reception",
+                  "ko": "샹들리에 아래 외교 접견",
+                  "en": "in the ceremonial hall under the immense crystal chandelier glittering with points of data-light, receiving envoys on a vast woven carpet beneath the gilded dome"
+                },
+                {
+                  "key": "quay",
+                  "ko": "해협 쪽 흰 기둥 문, 수중익선이 닿는 계단",
+                  "en": "at the white-columned gate on the strait at night, a silent hydrofoil gliding up to the marble steps behind her and the towers of both shores glowing across the water"
+                },
+                {
+                  "key": "staircase",
+                  "ko": "빛이 흐르는 수정 계단",
+                  "en": "on the double-horseshoe crystal staircase, soft light running through its crystal banisters and scattering around her"
+                }
+              ],
+              "look": {
+                "face": {
+                  "face_shape": "diamond",
+                  "eyes": "narrow_upturned",
+                  "brows": "straight_thick",
+                  "nose": "small_button",
+                  "lips": "full_wide",
+                  "eye_color": "ice_blue",
+                  "age": "early_20s",
+                  "impression": "mature",
+                  "skin_tone": "olive",
+                  "eye_size": "medium",
+                  "eye_tilt": "up",
+                  "mark": "gloss",
+                  "expr": "calm"
+                },
+                "silhouette": {
+                  "body": "lean_toned",
+                  "hair": "slicked_back",
+                  "hair_color": "prism_white",
+                  "bangs": "none"
+                },
+                "why": "해협 궁전에서 두 대륙의 사절을 맞고 말을 옮기는 외교 의전 통역사 — 이스탄불 사이버펑크의 두 빛깔 생머리 횡단 관제사 · 유리빛 히메컷 큐레이터 · 보랏빛 단발 감정사와 달리 단단하고 매끈하게 넘긴 사람. 가늘고 탄탄한 허리에 선이 고운 팔 · 어깨(lean_toned — 아홉 사람 가운데 하나뿐인 마른 쪽 체형) · 매끈하게 뒤로 넘긴 머리(slicked_back) · 수정처럼 무지개 반짝임이 도는 다이아몬드빛 흰 머리(prism_white) · 앞머리 없이 드러낸 이마, 눈은 얼음빛 푸른 눈(ice_blue). 다이아몬드형 얼굴 · 눈꼬리가 살짝 올라간 아몬드 눈 · 곧은 눈썹 · 끝이 둥근 코 · 도톰한 보통 폭 입술, 올리브빛 피부(olive)에 윤기 나는 누드 입술, 30대 초반의 성숙한 인상(mature)에 차분한 얼굴(calm). 얼굴 칸 다섯이 이스탄불 사이버펑크 사람 · 다른 랜드마크 둘과 다 다르다."
+              },
+              "hold": {
+                "en": "a thin crystal tablet glowing with softly shifting light, held like a folio"
+              },
+              "motif": {
+                "ko": "어깨가 날카로운 흰 정장 — 높은 깃과 솔기를 따라 수정 샹들리에 방울 같은 빛 알갱이가 흘러내리고, 금박 천장 무늬가 가는 금빛 선으로 떠가며, 두 귀엔 수정 방울 꼴 통역 장치 — 손에는 빛이 흐르는 얇은 수정 판",
+                "en": "a razor-shouldered white suit with a high collar, beads of light like crystal chandelier drops running down its seams, gilded-ceiling scrollwork drifting across it in fine gold light, and crystal-drop interpreter earpieces at both ears"
+              },
+              "card_ko": {
+                "look": "프리즘 백발 올백 · 탄탄",
+                "motif": "빛 방울 정장 · 통역 귀걸이"
+              },
+              "sil": "corporate_sleek"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "cairo",
+      "ko": "카이로",
+      "en": "Cairo",
+      "country": "이집트",
+      "people": {
+        "ko": "이집트인",
+        "en": "Egyptian"
+      },
+      "lat": 30.04,
+      "lon": 31.24,
+      "latlon_src": "https://en.wikipedia.org/wiki/Cairo",
+      "persona": "나일 강가에서 피라미드를 내다보는 천 개 첨탑의 도시 — 시끌벅적하고 끈질기며 시간을 두려워하지 않는다.",
+      "palette": {
+        "en": "sandstone gold, Nile blue, papyrus green",
+        "hex": [
+          "#D4A95A",
+          "#1F5F8B",
+          "#6B8E4E"
+        ]
+      },
+      "symbols": [
+        {
+          "ko": "기자 피라미드",
+          "en": "the pyramids of Giza",
+          "src": "https://en.wikipedia.org/wiki/Giza_pyramid_complex"
+        },
+        {
+          "ko": "기자의 대스핑크스",
+          "en": "the Great Sphinx of Giza",
+          "src": "https://en.wikipedia.org/wiki/Great_Sphinx_of_Giza"
+        },
+        {
+          "ko": "나일강",
+          "en": "the Nile",
+          "src": "https://en.wikipedia.org/wiki/Nile"
+        },
+        {
+          "ko": "카이로 성채 — 무함마드 알리 모스크",
+          "en": "the Cairo Citadel and its Mosque of Muhammad Ali",
+          "src": "https://en.wikipedia.org/wiki/Cairo_Citadel"
+        },
+        {
+          "ko": "천 개 첨탑의 도시 — 카이로의 별명",
+          "en": "the nickname City of a Thousand Minarets",
+          "src": "https://en.wikipedia.org/wiki/Cairo"
+        }
+      ],
+      "worlds": {
+        "fantasy": {
+          "ko": "나일 강가의 황금 왕도 카이로 — 금빛 아침, 넓고 반짝이는 나일이 야자 숲과 연꽃 못 사이로 흐르고 비스듬한 큰 흰 돛을 단 배들이 미끄러지며, 서안 사막 고원엔 매끈하게 다듬은 흰 돌을 입은 세 피라미드가 햇빛에 빛나고 그 앞엔 거대한 돌 스핑크스가 엎드려 쉬며, 강 건너엔 가는 첨탑 천 개와 돔, 나무 격자 발코니와 높은 아치 문의 도시, 언덕 위 성채엔 연필처럼 가는 첨탑 둘을 거느린 큰 돔 전각, 강 가운데 섬엔 물속으로 내려가는 돌계단과 눈금 새긴 높은 기둥, 하늘엔 금빛 · 청금석빛 깃발과 연꽃 등불이 빛난다",
+          "en": "a radiant capital of a myth-world on a great river at a golden morning: the broad, glittering Nile flowing between palm groves and lotus pools, boats with tall slanting white sails gliding on it; on the desert plateau of the west bank three great pyramids cased in smooth, polished white stone and shining in the sun, a vast carved stone sphinx resting before them; across the river a city of a thousand slender minarets and domes, carved wooden lattice balconies and tall arched gateways, and on its hill a citadel crowned by a great domed hall with two pencil-thin minarets; on an island in the river a stone stair descending into the water around a tall marked column; banners of gold and lapis blue and lotus lanterns glowing in the air",
+          "scenes": [
+            {
+              "key": "nilometer",
+              "ko": "강 가운데 섬의 나일 측정계 — 물속 눈금 기둥 곁 돌계단",
+              "en": "on the stone stair of the river gauge on its island at morning, the tall marked column rising beside her out of clear green water and the glittering Nile and white sails beyond its carved arches"
+            },
+            {
+              "key": "plateau",
+              "ko": "서안 사막 고원의 흰 돌 길 — 빛나는 세 피라미드와 돌 스핑크스 앞",
+              "en": "on a white-stone causeway on the desert plateau at golden hour, the three great pyramids shining white and gold behind her and the vast stone sphinx resting at their feet"
+            },
+            {
+              "key": "citadel",
+              "ko": "언덕 위 성채의 설화석고 테라스 — 천 개 첨탑의 도시를 내려다보며",
+              "en": "on a high alabaster terrace of the hilltop citadel, the great dome and its two pencil-thin minarets above her and the city of a thousand minarets falling away to the glittering river"
+            }
+          ],
+          "look": {
+            "face": {
+              "face_shape": "long",
+              "eyes": "almond_wide",
+              "brows": "low_heavy",
+              "nose": "broad_soft",
+              "lips": "heart_full",
+              "eye_color": "gold",
+              "age": "mid_20s",
+              "impression": "regal",
+              "skin_tone": "bronze",
+              "eye_size": "medium",
+              "eye_tilt": "up",
+              "mark": "winged_liner",
+              "expr": "proud"
+            },
+            "silhouette": {
+              "body": "strong_curvy",
+              "hair": "braids",
+              "hair_color": "ocean_blue",
+              "bangs": "none"
+            },
+            "why": "강 가운데 섬의 나일 측정계에서 해마다 차오르는 물을 눈금 기둥에 재어 풍년을 알리는 왕도의 물때 수호자 — 힘 있고 당당한 사람. 넓은 어깨와 단단한 근육에 풍만한 가슴 · 넓고 둥근 엉덩이 · 또렷한 허리(strong_curvy — 판타지 서울 · 뉴욕 큰 키 곡선, 파리 · 베이징 버들 곡선, 런던 늘씬 글래머, 로마 · 이스탄불 풍만과 다른 몸) · 옛 이집트 가발처럼 가늘게 여러 갈래로 땋아 금 고리를 끼운 긴 머리(braids) · 청금석과 나일의 푸름을 닮은 바다빛 푸른 머리(ocean_blue — 다른 도시가 안 쓴 색) · 앞머리 없이 이마를 드러낸 머리(none — 연꽃 금 머리띠가 이마에 선다) · 가벼운 가슴판과 팔찌에 허리에서 갈라져 흐르는 로브 자락(battle_mage — 가슴판은 우세크 넓은 목깃, 자락은 흰 리넨 주름)으로 실루엣이 반은 갑옷, 반은 로브다. 부드럽게 긴 달걀형 얼굴 · 자연스러운 크기의 아몬드 눈에 살짝 올라간 눈꼬리 · 눈 위에 조금 낮게 놓인 짙은 눈썹 · 끝이 둥글고 자연스러운 폭의 코 · 도톰한 하트 입술, 금빛 눈(gold), 구릿빛 갈색 피부(bronze — 다른 도시가 안 쓴 피부)에 눈꼬리를 길게 뺀 아이라인(winged_liner — 콜 화장의 결), 20대 후반, 위엄 있는 인상(regal)에 입을 다문 옅은 자부심(proud). 파라오 · 여왕 옷이 아니라 우세크 목깃 · 리넨 주름 · 연꽃만 빌렸다. 스팀펑크(하트형 · 불씨 끝 짙은 물결머리 · 서양배 굴곡 몸 · 따뜻한 베이지 피부) · 사이버펑크(달걀형 · 아쿠아빛 넘긴 머리 · 버들 곡선 · 올리브빛 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울 · 도쿄 · 베이징 · 파리 · 런던 · 로마 · 뉴욕 · 이스탄불 사람(랜드마크 포함)과도 셋 이상 다르다."
+          },
+          "hold": {
+            "en": "a tall, slender gold measuring staff ringed with fine gold bands and topped with an open blue lotus of softly glowing glass"
+          },
+          "motif": {
+            "ko": "나일 물때 수호자의 옷 — 금 · 청금석 · 터키석 파이앙스 구슬을 둥근 줄로 꿴 넓은 목깃(우세크)이 어깨와 가슴을 덮어 가슴판이 되고, 그 아래 아주 고운 흰 리넨 주름 자락이 허리에서 갈라져 흐르며 끝단은 피라미드 돌 단처럼 오르내리는 계단진 금테, 이마엔 푸른 연꽃이 피어난 가는 금 머리띠 — 손에는 금띠를 두르고 꼭대기에 은은히 빛나는 푸른 유리 연꽃을 단 가는 금 눈금 지팡이",
+            "en": "a broad beaded collar of gold, lapis lazuli and turquoise faience beads strung in curved rows, spreading over her shoulders and chest as her breastplate, above robe panels of finely pleated sheer white linen split from the waist, their hems edged in gold that steps up and down like the courses of a pyramid; a slender gold diadem with a blue lotus opening at her brow"
+          },
+          "card_ko": {
+            "look": "청금석빛 땋은 머리 · 근육 곡선",
+            "motif": "우세크 목깃 · 연꽃 금관"
+          },
+          "sil": "battle_mage",
+          "own_vocab": {
+            "casual_world": {
+              "en": "a city of a myth-world on a great river at the edge of the desert: sun-warmed sandstone and white limestone, carved lotus and papyrus columns, walls painted in lapis blue, turquoise and gold, carved wooden lattice screens, pierced lanterns and drifting spirit lights, palm fronds and lotus blossoms with softly glowing petals",
+              "guard_en": "Let the place itself carry this world through its materials, fittings and objects; do not add the city's landmarks, the pyramids, the minarets or a skyline unless the place below names them."
+            }
+          }
+        },
+        "steampunk": {
+          "ko": "가스등 동화 카이로 — 따뜻한 호박빛 저녁, 비스듬한 큰 흰 돛배들과 깨끗한 흰 김을 뿜는 반들거리는 놋쇠 외륜선들이 나일을 오가고, 강 건너 고원엔 세 피라미드가 마지막 햇빛에 금빛으로 빛나며 그 곁으로 줄무늬 기구의 비행선이 떠가고, 옛 도시엔 별 모양 구멍을 뚫고 루비 · 에메랄드 · 호박빛 유리를 끼운 놋쇠 등불 수백 개가 걸린 지붕 덮인 시장 골목, 골목 위로 내민 나무 격자 발코니, 옛 돌을 비추는 가스등, 하늘을 향한 천 개의 가는 첨탑과 돔, 그 위로 언덕 위 성채의 큰 돔",
+          "en": "a storybook gaslamp-fantasy Cairo on a warm amber evening: boats with tall slanting white sails and polished brass paddle-steamers puffing clean white steam gliding along the Nile; across the river the three great pyramids glowing gold in the last light, an airship with a striped balloon drifting past them; in the old city covered bazaar lanes hung with hundreds of brass lanterns pierced with stars and set with ruby, emerald and amber glass, carved wooden lattice balconies leaning over the lanes, gas lamps glowing on old stone, and a thousand slender minarets and domes against the sky, the great dome of the hilltop citadel above them all",
+          "scenes": [
+            {
+              "key": "lanternlane",
+              "ko": "지붕 덮인 시장 골목의 등불 공방 — 수백 개 놋쇠 등불 아래",
+              "en": "at the open front of her lantern workshop in a covered bazaar lane, hundreds of star-pierced brass lanterns with ruby, emerald and amber glass glowing around her and a carved wooden lattice balcony leaning overhead"
+            },
+            {
+              "key": "riverboat",
+              "ko": "나일 위 흰 돛배 갑판 — 호박빛 저녁, 건너편의 금빛 피라미드",
+              "en": "on the deck of a white-sailed river boat on the Nile at dusk, its tall slanting sail glowing amber above her, brass paddle-steamers puffing clean white steam and the pyramids glowing gold on the far bank"
+            },
+            {
+              "key": "lattice",
+              "ko": "옛 도시 지붕 테라스 — 나무 격자 가리개 사이로 천 개 첨탑",
+              "en": "on a rooftop terrace of the old city at dusk, carved wooden lattice screens around her, gas lamps coming on below and a thousand slender minarets and domes rising against the amber sky"
+            }
+          ],
+          "look": {
+            "face": {
+              "face_shape": "heart",
+              "eyes": "round_large",
+              "brows": "arched_thin",
+              "nose": "straight_narrow",
+              "lips": "full_wide",
+              "eye_color": "amber",
+              "age": "early_20s",
+              "impression": "sassy",
+              "skin_tone": "warm_beige",
+              "eye_size": "large",
+              "eye_tilt": "level",
+              "mark": "blush",
+              "expr": "amused"
+            },
+            "silhouette": {
+              "body": "pear_curvy",
+              "hair": "long_wavy",
+              "hair_color": "plutonium_ember",
+              "bangs": "curtain"
+            },
+            "why": "칸 엘칼릴리의 지붕 덮인 시장 골목에서 별 무늬를 뚫은 놋쇠 등불을 만들고 색유리를 끼우는 등불 장인 — 다정하고 손이 야무진 사람. 좁은 어깨 아래 가는 허리, 풍성하고 둥근 엉덩이와 굵은 허벅지, 풍만한 가슴의 서양배 몸(pear_curvy) · 등까지 흐르는 긴 물결머리(long_wavy) · 짙은 쇳빛 머리끝이 등불 불씨처럼 붉은 주황으로 달아오른 머리(plutonium_ember — 놋쇠 등불의 불빛, 다른 도시가 안 쓴 색) · 커튼 앞머리(curtain) · 유리병 띠를 두른 긴 코트에 고글 · 긴 장갑(alchemist_coat — 병엔 등불 색유리 조각, 처음 쓰는 실루엣)으로 실루엣이 길고 신비롭다. 하트형 얼굴 · 자연스러운 크기의 둥근 아몬드 눈 · 가늘게 휜 눈썹 · 콧대가 곧고 가는 코 · 도톰하고 자연스러운 폭의 입술, 호박빛 눈(amber), 따뜻한 베이지 피부(warm_beige)에 발그레한 볼(blush), 20대 초반, 당찬 인상(sassy)에 입을 다문 눈웃음(amused). 판타지(긴 달걀형 · 청금석빛 땋은 머리 · 근육 곡선 · 구릿빛 피부) · 사이버펑크(달걀형 · 아쿠아빛 넘긴 머리 · 버들 곡선 · 올리브빛 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울 · 도쿄 · 베이징 · 파리 · 런던 · 로마 · 뉴욕 · 이스탄불 사람(랜드마크 포함)과도 셋 이상 다르다. 2026-11-23 인상 cheerful → sassy(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
+          },
+          "hold": {
+            "en": "a small brass lantern with a pointed domed cap, its sides pierced with stars and set with ruby, emerald and amber glass, a warm flame glowing within"
+          },
+          "motif": {
+            "ko": "옛 도시 격자 발코니(마슈라비야)를 옮긴 등불 장인의 긴 코트 — 나일빛 푸른 비단 코트의 짧은 어깨 망토와 넓은 소매 끝이 작은 구슬을 돌려 깎아 이은 놋쇠 투각 격자이고, 허리엔 여덟 꼭짓점 별을 뚫어 안에서 따뜻한 빛이 새어 나오는 몸에 맞는 놋쇠 허리띠 — 손에는 끝이 뾰족한 돔 뚜껑에 별을 뚫고 색유리를 끼운 작은 놋쇠 등불(파누스)",
+            "en": "a long coat of Nile-blue silk whose short shoulder cape and wide cuffs are openwork brass lattice of little turned beads, like the carved wooden screens of the old city's balconies; at her waist a fitted brass band pierced with eight-pointed stars, a warm glow shining through them"
+          },
+          "card_ko": {
+            "look": "불씨 끝 물결머리 · 서양배 곡선",
+            "motif": "놋쇠 격자 망토 · 별 등불"
+          },
+          "sil": "alchemist_coat"
+        },
+        "cyberpunk": {
+          "ko": "두 세기 뒤 카이로 — 나일을 따라 펼쳐진 먼 미래 거대 도시, 강은 빛나는 물길로 도시를 가르고 소리 없는 수중익선과 비행 차량이 그 위를 오가며, 서쪽 고원의 세 피라미드는 지금 그대로 서서 저마다 천천히 도는 빛 고리를 두르고 가장 큰 피라미드 꼭대기에선 옅은 빛줄기가 별을 향해 오른다, 흰 돌과 유리를 계단식으로 쌓아 올린 먼 미래 탑들이 연꽃 · 파피루스 무늬로 빛나며 창마다 빛으로 다시 짠 격자 가리개를 두르고, 천 개 첨탑의 옛 도시는 거대한 투명 차양 아래 돔과 가는 첨탑 그대로 금빛으로 빛난다, 별이 가득한 맑고 깊은 남빛 밤하늘",
+          "en": "Cairo two centuries from now, a far-future megacity along the Nile: the river running through the city in glowing lanes, silent hydrofoils and quiet flying vehicles gliding above it; on the plateau to the west the three great pyramids kept exactly as they stand, each ringed by a slow halo of light, a pale beam rising from the apex of the greatest toward the stars; far-future towers of white stone and glass rising in stepped terraces, their facades traced with glowing lotus and papyrus patterns and screened with lattices of light; the old city of a thousand minarets kept whole beneath a vast clear canopy, its domes and slender minarets glowing gold, under a clear deep-indigo night sky full of stars",
+          "scenes": [
+            {
+              "key": "towerdeck",
+              "ko": "계단식 흰 탑 높은 곳의 유리 데크 — 빛 고리를 두른 세 피라미드를 등지고",
+              "en": "on a glass deck high on a stepped white tower at night, the three great pyramids glowing in their halos on the plateau behind her and the river of light winding through the city below"
+            },
+            {
+              "key": "plateau",
+              "ko": "고원의 가장 큰 피라미드 곁 — 별로 오르는 빛줄기 아래",
+              "en": "on the plateau at night beside the greatest pyramid, its pale beam rising into the stars above her and the far-future city glittering across the river"
+            },
+            {
+              "key": "canopy",
+              "ko": "옛 도시 투명 차양 아래 테라스 — 금빛 돔과 첨탑 사이",
+              "en": "on a terrace beneath the clear canopy over the old city at night, golden domes and slender minarets glowing around her and lattices of light shimmering on the towers beyond"
+            }
+          ],
+          "look": {
+            "face": {
+              "face_shape": "oval",
+              "eyes": "deep_set",
+              "brows": "angled_sharp",
+              "nose": "upturned",
+              "lips": "small_bow",
+              "eye_color": "dichroic",
+              "age": "mid_20s",
+              "impression": "icy",
+              "skin_tone": "olive",
+              "eye_size": "medium",
+              "eye_tilt": "up",
+              "mark": "mole_eye",
+              "expr": "focused"
+            },
+            "silhouette": {
+              "body": "willowy_curvy",
+              "hair": "slicked_back",
+              "hair_color": "beryl_aqua",
+              "bangs": "none"
+            },
+            "why": "피라미드를 지은 이들이 별로 참북쪽을 찾았듯, 별을 겨눠 하늘 비행 길의 방위를 맞추는 먼 미래 카이로의 별빛 측량사 — 길고 서늘한 사람. 팔다리가 길고 부드러운 곡선에 풍만한 가슴 · 둥근 엉덩이 · 가는 허리(willowy_curvy) · 매끈하게 뒤로 넘긴 머리(slicked_back — 스핑크스 머릿수건 같은 줄무늬 빛 띠가 머리를 감싼다) · 옛 파이앙스 터키석빛을 닮은 투명한 아쿠아마린 머리(beryl_aqua — 다른 도시가 안 쓴 색) · 앞머리 없이 이마를 드러낸 머리(none) · 기하학적으로 솟은 어깨의 조형 코트(runway_avantgarde — 어깨와 깃이 피라미드 돌 단처럼 계단진 삼각 층)로 실루엣이 각지고 높다. 갸름한 달걀형 얼굴 · 부드럽게 깊은 눈에 살짝 올라간 눈꼬리 · 깔끔하게 각이 선 눈썹 · 끝이 살짝 들린 코 · 큐피드 활이 또렷한 입술, 연보라와 푸른빛 사이로 바뀌는 눈(dichroic), 올리브빛 피부(olive)에 눈 밑의 작은 점(mole_eye), 20대 중반, 얼음처럼 차가운 냉미녀 인상(icy)에 입을 다문 집중한 얼굴(focused). 판타지(긴 달걀형 · 청금석빛 땋은 머리 · 근육 곡선 · 구릿빛 피부) · 스팀펑크(하트형 · 불씨 끝 짙은 물결머리 · 서양배 굴곡 몸 · 따뜻한 베이지 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울 · 도쿄 · 베이징 · 파리 · 런던 · 로마 · 뉴욕 · 이스탄불 사람(랜드마크 포함)과도 셋 이상 다르다. 2026-11-23 인상 cool → icy(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
+          },
+          "hold": {
+            "en": "a slim sighting rod of clear glass and gold, a thin pale beam of light running from its tip toward the stars"
+          },
+          "motif": {
+            "ko": "피라미드 돌 단을 옮긴 조형 코트 — 흰 스마트 세라믹 긴 코트의 솟은 어깨와 높은 깃이 피라미드 돌 단처럼 계단진 삼각 층으로 올라가 깃 꼭대기엔 금빛 빛의 머릿돌이 빛나고, 뒤로 넘긴 머리를 감싸 어깨로 흘러내리는 매끈한 빛의 띠가 대스핑크스의 줄무늬 머릿수건(네메스)처럼 금빛과 청금석빛 줄무늬로 흐른다 — 손에는 끝에서 별을 향해 옅은 빛줄기가 뻗는 유리 · 금 조준대",
+            "en": "a sculptural long coat of white smart ceramic whose raised shoulders and high collar rise in stepped triangular tiers like the courses of a pyramid, a capstone of golden light glowing at the collar's peak; a sleek band of light striped in gold and lapis blue wrapping her slicked-back hair and falling over her shoulders like the striped headcloth of the great sphinx"
+          },
+          "card_ko": {
+            "look": "아쿠아빛 넘긴 머리 · 버들 곡선",
+            "motif": "피라미드 단 코트 · 줄무늬 빛"
+          },
+          "sil": "runway_avantgarde"
+        }
+      },
+      "design_note": "설계 상태: 시안(claude, 2026-11-21) — 시험 그림 전. 사용자 「남은 도시도 설계해줘」(카이로 차례), 이스탄불 · 베이징 · 런던 · 파리 · 로마 · 뉴욕 · 도쿄 꼴을 따랐다. 세 사람 모두 이집트인 성인 여성 — 피부 · 얼굴은 look 이 정하고(판타지 구릿빛 갈색 bronze · 스팀펑크 따뜻한 베이지 · 사이버펑크 올리브빛) 인종 낱말은 쓰지 않는다. 얼굴 칸 다섯은 세 세계끼리 모두 다르고, 서울 · 도쿄 · 베이징 · 파리 · 런던 · 로마 · 뉴욕 · 이스탄불 사람(랜드마크 포함) 누구와도 셋 이상 다르다. 체형은 셋 다 굴곡형(근육 곡선 strong_curvy · 서양배 pear_curvy · 버들 곡선 willowy_curvy — 사용자 2026-11-20), 머리색 셋(바다빛 푸름 ocean_blue · 불씨 끝 짙은 쇳빛 plutonium_ember · 아쿠아마린 beryl_aqua)은 다른 도시가 아직 안 쓴 색이고, 헤어스타일은 열쇠가 다 쓰여 조합으로 갈랐다(땋은 머리 · 긴 물결 · 넘긴 머리 — 머리색 · 체형이 겹치는 사람 없음). 스팀펑크 실루엣 alchemist_coat 도 처음 쓴다. 이야기 줄기는 「물때와 별과 등불로 때를 알리는 도시」: 판타지는 로다섬 나일 측정계의 물때 수호자, 스팀펑크는 칸 엘칼릴리 골목의 놋쇠 등불(파누스) 장인, 사이버펑크는 피라미드를 지은 이들처럼 별로 참북쪽을 찾아 비행 길을 맞추는 별빛 측량사. 파라오 · 여왕(「클레오파트라」 분장) 옷은 피하고, 옛 이집트에서는 우세크 넓은 목깃 · 흰 리넨 주름 · 푸른 연꽃 · 피라미드 돌 단 · 스핑크스 머릿수건 줄무늬만, 이슬람 카이로에서는 나무 격자 발코니(마슈라비야) · 별 뚫린 등불만 옷 · 장신구 모양으로 빌렸다. 상형문자 · 아랍 글씨는 읽히는 글로 싣지 않았고, 종교 옷 · 기도 · 예배당 안 장면, 미라 · 신 · 동물 머리 형상, 낙타 · 말 같은 동물은 넣지 않았다(성채의 큰 돔 전각은 바깥 하늘선 · 테라스로만). 사실 근거: 기자 대피라미드 — 다 지었을 때 투라에서 배로 실어 온 매끈한 흰 석회암 껍데기를 통째로 입었고 지금 보이는 것은 그 안의 몸체, 짓는 이들이 별(미자르 · 코카브)로 참북쪽을 찾았다는 방법들이 전해진다(https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza), 대스핑크스 — 사람 머리 · 사자 몸으로 엎드린 석회암 상, 머리에 네메스 머릿수건(https://en.wikipedia.org/wiki/Great_Sphinx_of_Giza), 나일 측정계 — 범람기 나일 물높이를 재는 시설, 눈금 새긴 세로 기둥 · 물로 내려가는 계단 꼴, 카이로 로다섬의 것은 861년에 세워 지금도 있다(https://en.wikipedia.org/wiki/Nilometer), 우세크 — 옛 이집트의 넓은 목깃, 파이앙스 · 유리 · 돌 · 금속 구슬을 둥근 줄로 꿰고 금 · 홍옥수 · 터키석으로도 지었다(https://en.wikipedia.org/wiki/Usekh), 마슈라비야 — 윗층에 내민 나무 격자 창 · 발코니, 카이로 거리에 흔했다(https://en.wikipedia.org/wiki/Mashrabiya), 파누스 — 이집트에서 비롯한 전통 등불, 금속과 유리로 만들어 거리와 집을 밝힌다(https://en.wikipedia.org/wiki/Fanous), 칸 엘칼릴리 — 맘루크 시대부터의 시장 지구, 가게와 수공예 공방 · 오래된 찻집(https://en.wikipedia.org/wiki/Khan_el-Khalili), 무함마드 알리 모스크 — 카이로 성채 안, 벽을 설화석고로 덮어 「설화석고 모스크」 라고도 부르고 원뿔 모자를 쓴 가는 오스만식 첨탑 둘(https://en.wikipedia.org/wiki/Mosque_of_Muhammad_Ali), 「천 개 첨탑의 도시」(https://en.wikipedia.org/wiki/Cairo), 나일의 펠루카 — 큰 삼각 돛을 비스듬히 단 나무 돛배(https://en.wikipedia.org/wiki/Felucca · https://en.wikipedia.org/wiki/Transport_in_Egypt). 화면 상징 한 줄이 40자 안에 들게 다섯째 상징의 ko 를 「별명 「천 개 첨탑의 도시」」 에서 「천 개 첨탑의 도시 — 카이로의 별명」 으로 앞뒤만 바꿨다(뜻 · en · src 그대로) — 한 줄엔 성채를 빼고 넷만. 지시문에 상표 · 실존 인물 이름은 쓰지 않는다(파라오 · 왕비 · 칼리프 · 가수 · 구단 이름도 — 성채의 모스크는 「a great domed hall with two pencil-thin minarets」, 측정계는 「a stone stair descending into the water around a tall marked column」 처럼 생김새로). 세계 palette 는 따로 두지 않았다(도시 palette 의 사암 금빛 · 나일 푸름 · 파피루스 초록이 세 세계 모두에 맞는다). 판타지 일상컷 세계 줄은 공용(서양 신화 세계)이 나일과 사막의 도시와 어긋나 own_vocab.casual_world 를 따로 둔다.",
+      "card_ko": {
+        "symbols": "기자 피라미드 · 기자의 대스핑크스 · 나일강 · 천 개 첨탑의 도시"
+      },
+      "landmarks": [
+        {
+          "key": "pyramids",
+          "ko": "기자 피라미드",
+          "en": "the Pyramids of Giza",
+          "src": "https://en.wikipedia.org/wiki/Giza_pyramid_complex",
+          "lat": 29.9761,
+          "lon": 31.1328,
+          "latlon_src": "https://en.wikipedia.org/wiki/Giza_pyramid_complex",
+          "persona": "사천오백 년 가까이 사막 고원에 선 세 피라미드 — 흔들림 없이 묵직하고, 동서남북을 한 치 어긋남 없이 맞추는 꼼꼼한 사람.",
+          "worlds": {
+            "fantasy": {
+              "ko": "흰 돌의 세 피라미드를 지키는 고원 — 금빛 아침, 매끈하게 다듬은 흰 석회암을 입은 세 피라미드가 햇빛에 눈부시고, 가장 큰 피라미드 안으로는 벽이 계단처럼 좁아드는 높은 큰 회랑이 가파르게 오르며, 강 건너 흰 돌 채석장에서 큰 돌을 실은 돛배들이 나일을 건너온다",
+              "en": "the desert plateau of the myth-world capital at a golden morning, where three great pyramids cased in smooth, polished white limestone blaze in the sun, a tall gallery with inward-stepping walls climbs steeply into the heart of the greatest, and sailing boats laden with great white blocks cross the Nile from the white-stone quarries on the far bank",
+              "scenes": [
+                {
+                  "key": "apex",
+                  "ko": "흰 돌 껍데기가 아직 남은 둘째 피라미드의 꼭대기 단",
+                  "en": "on the topmost courses of the second pyramid where its polished white casing still gleams, the plateau, the other pyramids and the glittering Nile far below her"
+                },
+                {
+                  "key": "gallery",
+                  "ko": "큰 회랑 — 벽이 계단처럼 좁아드는 높은 돌 통로",
+                  "en": "climbing the great gallery inside the pyramid, a tall, narrow stone passage whose walls step inward toward a high ceiling, soft spirit lights floating up the steep slope"
+                },
+                {
+                  "key": "quarry",
+                  "ko": "강 건너 흰 돌 채석장 나루 — 흰 큰 돌을 싣는 돛배",
+                  "en": "at the riverside landing below the white limestone quarry cliffs, great white blocks loaded onto boats with tall sails bound across the Nile toward the pyramids"
+                }
+              ],
+              "look": {
+                "face": {
+                  "face_shape": "diamond",
+                  "eyes": "narrow_upturned",
+                  "brows": "arched_thin",
+                  "nose": "aquiline",
+                  "lips": "thin_long",
+                  "eye_color": "sapphire",
+                  "age": "mid_20s",
+                  "impression": "stoic",
+                  "skin_tone": "golden_tan",
+                  "eye_size": "medium",
+                  "eye_tilt": "up",
+                  "mark": "mole_lip",
+                  "expr": "calm"
+                },
+                "silhouette": {
+                  "body": "tall_curvy",
+                  "hair": "side_swept",
+                  "hair_color": "white_gold",
+                  "bangs": "parted"
+                },
+                "why": "흰 석회암 껍데기를 입은 세 피라미드를 지키는 고원의 흰 돌 수호 기사 — 곧고 흔들림 없는 사람. 큰 키에 다리가 길고 가슴 · 엉덩이가 풍만하며 허리가 가는 몸(tall_curvy) · 한쪽으로 길게 넘긴 머리(side_swept) · 가장자리가 은은히 빛나는 백금빛 머리(white_gold — 흰 돌과 금 머릿돌) · 가운데 가르마 앞머리(parted) · 목에서 발끝까지 덮는 판금 갑옷(full_plate — 흰 돌빛 법랑에 계단진 금테)으로 실루엣이 단단하고 곧다. 마름모꼴 얼굴 · 눈꼬리가 살짝 올라간 아몬드 눈 · 가늘게 휜 눈썹 · 부드러운 매부리코 · 가늘고 자연스러운 폭의 입술, 사파이어빛 눈, 금빛 도는 밝은 피부(golden_tan)에 입가의 점, 20대 후반, 속을 드러내지 않는 인상(stoic)에 차분한 표정. 카이로 판타지의 물때 수호자(긴 얼굴 · 바다빛 땋은 머리 · 근육 곡선 · 구릿빛 피부)와 얼굴 칸 다섯이 모두 다르고, 이 랜드마크의 다른 두 세계와는 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다."
+              },
+              "hold": {
+                "en": "a tall triangular shield of polished white stone edged in stepped gold"
+              },
+              "motif": {
+                "ko": "피라미드 흰 석회암 껍데기 같은 흰 판금 갑옷 — 테두리는 피라미드 돌 단처럼 계단진 금, 이마엔 작은 금 머릿돌을 얹은 가는 금 관",
+                "en": "full plate armor enamelled in polished white like the pyramids' limestone casing, its edges trimmed in gold that steps in courses like a pyramid's face, and a slender gold circlet crowned with a small gold capstone"
+              },
+              "card_ko": {
+                "look": "백금빛 옆 넘긴 긴 머리",
+                "motif": "흰 돌 판금 · 금 머릿돌 관"
+              },
+              "sil": "full_plate"
+            },
+            "steampunk": {
+              "ko": "가스등 동화 카이로의 나일 돌 나루 — 호박빛 저녁, 반들거리는 놋쇠 증기 바지선들이 흰 석회암 큰 돌을 싣고 깨끗한 흰 김을 뿜으며 강을 건너고, 고원 발치 돌 나루에선 놋쇠 증기 기중기가 흰 돌을 들어 올리며, 그 너머 세 피라미드가 금빛으로 빛난다",
+              "en": "the stone harbour of a storybook gaslamp-fantasy Cairo on a warm amber evening: polished brass steam barges laden with great blocks of white limestone crossing the Nile and puffing clean white steam, brass steam cranes lifting the white blocks at a stone landing at the foot of the plateau, and the three great pyramids glowing gold beyond",
+              "scenes": [
+                {
+                  "key": "barge",
+                  "ko": "흰 돌을 실은 놋쇠 증기 바지선 갑판",
+                  "en": "on the deck of a polished brass steam barge laden with white limestone blocks, crossing the Nile at dusk with clean white steam curling from its funnel and the pyramids glowing gold ahead"
+                },
+                {
+                  "key": "landing",
+                  "ko": "고원 발치 돌 나루의 놋쇠 증기 기중기",
+                  "en": "at the stone landing at the foot of the plateau, brass steam cranes lifting gleaming white blocks under gas lamps and the great pyramid rising behind her"
+                },
+                {
+                  "key": "engine",
+                  "ko": "바지선의 반들거리는 놋쇠 기관실",
+                  "en": "in the barge's gleaming brass engine room, polished pistons, pressure gauges and copper pipes glowing in warm lamplight"
+                }
+              ],
+              "look": {
+                "face": {
+                  "face_shape": "oval",
+                  "eyes": "almond_wide",
+                  "brows": "low_heavy",
+                  "nose": "small_button",
+                  "lips": "heart_full",
+                  "eye_color": "hazel",
+                  "age": "early_20s",
+                  "impression": "mature",
+                  "skin_tone": "deep_brown",
+                  "eye_size": "medium",
+                  "eye_tilt": "level",
+                  "mark": "smoky",
+                  "expr": "confident"
+                },
+                "silhouette": {
+                  "body": "curvy_athletic",
+                  "hair": "low_ponytail",
+                  "hair_color": "old_brass",
+                  "bangs": "curtain"
+                },
+                "why": "피라미드에 입힐 흰 석회암을 배로 나일 건너 실어 나르던 일을 놋쇠 증기 바지선으로 옮긴 바지선 기관장 — 손이 빠르고 듬직한 사람. 탄탄하면서 가슴과 엉덩이가 둥근 몸(curvy_athletic) · 목덜미에 낮게 묶은 머리(low_ponytail) · 빛바랜 옛 놋쇠빛 갈색 머리(old_brass) · 커튼 앞머리(curtain) · 두꺼운 가죽 작업 앞치마에 공구 멜빵, 한 손의 큰 장갑(boiler_engineer)으로 실루엣이 일하는 사람의 것이다. 갸름한 달걀형 얼굴 · 자연스러운 크기의 아몬드 눈 · 조금 낮게 놓인 짙은 눈썹 · 끝이 둥근 작은 코 · 도톰한 하트 입술, 개암빛 눈, 짙은 갈색 피부(deep_brown)에 스모키 눈 화장, 30대 초반, 성숙한 인상(mature)에 자신 있는 표정. 카이로 스팀펑크의 등불 장인(하트형 · 불씨 끝 물결머리 · 서양배 곡선 · 베이지 피부)과 얼굴 칸 다섯이 모두 다르고, 이 랜드마크의 다른 두 세계와는 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다."
+              },
+              "hold": {
+                "en": "a large polished brass wrench"
+              },
+              "motif": {
+                "ko": "피라미드 돌 단처럼 계단지게 쌓은 놋쇠 판을 단 두꺼운 가죽 작업 앞치마와 공구 멜빵, 참북쪽을 가리키는 나침반을 박은 작은 계단 피라미드 모양 놋쇠 버클",
+                "en": "a heavy leather work apron and tool harness whose brass plates are stacked in stepped courses like a pyramid's face, and a brass belt buckle shaped like a small stepped pyramid set with a compass whose needle points true north"
+              },
+              "card_ko": {
+                "look": "옛 놋쇠빛 낮은 묶음머리",
+                "motif": "계단 놋쇠판 앞치마 · 나침 버클"
+              },
+              "sil": "boiler_engineer"
+            },
+            "cyberpunk": {
+              "ko": "두 세기 뒤 카이로의 고원, 깊은 시간의 보관소 — 지금 그대로 선 세 피라미드 위로 잃어버린 흰 석회암 껍데기가 반투명한 빛으로 다시 그려지고, 큰 회랑 안엔 스캔 빛줄기가 돌 하나하나를 따라 흐르며, 작은 왕비 피라미드들 사이로 보존 드론의 빛이 오간다",
+              "en": "the plateau of Cairo two centuries from now, kept as a deep-time archive: the three great pyramids standing as they are, their long-lost white casing redrawn over them in translucent light, scanning beams tracing every stone of the great gallery within, and the glow of small conservation drones drifting among the little queens' pyramids under a clear indigo night sky",
+              "scenes": [
+                {
+                  "key": "casing",
+                  "ko": "흰 빛으로 다시 입힌 피라미드 겉면 곁 떠 있는 발판",
+                  "en": "on a floating platform beside the face of the greatest pyramid at night, its lost white casing redrawn over the stone in translucent light around her"
+                },
+                {
+                  "key": "gallery",
+                  "ko": "스캔 빛줄기가 흐르는 큰 회랑",
+                  "en": "inside the great gallery, a tall, narrow stone passage whose walls step inward toward a high ceiling, thin scanning beams sliding over every block"
+                },
+                {
+                  "key": "queens",
+                  "ko": "작은 왕비 피라미드들 사이의 밤 고원",
+                  "en": "among the small queens' pyramids on the plateau at night, soft conservation drones drifting with their lights and the far-future city glittering across the river"
+                }
+              ],
+              "look": {
+                "face": {
+                  "face_shape": "heart",
+                  "eyes": "round_large",
+                  "brows": "soft_round",
+                  "nose": "straight_narrow",
+                  "lips": "full_wide",
+                  "eye_color": "silver_grey",
+                  "age": "mid_20s",
+                  "impression": "mysterious",
+                  "skin_tone": "warm_beige",
+                  "eye_size": "large",
+                  "eye_tilt": "level",
+                  "mark": "bare",
+                  "expr": "pensive"
+                },
+                "silhouette": {
+                  "body": "hourglass",
+                  "hair": "asymmetric_bob",
+                  "hair_color": "iridium_white",
+                  "bangs": "side_swept"
+                },
+                "why": "피라미드의 돌 하나하나를 빛으로 재고 잃어버린 흰 껍데기를 빛으로 되살려 두 세기 뒤에도 지키는 깊은 시간 보존 기술자 — 조용하고 꼼꼼한 사람. 가슴과 엉덩이가 풍만하고 허리가 뚜렷이 가는 모래시계 몸(hourglass) · 한쪽이 긴 비대칭 단발(asymmetric_bob) · 가장자리에 무지개 결이 도는 밝은 백금빛 머리(iridium_white — 흰 석회암 껍데기) · 옆으로 넘긴 앞머리(side_swept) · 등뼈와 팔다리를 따라가는 가는 외골격(exo_frame)으로 실루엣이 선으로 그린 듯하다. 하트형 얼굴 · 자연스러운 크기의 둥근 아몬드 눈 · 부드러운 둥근 눈썹 · 콧대가 곧고 가는 코 · 도톰하고 자연스러운 폭의 입술, 옅은 은회색 눈, 따뜻한 베이지 피부(warm_beige)에 맨 얼굴, 20대 중반, 속을 알 수 없는 신비로운 인상(mysterious)에 생각에 잠긴 표정. 카이로 사이버펑크의 별빛 측량사(달걀형 · 아쿠아빛 넘긴 머리 · 버들 곡선 · 올리브 피부)와 얼굴 칸 다섯이 모두 다르고, 이 랜드마크의 다른 두 세계와는 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 2026-11-23 인상 elegant → mysterious(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
+              },
+              "hold": {
+                "en": "a palm-sized scanning lens of clear glass casting a fan of pale light"
+              },
+              "motif": {
+                "ko": "피라미드 돌 단처럼 마디진 금빛 외골격이 등뼈와 팔다리를 따라가는 흰 스마트 세라믹 보디슈트, 목에 피라미드 꼭대기를 그리는 옅은 빛의 삼각 깃",
+                "en": "a fitted bodysuit of white smart ceramic with a slim exo-frame of golden light tracing her spine and limbs in stepped segments like the courses of a pyramid, and a triangular collar of pale light outlining a pyramid's peak at her throat"
+              },
+              "card_ko": {
+                "look": "백금빛 비대칭 단발",
+                "motif": "계단 금빛 외골격 · 삼각 빛 깃"
+              },
+              "sil": "exo_frame"
+            }
+          }
+        },
+        {
+          "key": "sphinx",
+          "ko": "기자의 대스핑크스",
+          "en": "the Great Sphinx of Giza",
+          "src": "https://en.wikipedia.org/wiki/Great_Sphinx_of_Giza",
+          "lat": 29.9753,
+          "lon": 31.1376,
+          "latlon_src": "https://en.wikipedia.org/wiki/Great_Sphinx_of_Giza",
+          "persona": "고원의 바위를 통째로 깎아 동쪽을 바라보는 큰 상 — 모래에 어깨까지 묻혀도 기다릴 줄 아는, 말수 적고 끈질긴 파수꾼.",
+          "worlds": {
+            "fantasy": {
+              "ko": "동쪽을 바라보는 큰 돌 스핑크스의 새벽 — 사막 고원의 바위를 통째로 깎은 거대한 상이 엎드려 떠오르는 해를 마주하고, 결결이 쌓인 바위층 절벽이 둘러싼 깊은 터 위로 금빛 모래바람이 일렁인다",
+              "en": "the great stone sphinx of the myth-world capital at dawn, a colossal resting figure carved whole from the bedrock of the desert plateau and facing the rising sun in the east, its deep enclosure walled by cliffs of banded rock layers, golden sand drifting on the morning wind",
+              "scenes": [
+                {
+                  "key": "paws",
+                  "ko": "스핑크스의 두 앞발 사이 — 동쪽 해돋이를 마주하며",
+                  "en": "standing between the great outstretched stone paws of the sphinx at sunrise, facing east as the first light pours across the plateau"
+                },
+                {
+                  "key": "dune",
+                  "ko": "모래 언덕 마루 — 상을 덮으려는 모래바람을 돌려보내며",
+                  "en": "on the crest of a dune above the sphinx's enclosure, turning back a curling wave of wind-blown sand with a sweep of golden light"
+                },
+                {
+                  "key": "enclosure",
+                  "ko": "결결이 쌓인 바위층 절벽에 둘러싸인 깊은 터",
+                  "en": "in the deep enclosure cut from the plateau's bedrock, cliffs of banded pale and golden rock layers rising around her and the sphinx's vast head above against the morning sky"
+                }
+              ],
+              "look": {
+                "face": {
+                  "face_shape": "square_soft",
+                  "eyes": "deep_set",
+                  "brows": "straight_thick",
+                  "nose": "small_button",
+                  "lips": "full_wide",
+                  "eye_color": "honey",
+                  "age": "mid_20s",
+                  "impression": "mysterious",
+                  "skin_tone": "olive",
+                  "eye_size": "medium",
+                  "eye_tilt": "up",
+                  "mark": "red_lip",
+                  "expr": "half_smile"
+                },
+                "silhouette": {
+                  "body": "voluptuous",
+                  "hair": "side_ponytail",
+                  "hair_color": "blue_black",
+                  "bangs": "parted"
+                },
+                "why": "모래에 어깨까지 묻혔던 큰 상 곁에서 새벽마다 모래바람을 춤으로 돌려보내는 파수 무희 — 느긋하고 끈질긴 사람. 가슴 · 엉덩이 · 허벅지가 넉넉하게 굴곡진 풍만한 몸(voluptuous) · 긴 나선 곱슬머리(long_curly) · 새벽 햇빛 같은 밝은 금빛 머리(bright_gold) · 가운데 가르마 앞머리(parted) · 몸에 붙는 옷에 나부끼는 베일 띠와 깊은 두건(shadow_dancer — 두건은 뒤로 내림)으로 실루엣이 움직인다. 각이 부드러운 얼굴 · 부드럽게 깊은 눈에 살짝 올라간 눈꼬리 · 곧고 자연스러운 숱의 눈썹 · 끝이 둥근 작은 코 · 도톰하고 자연스러운 폭의 입술, 꿀빛 눈, 올리브 피부(olive)에 옅은 장밋빛 입술, 20대 후반, 속을 알 수 없는 신비로운 인상(mysterious)에 입을 다문 옅은 미소. 카이로 판타지의 물때 수호자와 얼굴 칸 다섯이 모두 다르고, 같은 세계 피라미드 수호 기사와도 다섯이 다르며, 이 랜드마크의 다른 두 세계와는 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 2026-11-23 인상 glamorous → mysterious(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔). · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 bright_gold → blue_black, 헤어스타일 long_curly → side_ponytail"
+              },
+              "hold": {
+                "en": "a slender gold staff trailing a ribbon of golden light that sweeps the sand aside"
+              },
+              "motif": {
+                "ko": "고원 바위층처럼 옅은 빛 · 금빛 줄무늬로 결진 모래빛 금 비단 베일 띠가 허리와 어깨에서 나부끼고, 쇄골 위엔 부채처럼 퍼지는 새벽 햇살 금 목깃",
+                "en": "veil sashes of sand-gold silk banded in pale and golden stripes like the rock layers of the plateau, fluttering from her hips and shoulders, and a broad gold collar of fanning dawn rays across her collarbones"
+              },
+              "card_ko": {
+                "look": "푸른 흑발 옆 묶음 · 풍만",
+                "motif": "바위층 베일 띠 · 새벽빛 금 깃"
+              },
+              "sil": "shadow_dancer"
+            },
+            "steampunk": {
+              "ko": "가스등 동화 카이로의 스핑크스 발굴 터 — 호박빛 저녁, 어깨까지 모래에 묻힌 큰 돌 스핑크스 둘레에서 반들거리는 놋쇠 증기 모래 펌프가 흰 김을 뿜으며 모래를 퍼내고, 바닥 둘레엔 새 석회암 블록을 맞춰 넣는 놋쇠 비계와 가스등이 이어진다",
+              "en": "an excavation on the plateau of a storybook gaslamp-fantasy Cairo on a warm amber evening: the great stone sphinx buried in sand up to its shoulders, polished brass steam sand-pumps puffing clean white steam as they draw the sand away, and brass scaffolds and gas lamps around its base where restorers set fresh blocks of pale limestone",
+              "scenes": [
+                {
+                  "key": "pump",
+                  "ko": "어깨까지 묻힌 스핑크스 곁 놋쇠 증기 모래 펌프",
+                  "en": "at the controls of a polished brass steam sand-pump beside the sphinx buried to its shoulders, clean white steam rising and pale sand pouring away through brass pipes"
+                },
+                {
+                  "key": "scaffold",
+                  "ko": "새 석회암 블록을 맞추는 놋쇠 비계",
+                  "en": "on a brass scaffold at the sphinx's base, fresh blocks of pale limestone being lowered into place by a small steam winch under gas lamps"
+                },
+                {
+                  "key": "tent",
+                  "ko": "가스등 켜진 발굴단 천막",
+                  "en": "in the lamplit expedition tent beside the dig, brass surveying instruments, glass lanterns and a small brass model of the sphinx on a camp table"
+                }
+              ],
+              "look": {
+                "face": {
+                  "face_shape": "long",
+                  "eyes": "droopy_soft",
+                  "brows": "angled_sharp",
+                  "nose": "aquiline",
+                  "lips": "thin_long",
+                  "eye_color": "steel_blue",
+                  "age": "mid_20s",
+                  "impression": "sharp",
+                  "skin_tone": "golden_tan",
+                  "eye_size": "medium",
+                  "eye_tilt": "down",
+                  "mark": "freckles",
+                  "expr": "focused"
+                },
+                "silhouette": {
+                  "body": "strong_curvy",
+                  "hair": "horn_locks",
+                  "hair_color": "tempered_steel",
+                  "bangs": "side_swept"
+                },
+                "why": "어깨까지 모래에 묻힌 스핑크스를 파내고 바닥 둘레에 새 석회암 블록을 맞춰 넣는 발굴단의 증기 모래 펌프 기관사 — 끈기 있고 날렵한 사람. 어깨가 넓고 근육이 단단하면서 가슴이 풍만하고 엉덩이가 넓은 몸(strong_curvy) · 한쪽 어깨로 내린 굵은 땋은 머리(side_braid) · 푸른 담금빛이 도는 강철빛 은발(tempered_steel) · 옆으로 넘긴 앞머리(side_swept) · 주머니 많은 탐사 재킷에 넓은 챙 모자와 가방(explorer)으로 실루엣이 먼 길을 나선 사람이다. 부드럽게 긴 달걀형 얼굴 · 눈꼬리가 순하게 처진 눈 · 각이 선 눈썹 · 부드러운 매부리코 · 가늘고 자연스러운 폭의 입술, 강철빛 푸른 눈, 금빛 도는 밝은 피부(golden_tan)에 주근깨, 20대 중반, 또렷한 인상(sharp)에 집중한 표정. 카이로 스팀펑크의 등불 장인 · 같은 세계 바지선 기관장과 얼굴 칸 다섯이 모두 다르고, 이 랜드마크의 다른 두 세계와는 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 헤어스타일 side_braid → horn_locks"
+              },
+              "hold": {
+                "en": "a fine brass-handled excavation brush"
+              },
+              "motif": {
+                "ko": "스핑크스 바닥의 새 석회암 단처럼 계단진 블록으로 어깨를 누빈 주머니 많은 캔버스 탐사 재킷, 넓은 챙 모자 위로 올린 모래빛 렌즈의 놋쇠 고글",
+                "en": "a many-pocketed canvas expedition jacket whose shoulders are quilted in stepped blocks like the restored limestone courses of the sphinx's base, and brass goggles with sand-gold lenses pushed up on her wide-brimmed hat"
+              },
+              "card_ko": {
+                "look": "강철빛 뿔 머리",
+                "motif": "석회암 블록 누빔 · 모래 고글"
+              },
+              "sil": "explorer"
+            },
+            "cyberpunk": {
+              "ko": "두 세기 뒤 카이로의 밤 고원 — 지금 그대로 엎드린 큰 돌 스핑크스 위로 빛이 바랜 옛 칠을 되살려 얼굴엔 따뜻한 빨강, 몸엔 노랑과 파랑이 은은히 떠오르고, 동쪽으로는 빛 격자를 두른 먼 미래 도시가 맑고 깊은 남빛 하늘 아래 펼쳐진다",
+              "en": "the plateau of Cairo two centuries from now at night: the great stone sphinx kept exactly as it rests, while soft projected light restores its long-faded ancient paint — a warm red on the face and traces of yellow and blue across the body — and the far-future city spreads to the east behind lattices of light under a clear deep-indigo sky",
+              "scenes": [
+                {
+                  "key": "paint",
+                  "ko": "옛 칠을 빛으로 되살리는 밤의 스핑크스 앞",
+                  "en": "before the sphinx at night as she paints its faded ancient colours back onto the stone in light, warm red glowing on its face and soft yellow and blue across its flanks"
+                },
+                {
+                  "key": "lab",
+                  "ko": "바위층 모형이 떠도는 유리 보존 연구실",
+                  "en": "in a glass conservation lab beside the enclosure, a floating light-model of the sphinx's soft and hard rock layers turning slowly around her"
+                },
+                {
+                  "key": "dawn",
+                  "ko": "동쪽을 향한 고원의 새벽 — 상과 같은 쪽을 보며",
+                  "en": "on the plateau at first light, facing east beside the sphinx as the glittering far-future city wakes across the river"
+                }
+              ],
+              "look": {
+                "face": {
+                  "face_shape": "round",
+                  "eyes": "almond_wide",
+                  "brows": "arched_thin",
+                  "nose": "broad_soft",
+                  "lips": "heart_full",
+                  "eye_color": "cinnabar",
+                  "age": "early_20s",
+                  "impression": "soft",
+                  "skin_tone": "bronze",
+                  "eye_size": "large",
+                  "eye_tilt": "level",
+                  "mark": "gloss",
+                  "expr": "gentle"
+                },
+                "silhouette": {
+                  "body": "busty_slender",
+                  "hair": "giant_braid",
+                  "hair_color": "titanium_tint",
+                  "bangs": "straight"
+                },
+                "why": "얼굴에 남은 붉은 칠 · 몸에 남은 노랑과 파랑 흔적을 빛으로 되살려 스핑크스에 옛 빛깔을 입히는 색 복원가 — 다정하고 섬세한 사람. 팔다리가 가늘면서 가슴이 풍만하고 엉덩이가 둥근 몸(busty_slender) · 뺨 길이에서 반듯이 자른 옆머리의 긴 생머리(hime_cut — 옛 이집트 가발의 반듯한 선) · 짙은 금속 회색에서 끝으로 갈수록 볏짚 금 · 보라 · 파랑 띠로 피어나는 머리(titanium_tint — 옛 칠의 세 빛깔) · 반듯한 일자 앞머리(straight) · 몸에 붙는 바탕옷 둘레로 빛 자락이 드레스처럼 떠도는 옷(holo_gown)으로 실루엣이 빛으로 퍼진다. 둥글게 갸름해지는 얼굴 · 자연스러운 크기의 아몬드 눈 · 가늘게 휜 눈썹 · 끝이 둥글고 자연스러운 폭의 코 · 도톰한 하트 입술, 진사빛 붉은 눈(cinnabar — 옛 붉은 안료), 구릿빛 갈색 피부(bronze)에 윤기 나는 입술, 20대 초반, 부드러운 인상(soft)에 온화한 표정. 카이로 사이버펑크의 별빛 측량사 · 같은 세계 보존 기술자와 얼굴 칸 다섯이 모두 다르고, 이 랜드마크의 다른 두 세계와는 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 헤어스타일 hime_cut → giant_braid"
+              },
+              "hold": {
+                "en": "a slim brush of light whose tip leaves glowing colour in the air"
+              },
+              "motif": {
+                "ko": "스핑크스의 바랜 옛 칠 빛깔 — 따뜻한 빨강 · 황토 노랑 · 옅은 파랑 — 으로 그녀 둘레에 떠도는 빛 자락 드레스, 이마를 가로지르는 같은 세 빛깔 줄무늬의 가는 빛 띠",
+                "en": "flowing panels of projected light in the sphinx's faded ancient colours — warm red, ochre yellow and soft blue — floating around her like a gown, and a slim band of light across her brow striped in the same three colours"
+              },
+              "card_ko": {
+                "look": "담금빛 띠 큰 땋은 머리",
+                "motif": "옛 칠 세 빛 자락 · 빛 이마띠"
+              },
+              "sil": "holo_gown"
+            }
+          }
+        },
+        {
+          "key": "cairotower",
+          "ko": "카이로 타워",
+          "en": "Cairo Tower",
+          "src": "https://en.wikipedia.org/wiki/Cairo_Tower",
+          "lat": 30.0458,
+          "lon": 31.2244,
+          "latlon_src": "https://en.wikipedia.org/wiki/Cairo_Tower",
+          "persona": "나일 강 가운데 섬에서 연꽃 줄기처럼 솟은 격자 탑 — 도시를 한눈에 내려다보며, 천천히 도는 꼭대기처럼 느긋하게 모두를 둘러보는 사람.",
+          "worlds": {
+            "fantasy": {
+              "ko": "강 가운데 섬의 연꽃 탑 — 해 질 녘, 나일 한가운데 섬에서 흰 돌 격자로 짠 가늘고 높은 탑이 연꽃 줄기처럼 솟아 꼭대기에 연꽃 봉오리 같은 둥근 테라스를 이고, 섬의 연꽃 못과 야자 정원, 강 건너 천 개 첨탑의 도시가 금빛으로 물든다",
+              "en": "a slender, soaring tower of open white-stone lattice rising like a lotus stem from an island in the middle of the Nile at dusk, crowned by a round terrace that opens like a lotus bud, with lotus pools and palm gardens on the island below and the city of a thousand minarets glowing gold across the river",
+              "scenes": [
+                {
+                  "key": "crown",
+                  "ko": "연꽃 봉오리 같은 탑 꼭대기 둥근 테라스",
+                  "en": "on the round lotus-crowned terrace at the top of the lattice tower at dusk, the whole golden city and the winding Nile spread out below her"
+                },
+                {
+                  "key": "lattice",
+                  "ko": "빛나는 연꽃 덩굴이 타고 오르는 격자 탑 속",
+                  "en": "inside the open lattice of the tower, glowing lotus vines climbing the white stone around her and the evening sky showing through the openings"
+                },
+                {
+                  "key": "pools",
+                  "ko": "탑 발치 섬의 연꽃 못과 야자 정원",
+                  "en": "beside the lotus pools in the palm gardens at the foot of the tower, its white lattice rising into the dusk above her"
+                }
+              ],
+              "look": {
+                "face": {
+                  "face_shape": "round",
+                  "eyes": "droopy_soft",
+                  "brows": "soft_round",
+                  "nose": "straight_narrow",
+                  "lips": "small_bow",
+                  "eye_color": "leaf_green",
+                  "age": "early_20s",
+                  "impression": "elegant",
+                  "skin_tone": "warm_beige",
+                  "eye_size": "large",
+                  "eye_tilt": "down",
+                  "mark": "blush",
+                  "expr": "soft_smile"
+                },
+                "silhouette": {
+                  "body": "curvy",
+                  "hair": "mermaid_waves",
+                  "hair_color": "chlorine_green",
+                  "bangs": "curtain"
+                },
+                "why": "해 질 녘 노래로 섬의 연꽃 탑 꼭대기를 피워 내는 음유 시인 — 다정하고 꿈꾸는 사람. 곡선이 고운 몸(curvy) · 허리까지 흐르는 인어 물결머리(mermaid_waves) · 안개처럼 비치는 옅은 연두빛 머리(chlorine_green — 연꽃 줄기와 파피루스) · 커튼 앞머리(curtain) · 끈 매는 튜닉에 짧은 겹치마, 긴 부츠, 어깨에 악기 끈(bard)으로 실루엣이 가볍다. 둥글게 갸름해지는 얼굴 · 순하게 처진 눈 · 부드러운 둥근 눈썹 · 콧대가 곧고 가는 코 · 큐피드 활이 또렷한 입술, 잎빛 초록 눈, 따뜻한 베이지 피부(warm_beige)에 발그레한 볼, 20대 초반, 우아한 인상(elegant)에 부드러운 미소. 카이로 판타지의 물때 수호자 · 같은 세계 피라미드 수호 기사 · 스핑크스 파수 무희와 얼굴 칸 다섯이 모두 다르고, 이 랜드마크의 다른 두 세계와는 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다."
+              },
+              "hold": {
+                "en": "a pear-shaped lute inlaid with mother-of-pearl lotus blossoms"
+              },
+              "motif": {
+                "ko": "탑 줄기 같은 금 격자를 수놓은 옅은 초록 비단의 끈 매는 튜닉과 겹 짧은 치마 — 끝단은 연꽃잎으로 피어나고, 머리엔 금 연꽃 봉오리 관",
+                "en": "a fitted laced tunic and layered short skirts of pale green silk worked with an open gold lattice like the tower's stem, the skirts flaring at the hem into lotus petals, and a circlet of gold lotus buds"
+              },
+              "card_ko": {
+                "look": "연두빛 인어 물결머리",
+                "motif": "금 격자 연꽃 치마 · 연꽃 관"
+              },
+              "sil": "bard"
+            },
+            "steampunk": {
+              "ko": "가스등 동화 카이로의 강 섬 격자 탑 — 호박빛 저녁, 나일 가운데 섬에서 놋쇠와 흰 돌 격자 탑이 연꽃 줄기처럼 솟고, 꼭대기엔 태엽으로 천천히 도는 놋쇠 · 유리 연꽃 온실, 격자 속을 오르내리는 놋쇠 승강 칸, 아래 강엔 흰 돛배와 외륜선이 오간다",
+              "en": "a lattice tower of brass and white stone rising like a lotus stem from an island in the Nile in a storybook gaslamp-fantasy Cairo on a warm amber evening, crowned by a brass-and-glass lotus conservatory that turns slowly on clockwork, a brass cage lift gliding up through the open lattice, white-sailed boats and brass paddle-steamers puffing clean white steam on the river below",
+              "scenes": [
+                {
+                  "key": "conservatory",
+                  "ko": "태엽으로 천천히 도는 꼭대기 유리 연꽃 온실",
+                  "en": "in the slowly turning brass-and-glass conservatory at the top of the tower, blue lotus blossoms floating in brass basins and the amber city wheeling past the windows"
+                },
+                {
+                  "key": "lift",
+                  "ko": "격자 속을 오르는 놋쇠 승강 칸",
+                  "en": "riding the brass cage lift up through the open lattice of the tower, gas lamps glowing on the white stone and the Nile falling away below"
+                },
+                {
+                  "key": "gallery",
+                  "ko": "탑 꼭대기 둥근 바깥 회랑",
+                  "en": "on the round open gallery at the top of the tower at dusk, brass railings around her and a thousand slender minarets rising across the river"
+                }
+              ],
+              "look": {
+                "face": {
+                  "face_shape": "diamond",
+                  "eyes": "narrow_upturned",
+                  "brows": "straight_thick",
+                  "nose": "upturned",
+                  "lips": "heart_full",
+                  "eye_color": "rose",
+                  "age": "mid_20s",
+                  "impression": "mischievous",
+                  "skin_tone": "olive",
+                  "eye_size": "medium",
+                  "eye_tilt": "up",
+                  "mark": "mole_eye",
+                  "expr": "mischievous"
+                },
+                "silhouette": {
+                  "body": "petite_voluptuous",
+                  "hair": "floor_length",
+                  "hair_color": "dark_brown",
+                  "bangs": "side_swept"
+                },
+                "why": "탑 꼭대기에서 태엽으로 천천히 도는 유리 연꽃 온실을 가꾸는 식물학자 — 재치 있고 멋을 아는 사람. 작은 키에 가슴이 풍만하고 허리가 가늘며 엉덩이가 넉넉한 몸(petite_voluptuous) · 턱 길이의 윤기 나는 핑거 웨이브(finger_waves) · 가스 방전관처럼 은은히 빛나는 옅은 복숭앗빛 머리(helium_peach) · 옆으로 넘긴 앞머리(side_swept) · 겹 리넨에 넓은 챙 모자, 유리 표본병 허리띠(botanist)로 실루엣이 부드럽다. 마름모꼴 얼굴 · 눈꼬리가 살짝 올라간 아몬드 눈 · 곧고 자연스러운 숱의 눈썹 · 끝이 살짝 들린 코 · 도톰한 하트 입술, 장밋빛 눈, 올리브 피부(olive)에 눈 밑 작은 점, 20대 후반, 여우 같은 장난기 인상(mischievous)에 입을 다문 장난스러운 미소. 카이로 스팀펑크의 등불 장인 · 같은 세계 바지선 기관장 · 발굴단 기관사와 얼굴 칸 넷 이상이 다르고, 이 랜드마크의 다른 두 세계와는 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 2026-11-23 인상 glamorous → mischievous(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔). · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 helium_peach → dark_brown, 헤어스타일 finger_waves → floor_length"
+              },
+              "hold": {
+                "en": "a blue lotus blossom under a small glass bell jar"
+              },
+              "motif": {
+                "ko": "탑 줄기처럼 허리로 좁아드는 놋쇠 투각 격자 보디스를 겹 리넨 위에 입고, 넓은 챙 모자 위엔 푸른 유리 연꽃",
+                "en": "a fitted bodice of brass openwork lattice that tapers to her waist like the tower's stem over layered linen, and a wide-brimmed hat crowned with a blue glass lotus"
+              },
+              "card_ko": {
+                "look": "흑갈색 바닥 긴 머리",
+                "motif": "놋쇠 격자 보디스 · 유리 연꽃"
+              },
+              "sil": "botanist"
+            },
+            "cyberpunk": {
+              "ko": "두 세기 뒤 카이로의 강 섬 빛 탑 — 나일 가운데 섬에서 연꽃 줄기 같은 격자 탑이 밤마다 온 격자의 빛 무늬를 바꾸며 도시에 빛 공연을 펼치고, 꼭대기 둥근 데크 아래로 빛나는 물길과 비행 차량, 계단식 흰 탑들이 펼쳐진다",
+              "en": "the lattice tower on the Nile island of Cairo two centuries from now, rising like a lotus stem and playing shows of shifting light across its whole open lattice every night for the city, its round top deck high above the glowing river lanes, quiet flying vehicles and stepped white towers of the far-future megacity",
+              "scenes": [
+                {
+                  "key": "deck",
+                  "ko": "꼭대기 둥근 데크 — 격자 빛을 지휘하며",
+                  "en": "on the round deck at the top of the tower at night, conducting waves of light down the lattice below her as the city watches"
+                },
+                {
+                  "key": "island",
+                  "ko": "빛이 피어나는 탑 발치의 섬 공원",
+                  "en": "in the island park at the foot of the tower as lotus-shaped projections bloom up its lattice, crowds gathered under the trees"
+                },
+                {
+                  "key": "shaft",
+                  "ko": "빛나는 격자 속을 오르는 유리 승강 칸",
+                  "en": "in a glass lift rising through the glowing lattice, the river of light and the stepped white towers dropping away beyond the panes"
+                }
+              ],
+              "look": {
+                "face": {
+                  "face_shape": "long",
+                  "eyes": "almond_wide",
+                  "brows": "low_heavy",
+                  "nose": "aquiline",
+                  "lips": "thin_long",
+                  "eye_color": "anodized_violet",
+                  "age": "mid_20s",
+                  "impression": "provocative",
+                  "skin_tone": "deep_brown",
+                  "eye_size": "medium",
+                  "eye_tilt": "up",
+                  "mark": "gloss",
+                  "expr": "confident"
+                },
+                "silhouette": {
+                  "body": "petite_curvy",
+                  "hair": "long_layered",
+                  "hair_color": "fluorite_violet",
+                  "bangs": "parted"
+                },
+                "why": "밤마다 탑의 격자 빛을 지휘해 도시에 빛 공연을 펼치는 빛 연출가 — 무대 위에서 빛나는 당찬 사람. 작고 다부지면서 가슴과 엉덩이가 둥근 몸(petite_curvy) · 높이 묶은 긴 포니테일(ponytail) · 바다초록 띠가 든 보랏빛 머리(fluorite_violet — 탑의 밤 조명) · 가운데 가르마 앞머리(parted) · 크롭 무대 상의에 빛나는 겹치마, 마이크 헤드셋과 긴 부츠(cyber_idol)로 실루엣이 반짝인다. 부드럽게 긴 달걀형 얼굴 · 자연스러운 크기의 아몬드 눈 · 조금 낮게 놓인 짙은 눈썹 · 부드러운 매부리코 · 가늘고 자연스러운 폭의 입술, 금테 두른 보랏빛 푸른 눈, 짙은 갈색 피부(deep_brown)에 윤기 나는 입술, 20대 중반, 도발적인 인상(provocative)에 자신 있는 표정. 카이로 사이버펑크의 별빛 측량사 · 같은 세계 보존 기술자와 얼굴 칸 다섯이, 색 복원가와 넷이 다르고, 이 랜드마크의 다른 두 세계와는 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 2026-11-23 인상 sharp → provocative(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔). · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 헤어스타일 ponytail → long_layered"
+              },
+              "hold": {
+                "en": "a slim conductor's baton of light"
+              },
+              "motif": {
+                "ko": "탑의 열린 격자를 바뀌는 보랏빛 · 바다초록 빛으로 그린 크롭 무대 상의와 빛나는 겹치마, 연꽃 모양 빛 귀걸이",
+                "en": "a cropped stage top and a layered glowing skirt traced with the tower's open lattice in shifting violet and sea-green light, and lotus-shaped light earrings"
+              },
+              "card_ko": {
+                "look": "형석빛 긴 층머리",
+                "motif": "격자 빛 치마 · 연꽃 귀걸이"
+              },
+              "sil": "cyber_idol"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "rio",
+      "ko": "리우데자네이루",
+      "en": "Rio de Janeiro",
+      "country": "브라질",
+      "people": {
+        "ko": "브라질인",
+        "en": "Brazilian"
+      },
+      "lat": -22.91,
+      "lon": -43.21,
+      "latlon_src": "https://en.wikipedia.org/wiki/Rio_de_Janeiro",
+      "persona": "산과 바다가 맞닿은 「경이로운 도시」 — 밝고 뜨거우며 해변과 축제에서 숨을 쉰다.",
+      "palette": {
+        "en": "Atlantic turquoise, rainforest green, sunset orange",
+        "hex": [
+          "#1FB5C4",
+          "#2E8B57",
+          "#F28C28"
+        ]
+      },
+      "symbols": [
+        {
+          "ko": "구세주 그리스도상 — 코르코바두 산",
+          "en": "the Christ the Redeemer statue on Corcovado",
+          "src": "https://en.wikipedia.org/wiki/Christ_the_Redeemer_(statue)"
+        },
+        {
+          "ko": "빵 산(팡 지 아수카르)",
+          "en": "Sugarloaf Mountain",
+          "src": "https://en.wikipedia.org/wiki/Sugarloaf_Mountain"
+        },
+        {
+          "ko": "코파카바나 — 물결무늬 보도의 해변",
+          "en": "Copacabana beach and its wave-patterned promenade",
+          "src": "https://en.wikipedia.org/wiki/Copacabana,_Rio_de_Janeiro"
+        },
+        {
+          "ko": "경이로운 도시(Cidade Maravilhosa) — 리우의 별명",
+          "en": "the nickname Cidade Maravilhosa, the Marvelous City",
+          "src": "https://en.wikipedia.org/wiki/Rio_de_Janeiro"
+        },
+        {
+          "ko": "셀라롱 계단 — 타일 모자이크 계단(에스카다리아 셀라롱)",
+          "en": "the Escadaria Selarón, a long public stairway covered in mosaic tiles",
+          "src": "https://en.wikipedia.org/wiki/Escadaria_Selar%C3%B3n"
+        }
+      ],
+      "worlds": {
+        "fantasy": {
+          "ko": "경이로운 도시의 해넘이 왕도 리우 — 청록빛 큰 만에 해가 지는 신화 세계의 왕도, 물에서 곧장 솟은 둥근 화강암 봉우리들 가운데 가장 높은 것은 큰 설탕 덩이 꼴이고 그 꼭대기와 곁의 낮은 봉우리 사이 가는 금빛 줄 위로 작은 유리 곤돌라가 미끄러지며, 짙은 초록 우림을 두른 가파른 산들이 흰 모래의 긴 초승달 해변으로 내려오고 바닷가엔 검고 흰 돌 물결을 깐 산책로가 굽이치며, 키 큰 왕실 야자수 정원 사이로 높은 아치 회랑의 흰 궁전들, 가장 높은 초록 봉우리엔 아르데코의 깔끔한 선으로 깎은 두 팔 벌린 거대한 흰 석상이 마지막 햇빛에 빛나고, 청록 · 금빛 깃발과 열대 꽃 모양 등불이 떠오르는 가운데 해가 금빛 · 주황으로 바다에 잠긴다",
+          "en": "a radiant capital of a myth-world on a great turquoise bay at sunset: rounded granite peaks rising straight from the water, the tallest shaped like a great sugarloaf, a little glass gondola gliding on a fine golden cable between its summit and the lower peak beside it; steep mountains cloaked in deep green rainforest falling to long crescent beaches of white sand, a promenade paved in black-and-white stone waves curving along the shore; white palaces with tall arched loggias among gardens of towering royal palms; on the highest green peak a colossal pale statue with arms spread wide, carved in clean Art Deco lines and glowing in the last light; turquoise and gold banners and lanterns shaped like tropical flowers floating over the bay as the sun sinks gold and orange into the sea",
+          "scenes": [
+            {
+              "key": "headland",
+              "ko": "바다로 뻗은 바위 곶 위 해넘이 — 금빛으로 잠기는 해와 흰 파도",
+              "en": "on the great rock headland reaching into the sea at sunset, the sun sinking gold into the ocean before her, white surf breaking below and the crescent beaches and green peaks of the capital glowing behind"
+            },
+            {
+              "key": "summit",
+              "ko": "둥근 화강암 봉우리 꼭대기의 금 난간 테라스 — 금빛 줄의 유리 곤돌라",
+              "en": "on a gold-railed terrace on the summit of the great rounded granite peak, the little glass gondola arriving on its golden cable and the whole turquoise bay, its beaches and rainforest mountains spread far below"
+            },
+            {
+              "key": "palms",
+              "ko": "궁전 정원의 왕실 야자수 길 — 해 질 녘 빛나는 열대 꽃잎",
+              "en": "on a white stone avenue between two rows of towering royal palms in the palace gardens at dusk, glowing tropical blossoms drifting in the warm air and the green peaks rising beyond"
+            }
+          ],
+          "look": {
+            "face": {
+              "face_shape": "oval",
+              "eyes": "droopy_soft",
+              "brows": "straight_thick",
+              "nose": "broad_soft",
+              "lips": "full_wide",
+              "eye_color": "coral",
+              "age": "mid_20s",
+              "impression": "seductive",
+              "skin_tone": "deep_brown",
+              "eye_size": "medium",
+              "eye_tilt": "down",
+              "mark": "gloss",
+              "expr": "soft_smile"
+            },
+            "silhouette": {
+              "body": "voluptuous",
+              "hair": "voluminous",
+              "hair_color": "permanganate",
+              "bangs": "parted"
+            },
+            "why": "바다로 뻗은 바위 곶(아르포아도르)에서 해를 바다로 보내고 도시가 환호로 답하게 하는 경이로운 도시의 해넘이 전령 — 화려하고 따뜻한 사람. 가슴 · 엉덩이 · 허벅지가 넉넉하게 둥근 풍만한 몸(voluptuous — 판타지 서울 · 뉴욕 큰 키 곡선, 파리 · 베이징 버들 곡선, 런던 늘씬 글래머, 카이로 근육 곡선과 다른 몸, 로마 · 이스탄불 풍만과는 머리 · 피부 · 얼굴이 다르다) · 구름처럼 부풀어 오른 숱 많은 곱슬머리(voluminous) · 짙은 보랏빛에서 끝으로 갈수록 장밋빛으로 번지는 해 질 녘 하늘빛 머리(permanganate — 다른 도시가 안 쓴 색) · 가운데 가르마 앞머리(parted) · 가벼운 판갑에 어깨 뒤로 펼친 깃털 날개와 바람에 날리는 긴 겉옷(winged — 날개는 축제 깃털 부채의 결, 처음 쓰는 실루엣)으로 실루엣은 날개가 정한다. 갸름한 달걀형 얼굴 · 눈꼬리가 부드럽게 처진 아몬드 눈 · 자연스러운 숱의 곧은 눈썹 · 끝이 둥글고 자연스러운 폭의 코 · 도톰하고 자연스러운 폭의 입술, 산호빛 주황 눈(coral — 노을빛), 짙은 갈색 피부(deep_brown)에 윤기 나는 누드 입술(gloss), 20대 후반, 관능적이고 섹시한 인상(seductive)에 입을 다문 옅은 미소(soft_smile). 스팀펑크(부드럽게 각진 얼굴 · 초록 낮은 포니테일 · 작은 곡선 몸 · 금빛 도는 밝은 피부) · 사이버펑크(하트형 · 크롬 무지개 언더컷 · 큰 키 곡선 · 구릿빛 갈색 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울 · 도쿄 · 베이징 · 파리 · 런던 · 로마 · 뉴욕 · 이스탄불 · 카이로 사람(랜드마크 포함)과도 셋 이상 다르다. 2026-11-23 인상 glamorous → seductive(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
+          },
+          "hold": {
+            "en": "a slender gold herald's staff topped with a glowing disc of sunset-orange glass ringed with fine gold rays"
+          },
+          "motif": {
+            "ko": "해넘이 전령의 깃털 날개 — 축제의 깃털 부채를 하이판타지 날개로 옮겨 노을 주황 · 산호 · 금빛 긴 깃이 어깨 뒤로 부채처럼 크게 펼쳐지고, 가벼운 금 갑옷 위로 흐르는 대서양 청록 비단 긴 겉옷엔 금실로 우림의 잎과 열대 꽃을 수놓았다 — 손에는 가는 금 햇살 테를 두른 노을빛 유리 원반을 얹은 가는 금 전령 지팡이",
+            "en": "great fan-shaped wings of long plumes in sunset orange, coral and gold spreading wide behind her shoulders like a festival feather fan, over light gold armor; a long tabard of Atlantic-turquoise silk embroidered in gold thread with rainforest leaves and tropical flowers"
+          },
+          "palette": {
+            "en": "Atlantic turquoise, sunset orange and burnished gold, with rainforest green only in the embroidery",
+            "hex": [
+              "#1FB5C4",
+              "#F28C28",
+              "#C9A13B",
+              "#2E8B57"
+            ],
+            "why": "판타지만 따로 — 도시 palette 의 우림 초록을 금 갑옷 · 깃털 날개에 고루 실으면 숲의 순찰자(레인저)처럼 읽히고 초록 · 노랑이 겹치면 응원복 같은 국기 색으로 기울어서, 하이판타지의 화려한 해넘이를 위해 대서양 청록 · 노을 주황 · 금을 바탕으로 두고 초록은 겉옷 자수(우림 잎)에만."
+          },
+          "card_ko": {
+            "look": "보랏빛 노을 곱슬 · 풍만 곡선",
+            "motif": "노을 깃털 날개 · 우림 자수"
+          },
+          "sil": "winged",
+          "own_vocab": {
+            "casual_world": {
+              "en": "a city of a myth-world between rainforest mountains and the sea: sun-warmed white stone and painted tiles, black-and-white stone paving laid in waves, carved wooden shutters and wrought balconies, palm fronds and huge glossy tropical leaves, lantern-light and drifting spirit lights, tropical blossoms with softly glowing petals",
+              "guard_en": "Let the place itself carry this world through its materials, fittings and objects; do not add the city's landmarks, the granite peaks, the great statue or a skyline unless the place below names them."
+            }
+          }
+        },
+        "steampunk": {
+          "ko": "가스등 동화 리우 — 따뜻한 황금빛 오후, 청록 만에서 솟은 둥근 화강암 봉우리와 그 곁 낮은 봉우리 사이 가는 줄 위로 반들거리는 놋쇠 · 나무 곤돌라가 미끄러지고 역마다 큰 놋쇠 줄바퀴가 돌며, 옛 동네를 가로지르는 흰 두 층 아치 수도교 위로 작은 열린 전차가 건너가고, 연철 발코니의 파스텔 집들이 초록 우림 언덕을 오르며, 해변엔 검고 흰 돌 물결을 깐 굽은 산책로와 흰 모래 위 줄무늬 해수욕 천막, 만에는 깨끗한 흰 김을 뿜는 놋쇠 테 외륜선, 봉우리 곁엔 줄무늬 기구의 비행선, 바닷가를 따라 가스등",
+          "en": "a storybook gaslamp-fantasy Rio de Janeiro on a warm golden afternoon: the great rounded granite peak rising from the turquoise bay, little polished brass-and-wood gondolas gliding on fine cables from the lower peak to its summit, great brass cable wheels turning in the stations; a white two-tiered arched aqueduct striding across the old quarter with a little open tram crossing on top; steep lanes of pastel houses with wrought-iron balconies climbing green rainforest hills; a curving beach promenade paved in black-and-white stone waves, striped bathing tents on the white sand and brass-trimmed paddle-steamers puffing clean white steam across the bay; airships with striped balloons drifting past the peaks and gas lamps glowing along the shore",
+          "scenes": [
+            {
+              "key": "gondola",
+              "ko": "놋쇠 · 나무 곤돌라 안 — 줄 위 높이, 앞엔 둥근 화강암 봉우리",
+              "en": "inside a little brass-and-wood gondola gliding on its fine cable high over the turquoise bay, the great rounded granite peak ahead of her and the white beaches and green hills far below"
+            },
+            {
+              "key": "station",
+              "ko": "봉우리 꼭대기 곤돌라 역 — 돌아가는 큰 놋쇠 줄바퀴 곁",
+              "en": "on the summit station platform beside the great turning brass cable wheels, a gondola easing in on its cable in soft white steam and the whole bay, its beaches and rainforest hills spread below"
+            },
+            {
+              "key": "aqueduct",
+              "ko": "흰 두 층 아치 수도교를 건너는 열린 전차 발판 — 해 질 녘 옛 동네",
+              "en": "on the open running board of the little tram crossing the white two-tiered arched aqueduct at dusk, the pastel rooftops and gas lamps of the old quarter below her and the rounded peak glowing over the bay"
+            }
+          ],
+          "look": {
+            "face": {
+              "face_shape": "square_soft",
+              "eyes": "almond_wide",
+              "brows": "arched_thin",
+              "nose": "upturned",
+              "lips": "small_bow",
+              "eye_color": "navy",
+              "age": "early_20s",
+              "impression": "cheerful",
+              "skin_tone": "golden_tan",
+              "eye_size": "large",
+              "eye_tilt": "level",
+              "mark": "freckles",
+              "expr": "playful"
+            },
+            "silhouette": {
+              "body": "petite_curvy",
+              "hair": "low_ponytail",
+              "hair_color": "grass_green",
+              "bangs": "side_swept"
+            },
+            "why": "1912년에 연 빵 산 곤돌라 길(브라질 처음, 세계 셋째)에서 놋쇠 · 나무 곤돌라를 몰고 봉우리 위 구름과 바람을 살피는 곤돌라 조종사 — 씩씩하고 장난기 있는 사람. 작고 아담하지만 가슴과 엉덩이가 둥근 굴곡 몸(petite_curvy) · 목덜미에 낮게 묶은 포니테일(low_ponytail — 바람에 날리지 않게) · 우림 언덕의 초록을 닮은 풀빛 초록 머리(grass_green — 다른 도시가 안 쓴 색) · 옆으로 넘긴 앞머리(side_swept) · 짧은 비행 재킷에 고글 · 엇갈린 멜빵 · 바람에 길게 날리는 스카프(aeronaut — 스카프가 물결무늬 산책로)로 실루엣이 하늘을 난다. 부드럽게 각진 턱선이 둥근 턱으로 좁아지는 얼굴 · 자연스러운 크기의 아몬드 눈 · 가늘게 휜 눈썹 · 끝이 살짝 들린 코 · 큐피드 활이 또렷한 입술, 짙은 남빛 눈(navy), 금빛 도는 밝은 피부(golden_tan)에 주근깨(freckles), 20대 초반, 밝고 시원한 인상(cheerful)에 입을 다문 장난스러운 미소(playful). 판타지(달걀형 · 보랏빛 노을 곱슬 · 풍만 · 짙은 갈색 피부) · 사이버펑크(하트형 · 크롬 무지개 언더컷 · 큰 키 곡선 · 구릿빛 갈색 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울 · 도쿄 · 베이징 · 파리 · 런던 · 로마 · 뉴욕 · 이스탄불 · 카이로 사람(랜드마크 포함)과도 셋 이상 다르다."
+          },
+          "hold": {
+            "en": "a long brass spyglass banded in turquoise enamel"
+          },
+          "motif": {
+            "ko": "빵 산 곤돌라 조종사 차림 — 가는 놋쇠 줄에 매달린 작고 둥근 놋쇠 곤돌라 두 개가 흔들리는 귀걸이, 바람에 길게 날리는 흰 비단 스카프엔 코파카바나 산책로처럼 검은 물결무늬 — 손에는 청록 법랑 띠를 두른 긴 놋쇠 망원경",
+            "en": "earrings of two tiny round brass gondolas hanging from fine brass cables, swaying as she moves; a long white silk scarf streaming in the wind, patterned with black waves like the city's beach promenade"
+          },
+          "card_ko": {
+            "look": "초록 낮은 포니테일 · 작은 곡선",
+            "motif": "곤돌라 귀걸이 · 물결 스카프"
+          },
+          "sil": "aeronaut"
+        },
+        "cyberpunk": {
+          "ko": "두 세기 뒤 리우 — 우림의 산과 바다 사이 먼 미래 거대 도시, 만의 둥근 화강암 봉우리들은 지금 그대로 서서 저마다 천천히 도는 빛 고리를 두르고 그 사이를 투명한 곤돌라가 빛의 실을 타고 오가며, 흰 세라믹과 유리의 가는 탑들이 초록 언덕에서 곡선 테라스로 솟아 테라스마다 우림 정원이 넘치고, 가장 높은 봉우리엔 두 팔 벌린 거대한 석상이 지금 그대로 은은한 빛 속에 서며, 긴 초승달 해변엔 검고 흰 물결 산책로가 빛으로 다시 깔려 물결치고, 빛의 수레와 북잡이들이 흐르는 넓은 빛의 행진 대로, 청록 만 위 빛의 길을 따라 소리 없는 비행 차량, 맑은 밤하늘",
+          "en": "Rio de Janeiro two centuries from now, a far-future megacity between rainforest mountains and the sea: the rounded granite peaks of the bay kept exactly as they stand, each ringed by a slow halo of light, transparent gondolas gliding between them on threads of light; slender towers of white ceramic and glass rising from the green hills in curving terraces overflowing with rainforest gardens; on the highest peak the colossal open-armed statue kept exactly as it stands in a soft glow; the long crescent beach traced by its black-and-white wave promenade rebuilt in rippling light; a vast parade avenue of light where floats of light glide and drummers march; quiet flying vehicles in lanes over the turquoise bay under a clear night sky",
+          "scenes": [
+            {
+              "key": "avenue",
+              "ko": "빛의 행진 대로 — 뒤로 흐르는 빛의 수레와 발맞춘 북잡이들",
+              "en": "on the long parade avenue of light at night, towering floats of light gliding behind her, rows of drummers marching in step and tiers of glowing stands rising on both sides"
+            },
+            {
+              "key": "promenade",
+              "ko": "빛으로 다시 깐 물결 산책로 — 빛 고리를 두른 봉우리들 아래",
+              "en": "on the crescent beach promenade at night, its black-and-white wave pattern rippling in light under her feet, the halo-ringed granite peaks and the white garden towers glowing over the bay"
+            },
+            {
+              "key": "tilestair",
+              "ko": "초록 · 노랑 · 파랑 빛 타일 계단 — 우림 정원 탑들 사이",
+              "en": "on a long stair of softly glowing glazed tiles in green, yellow and blue climbing the hill between rainforest-garden towers, the bay and the halo-ringed peaks glittering far below"
+            }
+          ],
+          "look": {
+            "face": {
+              "face_shape": "heart",
+              "eyes": "deep_set",
+              "brows": "low_heavy",
+              "nose": "straight_narrow",
+              "lips": "thin_long",
+              "eye_color": "ruby",
+              "age": "mid_20s",
+              "impression": "provocative",
+              "skin_tone": "bronze",
+              "eye_size": "medium",
+              "eye_tilt": "up",
+              "mark": "smoky",
+              "expr": "confident"
+            },
+            "silhouette": {
+              "body": "tall_curvy",
+              "hair": "undercut_sweep",
+              "hair_color": "chrome_prism",
+              "bangs": "one_eye"
+            },
+            "why": "삼바 학교 행진에서 수백 북잡이의 장단을 이끄는 바테리아(북 패) 지휘자를 두 세기 뒤로 옮긴, 빛의 대로의 바테리아 지휘자 — 날카롭고 당당한 사람. 키가 크고 다리가 길며 가슴 · 엉덩이가 풍만하고 허리가 가는 큰 키 곡선(tall_curvy) · 한쪽을 짧게 밀고 긴 머리를 반대로 쓸어 넘긴 머리(undercut_sweep) · 거울 같은 크롬 은빛에 노랑 · 루비 빨강 · 초록 줄이 흐르는 머리(chrome_prism — 행진의 빛깔, 다른 도시가 안 쓴 색) · 한쪽 눈을 덮는 긴 앞머리(one_eye) · 엇갈린 끈과 버클의 짧은 재킷 · 짧은 아래옷 · 긴 부츠(cropped_jacket — 재킷이 타일 모자이크, 처음 쓰는 실루엣)로 실루엣이 짧고 날카롭다. 하트형 얼굴 · 부드럽게 깊은 눈에 살짝 올라간 눈꼬리 · 눈 위에 조금 낮게 놓인 짙은 눈썹 · 콧대가 곧고 가는 코 · 가늘고 자연스러운 폭의 입술, 루비빛 붉은 눈(ruby), 구릿빛 갈색 피부(bronze)에 짙은 스모키 눈화장(smoky), 20대 중반, 도발적인 인상(provocative)에 침착하고 자신 있는 얼굴(confident). 판타지(달걀형 · 보랏빛 노을 곱슬 · 풍만 · 짙은 갈색 피부) · 스팀펑크(부드럽게 각진 얼굴 · 초록 낮은 포니테일 · 작은 곡선 몸 · 금빛 도는 밝은 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울 · 도쿄 · 베이징 · 파리 · 런던 · 로마 · 뉴욕 · 이스탄불 · 카이로 사람(랜드마크 포함)과도 셋 이상 다르다. 2026-11-23 인상 sharp → provocative(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
+          },
+          "hold": {
+            "en": "a slim conductor's baton of clear glass, a bead of light at its tip pulsing to the beat"
+          },
+          "motif": {
+            "ko": "타일 계단(에스카다리아 셀라롱)을 옮긴 바테리아 지휘자의 짧은 재킷 — 초록 · 노랑 · 파랑 유리 타일과 작은 거울 조각을 모자이크로 박아 은은히 빛나는 패널, 짧은 치마엔 북의 장단에 맞춰 북면을 친 것처럼 빛의 고리가 바깥으로 번진다 — 손에는 끝의 빛 구슬이 장단에 맞춰 뛰는 맑은 유리 지휘봉",
+            "en": "a cropped jacket whose panels are a mosaic of softly glowing glazed tiles in green, yellow and blue set with little mirror pieces, like the famous tiled stairway of the old quarter; rings of light pulsing outward across her short skirt to the beat of the drums, like struck drumheads"
+          },
+          "card_ko": {
+            "look": "크롬 무지개 언더컷 · 큰 키 곡선",
+            "motif": "타일 모자이크 재킷 · 북 빛 고리"
+          },
+          "sil": "cropped_jacket"
+        }
+      },
+      "design_note": "설계 상태: 시안(claude, 2026-11-21) — 시험 그림 전. 사용자 「남은 도시도 설계해줘」(리우데자네이루 차례 — 열 곳 가운데 마지막), 카이로 · 이스탄불 · 베이징 · 런던 · 파리 · 로마 · 뉴욕 · 도쿄 꼴을 따랐다. 세 사람 모두 브라질인 성인 여성 — 브라질은 뿌리가 여럿인 나라라 피부 · 얼굴을 셋이 자연스럽게 다르게 두고(판타지 짙은 갈색 deep_brown · 스팀펑크 금빛 도는 밝은 피부 golden_tan · 사이버펑크 구릿빛 갈색 bronze) look 이 정하며, 인종 낱말은 쓰지 않는다. 얼굴 칸 다섯은 세 세계끼리 모두 다르고, 서울 · 도쿄 · 베이징 · 파리 · 런던 · 로마 · 뉴욕 · 이스탄불 · 카이로 사람(랜드마크 포함) 누구와도 셋 이상 다르다. 체형은 셋 다 굴곡형(풍만 voluptuous · 작은 곡선 petite_curvy · 큰 키 곡선 tall_curvy — 사용자 2026-11-20), 머리색 셋(짙은 보라에서 장밋빛으로 번지는 permanganate · 풀빛 초록 grass_green · 노랑 · 루비 · 초록 줄의 크롬 은빛 chrome_prism)은 다른 도시가 아직 안 쓴 색이고, 헤어스타일은 열쇠가 다 쓰여 조합으로 갈랐다(구름 곱슬 · 낮은 포니테일 · 언더컷 쓸어 넘김 — 머리색 · 체형이 겹치는 사람 없음). 실루엣 winged(판타지) · cropped_jacket(사이버펑크)은 처음 쓴다. 이야기 줄기는 「해를 보내고 · 봉우리를 잇고 · 장단을 이끄는 경이로운 도시의 손」: 판타지는 아르포아도르 바위 곶에서 해를 바다로 보내고 도시가 박수로 답하게 하는 해넘이 전령, 스팀펑크는 1912년에 연 빵 산 곤돌라 길의 놋쇠 · 나무 곤돌라 조종사, 사이버펑크는 삼바 학교 행진의 바테리아(북 패) 지휘자를 두 세기 뒤 빛의 대로로 옮긴 사람. 도시 상징은 옷 · 장신구 한두 가지로만 — 판타지는 축제 깃털 부채를 하이판타지 깃털 날개로(노을 주황 · 산호 · 금) + 청록 비단 겉옷의 우림 잎 · 열대 꽃 금실 자수, 스팀펑크는 둥근 놋쇠 곤돌라 귀걸이 + 코파카바나 산책로의 검은 물결무늬 흰 비단 스카프, 사이버펑크는 셀라롱 계단의 초록 · 노랑 · 파랑 타일과 거울 조각 모자이크 재킷 + 북면을 친 듯 장단에 맞춰 번지는 빛 고리 치마. 「카니발 의상」 한 벌로 뭉뚱그리지 않았다. 구세주 그리스도상은 종교 상이라 사람의 옷 · 몸짓으로 옮기지 않고(두 팔 벌린 자세 · 아르데코 관 없음) 판타지 · 사이버펑크 배경 봉우리 위 「두 팔 벌린 거대한 석상」 으로만 이름 없이 두었다 — 종교 이름 · 예배 장면은 싣지 않는다. 사실 근거: 빵 산 — 만 어귀에서 물가로 곧장 솟은 화강암 · 석영 봉우리, 1912년 브라질 처음 · 세계 셋째로 연 케이블웨이가 우르카 언덕을 거쳐 꼭대기까지 두 번에 오른다, 처음 차는 나무였다(https://en.wikipedia.org/wiki/Sugarloaf_Mountain), 구세주 그리스도상 — 코르코바두 산 꼭대기, 높이 30미터 · 팔 너비 28미터의 아르데코 상, 겉은 동석(https://en.wikipedia.org/wiki/Christ_the_Redeemer_(statue)), 코파카바나 산책로 — 1930년대부터 검고 흰 포르투갈식 돌 포장의 물결무늬, 1970년에 다시 지었다 · 새해 전야에 수백만이 모이고 불꽃놀이(https://en.wikipedia.org/wiki/Copacabana,_Rio_de_Janeiro), 아르포아도르 — 한여름엔 해가 바다로 지는 것이 보여 사람들이 모여 환호하고(https://en.wikipedia.org/wiki/Arpoador), 이파네마에서도 여름엔 해넘이에 박수를 보낸다 · 일요일엔 바닷길을 차 없이 연다(https://en.wikipedia.org/wiki/Ipanema), 셀라롱 계단 — 215단, 60여 나라에서 온 2000장 넘는 타일 · 도자기 · 거울로 덮었고 처음엔 국기 색인 파랑 · 초록 · 노랑 타일로 시작했다(https://en.wikipedia.org/wiki/Escadaria_Selar%C3%B3n), 카리오카 수도교(라파 아치) — 1750년, 두 층 아치 42개, 1896년부터 산타 테레사 전차가 그 위를 건넌다(https://en.wikipedia.org/wiki/Carioca_Aqueduct · https://en.wikipedia.org/wiki/Santa_Teresa_Tram), 삼바 학교 — 행진은 바테리아(북 패)가 장단으로 빠르기를 이끌고 북 패에도 지휘자가 있다, 수레(알레고리 수레) · 의상 · 행진 대로 삼바드로무(https://en.wikipedia.org/wiki/Samba_school · https://en.wikipedia.org/wiki/Rio_Carnival), 식물원 왕실 야자수 길 — 한 그루에서 난 야자 134그루 · 750미터, 난초 · 브로멜리아드(https://en.wikipedia.org/wiki/Rio_de_Janeiro_Botanical_Garden), 도시의 공식 노래 「경이로운 도시」(https://en.wikipedia.org/wiki/Rio_de_Janeiro). 화면 상징 한 줄이 40자 안에 들게 상징 ko 두 개를 앞뒤만 바꿨다(「코르코바두 산의 구세주 그리스도상」 → 「구세주 그리스도상 — 코르코바두 산」, 「별명 「경이로운 도시(Cidade Maravilhosa)」」 → 「경이로운 도시(Cidade Maravilhosa) — 리우의 별명」 — 뜻 · en · src 그대로), 다섯째 상징으로 셀라롱 계단을 더했다(사이버펑크 motif · 장면 · 생활 장면이 쓴다 — 한 줄엔 넷만). 지시문에 상표 · 실존 인물 이름은 쓰지 않는다(샌들 · 음료 · 맥주 · 구단 · 삼바 학교 · 사유 호텔 이름, 선수 · 가수 · 건축가 · 조경가 · 계단을 만든 이 · 조각가 이름도 — 계단은 「the famous tiled stairway of the old quarter」, 상은 「a colossal pale statue with arms spread wide」 처럼 생김새로). 판타지만 세계 palette(대서양 청록 · 노을 주황 · 금, 우림 초록은 자수에만 — 초록을 금 갑옷 · 날개에 고루 실으면 숲 순찰자나 국기 응원복으로 읽혀서)와 own_vocab.casual_world(공용 「서양 신화 세계」 대신 우림의 산과 바다 사이 신화 세계). 판타지 · 스팀펑크 글엔 「cable car」 대신 gondola 를 쓴다(공용 금지 낱말 car). 동물 · 종교 장면은 싣지 않았다.",
+      "card_ko": {
+        "symbols": "구세주 그리스도상 · 빵 산 · 코파카바나 · 경이로운 도시"
+      },
+      "landmarks": [
+        {
+          "key": "sugarloaf",
+          "ko": "빵 산(팡 지 아수카르)",
+          "en": "Sugarloaf Mountain",
+          "src": "https://en.wikipedia.org/wiki/Sugarloaf_Mountain",
+          "lat": -22.9494,
+          "lon": -43.1567,
+          "latlon_src": "https://en.wikipedia.org/wiki/Sugarloaf_Mountain",
+          "persona": "구아나바라 만 어귀에 물가에서 곧장 솟은 화강암 · 석영 봉우리 — 바다에서 들어오는 이를 가장 먼저 맞고, 흔들리지 않으며, 오르는 이에게만 꼭대기를 내준다.",
+          "worlds": {
+            "fantasy": {
+              "ko": "만 어귀의 파수 봉우리 — 신화 세계 왕도 리우의 청록 만 어귀에 물가에서 곧장 솟은 둥근 화강암 봉우리, 석영 결이 새벽빛에 반짝이고, 큰 돛배들이 그 발치를 지나 만으로 들어온다",
+              "en": "the great rounded granite peak standing guard at the mouth of the turquoise bay of the myth-world capital at dawn: a sheer monolith rising straight from the water's edge, its quartz veins glittering in the first light, tall sailing ships gliding past its foot into the bay, rainforest mountains and white palaces waking along the shore",
+              "scenes": [
+                {
+                  "key": "summit",
+                  "ko": "새벽 봉우리 꼭대기 — 만으로 들어오는 큰 돛배들",
+                  "en": "on the summit of the great rounded granite peak at dawn, tall sailing ships gliding into the turquoise bay far below her"
+                },
+                {
+                  "key": "ledge",
+                  "ko": "석영이 반짝이는 깎아지른 바위벽의 좁은 턱",
+                  "en": "on a narrow ledge of the sheer granite face glittering with quartz, the open sea on one side and the calm bay on the other"
+                },
+                {
+                  "key": "redbeach",
+                  "ko": "봉우리 발치의 붉은 모래 작은 해변",
+                  "en": "on the small sheltered beach of reddish sand at the foot of the peak, the granite wall rising straight above her into the morning sky"
+                }
+              ],
+              "look": {
+                "face": {
+                  "face_shape": "long",
+                  "eyes": "narrow_upturned",
+                  "brows": "angled_sharp",
+                  "nose": "aquiline",
+                  "lips": "heart_full",
+                  "eye_color": "amber",
+                  "age": "mid_20s",
+                  "impression": "regal",
+                  "skin_tone": "deep_brown",
+                  "eye_size": "medium",
+                  "eye_tilt": "up",
+                  "mark": "winged_liner",
+                  "expr": "determined"
+                },
+                "silhouette": {
+                  "body": "strong_curvy",
+                  "hair": "braids",
+                  "hair_color": "white_gold",
+                  "bangs": "none"
+                },
+                "why": "만 어귀의 봉우리가 사람이 된 파수 기사 — 바다에서 들어오는 배를 가장 먼저 맞고 지킨다. 리우 판타지의 해넘이 전령(풍만 · 보랏빛 노을 곱슬 · 달걀형)과 달리 단단하고 곧은 사람. 어깨가 넓고 근육이 단단하면서 가슴 · 엉덩이가 둥근 굴곡 몸(strong_curvy) · 길게 땋아 내린 여러 갈래 머리(braids) · 가장자리가 빛나는 백금빛 머리(white_gold — 새벽빛을 받은 석영), 앞머리 없음. 긴 얼굴 · 눈꼬리가 올라간 가는 눈 · 날 선 눈썹 · 매부리코 · 도톰한 하트 입술, 호박빛 눈, 짙은 갈색 피부(deep_brown)에 날개 눈매, 20대 후반의 위엄 있는 인상(regal)에 결연한 표정. 얼굴 칸 다섯이 리우 판타지 사람과 모두 다르다."
+              },
+              "hold": {
+                "en": "a tall spear whose head is a lantern of clear quartz glowing softly over the bay"
+              },
+              "motif": {
+                "ko": "만 어귀 파수 기사 차림 — 석영 결이 반짝이는 흰 화강암을 갈아 만든 흉갑과 둥근 견갑, 둥근 봉우리 꼴의 맑은 수정 관 — 손에는 맑은 석영 등불을 얹은 긴 창",
+                "en": "a breastplate and rounded pauldrons of polished pale granite veined with glittering quartz, and a high crown of clear rock crystal shaped like a rounded peak"
+              },
+              "card_ko": {
+                "look": "백금빛 땋은 머리 · 굴곡 근육",
+                "motif": "화강암 흉갑 · 수정 봉우리 관"
+              },
+              "sil": "gown_armor"
+            },
+            "steampunk": {
+              "ko": "가스등 동화 리우의 바위 봉우리 — 황금빛 오후, 청록 만 어귀의 둥근 화강암 봉우리 벽에 비단 밧줄이 드리우고, 낮은 봉우리에서 꼭대기로 놋쇠 · 나무 곤돌라가 오르며, 봉우리 곁으로 비행선이 지난다",
+              "en": "the great rounded granite peak at the mouth of the bay in a storybook gaslamp-fantasy Rio de Janeiro on a warm golden afternoon: a sheer quartz-veined rock face with white silk climbing ropes hanging down it, little brass-and-wood gondolas gliding on fine cables from the lower peak to the summit, airships with striped balloons drifting past and soft white steam rising from the cable stations",
+              "scenes": [
+                {
+                  "key": "wall",
+                  "ko": "깎아지른 화강암 벽 중턱 — 비단 밧줄에 매달려, 뒤로 지나는 곤돌라",
+                  "en": "halfway up the sheer granite face on a white silk rope, a little brass-and-wood gondola gliding past on its cable behind her and the turquoise bay far below"
+                },
+                {
+                  "key": "summit",
+                  "ko": "오른 뒤의 꼭대기 — 해 질 녘 비행선과 만",
+                  "en": "on the summit at golden hour after the climb, airships with striped balloons drifting past and the whole bay, its beaches and green hills spread below"
+                },
+                {
+                  "key": "station",
+                  "ko": "낮은 봉우리 곤돌라 역 — 도는 놋쇠 줄바퀴 곁의 등반 짐",
+                  "en": "at the lower peak's gondola station beside the great turning brass cable wheels, coils of silk rope and brass climbing gear laid out on the boards in soft white steam"
+                }
+              ],
+              "look": {
+                "face": {
+                  "face_shape": "round",
+                  "eyes": "round_large",
+                  "brows": "soft_round",
+                  "nose": "small_button",
+                  "lips": "full_wide",
+                  "eye_color": "emerald",
+                  "age": "early_20s",
+                  "impression": "cool",
+                  "skin_tone": "olive",
+                  "eye_size": "large",
+                  "eye_tilt": "level",
+                  "mark": "mole_eye",
+                  "expr": "focused"
+                },
+                "silhouette": {
+                  "body": "curvy_athletic",
+                  "hair": "ponytail",
+                  "hair_color": "copper",
+                  "bangs": "curtain"
+                },
+                "why": "봉우리의 바위길을 처음 여는 등반가 — 빵 산엔 여러 마디로 오르는 바위길이 있다. 리우 스팀펑크의 곤돌라 조종사(작은 곡선 · 초록 낮은 포니테일 · 부드럽게 각진 얼굴)와 달리 줄을 타고 벽을 오르는 사람. 탄탄한 굴곡 운동 체형(curvy_athletic) · 높이 묶은 긴 포니테일(ponytail) · 반들거리는 구리빛 붉은 머리(copper) · 가르마 커튼 앞머리. 둥근 얼굴 · 크고 둥근 눈 · 부드러운 둥근 눈썹 · 작은 코 · 도톰하고 넓은 입술, 에메랄드 눈(우림), 올리브 피부, 눈 밑 점, 20대 초반의 시원한 인상(cool)에 집중한 표정. 얼굴 칸 다섯이 리우 스팀펑크 사람과 모두 다르다."
+              },
+              "hold": {
+                "en": "a small polished brass climbing hammer with a looped silk wrist cord"
+              },
+              "motif": {
+                "ko": "바위 등반가 차림 — 짧은 재킷 위 놋쇠 버클 등반 멜빵과 몸에 비껴 감은 흰 비단 밧줄, 머리에 장신구처럼 꽂은 작은 놋쇠 바위못 — 손에는 비단 고리를 단 작은 놋쇠 등반 망치",
+                "en": "a fitted climbing harness of polished brass buckles over a short jacket, coils of white silk rope slung across her body, and little brass climbing pitons pinned in her hair like ornaments"
+              },
+              "card_ko": {
+                "look": "구리빛 포니테일 · 굴곡 운동",
+                "motif": "놋쇠 등반 멜빵 · 바위못 핀"
+              },
+              "sil": "explorer"
+            },
+            "cyberpunk": {
+              "ko": "두 세기 뒤 지금 그대로 지켜 둔 봉우리 — 빛 고리를 두른 거대 도시 리우의 만 어귀, 자연 기념물로 지켜 온 둥근 화강암 봉우리와 낮은 언덕의 우림을 흰 세라믹 측량 드론과 은은한 길잡이 빛이 지킨다",
+              "en": "the great rounded granite peak at the mouth of the bay of far-future Rio de Janeiro two centuries from now, kept exactly as it stands as a protected natural monument amid a megacity of white ceramic garden towers: its quartz-veined rock and the rainforest of the lower hill watched over by small white survey drones and soft guide lights, ships of light slipping into the bay below and flying vehicles in quiet lanes overhead",
+              "scenes": [
+                {
+                  "key": "summit",
+                  "ko": "지켜 둔 봉우리 꼭대기의 새벽 — 멈춰 뜬 측량 드론들",
+                  "en": "on the summit of the granite peak kept exactly as it stands, small white survey drones holding still in the soft dawn air and the garden towers of the megacity glittering across the bay"
+                },
+                {
+                  "key": "platform",
+                  "ko": "봉우리 곁 가는 유리 발판 — 만 어귀로 드는 빛의 배들",
+                  "en": "on a slender glass platform beside the peak at the mouth of the bay, ships of light slipping in below her and flying vehicles gliding in lanes overhead"
+                },
+                {
+                  "key": "trail",
+                  "ko": "낮은 언덕 우림 오솔길의 밤 — 길잡이 빛",
+                  "en": "on a rainforest trail of the protected lower hill at night, soft guide lights glowing along the path and the peak rising dark and quiet above her"
+                }
+              ],
+              "look": {
+                "face": {
+                  "face_shape": "diamond",
+                  "eyes": "almond_wide",
+                  "brows": "straight_thick",
+                  "nose": "upturned",
+                  "lips": "small_bow",
+                  "eye_color": "ice_blue",
+                  "age": "mid_20s",
+                  "impression": "stoic",
+                  "skin_tone": "warm_beige",
+                  "eye_size": "medium",
+                  "eye_tilt": "level",
+                  "mark": "bare",
+                  "expr": "calm"
+                },
+                "silhouette": {
+                  "body": "hourglass",
+                  "hair": "hime_cut",
+                  "hair_color": "moon_silver",
+                  "bangs": "straight"
+                },
+                "why": "도시가 아무리 바뀌어도 봉우리를 지금 그대로 지키는 보전 구역 관리자 — 빵 산은 자연 기념물(2006)이자 세계유산의 한 부분(2012)이다. 리우 사이버펑크의 바테리아 지휘자(큰 키 곡선 · 크롬 무지개 언더컷 · 하트형)와 달리 고요하고 단정한 사람. 모래시계 체형(hourglass) · 뺨 길이 옆머리를 일자로 자른 긴 생머리(hime_cut) · 달빛을 비추는 거울 은빛 머리(moon_silver — 석영) · 일자 앞머리. 마름모 얼굴 · 자연스러운 아몬드 눈 · 곧고 굵은 눈썹 · 끝이 살짝 들린 코 · 작은 활 입술, 얼음빛 푸른 눈, 따뜻한 베이지 피부에 맨 얼굴, 20대 중반의 감정을 숨긴 인상(stoic)에 차분한 표정. 얼굴 칸 다섯이 리우 사이버펑크 사람과 모두 다르다."
+              },
+              "hold": {
+                "en": "a small hovering survey drone of white ceramic and clear glass resting just above her open palm"
+              },
+              "motif": {
+                "ko": "보전 구역 관리자 차림 — 둥근 화강암 봉우리 꼴로 매끈하게 빚은 회색 세라믹 높은 고리 깃에 석영처럼 흰 빛줄기가 흐르고, 눈앞엔 맑은 석영 유리 바이저 — 손바닥 위엔 흰 세라믹 측량 드론",
+                "en": "a high ring collar of smooth grey ceramic shaped like a rounded granite peak, veined with quartz-white light, and a clear quartz-glass visor across her eyes"
+              },
+              "card_ko": {
+                "look": "달빛 은빛 히메컷 · 모래시계",
+                "motif": "봉우리 세라믹 깃 · 석영 바이저"
+              },
+              "sil": "orbital_pilot"
+            }
+          }
+        },
+        {
+          "key": "copacabana",
+          "ko": "코파카바나 해변",
+          "en": "Copacabana Beach",
+          "src": "https://en.wikipedia.org/wiki/Copacabana,_Rio_de_Janeiro",
+          "lat": -22.9669,
+          "lon": -43.1806,
+          "latlon_src": "https://en.wikipedia.org/wiki/Copacabana,_Rio_de_Janeiro",
+          "persona": "대서양에 맞닿은 4킬로미터 초승달 해변과 검고 흰 물결무늬 산책로 — 새해 전야엔 수백만을 품고, 낮엔 바다를 지키며, 늘 몸을 움직이게 한다.",
+          "worlds": {
+            "fantasy": {
+              "ko": "새해를 맞는 초승달 해변 — 신화 세계 왕도 리우의 긴 흰 모래 초승달 해변에서 한밤 바다 위로 마법 불꽃이 피고, 검고 흰 돌 물결 산책로를 따라 등불과 야자수, 해변 끝엔 옛 요새의 성벽이 선다",
+              "en": "the long white crescent beach of the myth-world capital on the night the year turns: magical fireworks of gold and rose blooming over the dark Atlantic, a promenade paved in black-and-white stone waves curving the whole length of the shore under lanterns and swaying palms, crowds of revellers on the sand and the ramparts of an old fort standing at the far end of the beach",
+              "scenes": [
+                {
+                  "key": "shore",
+                  "ko": "한밤 초승달 해변 — 바다 위로 피는 마법 불꽃과 사람들",
+                  "en": "on the crescent beach at midnight as magical fireworks of gold and rose burst over the sea, crowds of revellers along the shore watching the sky"
+                },
+                {
+                  "key": "promenade",
+                  "ko": "등불 아래 검고 흰 돌 물결 산책로",
+                  "en": "on the black-and-white stone wave promenade under glowing lanterns, tall palms swaying and the white sand stretching away beside her"
+                },
+                {
+                  "key": "fort",
+                  "ko": "해변 끝 옛 요새 성벽 — 굽어 가는 빛의 초승달",
+                  "en": "on the ramparts of the old fort at the end of the beach, the whole glittering crescent of lights curving away along the shore behind her"
+                }
+              ],
+              "look": {
+                "face": {
+                  "face_shape": "heart",
+                  "eyes": "almond_wide",
+                  "brows": "arched_thin",
+                  "nose": "straight_narrow",
+                  "lips": "small_bow",
+                  "eye_color": "gold",
+                  "age": "mid_20s",
+                  "impression": "elegant",
+                  "skin_tone": "bronze",
+                  "eye_size": "large",
+                  "eye_tilt": "up",
+                  "mark": "red_lip",
+                  "expr": "confident"
+                },
+                "silhouette": {
+                  "body": "willowy_curvy",
+                  "hair": "giant_twin_tails",
+                  "hair_color": "dark_auburn",
+                  "bangs": "side_swept"
+                },
+                "why": "새해 전야 수백만이 모이는 해변에서 바다 위로 불꽃을 띄워 해를 여는 불꽃 축제의 여왕. 리우 판타지의 해넘이 전령(풍만 · 보랏빛 구름 곱슬 · 달걀형 · 짙은 갈색 피부)과 달리 길고 우아한 사람. 팔다리가 길고 부드러운 곡선 체형(willowy_curvy) · 허리까지 물결치는 인어 웨이브(mermaid_waves) · 장밋빛 금 머리(rose_gold — 불꽃 빛) · 옆으로 넘긴 앞머리. 하트형 얼굴 · 자연스러운 아몬드 눈 · 가늘게 휜 눈썹 · 곧고 가는 코 · 작은 활 입술, 금빛 눈, 구릿빛 갈색 피부(bronze)에 붉은 입술, 20대 중반의 우아한 인상에 자신 있는 표정. 얼굴 칸 다섯이 리우 판타지 사람 · 빵 산 판타지 사람과 모두 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 rose_gold → dark_auburn, 헤어스타일 mermaid_waves → giant_twin_tails"
+              },
+              "hold": {
+                "en": "a slender gold wand trailing sparks that rise and bloom into tiny fireworks"
+              },
+              "motif": {
+                "ko": "불꽃 축제의 여왕 차림 — 불꽃이 터지는 꼴의 금 · 장밋빛 보석 관, 흰 비단 긴 끌자락엔 흑옥과 진주로 검고 흰 물결 모자이크를 박았다 — 손에는 불꽃이 피어오르는 가는 금 지팡이",
+                "en": "a tiara of gold and rose jewels shaped like bursting fireworks, and a long train of white silk inlaid along its hem with a black-and-white wave mosaic of jet and pearl"
+              },
+              "card_ko": {
+                "look": "짙은 적갈 큰 양갈래",
+                "motif": "불꽃 관 · 흑백 물결 끌자락"
+              },
+              "sil": "crown_regalia"
+            },
+            "steampunk": {
+              "ko": "가스등 동화 리우의 해수욕 해변 — 황금빛 오후, 흰 모래 초승달 해변을 따라 흰 칠 나무 · 놋쇠 구조대 망루가 서고, 줄무늬 해수욕 천막과 검고 흰 돌 물결 산책로, 가스등, 바다엔 흰 김을 뿜는 외륜선",
+              "en": "the long crescent bathing beach of a storybook gaslamp-fantasy Rio de Janeiro on a warm golden afternoon: lifeguard watchtowers of white-painted wood and polished brass standing along the white sand, striped bathing tents and parasols, a curving promenade paved in black-and-white stone waves lined with gas lamps, and brass-trimmed paddle-steamers puffing clean white steam out on the Atlantic",
+              "scenes": [
+                {
+                  "key": "tower",
+                  "ko": "흰 나무 · 놋쇠 구조대 망루 위 — 줄무늬 천막의 해변",
+                  "en": "on a lifeguard watchtower of white-painted wood and polished brass, the crowded beach of striped bathing tents spread along the sand below her"
+                },
+                {
+                  "key": "surf",
+                  "ko": "코르크 구명 고리를 들고 파도 속으로 — 기다리는 놋쇠 테 구조 보트",
+                  "en": "wading out into the white surf with a cork life ring, a brass-trimmed rowing boat waiting beyond the breaking waves"
+                },
+                {
+                  "key": "promenade",
+                  "ko": "해 질 녘 검고 흰 돌 물결 산책로 — 가스등과 외륜선",
+                  "en": "on the curving black-and-white stone wave promenade at golden hour, gas lamps glowing and paddle-steamers out at sea trailing white steam"
+                }
+              ],
+              "look": {
+                "face": {
+                  "face_shape": "oval",
+                  "eyes": "deep_set",
+                  "brows": "straight_thick",
+                  "nose": "aquiline",
+                  "lips": "heart_full",
+                  "eye_color": "teal",
+                  "age": "mid_20s",
+                  "impression": "mature",
+                  "skin_tone": "fair",
+                  "eye_size": "medium",
+                  "eye_tilt": "level",
+                  "mark": "mole_lip",
+                  "expr": "calm"
+                },
+                "silhouette": {
+                  "body": "pear_curvy",
+                  "hair": "spiky_wild",
+                  "hair_color": "honey_brown",
+                  "bangs": "none"
+                },
+                "why": "해변의 구조대 망루를 지키는 바다 구조대장 — 코파카바나 해변은 구조대 망루(포스투)로 자리를 나눈다. 리우 스팀펑크의 곤돌라 조종사(작은 곡선 · 초록 낮은 포니테일 · 금빛 밝은 피부)와 달리 차분하고 든든한 사람. 어깨가 좁고 엉덩이 · 허벅지가 넉넉한 서양배 굴곡 몸(pear_curvy) · 반들거리는 턱 길이 핑거 웨이브(finger_waves — 해수욕장 옛 시절) · 짙은 와인빛 붉은 머리(wine_red), 앞머리 없음. 갸름한 달걀형 얼굴 · 깊은 눈매 · 곧고 굵은 눈썹 · 매부리코 · 도톰한 하트 입술, 청록 눈, 흰 피부에 입가의 점, 20대 후반의 성숙한 인상에 차분한 표정. 얼굴 칸 다섯이 리우 스팀펑크 사람 · 빵 산 스팀펑크 사람과 모두 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 wine_red → honey_brown, 헤어스타일 finger_waves → spiky_wild"
+              },
+              "hold": {
+                "en": "a cork life ring banded in polished brass"
+              },
+              "motif": {
+                "ko": "바다 구조대장 차림 — 남빛 · 흰 줄무늬 해수욕 옷 위 짧은 해군풍 겉옷, 옷깃 가장자리를 검고 흰 물결무늬로 둘렀고 가는 사슬엔 놋쇠 구조 호루라기 — 손에는 놋쇠 띠를 두른 코르크 구명 고리",
+                "en": "a short naval frock coat over a navy-and-white striped bathing costume, its lapels edged in a black-and-white wave pattern, and a brass lifeguard's whistle on a fine chain"
+              },
+              "card_ko": {
+                "look": "꿀갈색 삐죽 머리",
+                "motif": "흑백 물결 깃 · 놋쇠 호루라기"
+              },
+              "sil": "naval_officer"
+            },
+            "cyberpunk": {
+              "ko": "두 세기 뒤 빛의 초승달 해변 — 거대 도시 리우의 긴 초승달 해변, 모래 위에 빛의 선을 그린 풋발리 코트가 줄지어 밤새 공이 오가고, 검고 흰 물결 산책로는 빛으로 다시 깔려 물결치며, 새해 밤엔 바다 위로 빛의 불꽃이 핀다",
+              "en": "the long crescent beach of far-future Rio de Janeiro two centuries from now: rows of footvolley courts drawn in glowing lines on the white sand where matches run all night, the black-and-white wave promenade rebuilt in rippling light under slender white garden towers, tiers of glowing stands along the shore and fireworks of light blooming over the dark Atlantic on the night the year turns",
+              "scenes": [
+                {
+                  "key": "court",
+                  "ko": "빛의 선 풋발리 코트 — 한창인 경기와 빛의 관중석",
+                  "en": "on a beach court of glowing lines on the sand at night, mid-match with a ball of light in the air and tiers of glowing stands full of people behind her"
+                },
+                {
+                  "key": "promenade",
+                  "ko": "빛으로 다시 깐 물결 산책로 — 흰 정원 탑들 아래",
+                  "en": "on the wave promenade rebuilt in rippling light, the black-and-white pattern flowing under her feet and the white garden towers glowing along the shore"
+                },
+                {
+                  "key": "newyear",
+                  "ko": "새해 밤 해변 — 바다 위 빛의 불꽃과 끝없는 인파",
+                  "en": "on the beach on the night the year turns, fireworks of light blooming over the sea and a vast crowd gathered along the shore"
+                }
+              ],
+              "look": {
+                "face": {
+                  "face_shape": "square_soft",
+                  "eyes": "round_large",
+                  "brows": "arched_thin",
+                  "nose": "broad_soft",
+                  "lips": "full_wide",
+                  "eye_color": "honey",
+                  "age": "early_20s",
+                  "impression": "fierce",
+                  "skin_tone": "deep_brown",
+                  "eye_size": "large",
+                  "eye_tilt": "up",
+                  "mark": "gloss",
+                  "expr": "proud"
+                },
+                "silhouette": {
+                  "body": "curvy",
+                  "hair": "lion_mane",
+                  "hair_color": "neon_red",
+                  "bangs": "choppy"
+                },
+                "why": "발만 쓰는 해변 배구 풋발리(1965년 리우에서 생겼다)의 두 세기 뒤 챔피언. 리우 사이버펑크의 바테리아 지휘자(큰 키 곡선 · 크롬 무지개 언더컷 · 하트형 · 구릿빛 피부)와 달리 작고 빠른 사람. 굴곡 있는 몸(curvy) · 짧게 헝클어진 픽시 컷(pixie_cut) · 불 켜진 관처럼 빛나는 붉은 주황 머리(neon_red) · 들쭉날쭉한 앞머리. 부드럽게 각진 얼굴 · 크고 둥근 눈 · 가늘게 휜 눈썹 · 끝이 둥근 코 · 도톰하고 넓은 입술, 꿀빛 눈, 짙은 갈색 피부(deep_brown)에 윤기 나는 입술, 20대 초반의 사나운 인상(fierce)에 자랑스러운 표정. 얼굴 칸 다섯이 리우 사이버펑크 사람 · 빵 산 사이버펑크 사람과 모두 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 헤어스타일 pixie_cut → lion_mane"
+              },
+              "hold": {
+                "en": "a softly glowing ball of light, smooth and without any markings"
+              },
+              "motif": {
+                "ko": "풋발리 챔피언 차림 — 다리 쪽을 높이 판 매끈한 운동 바디슈트에 검고 흰 물결무늬가 빛으로 흐르며 움직일 때마다 물결치고, 발목 띠는 공을 찰 때마다 모래에 빛을 번진다 — 손에는 무늬 없이 은은히 빛나는 공",
+                "en": "a sleek sports bodysuit cut high at the legs, traced with the black-and-white wave pattern in flowing light that ripples as she moves, and glowing ankle bands that splash light across the sand with every kick"
+              },
+              "card_ko": {
+                "look": "붉은 빛 사자 갈기 머리 · 굴곡",
+                "motif": "빛 물결 운동복 · 빛 발목띠"
+              },
+              "sil": "exo_frame"
+            }
+          }
+        },
+        {
+          "key": "lapaarches",
+          "ko": "라파 아치(카리오카 수도교)",
+          "en": "the Carioca Aqueduct",
+          "src": "https://en.wikipedia.org/wiki/Carioca_Aqueduct",
+          "lat": -22.9126,
+          "lon": -43.1799,
+          "latlon_src": "https://en.wikipedia.org/wiki/Carioca_Aqueduct",
+          "persona": "우림 언덕의 샘물을 도시의 분수로 날라 온 두 층 흰 아치 마흔둘 — 물길을 다하고는 전차를 실어 나르고, 그 아래 라파의 밤엔 노래가 흐른다.",
+          "worlds": {
+            "fantasy": {
+              "ko": "샘물을 나르는 흰 아치 — 신화 세계 왕도 리우의 옛 동네를 가로지르는 두 층 흰 아치 수도교, 꼭대기 물길엔 우림 언덕의 맑은 샘물이 흐르고, 그 물이 도시 광장의 조각 돌 분수로 쏟아진다",
+              "en": "the great white aqueduct of two tiers of arches striding across the old quarter of the myth-world capital between two green hills: clear spring water from the rainforest hill flowing in the open channel along its top and pouring into carved stone fountains in the city squares below, lantern-light on the white arches and tropical blossoms with softly glowing petals drifting in the evening air",
+              "scenes": [
+                {
+                  "key": "channel",
+                  "ko": "흰 아치 꼭대기 물길을 따라 — 발치에 흐르는 샘물",
+                  "en": "walking along the open water channel on top of the great white two-tiered arched aqueduct, clear spring water flowing beside her feet and the green rainforest hill behind her"
+                },
+                {
+                  "key": "fountain",
+                  "ko": "물이 닿는 광장의 조각 돌 분수",
+                  "en": "at a richly carved stone fountain in a city square where the aqueduct's water arrives, clear water pouring from its spouts into a wide basin under the lanterns"
+                },
+                {
+                  "key": "spring",
+                  "ko": "우림 언덕 높이 물길이 시작되는 샘",
+                  "en": "at the spring high on the rainforest hill where the river begins, ferns and huge glossy leaves around a clear pool glowing softly in the green shade"
+                }
+              ],
+              "look": {
+                "face": {
+                  "face_shape": "round",
+                  "eyes": "round_large",
+                  "brows": "low_heavy",
+                  "nose": "small_button",
+                  "lips": "full_wide",
+                  "eye_color": "sky_blue",
+                  "age": "early_20s",
+                  "impression": "shy",
+                  "skin_tone": "warm_beige",
+                  "eye_size": "large",
+                  "eye_tilt": "down",
+                  "mark": "blush",
+                  "expr": "gentle"
+                },
+                "silhouette": {
+                  "body": "petite_voluptuous",
+                  "hair": "side_ponytail",
+                  "hair_color": "chestnut",
+                  "bangs": "parted"
+                },
+                "why": "우림 언덕 카리오카 강의 샘물을 아치 위 물길로 도시 분수까지 이끄는 물길의 마법사 — 수도교는 1750년에 열려 카리오카 강의 물을 도시 분수로 날랐다. 리우 판타지의 해넘이 전령(풍만 · 보랏빛 구름 곱슬 · 달걀형)과 달리 작고 부드러운 사람. 작은 키에 가슴 · 엉덩이가 넉넉한 몸(petite_voluptuous) · 반만 묶어 내린 긴 머리(half_up) · 맑은 물빛 엷은 청록 머리(pale_aqua) · 가운데 가르마. 둥근 얼굴 · 크고 둥근 눈 · 조금 낮게 놓인 짙은 눈썹 · 작은 코 · 도톰하고 넓은 입술, 하늘빛 눈, 따뜻한 베이지 피부에 발그레한 볼, 20대 초반의 수줍은 인상에 다정한 표정. 얼굴 칸이 리우 판타지 사람 · 빵 산 · 코파카바나 판타지 사람과 넷 이상 다르다. 2026-11-23 인상 soft → shy(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔). · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 pale_aqua → chestnut, 헤어스타일 half_up → side_ponytail"
+              },
+              "hold": {
+                "en": "a slender silver ewer pouring an endless thread of clear spring water"
+              },
+              "motif": {
+                "ko": "물길의 마법사 차림 — 흰 긴 로브 자락에 금실로 두 줄 작은 아치를 수놓았고, 맑은 샘물 한 줄기가 살아서 어깨와 팔을 감돈다 — 손에는 맑은 물이 끝없이 흘러나오는 가는 은 물병",
+                "en": "a long white robe whose hem is embroidered in gold with a double row of small arches, and a ribbon of living spring water circling her shoulders and arms"
+              },
+              "card_ko": {
+                "look": "밤색 옆 묶음 · 작은 풍만",
+                "motif": "두 줄 아치 자수 · 샘물 띠"
+              },
+              "sil": "mage_robe"
+            },
+            "steampunk": {
+              "ko": "가스등 동화 리우의 아치 위 전차 — 황금빛 오후, 옛 동네를 가로지르는 흰 두 층 아치 수도교 위로 옆이 트인 작은 전차가 트롤리 막대를 달고 건너가, 연철 발코니 파스텔 집들의 언덕 동네로 오르고, 시내 쪽 종점은 옛 사무 건물 위층에 있다",
+              "en": "the white two-tiered arched aqueduct of a storybook gaslamp-fantasy Rio de Janeiro on a warm golden afternoon, turned into a bridge for a little open-sided tram with wooden cross-benches and a brass trolley pole: the tram crossing high over the old quarter and climbing a steep hill of pastel houses with wrought-iron balconies, gas lamps along the cobbled lanes, its terminus on an upper floor of an old office building in the city centre, soft white steam drifting in the warm light",
+              "scenes": [
+                {
+                  "key": "tram",
+                  "ko": "흰 아치 위를 건너는 열린 전차 발판",
+                  "en": "on the running board of the little open-sided tram as it crosses the top of the white two-tiered arched aqueduct, the rooftops of the old quarter far below her in the golden light"
+                },
+                {
+                  "key": "terminus",
+                  "ko": "옛 사무 건물 위층의 전차 종점 — 놋쇠 레일과 트롤리 막대",
+                  "en": "at the tram terminus on an upper floor of an old office building in the city centre, polished brass rails, trolley poles and a tram waiting in warm lamplight"
+                },
+                {
+                  "key": "hill",
+                  "ko": "언덕 동네 돌길을 오르는 전차 — 파스텔 집과 가스등",
+                  "en": "beside the tram climbing the steep cobbled lanes of the hill quarter among pastel houses with wrought-iron balconies, gas lamps glowing at dusk"
+                }
+              ],
+              "look": {
+                "face": {
+                  "face_shape": "heart",
+                  "eyes": "narrow_upturned",
+                  "brows": "angled_sharp",
+                  "nose": "straight_narrow",
+                  "lips": "thin_long",
+                  "eye_color": "graphite_grey",
+                  "age": "mid_20s",
+                  "impression": "sharp",
+                  "skin_tone": "golden_tan",
+                  "eye_size": "medium",
+                  "eye_tilt": "up",
+                  "mark": "winged_liner",
+                  "expr": "half_smile"
+                },
+                "silhouette": {
+                  "body": "busty_slender",
+                  "hair": "segmented_tail",
+                  "hair_color": "burgundy",
+                  "bangs": "side_swept"
+                },
+                "why": "1896년 물길을 다한 수도교를 다리로 삼아 언덕 동네로 오르는 전차의 차장 — 그해 전차가 전기로 바뀌며 아치 위를 건너기 시작했고, 차는 옆이 트이고 나무 의자를 가로로 놓았으며 손님이 발판에 서기도 했다. 리우 스팀펑크의 곤돌라 조종사(작은 곡선 · 초록 낮은 포니테일 · 부드럽게 각진 얼굴)와 달리 날렵하고 맵시 있는 사람. 팔다리가 가늘고 가슴이 도드라진 몸(busty_slender) · 단정한 단발(bob) · 따뜻한 청동빛 머리(bronze) · 옆으로 넘긴 앞머리. 하트형 얼굴 · 눈꼬리가 올라간 가는 눈 · 날 선 눈썹 · 곧고 가는 코 · 가늘고 긴 입술, 흑연빛 회색 눈, 금빛 도는 밝은 피부(golden_tan)에 날개 눈매, 20대 후반의 날카로운 인상에 입을 다문 반쯤의 미소. 얼굴 칸 다섯이 리우 스팀펑크 사람 · 빵 산 · 코파카바나 스팀펑크 사람과 모두 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 머리색 bronze → burgundy, 헤어스타일 bob → segmented_tail"
+              },
+              "hold": {
+                "en": "a polished brass hand lantern with a small bell hanging beneath it"
+              },
+              "motif": {
+                "ko": "전차 차장 차림 — 아치 꼴 놋쇠 단추를 두 줄로 단 맵시 있는 연미복, 기울여 쓴 작은 비단 실크해트엔 트롤리 막대 꼴 놋쇠 핀, 가는 사슬에 매단 놋쇠 표 펀치 — 손에는 작은 종을 단 놋쇠 손등불",
+                "en": "a sharp tailcoat with a double row of arch-shaped brass buttons, a small silk top hat with a brass pin shaped like a tram's trolley pole, and a brass ticket punch hanging on a fine chain"
+              },
+              "card_ko": {
+                "look": "버건디 마디 묶음머리 · 가는 굴곡",
+                "motif": "아치 놋쇠 단추 · 표 펀치"
+              },
+              "sil": "top_hat_coat"
+            },
+            "cyberpunk": {
+              "ko": "두 세기 뒤 라파의 밤 — 거대 도시 리우 한가운데 지금 그대로 지켜 둔 흰 두 층 아치 아래, 빛의 무대와 음악이 흘러나오는 밤거리가 이어지고, 아치 위로는 소리 없는 빛의 전차가 언덕 동네로 미끄러진다",
+              "en": "the old quarter of far-future Rio de Janeiro two centuries from now at night: the white two-tiered arched aqueduct kept exactly as it stands among slender white ceramic garden towers, softly lit from below, a stage of light beneath its arches and a nightlife street where music spills from open bars, a silent tram of light gliding along its top toward the hill quarter under a clear night sky",
+              "scenes": [
+                {
+                  "key": "stage",
+                  "ko": "흰 아치 아래 빛의 무대 — 춤추는 사람들",
+                  "en": "on a stage of light beneath the great white arches at night, the arches softly lit above her and a crowd dancing in front of the stage"
+                },
+                {
+                  "key": "street",
+                  "ko": "아치 곁 밤거리 — 열린 바에서 흘러나오는 음악",
+                  "en": "on the nightlife street beside the arches, music spilling from open bars, people dancing on the pavement and the garden towers glowing above"
+                },
+                {
+                  "key": "archtop",
+                  "ko": "아치 꼭대기 — 곁을 지나는 소리 없는 빛의 전차",
+                  "en": "on top of the white arches at night as a silent tram of light glides past her toward the hill quarter, the glowing city spread below"
+                }
+              ],
+              "look": {
+                "face": {
+                  "face_shape": "long",
+                  "eyes": "droopy_soft",
+                  "brows": "soft_round",
+                  "nose": "aquiline",
+                  "lips": "small_bow",
+                  "eye_color": "rose",
+                  "age": "early_20s",
+                  "impression": "decadent",
+                  "skin_tone": "bronze",
+                  "eye_size": "medium",
+                  "eye_tilt": "down",
+                  "mark": "dark_lip",
+                  "expr": "wistful"
+                },
+                "silhouette": {
+                  "body": "voluptuous",
+                  "hair": "braided_crown",
+                  "hair_color": "cobalt_blue",
+                  "bangs": "side_swept"
+                },
+                "why": "1950년대부터 노래와 음악의 밤으로 이름난 라파에서 아치 아래 무대에 서는 두 세기 뒤의 밤 가수 — 라파엔 삼바 · 쇼루 무대가 이어진다. 리우 사이버펑크의 바테리아 지휘자(큰 키 곡선 · 크롬 무지개 언더컷 · 하트형 · 날 선 인상)와 달리 느긋하고 깊은 사람. 가슴 · 엉덩이 · 허벅지가 넉넉한 풍만한 몸(voluptuous) · 길게 내려오는 나선 곱슬(long_curly) · 유리 같은 윤이 도는 짙은 코발트 블루 머리(cobalt_blue) · 옆으로 넘긴 앞머리. 긴 얼굴 · 눈꼬리가 부드럽게 처진 눈 · 부드러운 둥근 눈썹 · 매부리코 · 작은 활 입술, 장밋빛 눈, 구릿빛 갈색 피부(bronze)에 짙은 입술, 30대 초반의 나른하게 퇴폐적인 인상(decadent)에 아련한 표정. 얼굴 칸이 리우 사이버펑크 사람 · 빵 산 · 코파카바나 사이버펑크 사람과 넷 이상 다르다. 2026-11-23 인상 languid → decadent(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔). · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 헤어스타일 long_curly → braided_crown"
+              },
+              "hold": {
+                "en": "a slim microphone of clear glass with a soft glow at its tip"
+              },
+              "motif": {
+                "ko": "밤 가수 차림 — 두 층으로 이어진 작은 흰 빛 아치를 엮은 목걸이와 어깨 장식, 노래에 맞춰 은은히 숨 쉬는 빛의 드레스 — 손에는 끝이 은은히 빛나는 맑은 유리 마이크",
+                "en": "a choker and shoulder piece made of two tiers of tiny glowing white arches, and a gown whose soft light pulses gently with her song"
+              },
+              "card_ko": {
+                "look": "코발트 왕관 땋은 머리 · 풍만",
+                "motif": "두 층 빛 아치 목걸이"
+              },
+              "sil": "biolume_dress"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "busan",
+      "ko": "부산",
+      "en": "Busan",
+      "country": "대한민국",
+      "people": {
+        "ko": "한국인",
+        "en": "Korean"
+      },
+      "lat": 35.18,
+      "lon": 129.08,
+      "latlon_src": "https://en.wikipedia.org/wiki/Busan",
+      "persona": "바다로 활짝 열린 항구 도시 — 산비탈에 집을 층층이 올리고, 바닷바람처럼 시원하고 거침없으며 여름 해변과 가을 축제에서 숨을 쉰다.",
+      "palette": {
+        "en": "deep harbour blue, camellia red, sea-foam white",
+        "hex": [
+          "#0B4F8A",
+          "#C62F45",
+          "#E8F1F2"
+        ]
+      },
+      "symbols": [
+        {
+          "ko": "해운대 — 부산에서 가장 이름난 해변",
+          "en": "Haeundae Beach, the most famous beach of Busan",
+          "src": "https://en.wikipedia.org/wiki/Haeundae_Beach"
+        },
+        {
+          "ko": "광안대교 — 광안리 바다를 건너는 이층 현수교",
+          "en": "the Gwangan Bridge, a double-decked suspension bridge across the cove of Gwangalli Beach",
+          "src": "https://en.wikipedia.org/wiki/Gwangan_Bridge"
+        },
+        {
+          "ko": "감천문화마을 — 산비탈에 계단처럼 오른 색색의 집",
+          "en": "Gamcheon Culture Village, brightly painted houses built in steps up a steep hillside",
+          "src": "https://en.wikipedia.org/wiki/Gamcheon_Culture_Village"
+        },
+        {
+          "ko": "자갈치시장 — 한국에서 가장 큰 어시장, 자갈치 아지매",
+          "en": "Jagalchi Market, the largest fish market in Korea, known for its women vendors",
+          "src": "https://en.wikipedia.org/wiki/Jagalchi_Market"
+        },
+        {
+          "ko": "동백꽃 — 부산의 시화, 동백섬",
+          "en": "the camellia, Busan's city flower, blooming on Dongbaekseom",
+          "src": "https://en.wikipedia.org/wiki/Busan"
+        }
+      ],
+      "worlds": {
+        "fantasy": {
+          "ko": "동백과 불꽃의 항구 왕도 부산 — 짙푸른 큰 만을 품은 신화 세계의 왕도, 축제의 밤. 월석과 은빛 줄로 지은 거대한 이층 다리가 만을 건너며 줄마다 작은 불빛을 달았고, 그 아래 흰 모래의 긴 초승달 해변 양 끝으론 붉게 핀 동백과 검푸른 솔이 우거진 초록 곶, 곶 위엔 처마 끝이 살짝 들린 잿빛 기와 정자들, 산비탈엔 바다빛 · 산호 · 옅은 금빛으로 칠한 작은 흰 집들이 계단처럼 능선까지 오르고, 옛 항구 위 솔 언덕엔 금관을 인 가는 흰 탑, 항구엔 짙은 바다빛 · 동백 빨강 비단 돛배들, 먼 끝 깎아지른 바다 절벽 위엔 흰 등대 — 만 위로 금빛 불꽃이 피고 등불 배들이 검은 물 위를 떠다닌다",
+          "en": "a grand capital of a myth-world on a deep blue harbour bay on a festival night: a vast double-decked bridge of pale moonstone and silver cables arching across the bay, every cable strung with tiny lights; a long crescent beach of white sand between green headlands thick with dark pines and camellia trees in red bloom, little pavilions with gently upswept grey-tiled eaves on the headlands; hillsides of small whitewashed houses painted sea-blue, coral and pale gold climbing in steps like a staircase to the ridge; a slender white tower with a gilded crown rising from a pine-covered hill above the old harbour, where ships with silk sails of deep sea-blue and camellia red ride at anchor; sheer sea cliffs crowned by a white lighthouse at the far point; golden fireworks blooming over the bay and lantern boats drifting on the dark water under a deep blue night sky",
+          "scenes": [
+            {
+              "key": "bridge",
+              "ko": "만을 건너는 월석 다리 위층 — 불빛을 단 은빛 줄 곁, 머리 위로 피는 금빛 불꽃",
+              "en": "on the upper deck of the great moonstone bridge over the bay at night, its silver cables strung with tiny lights rising beside her and golden fireworks blooming over the dark water"
+            },
+            {
+              "key": "headland",
+              "ko": "동백과 솔이 우거진 곶 위 길 — 떨어지는 붉은 꽃잎, 만 건너 불빛 다리와 계단 마을",
+              "en": "on a path along the pine-and-camellia headland above the crescent beach at dusk, red blossoms falling around her, the light-strung bridge and the terraced hillsides of the capital glowing across the bay"
+            },
+            {
+              "key": "cliffs",
+              "ko": "먼 끝 바다 절벽 꼭대기 흰 등대 곁 — 아래로 부서지는 흰 파도",
+              "en": "on the top of the sheer sea cliffs at the far point beside the white lighthouse, waves breaking white far below and the lights of the harbour capital strung along the coast behind her"
+            }
+          ],
+          "look": {
+            "face": {
+              "face_shape": "diamond",
+              "eyes": "droopy_soft",
+              "brows": "arched_thin",
+              "nose": "broad_soft",
+              "lips": "small_bow",
+              "eye_color": "ember",
+              "age": "mid_20s",
+              "impression": "glamorous",
+              "skin_tone": "warm_beige",
+              "eye_size": "medium",
+              "eye_tilt": "down",
+              "mark": "red_lip",
+              "expr": "half_smile"
+            },
+            "silhouette": {
+              "body": "hourglass",
+              "hair": "updo_bun",
+              "hair_color": "tungsten_ember",
+              "bangs": "curtain"
+            },
+            "why": "가을마다 광안리 바다 위 광안대교를 배경으로 열리는 불꽃축제를 하이판타지로 옮긴, 광안 만 불꽃 축제의 불꽃 마법사 — 화려하고 여유 있는 사람. 가슴과 엉덩이가 풍만하고 허리가 또렷하게 가는 모래시계 몸(hourglass — 서울 판타지 큰 키 곡선과 다른 몸) · 긴 금 비녀를 꽂은 올림머리(updo_bun) · 짙은 텅스텐 잿빛에 끝이 불꽃처럼 하얗게 달아오른 금빛인 머리(tungsten_ember — 불꽃의 불씨, 다른 도시가 안 쓴 색) · 얼굴 양옆으로 갈라 내린 커튼 앞머리(curtain) · 몸을 따라 흘러내리는 비단 자락과 트인 긴 소매 · 보석 허리 사슬(silk_sorceress)로 실루엣이 가늘고 매혹적이다. 광대가 살짝 선 다이아몬드형 얼굴 · 눈꼬리가 부드럽게 처진 아몬드 눈 · 가늘게 휜 눈썹 · 끝이 둥글고 자연스러운 폭의 코 · 큐피드 활이 또렷한 입술, 불씨 같은 주황 눈(ember), 따뜻한 베이지 피부(warm_beige)에 동백빛 붉은 입술(red_lip), 20대 후반, 매혹적인 인상(glamorous)에 입을 다문 옅은 미소(half_smile). 스팀펑크(둥근 얼굴 · 홑꺼풀 긴 눈 · 라벤더 단발 · 작은 풍만 · 흰 피부) · 사이버펑크(긴 달걀형 · 올라간 눈 · 비스무트 울프컷 · 근육 곡선 · 금빛 도는 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울(랜드마크 포함)을 비롯한 열 도시 사람 누구와도 셋 이상 다르다."
+          },
+          "hold": {
+            "en": "a slender wand of pale moonstone tipped with a cluster of tiny golden sparks, like a firework caught at the moment it blooms"
+          },
+          "motif": {
+            "ko": "광안 만 불꽃 마법사의 차림 — 짙은 밤바다 빛 비단 자락에 붉은 동백꽃을 수놓고, 꽃술의 금실이 치맛단을 따라 불꽃처럼 가는 금빛 불티로 터져 퍼지며, 올림머리엔 법랑 · 석류석 붉은 동백을 얹은 긴 금 비녀를 꽂아 그 끝에서 작은 불빛을 꿴 가는 사슬 두 줄이 큰 다리의 줄처럼 아치를 그린다 — 손에는 피어나는 순간의 불꽃 같은 금빛 불티 송이를 얹은 가는 월석 지팡이",
+            "en": "flowing drapery of deep night-sea blue silk embroidered with red camellia blossoms whose gold-thread stamens burst outward along the hem into fine trails of golden sparks like fireworks; a long golden hairpin crowned with a red camellia of enamel and garnet set through her updo, two fine chains of tiny lights swinging from it in arcs like the cables of the great bridge"
+          },
+          "palette": {
+            "en": "deep night-sea blue and moonstone silver, with camellia red only in the blossoms and gold only in the sparks",
+            "hex": [
+              "#0E2A5C",
+              "#C9D3E0",
+              "#C8283C",
+              "#D9A93B"
+            ],
+            "why": "판타지만 따로 — 도시 palette 의 동백 빨강이 금빛 화려한 옷에 고루 실리면 빨강 · 금 궁정 옷으로 몰려 중국풍으로 읽히기 쉬워서(서울 판타지 2026-11-20 「너무 붉은색이라 중국 느낌」), 밤바다 남빛 · 월석 은빛을 바탕으로 두고 동백 빨강은 꽃에만, 금은 불티에만."
+          },
+          "card_ko": {
+            "look": "불씨 끝 올림머리 · 모래시계",
+            "motif": "동백 불꽃 자수 · 다리 비녀"
+          },
+          "sil": "silk_sorceress",
+          "own_vocab": {
+            "casual_world": {
+              "en": "a harbour city of a myth-world on a deep blue bay: whitewashed stone and dark pine wood, gently upswept grey-tiled eaves, sailcloth, rope and polished ship's timber, lantern-light and drifting spirit lights, camellia blossoms with softly glowing red petals",
+              "guard_en": "Let the place itself carry this world through its materials, fittings and objects; do not add the city's landmarks, the great bridge, the white tower, fireworks or a skyline unless the place below names them."
+            }
+          }
+        },
+        "steampunk": {
+          "ko": "가스등 동화 부산 — 맑은 항구의 오후, 놋쇠 테를 두른 증기 전차가 깨끗한 흰 김을 뿜으며 바닷가 선로를 따라 초록 산자락의 온천 마을로 달리고 작은 열린 객차마다 손님이 가득하며, 붐비는 안쪽 항구 위로 쇠와 놋쇠의 도개교가 큰 다리판을 들어 올려 돛대 높은 증기선을 지나보내고, 부두엔 외륜선과 황토빛 삼베 돛의 고깃배들이 붐비며, 바닷가엔 긴 유리 · 쇠 어시장 홀, 항구 위 솔 언덕엔 놋쇠 돔을 인 가는 탑 꼭대기에 비행선이 매이고, 산비탈엔 파스텔 작은 집들이 계단처럼 오르며, 초승달 해변엔 줄무늬 해수욕 천막, 바닷길을 따라 가스등",
+          "en": "a storybook gaslamp-fantasy Busan on a bright harbour afternoon: a brass-trimmed steam tram puffing clean white steam along a seaside line toward a hot-spring town in the green hills, its little open carriages full of passengers; an iron-and-brass drawbridge raising its great leaf over the busy inner harbour to let a tall-masted steamer glide through; quays crowded with paddle-steamers and wooden fishing boats with ochre hemp sails; a long glass-and-iron fish market hall on the waterfront; on a pine hill above the harbour a slender tower with a brass dome, an airship moored at its tip; hillsides of little pastel houses climbing in steps; striped bathing tents on a crescent beach and gas lamps glowing along the seafront",
+          "scenes": [
+            {
+              "key": "tram",
+              "ko": "바닷가 굽이를 도는 증기 전차 뒤 열린 발판 — 흰 김 너머 항구와 놋쇠 돔 탑",
+              "en": "on the open rear platform of the brass-trimmed steam tram as it rounds a seaside bend in soft white steam, the harbour, its paddle-steamers and the pine hill with its brass-domed tower glittering behind her"
+            },
+            {
+              "key": "drawbridge",
+              "ko": "다리판을 들어 올린 쇠 · 놋쇠 도개교 곁 부두 — 지나가는 돛대 높은 증기선",
+              "en": "on the gaslit quay beside the iron-and-brass drawbridge as its great leaf rises over the inner harbour, a tall-masted steamer gliding through and soft white steam drifting from its funnels"
+            },
+            {
+              "key": "terminus",
+              "ko": "산자락 온천 마을의 증기 전차 종점 — 해 질 녘 목욕집 지붕마다 오르는 흰 김",
+              "en": "at the steam-tram terminus of the hot-spring town in the hills at dusk, white steam rising from the bathhouse roofs, gas lamps glowing and the brass tram waiting at the platform"
+            }
+          ],
+          "look": {
+            "face": {
+              "face_shape": "round",
+              "eyes": "monolid_long",
+              "brows": "straight_thick",
+              "nose": "aquiline",
+              "lips": "thin_long",
+              "eye_color": "nickel_green",
+              "age": "early_20s",
+              "impression": "cheerful",
+              "skin_tone": "fair",
+              "eye_size": "medium",
+              "eye_tilt": "level",
+              "mark": "blush",
+              "expr": "amused"
+            },
+            "silhouette": {
+              "body": "petite_voluptuous",
+              "hair": "bob",
+              "hair_color": "neodymium_lavender",
+              "bangs": "straight"
+            },
+            "why": "부산은 1924년 전기화 전까지 한국에서 유일하게 증기 궤도 전차를 쓴 도시였고 1915년부터 부산진과 동래 온천 사이를 전차가 다녔다 — 그 동래 온천행 증기 전차의 차장 — 밝고 붙임성 있는 사람. 키는 작고 아담하지만 가슴이 풍만하고 허리가 가늘며 엉덩이가 넉넉한 작은 풍만 몸(petite_voluptuous) · 차장 모자 아래 반듯한 단발(bob) · 그늘에선 푸르게 비치는 라벤더 머리(neodymium_lavender — 다른 도시가 안 쓴 색) · 일자 앞머리(straight) · 소매 없는 놋쇠 단추 조끼에 고운 가죽 장갑 · 몸에 맞는 바지 · 끈 부츠 · 가는 공구 띠(engineer — 띠엔 차표 펀치)로 실루엣이 날렵하게 일한다. 둥근 얼굴 · 홑꺼풀의 자연스러운 크기 눈 · 자연스러운 숱의 곧은 눈썹 · 콧대가 부드럽게 휜 코 · 가늘고 자연스러운 폭의 입술, 맑은 사과빛 초록 눈(nickel_green), 흰 피부(fair)에 발그레한 볼(blush), 20대 초반, 밝고 시원한 인상(cheerful)에 입을 다문 눈웃음(amused). 판타지(다이아몬드형 · 처진 눈 · 불씨 끝 올림머리 · 모래시계 · 따뜻한 베이지 피부) · 사이버펑크(긴 달걀형 · 올라간 눈 · 비스무트 울프컷 · 근육 곡선 · 금빛 도는 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울(랜드마크 포함)을 비롯한 열 도시 사람 누구와도 셋 이상 다르다."
+          },
+          "hold": {
+            "en": "a small polished brass conductor's hand bell on a turned wooden handle, a camellia-red silk tassel swinging from it"
+          },
+          "motif": {
+            "ko": "동래 온천행 증기 전차 차장 차림 — 놋쇠 띠를 두른 항구빛 남색 모직의 작은 둥근 차장 모자, 모표는 흰 법랑 김 한 줄을 끄는 작은 증기 전차, 조끼를 가로지른 띠엔 놋쇠 전차 표가 줄줄이 꿰이고 깃에는 붉은 동백 한 송이 — 손에는 동백빛 비단 술을 단 작은 놋쇠 손종",
+            "en": "a little round conductor's cap of harbour-blue wool banded in brass, its badge a tiny enamel steam tram trailing a puff of white steam; a sash across her waistcoat strung with polished brass tram tokens, and a red camellia pinned at her collar"
+          },
+          "card_ko": {
+            "look": "라벤더 단발 · 작은 풍만",
+            "motif": "증기 전차 모자 · 동백 깃"
+          },
+          "sil": "engineer"
+        },
+        "cyberpunk": {
+          "ko": "두 세기 뒤 부산 — 먼 미래의 항구 거대 도시, 수평선까지 뻗은 떠 있는 항구에서 거대하고 가는 갠트리 팔들이 빛나는 화물 꼬투리를 소리 없이 들어 올려 색색의 계단 탑으로 쌓고, 가파른 산비탈은 하늘빛 · 복숭아 · 민트 · 레몬빛으로 은은히 빛나는 큐브 집들의 계단 마을로 다시 지어져 빛의 승강기와 빛의 골목이 잇고, 만을 건너는 이층 다리는 빛깔이 흐르는 빛의 띠가 되었으며, 긴 초승달 해변은 지금 그대로 남아 뒤로 가는 흰 탑들이 서고, 짙푸른 항구 위 빛의 길을 따라 소리 없는 비행 차량, 맑은 밤하늘",
+          "en": "Busan two centuries from now, a far-future harbour megacity: a vast floating port stretching to the horizon where colossal slender gantry arms lift glowing cargo pods in silence and stack them into towering stepped terraces of colour; the steep hillsides rebuilt as stepped villages of softly glowing cube homes in sky blue, peach, mint and lemon, linked by lifts and lanes of light; the double-decked bridge across the bay become a ribbon of shifting coloured light; the long crescent beach kept exactly as it is, slender white towers rising behind it; quiet flying vehicles moving in lanes of light over the deep blue harbour under a clear night sky",
+          "scenes": [
+            {
+              "key": "gantry",
+              "ko": "떠 있는 항구 위 거대한 갠트리 팔의 꼭대기 통로 — 곁을 지나는 빛나는 화물 꼬투리",
+              "en": "high on the top catwalk of a colossal gantry arm over the floating port at night, glowing cargo pods gliding past her and the stacked terraces of colour stretching to the horizon"
+            },
+            {
+              "key": "village",
+              "ko": "빛나는 큐브 집들의 산비탈 계단 골목 — 곁을 오르는 빛의 승강기, 아래로 반짝이는 항구",
+              "en": "in a stepped lane of the hillside village of softly glowing cube homes in sky blue, peach, mint and lemon at dusk, lifts of light rising past her and the floating port glittering far below"
+            },
+            {
+              "key": "lightbridge",
+              "ko": "빛의 띠가 된 이층 다리 위 — 발밑에 흐르는 빛깔, 만 건너 해변과 흰 탑들",
+              "en": "on the bridge of light over the bay at night, shifting colour rippling along its double deck under her feet and the crescent beach and its white towers glowing across the water"
+            }
+          ],
+          "look": {
+            "face": {
+              "face_shape": "long",
+              "eyes": "narrow_upturned",
+              "brows": "low_heavy",
+              "nose": "straight_narrow",
+              "lips": "wide_smile",
+              "eye_color": "cherenkov_blue",
+              "age": "mid_20s",
+              "impression": "icy",
+              "skin_tone": "golden_tan",
+              "eye_size": "medium",
+              "eye_tilt": "up",
+              "mark": "dark_lip",
+              "expr": "focused"
+            },
+            "silhouette": {
+              "body": "strong_curvy",
+              "hair": "wolf_cut",
+              "hair_color": "bismuth_rainbow",
+              "bangs": "choppy"
+            },
+            "why": "부산항은 한국에서 가장 크고 세계 여섯째로 바쁜 컨테이너 항구다 — 두 세기 뒤 떠 있는 항구에서 거대한 갠트리 팔들을 다루며 빛나는 화물을 계단 탑으로 쌓는 크레인 지휘자 — 차분하고 손이 정확한 사람. 어깨가 넓고 근육이 단단하면서도 가슴이 풍만하고 엉덩이가 둥근 근육 곡선 몸(strong_curvy) · 층층이 거칠게 친 울프컷(wolf_cut) · 분홍빛 은색에 금 · 장밋빛 · 파랑이 계단처럼 층져 무지갯빛으로 도는 머리(bismuth_rainbow — 산비탈 계단 마을과 쌓인 화물의 빛깔, 다른 도시가 안 쓴 색) · 삐죽삐죽한 앞머리(choppy) · 주머니 많은 기능 조끼와 몸을 가로지르는 짐 하네스 · 짧은 하의 · 추진 부츠(sky_courier — 처음 쓰는 실루엣)로 실루엣이 앞으로 달린다. 길쭉한 달걀형 얼굴 · 눈꼬리가 살짝 올라간 아몬드 눈 · 눈 위에 조금 낮게 놓인 짙은 눈썹 · 콧대가 곧고 가는 코 · 입꼬리가 쉽게 올라가는 자연스러운 폭의 입술, 체렌코프빛 푸른 눈(cherenkov_blue), 금빛 도는 밝은 피부(golden_tan)에 짙은 베리빛 입술(dark_lip), 20대 중반, 얼음처럼 차가운 냉미녀 인상(icy)에 입을 다문 집중한 눈(focused). 판타지(다이아몬드형 · 처진 눈 · 불씨 끝 올림머리 · 모래시계 · 따뜻한 베이지 피부) · 스팀펑크(둥근 얼굴 · 홑꺼풀 긴 눈 · 라벤더 단발 · 작은 풍만 · 흰 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다. 얼굴 칸은 서울(랜드마크 포함)을 비롯한 열 도시 사람 누구와도 셋 이상 다르다. 2026-11-23 인상 cool → icy(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
+          },
+          "hold": {
+            "en": "a palm-sized glass dial ringed with light, a tiny glowing grid of stacked cargo pods floating above it"
+          },
+          "motif": {
+            "ko": "산비탈 계단 마을(감천문화마을)과 항구의 화물을 옮긴 크레인 지휘자의 기능 조끼와 짐 하네스 — 하늘빛 · 복숭아 · 민트 · 레몬빛으로 은은히 빛나는 작은 판들이 색칠한 집과 쌓인 화물처럼 계단지어 맞물리고, 어깨를 가로질러 밤의 광안대교처럼 빛깔이 흐르는 가는 빛의 띠 — 손에는 쌓인 화물 꼬투리의 작은 빛 격자가 떠오르는 손바닥만 한 유리 다이얼",
+            "en": "a utility vest and cargo harness built of small interlocking panels glowing softly in sky blue, peach, mint and lemon, stepped and stacked like the painted houses of the hillside village and the cargo of the great port; a thin band of shifting coloured light across her shoulders like the bridge over the bay at night"
+          },
+          "palette": {
+            "en": "harbour blue and clear white light, with the pastel sky blue, peach, mint and lemon of the hillside village",
+            "hex": [
+              "#0B4F8A",
+              "#F4F8FB",
+              "#9FD3F0",
+              "#F7B79A"
+            ],
+            "why": "사이버펑크만 따로 — 도시 palette 의 동백 빨강이 빛 옷에 실리면 오늘의 빨강 네온 거리로 끌려서, 항구 남빛 · 맑은 흰 빛을 바탕으로 두고 감천 계단 마을의 파스텔 넷을 조끼 판에."
+          },
+          "card_ko": {
+            "look": "비스무트 울프컷 · 근육 곡선",
+            "motif": "계단 마을 조끼 · 빛 다리 띠"
+          },
+          "sil": "sky_courier"
+        }
+      },
+      "design_note": "설계 상태: 시안(claude, 2026-11-22) — 시험 그림 전. 사용자 「다음 도시들 5개정도 만들어줘. 우선은 도시만. 부산 포함해서」(다섯 도시를 나눠 설계 — 랜드마크 없이 도시만), 리우 · 카이로 · 이스탄불 · 베이징 · 런던 꼴을 따랐다. 세 사람 모두 한국인 성인 여성 — 서울과 같은 나라라 서울 세 사람(남빛 긴 생머리 · 큰 키 곡선 · 태극 망토 갑옷 / 구리빛 핑거웨이브 · 날씬 · 해치 나침반 항해사 / 청록 비대칭 단발 · 마른 몸 · 송신탑 비옷)과 머리 · 몸 · 실루엣 · 무늬가 하나도 겹치지 않게 짰고, 서울의 해치 · 단청 · 태극 · 성곽 · 한강 무늬는 쓰지 않았다. 피부 · 얼굴은 look 이 정한다(판타지 따뜻한 베이지 warm_beige · 스팀펑크 흰 피부 fair · 사이버펑크 금빛 도는 밝은 피부 golden_tan), 인종 낱말은 쓰지 않고 얼굴 점은 입술 · 볼 · 화장으로만(동양 쪽 — 사용자 2026-11-22). 얼굴 칸 다섯은 세 세계끼리 모두 다르고, 서울 · 도쿄 · 베이징 · 파리 · 런던 · 로마 · 뉴욕 · 이스탄불 · 카이로 · 리우 사람(랜드마크 포함) 누구와도 셋 이상 다르다. 체형은 셋 다 굴곡형(모래시계 hourglass · 작은 풍만 petite_voluptuous · 근육 곡선 strong_curvy — 사용자 2026-11-20), 머리색 셋(끝이 불꽃처럼 달아오른 텅스텐 잿빛 tungsten_ember · 라벤더 neodymium_lavender · 계단진 무지갯빛 비스무트 bismuth_rainbow)은 다른 도시가 아직 안 쓴 색이고, 헤어스타일은 조합으로 갈랐다(비녀 올림머리 · 일자 앞머리 단발 · 울프컷). 사이버펑크 실루엣 sky_courier 는 처음 쓴다. 서울과 달리 부산은 「바다로 열린 항구 · 여름과 축제의 도시」 로 읽히게: 판타지는 광안대교 · 해운대 초승달 해변 · 동백섬 · 감천 계단 마을 · 용두산 흰 탑 · 태종대 절벽 등대를 하이판타지 항구 왕도로, 스팀펑크는 증기 전차 · 영도대교 도개교 · 자갈치 어시장 홀 · 온천 마을을, 사이버펑크는 떠 있는 항구 · 빛나는 큐브 계단 마을 · 빛의 다리를. 이야기 줄기는 「바다 도시의 밤하늘 · 길 · 짐을 다루는 손」: 판타지는 가을 광안리 불꽃축제를 옮긴 광안 만 불꽃 마법사, 스팀펑크는 1915년 부산진 — 동래 온천 사이를 다닌 증기 전차의 차장, 사이버펑크는 세계 여섯째 컨테이너 항구를 두 세기 뒤로 옮긴 떠 있는 항구의 크레인 지휘자. 도시 상징은 옷 · 장신구 한두 가지로만 — 판타지는 시화 동백꽃을 밤바다 비단에 수놓아 꽃술이 불꽃 불티로 터지게 + 광안대교 줄처럼 불빛 사슬이 드리운 동백 금 비녀(한국 결의 비녀), 스팀펑크는 증기 전차 모표의 차장 모자 + 놋쇠 전차 표 띠 · 깃의 동백, 사이버펑크는 감천문화마을의 색칠한 계단 집과 항구 화물처럼 쌓인 파스텔 빛 판의 조끼 · 하네스 + 광안대교 밤빛 같은 어깨 빛 띠. 건물 · 다리 자체를 입히지 않았다. 용두산의 부산타워는 송신 장비가 없는 120미터 탑이지만 공용 금지 낱말(observation tower 등)에 걸리지 않게 「a slender white tower with a gilded crown」 · 「a slender tower with a brass dome」 처럼 생김새로만 두었다. 해동용궁사 · 범어사 같은 예배 장소, 용두산 이름의 용 · 시조 갈매기 · 시어 고등어 같은 동물 형상, 자갈치 축제 구호(「오이소 보이소 사이소」)처럼 그림 속 글이 되는 말, 상표(롯데 · 신세계 등) · 구단 · 실존 인물(최치원 · 이순신 등)은 싣지 않았다. 사실 근거: 부산 — 한국 둘째 도시, 부산항은 한국에서 가장 바쁘고 세계 여섯째 컨테이너 항구, 「한국의 여름 수도」 · 여섯 해변, 1924년 전기화 전까지 한국에서 유일하게 증기 궤도 전차를 쓴 도시 · 1915년 부산진 — 동래 온천 전차, 동래 온천은 한국에서 가장 오래된 온천, 시화 동백 · 동백섬은 동백과 솔이 우거진 섬, 기후(늦여름 태풍 · 10~11월 맑음 · 겨울 바람 · 눈은 한 해 나흘쯤)(https://en.wikipedia.org/wiki/Busan), 해운대 해수욕장 — 부산에서 가장 이름난 해변, 2008년 파라솔 7,937개로 기네스 기록, 모래 축제 · 부산국제영화제(https://en.wikipedia.org/wiki/Haeundae_Beach), 광안대교 — 해운대구와 수영구를 잇는 이층 현수교, 전체 7,420미터(https://en.wikipedia.org/wiki/Gwangan_Bridge), 광안리 — 광안대교가 건너는 반달 꼴 해변, 바닷가에 카페 · 술집 · 식당(https://en.wikipedia.org/wiki/Gwangalli_Beach), 부산국제불꽃축제 — 해마다 가을 광안리 해변에서 부산 바다와 광안대교를 배경으로(https://en.wikipedia.org/wiki/Busan_International_Fireworks_Festival), 감천문화마을 — 가파른 산비탈에 층층이 오른 거리 · 미로 같은 골목 · 밝게 칠한 집, 「부산의 마추픽추」(https://en.wikipedia.org/wiki/Gamcheon_Culture_Village), 자갈치시장 — 한국에서 가장 큰 어시장, 「자갈치 아지매」 라 불리는 여성 상인들(https://en.wikipedia.org/wiki/Jagalchi_Market), 부산타워 — 용두산공원의 120미터 탑, 송신 장비 없음(https://en.wikipedia.org/wiki/Busan_Tower · https://en.wikipedia.org/wiki/Yongdusan_Park), 태종대 — 영도 남쪽 끝 바다를 향한 절벽 · 등대(https://en.wikipedia.org/wiki/Taejongdae), 영도대교 — 1934년 지은 도개교, 2013년 되살림(https://en.wikipedia.org/wiki/Yeongdo_Bridge), 부산항(https://en.wikipedia.org/wiki/Port_of_Busan), 부산국제영화제 · 영화의전당 — 아시아에서 손꼽히는 영화제, 큰 지붕 · 작은 지붕 천장에 LED 수만 개, 야외 극장(https://en.wikipedia.org/wiki/Busan_International_Film_Festival · https://en.wikipedia.org/wiki/Busan_Cinema_Center). 지시문에 상표 · 실존 인물 이름은 쓰지 않는다(다리 · 해변 · 시장 이름도 지시문엔 생김새로 — 「a vast double-decked bridge」 · 「a long glass-and-iron fish market hall」). 판타지는 세계 palette(밤바다 남빛 · 월석 은빛, 동백 빨강은 꽃에만 · 금은 불티에만 — 빨강 · 금이 겹치면 중국풍으로 읽혀서)와 own_vocab.casual_world(공용 「서양 신화 세계」 대신 짙푸른 만의 항구 신화 세계 — 처마 끝이 들린 잿빛 기와 · 솔 · 돛천 · 동백), 사이버펑크도 세계 palette(항구 남빛 · 흰 빛 + 감천 파스텔 — 동백 빨강이 오늘의 빨강 네온으로 끌려서). 판타지 · 스팀펑크 글엔 cable car 대신 gondola(공용 금지 낱말 car).",
+      "card_ko": {
+        "symbols": "해운대 · 광안대교 · 감천문화마을 · 자갈치시장 · 동백꽃"
+      },
+      "landmarks": [
+        {
+          "key": "gwanganbridge",
+          "ko": "광안대교",
+          "en": "Gwangan Bridge",
+          "src": "https://ko.wikipedia.org/wiki/광안대교",
+          "lat": 35.1463,
+          "lon": 129.1286,
+          "latlon_src": "https://en.wikipedia.org/wiki/Gwangan_Bridge",
+          "persona": "광안리 바다를 건너 해운대와 수영을 잇는 총길이 7.42킬로미터의 이층 현수교(2003년 정식 개통) — 십만 가지가 넘는 빛깔로 연출하는 밤 경관 조명으로 이름났고, 해마다 가을 광안리 불꽃축제의 배경이 된다. 낮엔 시원하고 밤엔 화사한, 두 얼굴을 가진 사람.",
+          "worlds": {
+            "fantasy": {
+              "ko": "달빛 만을 건너는 은빛 하프 다리 — 월석 탑 둘이 받친 은빛 현수 줄이 바닷바람에 하프처럼 울리고, 위아래 두 층 다리판엔 달빛 등이 이어지며, 초승달 흰 모래 해변이 만 건너 그 다리를 바라본다",
+              "en": "a great double-decked bridge of pale moonstone sweeping across a moonlit bay of the harbour capital: two tall moonstone towers hold long silver suspension cables that hum like harp strings in the sea wind, both decks lined with soft moonlit lanterns, and a crescent beach of white sand gazing at it across the water under a deep blue night sky",
+              "scenes": [
+                {
+                  "key": "strings",
+                  "ko": "은빛 현수 줄 곁 위층 다리판",
+                  "en": "on the upper deck of the moonstone bridge at night, the long silver cables rising beside her like the strings of a giant harp and the bay glittering below"
+                },
+                {
+                  "key": "tower",
+                  "ko": "바닷바람 부는 월석 탑 꼭대기",
+                  "en": "on the crown of a tall moonstone tower in the sea wind, the silver cables sweeping down to the lantern-lit decks and the crescent beach far below"
+                },
+                {
+                  "key": "shore",
+                  "ko": "초승달 해변 물가에서 본 다리",
+                  "en": "at the water's edge of the crescent beach at night, the whole lantern-lit bridge arching across the bay behind her and its lights mirrored on the wet sand"
+                }
+              ],
+              "look": {
+                "face": {
+                  "face_shape": "oval",
+                  "eyes": "almond_wide",
+                  "brows": "soft_round",
+                  "nose": "straight_narrow",
+                  "lips": "heart_full",
+                  "eye_color": "silver_grey",
+                  "age": "mid_20s",
+                  "impression": "elegant",
+                  "skin_tone": "porcelain",
+                  "eye_size": "medium",
+                  "eye_tilt": "level",
+                  "mark": "gloss",
+                  "expr": "gentle"
+                },
+                "silhouette": {
+                  "body": "tall_curvy",
+                  "hair": "mermaid_waves",
+                  "hair_color": "moon_silver",
+                  "bangs": "parted"
+                },
+                "why": "은빛 현수 줄을 하프처럼 타는 바다 바람의 음유시인 — 부산 판타지의 불꽃 마법사(모래시계 몸 · 불씨 끝 올림머리 · 다이아몬드형 얼굴 · 따뜻한 베이지 피부)와 달리 길고 고요한 사람. 키 크고 다리가 긴 곡선 몸(tall_curvy) · 허리까지 풀어 내린 인어 물결(mermaid_waves) · 달빛을 비추는 은빛 머리(moon_silver) · 가운데 가르마 앞머리, 눈은 옅은 은회색(silver_grey). 달걀형 얼굴 · 자연스러운 아몬드 눈 · 부드러운 둥근 눈썹 · 곧고 가는 코 · 하트 입술, 도자기 피부(porcelain)에 윤기 있는 입술(gloss), 20대 중반의 우아한 인상(elegant)에 다정한 표정(gentle). 실루엣은 음유시인(bard). 도시 판타지와 얼굴 칸 다섯이 다 다르다."
+              },
+              "hold": {
+                "en": "a slender silver lyre-harp whose strings sweep down in the curve of suspension cables, each string glowing faintly"
+              },
+              "motif": {
+                "ko": "현수 줄처럼 어깨에서 치맛단까지 곡선으로 드리운 은실 줄, 줄마다 꿴 작은 달빛 진주, 두 층 다리판처럼 겹친 은빛 허리띠",
+                "en": "fine silver cords draped from her shoulders to her hem in the sweeping curves of suspension cables, each strung with tiny glowing moon-pearls, and a double-tiered silver girdle layered like the two decks of the great bridge"
+              },
+              "palette": {
+                "en": "moonlit silver and deep night-sea blue, with soft pearl white",
+                "hex": [
+                  "#C9D3E0",
+                  "#0E2A5C",
+                  "#F2EEE6"
+                ],
+                "why": "판타지만 따로 — 부산 판타지 palette(동백 빨강은 꽃에만 · 금은 불티에만)는 불꽃 마법사의 것이라, 달빛 다리 음유시인엔 은빛 · 밤바다 남빛 · 진주 흰빛."
+              },
+              "card_ko": {
+                "look": "달빛 은발 인어 물결 · 큰 키",
+                "motif": "은실 현수 줄 · 두 층 허리띠"
+              },
+              "sil": "bard"
+            },
+            "steampunk": {
+              "ko": "가스등 동화 부산의 쇠 · 놋쇠 이층 현수교 — 리벳 박힌 탑 둘에서 내려온 굵은 줄마다 유리 가스등이 줄지어 달리고, 해 질 녘 등불지기가 하나씩 불을 켜면 만 위에 금빛 등불 곡선이 그려지며, 아래층으론 놋쇠 증기 전차가 흰 김을 끌고 건넌다",
+              "en": "a great double-decked suspension bridge of iron and polished brass across the bay of a storybook gaslamp-fantasy Busan: two riveted towers carry thick cables hung with rows of glass gas lamps that are lit one by one at dusk, drawing curves of golden light over the water, while a brass steam tram trailing clean white steam crosses on the lower deck and paddle-steamers pass beneath",
+              "scenes": [
+                {
+                  "key": "lamps",
+                  "ko": "해 질 녘 줄을 따라 가스등을 켜는 길",
+                  "en": "on the narrow walkway along a great cable at dusk, glass gas lamps glowing to life one by one behind her as the bay turns gold"
+                },
+                {
+                  "key": "lamproom",
+                  "ko": "리벳 탑 꼭대기 등불 조절실",
+                  "en": "in the lamp room at the top of a riveted brass tower, gas valves, polished pipes and a great clockwork lamp-timer glowing in warm light"
+                },
+                {
+                  "key": "deck",
+                  "ko": "아래층 다리판 증기 전차 곁",
+                  "en": "on the lower deck of the bridge as a brass steam tram rolls past in soft white steam, gas lamps glowing in rows overhead"
+                }
+              ],
+              "look": {
+                "face": {
+                  "face_shape": "heart",
+                  "eyes": "narrow_upturned",
+                  "brows": "arched_thin",
+                  "nose": "small_button",
+                  "lips": "wide_smile",
+                  "eye_color": "amber",
+                  "age": "early_20s",
+                  "impression": "sassy",
+                  "skin_tone": "warm_beige",
+                  "eye_size": "medium",
+                  "eye_tilt": "up",
+                  "mark": "winged_liner",
+                  "expr": "confident"
+                },
+                "silhouette": {
+                  "body": "curvy_athletic",
+                  "hair": "low_ponytail",
+                  "hair_color": "copper",
+                  "bangs": "side_swept"
+                },
+                "why": "해 질 녘 놋쇠 다리의 가스등을 하나씩 켜는 등불지기 — 부산 스팀펑크의 증기 전차 차장(작은 풍만 몸 · 라벤더 단발 · 둥근 얼굴 · 흰 피부)과 달리 탑을 오르내리는 탄탄한 사람. 굴곡 있는 운동 체형(curvy_athletic) · 목덜미에 낮게 묶은 머리(low_ponytail) · 윤나는 구리빛 머리(copper) · 옆으로 넘긴 앞머리, 눈은 호박빛(amber). 하트형 얼굴 · 눈꼬리가 살짝 올라간 아몬드 눈 · 가늘게 휜 눈썹 · 끝이 둥근 작은 코 · 입꼬리가 잘 올라가는 입술, 따뜻한 베이지 피부(warm_beige)에 날개 아이라인(winged_liner), 20대 초반의 당찬 인상(sassy)에 자신 있는 표정(confident). 실루엣은 태엽 멜빵(clockwork_harness). 도시 스팀펑크와 얼굴 칸 다섯이 다 다르다. 2026-11-23 인상 cute → sassy(사용자 「다 넣어주고 공방 다 적용해줘」 — 새 인상 열넷을 인물 · 장면에 맞춰 나눔)."
+              },
+              "hold": {
+                "en": "a long polished brass lamplighter's pole with a small flame hooded in glass at its tip"
+              },
+              "motif": {
+                "ko": "등불지기 차림 — 다리 줄처럼 몸을 가로지르는 놋쇠 고리 가죽 멜빵, 허리에 매단 작은 유리 가스등 한 줄, 등불 꼴 놋쇠 단추",
+                "en": "a lamplighter's harness of polished brass rings and leather straps crossing her body like the bridge's cables, a little row of tiny glass gas lamps hung from her belt, and brass buttons shaped like lamp flames"
+              },
+              "card_ko": {
+                "look": "구리빛 낮은 묶음 · 탄탄 곡선",
+                "motif": "놋쇠 멜빵 · 허리 가스등"
+              },
+              "sil": "clockwork_harness"
+            },
+            "cyberpunk": {
+              "ko": "두 세기 뒤 부산 만의 빛 다리 — 옛 이층 현수교를 그대로 살려 줄 하나하나를 빛 섬유로 다시 짜, 밤마다 수만 가지 빛깔이 음악처럼 흐르고, 탑 꼭대기 유리 조정실에서 그 빛을 지으며, 만 건너 초승달 해변과 흰 탑들이 빛난다",
+              "en": "Busan's bay two centuries from now: the old double-decked suspension bridge kept and rewoven so that every cable is a strand of light fibre, waves of countless shifting colours flowing along it each night like music, a glass control room at the top of a tower where the light is composed, and the crescent beach and slender white towers glowing across the dark water under a clear night sky",
+              "scenes": [
+                {
+                  "key": "console",
+                  "ko": "탑 꼭대기 유리 빛 조정실",
+                  "en": "in the glass light-composing room at the top of a bridge tower at night, floating colour panels around her and the glowing cables sweeping away beneath the glass floor"
+                },
+                {
+                  "key": "cable",
+                  "ko": "빛 섬유 줄을 타고 오르는 정비 승강대",
+                  "en": "on a small open lift gliding up a glowing light-fibre cable, waves of colour rippling past her toward the tower"
+                },
+                {
+                  "key": "beach",
+                  "ko": "해변에서 빛 물결을 지휘하는 밤",
+                  "en": "on the crescent beach at night, conducting a wave of colour along the bridge across the bay, the white towers glowing behind the sand"
+                }
+              ],
+              "look": {
+                "face": {
+                  "face_shape": "diamond",
+                  "eyes": "deep_set",
+                  "brows": "angled_sharp",
+                  "nose": "upturned",
+                  "lips": "thin_long",
+                  "eye_color": "anodized_violet",
+                  "age": "mid_20s",
+                  "impression": "sharp",
+                  "skin_tone": "fair",
+                  "eye_size": "medium",
+                  "eye_tilt": "level",
+                  "mark": "smoky",
+                  "expr": "calm"
+                },
+                "silhouette": {
+                  "body": "busty_slender",
+                  "hair": "hime_cut",
+                  "hair_color": "fluorite_violet",
+                  "bangs": "straight"
+                },
+                "why": "빛 다리의 빛깔을 짓는 조명 작곡가 — 부산 사이버펑크의 크레인 지휘자(근육 곡선 몸 · 비스무트 울프컷 · 긴 얼굴 · 금빛 도는 피부)와 달리 가늘고 서늘하게 정돈된 사람. 팔다리는 가늘고 가슴이 도드라진 몸(busty_slender) · 볼 옆을 반듯하게 자른 히메컷(hime_cut) · 보랏빛에 바다 초록 띠가 지는 형석빛 머리(fluorite_violet — 바뀌는 빛깔) · 일자 앞머리, 눈은 양극 산화 보랏빛(anodized_violet). 광대가 선 다이아몬드형 얼굴 · 살짝 깊은 눈 · 각진 눈썹 · 끝이 살짝 들린 코 · 가늘고 자연스러운 폭의 입술, 흰 피부(fair)에 스모키 화장(smoky), 20대 중반의 날 선 인상(sharp)에 차분한 표정(calm). 실루엣은 몸을 감는 스마트 천(smart_wrap). 도시 사이버펑크와 얼굴 칸 다섯이 다 다르다."
+              },
+              "hold": {
+                "en": "a slim baton of clear glass that trails a ribbon of shifting coloured light"
+              },
+              "motif": {
+                "ko": "빛 섬유를 짠 몸 감는 옷 — 밤 다리처럼 빛깔이 천천히 바뀌고, 현수 줄 곡선으로 몸을 가로지르는 빛 선, 두 층 다리판처럼 겹친 투명 어깨판",
+                "en": "a wrap of woven light fibre whose colour shifts slowly through endless hues like the bridge at night, threaded with glowing lines that sweep across her body in the curves of suspension cables, and two layered clear shoulder panels like the bridge's double deck"
+              },
+              "palette": {
+                "en": "deep night-sea blue and clear white light, with slowly shifting violet, aqua and rose",
+                "hex": [
+                  "#0B2447",
+                  "#F4F8FB",
+                  "#9B7BD8"
+                ],
+                "why": "사이버펑크만 따로 — 부산 사이버펑크 palette 는 감천 계단 마을 파스텔이라, 빛 다리엔 밤바다 남빛 · 흰 빛에 바뀌는 빛깔."
+              },
+              "card_ko": {
+                "look": "형석빛 히메컷 · 가는 몸",
+                "motif": "빛깔 흐르는 옷 · 두 층 어깨판"
+              },
+              "sil": "smart_wrap"
+            }
+          }
+        },
+        {
+          "key": "gamcheon",
+          "ko": "감천문화마을",
+          "en": "Gamcheon Culture Village",
+          "src": "https://en.wikipedia.org/wiki/Gamcheon_Culture_Village",
+          "lat": 35.097,
+          "lon": 129.009,
+          "latlon_src": "https://en.wikipedia.org/wiki/Gamcheon_Culture_Village",
+          "persona": "가파른 산비탈에 층층이 오른 거리와 미로 같은 골목, 밝게 칠한 집들의 마을 — 1920~30년대 항구 일꾼들이 옮겨 와 살던 가난한 동네가 2009년부터 주민 · 예술가 · 미대생이 함께 칠하고 꾸며 「부산의 마추픽추」가 됐다. 손재주 좋고 다정하며 골목마다 이야기를 숨겨 둔 사람.",
+          "worlds": {
+            "fantasy": {
+              "ko": "색채 마법으로 골목을 잇는 산비탈 예술마을",
+              "en": "a splendid high-fantasy hillside art village of terraced jewel-coloured cottages and maze-like stone lanes, luminous painted tiles and carved wooden eaves, the blue sea far below",
+              "scenes": [
+                {
+                  "key": "stairs",
+                  "ko": "빛으로 이어진 돌계단",
+                  "en": "on a pale stone stair landing between terraced jewel-coloured cottages, enchanted painted tiles and slender ribbons of light joining the winding lanes"
+                },
+                {
+                  "key": "terrace",
+                  "ko": "마을을 바라보는 테라스",
+                  "en": "on a small sunlit stone terrace above the stepped village, colourful tiled roofs cascading down the green hillside toward the distant blue sea"
                 },
                 {
                   "key": "atelier",
