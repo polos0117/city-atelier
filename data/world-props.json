@@ -2037,6 +2037,90 @@
   "sanfrancisco_burrito": { "ko": "미션 부리토", "worlds": {
    "fantasy": { "en": "a huge flatbread wrapped around rice, beans and spiced meat, folded in waxed cloth" },
    "steampunk": { "en": "a huge tortilla wrapped around rice, beans and grilled meat, half peeled out of a sheet of foil" },
-   "cyberpunk": { "en": "a huge burrito of rice, beans and grilled meat half unwrapped from its foil" } } }
+   "cyberpunk": { "en": "a huge burrito of rice, beans and grilled meat half unwrapped from its foil" } } },
+  "vienna_melange": { "ko": "은 쟁반 위 멜랑주와 찬물 한 잔", "worlds": {
+   "fantasy": { "en": "a porcelain cup of milky coffee under a cap of foam beside a glass of cold water on a little silver tray" },
+   "steampunk": { "en": "a porcelain cup of milky coffee under a cap of foam beside a glass of cold water on a little silver tray" },
+   "cyberpunk": { "en": "a cup of milky coffee under a cap of foam beside a glass of cold water on a little silver tray with a softly glowing rim" } } },
+  "vienna_strudel": { "ko": "슈거 파우더 뿌린 사과 슈트루델 한 조각", "worlds": {
+   "fantasy": { "en": "a warm slice of apple strudel in paper-thin pastry dusted with powdered sugar, with a spoon of whipped cream" },
+   "steampunk": { "en": "a warm slice of apple strudel in paper-thin pastry dusted with powdered sugar, with whipped cream on a china plate" },
+   "cyberpunk": { "en": "a warm slice of apple strudel in paper-thin pastry dusted with powdered sugar, with whipped cream on a softly glowing plate" } } },
+  "vienna_wurst": { "ko": "겨자를 곁들인 치즈 소시지와 빵 끄트머리", "worlds": {
+   "fantasy": { "en": "a hot sausage studded with melted cheese on a wooden board with a dab of mustard and the heel of a brown loaf" },
+   "steampunk": { "en": "a hot cheese-filled sausage on a paper tray with a dab of mustard and the heel of a brown loaf" },
+   "cyberpunk": { "en": "a hot cheese-filled sausage on a warm tray with a dab of mustard and the heel of a brown loaf" } } },
+  "vienna_spritzer": { "ko": "햇포도주를 탄산수에 탄 슈프리처 한 잔", "worlds": {
+   "fantasy": { "en": "a stemmed glass of pale new white wine mixed with sparkling water" },
+   "steampunk": { "en": "a cut-glass mug of pale new white wine mixed with sparkling water, bubbles rising" },
+   "cyberpunk": { "en": "a glass of pale new white wine mixed with sparkling water on a softly glowing coaster" } } },
+  "edinburgh_haggis": { "ko": "니프스 · 태티스를 곁들인 해기스", "worlds": {
+   "fantasy": { "en": "an earthenware plate of haggis with a mound of mashed golden turnip and creamy mashed potato" },
+   "steampunk": { "en": "a china plate of haggis with neat mounds of mashed golden turnip and creamy mashed potato" },
+   "cyberpunk": { "en": "a plate of haggis with mashed golden turnip and creamy mashed potato on a softly glowing tray" } } },
+  "edinburgh_shortbread": { "ko": "버터 쇼트브레드", "worlds": {
+   "fantasy": { "en": "a round of golden butter shortbread cut into petticoat-tail wedges on a small wooden board" },
+   "steampunk": { "en": "a tartan-painted tin of golden butter shortbread fingers" },
+   "cyberpunk": { "en": "a few golden butter shortbread fingers in a slim box that glows softly" } } },
+  "kyoto_matcha": { "ko": "말차 한 사발(대나무 차선)", "worlds": {
+   "fantasy": { "en": "a wide glazed tea bowl of frothy, bright-green whisked tea beside a bamboo whisk" },
+   "steampunk": { "en": "a wide glazed tea bowl of frothy, bright-green whisked tea beside a bamboo whisk and a little brass kettle" },
+   "cyberpunk": { "en": "a wide self-warming ceramic bowl of frothy, bright-green whisked tea beside a bamboo whisk" } } },
+  "kyoto_yatsuhashi": { "ko": "나마 야쓰하시(계피 떡 삼각 과자)", "worlds": {
+   "fantasy": { "en": "soft triangles of cinnamon rice dough folded around sweet red bean paste on a lacquered dish" },
+   "steampunk": { "en": "soft triangles of cinnamon rice dough folded around sweet red bean paste in a little paper box" },
+   "cyberpunk": { "en": "soft triangles of cinnamon and green-tea rice dough folded around sweet red bean paste in a slim fibre box" } } },
+  "kyoto_tsukemono": { "ko": "교토식 쓰케모노(채소 절임)", "worlds": {
+   "fantasy": { "en": "a little wooden tub of bright Kyoto-style pickled vegetables" },
+   "steampunk": { "en": "a little wooden tub of bright Kyoto-style pickled vegetables wrapped in waxed paper" },
+   "cyberpunk": { "en": "a little wooden tub of bright Kyoto-style pickled vegetables with a softly glowing seal" } } },
+  "kyoto_kyoware": { "ko": "교야키 찻잔", "worlds": {
+   "fantasy": { "en": "a delicate porcelain tea cup painted in vivid, glassy colours, so thin it glows against the light" },
+   "steampunk": { "en": "a delicate porcelain tea cup painted in vivid, glassy colours, wrapped in a twist of brown paper" },
+   "cyberpunk": { "en": "a delicate handmade porcelain tea cup painted in vivid, glassy colours, so thin it glows against the light" } } },
+  "capetown_bobotie": { "ko": "보보티 — 노란 강황밥 곁들임", "worlds": {
+   "fantasy": { "en": "a baked dish of spiced minced meat and raisins under a golden egg custard crust, bay leaves on top, with a bowl of yellow turmeric rice" },
+   "steampunk": { "en": "an enamelled baking dish of spiced minced meat under a golden egg custard crust with bay leaves, beside a bowl of yellow turmeric rice" },
+   "cyberpunk": { "en": "a ceramic dish of spiced minced meat under a golden egg custard crust with bay leaves, beside a bowl of yellow turmeric rice" } } },
+  "capetown_koesister": { "ko": "코에시스터 — 코코넛 뿌린 계피 도넛", "worlds": {
+   "fantasy": { "en": "a soft spiced cinnamon dumpling glazed in syrup and rolled in desiccated coconut, on a little wooden plate" },
+   "steampunk": { "en": "a soft spiced cinnamon dumpling glazed in syrup and rolled in desiccated coconut, in a twist of waxed paper" },
+   "cyberpunk": { "en": "a soft spiced cinnamon dumpling glazed in syrup and rolled in desiccated coconut, in a little paper sleeve" } } },
+  "capetown_chip_roll": { "ko": "칩 롤 — 감자튀김을 넣은 긴 빵", "worlds": {
+   "fantasy": { "en": "a long crusty bread roll stuffed with hot fried potatoes, sauce and fillings, cut into big pieces for sharing" },
+   "steampunk": { "en": "a long crusty bread roll stuffed with hot chips, sauce and fillings, wrapped in brown paper and cut into big pieces" },
+   "cyberpunk": { "en": "a long bread roll stuffed with hot chips, sauce and fillings, cut into big pieces in a paper wrap" } } },
+  "capetown_rooibos": { "ko": "루이보스 차", "worlds": {
+   "fantasy": { "en": "a glass cup of clear red-amber rooibos tea brewed from the needle-leaved red bush" },
+   "steampunk": { "en": "a glass cup of red-amber rooibos tea in a polished brass holder" },
+   "cyberpunk": { "en": "a tall glass of iced red-amber rooibos tea" } } },
+  "capetown_protea": { "ko": "킹 프로테아 꽃", "worlds": {
+   "fantasy": { "en": "a single giant king protea flower head with silvery pale pink bracts around a soft crown of flowers" },
+   "steampunk": { "en": "a single giant king protea flower head with silvery pale pink bracts, its stem wrapped in lace and ribbon" },
+   "cyberpunk": { "en": "a single giant king protea flower head with silvery pale pink bracts, its stem in a slim glass sleeve" } } },
+  "capetown_parasol": { "ko": "카니발 파라솔", "worlds": {
+   "fantasy": { "en": "a small twirling parasol of glittering satin in bright carnival colours, tassels swinging from its rim" },
+   "steampunk": { "en": "a small twirling parasol of glittering satin in bright carnival colours, trimmed with brass tips and fringe" },
+   "cyberpunk": { "en": "a small twirling parasol of glittering satin in bright carnival colours, its rim edged with soft light" } } },
+  "moscow_tea": { "ko": "사모바르로 우린 진한 차 한 잔과 베리 잼 종지", "worlds": {
+   "fantasy": { "en": "a painted china cup of strong amber tea poured from a brass samovar, with a little dish of berry jam" },
+   "steampunk": { "en": "a tall glass of strong amber tea in an ornate silver glass-holder, with a little dish of berry jam" },
+   "cyberpunk": { "en": "a glass cup of strong amber tea poured from an old brass samovar, with a little dish of berry jam on a softly glowing saucer" } } },
+  "moscow_blini": { "ko": "스메타나와 베리 잼을 얹은 얇은 블리니 한 접시", "worlds": {
+   "fantasy": { "en": "a painted wooden plate of thin golden blini folded into quarters, with sour cream and berry jam" },
+   "steampunk": { "en": "a china plate of thin golden blini folded into quarters, with sour cream and berry jam" },
+   "cyberpunk": { "en": "a plate of thin golden blini folded into quarters, with sour cream and berry jam on a softly glowing tray" } } },
+  "moscow_venik": { "ko": "바냐 자작나무 가지 묶음", "worlds": {
+   "fantasy": { "en": "a bundle of leafy birch twigs tied with twine" },
+   "steampunk": { "en": "a bundle of leafy birch twigs bound with a brass ring" },
+   "cyberpunk": { "en": "a bundle of real leafy birch twigs tied with a softly glowing band" } } },
+  "moscow_matryoshka": { "ko": "진홍 · 금 마트료시카(겹겹 인형)", "worlds": {
+   "fantasy": { "en": "a painted wooden nesting doll in scarlet and gold" },
+   "steampunk": { "en": "a lacquered wooden nesting doll in scarlet and gold" },
+   "cyberpunk": { "en": "a painted wooden nesting doll in scarlet and gold with a faint glowing seam" } } },
+  "moscow_chess": { "ko": "나무 체스판", "worlds": {
+   "fantasy": { "en": "a carved wooden chessboard with hand-turned pieces" },
+   "steampunk": { "en": "a folding wooden chessboard with polished pieces and a little brass chess clock" },
+   "cyberpunk": { "en": "a real wooden chessboard with polished pieces on a softly glowing table" } } }
  }
 }

@@ -12,6 +12,15 @@ Total output lines: 925
 
 
 
+## 2026-11-26 · claude · 새 도시 다섯 — 빈 · 에든버러 · 교토 · 케이프타운 · 모스크바
+- 사용자 「이제 도시공방에 추가도시 후보 만들어줘.」 → 「뭄바이,상하이,싱가포르를 빼고, 교토, 케이프타운, 모스크바로 5개 만들어줘.」(추천 다섯 중 빈 · 에든버러와 함께). 랜드마크 없이 도시만, 시험 그림 전 시안. 도시마다 따로 짠 조각을 같은 도구로 끼웠다(작업 폴더 nc/add_city_parts.py).
+- data/city-design.json — 다섯 도시 설계(근거 주소 · 위경도 · 상징 · palette · 세 세계 사람 · motif · hold · 실루엣). 예배 장소 · 종교 상징(성당 · 절 · 신사 · 양파 돔) · 정치 · 군사 상징(붉은 별 · 열병식) · 실존 인물 · 상표는 안 씀. 교토는 게이코 · 마이코 차림을 쓰지 않고 도쿄 세 사람과 머리 · 머리색 · 체형 · 실루엣이 하나도 안 겹친다. 합친 뒤 겹친 것을 바꿨다 — 딸기 금발 셋(에든버러 스팀펑크만 두고 케이프타운 스팀펑크 산호 분홍 coral_pink · 모스크바 판타지 밀빛 금발 golden_blonde, 판타지 풍만 셋이라 모스크바는 키 큰 곡선 tall_curvy), 눈빛 흰 머리 둘(모스크바 사이버펑크 얼음빛 ice_white), 모스크바 스팀펑크가 바르셀로나 개선문 스팀펑크와 머리 · 색 · 체형이 같아 버건디 burgundy, 빈 사이버펑크 얼굴이 교토 판타지와 다섯 칸 같아 긴 얼굴 · 깊은 눈 · 둥근 눈썹으로.
+- data/city-design.json — 부산 감천문화마을 판타지 앞머리 side_locks(어휘에 없는 열쇠 — 지시문에 날 열쇠로 샜고 tests/look-spec.cjs 가 전부터 실패) → curtain.
+- data/city-life.json — 도시마다 생활 장면 열둘 · 계절 · 날씨(근거 주소), heritage 에 빈 alpine · 에든버러 scotland · 교토 japan · 모스크바 eastern_europe(케이프타운은 맞는 문화가 없어 비움). data/world-props.json — 새 소품 스물하나(도시 열쇠를 앞에 붙임 — vienna_melange · edinburgh_haggis · kyoto_matcha · capetown_bobotie · moscow_blini …). data/casual-own.json — 도시마다 세 세계 직업 셋(90번 컷).
+- tools/city-design.py — CITY_KEYS 스물여섯.
+- tests — prompt-city(이름 표에 다섯 도시의 상표 · 실존 인물 · 구단 · 예배 장소 이름 137, 흔한 낱말 Burns · Tattoo · Arthur · Tutu · Rhodes · Dynamo · Firebird 는 뺐다), image-claim(빈 자리 33 · 도시 스물여섯), dex-screen(설계된 도시 스물여섯 · /26 · /78), globe-screen(서→동 차례에 교토 · 모스크바 · 케이프타운 · 빈 · 에든버러 — 이 세션에선 지구본 WebGL 단계에서 전부터 멈춰 못 돌림).
+- 볼 것: 모스크바 그림이 크렘린 탑에 붉은 별 · 양파 돔을 붙일 수 있다(탑 끝을 plain gilded finials 로 적었다). 교토 강가 등불 골목(기온 · 폰토초)은 이름 없이. 케이프타운 카니발은 빛깔 · 음악으로만.
+
 ## 2026-11-26 · gpt · 태종대 스팀펑크 대표컷 4번과 일상컷 등록
 - 그림 저장소의 태종대 스팀펑크 — 사용자가 고른 GPT 설계 4번과 일상컷 10장을 생성·검수하고 기록과 함께 등록.
 - data/img.json · data/casual-index.json — 그림 등록기로 도감과 일상컷 색인을 반영.

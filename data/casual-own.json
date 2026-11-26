@@ -1079,6 +1079,261 @@
      }
     }
    }
+  },
+  "vienna": {
+   "root": {
+    "ko": "왈츠를 돌리고 · 바퀴를 돌리고 · 커피 한 잔에 시간을 머물게 하는 음악의 도시 — 무도회 철은 11월 11일부터 사육제 끝까지 빈 왈츠로 열고(https://en.wikipedia.org/wiki/Vienna), 오페라 무도회의 데뷔탕트는 흰 드레스 · 긴 흰 장갑 · 티아라로 마지막에 빈 왈츠를 춘다(https://en.wikipedia.org/wiki/Vienna_Opera_Ball), 프라터 입구 대관람차는 1897년 세운 64.75미터 강철 바퀴(https://en.wikipedia.org/wiki/Wiener_Riesenrad), 커피하우스는 커피와 찬물 한 잔을 내고 손님이 몇 시간 머무는 곳이다(https://en.wikipedia.org/wiki/Viennese_coffee_house) → 오페라 무도회의 왈츠 마도사(판타지) · 대관람차 바퀴지기(스팀펑크) · 두 세기 뒤 커피하우스 웨이터(사이버펑크). 2026-11-26 시안 — 시험 그림 전",
+    "from": "story"
+   },
+   "mode": "per_world",
+   "worlds": {
+    "fantasy": {
+     "job_ko": "오페라 무도회의 왈츠 마도사",
+     "base": "evening_opera",
+     "place": "the sweeping grand staircase of the great opera house of her world's musical capital on a winter ball night — polished stone steps and marble, gilded balustrades, crystal chandeliers blazing overhead and debutantes in white gowns gliding up toward the ballroom",
+     "activity": "she is the waltz-mage who opens the ball, pausing on the staircase to raise her white lace fan beside her face and glance over it with a teasing look, golden motes of light drifting from the fan like notes of music",
+     "preset": "raise_chest",
+     "use": "sig_raise",
+     "prop": "a white lace folding fan edged in gold, half open and scattering drifting motes of golden light",
+     "outfit": {
+      "bold": "a waltz-mage ball look fitted to her body — a strapless white silk bodice embroidered in gold with little lyres and baroque scrolls, a short layered tulle skirt that flares as she turns, long white opera gloves past the elbow, a delicate tiara of gold and clear crystal and white satin heels",
+      "moderate": "a waltz-mage ball look — an off-shoulder white silk gown with a fitted bodice embroidered in gold with little lyres and baroque scrolls, a knee-length skirt of layered tulle, long white opera gloves past the elbow and a delicate tiara of gold and clear crystal",
+      "low": "a waltz-mage ball look — a high-necked, long-sleeved floor-length white silk ball gown, its fitted bodice embroidered in gold with little lyres and baroque scrolls, a vast skirt of layered tulle, white gloves and a delicate tiara of gold and clear crystal"
+     }
+    },
+    "steampunk": {
+     "job_ko": "프라터 대관람차의 바퀴지기",
+     "base": "street_rooftop",
+     "place": "a narrow iron service gallery high beside the great hub of the giant steel Ferris wheel at the gate of her steam city's pleasure park in the morning — taut steel-cable spokes fanning out all around, little wooden cabins hanging below, the chestnut avenue, carousels and rooftops spread far beneath and clean white steam from a brass winch below",
+     "activity": "she is the keeper of the giant wheel, kneeling on one knee on the gallery to oil the great hub bearing with a long-spouted brass oil can, her silk top hat tipped back",
+     "preset": "half_kneel_use",
+     "use": "sig_hold",
+     "prop": "a long-spouted polished brass oil can",
+     "outfit": {
+      "bold": "a wheel-keeper look fitted to her body — a cropped fitted red tailcoat over a brass-buttoned corset, high-cut fitted shorts, a silk top hat, a brass giant-wheel brooch on the lapel, a watch-chain of tiny brass cabins and tall riding boots",
+      "moderate": "a wheel-keeper look — a fitted red tailcoat over a cream blouse and brass-buttoned waistcoat, fitted knee-length breeches, a silk top hat, a brass giant-wheel brooch on the lapel, a watch-chain of tiny brass cabins and tall riding boots",
+      "low": "a wheel-keeper look — a long-sleeved high-collared cream blouse under a fitted red tailcoat and waistcoat, long fitted trousers, a silk top hat, a brass giant-wheel brooch on the lapel, a watch-chain of tiny brass cabins and tall riding boots"
+     }
+    },
+    "cyberpunk": {
+     "job_ko": "두 세기 뒤 커피하우스의 웨이터",
+     "base": "street_cafe",
+     "place": "a grand old coffee house of her far-future city kept exactly as it stands two centuries on, in the late afternoon — marble-topped tables, bentwood chairs and tall mirrored walls, glowing news-sheets on wooden holders and flying vehicles drifting past the tall windows",
+     "activity": "she is the coffee-house waiter, leaning at the polished marble counter and setting a milky coffee and a fresh glass of cold water onto a little silver tray with both hands for a guest who has lingered for hours",
+     "preset": "counter_work",
+     "use": "sig_both",
+     "prop": "a little round silver tray with a cup of milky coffee under a cap of foam and a glass of cold water",
+     "outfit": {
+      "bold": "a coffee-house waiter look fitted to her body — a sleek black cropped waistcoat with a deep neckline, a short black skirt under a long white apron tied at the waist, marble-veined high collar and cuffs, a slim bow tie of glowing amber light and sleek black heels",
+      "moderate": "a coffee-house waiter look — a sleek black fitted waistcoat over a short-sleeved white shirt, slim black trousers under a long white apron, marble-veined high collar and cuffs and a slim bow tie of glowing amber light",
+      "low": "a coffee-house waiter look — a razor-shouldered long-sleeved black suit jacket buttoned high over a white shirt, slim black trousers under a long white apron, marble-veined collar and cuffs and a slim bow tie of glowing amber light"
+     }
+    }
+   }
+  },
+  "edinburgh": {
+   "root": {
+    "ko": "꺼진 화산 위 돌의 도시 — 바위의 불 · 렌즈의 빛 · 축제의 소리: 에든버러 성은 꺼진 화산의 돌러라이트 마개(캐슬 록) 위에 서고(https://en.wikipedia.org/wiki/Castle_Rock,_Edinburgh), 호그머네이는 세계에서 가장 큰 새해 파티 가운데 하나이며(https://en.wikipedia.org/wiki/Hogmanay), 캐슬힐 아웃룩 타워의 카메라 옵스큐라는 1853년부터 꼭대기 방에서 도시의 실시간 모습을 비추고(https://en.wikipedia.org/wiki/Outlook_Tower), 프린지는 세계에서 가장 큰 공연 예술 축제로 로열 마일이 거리 공연의 중심이다(https://en.wikipedia.org/wiki/Edinburgh_Festival_Fringe) → 호그머네이 성 바위 봉화의 불지기(판타지) · 카메라 옵스큐라 탑의 렌즈지기(스팀펑크) · 여름 축제 로열 마일의 빛 백파이프 연주자(사이버펑크). 2026-11-26 시안 — 시험 그림 전",
+    "from": "story"
+   },
+   "mode": "per_world",
+   "worlds": {
+    "fantasy": {
+     "job_ko": "호그머네이 성 바위 봉화의 불지기",
+     "base": "street_rooftop",
+     "place": "the high battlements of the castle on its black volcanic crag in her world's windswept stone capital at the year's last midnight — a great iron brazier on the parapet, the stone ridge-street and the torch-lit city far below, fireworks blooming over the crag and the grey firth beyond",
+     "activity": "she is the fire-warden of the castle rock, kneeling on one knee beside the great iron brazier and touching her torch-staff to it so the beacon roars alight for the new year, sparks streaming away on the wind",
+     "preset": "half_kneel_use",
+     "use": "sig_hold",
+     "prop": "a long iron torch-staff crowned with a cage of black basalt holding a living flame",
+     "outfit": {
+      "bold": "a fire-warden look fitted to her body — a sleeveless cuirass of interlocking hexagonal black basalt plates glowing ember-orange at the seams, a short split skirt of deep red and black tartan, a tartan sash pinned with a silver thistle brooch, one large asymmetric pauldron and tall black leather boots",
+      "moderate": "a fire-warden look — a fitted short-sleeved cuirass of interlocking hexagonal black basalt plates glowing ember-orange at the seams over a knee-length skirt of deep red and black tartan, a tartan sash pinned with a silver thistle brooch, one large pauldron and tall leather boots",
+      "low": "a fire-warden look — a long-sleeved, high-necked dark tunic under a cuirass of interlocking hexagonal black basalt plates glowing ember-orange at the seams, a long coat of deep red and black tartan split from the waist, a silver thistle brooch and tall leather boots"
+     }
+    },
+    "steampunk": {
+     "job_ko": "카메라 옵스큐라 탑의 렌즈지기",
+     "base": "museum_workshop",
+     "place": "the darkened top chamber of the camera obscura tower near the castle gate in her steam city at midday — a brass periscope mirror turning in the domed roof above, a live picture of the misty city, the castle and the rooftops glowing on a great round white table, brass levers and lens rings along the walls",
+     "activity": "she is the lens-keeper of the camera obscura, leaning over the round white table with both hands to fit a freshly polished great brass lens back into its ring, the moving picture of the city sliding across the table around her",
+     "preset": "counter_work",
+     "use": "sig_both",
+     "prop": "a great polished brass lens in an engraved ring, as wide as a dinner plate",
+     "outfit": {
+      "bold": "a lens-keeper look fitted to her body — a short fitted jacket with a layered shoulder cape in soft grey and heather-purple tartan, a lace-trimmed corset bodice, a short bustled skirt, a tartan cap at an angle, a brass monocle-lens brooch engraved with a thistle and laced ankle boots",
+      "moderate": "a lens-keeper look — a fitted knee-length coat with a layered shoulder cape in soft grey and heather-purple tartan over a cream blouse, a tartan cap at an angle, a brass monocle-lens brooch engraved with a thistle, dove-grey leather gloves and laced boots",
+      "low": "a lens-keeper look — a long-sleeved, high-necked cream blouse under a long fitted coat with a layered shoulder cape in soft grey and heather-purple tartan, an ankle-length skirt, a tartan cap, a brass lens brooch engraved with a thistle, gloves and laced boots"
+     }
+    },
+    "cyberpunk": {
+     "job_ko": "여름 축제 로열 마일의 빛 백파이프 연주자",
+     "base": "street_alley",
+     "place": "the long ridge-street of her far-future city's old town during the summer festival at night — the tall stone tenements kept exactly as they stand, light-banners of glowing tartan rippling between them, crowds and street performers all around and the castle glowing on its crag above",
+     "activity": "she is the light-piper of the festival, marching down the old street as she plays her crystal bagpipes, each note sending ripples of violet light along the tartan banners overhead",
+     "preset": "stride_prop",
+     "use": "sig_hold",
+     "prop": "a set of bagpipes with clear crystal drones and chanter glowing soft violet, the bag wrapped in glossy smart-fabric tartan",
+     "outfit": {
+      "bold": "a light-piper look fitted to her body — a cropped jacket with buckled harness straps over a cropped top, a very short pleated kilt-skirt of fibre-optic tartan glowing violet, teal and red, a silver mesh hip pouch hanging like a sporran, a glowing thistle ear cuff and tall glossy boots",
+      "moderate": "a light-piper look — a cropped jacket with buckled harness straps over a fitted top, a knee-length pleated kilt-skirt of fibre-optic tartan glowing violet, teal and red, a silver mesh hip pouch hanging like a sporran, a glowing thistle ear cuff and tall boots",
+      "low": "a light-piper look — a long-sleeved, high-necked fitted top under a cropped jacket with buckled harness straps, a long pleated kilt-skirt of fibre-optic tartan glowing violet, teal and red, a silver mesh hip pouch like a sporran and tall boots"
+     }
+    }
+   }
+  },
+  "kyoto": {
+   "root": {
+    "ko": "물과 비단의 천 년 수도 — 가모강은 교토 이름난 염색 교유젠에 쓰인 물이고(https://en.wikipedia.org/wiki/Kamo_River, 유젠은 쌀풀 윤곽선 안을 붓으로 칠하는 염색 https://en.wikipedia.org/wiki/Y%C5%ABzen), 천도로 기운 도시는 1890년 비와호 물을 끌어와 배를 땅 위로 옮기는 경사 철길 · 일본 첫 수력 발전 · 첫 전차를 놓았으며(https://en.wikipedia.org/wiki/Lake_Biwa_Canal), 니시진에선 1,200년 넘게 비단 · 금란을 짜고 1872년 구멍 카드로 짜는 자카드 베틀을 들였다(https://en.wikipedia.org/wiki/Nishijin-ori) → 강가의 염색 마녀(판타지) · 수로 인클라인 기관사(스팀펑크) · 빛 직조공(사이버펑크). 2026-11-26 시안 — 시험 그림 전",
+    "from": "story"
+   },
+   "mode": "per_world",
+   "worlds": {
+    "fantasy": {
+     "job_ko": "강가의 염색 마녀",
+     "base": "travel_lake",
+     "place": "the shallow, crystal-clear river at the eastern edge of her world's capital at dawn — flat stepping stones across the current, long lengths of freshly painted silk streaming in the water like ribbons of crimson, indigo and gold, bamboo drying poles hung with silk along the stone bank and maple slopes glowing on the mountains beyond",
+     "activity": "she is the river dyer of the old capital, kneeling on one knee on a flat stepping stone and drawing a glowing line of colour along a length of silk floating in the current with her long brush",
+     "preset": "half_kneel_use",
+     "use": "sig_hold",
+     "prop": "a long dyer's brush of pale bamboo, its tip trailing a glowing ribbon of crimson, indigo and gold dye through the air",
+     "outfit": {
+      "bold": "a river-dyer look fitted to her body — a sleeveless silk bodice and a long wrap skirt with a high slit, both painted with water ripples, maple leaves and autumn grasses in soft ombré gradients edged by fine pale outlines, a long gold-thread sash knotted at her hip, sheer silk streamers of crimson, indigo and gold trailing from her shoulders, a painted-gold folding-fan comb in her hair and bare feet on the wet stone",
+      "moderate": "a river-dyer look — a fitted short-sleeved silk bodice and an ankle-length skirt painted with water ripples, maple leaves and autumn grasses in soft ombré gradients edged by fine pale outlines, a long gold-thread sash, sheer silk streamers of crimson, indigo and gold trailing from her shoulders, a painted-gold folding-fan comb in her hair and soft cloth slippers",
+      "low": "a river-dyer look — a long-sleeved, high-necked flowing silk gown painted with water ripples, maple leaves and autumn grasses in soft ombré gradients edged by fine pale outlines, a long gold-thread sash, a sheer over-robe of crimson, indigo and gold streamers, a painted-gold folding-fan comb in her hair and soft cloth slippers"
+     }
+    },
+    "steampunk": {
+     "job_ko": "수로 인클라인 기관사",
+     "base": "travel_lookout",
+     "place": "the top of the canal incline of her steam city on a bright spring afternoon — two long rails running down the slope between avenues of cherry trees in full bloom, a canal boat riding up on a brass-wheeled cradle, the winding house with its great brass cable drum beside her and the red-brick power house humming at the foot of the hill",
+     "activity": "she is the keeper of the canal incline, standing at the brass winding gear and turning the great crank with both hands to haul a canal boat up the rails",
+     "preset": "stand_use",
+     "use": "sig_both",
+     "prop": "a heavy brass winding crank with a polished oak grip, a few cherry petals caught in its gear teeth",
+     "outfit": {
+      "bold": "a canal-incline engineer look fitted to her body — a cropped canal-blue work jacket with brass buttons shaped like little cupped water-turbine wheels, open over a fitted bandeau top, a short leather work apron over high-waisted shorts, a tool harness, one brass gauntlet whose knuckles carry tiny flanged rail wheels, enamel cherry blossoms pinned along her collar and in her twin buns, and laced ankle boots",
+      "moderate": "a canal-incline engineer look — a fitted canal-blue work jacket with brass buttons shaped like little cupped water-turbine wheels over a cotton blouse with rolled sleeves, a leather work apron over fitted knee-length breeches, a tool harness, one brass gauntlet whose knuckles carry tiny flanged rail wheels, enamel cherry blossoms pinned along her collar and laced boots",
+      "low": "a canal-incline engineer look — a long-sleeved, high-collared blouse under a canal-blue work jacket with brass buttons shaped like little cupped water-turbine wheels, a long leather work apron over slim trousers tucked into tall laced boots, a tool harness, one brass gauntlet whose knuckles carry tiny flanged rail wheels and enamel cherry blossoms pinned along her collar"
+     }
+    },
+    "cyberpunk": {
+     "job_ko": "빛 직조공",
+     "base": "studio_art",
+     "place": "a weaving loft above a lattice-fronted wooden townhouse of her far-future city at night — a great loom of light with threads of glowing gold running through its warp, rows of punched-light pattern cards scrolling overhead, bolts of brocade slowly shifting their patterns on the shelves and the glowing grid of the old capital beyond the lattice window",
+     "activity": "she is a light-weaver of the old weaving quarter, leaning over the loom and passing her glowing shuttle through the warp with both hands as a gold-thread pattern blooms across the cloth",
+     "preset": "counter_work",
+     "use": "sig_both",
+     "prop": "a slender weaving shuttle of white ceramic and gold, trailing a glowing thread of light",
+     "outfit": {
+      "bold": "a light-weaver look fitted to her body — a short wrap dress of smart silk brocade with a deep neckline and a high slit, gold-thread flowers and drifting clouds slowly weaving and re-weaving across it, a long translucent sash of glowing punched-hole patterns over one shoulder, fine gold filaments threaded through her enormous braid and sleek heeled sandals",
+      "moderate": "a light-weaver look — a knee-length wrap dress of smart silk brocade with a modest neckline, gold-thread flowers and drifting clouds slowly weaving and re-weaving across it, a long translucent sash of glowing punched-hole patterns over one shoulder, fine gold filaments threaded through her enormous braid, sheer smart tights and sleek ankle boots",
+      "low": "a light-weaver look — an ankle-length, long-sleeved wrap dress of smart silk brocade closed to the throat, gold-thread flowers and drifting clouds slowly weaving and re-weaving across it, a long translucent sash of glowing punched-hole patterns over one shoulder, fine gold filaments threaded through her enormous braid and sleek ankle boots"
+     }
+    }
+   }
+  },
+  "capetown": {
+   "root": {
+    "ko": "산에 구름 식탁보를 펴고 · 배에 시각을 알리고 · 바다를 지키는 바람의 곶 도시의 손 — 테이블 마운틴의 평평한 꼭대기는 남동풍이 비탈을 밀어 올려 엉긴 「식탁보」 구름에 자주 덮이고(https://en.wikipedia.org/wiki/Table_Mountain), 시그널 힐은 배들에 날씨 경보 · 닻 신호 깃발을 올리고 1836년부터 1934년까지 오후 1시에 시보구를 떨어뜨려 배들이 항해용 정밀 시계를 맞추게 했으며(https://en.wikipedia.org/wiki/Signal_Hill_(Cape_Town)), 무이젠버그 서퍼스 코너는 케이프타운 으뜸 서핑 해변으로 해변 감시 서비스가 경보를 알린다(https://en.wikipedia.org/wiki/Muizenberg) → 식탁보 구름 직조사(판타지) · 시그널 힐 시보구 지기(스팀펑크) · 서퍼스 코너 바다 감시 구조대원(사이버펑크). 2026-11-26 시안 — 시험 그림 전",
+    "from": "story"
+   },
+   "mode": "per_world",
+   "worlds": {
+    "fantasy": {
+     "job_ko": "식탁보 구름 직조사",
+     "base": "travel_lookout",
+     "place": "the level summit of the great flat-topped mountain above her world's harbour capital at dawn — the edge of the sheer sandstone cliff before her, the white tablecloth of cloud pouring slowly over it, giant protea flowers among the rocks and the bay, the painted city and the tall ships far below",
+     "activity": "she is the weaver of the mountain's tablecloth cloud, raising her silver shuttle into the south-east wind so long white threads of cloud stream from it and spill over the cliff edge to cover the summit",
+     "preset": "light_check",
+     "use": "sig_raise",
+     "prop": "a slender silver weaving shuttle trailing a long skein of soft white cloud thread",
+     "outfit": {
+      "bold": "a cloud-weaver look fitted to her body — a strapless bodice of soft sandstone-grey silk with a high-slit draped skirt, a sheer cape of white cloud-silk pouring from a level band across her shoulders down her back, a collar-crown of silvery pale pink king protea bracts and silver sandals",
+      "moderate": "a cloud-weaver look — a fitted off-shoulder gown of soft sandstone-grey silk, a long cape of white cloud-silk pouring from a level band across her shoulders down her back like the tablecloth cloud, a collar-crown of silvery pale pink king protea bracts and silver slippers",
+      "low": "a cloud-weaver look — a high-collared, long-sleeved, floor-length gown of soft sandstone-grey silk, a long cape of white cloud-silk pouring from a level band across her shoulders down her back, a collar-crown of silvery pale pink king protea bracts and soft silver slippers"
+     }
+    },
+    "steampunk": {
+     "job_ko": "시그널 힐 시보구 지기",
+     "base": "street_rooftop",
+     "place": "the windy flat top of the signal hill above her steam city's harbour on a bright morning — the tall mast of the great polished brass time ball beside her, strings of bright signal flags snapping in the south-east wind, the bay crowded with paddle steamers and tall ships below and the flat-topped mountain behind",
+     "activity": "she is the keeper of the time ball, both hands on the polished brass winding crank as she hauls the great ball to the top of its mast, ready to let it fall at the stroke of one so every ship in the harbour can set its chronometer",
+     "preset": "stand_use",
+     "use": "sig_both",
+     "prop": "a polished brass winding crank with a turned wooden handle",
+     "outfit": {
+      "bold": "a time-ball keeper look fitted to her body — a sleeveless corset bodice of navy wool with brass buttons, high-waisted shorts, a short shoulder cape pieced from bright red, yellow, blue and white signal-flag panels, a brass time-ball pendant at her throat and laced ankle boots",
+      "moderate": "a time-ball keeper look — a fitted navy coat cut short at the front with a short shoulder cape pieced from bright red, yellow, blue and white signal-flag panels, a knee-length skirt, a brass time-ball pendant at her throat and laced boots",
+      "low": "a time-ball keeper look — a long navy coat with a layered shoulder cape pieced from bright red, yellow, blue and white signal-flag panels over a high-collared blouse, a full-length skirt, a brass time-ball pendant at her throat and tall laced boots"
+     }
+    },
+    "cyberpunk": {
+     "job_ko": "서퍼스 코너 바다 감시 구조대원",
+     "base": "water_beach",
+     "place": "the surfers' corner of the warm bay of her far-future city two centuries on at bright midday — a long row of little beach huts glowing in candy colours behind her, surfers riding green-blue rollers, a small watch-drone hovering over the water and the mountains rising beyond the bay",
+     "activity": "she is the sea-watch lifeguard of the surfers' corner, striding along the wet sand with her signal baton held high to flash its glowing banner and call the swimmers and surfers back to shore",
+     "preset": "stride_prop",
+     "use": "sig_hold",
+     "prop": "a slim chrome signal baton unfurling a banner of glowing light that flashes bright warning colours",
+     "outfit": {
+      "bold": "a sea-watch lifeguard look fitted to her body — a high-cut sleeveless rescue swimsuit pieced in candy beach-hut colours of rose, lemon, sky blue and mint edged with thin glowing lines, reflective bands at her arms and hips and a translucent wave-curved visor pushed up in her hair",
+      "moderate": "a sea-watch lifeguard look — a fitted short-sleeved rescue suit with shorts, pieced in candy beach-hut colours of rose, lemon, sky blue and mint edged with thin glowing lines, reflective bands and a translucent wave-curved visor pushed up in her hair",
+      "low": "a sea-watch lifeguard look — a fitted long-sleeved full-length rescue suit pieced in candy beach-hut colours of rose, lemon, sky blue and mint edged with thin glowing lines, reflective bands, sturdy boots and a translucent wave-curved visor pushed up in her hair"
+     }
+    }
+   }
+  },
+  "moscow": {
+   "root": {
+    "ko": "겹겹이 품고 · 땅속을 밝히고 · 눈 위에서 춤추는 아름다운 광장의 손 — 마트료시카는 1890년대 모스크바 공방에서 처음 깎은 겹겹 인형이고(https://en.wikipedia.org/wiki/Matryoshka_doll), 모스크바 지하철역은 대리석 벽 · 높은 천장 · 큰 샹들리에로 「땅속의 인공 해」 라 불렸으며(https://en.wikipedia.org/wiki/Moscow_Metro), 볼쇼이 극장은 세계에서 가장 큰 발레단의 집이다(https://en.wikipedia.org/wiki/Bolshoi_Theatre) → 아름다운 광장 겨울 장터의 겹겹 인형 마법 화공(판타지) · 땅속 궁전역의 빛 연금술사(스팀펑크) · 두 세기 뒤 큰 극장의 크롬 프리마 발레리나(사이버펑크). 2026-11-26 시안 — 시험 그림 전",
+    "from": "story"
+   },
+   "mode": "per_world",
+   "worlds": {
+    "fantasy": {
+     "job_ko": "아름다운 광장 겨울 장터의 겹겹 인형 마법 화공",
+     "base": "street_market",
+     "place": "a winter fair on the vast snowy cobbled square of her world's red-brick capital at dusk — wooden stalls hung with golden lanterns, shelves of painted nesting dolls in scarlet, gold and cobalt, the long red-brick wall with its swallowtail battlements and a tall tent-roofed tower banded in green and white tiles behind, snow drifting down",
+     "activity": "she is the nesting-doll painter of the winter fair, leaning over her stall counter and painting a last red rose onto the smallest doll with a fine brush, a row of finished dolls glowing faintly behind her",
+     "preset": "counter_work",
+     "use": "sig_both",
+     "prop": "the smallest doll of a painted wooden nesting set in scarlet and gold, with a fine paintbrush",
+     "outfit": {
+      "bold": "a fairy-tale doll-painter look fitted to her body — a sleeveless scarlet brocade sarafan bodice laced at the front over a short full skirt embroidered in gold flowers and berries, a black wool shawl printed with big crimson roses knotted low on her hips, a small scarlet kokoshnik of pearls and gold thread with long ribbons, and red leather heeled boots",
+      "moderate": "a fairy-tale doll-painter look — a short-sleeved white blouse with red-embroidered cuffs under a scarlet brocade sarafan bodice and a knee-length full skirt embroidered in gold flowers and berries, a black wool shawl printed with big crimson roses over her shoulders, a scarlet kokoshnik of pearls and gold thread and red leather boots",
+      "low": "a fairy-tale doll-painter look — a long-sleeved, high-necked white blouse embroidered in red at the cuffs under an ankle-length scarlet brocade sarafan gown embroidered in gold flowers and berries, a black wool shawl printed with big crimson roses wrapped over her shoulders, a scarlet kokoshnik of pearls and gold thread and warm red leather boots"
+     }
+    },
+    "steampunk": {
+     "job_ko": "땅속 궁전역의 빛 연금술사",
+     "base": "subway_platform",
+     "place": "a grand underground station of her steam city deep below the snowy streets late at night — marble arches and bronze lamps, great crystal chandeliers hanging along the vaulted hall, a polished brass steam train waiting at the platform in a soft puff of clean white steam",
+     "activity": "she is the light-alchemist of the underground palace stations, raising a glass vial of liquid golden light toward a great chandelier to check its glow before she pours it into the lamps, warm light spilling across her face",
+     "preset": "light_check",
+     "use": "sig_raise",
+     "prop": "a tall glass vial of glowing liquid golden light stoppered with brass",
+     "outfit": {
+      "bold": "a light-alchemist look fitted to her body — a sleeveless black leather corset vest set with polished brass-framed marble panels like station arches, a short bustled skirt, a long open leather coat, a bandolier of glowing glass vials, brass goggles pushed up, long gloves, laced heeled boots and a tiny crystal chandelier pendant at her throat",
+      "moderate": "a light-alchemist look — a long fitted leather coat with brass-framed marble arch panels on the lapels and cuffs over a short-sleeved cream blouse and a knee-length skirt, a bandolier of glowing glass vials, brass goggles pushed up, long gloves and laced boots",
+      "low": "a light-alchemist look — a long-sleeved, high-necked cream blouse and an ankle-length skirt under a long leather coat buttoned to the waist with brass-framed marble arch panels, a bandolier of glowing glass vials, brass goggles pushed up, long gloves and laced boots"
+     }
+    },
+    "cyberpunk": {
+     "job_ko": "두 세기 뒤 큰 극장의 크롬 프리마 발레리나",
+     "base": "stage_dance",
+     "place": "the wings of the grand theatre of her far-future city just before curtain-up — the old gilded tiers of red-velvet boxes glimpsed past a curtain of soft white light, the stage floor glowing faintly, lines of light rigged overhead and snow falling past the tall windows of the colonnade beyond",
+     "activity": "she is the chrome prima ballerina of the grand theatre, kneeling on one knee in the wings to wind a glowing ribbon of cobalt light around the ankle of her chrome leg before she goes on, the hush of the full house beyond the curtain",
+     "preset": "half_kneel_use",
+     "use": "sig_hold",
+     "prop": "a long satin ribbon glowing with cobalt light",
+     "outfit": {
+      "bold": "a chrome prima ballerina look fitted to her body — a skin-tight sleeveless white bodysuit with an open back, swirled with cobalt-blue floral brushstrokes like painted porcelain, a short stiff tutu of layered light-mesh in white and cobalt, sculpted chrome cybernetic legs on slim chrome toe-tips and fine chrome bands at her wrists",
+      "moderate": "a chrome prima ballerina look — a white cap-sleeved bodysuit swirled with cobalt-blue floral brushstrokes like painted porcelain, a knee-length tutu of layered light-mesh in white and cobalt, sculpted chrome cybernetic legs on slim chrome toe-tips",
+      "low": "a chrome prima ballerina look — a long-sleeved, high-necked white bodysuit swirled with cobalt-blue floral brushstrokes like painted porcelain, an ankle-length romantic tutu of layered light-mesh in white and cobalt, sculpted chrome cybernetic legs on slim chrome toe-tips"
+     }
+    }
+   }
   }
  }
 }

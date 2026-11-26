@@ -96,12 +96,12 @@ const settle = p => p.waitForFunction(() => { const k = document.querySelector('
       }
       assert(!ps.rio.front && ps.tokyo.front, '서울 정면 — 리우 뒷면 · 도쿄 앞면'); checks += 4;
       // (b) 앞 · 뒤 단추 — 서에서 동으로
-      await p.tap('.th-mq-next'); assert.deepEqual(await marquee(p), { city: 'daejeon', name: C.daejeon.ko }, '뒤 → 대전(2026-11-23 서울 동쪽)'); await p.tap('.th-mq-next'); assert.deepEqual(await marquee(p), { city: 'busan', name: C.busan.ko }, '뒤 → 부산(2026-11-22 대전 동쪽)'); await p.tap('.th-mq-next'); assert.deepEqual(await marquee(p), { city: 'tokyo', name: C.tokyo.ko }, '뒤 → 도쿄');
+      await p.tap('.th-mq-next'); assert.deepEqual(await marquee(p), { city: 'daejeon', name: C.daejeon.ko }, '뒤 → 대전(2026-11-23 서울 동쪽)'); await p.tap('.th-mq-next'); assert.deepEqual(await marquee(p), { city: 'busan', name: C.busan.ko }, '뒤 → 부산(2026-11-22 대전 동쪽)'); await p.tap('.th-mq-next'); assert.deepEqual(await marquee(p), { city: 'kyoto', name: C.kyoto.ko }, '뒤 → 교토(2026-11-26 부산 동쪽)'); await p.tap('.th-mq-next'); assert.deepEqual(await marquee(p), { city: 'tokyo', name: C.tokyo.ko }, '뒤 → 도쿄');
       await settle(p);
       assert.equal((await pins(p)).tokyo.on, true, '조명이 도쿄로');
-      await p.tap('.th-mq-prev'); await p.tap('.th-mq-prev'); await p.tap('.th-mq-prev'); await p.tap('.th-mq-prev'); assert.equal((await marquee(p)).city, 'beijing', '앞 넷 → 베이징(부산 · 대전 · 서울 다음)');
+      for (let i = 0; i < 5; i++) await p.tap('.th-mq-prev'); assert.equal((await marquee(p)).city, 'beijing', '앞 다섯 → 베이징(교토 · 부산 · 대전 · 서울 다음)');
       await settle(p);
-      for (const k of ['hongkong', 'bangkok', 'dubai', 'cairo', 'istanbul', 'prague', 'rome', 'venice', 'paris', 'barcelona', 'london', 'rio']) { await p.tap('.th-mq-prev'); assert.equal((await marquee(p)).city, k, '앞으로 → ' + k + '(서에서 동 차례의 거꾸로)'); }   /* 설계 전 예는 리우(2026-11-21 열 곳 모두 설계 — 가로챈 설계표에서만 미정) */
+      for (const k of ['hongkong', 'bangkok', 'dubai', 'moscow', 'cairo', 'istanbul', 'capetown', 'vienna', 'prague', 'rome', 'venice', 'paris', 'barcelona', 'london', 'edinburgh', 'rio']) { await p.tap('.th-mq-prev'); assert.equal((await marquee(p)).city, k, '앞으로 → ' + k + '(서에서 동 차례의 거꾸로)'); }   /* 설계 전 예는 리우(2026-11-21 열 곳 모두 설계 — 가로챈 설계표에서만 미정) */
       await settle(p);
       // 설계 전 도시 — 「설계 전」 · 무대로 막힘(짧은 안내, 주소 그대로)
       assert.equal(await p.locator('.th-marquee .th-pre').count(), 1, '설계 전 표지');
