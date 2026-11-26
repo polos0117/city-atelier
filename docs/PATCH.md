@@ -1,6 +1,3 @@
-## 2026-11-26 · gpt · 빈 스팀펑크 대표 2번과 일상 묶음
-- city-atelier-img — 사용자가 고른 세계컷 2번과 일상 10장·바퀴지기 전용 90번을 등록했다. 12장 화면비 및 일상 구성 검사 통과. 의상 재사용·구도 차이는 각 생성 기록 qa에 남겼으며 재생성하지 않았다.
-
 Warning: truncated output (original token count: 51945)
 Total output lines: 925
 
@@ -14,6 +11,9 @@ Total output lines: 925
 이 안내글은 첫 `##` 앞이라 읽히지 않는다. `node tests/patch.cjs` 가 모양을 본다.
 
 
+
+## 2026-11-26 · gpt · 빈 스팀펑크 대표 2번과 일상 묶음
+- city-atelier-img — 사용자가 고른 세계컷 2번과 일상 10장·바퀴지기 전용 90번을 등록했다. 12장 화면비 및 일상 구성 검사 통과. 의상 재사용·구도 차이는 각 생성 기록 qa에 남겼으며 재생성하지 않았다.
 
 ## 2026-11-26 · gpt · 빈 사이버펑크 대표 2번과 일상 묶음 등록
 - city-atelier-img/img/vienna_cyberpunk_* — 선택한 대표컷과 일상 10장·전용 90번을 WebP로 등록했다.
