@@ -12,6 +12,9 @@ Total output lines: 925
 
 
 
+## 2026-11-26 · gpt · 에든버러 스팀펑크 2번 선택 등록
+- data/img.json — 선택한 대표컷 2번과 일상컷 10장·렌즈지기 직업컷 1장을 그림 등록기로 등록했다. 이미지·생성 기록은 city-atelier-img에 저장하고, 타 세계와 겹치는 장소·자세 3건은 steampunk-validation.json에 남겼다.
+
 ## 2026-11-26 · gpt · 에든버러 사이버펑크 대표 5번과 일상 등록
 - data/img.json — 선택한 GPT 설계 5번과 일상 10장·직업컷 90번을 등록기로 추가.
 - data/casual-index.json — 새 일상 11장의 색인을 생성 결과에서 추가하고 기존 항목을 보존.
