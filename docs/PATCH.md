@@ -9,6 +9,10 @@
 
 
 
+## 2026-11-26 · claude · 공용 casual-tree.js 받기(세계 장면 장소)
+- lib/casual-tree.js — 공용(style-atelier/shared) 그대로: isRequired 가 required.world.scene_places 를 본다(삼국지 2026-11-26). 이 공방 표엔 그 칸이 없어 하는 일은 같다
+- prompt.html — casual-tree.js ?v=req1
+
 ## 2026-11-26 · gpt · 태종대 판타지 그림 등록
 - 대표컷 2번과 일상컷 10장을 그림 저장소에 추가했다. 선택 이미지 참고·크기·해시·검수 기록과 자유 설계 지시문을 함께 남겼다.
 - 일부 현대 소품·구도 차이는 검수에 기록하고 생성 결과를 보존했다. 도감 등록은 그림 등록 워크플로를 따른다.
