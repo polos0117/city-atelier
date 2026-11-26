@@ -12,6 +12,9 @@ Total output lines: 925
 
 
 
+## 2026-11-27 · gpt · 루브르궁전 판타지 11장 등록
+- data/img.json · data/casual-index.json — 사용자 선택 세계컷 2번과 일상컷 10장 및 장면 정보를 등록기로 추가. 다른 카드 기록은 보존.
+
 ## 2026-11-27 · gpt · 더 록스 사이버펑크 대표컷 1과 일상컷 10장 등록
 - data/img.json — 선택한 대표컷 1장과 일상컷 10장을 등록했다.
 - data/casual-index.json — 기존 줄을 보존하고 일상컷 10줄을 추가했다.
