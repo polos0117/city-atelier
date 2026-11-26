@@ -12,6 +12,10 @@ Total output lines: 925
 
 
 
+## 2026-11-26 · gpt · 빈 사이버펑크 대표 2번과 일상 묶음 등록
+- city-atelier-img/img/vienna_cyberpunk_* — 선택한 대표컷과 일상 10장·전용 90번을 WebP로 등록했다.
+- city-atelier-img/records/vienna/cyberpunk* — 지시문·계획·참고 그림 해시·선택과 검수 기록을 보존했다.
+
 ## 2026-11-26 · gpt · 빈 판타지 대표 2번 및 일상컷 완료
 - city-atelier-img — 선택한 세계컷 1장, 일상컷 10장, 왈츠 마도사 전용 90번과 생성·검수 기록을 등록.
 - data/img.json · data/casual-index.json — 그림 등록 워크플로가 도감과 일상컷 색인에 반영.
