@@ -12,6 +12,10 @@ Total output lines: 925
 
 
 
+## 2026-11-27 · gpt · 이화원 판타지 대표 1번과 일상컷 열 장
+- city-atelier-img/img · records/beijing-summerpalace — 세계컷 1번 선택을 반영하고 같은 인물의 일상컷 1~10, 계획·생성·QA 기록을 등록. 노출을 이유로 재생성하지 않았고 의상·자세·세계관 어긋남은 QA에 기록.
+- data/img.json · data/casual-index.json — 그림 저장소 자동 등록으로 대표 1장과 일상 10장을 도감·색인에 반영.
+
 ## 2026-11-27 · gpt · 루브르궁전 사이버펑크 11장 등록
 - data/img.json — 대표컷 2번과 일상 10장을 등록기로 추가, 기존 등록 보존.
 - data/casual-index.json — 새 일상 10장의 의상·장소·구도 색인 추가, 기존 색인 보존.
