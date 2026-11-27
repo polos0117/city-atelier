@@ -39,6 +39,7 @@
           "banners and royal regalia",
           "a shimmer of magical light"
         ],
+        "casual_banned_en": ["sunglasses", "bucket hat", "beanie", "sun visor", "acetate"],
         "banned_en": [
           "smartphone",
           "mobile phone",
@@ -74,12 +75,7 @@
           "skyscraper",
           "Chinese-style palace",
           "Great Wall",
-          "yellow-glazed roof tiles",
-          "sunglasses",
-          "bucket hat",
-          "beanie",
-          "sun visor",
-          "acetate"
+          "yellow-glazed roof tiles"
         ]
       },
       "steampunk": {
@@ -107,6 +103,7 @@
           "fine leather gloves",
           "delicate brass instruments clipped to her belt"
         ],
+        "casual_banned_en": ["sunglasses", "bucket hat", "beanie", "sun visor", "acetate"],
         "banned_en": [
           "smartphone",
           "mobile phone",
@@ -144,12 +141,7 @@
           "rust",
           "coal smoke",
           "sweat stains",
-          "photographic texture",
-          "sunglasses",
-          "bucket hat",
-          "beanie",
-          "sun visor",
-          "acetate"
+          "photographic texture"
         ]
       },
       "cyberpunk": {

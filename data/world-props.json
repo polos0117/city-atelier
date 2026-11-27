@@ -2341,6 +2341,34 @@
   "eyeglasses": { "ko": "안경", "note": "2026-11-27 모자 · 안경 소품(사용자 「모자종류,안경등의 종류를 더 늘리고 쓰는것만 아니라 걸치거나 드는 장면 등도」) — 세계마다 그 세계의 모자 · 안경으로", "worlds": {
    "fantasy": { "en": "a pair of round gold-rimmed reading spectacles" },
    "steampunk": { "en": "a pair of brass-rimmed spectacles with a fine chain" },
-   "cyberpunk": { "en": "a pair of thin smart glasses with a faint readout on one lens" } } }
+   "cyberpunk": { "en": "a pair of thin smart glasses with a faint readout on one lens" } } },
+  "lipstick": { "ko": "립스틱", "note": "2026-11-27 도발적 자세 · 옷 입고 벗기 · 악기(사용자 「도발적이고 뇌쇄적인 포즈나 의상」 · 「악기가 없는거 같아」) — 세계마다 그 세계의 물건으로", "worlds": {
+   "fantasy": { "en": "a slim carved-bone stick of deep-red lip rouge" },
+   "steampunk": { "en": "a gilt-cased stick of deep-red rouge with a tiny mirror lid" },
+   "cyberpunk": { "en": "a slim chrome lipstick that glows faintly at its tip" } } },
+  "high_heels": { "ko": "손에 든 하이힐", "note": "2026-11-27 도발적 자세 · 옷 입고 벗기 · 악기(사용자 「도발적이고 뇌쇄적인 포즈나 의상」 · 「악기가 없는거 같아」) — 세계마다 그 세계의 물건으로", "worlds": {
+   "fantasy": { "en": "a pair of embroidered silk heeled slippers" },
+   "steampunk": { "en": "a pair of buttoned leather heeled boots with brass eyelets" },
+   "cyberpunk": { "en": "a pair of translucent strappy heels with softly glowing soles" } } },
+  "violin": { "ko": "바이올린", "note": "2026-11-27 도발적 자세 · 옷 입고 벗기 · 악기(사용자 「도발적이고 뇌쇄적인 포즈나 의상」 · 「악기가 없는거 같아」) — 세계마다 그 세계의 물건으로", "worlds": {
+   "fantasy": { "en": "a carved wooden fiddle and its bow, vines inlaid along its neck" },
+   "steampunk": { "en": "a brass-fitted violin and its bow, tiny gears set into its scroll" },
+   "cyberpunk": { "en": "a slim skeletal electric violin and its bow, light running along its strings" } } },
+  "flute": { "ko": "플루트", "note": "2026-11-27 도발적 자세 · 옷 입고 벗기 · 악기(사용자 「도발적이고 뇌쇄적인 포즈나 의상」 · 「악기가 없는거 같아」) — 세계마다 그 세계의 물건으로", "worlds": {
+   "fantasy": { "en": "a slender silver flute engraved with leaves" },
+   "steampunk": { "en": "a brass flute with clockwork keys" },
+   "cyberpunk": { "en": "a sleek transparent flute lit softly from within" } } },
+  "saxophone": { "ko": "색소폰", "note": "2026-11-27 도발적 자세 · 옷 입고 벗기 · 악기(사용자 「도발적이고 뇌쇄적인 포즈나 의상」 · 「악기가 없는거 같아」) — 세계마다 그 세계의 물건으로", "worlds": {
+   "fantasy": { "en": "a curved brass horn with a reed mouthpiece and leaf-engraved bell" },
+   "steampunk": { "en": "a gleaming brass saxophone with riveted keys" },
+   "cyberpunk": { "en": "a chrome saxophone with neon lines along its bell" } } },
+  "tambourine": { "ko": "탬버린", "note": "2026-11-27 도발적 자세 · 옷 입고 벗기 · 악기(사용자 「도발적이고 뇌쇄적인 포즈나 의상」 · 「악기가 없는거 같아」) — 세계마다 그 세계의 물건으로", "worlds": {
+   "fantasy": { "en": "a wooden frame drum ringed with tiny silver bells" },
+   "steampunk": { "en": "a brass-rimmed tambourine with little cog-shaped jingles" },
+   "cyberpunk": { "en": "a translucent tambourine whose jingles flicker with light" } } },
+  "ukulele": { "ko": "우쿨렐레", "note": "2026-11-27 도발적 자세 · 옷 입고 벗기 · 악기(사용자 「도발적이고 뇌쇄적인 포즈나 의상」 · 「악기가 없는거 같아」) — 세계마다 그 세계의 물건으로", "worlds": {
+   "fantasy": { "en": "a small four-stringed wooden lute" },
+   "steampunk": { "en": "a small brass-fitted four-string guitar" },
+   "cyberpunk": { "en": "a compact clear-bodied four-string guitar lit from inside" } } }
  }
 }
