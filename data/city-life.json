@@ -173,6 +173,61 @@
    { "key": "spring", "ko": "봄", "en": "spring — the most changeable season, the snow melting away in late March and April, quick swings between thaw and frost, then fresh green leaves in May", "src": "https://en.wikipedia.org/wiki/Climate_of_Moscow" },
    { "key": "summer", "ko": "여름", "en": "summer — warm days around twenty to twenty-five degrees with long light evenings, the sunniest time of year, thunderstorms common early in the season", "src": "https://en.wikipedia.org/wiki/Moscow" },
    { "key": "autumn", "ko": "가을", "en": "autumn — a warm, dry September with a golden spell of returning summer heat, then from mid-October wet, stormy grey days, frosty nights and the first flurries of snow", "src": "https://en.wikipedia.org/wiki/Climate_of_Moscow" }
+  ],
+  "buenosaires": [
+   { "key": "summer", "ko": "무더운 여름", "en": "summer — December to February, hot and humid, with frequent thunderstorms and short heat waves", "src": "https://en.wikipedia.org/wiki/Climate_of_Buenos_Aires" },
+   { "key": "autumn", "ko": "안개의 가을", "en": "autumn — March to May, mild and changeable, warm afternoons turning to cool nights and fog rising off the river", "src": "https://en.wikipedia.org/wiki/Climate_of_Buenos_Aires" },
+   { "key": "winter", "ko": "축축한 겨울", "en": "winter — June to August, cool, damp and often grey, the air heavy with humidity and frost rare", "src": "https://en.wikipedia.org/wiki/Climate_of_Buenos_Aires" },
+   { "key": "spring", "ko": "자카란다의 봄", "en": "spring — September to November, mild days and cool nights, the jacaranda trees along the streets in violet bloom", "src": "https://en.wikipedia.org/wiki/Jacaranda_mimosifolia" }
+  ],
+  "havana": [
+   { "key": "cool_dry", "ko": "선선한 건기", "en": "the cool dry months — November to February, sunny and mild at around 22°C, the lightest rain of the year and now and then a winter cold front off the sea", "src": "https://en.wikipedia.org/wiki/Havana" },
+   { "key": "warm_dry", "ko": "더워지는 건기", "en": "the warm end of the dry season — March and April, sunny and dry, the trade wind blowing and the days growing hotter before the rains", "src": "https://en.wikipedia.org/wiki/Climate_of_Cuba" },
+   { "key": "wet_summer", "ko": "비의 여름", "en": "the rainy summer — May to August, hot and humid at around 28°C, heavy rain setting in from June", "src": "https://en.wikipedia.org/wiki/Havana" },
+   { "key": "storm_autumn", "ko": "폭풍의 가을", "en": "the stormy autumn — September and October, still hot and humid, the year's heaviest rain in October and tropical storms at their most common", "src": "https://en.wikipedia.org/wiki/Climate_of_Cuba" }
+  ],
+  "marrakech": [
+   { "key": "spring", "ko": "눈 남은 봄", "en": "spring — the days warming and the orchards green, snow still lying on the high peaks of the mountains to the south", "src": "https://en.wikipedia.org/wiki/High_Atlas" },
+   { "key": "summer", "ko": "뜨겁고 마른 긴 여름", "en": "summer — long, hot and dry, white sun on the red walls and the air shimmering over the plain", "src": "https://en.wikipedia.org/wiki/Marrakesh" },
+   { "key": "autumn", "ko": "누그러지는 가을", "en": "autumn — the long summer heat easing into warm golden days before the wetter, cooler half of the year", "src": "https://en.wikipedia.org/wiki/Marrakesh" },
+   { "key": "winter", "ko": "눈 덮인 산의 겨울", "en": "winter — brief, mild to cool and the wettest time of year, the mountains to the south covered in snow and ice", "src": "https://en.wikipedia.org/wiki/Marrakesh" }
+  ],
+  "reykjavik": [
+   { "key": "summer", "ko": "해가 지지 않는 여름", "en": "summer — the light nights of late May to late July when the sun barely sets, cool fresh air around ten to fifteen degrees", "src": "https://en.wikipedia.org/wiki/Reykjav%C3%ADk" },
+   { "key": "autumn", "ko": "오로라가 돌아오는 가을", "en": "autumn — the nights growing dark again, the first aurora returning to the sky and the sea winds rising", "src": "https://en.wikipedia.org/wiki/Aurora" },
+   { "key": "winter", "ko": "긴 밤의 겨울", "en": "winter — short days of a few hours of low light, snow, cold sea gales and steam rising thick from the warm pools", "src": "https://en.wikipedia.org/wiki/Reykjav%C3%ADk" }
+  ],
+  "taipei": [
+   { "key": "spring", "ko": "봄 벚꽃", "en": "spring — cherry blossoms on the volcanic hills north of the city and mild, hazy days in the basin", "src": "https://en.wikipedia.org/wiki/Yangmingshan_National_Park" },
+   { "key": "plum_rain", "ko": "매실 장마", "en": "the plum-rain season — from May into June, long spells of soft, warm rain under low grey skies", "src": "https://en.wikipedia.org/wiki/Plum_rain" },
+   { "key": "summer", "ko": "길고 무더운 여름", "en": "the long summer — very hot and humid, with sudden heavy rainstorms and typhoons", "src": "https://en.wikipedia.org/wiki/Taipei" },
+   { "key": "winter", "ko": "짧은 안개 겨울", "en": "the short winter — generally mild but often foggy, with the occasional cold front and never any snow", "src": "https://en.wikipedia.org/wiki/Taipei" },
+   { "key": "new_year", "ko": "설 · 원소절", "en": "Lunar New Year into the Lantern Festival on the fifteenth day — the old street's new-year market and paper sky lanterns rising into the night", "src": "https://en.wikipedia.org/wiki/Dihua_Street" }
+  ],
+  "lisbon": [
+   { "key": "spring", "ko": "봄", "en": "spring — mild, brightening days as the winter rains thin out, sunshine returning to the tiled facades and the river", "src": "https://en.wikipedia.org/wiki/Lisbon" },
+   { "key": "summer", "ko": "마른 여름", "en": "summer — the dry season, warm to hot cloudless days with highs around twenty-five to thirty-two degrees in August and long golden evenings over the river", "src": "https://en.wikipedia.org/wiki/Lisbon" },
+   { "key": "autumn", "ko": "가을", "en": "autumn — still warm early on, then the first rains returning and the river light turning soft and silver", "src": "https://en.wikipedia.org/wiki/Lisbon" },
+   { "key": "winter", "ko": "비 오는 온화한 겨울", "en": "winter — mild and rainy, cool days around fourteen to nineteen degrees, wet cobbles shining between bright spells", "src": "https://en.wikipedia.org/wiki/Lisbon" }
+  ],
+  "berlin": [
+   { "key": "spring", "ko": "봄", "en": "spring — chilly to mild days, the linden trees and the big parks leafing out green", "src": "https://en.wikipedia.org/wiki/Berlin" },
+   { "key": "summer", "ko": "여름", "en": "summer — warm and sometimes humid, highs around twenty-two to twenty-five degrees and long light evenings by the lakes and the river", "src": "https://en.wikipedia.org/wiki/Berlin" },
+   { "key": "autumn", "ko": "가을", "en": "autumn — chilly to mild days, the park trees turning gold and the evenings drawing in early", "src": "https://en.wikipedia.org/wiki/Berlin" },
+   { "key": "winter", "ko": "겨울", "en": "winter — cold, days around three degrees and nights just below freezing, frost common and snow falling from December through March", "src": "https://en.wikipedia.org/wiki/Berlin" }
+  ],
+  "gyeongju": [
+   { "key": "spring", "ko": "봄 벚꽃", "en": "spring — cherry trees in full bloom around the wide lake and along the old roads, petals drifting over the grass mounds in April", "src": "https://en.wikipedia.org/wiki/Gyeongju" },
+   { "key": "jangma", "ko": "장마", "en": "the monsoon season — from late June to early August, long warm rains under low grey skies over the basin", "src": "https://en.wikipedia.org/wiki/Gyeongju" },
+   { "key": "summer", "ko": "분지의 한여름", "en": "high summer — hot and humid, the grass mounds deep green and the palace pond still under a hazy white sky", "src": "https://en.wikipedia.org/wiki/Gyeongju" },
+   { "key": "autumn", "ko": "가을 신라문화제", "en": "autumn — clear, mild days, the low hills turning red and gold, and the October festival of the ancient capital with folk games, music and dance", "src": "https://en.wikipedia.org/wiki/Gyeongju" },
+   { "key": "winter", "ko": "온화한 겨울", "en": "winter — cool rather than bitter, milder than the inland thanks to the nearby coast, bare trees over the brown winter mounds", "src": "https://en.wikipedia.org/wiki/Gyeongju" }
+  ],
+  "lasvegas": [
+   { "key": "spring", "ko": "봄", "en": "spring — warm, dry days under a clear desert sky and cool evenings before the long heat", "src": "https://en.wikipedia.org/wiki/Las_Vegas" },
+   { "key": "summer", "ko": "긴 한여름", "en": "summer — long and extremely hot, afternoon highs around forty degrees, very dry air and blazing light off the stone", "src": "https://en.wikipedia.org/wiki/Las_Vegas" },
+   { "key": "autumn", "ko": "가을", "en": "autumn — the heat easing into warm, dry, golden days and mild desert nights", "src": "https://en.wikipedia.org/wiki/Las_Vegas" },
+   { "key": "winter", "ko": "짧은 겨울", "en": "winter — short and mild, cool sunny days with snow lying on the mountains around the valley", "src": "https://en.wikipedia.org/wiki/Las_Vegas" }
   ]
  },
  "weather": {
@@ -363,6 +418,72 @@
    { "key": "snowfall", "ko": "눈 오는 날", "en": "a snowy day — thick soft flakes falling, deep snow lying on the roofs, railings and boulevards", "seasons": ["winter"], "src": "https://en.wikipedia.org/wiki/Moscow" },
    { "key": "deep_frost", "ko": "맑고 매서운 한파", "en": "a clear, bitterly frosty day — hard blue sky, sparkling snow, frost on every branch and breath turning to mist", "seasons": ["winter"], "src": "https://en.wikipedia.org/wiki/Climate_of_Moscow" },
    { "key": "thaw", "ko": "겨울 · 이른 봄 해빙", "en": "a grey thaw day — wet snow and sleet, slush underfoot and dripping eaves", "seasons": ["winter", "spring"], "src": "https://en.wikipedia.org/wiki/Climate_of_Moscow" }
+  ],
+  "buenosaires": [
+   { "key": "summer_storm", "ko": "무더운 오후 끝의 여름 뇌우", "en": "a summer thunderstorm — heavy warm rain breaking after a close, humid afternoon, the pavements steaming", "seasons": ["summer"], "src": "https://en.wikipedia.org/wiki/Climate_of_Buenos_Aires" },
+   { "key": "heatwave", "ko": "습한 여름 열파", "en": "a humid summer heat wave — the air thick and still, the streets shimmering", "seasons": ["summer"], "src": "https://en.wikipedia.org/wiki/Climate_of_Buenos_Aires" },
+   { "key": "pampero", "ko": "팜페로 — 폭풍 뒤 차고 마른 남풍", "en": "the pampero — a cold, dry, gusting wind from the south after a storm front, the sky swept clear and the air suddenly cool", "seasons": ["spring", "summer"], "src": "https://en.wikipedia.org/wiki/Climate_of_Buenos_Aires" },
+   { "key": "sudestada", "ko": "수데스타다 — 남동풍과 며칠 이어지는 비", "en": "a sudestada — a cool south-easterly wind bringing long days of rain, the wide river running high and grey", "seasons": ["autumn", "winter", "spring"], "src": "https://en.wikipedia.org/wiki/Climate_of_Buenos_Aires" },
+   { "key": "river_fog", "ko": "넓은 강에서 피어오르는 안개", "en": "a fog drifting in off the wide river, the avenues soft and grey and the street lamps haloed", "seasons": ["autumn", "winter"], "src": "https://en.wikipedia.org/wiki/Buenos_Aires" },
+   { "key": "jacaranda_fall", "ko": "보랏빛 자카란다 꽃이 흩날리는 날", "en": "a soft spring day with violet jacaranda blossoms drifting down and carpeting the pavements", "seasons": ["spring"], "src": "https://en.wikipedia.org/wiki/Jacaranda_mimosifolia" }
+  ],
+  "havana": [
+   { "key": "trade_wind", "ko": "맑은 날의 무역풍", "en": "a clear, sunny day with a warm trade wind off the sea, the painted walls of the old streets bright and the palms swaying", "seasons": ["cool_dry", "warm_dry"], "src": "https://en.wikipedia.org/wiki/Climate_of_Cuba" },
+   { "key": "cold_front", "ko": "겨울 한랭전선 — 방파제를 넘는 파도", "en": "a winter cold front — a strong wind whipping up the sea so great waves burst over the seawall onto the avenue, spray flying in the grey light", "seasons": ["cool_dry"], "src": "https://en.wikipedia.org/wiki/Malec%C3%B3n,_Havana" },
+   { "key": "sunset_glow", "ko": "말레콘의 노을", "en": "a clear evening and one of the city's famous sunsets, the sky over the sea burning orange and rose and the old facades glowing", "seasons": ["cool_dry", "warm_dry", "wet_summer", "storm_autumn"], "times": ["commute_pm"], "src": "https://en.wikipedia.org/wiki/Havana" },
+   { "key": "humid_heat", "ko": "무겁고 습한 더위", "en": "a hot, heavy, humid afternoon, the air thick and still and the sun blazing on the pastel walls", "seasons": ["wet_summer", "storm_autumn"], "src": "https://en.wikipedia.org/wiki/Climate_of_Cuba" },
+   { "key": "downpour", "ko": "쏟아지는 열대 소나기", "en": "a sudden heavy tropical downpour drumming on the streets and running in the gutters, the stones steaming as the sun comes back", "seasons": ["wet_summer", "storm_autumn"], "src": "https://en.wikipedia.org/wiki/Havana" }
+  ],
+  "marrakech": [
+   { "key": "dry_heat", "ko": "한여름 마른 더위 — 붉은 성벽 위 흰 햇빛", "en": "a hot, dry summer day — white sunlight on the red-ochre walls, deep shade in the lanes and the air shimmering", "seasons": ["summer"], "src": "https://en.wikipedia.org/wiki/Marrakesh" },
+   { "key": "atlas_clear", "ko": "맑은 겨울날 — 도시에서 보이는 눈 덮인 산맥", "en": "a clear, crisp winter day — the snow-covered mountains standing sharp and white beyond the red city", "seasons": ["winter"], "src": "https://en.wikipedia.org/wiki/Marrakesh" },
+   { "key": "winter_rain", "ko": "겨울비 — 젖은 붉은 흙벽", "en": "a cool grey day of winter rain, the red earthen walls darkened by the wet and puddles in the lanes", "seasons": ["winter"], "src": "https://en.wikipedia.org/wiki/Marrakesh" },
+   { "key": "spring_snowpeaks", "ko": "봄 — 따뜻한 햇살 아래 아직 눈 인 산꼭대기", "en": "a warm, bright spring day, late snow still glinting on the high peaks far to the south", "seasons": ["spring"], "src": "https://en.wikipedia.org/wiki/High_Atlas" },
+   { "key": "golden_dusk", "ko": "맑고 마른 해 질 녘 — 황토빛으로 타오르는 성벽", "en": "a clear, dry evening — the low sun setting the red-ochre walls aglow like embers", "seasons": ["spring", "summer", "autumn"], "src": "https://en.wikipedia.org/wiki/Marrakesh" }
+  ],
+  "reykjavik": [
+   { "key": "aurora_night", "ko": "맑은 서리 밤 — 머리 위로 출렁이는 초록 오로라", "en": "a clear, frosty night with ribbons of green aurora rippling overhead, their edges tinged violet", "seasons": ["autumn", "winter"], "src": "https://en.wikipedia.org/wiki/Aurora" },
+   { "key": "light_night", "ko": "하얀 밤 — 자정에도 지평선에 머무는 해", "en": "a bright night in high summer — the sun hanging low over the sea near midnight, the sky glowing gold and pale", "seasons": ["summer"], "src": "https://en.wikipedia.org/wiki/Reykjav%C3%ADk" },
+   { "key": "sea_gale", "ko": "바다에서 몰아치는 찬 강풍", "en": "a cold gale blowing in off the sea, hair and coat-hems whipping and the bay white-capped", "seasons": ["autumn", "winter"], "src": "https://en.wikipedia.org/wiki/Reykjav%C3%ADk" },
+   { "key": "snowfall", "ko": "소복이 내리는 눈", "en": "soft snow falling over the bright rooftops, the light low and blue", "seasons": ["winter"], "src": "https://en.wikipedia.org/wiki/Reykjav%C3%ADk" },
+   { "key": "grey_overcast", "ko": "낮게 깔린 회색 구름 — 서늘하고 축축한 바다 공기", "en": "low grey cloud and cool, damp sea air — soft, even light over the harbour", "seasons": ["summer", "autumn", "winter"], "src": "https://en.wikipedia.org/wiki/Reykjav%C3%ADk" },
+   { "key": "steam_frost", "ko": "고요한 서리 아침 — 따뜻한 보도와 풀에서 피어오르는 김", "en": "a still, frosty morning — white steam rising from the warm pools and from heated pavements where the snow has melted away", "seasons": ["winter"], "src": "https://en.wikipedia.org/wiki/Reykjav%C3%ADk" }
+  ],
+  "taipei": [
+   { "key": "plum_drizzle", "ko": "매실 장마 비", "en": "a plum-rain day — soft, steady warm rain, wet streets shining and the hills lost in grey cloud", "seasons": ["plum_rain"], "src": "https://en.wikipedia.org/wiki/Plum_rain" },
+   { "key": "muggy_heat", "ko": "분지의 찜통더위", "en": "the heavy, humid heat of the basin — still, damp air and a haze softening the hills", "seasons": ["plum_rain", "summer"], "src": "https://en.wikipedia.org/wiki/Taipei" },
+   { "key": "summer_storm", "ko": "여름 소나기", "en": "a sudden heavy summer rainstorm — warm rain pouring down and the streets running with water", "seasons": ["summer"], "src": "https://en.wikipedia.org/wiki/Taipei" },
+   { "key": "typhoon_wind", "ko": "태풍 비바람", "en": "a passing typhoon — gusting wind and sweeping rain under fast-moving grey clouds", "seasons": ["summer"], "src": "https://en.wikipedia.org/wiki/Taipei" },
+   { "key": "winter_fog", "ko": "겨울 안개", "en": "a foggy winter day — soft grey mist settled over the basin and the hills fading into it", "seasons": ["winter", "new_year"], "src": "https://en.wikipedia.org/wiki/Taipei" },
+   { "key": "cold_front", "ko": "찬 전선", "en": "a cold snap from a winter cold front — sharp, chilly air and coats buttoned up", "seasons": ["winter", "new_year"], "src": "https://en.wikipedia.org/wiki/Taipei" }
+  ],
+  "lisbon": [
+   { "key": "sunny", "ko": "맑은 날", "en": "a bright, clear day — strong sunshine on the pale stone and painted tiles and the estuary glittering below", "seasons": ["spring", "summer", "autumn", "winter"], "src": "https://en.wikipedia.org/wiki/Lisbon" },
+   { "key": "summer_heat", "ko": "한여름 더위", "en": "a hot, dry summer day — a cloudless sky, heat shimmering off the stone pavements and everyone keeping to the shade", "seasons": ["summer"], "src": "https://en.wikipedia.org/wiki/Lisbon" },
+   { "key": "autumn_rain", "ko": "늦가을 비", "en": "a rainy late-autumn day — steady rain on the terracotta roofs and the stone pavements gleaming wet", "seasons": ["autumn", "winter"], "src": "https://en.wikipedia.org/wiki/Lisbon" },
+   { "key": "winter_shower", "ko": "겨울 소나기 뒤 갠 하늘", "en": "a mild winter day of passing showers — a quick downpour, then sunlight breaking through over the wet, shining cobbles", "seasons": ["winter"], "src": "https://en.wikipedia.org/wiki/Lisbon" },
+   { "key": "grey_winter", "ko": "흐린 12월", "en": "a dull grey December day — low soft cloud over the hills and the river pale and still", "seasons": ["winter"], "src": "https://en.wikipedia.org/wiki/Lisbon" }
+  ],
+  "berlin": [
+   { "key": "sunny", "ko": "맑은 날", "en": "a bright, clear day — sunshine on the stone facades and the river glittering", "seasons": ["spring", "summer", "autumn"], "src": "https://en.wikipedia.org/wiki/Berlin" },
+   { "key": "humid_warm", "ko": "후덥지근한 여름날", "en": "a warm, humid summer day — heavy air held in the stone streets and everyone heading for the water and the shade", "seasons": ["summer"], "src": "https://en.wikipedia.org/wiki/Berlin" },
+   { "key": "light_rain", "ko": "가랑비", "en": "a light rain — a soft, steady drizzle darkening the pavements and beading on the windows", "src": "https://en.wikipedia.org/wiki/Berlin" },
+   { "key": "frost", "ko": "서리 내린 아침", "en": "a frosty morning — white frost on the lawns and railings and breath showing in the cold air", "seasons": ["winter"], "times": ["dawn", "commute_am"], "src": "https://en.wikipedia.org/wiki/Berlin" },
+   { "key": "snow", "ko": "눈 오는 날", "en": "a snowy day — soft snow falling and a thin white layer on the rooftops and the park lawns", "seasons": ["winter"], "src": "https://en.wikipedia.org/wiki/Berlin" }
+  ],
+  "gyeongju": [
+   { "key": "sonaegi", "ko": "소나기(경주 말로 소내기)", "en": "a sudden summer rain shower — a quick, heavy burst of warm rain from a bright sky, then the grass steaming in the sun", "seasons": ["summer", "jangma"], "src": "https://en.wikipedia.org/wiki/Gyeongju" },
+   { "key": "jangma_rain", "ko": "장마 비", "en": "a monsoon rain — soft, steady warm rain, wet stone paths shining and the low hills lost in grey cloud", "seasons": ["jangma"], "src": "https://en.wikipedia.org/wiki/Gyeongju" },
+   { "key": "basin_heat", "ko": "한여름 무더위", "en": "the heavy, humid heat of high summer — still, damp air and a haze softening the low hills", "seasons": ["jangma", "summer"], "src": "https://en.wikipedia.org/wiki/Gyeongju" },
+   { "key": "typhoon_rain", "ko": "가을 태풍 비", "en": "rain from a passing autumn typhoon — gusting wind and sweeping rain under fast-moving grey clouds", "seasons": ["summer", "autumn"], "src": "https://en.wikipedia.org/wiki/Gyeongju" },
+   { "key": "clear_cold", "ko": "맑고 시린 겨울날", "en": "a clear, cool winter day — crisp air, pale sun on the bare trees and breath showing faintly white", "seasons": ["winter"], "src": "https://en.wikipedia.org/wiki/Gyeongju" }
+  ],
+  "lasvegas": [
+   { "key": "clear_desert", "ko": "맑은 사막 날", "en": "a clear, dry desert day — a deep blue sky without a cloud and crisp, bright sunlight", "seasons": ["spring", "autumn", "winter"], "src": "https://en.wikipedia.org/wiki/Las_Vegas" },
+   { "key": "extreme_heat", "ko": "불볕더위", "en": "an extremely hot day — heat shimmering off the pavement, a white-hot sky and everyone seeking shade, water and cool air", "seasons": ["summer"], "times": ["midday", "commute_pm"], "src": "https://en.wikipedia.org/wiki/Las_Vegas" },
+   { "key": "monsoon_storm", "ko": "여름 몬순 뇌우", "en": "a summer monsoon thunderstorm — towering clouds over the desert, a sudden hard downpour and lightning on the far mountains, the streets shining wet afterwards", "seasons": ["summer"], "src": "https://en.wikipedia.org/wiki/Las_Vegas" },
+   { "key": "mountain_snow", "ko": "눈 덮인 둘레 산", "en": "a cold, bright winter day — the sky washed clean and fresh snow gleaming white on the mountains around the valley", "seasons": ["winter"], "src": "https://en.wikipedia.org/wiki/Las_Vegas" },
+   { "key": "rare_snow", "ko": "드문 눈발", "en": "a rare light snowfall — a few soft flakes drifting down over the desert city and barely settling", "seasons": ["winter"], "src": "https://en.wikipedia.org/wiki/Las_Vegas" }
   ]
  },
  "heritage": {
@@ -386,7 +507,7 @@
    "philippines": ["barong_inspired"]
   },
   "never": ["abaya_modern", "burkini_modest"],
-  "cities": { "seoul": ["korea"], "tokyo": ["japan"], "beijing": ["china"], "istanbul": ["turkey"], "cairo": ["egypt"], "busan": ["korea"], "mexicocity": ["mexico"], "daejeon": ["korea"], "dubai": ["gulf"], "hongkong": ["china"], "vienna": ["alpine"], "edinburgh": ["scotland"], "kyoto": ["japan"], "moscow": ["eastern_europe"] }
+  "cities": { "seoul": ["korea"], "tokyo": ["japan"], "beijing": ["china"], "istanbul": ["turkey"], "cairo": ["egypt"], "busan": ["korea"], "mexicocity": ["mexico"], "daejeon": ["korea"], "dubai": ["gulf"], "hongkong": ["china"], "vienna": ["alpine"], "edinburgh": ["scotland"], "kyoto": ["japan"], "moscow": ["eastern_europe"], "gyeongju": ["korea"] }
  },
  "cities": {
   "seoul": {
@@ -11548,6 +11669,4990 @@
        "props": [
         "moscow_chess",
         "cup",
+        "phone"
+       ]
+      }
+     }
+    }
+   ]
+  },
+  "buenosaires": {
+   "scenes": [
+    {
+     "key": "caminito",
+     "ko": "카미니토 — 라 보카의 알록달록 칠한 골목 산책",
+     "src": [
+      "https://en.wikipedia.org/wiki/Caminito",
+      "https://en.wikipedia.org/wiki/La_Boca"
+     ],
+     "base": "street_alley",
+     "times": [
+      "commute_am",
+      "midday",
+      "commute_pm"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "retro",
+      "subculture"
+     ],
+     "en": "strolling the Caminito, the short lane of brightly painted houses in La Boca, where tango dancers perform on the cobbles",
+     "worlds": {
+      "fantasy": {
+       "en": "a short crooked lane of little houses painted scarlet, sky blue, sunflower yellow and leaf green at a river mouth, a couple dancing in close embrace on the cobbles",
+       "props": [
+        "buenosaires_filete_plaque",
+        "buenosaires_empanada",
+        "camera"
+       ]
+      },
+      "steampunk": {
+       "en": "a short crooked lane of little houses painted scarlet, sky blue, sunflower yellow and leaf green at the river mouth, hand-painted scrollwork on the shutters and a couple dancing on the cobbles to a street organ",
+       "props": [
+        "buenosaires_filete_plaque",
+        "buenosaires_empanada",
+        "camera"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a short crooked lane of little old houses kept two centuries on, their scarlet, sky blue, yellow and green walls glowing softly from within and a couple dancing on the cobbles",
+       "props": [
+        "buenosaires_filete_plaque",
+        "buenosaires_empanada",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "milonga",
+     "ko": "한밤의 밀롱가 — 꼭 안고 시계 반대 방향으로 도는 탱고 모임",
+     "src": [
+      "https://en.wikipedia.org/wiki/Milonga_(dance_event)",
+      "https://en.wikipedia.org/wiki/Tango"
+     ],
+     "base": "stage_dance",
+     "times": [
+      "night_out",
+      "past_midnight"
+     ],
+     "outfits": [
+      "evening",
+      "active"
+     ],
+     "en": "dancing at a late-night milonga, couples circling the floor counter-clockwise in close embrace between sets of three or four tangos",
+     "worlds": {
+      "fantasy": {
+       "en": "a candlelit ballroom of pale stone and gilded mirrors at midnight, couples circling the polished floor counter-clockwise in close embrace to a little band of bellows and strings",
+       "props": [
+        "buenosaires_tango_shoes",
+        "drink_glass",
+        "flowers"
+       ]
+      },
+      "steampunk": {
+       "en": "a gaslit dance hall with a sprung wooden floor and gilt-framed mirrors, couples circling counter-clockwise in close embrace to a little band of bandoneons and violins",
+       "props": [
+        "buenosaires_tango_shoes",
+        "drink_glass",
+        "watch"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a dim dance hall two centuries on with a softly glowing wooden floor, couples circling counter-clockwise in close embrace to an old bandoneon and strings",
+       "props": [
+        "buenosaires_tango_shoes",
+        "drink_glass",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "opera_night",
+     "ko": "콜론 극장의 오페라 밤 — 진홍과 금빛 말굽 객석",
+     "src": [
+      "https://en.wikipedia.org/wiki/Teatro_Col%C3%B3n"
+     ],
+     "base": "evening_opera",
+     "times": [
+      "night_out"
+     ],
+     "outfits": [
+      "evening"
+     ],
+     "en": "a night at the opera in the horseshoe-shaped auditorium of the city's great opera house, scarlet and gold tiers beneath its huge chandelier",
+     "worlds": {
+      "fantasy": {
+       "en": "a great horseshoe-shaped opera hall of scarlet and gold, tier upon tier of gilded boxes beneath a crystal chandelier of seven hundred lights",
+       "props": [
+        "ticket",
+        "flowers",
+        "drink_glass"
+       ]
+      },
+      "steampunk": {
+       "en": "a great horseshoe-shaped opera house of scarlet and gold lit by gas, tier upon tier of gilded boxes beneath a huge chandelier of seven hundred lights",
+       "props": [
+        "ticket",
+        "flowers",
+        "drink_glass"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a great horseshoe-shaped opera house of scarlet and gold kept two centuries on, tier upon tier of gilded boxes beneath a huge chandelier of seven hundred soft lights",
+       "props": [
+        "ticket",
+        "flowers",
+        "drink_glass"
+       ]
+      }
+     }
+    },
+    {
+     "key": "grand_cafe",
+     "ko": "백 년 넘은 큰 카페 — 커피와 메디아루나",
+     "src": [
+      "https://en.wikipedia.org/wiki/Caf%C3%A9_Tortoni",
+      "https://en.wikipedia.org/wiki/Argentine_cuisine"
+     ],
+     "base": "street_cafe",
+     "times": [
+      "commute_am",
+      "midday",
+      "commute_pm"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "retro"
+     ],
+     "en": "coffee and medialunas at a grand café on the Avenida de Mayo that has kept its nineteenth-century decoration, waiters in long aprons among the marble tables",
+     "worlds": {
+      "fantasy": {
+       "en": "a grand old café of carved dark wood, mirrors and coloured-glass windows on a broad avenue, waiters in long aprons gliding between little round tables",
+       "props": [
+        "espresso",
+        "buenosaires_medialunas",
+        "book"
+       ]
+      },
+      "steampunk": {
+       "en": "a grand old café of carved dark wood, mirrors and coloured-glass windows on a broad gaslit avenue, a gleaming brass coffee machine and waiters in long white aprons",
+       "props": [
+        "espresso",
+        "buenosaires_medialunas",
+        "book"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a grand old café kept two centuries on, carved dark wood, mirrors and coloured-glass windows glowing, waiters in long aprons among the little round tables",
+       "props": [
+        "espresso",
+        "buenosaires_medialunas",
+        "book"
+       ]
+      }
+     }
+    },
+    {
+     "key": "santelmo_fair",
+     "ko": "산텔모 골동품 장 — 가장 오래된 동네의 자갈 광장",
+     "src": [
+      "https://en.wikipedia.org/wiki/San_Telmo,_Buenos_Aires"
+     ],
+     "base": "street_market",
+     "times": [
+      "commute_am",
+      "midday",
+      "commute_pm"
+     ],
+     "outfits": [
+      "everyday",
+      "retro",
+      "dongtan",
+      "subculture"
+     ],
+     "en": "browsing the antique fair in the old cobbled square of the city's oldest neighbourhood, street dancers performing among the stalls",
+     "worlds": {
+      "fantasy": {
+       "en": "an old cobbled square ringed by colonial houses, stalls of brass lamps, silver mate gourds, old music boxes and painted plaques, street dancers turning between them",
+       "props": [
+        "buenosaires_filete_plaque",
+        "shopping_bag",
+        "buenosaires_mate"
+       ]
+      },
+      "steampunk": {
+       "en": "an old cobbled square ringed by colonial houses, stalls of brass instruments, silver mate gourds, old phonographs and painted plaques, a couple dancing tango between them",
+       "props": [
+        "buenosaires_filete_plaque",
+        "shopping_bag",
+        "camera"
+       ]
+      },
+      "cyberpunk": {
+       "en": "an old cobbled square kept two centuries on, stalls of antique brass, silver mate gourds and painted plaques under soft glowing awnings, street dancers turning between them",
+       "props": [
+        "buenosaires_filete_plaque",
+        "shopping_bag",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "palermo_lake",
+     "ko": "팔레르모 숲 호수의 배 타기 — 장미 정원 곁",
+     "src": [
+      "https://en.wikipedia.org/wiki/Parque_Tres_de_Febrero"
+     ],
+     "base": "park_pond",
+     "times": [
+      "commute_am",
+      "midday",
+      "commute_pm"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "active",
+      "retro"
+     ],
+     "en": "a boat ride on one of the lakes of the Palermo woods, the great city park of lawns, groves and its famous rose garden",
+     "worlds": {
+      "fantasy": {
+       "en": "a calm lake in a great park of lawns and groves, little wooden rowing boats drifting past a rose garden in full bloom",
+       "props": [
+        "buenosaires_alfajor",
+        "flowers",
+        "water_bottle"
+       ]
+      },
+      "steampunk": {
+       "en": "a calm lake in a great park of lawns and groves, varnished rowing boats drifting past a rose garden and a white wrought-iron footbridge",
+       "props": [
+        "buenosaires_alfajor",
+        "flowers",
+        "camera"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a calm lake in a great park kept two centuries on, quiet rowing boats drifting past a rose garden in full bloom and soft glowing lamps",
+       "props": [
+        "buenosaires_alfajor",
+        "flowers",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "mate_reserve",
+     "ko": "강가 생태 보호구의 마테 한 바퀴 — 연못가 풀밭",
+     "src": [
+      "https://en.wikipedia.org/wiki/Mate_(drink)",
+      "https://en.wikipedia.org/wiki/Buenos_Aires_Ecological_Reserve"
+     ],
+     "base": "street_park",
+     "times": [
+      "midday",
+      "commute_pm"
+     ],
+     "outfits": [
+      "everyday",
+      "active",
+      "dongtan"
+     ],
+     "en": "sharing mate with friends on the grass by the ponds of the riverside nature reserve, the gourd passed hand to hand around the circle",
+     "worlds": {
+      "fantasy": {
+       "en": "a wild riverside meadow of tall grasses and ponds by a vast silver-brown river, friends sitting in a circle passing a carved gourd hand to hand",
+       "props": [
+        "buenosaires_mate",
+        "mat",
+        "buenosaires_alfajor"
+       ]
+      },
+      "steampunk": {
+       "en": "a wild riverside meadow of tall grasses and ponds by a vast silver-brown river, friends on a picnic rug passing a silver-banded gourd hand to hand",
+       "props": [
+        "buenosaires_mate",
+        "mat",
+        "buenosaires_alfajor"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a wild riverside meadow of tall grasses and ponds by the vast river, glass towers far behind, friends sitting in a circle passing a gourd hand to hand",
+       "props": [
+        "buenosaires_mate",
+        "mat",
+        "buenosaires_alfajor"
+       ]
+      }
+     }
+    },
+    {
+     "key": "theatre_bookshop",
+     "ko": "극장을 고친 서점 — 객석은 서가, 무대는 카페",
+     "src": [
+      "https://en.wikipedia.org/wiki/El_Ateneo_Grand_Splendid"
+     ],
+     "base": "bookstore_aisle",
+     "times": [
+      "midday",
+      "commute_pm",
+      "night_out"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "retro",
+      "subculture"
+     ],
+     "en": "browsing a grand old theatre turned bookshop on a busy shopping avenue, shelves filling the stalls, the old boxes kept as seats and a café on the former stage beneath painted ceiling frescoes",
+     "worlds": {
+      "fantasy": {
+       "en": "a grand old theatre turned library, shelves of leather-bound books filling the stalls, gilded boxes as reading nooks and a painted dome above",
+       "props": [
+        "book",
+        "espresso",
+        "shopping_bag"
+       ]
+      },
+      "steampunk": {
+       "en": "a grand old gaslit theatre turned bookshop, shelves filling the stalls, the gilded boxes kept as reading seats and a little café on the former stage beneath painted ceiling frescoes",
+       "props": [
+        "book",
+        "espresso",
+        "shopping_bag"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a grand old theatre turned bookshop kept two centuries on, real paper books filling the stalls, gilded boxes as reading seats and painted ceiling frescoes softly lit",
+       "props": [
+        "book",
+        "espresso",
+        "shopping_bag"
+       ]
+      }
+     }
+    },
+    {
+     "key": "corrientes_night",
+     "ko": "「잠들지 않는 거리」 코리엔테스의 늦은 피자 — 오벨리스크 곁",
+     "src": [
+      "https://en.wikipedia.org/wiki/Corrientes_Avenue",
+      "https://en.wikipedia.org/wiki/Obelisco_de_Buenos_Aires",
+      "https://en.wikipedia.org/wiki/Argentine_cuisine"
+     ],
+     "base": "street_diner",
+     "times": [
+      "night_out",
+      "past_midnight"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "retro"
+     ],
+     "en": "a late slice of pizza topped with chickpea fainá after the theatre on Corrientes, the street that never sleeps, the white obelisk standing where it meets the widest avenue in the world",
+     "worlds": {
+      "fantasy": {
+       "en": "a bustling late-night pie house on a theatre street of lamplit marquees, a slender white obelisk glowing at the end of the avenue",
+       "props": [
+        "slice",
+        "ticket",
+        "drink_glass"
+       ]
+      },
+      "steampunk": {
+       "en": "a bustling late-night pizzeria on a gaslit theatre street, a long marble counter, theatre crowds outside and a slender white obelisk at the end of the avenue",
+       "props": [
+        "slice",
+        "ticket",
+        "drink_glass"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a bustling late-night pizzeria on a glowing theatre street two centuries on, a long marble counter and the slender white obelisk standing among rivers of light",
+       "props": [
+        "slice",
+        "ticket",
+        "drink_glass"
+       ]
+      }
+     }
+    },
+    {
+     "key": "asado",
+     "ko": "친구들과 주말 아사도 — 파리야 위에서 익는 고기와 소시지",
+     "src": [
+      "https://en.wikipedia.org/wiki/Asado"
+     ],
+     "base": "home_veranda",
+     "times": [
+      "midday",
+      "commute_pm",
+      "night_out"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "homewear"
+     ],
+     "en": "a weekend asado with friends, meat and sausages sizzling over the coals of the parrilla grill, red wine and salads on the table",
+     "worlds": {
+      "fantasy": {
+       "en": "a sunny stone courtyard under a vine trellis, meat and sausages sizzling on an iron grill over glowing embers, red wine and bowls of salad on a long wooden table",
+       "props": [
+        "buenosaires_choripan",
+        "drink_glass",
+        "bowl"
+       ]
+      },
+      "steampunk": {
+       "en": "a sunny tiled patio under a wrought-iron trellis, meat and sausages sizzling on an iron grill over glowing coals, red wine and salads on a long table",
+       "props": [
+        "buenosaires_choripan",
+        "drink_glass",
+        "bowl"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a sunny terrace garden two centuries on, meat and sausages sizzling on an iron grill over glowing coals, red wine and salads on a long table",
+       "props": [
+        "buenosaires_choripan",
+        "drink_glass",
+        "bowl"
+       ]
+      }
+     }
+    },
+    {
+     "key": "helado_night",
+     "ko": "늦은 밤 동네 아이스크림 가게 — 둘세 데 레체 한 컵",
+     "src": [
+      "https://en.wikipedia.org/wiki/Argentine_cuisine"
+     ],
+     "base": "street_shop",
+     "times": [
+      "commute_pm",
+      "night_out",
+      "past_midnight"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "subculture"
+     ],
+     "en": "a late-night ice cream from a neighbourhood ice-cream parlour, a cup heaped with dulce de leche",
+     "worlds": {
+      "fantasy": {
+       "en": "a little ice-cream parlour open late on a jacaranda-lined street, frosted metal tubs of cream ices behind a glass-fronted counter",
+       "props": [
+        "buenosaires_helado",
+        "bag",
+        "buenosaires_alfajor"
+       ]
+      },
+      "steampunk": {
+       "en": "a little ice-cream parlour open late on a gaslit street, frosted metal tubs of ices behind a polished glass counter and a brass bell on the door",
+       "props": [
+        "buenosaires_helado",
+        "bag",
+        "buenosaires_alfajor"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a little ice-cream parlour open late two centuries on, frosted tubs of ices behind a softly glowing counter and jacaranda trees outside",
+       "props": [
+        "buenosaires_helado",
+        "bag",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "docks_bridge",
+     "ko": "옛 부두의 저녁 산책 — 탱고 한 쌍이라는 흰 회전 보행교",
+     "src": [
+      "https://en.wikipedia.org/wiki/Puente_de_la_Mujer",
+      "https://en.wikipedia.org/wiki/Puerto_Madero"
+     ],
+     "base": "travel_coast",
+     "times": [
+      "commute_pm",
+      "night_out"
+     ],
+     "outfits": [
+      "everyday",
+      "active",
+      "dongtan"
+     ],
+     "en": "an evening walk along the old docks on the riverfront, crossing the white rotating footbridge whose single leaning mast is said to show a couple dancing the tango",
+     "worlds": {
+      "fantasy": {
+       "en": "a long stone dock basin at dusk, old warehouses glowing along the water and a slender white footbridge with one leaning mast swinging slowly open for a sailing boat",
+       "props": [
+        "camera",
+        "gelato",
+        "bag"
+       ]
+      },
+      "steampunk": {
+       "en": "a long stone dock basin at dusk, brick warehouses and gaslamps along the water and a slender white footbridge with one leaning mast swinging slowly open for a steam launch",
+       "props": [
+        "camera",
+        "gelato",
+        "bag"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a long mirror-still dock canal at dusk lined with glass towers and restored warehouses, the white footbridge with one leaning mast swinging slowly open for a silent boat",
+       "props": [
+        "camera",
+        "gelato",
+        "phone"
+       ]
+      }
+     }
+    }
+   ]
+  },
+  "havana": {
+   "scenes": [
+    {
+     "key": "malecon_sunset",
+     "ko": "말레콘 노을 — 방파제에 앉아 해 지는 바다 보기",
+     "src": [
+      "https://en.wikipedia.org/wiki/Malec%C3%B3n,_Havana",
+      "https://en.wikipedia.org/wiki/Havana"
+     ],
+     "base": "travel_coast",
+     "times": [
+      "commute_pm",
+      "night_out"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "active"
+     ],
+     "en": "sitting on the long Malecón seawall at sunset with the city's evening crowd, waves slapping the stones below and the sky turning orange over the sea",
+     "worlds": {
+      "fantasy": {
+       "en": "the top of a long white seawall curving along a turquoise sea at sunset, waves slapping the stones below, the city of colonnaded palaces glowing tangerine and rose behind",
+       "props": [
+        "havana_tres",
+        "havana_mojito",
+        "havana_mariposa"
+       ]
+      },
+      "steampunk": {
+       "en": "the top of a long stone seawall curving along a turquoise bay at sunset, brass gaslamps flickering on along the promenade and rounded steam motorcars rolling past behind",
+       "props": [
+        "havana_tres",
+        "havana_mojito",
+        "camera"
+       ]
+      },
+      "cyberpunk": {
+       "en": "the top of a long seawall two centuries on at sunset, its edge glowing softly as the waves break below and candy-coloured hover-taxis gliding past along the avenue behind",
+       "props": [
+        "havana_tres",
+        "havana_mojito",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "almendron_ride",
+     "ko": "알멘드론 합승 — 둥근 옛 차를 타고 시내로",
+     "src": [
+      "https://en.wikipedia.org/wiki/Yank_tank",
+      "https://en.wikipedia.org/wiki/Vintage_automobiles_in_Cuba"
+     ],
+     "base": "car_convertible",
+     "times": [
+      "commute_am",
+      "midday",
+      "commute_pm"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "retro",
+      "resort"
+     ],
+     "en": "riding through the city in one of the big rounded 1950s cars that still run as shared taxis, the seawall road and the painted houses sliding past",
+     "worlds": {
+      "fantasy": {
+       "en": "the cushioned seat of a big rounded open carriage of candy-pink lacquer and bright brass that glides along the sunny seawall road by enchantment, the sea glittering beside it",
+       "props": [
+        "havana_almendron",
+        "havana_mariposa",
+        "bag"
+       ]
+      },
+      "steampunk": {
+       "en": "the leather seat of a big rounded open steam motorcar in two-tone candy paint with gleaming brass trim, puffing white steam along the sunny seawall road",
+       "props": [
+        "havana_almendron",
+        "bag",
+        "watch"
+       ]
+      },
+      "cyberpunk": {
+       "en": "the seat of a restored almond-shaped open hover-taxi from two centuries before, its chrome tail fins gleaming as it glides along the seawall road above the sea spray",
+       "props": [
+        "havana_almendron",
+        "bag",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "oldhavana_lane",
+     "ko": "올드 아바나 골목 — 알록달록한 식민지 시대 집들 사이 산책",
+     "src": [
+      "https://en.wikipedia.org/wiki/Old_Havana",
+      "https://en.wikipedia.org/wiki/Havana"
+     ],
+     "base": "street_alley",
+     "times": [
+      "commute_am",
+      "midday",
+      "commute_pm"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "retro",
+      "subculture"
+     ],
+     "en": "wandering a narrow street of Old Havana between colourful colonial houses with tall shuttered doors, balconies and columns",
+     "worlds": {
+      "fantasy": {
+       "en": "a narrow cobbled street between colonial palaces painted coral, lemon and sky blue, tall carved doors, columned porches and balconies heavy with white butterfly-shaped flowers",
+       "props": [
+        "havana_cafecito",
+        "havana_mariposa",
+        "bag"
+       ]
+      },
+      "steampunk": {
+       "en": "a narrow cobbled street between colonial houses painted coral, lemon and sky blue, tall shuttered doors, brass balconies, half-moon windows of coloured glass and gaslamps on iron brackets",
+       "props": [
+        "havana_cafecito",
+        "camera",
+        "bag"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a narrow street of old colonial houses kept two centuries on, their coral, lemon and sky-blue walls glowing softly from within and slim light-lines tracing the columns and balconies",
+       "props": [
+        "havana_cafecito",
+        "phone",
+        "bag"
+       ]
+      }
+     }
+    },
+    {
+     "key": "plaza_cafe",
+     "ko": "옛 광장 카페 — 아케이드 아래 카페시토 한 잔",
+     "src": [
+      "https://en.wikipedia.org/wiki/Plaza_Vieja,_Havana",
+      "https://en.wikipedia.org/wiki/Cuban_espresso"
+     ],
+     "base": "street_cafe",
+     "times": [
+      "commute_am",
+      "midday"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "retro"
+     ],
+     "en": "taking a tiny cup of sweet Cuban espresso with its sugar foam at a café table under the arcades of an old colonial square",
+     "worlds": {
+      "fantasy": {
+       "en": "a little café table under the stone arcades of an old colonial square, balconies of pastel palaces all around and a fountain sparkling in the sun",
+       "props": [
+        "havana_cafecito",
+        "book",
+        "flowers"
+       ]
+      },
+      "steampunk": {
+       "en": "a little marble café table under the stone arcades of an old colonial square, a brass coffee urn hissing white steam on the counter and balconies all around",
+       "props": [
+        "havana_cafecito",
+        "book",
+        "watch"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a little café table under the old stone arcades of a colonial square kept two centuries on, the pastel balconies above glowing softly in the morning light",
+       "props": [
+        "havana_cafecito",
+        "book",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "son_night",
+     "ko": "손(son) 악단의 밤 — 트레스 · 봉고 · 마라카스에 맞춰 춤",
+     "indoor": true,
+     "src": [
+      "https://en.wikipedia.org/wiki/Son_cubano",
+      "https://en.wikipedia.org/wiki/Tres_(instrument)"
+     ],
+     "base": "stage_dance",
+     "times": [
+      "night_out",
+      "past_midnight"
+     ],
+     "outfits": [
+      "evening",
+      "active",
+      "retro"
+     ],
+     "en": "dancing to a son band at night — the tres, bongos, maracas, claves and double bass — on a crowded little dance floor",
+     "worlds": {
+      "fantasy": {
+       "en": "a candlelit dance hall with open arches to the warm night, a little band playing a small three-course guitar, hand drums, maracas and wooden claves while couples turn on the floor",
+       "props": [
+        "havana_maracas",
+        "havana_mojito",
+        "havana_mariposa"
+       ]
+      },
+      "steampunk": {
+       "en": "a gaslit dance hall with tall shuttered windows open to the warm night, a little sextet with a three-course guitar, bongo drums, maracas, claves and a big upright bass on a brass-railed stand",
+       "props": [
+        "havana_maracas",
+        "havana_mojito",
+        "drink_glass"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a crowded little dance club two centuries on, a live son band of guitar, bongos, maracas and claves under soft drifting light while couples turn on a glowing floor",
+       "props": [
+        "havana_maracas",
+        "havana_mojito",
+        "drink_glass"
+       ]
+      }
+     }
+    },
+    {
+     "key": "rumba_courtyard",
+     "ko": "안뜰 룸바 — 콩가 북과 클라베스",
+     "src": [
+      "https://en.wikipedia.org/wiki/Cuban_rumba"
+     ],
+     "base": "stage_open_air",
+     "times": [
+      "commute_pm",
+      "night_out"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "active"
+     ],
+     "en": "a rumba in the courtyard of an old house — conga drums, claves and singing, neighbours clapping and dancing on the flagstones",
+     "worlds": {
+      "fantasy": {
+       "en": "the flagstoned courtyard of an old colonial house open to the evening sky, drummers on tall hand drums and wooden claves, neighbours clapping in the arcades as dancers spin",
+       "props": [
+        "havana_maracas",
+        "cane_juice",
+        "havana_mariposa"
+       ]
+      },
+      "steampunk": {
+       "en": "the flagstoned courtyard of an old colonial tenement in the evening, drummers on tall barrel drums and wooden claves, gaslamps on the galleries above and neighbours clapping",
+       "props": [
+        "havana_maracas",
+        "cane_juice",
+        "camera"
+       ]
+      },
+      "cyberpunk": {
+       "en": "the flagstoned courtyard of an old colonial house kept two centuries on, drummers on tall hand drums and claves, soft light strung along the galleries and neighbours clapping",
+       "props": [
+        "havana_maracas",
+        "cane_juice",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "ballet_night",
+     "ko": "대극장 발레의 밤",
+     "indoor": true,
+     "src": [
+      "https://en.wikipedia.org/wiki/Gran_Teatro_de_La_Habana"
+     ],
+     "base": "evening_opera",
+     "times": [
+      "night_out"
+     ],
+     "outfits": [
+      "evening",
+      "retro"
+     ],
+     "en": "a night at the ballet in the grand neo-baroque theatre on the Prado, home of the national ballet and its festival",
+     "worlds": {
+      "fantasy": {
+       "en": "the grand gilded lobby and sweeping staircase of an ornate baroque theatre on a palm-lined promenade, sculptures in its niches and dancers' music drifting from the hall",
+       "props": [
+        "ticket",
+        "flowers",
+        "bag"
+       ]
+      },
+      "steampunk": {
+       "en": "the grand lobby and sweeping marble staircase of an ornate baroque theatre lit by brass gas chandeliers, sculptures in its niches and the ballet about to begin",
+       "props": [
+        "ticket",
+        "flowers",
+        "watch"
+       ]
+      },
+      "cyberpunk": {
+       "en": "the grand lobby and sweeping staircase of an ornate baroque theatre kept two centuries on, its sculptures softly lit and the ballet about to begin",
+       "props": [
+        "ticket",
+        "flowers",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "icecream_park",
+     "ko": "반얀나무 아래 아이스크림 공원 — 비행접시 꼴 정자",
+     "src": [
+      "https://en.wikipedia.org/wiki/Coppelia_(ice_cream_parlor)"
+     ],
+     "base": "street_park",
+     "times": [
+      "midday",
+      "commute_pm"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "retro"
+     ],
+     "en": "eating ice cream in the shade of towering banyan trees at the city's famous ice-cream park around a flying-saucer-shaped pavilion, after the long queue",
+     "worlds": {
+      "fantasy": {
+       "en": "a shady park of towering banyan trees around a round white pavilion like a floating saucer on slender curved pillars, little tables in the dappled shade",
+       "props": [
+        "gelato",
+        "bag",
+        "havana_mariposa"
+       ]
+      },
+      "steampunk": {
+       "en": "a shady park of towering banyan trees around a round white pavilion like a floating saucer on curved iron pillars, little marble tables in the dappled shade",
+       "props": [
+        "gelato",
+        "bag",
+        "camera"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a shady park of towering banyan trees around a round white pavilion like a floating saucer on curved pillars, kept two centuries on, little tables in the dappled shade",
+       "props": [
+        "gelato",
+        "bag",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "eastern_beaches",
+     "ko": "동쪽 해변 — 주말의 흰 모래와 청록 바다",
+     "src": [
+      "https://en.wikipedia.org/wiki/Habana_del_Este"
+     ],
+     "base": "water_beach",
+     "times": [
+      "commute_am",
+      "midday"
+     ],
+     "outfits": [
+      "swimwear",
+      "active",
+      "everyday",
+      "retro"
+     ],
+     "en": "a day out on the eastern beaches that run for miles along the north coast east of the city, white sand and turquoise water",
+     "worlds": {
+      "fantasy": {
+       "en": "a long beach of white sand on a turquoise sea east of the city, gentle clear waves, sea-grape bushes along the dunes and palm-thatched shade",
+       "props": [
+        "havana_mojito",
+        "deckchair",
+        "water_bottle"
+       ]
+      },
+      "steampunk": {
+       "en": "a long beach of white sand on a turquoise sea east of the city, striped wooden bathing huts and canvas awnings along the dunes",
+       "props": [
+        "havana_mojito",
+        "deckchair",
+        "water_bottle"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a long beach of white sand on a turquoise sea east of the city two centuries on, gentle clear waves and slim shade sails glowing softly along the dunes",
+       "props": [
+        "havana_mojito",
+        "deckchair",
+        "water_bottle"
+       ]
+      }
+     }
+    },
+    {
+     "key": "cigar_workshop",
+     "ko": "시가 공방 — 손으로 마는 시가와 낭독 소리",
+     "indoor": true,
+     "src": [
+      "https://en.wikipedia.org/wiki/Cuban_cigar",
+      "https://en.wikipedia.org/wiki/Lector_(cigar_manufacture)",
+      "https://en.wikipedia.org/wiki/Cigar"
+     ],
+     "base": "museum_workshop",
+     "times": [
+      "commute_am",
+      "midday"
+     ],
+     "outfits": [
+      "everyday",
+      "retro",
+      "dongtan"
+     ],
+     "en": "watching the rollers hand-roll cigars at long wooden benches while a reader reads aloud to them, the room smelling of tobacco leaf and cedar",
+     "worlds": {
+      "fantasy": {
+       "en": "a long workroom of tall arched windows where rollers shape silky tobacco leaves at carved wooden benches, a reader reading aloud from a raised stone seat and cedar boxes stacked by the wall",
+       "props": [
+        "havana_cigar_box",
+        "book",
+        "havana_cafecito"
+       ]
+      },
+      "steampunk": {
+       "en": "a long gaslit rolling room where rollers shape silky tobacco leaves with crescent knives at wooden benches, a reader reading aloud from a raised brass-railed platform and cedar boxes stacked by the wall",
+       "props": [
+        "havana_cigar_box",
+        "book",
+        "havana_cafecito"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a long workroom two centuries on where rollers still shape silky tobacco leaves by hand at wooden benches, a reader's voice carried softly through the room and cedar boxes stacked on glowing shelves",
+       "props": [
+        "havana_cigar_box",
+        "book",
+        "havana_cafecito"
+       ]
+      }
+     }
+    },
+    {
+     "key": "prado_walk",
+     "ko": "프라도 산책로 — 가로수 그늘과 대리석 벤치",
+     "src": [
+      "https://en.wikipedia.org/wiki/Paseo_del_Prado,_Havana"
+     ],
+     "base": "street_park",
+     "times": [
+      "commute_am",
+      "commute_pm",
+      "night_out"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "retro"
+     ],
+     "en": "strolling the raised tree-lined promenade of the Prado between the old town and the sea, past coral-stone walls and marble benches",
+     "worlds": {
+      "fantasy": {
+       "en": "a wide raised promenade shaded by great trees between rows of colonnaded palaces, low walls of pale coral stone and marble benches leading down to the sea",
+       "props": [
+        "havana_mariposa",
+        "book",
+        "bag"
+       ]
+      },
+      "steampunk": {
+       "en": "a wide raised promenade shaded by great trees between rows of colonnaded houses, low walls of pale coral stone, marble benches and gaslamps on iron posts leading down to the sea",
+       "props": [
+        "book",
+        "bag",
+        "watch"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a wide raised promenade shaded by great trees two centuries on, low walls of pale coral stone and marble benches, the colonnaded houses on either side glowing softly",
+       "props": [
+        "book",
+        "bag",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "morro_lookout",
+     "ko": "모로 요새 — 항구 어귀 곶에서 도시 바라보기",
+     "src": [
+      "https://en.wikipedia.org/wiki/Morro_Castle_(Havana)"
+     ],
+     "base": "travel_lookout",
+     "times": [
+      "midday",
+      "commute_pm"
+     ],
+     "outfits": [
+      "everyday",
+      "active",
+      "dongtan"
+     ],
+     "en": "climbing to the old fortress and lighthouse on the headland across the harbour mouth to look back over the bay at the city",
+     "worlds": {
+      "fantasy": {
+       "en": "the high stone ramparts of an old fortress on a rocky headland at the harbour mouth, its tall lighthouse above and the domed city of columns across the water",
+       "props": [
+        "camera",
+        "water_bottle",
+        "havana_mariposa"
+       ]
+      },
+      "steampunk": {
+       "en": "the high stone ramparts of an old fortress on a rocky headland at the harbour mouth, its tall lighthouse above, airships drifting over the bay and the domed city across the water",
+       "props": [
+        "camera",
+        "water_bottle",
+        "ticket"
+       ]
+      },
+      "cyberpunk": {
+       "en": "the high stone ramparts of an old fortress on a rocky headland at the harbour mouth two centuries on, its lighthouse beam above and the domed glowing city across the water",
+       "props": [
+        "camera",
+        "water_bottle",
+        "phone"
+       ]
+      }
+     }
+    }
+   ]
+  },
+  "marrakech": {
+   "scenes": [
+    {
+     "key": "jemaa_stalls",
+     "ko": "해 질 녘 제마 엘프나 광장 노점에서 저녁 먹기",
+     "src": [
+      "https://en.wikipedia.org/wiki/Jemaa_el-Fnaa",
+      "https://en.wikipedia.org/wiki/Marrakesh"
+     ],
+     "base": "street_noodle_stall",
+     "times": [
+      "commute_pm",
+      "night_out"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "retro"
+     ],
+     "en": "eating supper at the food stalls that fill Jemaa el-Fnaa square as darkness falls, grills smoking, long benches packed and storytellers and musicians in the crowd",
+     "worlds": {
+      "fantasy": {
+       "en": "a long food stall on a vast open square at dusk, kefta skewers sizzling over charcoal, benches crowded under lantern-light and golden smoke rising toward the red-ochre walls",
+       "props": [
+        "skewer",
+        "bowl",
+        "lamp"
+       ]
+      },
+      "steampunk": {
+       "en": "a long food stall on a vast open square at dusk, kefta skewers sizzling on a steam-heated iron griddle under brass gaslamps, benches crowded and white steam rising toward the red walls",
+       "props": [
+        "skewer",
+        "bowl",
+        "lamp"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a long food stall in the great square at night two centuries on, kefta skewers sizzling on an induction grill under floating lights, benches crowded and the old red walls glowing softly behind",
+       "props": [
+        "skewer",
+        "bowl",
+        "lamp"
+       ]
+      }
+     }
+    },
+    {
+     "key": "orange_juice",
+     "ko": "한낮의 광장 — 오렌지 주스 수레에서 갓 짠 주스 한 잔",
+     "src": [
+      "https://en.wikipedia.org/wiki/Jemaa_el-Fnaa",
+      "https://en.wikipedia.org/wiki/Marrakesh"
+     ],
+     "base": "street_market",
+     "times": [
+      "commute_am",
+      "midday"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "resort"
+     ],
+     "en": "buying a glass of freshly squeezed orange juice from one of the juice stalls that fill Jemaa el-Fnaa by day, oranges heaped high on the carts",
+     "worlds": {
+      "fantasy": {
+       "en": "a painted wooden cart heaped with bright oranges on a sunny open square, the stall-keeper pressing fresh juice and the red-ochre walls behind",
+       "props": [
+        "marrakech_orange_juice",
+        "bag",
+        "camera"
+       ]
+      },
+      "steampunk": {
+       "en": "a striped cart heaped with bright oranges and a polished brass hand-press on a sunny open square, water sellers hung with brass cups passing by",
+       "props": [
+        "marrakech_orange_juice",
+        "bag",
+        "camera"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a sleek juice stall heaped with bright oranges in the great square two centuries on, a quiet press humming and the old red walls behind",
+       "props": [
+        "marrakech_orange_juice",
+        "bag",
+        "camera"
+       ]
+      }
+     }
+    },
+    {
+     "key": "souk_lanes",
+     "ko": "수크 골목 — 등불 가게 앞에서 흥정하기",
+     "src": [
+      "https://en.wikipedia.org/wiki/Marrakesh"
+     ],
+     "base": "street_alley",
+     "times": [
+      "commute_am",
+      "midday",
+      "commute_pm"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "retro",
+      "subculture"
+     ],
+     "en": "haggling in the covered lanes of the souks, past stalls of leather bags, carpets, metalwork and hanging lanterns",
+     "worlds": {
+      "fantasy": {
+       "en": "a narrow covered market lane, slatted shade striping the ground, stalls of leather bags, woven rugs and hanging pierced lanterns glowing in red, green and amber",
+       "props": [
+        "fanous",
+        "shopping_bag",
+        "bag"
+       ]
+      },
+      "steampunk": {
+       "en": "a narrow covered market lane under slatted shade, stalls of leather satchels, woven rugs and rows of pierced brass lamps, a little brass scale on the counter",
+       "props": [
+        "fanous",
+        "shopping_bag",
+        "bag"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a narrow covered market lane kept two centuries on, slatted shade striping the ground, stalls of leather bags, woven rugs and pierced lanterns with soft light cores",
+       "props": [
+        "fanous",
+        "shopping_bag",
+        "bag"
+       ]
+      }
+     }
+    },
+    {
+     "key": "carpet_shop",
+     "ko": "수크 양탄자 가게 — 쌓인 양탄자 위에 앉아 민트차 마시며 고르기",
+     "src": [
+      "https://en.wikipedia.org/wiki/Marrakesh",
+      "https://en.wikipedia.org/wiki/Maghrebi_mint_tea"
+     ],
+     "base": "street_shop",
+     "times": [
+      "midday",
+      "commute_pm"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "retro"
+     ],
+     "indoor": true,
+     "en": "choosing a rug in a carpet shop of the souks, sitting on a pile of rugs as the seller unrolls one after another and pours mint tea",
+     "worlds": {
+      "fantasy": {
+       "en": "a deep shop of the market hung floor to ceiling with hand-knotted rugs in red, saffron and indigo, rugs piled high and unrolled across the floor",
+       "props": [
+        "marrakech_carpet",
+        "marrakech_atay",
+        "shopping_bag"
+       ]
+      },
+      "steampunk": {
+       "en": "a deep shop of the market hung floor to ceiling with hand-knotted rugs in red, saffron and indigo, a brass lamp glowing and rugs unrolled across the floor",
+       "props": [
+        "marrakech_carpet",
+        "marrakech_atay",
+        "shopping_bag"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a deep shop of the market two centuries on, hung floor to ceiling with hand-knotted rugs in red, saffron and indigo under soft panel light",
+       "props": [
+        "marrakech_carpet",
+        "marrakech_atay",
+        "shopping_bag"
+       ]
+      }
+     }
+    },
+    {
+     "key": "riad_breakfast",
+     "ko": "리야드 안뜰 — 분수 곁 아침상",
+     "src": [
+      "https://en.wikipedia.org/wiki/Riad_(architecture)",
+      "https://en.wikipedia.org/wiki/Msemmen"
+     ],
+     "base": "home_living",
+     "times": [
+      "dawn",
+      "commute_am"
+     ],
+     "outfits": [
+      "homewear",
+      "everyday",
+      "resort"
+     ],
+     "en": "breakfast in the courtyard of a riad, the inward-facing house built around a garden with a fountain at its centre, square layered msemmen with honey and mint tea",
+     "worlds": {
+      "fantasy": {
+       "en": "a quiet courtyard garden at the heart of a red-walled house, a tiled fountain trickling in the centre among orange trees, carved cedar doors and a low table laid for breakfast",
+       "props": [
+        "marrakech_msemen",
+        "marrakech_atay",
+        "flowers"
+       ]
+      },
+      "steampunk": {
+       "en": "a quiet courtyard garden at the heart of a red-walled house, a tiled fountain trickling among orange trees, a little brass kettle on a spirit burner and a low table laid for breakfast",
+       "props": [
+        "marrakech_msemen",
+        "marrakech_atay",
+        "flowers"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a quiet courtyard garden at the heart of a red-walled house kept two centuries on, a tiled fountain trickling among orange trees and a low table laid for breakfast under a soft shade canopy",
+       "props": [
+        "marrakech_msemen",
+        "marrakech_atay",
+        "flowers"
+       ]
+      }
+     }
+    },
+    {
+     "key": "rooftop_tea",
+     "ko": "옥상 테라스 노을 — 높이 들어 따르는 민트차",
+     "src": [
+      "https://en.wikipedia.org/wiki/Maghrebi_mint_tea",
+      "https://en.wikipedia.org/wiki/Marrakesh"
+     ],
+     "base": "street_rooftop",
+     "times": [
+      "commute_pm",
+      "night_out"
+     ],
+     "outfits": [
+      "everyday",
+      "evening",
+      "dongtan",
+      "retro"
+     ],
+     "en": "watching the sunset from a roof terrace over the medina, sweet green mint tea poured from high above out of a curved-spout teapot into small glasses",
+     "worlds": {
+      "fantasy": {
+       "en": "a flat roof terrace over a sea of low red-ochre rooftops at sunset, cushions and pierced lanterns, the snow-capped mountains pink in the distance",
+       "props": [
+        "marrakech_atay",
+        "lamp",
+        "book"
+       ]
+      },
+      "steampunk": {
+       "en": "a flat roof terrace over a sea of low red-ochre rooftops at sunset, cushions and brass gaslamps, an airship drifting toward the snow-capped mountains",
+       "props": [
+        "marrakech_atay",
+        "lamp",
+        "book"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a flat roof terrace over the low red-ochre rooftops of the old city two centuries on, cushions and soft floating lights, the curved red towers and the snowy mountains beyond",
+       "props": [
+        "marrakech_atay",
+        "lamp",
+        "book"
+       ]
+      }
+     }
+    },
+    {
+     "key": "hammam_steam",
+     "ko": "동네 함맘 — 증기 방에서 때 밀고 쉬기",
+     "src": [
+      "https://en.wikipedia.org/wiki/Hammam",
+      "https://en.wikipedia.org/wiki/Tadelakt"
+     ],
+     "base": "spa_hammam",
+     "times": [
+      "midday",
+      "commute_pm"
+     ],
+     "outfits": [
+      "bath"
+     ],
+     "indoor": true,
+     "en": "an afternoon at the neighbourhood hammam, still used by the people of the old city, scrubbing and resting in the warm steam rooms with friends",
+     "worlds": {
+      "fantasy": {
+       "en": "a warm domed steam room of polished deep-red plaster, star-shaped openings in the dome letting in beams of light through the steam, brass bowls of warm water",
+       "props": [
+        "pestemal",
+        "lamp",
+        "cup"
+       ]
+      },
+      "steampunk": {
+       "en": "a warm domed steam room of polished deep-red plaster lit through star-shaped openings, polished brass taps and bowls of warm water in clean white steam",
+       "props": [
+        "pestemal",
+        "lamp",
+        "cup"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a warm domed steam room of polished deep-red plaster two centuries on, star-shaped openings glowing softly, warm water flowing from smooth brass spouts",
+       "props": [
+        "pestemal",
+        "lamp",
+        "cup"
+       ]
+      }
+     }
+    },
+    {
+     "key": "menara_walk",
+     "ko": "메나라 정원 — 큰 저수지 둘레 산책, 뒤로 눈 덮인 산맥",
+     "src": [
+      "https://en.wikipedia.org/wiki/Menara_gardens",
+      "https://en.wikipedia.org/wiki/Marrakesh"
+     ],
+     "base": "travel_lake",
+     "times": [
+      "dawn",
+      "commute_pm"
+     ],
+     "seasons": [
+      "winter",
+      "spring"
+     ],
+     "outfits": [
+      "everyday",
+      "active",
+      "dongtan"
+     ],
+     "en": "walking around the great reservoir of the Menara Gardens through the olive groves, the pavilion with its green pyramid roof reflected in the water and the snowy High Atlas beyond",
+     "worlds": {
+      "fantasy": {
+       "en": "the walkway of a vast still reservoir in an olive grove, a two-storey pavilion with a green-tiled pyramid roof mirrored in the water and snowy mountains far behind",
+       "props": [
+        "camera",
+        "water_bottle",
+        "bag"
+       ]
+      },
+      "steampunk": {
+       "en": "the walkway of a vast still reservoir in an olive grove, a pavilion with a green-tiled pyramid roof mirrored in the water, brass sluice gates and snowy mountains far behind",
+       "props": [
+        "camera",
+        "water_bottle",
+        "bag"
+       ]
+      },
+      "cyberpunk": {
+       "en": "the walkway of a vast still reservoir in an olive grove two centuries on, the green-roofed pavilion mirrored in the water and snowy mountains beyond the glowing towers",
+       "props": [
+        "camera",
+        "water_bottle",
+        "bag"
+       ]
+      }
+     }
+    },
+    {
+     "key": "cobalt_garden",
+     "ko": "코발트 블루 정원 — 선인장 사이 산책",
+     "src": [
+      "https://en.wikipedia.org/wiki/Majorelle_Garden",
+      "https://en.wikipedia.org/wiki/Majorelle_Blue"
+     ],
+     "base": "street_park",
+     "times": [
+      "commute_am",
+      "midday"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "resort",
+      "subculture"
+     ],
+     "en": "a morning in the garden of cacti from five continents, its walls, fountains and villa painted an intense cobalt blue",
+     "worlds": {
+      "fantasy": {
+       "en": "a walled garden of towering cacti, palms and bamboo, paths between beds of spiny plants, fountains and a villa painted intense cobalt blue",
+       "props": [
+        "camera",
+        "book",
+        "water_bottle"
+       ]
+      },
+      "steampunk": {
+       "en": "a walled garden of towering cacti, palms and bamboo, a little brass-and-glass plant house, fountains and a villa painted intense cobalt blue",
+       "props": [
+        "camera",
+        "book",
+        "water_bottle"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a garden of towering cacti and palms two centuries on under a glass dome tinted cobalt blue, fountains and a villa painted the same intense blue",
+       "props": [
+        "camera",
+        "book",
+        "water_bottle"
+       ]
+      }
+     }
+    },
+    {
+     "key": "tanjia_supper",
+     "ko": "집 저녁 — 함맘 재에서 밤새 익혀 온 탄지아 항아리 열기",
+     "src": [
+      "https://en.wikipedia.org/wiki/Tangia",
+      "https://en.wikipedia.org/wiki/Marrakesh"
+     ],
+     "base": "home_kitchen",
+     "times": [
+      "night_out"
+     ],
+     "outfits": [
+      "homewear",
+      "everyday"
+     ],
+     "indoor": true,
+     "en": "opening the tanjia at home, the urn-shaped clay jar of meat, preserved lemon and saffron slow-cooked for hours in the ashes of the hammam furnace",
+     "worlds": {
+      "fantasy": {
+       "en": "a warm home kitchen of polished red plaster and carved cedar, an urn-shaped clay jar just unsealed on the table beside round flatbreads and a clay brazier",
+       "props": [
+        "marrakech_tanjia",
+        "bowl",
+        "marrakech_atay"
+       ]
+      },
+      "steampunk": {
+       "en": "a warm home kitchen of polished red plaster and copper pans, an urn-shaped clay jar just unsealed on a brass trivet beside round flatbreads",
+       "props": [
+        "marrakech_tanjia",
+        "bowl",
+        "marrakech_atay"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a warm home kitchen two centuries on, polished red plaster walls and a smart glowing hearth, an urn-shaped clay jar just unsealed beside round flatbreads",
+       "props": [
+        "marrakech_tanjia",
+        "bowl",
+        "marrakech_atay"
+       ]
+      }
+     }
+    },
+    {
+     "key": "ourika_falls",
+     "ko": "우리카 계곡 — 산골 물줄기 따라 폭포까지 오르기",
+     "src": [
+      "https://en.wikipedia.org/wiki/Ourika_Valley"
+     ],
+     "base": "travel_trail",
+     "times": [
+      "commute_am",
+      "midday"
+     ],
+     "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+     ],
+     "outfits": [
+      "active",
+      "adventure",
+      "everyday"
+     ],
+     "en": "a day out to the Ourika Valley in the High Atlas, climbing along a mountain torrent from the last village to its waterfalls",
+     "worlds": {
+      "fantasy": {
+       "en": "a rocky path climbing beside a rushing mountain stream in a green valley of the high mountains, little earthen villages on the slopes and a waterfall ahead",
+       "props": [
+        "water_bottle",
+        "bag",
+        "camera"
+       ]
+      },
+      "steampunk": {
+       "en": "a rocky path climbing beside a rushing mountain stream in a green valley of the high mountains, brass-capped waymarks on the rocks and a waterfall ahead",
+       "props": [
+        "water_bottle",
+        "bag",
+        "camera"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a rocky path climbing beside a rushing mountain stream in a green valley two centuries on, faint glowing waymarks on the rocks and a waterfall ahead",
+       "props": [
+        "water_bottle",
+        "bag",
+        "camera"
+       ]
+      }
+     }
+    },
+    {
+     "key": "film_festival",
+     "ko": "국제 영화제 밤 — 레드카펫과 야외 상영",
+     "src": [
+      "https://en.wikipedia.org/wiki/Marrakech_International_Film_Festival",
+      "https://en.wikipedia.org/wiki/Marrakesh"
+     ],
+     "base": "evening_gala",
+     "times": [
+      "night_out"
+     ],
+     "outfits": [
+      "evening",
+      "drape"
+     ],
+     "en": "a night at the city's international film festival, held every year since 2001, gowns on the red carpet and a film shown to the crowd under the stars",
+     "worlds": {
+      "fantasy": {
+       "en": "a grand festival evening in a palace garden, a long red carpet between lantern-lit orange trees and a great pale screen of stretched silk glowing with moving pictures",
+       "props": [
+        "camera",
+        "drink_glass",
+        "fan"
+       ]
+      },
+      "steampunk": {
+       "en": "a grand festival evening in a palace garden, a long red carpet between gaslit orange trees and a great screen lit by a brass projecting lantern",
+       "props": [
+        "camera",
+        "drink_glass",
+        "fan"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a grand festival evening two centuries on, a long red carpet between orange trees and a vast floating screen of light above the crowd",
+       "props": [
+        "camera",
+        "drink_glass",
+        "fan"
+       ]
+      }
+     }
+    }
+   ]
+  },
+  "reykjavik": {
+   "scenes": [
+    {
+     "key": "hotpot",
+     "ko": "라우가르달스라우그 야외 온탕 — 김 속에서 몸 담그기",
+     "src": [
+      "https://en.wikipedia.org/wiki/Laugardalslaug",
+      "https://en.wikipedia.org/wiki/Reykjav%C3%ADk"
+     ],
+     "base": "hotspring_pool",
+     "times": [
+      "dawn",
+      "commute_am",
+      "commute_pm",
+      "night_out"
+     ],
+     "outfits": [
+      "swimwear",
+      "resort"
+     ],
+     "en": "soaking in a steaming geothermal hot pot beside the big outdoor pool of the city's largest swimming complex, cold air on her face",
+     "worlds": {
+      "fantasy": {
+       "en": "a round hot spring pool of pale stone in an open courtyard, thick white steam rising into the cold air and a long warm bathing pool beyond",
+       "props": [
+        "water_bottle",
+        "lamp"
+       ]
+      },
+      "steampunk": {
+       "en": "a round tiled hot pool beside a long outdoor bathing pool, brass rails and pipes, white steam curling into the frosty air under gaslamps",
+       "props": [
+        "water_bottle",
+        "watch"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a round hot pot of smooth glowing stone beside a long outdoor pool two centuries on, white steam rising into the cold air under soft light",
+       "props": [
+        "water_bottle",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "seaswim",
+     "ko": "나우톨스비크 석호 해변 — 찬 바다 헤엄 뒤 따뜻한 탕",
+     "src": [
+      "https://en.wikipedia.org/wiki/Nauth%C3%B3lsv%C3%ADk"
+     ],
+     "base": "water_beach",
+     "times": [
+      "midday",
+      "commute_pm"
+     ],
+     "outfits": [
+      "swimwear",
+      "active"
+     ],
+     "en": "at the city's geothermal beach, swimming in the cold sea cove and warming up in the hot tub by the man-made lagoon",
+     "worlds": {
+      "fantasy": {
+       "en": "a sheltered cove of pale sand where warm spring water flows into a little lagoon, a stone hot pool steaming at its edge and the cold bay beyond",
+       "props": [
+        "float_ring",
+        "water_bottle"
+       ]
+      },
+      "steampunk": {
+       "en": "a sheltered cove of pale sand where warm water piped from the springs fills a little lagoon, a brass-railed hot pool steaming at its edge",
+       "props": [
+        "float_ring",
+        "deckchair"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a sheltered cove of pale sand two centuries on where warm water fills a little lagoon, a glowing hot pool steaming at its edge and the cold bay beyond",
+       "props": [
+        "float_ring",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "pondskate",
+     "ko": "툐르닌 — 얼어붙은 도심 연못에서 스케이트",
+     "src": [
+      "https://en.wikipedia.org/wiki/Tj%C3%B6rnin"
+     ],
+     "base": "ice_rink",
+     "times": [
+      "midday",
+      "commute_pm",
+      "night_out"
+     ],
+     "seasons": [
+      "winter"
+     ],
+     "outfits": [
+      "active",
+      "everyday",
+      "retro"
+     ],
+     "en": "ice skating on the frozen little lake in the city centre beside the city hall, the bright old houses around its shore",
+     "worlds": {
+      "fantasy": {
+       "en": "a small frozen lake in the heart of the capital, bright painted houses and stone halls around its shore and lantern-orbs glowing over the ice",
+       "props": [
+        "ice_skates",
+        "cocoa_mug"
+       ]
+      },
+      "steampunk": {
+       "en": "a small frozen lake in the heart of the city, bright corrugated-iron houses around its shore and gaslamps glowing over the ice",
+       "props": [
+        "ice_skates",
+        "cocoa_mug"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a small frozen lake in the heart of the city two centuries on, soft light glowing up through the ice and bright little houses around its shore",
+       "props": [
+        "ice_skates",
+        "cocoa_mug",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "dreamboat_walk",
+     "ko": "바닷가 길 — 꿈의 배 조각 곁을 걷기",
+     "src": [
+      "https://en.wikipedia.org/wiki/Sun_Voyager"
+     ],
+     "base": "travel_coast",
+     "times": [
+      "commute_pm",
+      "night_out",
+      "past_midnight"
+     ],
+     "outfits": [
+      "everyday",
+      "active",
+      "dongtan"
+     ],
+     "en": "walking the seaside path past the steel dreamboat sculpture on its little headland, the bay and the mountain ridge beyond",
+     "worlds": {
+      "fantasy": {
+       "en": "a seaside path along the bay to a little headland where a great silver-ribbed dream-ship sculpture stands on a ring of granite, the long ridge across the water",
+       "props": [
+        "camera",
+        "reykjavik_lopapeysa"
+       ]
+      },
+      "steampunk": {
+       "en": "a seaside promenade along the bay to a little headland where a great polished steel-ribbed dream-ship sculpture stands on a ring of granite, gaslamps along the rail",
+       "props": [
+        "camera",
+        "watch"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a seaside path along the bay two centuries on to a little headland where a great steel-ribbed dream-ship sculpture stands on a ring of granite, softly lit from below",
+       "props": [
+        "camera",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "pearldeck",
+     "ko": "페를란 — 온수 탱크 위 유리 돔 전망대",
+     "src": [
+      "https://en.wikipedia.org/wiki/Perlan"
+     ],
+     "base": "travel_lookout",
+     "times": [
+      "midday",
+      "commute_pm",
+      "night_out"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "adventure"
+     ],
+     "en": "on the round viewing deck of the glass dome on top of the hot-water tanks on the wooded hill, the whole city, the mountains and the ocean all around",
+     "worlds": {
+      "fantasy": {
+       "en": "a round open gallery beneath a great crystal dome resting on six huge silver water tanks on a wooded hill, the whole capital and the sea spread all around",
+       "props": [
+        "reykjavik_spar",
+        "camera"
+       ]
+      },
+      "steampunk": {
+       "en": "a round open gallery beneath a great glass dome resting on six huge riveted brass hot-water tanks on a wooded hill, the steaming city spread all around",
+       "props": [
+        "reykjavik_spar",
+        "camera"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a round open gallery beneath a great glass dome resting on six huge water tanks on a wooded hill two centuries on, the glowing city and the sea all around",
+       "props": [
+        "reykjavik_spar",
+        "camera",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "hallconcert",
+     "ko": "하르파 — 유리 면 음악당의 교향악 밤",
+     "src": [
+      "https://en.wikipedia.org/wiki/Harpa_(concert_hall)"
+     ],
+     "base": "evening_opera",
+     "indoor": true,
+     "times": [
+      "night_out"
+     ],
+     "outfits": [
+      "evening",
+      "retro"
+     ],
+     "en": "a symphony concert at the harbour concert hall with its coloured glass facade, the foyer windows glowing over the dark water",
+     "worlds": {
+      "fantasy": {
+       "en": "the grand foyer of a music hall walled in coloured crystal facets on the harbour, aurora light glowing through the panes before the concert",
+       "props": [
+        "ticket",
+        "drink_glass"
+       ]
+      },
+      "steampunk": {
+       "en": "the grand foyer of a music hall walled in coloured glass panes set in a brass lattice on the harbour, gaslamps glowing before the concert",
+       "props": [
+        "ticket",
+        "watch"
+       ]
+      },
+      "cyberpunk": {
+       "en": "the foyer of the faceted glass concert hall on the harbour two centuries on, thousands of panes glowing in shifting colour before the concert",
+       "props": [
+        "ticket",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "washroad_night",
+     "ko": "라우가베구르 — 주말 밤새 붐비는 빨래 길",
+     "src": [
+      "https://en.wikipedia.org/wiki/Laugavegur_(Reykjav%C3%ADk)"
+     ],
+     "base": "night_bar",
+     "indoor": true,
+     "times": [
+      "night_out",
+      "past_midnight"
+     ],
+     "outfits": [
+      "evening",
+      "subculture",
+      "everyday"
+     ],
+     "en": "a weekend night out at a bar on the city's main old shopping street, the street full of people all night long",
+     "worlds": {
+      "fantasy": {
+       "en": "a lively tavern on the capital's old main street, warm firelight inside and the street outside full of people late into the night",
+       "props": [
+        "pint",
+        "shopping_bag"
+       ]
+      },
+      "steampunk": {
+       "en": "a lively gaslit bar on the city's old main street, polished brass and dark wood inside and the street outside crowded late into the night",
+       "props": [
+        "pint",
+        "watch"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a lively bar on the city's old main street two centuries on, soft light inside and the street outside crowded all night long",
+       "props": [
+        "pint",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "hotdog",
+     "ko": "항구의 핫도그 노점 — 「다 넣어서」",
+     "src": [
+      "https://en.wikipedia.org/wiki/B%C3%A6jarins_beztu_pylsur"
+     ],
+     "base": "food_truck",
+     "times": [
+      "midday",
+      "night_out",
+      "past_midnight"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "subculture"
+     ],
+     "en": "at a little hot dog stand near the harbour, ordering a lamb hot dog with everything — crispy onion, raw onion, sweet mustard and remoulade",
+     "worlds": {
+      "fantasy": {
+       "en": "a little wooden food stall near the harbour with a warm hatch, the music hall of crystal facets glittering across the street",
+       "props": [
+        "reykjavik_hotdog",
+        "drink_glass"
+       ]
+      },
+      "steampunk": {
+       "en": "a little painted food kiosk near the harbour with a steaming hatch and a brass lamp, the glass-paned music hall gleaming across the street",
+       "props": [
+        "reykjavik_hotdog",
+        "bag"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a little food stand near the harbour two centuries on with a glowing hatch, the faceted glass concert hall shifting colour across the street",
+       "props": [
+        "reykjavik_hotdog",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "ridgehike",
+     "ko": "에스야 — 만 건너 현무암 산줄기 오르기",
+     "src": [
+      "https://en.wikipedia.org/wiki/Esja"
+     ],
+     "base": "travel_trail",
+     "times": [
+      "commute_am",
+      "midday"
+     ],
+     "seasons": [
+      "summer",
+      "autumn"
+     ],
+     "outfits": [
+      "active",
+      "adventure"
+     ],
+     "en": "hiking the marked trail up the volcanic mountain range across the bay from the city, the capital small and bright far below",
+     "worlds": {
+      "fantasy": {
+       "en": "a marked stony trail climbing a long ridge of dark basalt across the bay, the bright little capital far below",
+       "props": [
+        "water_bottle",
+        "bag",
+        "reykjavik_lopapeysa"
+       ]
+      },
+      "steampunk": {
+       "en": "a marked stony trail climbing a long ridge of dark basalt across the bay, brass-capped waymarks and the steaming city far below",
+       "props": [
+        "water_bottle",
+        "bag",
+        "reykjavik_lopapeysa"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a marked stony trail climbing a long ridge of dark basalt across the bay, faint glowing waymarks and the glass city far below",
+       "props": [
+        "water_bottle",
+        "bag",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "tidewalk",
+     "ko": "그로타 — 썰물에 걸어 건너는 등대 섬",
+     "src": [
+      "https://en.wikipedia.org/wiki/Gr%C3%B3tta"
+     ],
+     "base": "travel_coast",
+     "times": [
+      "midday",
+      "commute_pm",
+      "night_out"
+     ],
+     "seasons": [
+      "autumn",
+      "winter"
+     ],
+     "outfits": [
+      "everyday",
+      "active"
+     ],
+     "en": "walking across the low-tide causeway to the little lighthouse island at the far end of the peninsula before the tide comes back",
+     "worlds": {
+      "fantasy": {
+       "en": "a causeway of wet stones and seaweed laid bare by the low tide, leading to a tiny islet with a white lighthouse",
+       "props": [
+        "lamp",
+        "reykjavik_lopapeysa"
+       ]
+      },
+      "steampunk": {
+       "en": "a causeway of wet stones laid bare by the low tide, leading to a tiny islet with a white lighthouse and its polished brass lantern room",
+       "props": [
+        "watch",
+        "reykjavik_lopapeysa"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a causeway of wet stones laid bare by the low tide two centuries on, leading to a tiny islet where a slim white lighthouse sweeps its beam",
+       "props": [
+        "phone",
+        "reykjavik_lopapeysa"
+       ]
+      }
+     }
+    },
+    {
+     "key": "culturenight",
+     "ko": "문화의 밤 — 8월 도심 공연과 불꽃",
+     "src": [
+      "https://en.wikipedia.org/wiki/Menningarn%C3%B3tt"
+     ],
+     "base": "stage_fireworks",
+     "times": [
+      "night_out"
+     ],
+     "seasons": [
+      "summer"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan"
+     ],
+     "en": "Culture Night in late August — concerts on stages all over the city centre and fireworks over the harbour at the end",
+     "worlds": {
+      "fantasy": {
+       "en": "a festival night in the capital with music on open-air stages and great bursts of enchanted fireworks over the harbour",
+       "props": [
+        "festival_flyer",
+        "cup"
+       ]
+      },
+      "steampunk": {
+       "en": "a festival night in the city with brass bands on open-air stages and bright fireworks bursting over the harbour",
+       "props": [
+        "festival_flyer",
+        "cup"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a festival night two centuries on with music on open-air stages and fireworks bursting over the glowing harbour",
+       "props": [
+        "festival_flyer",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "kaffi",
+     "ko": "오후의 「카피」 — 커피와 클레이나",
+     "src": [
+      "https://en.wikipedia.org/wiki/Icelandic_cuisine"
+     ],
+     "base": "home_living",
+     "indoor": true,
+     "times": [
+      "midday",
+      "commute_pm"
+     ],
+     "outfits": [
+      "homewear",
+      "everyday"
+     ],
+     "en": "an afternoon kaffi at home — strong coffee, knotted kleina doughnuts and rye flatbread with smoked lamb on the table",
+     "worlds": {
+      "fantasy": {
+       "en": "a cosy timber room with a wool rug, an afternoon table of dark brew, knotted fried pastries and rye flatbread, the window showing the snowy bay",
+       "props": [
+        "reykjavik_kleina",
+        "cup",
+        "reykjavik_flatkaka"
+       ]
+      },
+      "steampunk": {
+       "en": "a cosy parlour with a warm radiator and lace at the window, an afternoon table of coffee in a brass pot, knotted fried pastries and rye flatbread",
+       "props": [
+        "reykjavik_kleina",
+        "cup",
+        "reykjavik_flatkaka"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a cosy flat two centuries on with warm floors and a wide window on the snowy bay, an afternoon table of coffee, knotted fried pastries and rye flatbread",
+       "props": [
+        "reykjavik_kleina",
+        "cup",
+        "reykjavik_flatkaka"
+       ]
+      }
+     }
+    }
+   ]
+  },
+  "taipei": {
+   "scenes": [
+    {
+     "key": "shilin_night",
+     "ko": "스린 야시장 — 샤오츠 노점 골목",
+     "src": [
+      "https://en.wikipedia.org/wiki/Shilin_Night_Market",
+      "https://en.wikipedia.org/wiki/Night_markets_in_Taiwan"
+     ],
+     "base": "street_market",
+     "times": [
+      "night_out",
+      "past_midnight"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "subculture",
+      "retro"
+     ],
+     "en": "squeezing through the crowded lanes of the city's largest night market, stalls of oyster omelettes, fried chicken cutlets and stinky tofu, hawkers calling over music from the loudspeakers",
+     "worlds": {
+      "fantasy": {
+       "en": "a crowded night-market lane of the capital under strings of paper lanterns, oyster omelettes sizzling on griddles over charcoal, stalls of crisp fried cutlets and hawkers calling over the din",
+       "props": [
+        "taipei_oyster_omelette",
+        "taipei_chicken_cutlet",
+        "lamp",
+        "money"
+       ]
+      },
+      "steampunk": {
+       "en": "a crowded night-market lane under warm gas lamps and striped awnings, oyster omelettes sizzling on steam-heated iron griddles and hawkers calling over the music of a brass gramophone",
+       "props": [
+        "taipei_oyster_omelette",
+        "taipei_chicken_cutlet",
+        "lamp",
+        "money"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a crowded night-market lane two centuries on, old family stalls of oyster omelettes and fried cutlets kept as they were beneath tiers of floating light-stalls and drifting price tags of light",
+       "props": [
+        "taipei_oyster_omelette",
+        "taipei_chicken_cutlet",
+        "lamp",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "bubble_tea",
+     "ko": "버블티 가게 — 흑당 펄 밀크티",
+     "src": [
+      "https://en.wikipedia.org/wiki/Bubble_tea",
+      "https://en.wikipedia.org/wiki/Taiwanese_cuisine"
+     ],
+     "base": "street_shop",
+     "times": [
+      "midday",
+      "commute_pm",
+      "night_out"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "subculture",
+      "retro"
+     ],
+     "en": "picking up a milk tea shaken with ice over chewy brown-sugar tapioca pearls, sealed and served with a wide straw, at a little counter shop",
+     "worlds": {
+      "fantasy": {
+       "en": "a little counter shop of the capital where milk tea is shaken in silver shakers and poured over dark sugar pearls in tall glasses",
+       "props": [
+        "taipei_bubble_tea",
+        "money",
+        "bag"
+       ]
+      },
+      "steampunk": {
+       "en": "a little tea counter with brass shakers and glass jars of dark sugar pearls, milk tea shaken with ice and poured into tall glasses",
+       "props": [
+        "taipei_bubble_tea",
+        "money",
+        "bag"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a little counter shop two centuries on where a slim robot arm shakes milk tea over brown-sugar pearls and seals each cup with a glowing film lid",
+       "props": [
+        "taipei_bubble_tea",
+        "phone",
+        "bag"
+       ]
+      }
+     }
+    },
+    {
+     "key": "breakfast_shop",
+     "ko": "아침 가게 — 철판에서 바로 만 단빙",
+     "src": [
+      "https://en.wikipedia.org/wiki/Taiwanese_cuisine",
+      "https://en.wikipedia.org/wiki/Taipei"
+     ],
+     "base": "street_diner",
+     "times": [
+      "dawn",
+      "commute_am"
+     ],
+     "outfits": [
+      "everyday",
+      "retro",
+      "dongtan"
+     ],
+     "en": "grabbing breakfast at a busy little breakfast shop before work — thin egg pancakes rolled hot off the griddle while scooters line up at the kerb",
+     "worlds": {
+      "fantasy": {
+       "en": "a busy little breakfast hall of the capital at dawn, thin egg-filled pancakes rolled hot off an iron griddle and wrapped in waxed paper for early workers",
+       "props": [
+        "taipei_danbing",
+        "cup",
+        "scooter"
+       ]
+      },
+      "steampunk": {
+       "en": "a busy little breakfast counter at dawn, a cook rolling thin egg pancakes on a steam-heated iron griddle for workers hurrying out to the trams",
+       "props": [
+        "taipei_danbing",
+        "cup",
+        "scooter"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a busy little breakfast counter two centuries on, thin egg pancakes still rolled by hand on a glowing induction griddle for commuters parking their hover scooters outside",
+       "props": [
+        "taipei_danbing",
+        "cup",
+        "scooter"
+       ]
+      }
+     }
+    },
+    {
+     "key": "metro_rush",
+     "ko": "MRT 출퇴근길 — 붐비고 깨끗한 전철",
+     "src": [
+      "https://en.wikipedia.org/wiki/Taipei_Metro"
+     ],
+     "base": "subway_car",
+     "indoor": true,
+     "times": [
+      "commute_am",
+      "commute_pm"
+     ],
+     "outfits": [
+      "everyday",
+      "workwear",
+      "dongtan",
+      "subculture"
+     ],
+     "en": "riding a crowded, spotless metro train at rush hour, where eating and drinking are not allowed",
+     "worlds": {
+      "fantasy": {
+       "en": "a long enchanted carriage gliding through a tunnel beneath the capital at rush hour, crowded with commuters holding polished brass rails, its floor spotless",
+       "props": [
+        "ticket",
+        "bag",
+        "book"
+       ]
+      },
+      "steampunk": {
+       "en": "a crowded electric railway carriage at rush hour, polished wooden benches, brass hand-straps and glass lamp sconces, everything spotless",
+       "props": [
+        "ticket",
+        "bag",
+        "watch"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a driverless metro train two centuries on gliding through softly glowing tunnels at rush hour, crowded and spotless",
+       "props": [
+        "ticket",
+        "bag",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "maokong_gondola",
+     "ko": "마오쿵 곤돌라 — 유리 바닥 객실",
+     "src": [
+      "https://en.wikipedia.org/wiki/Maokong_Gondola",
+      "https://en.wikipedia.org/wiki/Maokong"
+     ],
+     "base": "travel_cablecar",
+     "times": [
+      "midday",
+      "commute_pm",
+      "night_out"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan"
+     ],
+     "en": "riding a glass-bottomed gondola cabin up over forested hills to the tea village at the edge of the basin",
+     "worlds": {
+      "fantasy": {
+       "en": "a crystal-floored cabin gliding on a silver cable over forested hills toward terraced tea gardens, the jade basin of the capital spread below",
+       "props": [
+        "camera",
+        "bag"
+       ]
+      },
+      "steampunk": {
+       "en": "a brass-and-glass gondola cabin with a glass floor gliding on a steel cable over forested hills toward the tea terraces",
+       "props": [
+        "camera",
+        "bag"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a glass-floored gondola pod of light gliding over the forested hills two centuries on, the glowing basin city spread below",
+       "props": [
+        "camera",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "maokong_teahouse",
+     "ko": "마오쿵 찻집 — 볶은 우롱과 밤 도시 전망",
+     "src": [
+      "https://en.wikipedia.org/wiki/Maokong",
+      "https://en.wikipedia.org/wiki/Taiwanese_tea"
+     ],
+     "base": "street_cafe",
+     "times": [
+      "commute_pm",
+      "night_out"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "retro"
+     ],
+     "en": "sipping roasted oolong at a hillside teahouse among the tea fields, the lights of the whole city spread below at night",
+     "worlds": {
+      "fantasy": {
+       "en": "a hillside teahouse of the capital among terraced tea gardens at night, a little clay teapot and tiny cups of reddish-brown roasted tea on a low wooden table and the lantern-lit basin spread below",
+       "props": [
+        "taipei_oolong",
+        "lamp"
+       ]
+      },
+      "steampunk": {
+       "en": "a hillside teahouse veranda among the tea terraces at night, a little clay teapot and tiny cups on a low table, gas lamps along the railing and the lit city in the basin below",
+       "props": [
+        "taipei_oolong",
+        "lamp"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a hillside teahouse among the tea terraces two centuries on, the little clay teapot and tiny cups kept as they were and the glowing basin city spread below",
+       "props": [
+        "taipei_oolong",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "beitou_bath",
+     "ko": "베이터우 온천 — 화산 기슭 온천탕",
+     "src": [
+      "https://en.wikipedia.org/wiki/Beitou_District",
+      "https://en.wikipedia.org/wiki/Beitou_Hot_Spring_Museum"
+     ],
+     "base": "spa_onsen",
+     "times": [
+      "midday",
+      "commute_pm",
+      "night_out"
+     ],
+     "outfits": [
+      "bath",
+      "swimwear"
+     ],
+     "en": "soaking in a hot-spring bath on the volcanic foothills, sulphur-scented steam drifting over the water",
+     "worlds": {
+      "fantasy": {
+       "en": "a stone hot-spring pool on the steaming volcanic foothills of the capital, milky water and sulphur-scented steam drifting under the trees",
+       "props": [
+        "water_bottle"
+       ]
+      },
+      "steampunk": {
+       "en": "a bathhouse of red brick and wooden weatherboards on the volcanic foothills, its hot-spring pool steaming under tall arched windows",
+       "props": [
+        "water_bottle"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a terraced open-air hot-spring pool on the volcanic foothills two centuries on, its steaming water softly lit from below",
+       "props": [
+        "water_bottle"
+       ]
+      }
+     }
+    },
+    {
+     "key": "thermal_valley",
+     "ko": "지열곡 — 김 오르는 유황 샘 산책",
+     "src": [
+      "https://en.wikipedia.org/wiki/Thermal_Valley",
+      "https://en.wikipedia.org/wiki/Beitou_District"
+     ],
+     "base": "travel_trail",
+     "times": [
+      "dawn",
+      "commute_am",
+      "midday"
+     ],
+     "outfits": [
+      "everyday",
+      "active",
+      "dongtan"
+     ],
+     "en": "walking the railed path around a steaming, acidic sulphur-spring pool in a valley on the volcanic foothills, clouds of hot steam rising off the water",
+     "worlds": {
+      "fantasy": {
+       "en": "a path along the railing of a steaming sulphur-spring pool in a volcanic valley of the capital, hot white steam rolling over the water and pale crystals glittering on the rocks",
+       "props": [
+        "camera",
+        "bag"
+       ]
+      },
+      "steampunk": {
+       "en": "a railed path around a steaming sulphur-spring pool in a volcanic valley, a little brass thermometer post by the rail and clean white steam rolling over the water",
+       "props": [
+        "camera",
+        "bag"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a railed path around the steaming sulphur-spring pool two centuries on, its hot water still churning and soft light lines along the rail",
+       "props": [
+        "camera",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "xiangshan_sunset",
+     "ko": "샹산(코끼리산) 계단길 — 해 질 녘 탑 전망",
+     "src": [
+      "https://en.wikipedia.org/wiki/Xiangshan,_Taipei"
+     ],
+     "base": "travel_lookout",
+     "times": [
+      "commute_pm",
+      "night_out"
+     ],
+     "outfits": [
+      "everyday",
+      "active",
+      "dongtan"
+     ],
+     "en": "climbing the steep stone steps of a small hill at the city's edge at sunset for the view of the tall tower and the city lighting up",
+     "worlds": {
+      "fantasy": {
+       "en": "the boulder-topped crest of a small hill at the edge of the capital at sunset, stone steps behind her and the great tower of eight stacked jade segments rising over the lantern-lit basin",
+       "props": [
+        "camera",
+        "water_bottle"
+       ]
+      },
+      "steampunk": {
+       "en": "the boulder-topped crest of a small hill at sunset, steep stone steps behind her and gas lamps flickering on across the basin city below",
+       "props": [
+        "camera",
+        "water_bottle"
+       ]
+      },
+      "cyberpunk": {
+       "en": "the boulder-topped crest of the small hill two centuries on at sunset, the great segmented tower and its glowing neighbours rising over the basin",
+       "props": [
+        "camera",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "dihua_newyear",
+     "ko": "디화제 설 대목 시장 — 건어물 · 약재 · 과자",
+     "src": [
+      "https://en.wikipedia.org/wiki/Dihua_Street",
+      "https://en.wikipedia.org/wiki/Dadaocheng",
+      "https://en.wikipedia.org/wiki/Taiwanese_cuisine"
+     ],
+     "base": "street_market",
+     "times": [
+      "commute_am",
+      "midday",
+      "commute_pm"
+     ],
+     "seasons": [
+      "new_year"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "retro"
+     ],
+     "en": "shopping the oldest street's crowded Lunar New Year market, shops of dried goods, herbs and snacks under old shophouse arcades",
+     "worlds": {
+      "fantasy": {
+       "en": "the oldest street of the capital crowded for the new year, arcaded shopfronts heaped with dried goods, sacks of herbs and bright new-year sweets",
+       "props": [
+        "shopping_bag",
+        "money",
+        "taipei_pineapple_cake"
+       ]
+      },
+      "steampunk": {
+       "en": "the old merchants' street crowded for the new year, red-brick arcaded shophouses heaped with dried goods, sacks of herbs and tins of sweets under warm gas lamps",
+       "props": [
+        "shopping_bag",
+        "money",
+        "taipei_pineapple_cake"
+       ]
+      },
+      "cyberpunk": {
+       "en": "the old merchants' street two centuries on crowded for the new year, its arcaded shophouses kept as they were, heaped with dried goods and sweets under floating lights",
+       "props": [
+        "shopping_bag",
+        "phone",
+        "taipei_pineapple_cake"
+       ]
+      }
+     }
+    },
+    {
+     "key": "pingxi_lantern",
+     "ko": "핑시 천등 나들이 — 소원 적은 등 띄우기",
+     "src": [
+      "https://en.wikipedia.org/wiki/Pingxi_District",
+      "https://en.wikipedia.org/wiki/Sky_lantern"
+     ],
+     "base": "travel_rural_station",
+     "times": [
+      "commute_pm",
+      "night_out"
+     ],
+     "seasons": [
+      "new_year"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan"
+     ],
+     "en": "an outing to a little mountain railway village outside the city at the Lantern Festival, releasing a paper sky lantern with her wish brushed on it from beside the tracks",
+     "worlds": {
+      "fantasy": {
+       "en": "a little mountain railway village beyond the capital on the lantern night, hundreds of paper sky lanterns rising and glowing into the dark over the tracks",
+       "props": [
+        "taipei_sky_lantern"
+       ]
+      },
+      "steampunk": {
+       "en": "a little mountain railway village beside the narrow-gauge tracks on the lantern night, a small steam engine waiting and hundreds of paper sky lanterns rising into the dark",
+       "props": [
+        "taipei_sky_lantern"
+       ]
+      },
+      "cyberpunk": {
+       "en": "the little mountain railway village two centuries on, its old tracks kept as they were, hundreds of paper sky lanterns rising into the dark among slowly drifting lights",
+       "props": [
+        "taipei_sky_lantern"
+       ]
+      }
+     }
+    },
+    {
+     "key": "shaved_ice",
+     "ko": "빙수 가게 — 연유 바오빙",
+     "src": [
+      "https://en.wikipedia.org/wiki/Shaved_ice",
+      "https://en.wikipedia.org/wiki/Taiwanese_cuisine"
+     ],
+     "base": "street_cafe",
+     "times": [
+      "midday",
+      "commute_pm"
+     ],
+     "seasons": [
+      "summer"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "retro"
+     ],
+     "en": "cooling off on a sweltering afternoon over a mountain of finely shaved ice with fruit, azuki beans and condensed milk",
+     "worlds": {
+      "fantasy": {
+       "en": "a little sweet shop of the capital on a sweltering afternoon, a mountain of finely shaved ice heaped with fruit and sweet beans on a wooden table",
+       "props": [
+        "taipei_shaved_ice",
+        "fan"
+       ]
+      },
+      "steampunk": {
+       "en": "a little sweet shop with a brass hand-cranked ice shaver on the counter, a mountain of finely shaved ice heaped with fruit and sweet beans",
+       "props": [
+        "taipei_shaved_ice",
+        "fan"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a little sweet shop two centuries on, a mountain of finely shaved ice heaped with fruit and sweet beans on a softly chilled glowing tray",
+       "props": [
+        "taipei_shaved_ice",
+        "fan"
+       ]
+      }
+     }
+    }
+   ]
+  },
+  "lisbon": {
+   "scenes": [
+    {
+     "key": "yellow_tram",
+     "ko": "노란 트램 — 가파른 언덕 골목을 덜컹이며 오르는 좁은 궤간 트램",
+     "src": [
+      "https://en.wikipedia.org/wiki/Trams_in_Lisbon",
+      "https://en.wikipedia.org/wiki/Lisbon"
+     ],
+     "base": "tram_inside",
+     "times": [
+      "commute_am",
+      "midday",
+      "commute_pm",
+      "night_out"
+     ],
+     "outfits": [
+      "everyday",
+      "workwear",
+      "dongtan",
+      "retro",
+      "subculture"
+     ],
+     "en": "riding one of Lisbon's little yellow trams as it grinds up a steep, narrow hill street on its narrow-gauge track, tiled house fronts sliding past close enough to touch",
+     "worlds": {
+      "fantasy": {
+       "en": "a little open lantern-lit tram-carriage drawn by enchantment up a steep, narrow lane of the capital, wooden benches and brass lantern hooks, tile-clad house fronts sliding past close enough to touch",
+       "props": [
+        "ticket",
+        "bag",
+        "book"
+       ]
+      },
+      "steampunk": {
+       "en": "a little yellow steam tram with polished brass trim climbing a steep cobbled lane, varnished wooden benches and brass grab rails, tile-clad house fronts sliding past close enough to touch",
+       "props": [
+        "ticket",
+        "bag",
+        "book"
+       ]
+      },
+      "cyberpunk": {
+       "en": "an old yellow tram kept exactly as it was two centuries on, still climbing a steep lane on its narrow track, varnished wooden benches and softly glowing tiled house fronts sliding past the open windows",
+       "props": [
+        "ticket",
+        "phone",
+        "bag"
+       ]
+      }
+     }
+    },
+    {
+     "key": "pastelaria",
+     "ko": "빵집 카운터 — 갓 구운 파스텔 드 나타와 쓴 비카 한 잔",
+     "src": [
+      "https://en.wikipedia.org/wiki/Pastel_de_nata",
+      "https://en.wikipedia.org/wiki/Portuguese_cuisine"
+     ],
+     "base": "street_cafe",
+     "indoor": true,
+     "times": [
+      "commute_am",
+      "midday",
+      "commute_pm"
+     ],
+     "outfits": [
+      "everyday",
+      "workwear",
+      "dongtan",
+      "retro"
+     ],
+     "en": "standing at the counter of a neighbourhood pastry café with a custard tart fresh from the oven, dusted with cinnamon and icing sugar, and a small bitter bica espresso",
+     "worlds": {
+      "fantasy": {
+       "en": "a little tiled pastry shop of the capital, trays of golden custard tarts fresh from a wood-fired oven on the marble counter and a tiny cup of strong dark brew beside them",
+       "props": [
+        "lisbon_nata",
+        "espresso",
+        "money"
+       ]
+      },
+      "steampunk": {
+       "en": "a tiled pastry café in warm gaslight, a polished brass espresso boiler hissing clean steam behind the marble counter and trays of golden custard tarts fresh from the oven",
+       "props": [
+        "lisbon_nata",
+        "espresso",
+        "money"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a neighbourhood pastry café kept as it is two centuries on, tiled walls softly glowing, trays of golden custard tarts fresh from the oven on the marble counter and a tiny cup of bitter espresso",
+       "props": [
+        "lisbon_nata",
+        "espresso",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "miradouro",
+     "ko": "알파마 전망대 — 해 질 녘 붉은 지붕 너머 강 어귀를 내려다보기",
+     "src": [
+      "https://en.wikipedia.org/wiki/Alfama",
+      "https://en.wikipedia.org/wiki/Lisbon"
+     ],
+     "base": "travel_lookout",
+     "times": [
+      "midday",
+      "commute_pm",
+      "night_out"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "retro",
+      "evening"
+     ],
+     "en": "leaning on the railing of a viewpoint terrace above the Alfama, the oldest quarter, its tangle of terracotta roofs and small squares falling away to the wide Tagus at sunset",
+     "worlds": {
+      "fantasy": {
+       "en": "a lamplit viewpoint terrace above the old quarter of the capital at sunset, walls of blue-and-white painted tiles, a tangle of terracotta roofs and the walled hilltop castle falling away to the shining estuary",
+       "props": [
+        "drink_glass",
+        "flowers",
+        "book"
+       ]
+      },
+      "steampunk": {
+       "en": "a gaslit viewpoint terrace above the old quarter at sunset, wrought-brass railings and tiled benches, terracotta roofs falling away to the estuary where paddle-wheel ferries leave trails of white steam",
+       "props": [
+        "drink_glass",
+        "camera",
+        "book"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a viewpoint terrace above the old quarter two centuries on at sunset, softly glowing tiled benches, the terracotta roofs kept exactly as they were and flying vehicles drifting over the estuary",
+       "props": [
+        "drink_glass",
+        "camera",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "fado_night",
+     "ko": "파두 밤 — 알파마 작은 술집에서 숨죽여 듣는 노래와 열두 줄 기타",
+     "src": [
+      "https://en.wikipedia.org/wiki/Fado",
+      "https://en.wikipedia.org/wiki/Alfama",
+      "https://en.wikipedia.org/wiki/Portuguese_guitar"
+     ],
+     "base": "night_jazz",
+     "indoor": true,
+     "times": [
+      "night_out",
+      "past_midnight"
+     ],
+     "outfits": [
+      "evening",
+      "everyday",
+      "retro"
+     ],
+     "en": "listening to fado late at night in a small Alfama tavern, the room hushed as a singer's melancholy song rises over a twelve-string Portuguese guitar",
+     "worlds": {
+      "fantasy": {
+       "en": "a small candlelit song-tavern in the lanes of the old quarter late at night, tile-clad walls and low wooden tables, a hushed room listening to a melancholy song over a twelve-string guitar",
+       "props": [
+        "lisbon_guitarra",
+        "drink_glass",
+        "money"
+       ]
+      },
+      "steampunk": {
+       "en": "a small gaslit song-tavern in the old quarter late at night, tiled walls and brass wall lamps turned low, a hushed room listening to a melancholy song over a twelve-string guitar",
+       "props": [
+        "lisbon_guitarra",
+        "drink_glass",
+        "money"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a small song-tavern of the old quarter kept as it is two centuries on, tiled walls glowing faintly and the lights turned low, a hushed room listening to a melancholy song over a twelve-string guitar",
+       "props": [
+        "lisbon_guitarra",
+        "drink_glass",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "ginjinha",
+     "ko": "진지냐 한 잔 — 광장 옆 작은 가게 카운터에서 체리 한 알 담긴 체리주",
+     "src": [
+      "https://en.wikipedia.org/wiki/Ginjinha"
+     ],
+     "base": "street_noodle_stall",
+     "times": [
+      "midday",
+      "commute_pm",
+      "night_out"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "retro",
+      "subculture"
+     ],
+     "en": "a quick stop at a tiny ginjinha bar on a little square, a shot of sour-cherry liqueur with a cherry at the bottom of the glass drunk standing at the narrow counter",
+     "worlds": {
+      "fantasy": {
+       "en": "a tiny cherry-liqueur counter opening onto a little square of the capital, dark wooden shelves of glass flasks and small cups of deep red liqueur set out on the narrow counter",
+       "props": [
+        "lisbon_ginjinha",
+        "money",
+        "flowers"
+       ]
+      },
+      "steampunk": {
+       "en": "a tiny cherry-liqueur bar of painted wood and brass opening onto a gaslit square, rows of glass flasks behind the narrow counter and small glasses of deep red liqueur",
+       "props": [
+        "lisbon_ginjinha",
+        "money",
+        "drink_glass"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a tiny cherry-liqueur bar kept as it is two centuries on, its narrow counter opening onto a softly lit square, old glass flasks on the shelves and small glasses of deep red liqueur",
+       "props": [
+        "lisbon_ginjinha",
+        "money",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "flea_market",
+     "ko": "페이라 다 라드라 — 화 · 토요일 산타 클라라 들판의 벼룩시장",
+     "src": [
+      "https://en.wikipedia.org/wiki/Feira_da_Ladra"
+     ],
+     "base": "street_market",
+     "times": [
+      "commute_am",
+      "midday"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "retro",
+      "subculture"
+     ],
+     "en": "browsing the Feira da Ladra flea market on a Tuesday or Saturday morning, stalls of antiques, second-hand objects and crafts spread out on the open ground of Campo de Santa Clara",
+     "worlds": {
+      "fantasy": {
+       "en": "an open-air bric-a-brac fair on a broad square of the old quarter, blankets and trestle tables spread with old painted tiles, brass trinkets, lace and carved curios under the morning sun",
+       "props": [
+        "lisbon_tile",
+        "shopping_bag",
+        "money"
+       ]
+      },
+      "steampunk": {
+       "en": "an open-air bric-a-brac fair on a broad square, trestle tables of old painted tiles, brass instruments, clockwork curios and lace spread out under striped awnings in the morning sun",
+       "props": [
+        "lisbon_tile",
+        "shopping_bag",
+        "money"
+       ]
+      },
+      "cyberpunk": {
+       "en": "an open-air flea market two centuries on, still spread across the same broad square, old painted tiles, antique curios and handmade crafts on softly glowing trestle tables",
+       "props": [
+        "lisbon_tile",
+        "shopping_bag",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "sardines",
+     "ko": "구운 정어리 — 작은 밥집 앞 숯불에서 갓 구운 정어리 한 접시",
+     "src": [
+      "https://en.wikipedia.org/wiki/Portuguese_cuisine"
+     ],
+     "base": "street_diner",
+     "times": [
+      "midday",
+      "commute_pm",
+      "night_out"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "retro"
+     ],
+     "en": "a plate of grilled sardines, sardinhas assadas, at a small neighbourhood eatery, the fish fresh off a charcoal grill set out on the pavement",
+     "worlds": {
+      "fantasy": {
+       "en": "a little neighbourhood eating house on a steep lane of the capital, sardines sizzling on an iron grill over glowing charcoal by the door and plates set out on a small wooden table",
+       "props": [
+        "lisbon_sardines",
+        "drink_glass",
+        "money"
+       ]
+      },
+      "steampunk": {
+       "en": "a little neighbourhood eating house on a gaslit lane, sardines sizzling on an iron grill over glowing charcoal by the door and plates set out on a small tiled table",
+       "props": [
+        "lisbon_sardines",
+        "drink_glass",
+        "money"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a little neighbourhood eatery two centuries on, sardines sizzling on a glowing grill by the door and plates set out on a small tiled table in the softly lit lane",
+       "props": [
+        "lisbon_sardines",
+        "drink_glass",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "bairro_alto",
+     "ko": "바이후 알투의 밤 — 바둑판 골목의 작은 술집들",
+     "src": [
+      "https://en.wikipedia.org/wiki/Bairro_Alto",
+      "https://en.wikipedia.org/wiki/Lisbon"
+     ],
+     "base": "night_bar",
+     "times": [
+      "night_out",
+      "past_midnight"
+     ],
+     "outfits": [
+      "evening",
+      "everyday",
+      "subculture",
+      "dongtan"
+     ],
+     "en": "a night out in the Bairro Alto, the centre of Lisbon's nightlife, moving between the small bars and restaurants that crowd its narrow grid of lanes",
+     "worlds": {
+      "fantasy": {
+       "en": "a small lamplit tavern on a narrow lane of the high quarter of the capital at night, its door open to the crowded lane, wooden counter and shelves of glass bottles glowing in candlelight",
+       "props": [
+        "drink_glass",
+        "pint",
+        "money"
+       ]
+      },
+      "steampunk": {
+       "en": "a small gaslit bar on a narrow lane of the high quarter at night, brass taps and a polished wooden counter, its door open onto the crowded lane",
+       "props": [
+        "drink_glass",
+        "pint",
+        "money"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a small bar on a narrow lane of the high quarter two centuries on, its old wooden counter kept as it was under soft glowing light and its door open onto the crowded lane",
+       "props": [
+        "drink_glass",
+        "pint",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "river_ferry",
+     "ko": "테주강 나룻배 — 강 건너 출퇴근, 멀리 붉은 현수교",
+     "src": [
+      "https://en.wikipedia.org/wiki/Lisbon",
+      "https://en.wikipedia.org/wiki/25_de_Abril_Bridge"
+     ],
+     "base": "travel_ferry",
+     "times": [
+      "commute_am",
+      "midday",
+      "commute_pm"
+     ],
+     "outfits": [
+      "everyday",
+      "workwear",
+      "dongtan",
+      "retro"
+     ],
+     "en": "crossing the wide Tagus on a commuter ferry, the hills of the city and the long red suspension bridge spread along the water",
+     "worlds": {
+      "fantasy": {
+       "en": "a broad wooden ferry boat crossing the wide shining estuary under a great white sail, the seven hills of the capital and its walled hilltop castle spread along the water",
+       "props": [
+        "bag",
+        "book",
+        "cup"
+       ]
+      },
+      "steampunk": {
+       "en": "a paddle-wheel steam ferry crossing the wide estuary in clean white steam, polished brass rails and wooden benches, the hills of the city and the long red suspension bridge spread along the water",
+       "props": [
+        "ticket",
+        "bag",
+        "cup"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a silent ferry two centuries on gliding across the wide estuary, its clear deck softly lit, the seven hills and the great red suspension bridge hung with luminous gardens spread along the water",
+       "props": [
+        "ticket",
+        "phone",
+        "bag"
+       ]
+      }
+     }
+    },
+    {
+     "key": "expo_cablecar",
+     "ko": "파르크 다스 나송이스 케이블카 — 강가 옛 엑스포 자리를 건너는 작은 곤돌라",
+     "src": [
+      "https://en.wikipedia.org/wiki/Parque_das_Na%C3%A7%C3%B5es"
+     ],
+     "base": "travel_cablecar",
+     "times": [
+      "midday",
+      "commute_pm"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "retro"
+     ],
+     "en": "riding the cable car across the former Expo 98 grounds of Parque das Nações, the riverside promenade and the wide estuary below",
+     "worlds": {
+      "fantasy": {
+       "en": "a little carved wooden gondola gliding on a spell-woven rope above the riverside gardens of the capital, the promenade and the wide shining estuary below",
+       "props": [
+        "bag",
+        "camera",
+        "flowers"
+       ]
+      },
+      "steampunk": {
+       "en": "a little brass-and-glass gondola gliding on a steel cable above the riverside gardens, the promenade and the wide estuary below and small airships drifting overhead",
+       "props": [
+        "ticket",
+        "camera",
+        "bag"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a clear-sided gondola two centuries on gliding above the riverside quarter of pale glass towers, the glowing promenade and the wide estuary far below",
+       "props": [
+        "ticket",
+        "phone",
+        "bag"
+       ]
+      }
+     }
+    },
+    {
+     "key": "river_square",
+     "ko": "코메르시우 광장 — 테주강으로 내려가는 대리석 계단에 앉아 해 질 녘",
+     "src": [
+      "https://en.wikipedia.org/wiki/Pra%C3%A7a_do_Com%C3%A9rcio",
+      "https://en.wikipedia.org/wiki/Portuguese_pavement"
+     ],
+     "base": "water_river",
+     "times": [
+      "midday",
+      "commute_pm",
+      "night_out"
+     ],
+     "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "retro",
+      "evening"
+     ],
+     "en": "sitting on the old marble steps that descend into the Tagus at the edge of the great arcaded Praça do Comércio, watching the sun go down over the river",
+     "worlds": {
+      "fantasy": {
+       "en": "the old marble steps descending into the shining estuary at the edge of the vast arcaded square of the capital, a great triumphal arch behind her and tall ships at anchor in the sunset",
+       "props": [
+        "drink_glass",
+        "flowers",
+        "book"
+       ]
+      },
+      "steampunk": {
+       "en": "the old marble steps descending into the estuary at the edge of the grand arcaded square at sunset, gas lamps along the arcades, the triumphal arch behind her and paddle-wheel ferries on the water",
+       "props": [
+        "drink_glass",
+        "camera",
+        "book"
+       ]
+      },
+      "cyberpunk": {
+       "en": "the old marble steps descending into the estuary at the edge of the arcaded square, kept exactly as they are two centuries on, the triumphal arch behind her and flying vehicles over the sunset water",
+       "props": [
+        "drink_glass",
+        "camera",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "factory_yards",
+     "ko": "알칸타라 옛 공장 마당 — 다리 아래 창작 공간의 가게 · 책방 · 카페",
+     "src": [
+      "https://en.wikipedia.org/wiki/Alc%C3%A2ntara,_Lisbon",
+      "https://en.wikipedia.org/wiki/Lisbon"
+     ],
+     "base": "street_shop",
+     "times": [
+      "midday",
+      "commute_pm",
+      "night_out"
+     ],
+     "outfits": [
+      "everyday",
+      "subculture",
+      "dongtan",
+      "editorial"
+     ],
+     "en": "wandering an old riverside factory complex in Alcântara, under the great bridge, turned into a creative quarter of cafés, shops, studios and art",
+     "worlds": {
+      "fantasy": {
+       "en": "an old riverside ropewalk and weaving hall of the capital turned into a quarter of craft workshops and little shops, painted tiles, bolts of cloth and carved curios set out under high timber roofs",
+       "props": [
+        "shopping_bag",
+        "lisbon_tile",
+        "book"
+       ]
+      },
+      "steampunk": {
+       "en": "an old red-brick riverside factory of iron columns and tall arched windows turned into a quarter of workshops, little shops and cafés, brass lamps hanging from the iron beams",
+       "props": [
+        "shopping_bag",
+        "lisbon_tile",
+        "book"
+       ]
+      },
+      "cyberpunk": {
+       "en": "an old red-brick riverside factory yard beneath the great red bridge turned into a glowing studio quarter, walls of painted tiles and projected patterns, little shops and cafés along the yard",
+       "props": [
+        "shopping_bag",
+        "lisbon_tile",
+        "phone"
+       ]
+      }
+     }
+    }
+   ]
+  },
+  "berlin": {
+   "scenes": [
+    {
+     "key": "spaeti",
+     "ko": "늦은 밤 슈페티 — 동네 늦가게 앞 작은 벤치에서 병맥주 한 병",
+     "src": [
+      "https://en.wikipedia.org/wiki/Sp%C3%A4tkauf",
+      "https://en.wikipedia.org/wiki/Kiez"
+     ],
+     "base": "street_grocery",
+     "times": [
+      "commute_pm",
+      "night_out",
+      "past_midnight"
+     ],
+     "outfits": [
+      "everyday",
+      "subculture",
+      "dongtan",
+      "retro"
+     ],
+     "en": "a late evening at a Späti, the neighbourhood corner shop open long past normal hours, sitting on the little bench outside with a cold bottle of beer",
+     "worlds": {
+      "fantasy": {
+       "en": "a tiny lamplit corner shop of the capital open long after the market has closed, shelves of bottles and bread behind its window and a little wooden bench outside where neighbours sit with a cold drink",
+       "props": [
+        "berlin_bottle",
+        "money",
+        "bag"
+       ]
+      },
+      "steampunk": {
+       "en": "a little corner shop glowing with gaslight long after the other shops have closed, crates of bottles stacked by the door and a little wooden bench outside where neighbours sit with a cold drink",
+       "props": [
+        "berlin_bottle",
+        "money",
+        "bag"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a tiny late-night corner shop two centuries on, its shelves softly lit and the little bench outside kept as it was, where neighbours sit with a cold drink",
+       "props": [
+        "berlin_bottle",
+        "money",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "currywurst",
+     "ko": "커리부어스트 가판 — 카레 케첩을 끼얹은 썬 소시지와 감자튀김",
+     "src": [
+      "https://en.wikipedia.org/wiki/Currywurst"
+     ],
+     "base": "street_noodle_stall",
+     "times": [
+      "midday",
+      "commute_pm",
+      "night_out",
+      "past_midnight"
+     ],
+     "outfits": [
+      "everyday",
+      "workwear",
+      "subculture",
+      "dongtan"
+     ],
+     "en": "a stop at a currywurst snack stand, a sliced pork sausage under curry ketchup and curry powder on a paper plate with chips and a little wooden fork",
+     "worlds": {
+      "fantasy": {
+       "en": "a little wooden snack stall on a lamplit corner of the capital, sausages sizzling on an iron griddle and served sliced under a spiced red sauce on the narrow counter",
+       "props": [
+        "berlin_currywurst",
+        "money",
+        "drink_glass"
+       ]
+      },
+      "steampunk": {
+       "en": "a snack stand of painted wood and brass beneath an iron viaduct arch, sausages sizzling on a steam-heated griddle and served sliced under a spiced red sauce on the narrow counter",
+       "props": [
+        "berlin_currywurst",
+        "money",
+        "drink_glass"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a little snack stand two centuries on beneath the old viaduct, its narrow counter softly glowing, sausages served sliced under a spiced red curry sauce",
+       "props": [
+        "berlin_currywurst",
+        "money",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "hochbahn",
+     "ko": "고가 철길 지하철 — 붉은 벽돌 이층 다리로 강을 건너는 열차 창가",
+     "src": [
+      "https://en.wikipedia.org/wiki/Berlin_U-Bahn",
+      "https://en.wikipedia.org/wiki/U1_(Berlin_U-Bahn)",
+      "https://en.wikipedia.org/wiki/Oberbaum_Bridge"
+     ],
+     "base": "subway_car",
+     "indoor": true,
+     "times": [
+      "commute_am",
+      "midday",
+      "commute_pm",
+      "night_out"
+     ],
+     "outfits": [
+      "everyday",
+      "workwear",
+      "dongtan",
+      "retro"
+     ],
+     "en": "riding the elevated line of the U-Bahn, looking out of the carriage window as the train crosses the Spree on the upper deck of the red-brick Oberbaum Bridge",
+     "worlds": {
+      "fantasy": {
+       "en": "a little enchanted carriage gliding along a high stone viaduct of the capital, wooden benches and wide windows looking down on the river as it crosses a red-brick bridge of pointed arches",
+       "props": [
+        "ticket",
+        "book",
+        "bag"
+       ]
+      },
+      "steampunk": {
+       "en": "a little yellow train carriage of polished wood and brass rolling along an ornamented iron viaduct, its windows looking down on the river as it crosses the upper deck of a red-brick bridge of pointed arches",
+       "props": [
+        "ticket",
+        "book",
+        "bag"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a quiet yellow train carriage two centuries on, still riding the old iron viaduct and the red-brick double-deck bridge over the river, its windows softly glowing over the far-future city",
+       "props": [
+        "ticket",
+        "phone",
+        "music"
+       ]
+      }
+     }
+    },
+    {
+     "key": "technonight",
+     "ko": "테크노 클럽의 긴 밤 — 빈 공장 건물의 맨 콘크리트 · 쇠, 새벽까지",
+     "src": [
+      "https://en.wikipedia.org/wiki/Techno"
+     ],
+     "base": "night_club",
+     "indoor": true,
+     "times": [
+      "night_out",
+      "past_midnight",
+      "dawn"
+     ],
+     "outfits": [
+      "subculture",
+      "evening",
+      "dongtan",
+      "everyday"
+     ],
+     "en": "a long techno night in a club inside an old empty industrial building, bare concrete and iron, the music running until long after dawn",
+     "worlds": {
+      "fantasy": {
+       "en": "a vast vaulted old mill hall of the capital turned over to a night of dancing, bare stone walls and iron beams, deep drums and humming horns throbbing as enchanted lights sweep through the haze",
+       "props": [
+        "drink_glass",
+        "berlin_vinyl",
+        "money"
+       ]
+      },
+      "steampunk": {
+       "en": "a vast old brick engine hall turned over to a night of dancing, iron galleries and great idle flywheels, a brass-horned sound machine thundering as beams of gaslight sweep through clean white steam",
+       "props": [
+        "drink_glass",
+        "berlin_vinyl",
+        "money"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a vast old power station turned club two centuries on, towering bare concrete and iron galleries, slow beams of white light cutting the haze and the bass running until dawn",
+       "props": [
+        "drink_glass",
+        "berlin_vinyl",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "museuminsel",
+     "ko": "박물관 섬 — 강 섬 위 다섯 박물관의 열주와 고대 조각 전시실",
+     "src": [
+      "https://en.wikipedia.org/wiki/Museum_Island",
+      "https://en.wikipedia.org/wiki/Altes_Museum",
+      "https://en.wikipedia.org/wiki/Bode_Museum"
+     ],
+     "base": "gallery_white",
+     "indoor": true,
+     "times": [
+      "midday",
+      "commute_pm"
+     ],
+     "outfits": [
+      "everyday",
+      "retro",
+      "dongtan",
+      "workwear"
+     ],
+     "en": "an afternoon on Museum Island, the five museums on the island in the Spree, from the front of eighteen columns to halls of ancient sculpture and coins",
+     "worlds": {
+      "fantasy": {
+       "en": "a great treasure-hall on the river island of the capital, marble halls of ancient carved sculpture and stone reliefs under a high painted ceiling, light falling through tall windows",
+       "props": [
+        "ticket",
+        "book",
+        "bag"
+       ]
+      },
+      "steampunk": {
+       "en": "a grand museum hall on the river island in warm gaslight, glass cases of ancient coins and treasures, carved stone reliefs and a high domed ceiling",
+       "props": [
+        "ticket",
+        "book",
+        "camera"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a museum hall on the river island two centuries on, its ancient carved sculpture and reliefs kept exactly as they stand under soft light panels in the ceiling",
+       "props": [
+        "ticket",
+        "camera",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "philharmonie",
+     "ko": "필하모니 — 무대를 빙 둘러 포도밭처럼 오르는 객석의 저녁 연주회",
+     "src": [
+      "https://en.wikipedia.org/wiki/Berliner_Philharmonie"
+     ],
+     "base": "evening_opera",
+     "indoor": true,
+     "times": [
+      "commute_pm",
+      "night_out"
+     ],
+     "outfits": [
+      "evening",
+      "everyday",
+      "retro",
+      "dongtan"
+     ],
+     "en": "an evening concert in the tent-like Philharmonie, the orchestra at the centre of the hall and terraces of seats rising all around it like a vineyard",
+     "worlds": {
+      "fantasy": {
+       "en": "a great tent-roofed concert hall of the capital, the orchestra at its heart and terraces of seats rising all around like a vineyard, music filling the golden air",
+       "props": [
+        "ticket",
+        "flowers",
+        "bag"
+       ]
+      },
+      "steampunk": {
+       "en": "a great tent-roofed concert hall in warm gaslight, the orchestra at its centre and terraces of seats rising all around like a vineyard, opera glasses glinting along the rows",
+       "props": [
+        "ticket",
+        "flowers",
+        "bag"
+       ]
+      },
+      "cyberpunk": {
+       "en": "the tent-like concert hall two centuries on, kept as it was, the orchestra at its centre and terraces of seats rising all around like a vineyard under soft light",
+       "props": [
+        "ticket",
+        "flowers",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "tiergarten",
+     "ko": "티어가르텐 — 도심 큰 공원 풀밭의 소풍, 개울과 작은 다리",
+     "src": [
+      "https://en.wikipedia.org/wiki/Tiergarten_(park)"
+     ],
+     "base": "street_park",
+     "times": [
+      "midday",
+      "commute_pm"
+     ],
+     "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+     ],
+     "outfits": [
+      "everyday",
+      "active",
+      "dongtan",
+      "retro"
+     ],
+     "en": "a picnic on the open lawns of the Tiergarten, the great inner-city park of streams, clusters of trees, little lakes and bridges",
+     "worlds": {
+      "fantasy": {
+       "en": "the great green park of the capital, wide lawns among clusters of old trees, streams crossed by little bridges and a picnic cloth spread in the sun",
+       "props": [
+        "mat",
+        "book",
+        "flowers"
+       ]
+      },
+      "steampunk": {
+       "en": "the great green park on a sunny afternoon, wide lawns among clusters of old trees, gas lamps along the paths, streams crossed by little iron bridges and a picnic cloth on the grass",
+       "props": [
+        "mat",
+        "book",
+        "camera"
+       ]
+      },
+      "cyberpunk": {
+       "en": "the great green park two centuries on, its lawns, old trees and little bridges kept as they were, a picnic spread on a softly glowing mat",
+       "props": [
+        "mat",
+        "book",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "riverboat",
+     "ko": "강 유람선 — 슈프레강과 운하를 따라 박물관 섬 옆을 지나는 배",
+     "src": [
+      "https://en.wikipedia.org/wiki/Landwehr_Canal",
+      "https://en.wikipedia.org/wiki/Spree_Island",
+      "https://en.wikipedia.org/wiki/Museum_Island"
+     ],
+     "base": "travel_ferry",
+     "times": [
+      "midday",
+      "commute_pm",
+      "night_out"
+     ],
+     "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+     ],
+     "outfits": [
+      "everyday",
+      "retro",
+      "dongtan",
+      "resort"
+     ],
+     "en": "a sightseeing boat on the Spree and its canals, gliding past Museum Island and under the city's low bridges",
+     "worlds": {
+      "fantasy": {
+       "en": "an open riverboat of carved wood gliding along the slow green river of the capital and under its low stone bridges, the domed treasure-halls of the river island sliding past",
+       "props": [
+        "ticket",
+        "drink_glass",
+        "book"
+       ]
+      },
+      "steampunk": {
+       "en": "a little brass-funnelled steam launch puffing clean white steam along the river and the canals, under low iron bridges and past the domed museums of the river island",
+       "props": [
+        "ticket",
+        "drink_glass",
+        "camera"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a silent glass-roofed riverboat two centuries on, gliding along the river and canals past the domed museum island and under the old bridges",
+       "props": [
+        "ticket",
+        "drink_glass",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "mueggelsee",
+     "ko": "뮈겔호 — 베를린에서 가장 큰 호숫가의 여름 물놀이",
+     "src": [
+      "https://en.wikipedia.org/wiki/M%C3%BCggelsee",
+      "https://en.wikipedia.org/wiki/Berlin"
+     ],
+     "base": "travel_lake",
+     "times": [
+      "midday",
+      "commute_pm"
+     ],
+     "seasons": [
+      "summer"
+     ],
+     "outfits": [
+      "swimwear",
+      "resort",
+      "active",
+      "everyday"
+     ],
+     "en": "a summer day on the shore of the Müggelsee, the largest of Berlin's lakes, swimming and sunbathing at the water's edge",
+     "worlds": {
+      "fantasy": {
+       "en": "the shore of a great still lake at the edge of the capital, reeds and pine woods all around, swimmers and little sails out on the bright water",
+       "props": [
+        "float_ring",
+        "mat",
+        "berlin_bottle"
+       ]
+      },
+      "steampunk": {
+       "en": "the sandy shore of a great lake in summer, striped bathing tents along the water and little wooden boats with canvas sails out on the bright water",
+       "props": [
+        "float_ring",
+        "mat",
+        "book"
+       ]
+      },
+      "cyberpunk": {
+       "en": "the shore of the great lake two centuries on, clean bright water, pine woods and a softly glowing jetty reaching out into the lake",
+       "props": [
+        "float_ring",
+        "mat",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "biergarten",
+     "ko": "비어가든 — 라즈베리 · 선갈퀴 시럽을 탄 베를린 바이세 한 사발",
+     "src": [
+      "https://en.wikipedia.org/wiki/Berliner_Weisse",
+      "https://en.wikipedia.org/wiki/Beer_garden"
+     ],
+     "base": "street_cafe",
+     "times": [
+      "midday",
+      "commute_pm",
+      "night_out"
+     ],
+     "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+     ],
+     "outfits": [
+      "everyday",
+      "retro",
+      "dongtan",
+      "subculture"
+     ],
+     "en": "an afternoon in a beer garden under old trees with a bowl-shaped glass of Berliner Weisse, the cloudy sour wheat beer tinted red with raspberry or green with woodruff syrup",
+     "worlds": {
+      "fantasy": {
+       "en": "a leafy beer garden of the capital under spreading old trees, long wooden tables and benches, a wide bowl of cloudy pale ale tinted red with raspberry syrup",
+       "props": [
+        "berlin_weisse",
+        "money",
+        "book"
+       ]
+      },
+      "steampunk": {
+       "en": "a leafy beer garden strung with gas lamps, long wooden tables under old trees and a bowl-shaped glass of cloudy sour beer tinted green with woodruff syrup, a straw in it",
+       "props": [
+        "berlin_weisse",
+        "money",
+        "book"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a leafy beer garden two centuries on, its long wooden tables and old trees kept as they were, a bowl-shaped glass of cloudy sour beer tinted raspberry red on a softly glowing table",
+       "props": [
+        "berlin_weisse",
+        "money",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "lightfest",
+     "ko": "가을 빛 축제 — 큰 문 · 탑 · 큰 건물을 덮는 빛 그림 사이를 걷는 밤",
+     "src": [
+      "https://en.wikipedia.org/wiki/Festival_of_Lights_(Berlin)",
+      "https://en.wikipedia.org/wiki/Brandenburg_Gate"
+     ],
+     "base": "stage_festival",
+     "times": [
+      "night_out"
+     ],
+     "seasons": [
+      "autumn"
+     ],
+     "outfits": [
+      "everyday",
+      "evening",
+      "dongtan",
+      "retro"
+     ],
+     "en": "an autumn evening walk through the city's annual festival of light, when the Brandenburg Gate, the TV tower and grand facades are transformed with illuminations and light projections",
+     "worlds": {
+      "fantasy": {
+       "en": "the capital on an autumn festival night, the great pale-stone gate and the grand facades along the linden boulevard painted with slowly moving pictures of coloured light, crowds strolling beneath",
+       "props": [
+        "camera",
+        "bag",
+        "drink_glass"
+       ]
+      },
+      "steampunk": {
+       "en": "the gaslit city on an autumn festival night, the great gate of fluted columns and the grand facades painted with moving pictures thrown by brass magic lanterns, crowds strolling beneath",
+       "props": [
+        "camera",
+        "bag",
+        "ticket"
+       ]
+      },
+      "cyberpunk": {
+       "en": "the city on an autumn festival night two centuries on, the old gate of fluted columns, the mirrored sphere of the old needle tower and the grand facades wrapped in moving light, crowds strolling beneath",
+       "props": [
+        "camera",
+        "bag",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "muralwalk",
+     "ko": "이스트사이드 갤러리 — 강가 1.3킬로미터 벽화 길 산책",
+     "src": [
+      "https://en.wikipedia.org/wiki/East_Side_Gallery"
+     ],
+     "base": "street_bike_path",
+     "times": [
+      "midday",
+      "commute_pm"
+     ],
+     "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+     ],
+     "outfits": [
+      "everyday",
+      "subculture",
+      "active",
+      "dongtan"
+     ],
+     "en": "a walk along the East Side Gallery, the long riverside stretch of wall painted end to end with murals by artists from many countries",
+     "worlds": {
+      "fantasy": {
+       "en": "a long riverside wall of the capital painted end to end with bright, wordless murals by many hands, the slow river beside it and a red-brick bridge of pointed arches beyond",
+       "props": [
+        "camera",
+        "bag",
+        "flowers"
+       ]
+      },
+      "steampunk": {
+       "en": "a long riverside wall painted end to end with bright, wordless murals, a cobbled path along the river and a red-brick bridge of pointed arches beyond with a little yellow train crossing it",
+       "props": [
+        "camera",
+        "bag",
+        "book"
+       ]
+      },
+      "cyberpunk": {
+       "en": "the long riverside mural wall two centuries on, kept as it was and softly lit along its foot, the river and the old red-brick bridge beyond",
+       "props": [
+        "camera",
+        "bag",
+        "phone"
+       ]
+      }
+     }
+    }
+   ]
+  },
+  "gyeongju": {
+   "scenes": [
+    {
+     "key": "hwangnidan_cafe",
+     "ko": "황리단길 한옥 카페",
+     "src": [
+      "https://en.wikipedia.org/wiki/Hwangnidan-gil"
+     ],
+     "base": "street_cafe",
+     "times": [
+      "midday",
+      "commute_pm",
+      "night_out"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "retro",
+      "traditional"
+     ],
+     "en": "sitting in a hanok café on a busy street of tiled-roof traditional houses turned into cafés and little shops, a drink and a pastry on the low table and visitors strolling past the wooden gate",
+     "worlds": {
+      "fantasy": {
+       "en": "a café of the golden capital in a tiled-roof wooden house on a busy lane, low lacquered tables on a warm wooden floor, paper-screened lattice windows open to the street and lantern-orbs glowing under the curved eaves",
+       "props": [
+        "cup",
+        "gyeongju_bread",
+        "lamp"
+       ]
+      },
+      "steampunk": {
+       "en": "a café in a tiled-roof wooden house on a lively gaslit lane, a brass coffee urn hissing softly on the counter, low wooden tables by lattice windows and shoppers strolling past under strings of lamps",
+       "props": [
+        "cup",
+        "gyeongju_bread",
+        "bag"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a café in a preserved tiled-roof wooden house two centuries on, warm light running along its curved eaves, low wooden tables by softly glowing paper-screened windows and a busy lane of little shops outside",
+       "props": [
+        "cup",
+        "gyeongju_bread",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "mound_park",
+     "ko": "대릉원 돌담길 — 풀빛 큰 둥근 언덕 사이 산책",
+     "src": [
+      "https://en.wikipedia.org/wiki/Daereungwon"
+     ],
+     "base": "street_park",
+     "times": [
+      "dawn",
+      "midday",
+      "commute_pm"
+     ],
+     "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+     ],
+     "outfits": [
+      "everyday",
+      "active",
+      "dongtan",
+      "retro"
+     ],
+     "en": "walking the quiet paths of a park where great round grass-covered mounds rise like soft green hills, low stone walls and old pine trees along the way",
+     "worlds": {
+      "fantasy": {
+       "en": "a quiet garden path of the golden capital winding between great round grass-green mounds like soft hills, low stone walls, old pines and little gold spangles hung on the gate eaves",
+       "props": [
+        "camera",
+        "water_bottle",
+        "flowers"
+       ]
+      },
+      "steampunk": {
+       "en": "a gravel promenade winding between great round grass-green mounds like soft hills, low stone walls, old pines and a few gas lamps along the path",
+       "props": [
+        "camera",
+        "water_bottle",
+        "book"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a quiet garden path two centuries on winding between great round grass-green mounds like soft hills, low stone walls and old pines, the edges of the path glowing faintly",
+       "props": [
+        "camera",
+        "water_bottle",
+        "music"
+       ]
+      }
+     }
+    },
+    {
+     "key": "star_tower_evening",
+     "ko": "첨성대 저녁 산책 — 첫 별 아래 병 모양 별 탑",
+     "src": [
+      "https://en.wikipedia.org/wiki/Cheomseongdae"
+     ],
+     "base": "travel_lookout",
+     "times": [
+      "commute_pm",
+      "night_out"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "retro",
+      "evening"
+     ],
+     "en": "an evening stroll around the bottle-shaped granite star-gazing tower on its wide lawn as the first stars come out over the basin",
+     "worlds": {
+      "fantasy": {
+       "en": "a wide lawn of wildflowers at dusk around the bottle-shaped tower of pale granite for watching the stars, its square window dark and lantern-orbs drifting up toward the first stars",
+       "props": [
+        "lamp",
+        "camera",
+        "book"
+       ]
+      },
+      "steampunk": {
+       "en": "a gaslit lawn around the bottle-shaped granite star tower at dusk, brass telescopes on tripods set out for visitors and the first stars over the basin",
+       "props": [
+        "lamp",
+        "camera",
+        "watch"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a wide lawn around the bottle-shaped granite star tower two centuries on, a slowly turning ring of floating star maps around it and the first stars overhead",
+       "props": [
+        "lamp",
+        "camera",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "wolji_night",
+     "ko": "동궁과 월지 야경 — 연못에 비친 누각",
+     "src": [
+      "https://en.wikipedia.org/wiki/Donggung_Palace_and_Wolji_Pond"
+     ],
+     "base": "park_pond",
+     "times": [
+      "commute_pm",
+      "night_out"
+     ],
+     "outfits": [
+      "everyday",
+      "evening",
+      "dongtan",
+      "traditional"
+     ],
+     "en": "an evening walk around a palace pond with three small islands, the restored pavilions lit up and mirrored in the still water",
+     "worlds": {
+      "fantasy": {
+       "en": "the curved stone bank of the moon pond of the golden capital at night, red-pillared pavilions and their lanterns mirrored perfectly in the black water around three small wooded islands",
+       "props": [
+        "lamp",
+        "camera",
+        "fan"
+       ]
+      },
+      "steampunk": {
+       "en": "the stone bank of the palace pond at night, its pavilions lit by warm gas lamps and mirrored in the still water, a little brass-trimmed lamp boat drifting near the islands",
+       "props": [
+        "lamp",
+        "camera",
+        "watch"
+       ]
+      },
+      "cyberpunk": {
+       "en": "the stone bank of the moon pond two centuries on, palace pavilions rebuilt in soft gold light hovering over the black water and mirrored beneath it",
+       "props": [
+        "lamp",
+        "camera",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "bridge_night",
+     "ko": "월정교 밤 — 불 밝힌 지붕 다리와 냇물",
+     "src": [
+      "https://en.wikipedia.org/wiki/Woljeonggyo"
+     ],
+     "base": "water_river",
+     "times": [
+      "commute_pm",
+      "night_out"
+     ],
+     "outfits": [
+      "everyday",
+      "evening",
+      "traditional",
+      "dongtan"
+     ],
+     "en": "crossing a long rebuilt covered wooden bridge with a gate tower at each end, lit up at night over the stream, with food stalls and a performance on the bank nearby",
+     "worlds": {
+      "fantasy": {
+       "en": "the long covered bridge of painted timber over the clear stream at night, red pillars and painted eaves glowing with lantern-orbs, a gate tower at each end and the light shivering on the water",
+       "props": [
+        "lamp",
+        "street_food",
+        "drink_glass"
+       ]
+      },
+      "steampunk": {
+       "en": "the long covered timber bridge over the stream at night, brass gas lamps under its painted eaves, a gate tower at each end and lantern-lit food stalls on the bank below",
+       "props": [
+        "lamp",
+        "street_food",
+        "watch"
+       ]
+      },
+      "cyberpunk": {
+       "en": "the long covered timber bridge two centuries on, its painted eaves traced in warm light, gate towers glowing at each end and floating lanterns of light over the stream",
+       "props": [
+        "lamp",
+        "street_food",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "lake_cherry_ride",
+     "ko": "보문호 벚꽃 자전거길",
+     "src": [
+      "https://ko.wikipedia.org/wiki/%EB%B3%B4%EB%AC%B8%EC%A0%80%EC%88%98%EC%A7%80",
+      "https://en.wikipedia.org/wiki/Gyeongju"
+     ],
+     "base": "bike_riverside",
+     "times": [
+      "dawn",
+      "midday",
+      "commute_pm"
+     ],
+     "seasons": [
+      "spring"
+     ],
+     "outfits": [
+      "active",
+      "everyday",
+      "dongtan",
+      "retro"
+     ],
+     "en": "cycling the lakeside path around a wide reservoir lake in April, cherry trees in full bloom along the water and petals drifting onto the path",
+     "worlds": {
+      "fantasy": {
+       "en": "a lakeside path around a wide lake of the golden realm in spring, cherry trees in full bloom with softly glowing petals drifting over the water and low green mountains beyond",
+       "props": [
+        "daejeon_bicycle",
+        "flowers",
+        "water_bottle"
+       ]
+      },
+      "steampunk": {
+       "en": "a lakeside promenade around a wide lake in spring, cherry trees in full bloom, petals drifting onto the water and a little paddle steamer far out on the lake",
+       "props": [
+        "daejeon_bicycle",
+        "water_bottle",
+        "bag"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a softly glowing lakeside path two centuries on, cherry trees in full bloom shedding petals over the water and quiet flying vehicles gliding high above",
+       "props": [
+        "daejeon_bicycle",
+        "water_bottle",
+        "music"
+       ]
+      }
+     }
+    },
+    {
+     "key": "ssambap_lunch",
+     "ko": "대릉원 둘레 쌈밥집",
+     "src": [
+      "https://en.wikipedia.org/wiki/Gyeongju"
+     ],
+     "base": "street_diner",
+     "times": [
+      "midday",
+      "commute_pm"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "retro",
+      "workwear"
+     ],
+     "en": "lunch at a ssambap restaurant near the great mound park — a low table covered with leafy greens, rice and dozens of little side dishes for wrapping",
+     "worlds": {
+      "fantasy": {
+       "en": "a low wooden table in an eating house of the golden capital, spread with baskets of leafy greens, warm rice and dozens of little earthenware dishes for wrapping",
+       "props": [
+        "gyeongju_ssambap",
+        "bowl",
+        "cup"
+       ]
+      },
+      "steampunk": {
+       "en": "a busy eating house near the park, a low table spread with baskets of leafy greens, rice and dozens of little porcelain side dishes, warm lamps overhead",
+       "props": [
+        "gyeongju_ssambap",
+        "bowl",
+        "cup"
+       ]
+      },
+      "cyberpunk": {
+       "en": "an old family eating house two centuries on, a low table spread with leafy greens, rice and dozens of little side dishes under warm, softly glowing lamps",
+       "props": [
+        "gyeongju_ssambap",
+        "bowl",
+        "drink_glass"
+       ]
+      }
+     }
+    },
+    {
+     "key": "bread_shop",
+     "ko": "경주빵 가게 — 갓 구운 국화 무늬 팥빵 한 상자",
+     "src": [
+      "https://en.wikipedia.org/wiki/Hwangnam-ppang",
+      "https://en.wikipedia.org/wiki/Gyeongju"
+     ],
+     "base": "street_shop",
+     "times": [
+      "commute_am",
+      "midday",
+      "commute_pm"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "retro"
+     ],
+     "en": "buying a box of warm little red-bean pastries stamped with a chrysanthemum, fresh from the bakery's griddles",
+     "worlds": {
+      "fantasy": {
+       "en": "a little bakery of the golden capital, rows of warm round red-bean pastries stamped with a chrysanthemum cooling on wooden boards and a baker pressing the stamps",
+       "props": [
+        "gyeongju_bread",
+        "shopping_bag",
+        "money"
+       ]
+      },
+      "steampunk": {
+       "en": "a busy little bakery with brass griddles and glass counters, rows of warm round red-bean pastries stamped with a chrysanthemum and boxes tied with string",
+       "props": [
+        "gyeongju_bread",
+        "shopping_bag",
+        "money"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a preserved old bakery two centuries on, rows of warm round red-bean pastries stamped with a chrysanthemum on softly glowing warming trays and boxes stacked by the door",
+       "props": [
+        "gyeongju_bread",
+        "shopping_bag",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "museum_gold",
+     "ko": "국립경주박물관 — 금관 전시실",
+     "src": [
+      "https://en.wikipedia.org/wiki/Gyeongju_National_Museum",
+      "https://en.wikipedia.org/wiki/Crowns_of_Silla"
+     ],
+     "base": "evening_museum",
+     "times": [
+      "midday",
+      "commute_pm"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "retro",
+      "evening"
+     ],
+     "en": "looking at a gold crown and jade ornaments in a dim museum gallery, the glass cases glowing softly",
+     "worlds": {
+      "fantasy": {
+       "en": "a hall of treasures in the golden capital, a gold crown of branching uprights hung with spangles and green jade commas glittering in a lantern-lit case",
+       "props": [
+        "book",
+        "lamp",
+        "gyeongju_dice"
+       ]
+      },
+      "steampunk": {
+       "en": "a museum gallery of polished wood and glass cases under gas lamps, a gold crown of branching uprights hung with spangles and green jade commas glittering on velvet",
+       "props": [
+        "book",
+        "lamp",
+        "ticket"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a museum gallery two centuries on, a gold crown of branching uprights hung with spangles and green jade commas glittering inside a case of clear light",
+       "props": [
+        "gyeongju_dice",
+        "ticket",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "hanok_village",
+     "ko": "교촌마을 한옥 골목 · 국악 공연",
+     "src": [
+      "https://en.wikipedia.org/wiki/Gyochon_Traditional_Village"
+     ],
+     "base": "street_alley",
+     "times": [
+      "midday",
+      "commute_pm",
+      "night_out"
+     ],
+     "outfits": [
+      "traditional",
+      "everyday",
+      "dongtan",
+      "retro"
+     ],
+     "en": "strolling the lanes of a village of tiled-roof traditional houses by the stream, low stone walls and a traditional music performance in a courtyard",
+     "worlds": {
+      "fantasy": {
+       "en": "a lane of tiled-roof wooden houses in the golden capital, low stone-and-earth walls and a courtyard where musicians play long zithers and drums under lantern-orbs",
+       "props": [
+        "fan",
+        "lamp",
+        "music"
+       ]
+      },
+      "steampunk": {
+       "en": "a lane of tiled-roof wooden houses by the stream, low stone walls, gas lamps at the gates and a courtyard where musicians play long zithers and drums",
+       "props": [
+        "fan",
+        "lamp",
+        "music"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a preserved lane of tiled-roof wooden houses two centuries on, low stone walls, softly glowing gate lamps and a courtyard performance of long zithers and drums",
+       "props": [
+        "fan",
+        "lamp",
+        "music"
+       ]
+      }
+     }
+    },
+    {
+     "key": "hill_village",
+     "ko": "양동마을 언덕길 — 기와집 · 초가 사이",
+     "src": [
+      "https://en.wikipedia.org/wiki/Yangdong_Folk_Village"
+     ],
+     "base": "travel_trail",
+     "times": [
+      "dawn",
+      "midday",
+      "commute_pm"
+     ],
+     "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+     ],
+     "outfits": [
+      "everyday",
+      "traditional",
+      "active",
+      "dongtan"
+     ],
+     "en": "walking the hill paths of an old village of tile-roofed and thatched houses spread through wooded hills above a river",
+     "worlds": {
+      "fantasy": {
+       "en": "a hill path through an old village of the golden realm, tile-roofed and thatched houses among wooded hills, earthen walls and the river valley below",
+       "props": [
+        "water_bottle",
+        "bag",
+        "camera"
+       ]
+      },
+      "steampunk": {
+       "en": "a hill path through an old village of tile-roofed and thatched houses on wooded hills, earthen walls and a little brass-trimmed steam tram crossing the river valley below",
+       "props": [
+        "water_bottle",
+        "bag",
+        "watch"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a hill path through an old village of tile-roofed and thatched houses kept unchanged two centuries on, earthen walls, softly glowing path lights and the river valley below",
+       "props": [
+        "water_bottle",
+        "bag",
+        "music"
+       ]
+      }
+     }
+    },
+    {
+     "key": "harbour_seafood",
+     "ko": "감포항 횟집 — 바닷가 회 한 상",
+     "src": [
+      "https://en.wikipedia.org/wiki/Gampo-eup",
+      "https://en.wikipedia.org/wiki/Gyeongju"
+     ],
+     "base": "travel_coast",
+     "times": [
+      "midday",
+      "commute_pm",
+      "night_out"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "resort",
+      "retro"
+     ],
+     "en": "a seafood meal at a harbour-front restaurant in a small east-coast fishing town, a plate of fresh raw fish and a bowl of abalone soup, fishing boats in the harbour",
+     "worlds": {
+      "fantasy": {
+       "en": "a harbour-front eating house of a little fishing town on the eastern sea, a wooden plate of fresh sliced fish, painted fishing boats moored below and the sea turning gold",
+       "props": [
+        "busan_hoe",
+        "drink_glass",
+        "bowl"
+       ]
+      },
+      "steampunk": {
+       "en": "a harbour-front restaurant of a little fishing town, porcelain plates of fresh sliced fish, little steam trawlers moored below and gas lamps along the quay",
+       "props": [
+        "busan_hoe",
+        "drink_glass",
+        "bowl"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a harbour-front restaurant of a little fishing town two centuries on, fresh sliced fish on chilled glass and quiet electric fishing boats moored below with glowing running lights",
+       "props": [
+        "busan_hoe",
+        "drink_glass",
+        "phone"
+       ]
+      }
+     }
+    }
+   ]
+  },
+  "lasvegas": {
+   "scenes": [
+    {
+     "key": "strip_stroll",
+     "ko": "스트립 밤 산책 — 불빛 가득한 대로와 보행 육교",
+     "src": [
+      "https://en.wikipedia.org/wiki/Las_Vegas_Strip"
+     ],
+     "base": "street_alley",
+     "times": [
+      "night_out",
+      "past_midnight"
+     ],
+     "outfits": [
+      "everyday",
+      "retro",
+      "subculture",
+      "dongtan"
+     ],
+     "en": "strolling the Las Vegas Strip at night among the crowds, crossing a pedestrian bridge over the boulevard as the resorts blaze with light on every side",
+     "worlds": {
+      "fantasy": {
+       "en": "a long avenue of fanciful palaces at night, every arch and tower outlined in glowing coloured lamps, a carved stone footbridge arching over the crowded avenue",
+       "props": [
+        "camera",
+        "drink_glass",
+        "lasvegas_plume"
+       ]
+      },
+      "steampunk": {
+       "en": "a long gaslit boulevard of fanciful palaces at night, their marquees blazing with thousands of warm electric bulbs, a wrought-iron footbridge arching over the crowds",
+       "props": [
+        "camera",
+        "drink_glass",
+        "lasvegas_plume"
+       ]
+      },
+      "cyberpunk": {
+       "en": "the long boulevard two centuries on at night, terraced towers of pale glass wrapped in drifting light, a glowing skybridge arching over the crowds",
+       "props": [
+        "camera",
+        "drink_glass",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "fountain_show",
+     "ko": "음악 분수 쇼 — 호숫가 난간에서 저녁 분수 보기",
+     "src": [
+      "https://en.wikipedia.org/wiki/Fountains_of_Bellagio"
+     ],
+     "base": "street_park",
+     "times": [
+      "commute_pm",
+      "night_out",
+      "past_midnight"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "subculture",
+      "active"
+     ],
+     "en": "leaning on the balustrade by the man-made lake to watch the free fountain show, jets of water leaping and swaying to music under the lights",
+     "worlds": {
+      "fantasy": {
+       "en": "a marble balustrade at the edge of a great lake at night, fountains leaping and swaying to music beneath coloured light",
+       "props": [
+        "camera",
+        "drink_glass",
+        "flowers"
+       ]
+      },
+      "steampunk": {
+       "en": "a balustraded lakeside promenade at dusk, brass fountain jets leaping and swaying in time to music and gaslamps glowing along the rail",
+       "props": [
+        "camera",
+        "drink_glass",
+        "flowers"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a lakeside promenade two centuries on at night, towering columns of water and light dancing to music across the lake",
+       "props": [
+        "camera",
+        "drink_glass",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "sign_boneyard",
+     "ko": "옛 간판 마당 밤 관람 — 별 터짐 · 화살표 · 조개 꼴 옛 간판 사이",
+     "src": [
+      "https://en.wikipedia.org/wiki/Neon_Museum"
+     ],
+     "base": "amuse_night",
+     "times": [
+      "night_out"
+     ],
+     "outfits": [
+      "everyday",
+      "retro",
+      "subculture",
+      "dongtan"
+     ],
+     "en": "an evening tour of the Neon Museum's boneyard, wandering among giant historic signs of starbursts, arrows and shells lit from outside in the dark",
+     "worlds": {
+      "fantasy": {
+       "en": "a moonlit yard of giant old painted and gilded signboards in fanciful shapes — starbursts, arrows and great shells, with no letters — softly lit by floating lamps",
+       "props": [
+        "camera",
+        "lasvegas_sign_tube",
+        "book"
+       ]
+      },
+      "steampunk": {
+       "en": "a yard of giant old enamelled tin and bulb-studded signs in fanciful shapes — starbursts, arrows and great shells, with no letters — lit by gaslamps in the dark",
+       "props": [
+        "camera",
+        "lasvegas_sign_tube",
+        "book"
+       ]
+      },
+      "cyberpunk": {
+       "en": "the old sign yard beneath a transparent dome at night, giant mid-century signs of starbursts, arrows and shells relit tube by tube, with no letters",
+       "props": [
+        "camera",
+        "lasvegas_sign_tube",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "canopy_show",
+     "ko": "프리몬트 거리 빛 지붕 — 머리 위 빛 쇼와 거리 공연 무대",
+     "src": [
+      "https://en.wikipedia.org/wiki/Fremont_Street_Experience"
+     ],
+     "base": "stage_festival",
+     "times": [
+      "night_out",
+      "past_midnight"
+     ],
+     "outfits": [
+      "everyday",
+      "retro",
+      "subculture",
+      "dongtan",
+      "roleplay"
+     ],
+     "en": "walking the downtown pedestrian street under its vaulted canopy as the nightly light show rolls overhead and a band plays on one of the free stages",
+     "worlds": {
+      "fantasy": {
+       "en": "an old-town street roofed by a long vaulted arcade of glowing coloured glass, pictures of light rolling across it overhead and minstrels playing on a little stage",
+       "props": [
+        "drink_glass",
+        "street_food",
+        "camera"
+       ]
+      },
+      "steampunk": {
+       "en": "an old-town street under a long barrel-vaulted canopy of glass and wrought iron strung with bulbs, a band playing brass horns on a little bandstand",
+       "props": [
+        "drink_glass",
+        "street_food",
+        "camera"
+       ]
+      },
+      "cyberpunk": {
+       "en": "the old downtown street kept as it was under its vaulted canopy of light, the canopy blazing with moving colour overhead and a band on a little stage",
+       "props": [
+        "drink_glass",
+        "street_food",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "buffet",
+     "ko": "뷔페 — 끝없이 늘어선 음식 줄에서 접시 가득",
+     "src": [
+      "https://en.wikipedia.org/wiki/Buffet"
+     ],
+     "base": "street_diner",
+     "indoor": true,
+     "times": [
+      "midday",
+      "commute_pm",
+      "night_out"
+     ],
+     "outfits": [
+      "everyday",
+      "retro",
+      "dongtan"
+     ],
+     "en": "heaping a plate at a Las Vegas all-you-can-eat buffet, long counters of hot and cold dishes stretching away under the lights",
+     "worlds": {
+      "fantasy": {
+       "en": "a long banquet hall of the desert capital, carved tables heaped with roasts, fruit, pastries and every dish of far-off realms under glowing lamps",
+       "props": [
+        "lasvegas_buffet_plate",
+        "drink_glass",
+        "cup"
+       ]
+      },
+      "steampunk": {
+       "en": "a long gaslit dining hall of polished wood and brass, silver chafing dishes of every hot and cold dish steaming gently along the counters",
+       "props": [
+        "lasvegas_buffet_plate",
+        "drink_glass",
+        "cup"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a long buffet hall two centuries on, softly glowing counters of real hot and cold dishes from every corner of the world",
+       "props": [
+        "lasvegas_buffet_plate",
+        "drink_glass",
+        "cup"
+       ]
+      }
+     }
+    },
+    {
+     "key": "revue_night",
+     "ko": "레뷰 쇼의 밤 — 큰 극장 객석과 화려한 무대",
+     "src": [
+      "https://en.wikipedia.org/wiki/Showgirl",
+      "https://en.wikipedia.org/wiki/Las_Vegas"
+     ],
+     "base": "evening_opera",
+     "indoor": true,
+     "times": [
+      "night_out"
+     ],
+     "outfits": [
+      "evening",
+      "retro"
+     ],
+     "en": "a night at a grand Las Vegas production show, the lobby glittering before the curtain and a lavish revue of feathered, sequinned dancers on the stage",
+     "worlds": {
+      "fantasy": {
+       "en": "the gilded lobby and grand staircase of a revue theatre of the capital, crystal lamps blazing and plumed dancers glimpsed through the curtained doors",
+       "props": [
+        "lasvegas_show_ticket",
+        "drink_glass",
+        "flowers"
+       ]
+      },
+      "steampunk": {
+       "en": "the velvet-and-brass lobby and grand staircase of a gaslit revue theatre, its marquee of warm bulbs glowing through the glass doors",
+       "props": [
+        "lasvegas_show_ticket",
+        "drink_glass",
+        "flowers"
+       ]
+      },
+      "cyberpunk": {
+       "en": "the sweeping lobby of a revue theatre two centuries on, stairs of glowing glass and dancers in costumes of light glimpsed beyond the doors",
+       "props": [
+        "lasvegas_show_ticket",
+        "drink_glass",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "quick_wedding",
+     "ko": "자정 전 깜짝 결혼 — 전구 테 현관의 작은 결혼식장",
+     "src": [
+      "https://en.wikipedia.org/wiki/Las_Vegas_weddings"
+     ],
+     "base": "stage_wedding",
+     "times": [
+      "commute_pm",
+      "night_out",
+      "past_midnight"
+     ],
+     "outfits": [
+      "bridal",
+      "evening"
+     ],
+     "en": "a spur-of-the-moment wedding in the Marriage Capital of the World — a licence fetched before midnight and a tiny wedding parlour with a bulb-framed facade",
+     "worlds": {
+      "fantasy": {
+       "en": "a tiny wedding parlour of white stone on a lamplit lane, its little porch framed in glowing coloured lamps and an arch of desert blossoms at the door",
+       "props": [
+        "flowers",
+        "lasvegas_license",
+        "drink_glass"
+       ]
+      },
+      "steampunk": {
+       "en": "a tiny clapboard wedding parlour on a gaslit lane, its porch framed in warm electric bulbs and an arch of paper flowers at the door",
+       "props": [
+        "flowers",
+        "lasvegas_license",
+        "drink_glass"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a tiny wedding parlour two centuries on, its little porch framed in soft drifting light and an arch of real flowers at the door",
+       "props": [
+        "flowers",
+        "lasvegas_license",
+        "phone"
+       ]
+      }
+     }
+    },
+    {
+     "key": "dayclub",
+     "ko": "데이클럽 — 한낮 수영장 둘레 DJ 음악과 카바나",
+     "src": [
+      "https://en.wikipedia.org/wiki/Dayclub"
+     ],
+     "base": "pool_party",
+     "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+     ],
+     "times": [
+      "midday",
+      "commute_pm"
+     ],
+     "outfits": [
+      "swimwear",
+      "resort",
+      "dongtan",
+      "drape"
+     ],
+     "en": "an afternoon at a Las Vegas dayclub, partying around a resort pool to a DJ's music among cabanas and daybeds in the desert sun",
+     "worlds": {
+      "fantasy": {
+       "en": "a palace pool garden in the desert sun, turquoise water between carved sandstone, silk-curtained pavilions and daybeds, minstrels playing bright music",
+       "props": [
+        "drink_glass",
+        "float_ring",
+        "water_bottle"
+       ]
+      },
+      "steampunk": {
+       "en": "a palace pool garden in the desert sun, turquoise water edged in brass and tile, striped canvas cabanas and a brass gramophone band playing",
+       "props": [
+        "drink_glass",
+        "float_ring",
+        "water_bottle"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a terraced pool club two centuries on, turquoise water under shading canopies of light, daybeds and a DJ's floating deck",
+       "props": [
+        "drink_glass",
+        "float_ring",
+        "water_bottle"
+       ]
+      }
+     }
+    },
+    {
+     "key": "red_rock",
+     "ko": "레드록 캐니언 — 붉은 사암 절벽 아래 산길과 조슈아 나무",
+     "src": [
+      "https://en.wikipedia.org/wiki/Red_Rock_Canyon_National_Conservation_Area"
+     ],
+     "base": "travel_lookout",
+     "seasons": [
+      "spring",
+      "autumn",
+      "winter"
+     ],
+     "times": [
+      "dawn",
+      "commute_am",
+      "commute_pm"
+     ],
+     "outfits": [
+      "active",
+      "everyday",
+      "adventure",
+      "dongtan"
+     ],
+     "en": "hiking the trails of Red Rock Canyon west of the city, red and grey sandstone cliffs rising above Joshua trees and yucca",
+     "worlds": {
+      "fantasy": {
+       "en": "a desert canyon trail of the myth-world beneath towering red sandstone cliffs, Joshua trees and yucca along the path and ancient rock carvings on a boulder",
+       "props": [
+        "water_bottle",
+        "camera",
+        "lasvegas_plume"
+       ]
+      },
+      "steampunk": {
+       "en": "a desert canyon trail beneath towering red sandstone cliffs, Joshua trees along the path and a brass surveyor's post marking the way",
+       "props": [
+        "water_bottle",
+        "camera",
+        "helmet"
+       ]
+      },
+      "cyberpunk": {
+       "en": "a protected desert canyon two centuries on, red sandstone cliffs untouched above Joshua trees and a softly glowing trail marker",
+       "props": [
+        "water_bottle",
+        "camera",
+        "helmet"
+       ]
+      }
+     }
+    },
+    {
+     "key": "lake_mead",
+     "ko": "미드 호 보트 — 바위 절벽 사이 푸른 호수",
+     "src": [
+      "https://en.wikipedia.org/wiki/Lake_Mead"
+     ],
+     "base": "water_yacht",
+     "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+     ],
+     "times": [
+      "midday",
+      "commute_pm"
+     ],
+     "outfits": [
+      "swimwear",
+      "everyday",
+      "dongtan"
+     ],
+     "en": "a day out boating and swimming on Lake Mead east of the city, blue water among jagged desert mountains and a pale mineral band along the cliffs",
+     "worlds": {
+      "fantasy": {
+       "en": "the deck of a little sailing boat on a great blue lake among jagged desert mountains, a pale band of mineral along the rocky cliffs",
+       "props": [
+        "drink_glass",
+        "water_bottle",
+        "float_ring"
+       ]
+      },
+      "steampunk": {
+       "en": "the deck of a little brass steam launch on a great blue lake among jagged desert mountains, a pale mineral band along the cliffs",
+       "props": [
+        "drink_glass",
+        "water_bottle",
+        "float_ring"
+       ]
+      },
+      "cyberpunk": {
+       "en": "the deck of a quiet glide-boat on a great blue lake among jagged desert mountains two centuries on",
+       "props": [
+        "drink_glass",
+        "water_bottle",
+        "float_ring"
+       ]
+      }
+     }
+    },
+    {
+     "key": "monorail",
+     "ko": "모노레일 — 리조트 뒤 높은 궤도의 자동 열차",
+     "src": [
+      "https://en.wikipedia.org/wiki/Las_Vegas_Monorail"
+     ],
+     "base": "subway_car",
+     "indoor": true,
+     "times": [
+      "commute_am",
+      "commute_pm",
+      "night_out"
+     ],
+     "outfits": [
+      "everyday",
+      "dongtan",
+      "retro",
+      "subculture"
+     ],
+     "en": "riding the automated monorail on its elevated track behind the resorts, the lights of the boulevard sliding past the windows",
+     "worlds": {
+      "fantasy": {
+       "en": "a little gilded carriage gliding on an enchanted rail high above the avenue of palaces, coloured lamps sliding past the windows",
+       "props": [
+        "ticket",
+        "book",
+        "drink_glass"
+       ]
+      },
+      "steampunk": {
+       "en": "inside a little brass monorail car on a high iron track above the bulb-lit boulevard, velvet seats and polished brass rails",
+       "props": [
+        "ticket",
+        "book",
+        "drink_glass"
+       ]
+      },
+      "cyberpunk": {
+       "en": "inside a sleek driverless monorail car on its high guideway two centuries on, the boulevard's drifting light sliding past the windows",
+       "props": [
+        "ticket",
+        "phone",
+        "drink_glass"
+       ]
+      }
+     }
+    },
+    {
+     "key": "first_friday",
+     "ko": "퍼스트 프라이데이 — 다운타운 예술 지구의 달마다 밤 축제",
+     "src": [
+      "https://en.wikipedia.org/wiki/Las_Vegas"
+     ],
+     "base": "street_market",
+     "times": [
+      "commute_pm",
+      "night_out"
+     ],
+     "outfits": [
+      "everyday",
+      "subculture",
+      "retro",
+      "dongtan"
+     ],
+     "en": "First Friday in the downtown 18b Arts District, a monthly evening of open galleries, live music, art stalls and food",
+     "worlds": {
+      "fantasy": {
+       "en": "a lane of painters' studios and craft stalls in the old town on a monthly festival night, lamps strung overhead and music in the air",
+       "props": [
+        "street_food",
+        "shopping_bag",
+        "camera"
+       ]
+      },
+      "steampunk": {
+       "en": "a lane of painters' studios and craft stalls on a monthly festival night, bulbs strung overhead and a little brass band playing",
+       "props": [
+        "street_food",
+        "shopping_bag",
+        "camera"
+       ]
+      },
+      "cyberpunk": {
+       "en": "an arts district two centuries on during its monthly festival night, open studios glowing and stalls of real handmade art",
+       "props": [
+        "street_food",
+        "shopping_bag",
         "phone"
        ]
       }

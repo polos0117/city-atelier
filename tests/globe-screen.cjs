@@ -96,12 +96,12 @@ const settle = p => p.waitForFunction(() => { const k = document.querySelector('
       }
       assert(!ps.rio.front && ps.tokyo.front, '서울 정면 — 리우 뒷면 · 도쿄 앞면'); checks += 4;
       // (b) 앞 · 뒤 단추 — 서에서 동으로
-      await p.tap('.th-mq-next'); assert.deepEqual(await marquee(p), { city: 'daejeon', name: C.daejeon.ko }, '뒤 → 대전(2026-11-23 서울 동쪽)'); await p.tap('.th-mq-next'); assert.deepEqual(await marquee(p), { city: 'busan', name: C.busan.ko }, '뒤 → 부산(2026-11-22 대전 동쪽)'); await p.tap('.th-mq-next'); assert.deepEqual(await marquee(p), { city: 'kyoto', name: C.kyoto.ko }, '뒤 → 교토(2026-11-26 부산 동쪽)'); await p.tap('.th-mq-next'); assert.deepEqual(await marquee(p), { city: 'tokyo', name: C.tokyo.ko }, '뒤 → 도쿄');
+      await p.tap('.th-mq-next'); assert.deepEqual(await marquee(p), { city: 'daejeon', name: C.daejeon.ko }, '뒤 → 대전(2026-11-23 서울 동쪽)'); await p.tap('.th-mq-next'); assert.deepEqual(await marquee(p), { city: 'busan', name: C.busan.ko }, '뒤 → 부산(2026-11-22 대전 동쪽)'); await p.tap('.th-mq-next'); assert.deepEqual(await marquee(p), { city: 'gyeongju', name: C.gyeongju.ko }, '뒤 → 경주(2026-11-27 부산 동쪽)'); await p.tap('.th-mq-next'); assert.deepEqual(await marquee(p), { city: 'kyoto', name: C.kyoto.ko }, '뒤 → 교토(2026-11-26 경주 동쪽)'); await p.tap('.th-mq-next'); assert.deepEqual(await marquee(p), { city: 'tokyo', name: C.tokyo.ko }, '뒤 → 도쿄');
       await settle(p);
       assert.equal((await pins(p)).tokyo.on, true, '조명이 도쿄로');
-      for (let i = 0; i < 5; i++) await p.tap('.th-mq-prev'); assert.equal((await marquee(p)).city, 'beijing', '앞 다섯 → 베이징(교토 · 부산 · 대전 · 서울 다음)');
+      for (let i = 0; i < 7; i++) await p.tap('.th-mq-prev'); assert.equal((await marquee(p)).city, 'beijing', '앞 일곱 → 베이징(교토 · 경주 · 부산 · 대전 · 서울 · 타이베이 다음)');
       await settle(p);
-      for (const k of ['hongkong', 'bangkok', 'dubai', 'moscow', 'cairo', 'istanbul', 'capetown', 'vienna', 'prague', 'rome', 'venice', 'paris', 'barcelona', 'london', 'edinburgh', 'rio']) { await p.tap('.th-mq-prev'); assert.equal((await marquee(p)).city, k, '앞으로 → ' + k + '(서에서 동 차례의 거꾸로)'); }   /* 설계 전 예는 리우(2026-11-21 열 곳 모두 설계 — 가로챈 설계표에서만 미정) */
+      for (const k of ['hongkong', 'bangkok', 'dubai', 'moscow', 'cairo', 'istanbul', 'capetown', 'vienna', 'prague', 'berlin', 'rome', 'venice', 'paris', 'barcelona', 'london', 'edinburgh', 'marrakech', 'lisbon', 'reykjavik', 'rio']) { await p.tap('.th-mq-prev'); assert.equal((await marquee(p)).city, k, '앞으로 → ' + k + '(서에서 동 차례의 거꾸로)'); }   /* 설계 전 예는 리우(2026-11-21 열 곳 모두 설계 — 가로챈 설계표에서만 미정) */
       await settle(p);
       // 설계 전 도시 — 「설계 전」 · 무대로 막힘(짧은 안내, 주소 그대로)
       assert.equal(await p.locator('.th-marquee .th-pre').count(), 1, '설계 전 표지');
@@ -285,14 +285,16 @@ const settle = p => p.waitForFunction(() => { const k = document.querySelector('
         assert.equal((await note.locator('.cnote-l2').textContent()).trim(), '한강공원 강변의 밤 돗자리 야식 · 잔을 든다 · 허리 위', '둘째 줄');
         const more = note.locator('.cnote-more'); assert.equal(await more.getAttribute('aria-expanded'), 'false');
         { const bb = await more.boundingBox(); assert(bb.height >= 44 && bb.width >= 44, '더 보기 44px'); }
-        await more.tap(); assert.equal(await more.getAttribute('aria-expanded'), 'true');
-        assert.deepEqual(await note.locator('.cnote-list dt').allTextContents(), ['표정', '시간대', '계절', '날씨', '세계', '시대', '화면비']);
+        await more.tap(); assert.equal(await more.getAttribute('aria-expanded'), 'true');   /* 2026-11-27 — 더 보기는 몸통에 뜨는 겹침 판(.cnote-sheet, 2026-11-26 높이 한도 · 겹침 판) */
+        const sheet = p.locator('.cnote-sheet'); await sheet.waitFor();
+        assert.deepEqual(await sheet.locator('.cnote-list dt').allTextContents(), ['표정', '시간대', '계절', '날씨', '세계', '시대', '화면비']);
         assert.deepEqual(await smallTargets(p), [], '한 장 44px(설명 펼침)'); assert(await H.noOverflow(p));
         if (vp.width < vp.height) await H.shot(p, 'card-cnote-open');
+        await sheet.locator('.cnote-close').tap(); await sheet.waitFor({ state: 'detached' }); assert.equal(await more.getAttribute('aria-expanded'), 'false', '닫기 → 접힘');
         await p.tap('.th-zoom-open'); await p.waitForSelector('.th-zoom');
         const zn = p.locator('.th-zoom .th-zoom-cnote');
         if (vp.width < vp.height) {
-          await zn.waitFor(); assert.equal(await zn.locator('.cnote-more').getAttribute('aria-expanded'), 'true', '펼침은 이 탭 동안 기억한다');
+          await zn.waitFor(); assert.equal(await zn.locator('.cnote-more').getAttribute('aria-expanded'), 'false', '펼침은 기억하지 않는다(2026-11-26 펼침 기억 끄기)');
           assert.deepEqual(await smallTargets(p), [], '크게 보기 44px(설명)');
           await p.keyboard.press('ArrowRight'); await p.waitForFunction(() => /캐릭터만의 컷/.test((document.querySelector('.th-zoom-cnote') || {}).textContent || ''));
           assert.equal((await zn.locator('.cnote-l2').textContent()).trim(), '전파탑 관리자 일 · 전신', '캐릭터만의 컷 — 직업 · 구도');

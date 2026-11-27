@@ -12,6 +12,14 @@ Total output lines: 925
 
 
 
+## 2026-11-27 · claude · 새 도시 아홉 — 부에노스아이레스 · 아바나 · 마라케시 · 레이캬비크 · 타이베이 · 리스본 · 베를린 · 경주 · 라스베이거스 설계
+- data/city-design.json — 사용자 「추천 다섯에다가 리스본, 베를린, 경주, 라스베이거스 같이 넣어줘.」 도시 아홉(세 세계 · 사람 셋 · motif · hold · card_ko, 랜드마크 · 그림 없음). 아홉이 따로 골라 몰린 칸은 합치기 전에 나눴다: 판타지 그림자 무희형 다섯 → 부에노스아이레스만 남기고 mage_robe · priestess · tide_oracle · dark_spiked, 사이버펑크 크롭 재킷 여섯 → 라스베이거스만 남기고 racer_jumpsuit · cyber_idol · smart_wrap · layered_street · long_raincoat, 스팀펑크 철갑 셋 · 연금술사 둘 · 무도회 둘 → mech_gauntlet · crinoline_cage · botanist · opera_diva. 픽시 넷 · 해파리컷 셋 · 흐트러진 똥머리 다섯 · 판타지 서양배 여섯도 나눴다. 머리색은 도시마다 미리 나눈 몫에서만
+- data/city-life.json · data/world-props.json · data/casual-own.json — 도시마다 생활 장면 열둘 · 계절 · 날씨 · 그 도시 소품 · 직업 컷(90번)
+- tools/city-design.py — CITY_KEYS 서른다섯, NO_FRECKLES 에 Taiwanese. IMAGE_RULES.md 1절 주근깨 줄에 타이완
+- tests/prompt-city.cjs — NAMES 에 아홉 도시의 사람 · 상호 · 사원 · 정치 이름(흔한 낱말은 뺀 것으로 적어 둠)
+- tests/image-claim.cjs · tests/dex-screen.cjs — 도시 서른다섯 · 0/105
+- tests/globe-screen.cjs — 서→동 차례에 경주(부산 동쪽) · 타이베이(서울 서쪽) · 베를린 · 마라케시 · 리스본 · 레이캬비크. 더 보기 설명이 겹침 판(.cnote-sheet)으로 바뀐 것(2026-11-26)에 맞춰 판에서 목록을 읽고 닫은 뒤 크게 보기 — 펼침은 기억하지 않는다
+
 ## 2026-11-27 · gpt · 룸피니 공원 사이버펑크 등록
 - data/img.json — 선택한 세계컷 4번과 일상컷 10장을 등록기로 추가. 기존 그림과 등록일은 보존.
 
