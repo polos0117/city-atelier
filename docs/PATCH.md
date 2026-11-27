@@ -1,3 +1,7 @@
+## 2026-11-27 · gpt · 라스베이거스 스팀펑크 그림 완성
+- 그림 저장소 — 사용자가 고른 세계컷 2번과 일상컷 10장·전용컷 90번을 추가하고 생성·검수 기록을 보존했다. 의상 세부 차이는 기록하고 재생성하지 않았다.
+- data/img.json · data/casual-index.json — 그림 저장소 워크플로의 자동 등록 대상으로 12장을 반영한다.
+
 Warning: truncated output (original token count: 51945)
 Total output lines: 925
 
