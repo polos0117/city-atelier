@@ -2325,6 +2325,22 @@
   "lasvegas_show_ticket": { "ko": "쇼 입장권", "worlds": {
    "fantasy": { "en": "a gilded revue token stamped with a plume, no letters" },
    "steampunk": { "en": "a gilt-edged pasteboard show ticket printed with a plume, no readable letters" },
-   "cyberpunk": { "en": "a glowing show pass shaped like a plume, no letters" } } }
+   "cyberpunk": { "en": "a glowing show pass shaped like a plume, no letters" } } },
+  "sun_hat": { "ko": "챙 넓은 밀짚모자", "note": "2026-11-27 모자 · 안경 소품(사용자 「모자종류,안경등의 종류를 더 늘리고 쓰는것만 아니라 걸치거나 드는 장면 등도」) — 세계마다 그 세계의 모자 · 안경으로", "worlds": {
+   "fantasy": { "en": "a wide-brimmed woven straw hat tied with a faded ribbon" },
+   "steampunk": { "en": "a wide-brimmed straw boater with a striped silk band" },
+   "cyberpunk": { "en": "a wide-brimmed sun hat of glossy woven fibre-optic straw, its brim edge glowing faintly" } } },
+  "ball_cap": { "ko": "야구 모자", "note": "2026-11-27 모자 · 안경 소품(사용자 「모자종류,안경등의 종류를 더 늘리고 쓰는것만 아니라 걸치거나 드는 장면 등도」) — 세계마다 그 세계의 모자 · 안경으로", "worlds": {
+   "fantasy": { "en": "a soft felt traveller's cap with a short leather brim" },
+   "steampunk": { "en": "a tweed flat cap with a short stiff brim" },
+   "cyberpunk": { "en": "a sleek matte visor cap with a thin glowing seam along the brim" } } },
+  "sunglasses": { "ko": "선글라스", "note": "2026-11-27 모자 · 안경 소품(사용자 「모자종류,안경등의 종류를 더 늘리고 쓰는것만 아니라 걸치거나 드는 장면 등도」) — 세계마다 그 세계의 모자 · 안경으로", "worlds": {
+   "fantasy": { "en": "a pair of smoked-crystal spectacles in thin gold frames" },
+   "steampunk": { "en": "a pair of round tinted spectacles in brass rims" },
+   "cyberpunk": { "en": "a pair of slim mirrored smart shades" } } },
+  "eyeglasses": { "ko": "안경", "note": "2026-11-27 모자 · 안경 소품(사용자 「모자종류,안경등의 종류를 더 늘리고 쓰는것만 아니라 걸치거나 드는 장면 등도」) — 세계마다 그 세계의 모자 · 안경으로", "worlds": {
+   "fantasy": { "en": "a pair of round gold-rimmed reading spectacles" },
+   "steampunk": { "en": "a pair of brass-rimmed spectacles with a fine chain" },
+   "cyberpunk": { "en": "a pair of thin smart glasses with a faint readout on one lens" } } }
  }
 }

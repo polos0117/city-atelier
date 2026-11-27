@@ -74,7 +74,12 @@
           "skyscraper",
           "Chinese-style palace",
           "Great Wall",
-          "yellow-glazed roof tiles"
+          "yellow-glazed roof tiles",
+          "sunglasses",
+          "bucket hat",
+          "beanie",
+          "sun visor",
+          "acetate"
         ]
       },
       "steampunk": {
@@ -139,7 +144,12 @@
           "rust",
           "coal smoke",
           "sweat stains",
-          "photographic texture"
+          "photographic texture",
+          "sunglasses",
+          "bucket hat",
+          "beanie",
+          "sun visor",
+          "acetate"
         ]
       },
       "cyberpunk": {
