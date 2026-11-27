@@ -10382,61 +10382,87 @@
           "persona": "방콕 · 태국의 첫 공공 공원 — 도심 한가운데 호수와 큰 나무 그늘, 아침저녁 달리는 사람들과 겨울 야자 정원 음악회를 품은 느긋하고 다정한 쉼터 같은 사람.",
           "worlds": {
             "fantasy": {
-              "ko": "달빛 호수 정원의 노래 — 큰 강 신화 왕도 한가운데 열린 너른 정원, 넓은 호수 위로 꽃잎 모양 작은 배들이 떠다니고 야자 정원의 열린 무대에서 저녁 음악회가 시작되며, 호수를 도는 큰 나무 그늘 길과 호숫가의 겹처마 정자 시계탑 사이로 잔디에서 부드러운 금빛 빛망울이 떠오른다",
-              "en": "the great public garden at the heart of a myth-world river capital at dusk: a wide lake where little petal-shaped rowing boats drift, a palm garden with an open-air stage where an evening concert of strings and voices begins, shady paths under huge old trees looping around the water, and a small tiered pavilion clock tower with upturned eaves beside the lake, motes of soft golden light rising from the lawns",
+              "ko": "호수 숲의 정원 수호자",
+              "en": "a luminous sanctuary garden in a Thai myth-world, its broad central lake encircled by immense tropical trees, flowering paths and carved teak resting terraces; drifting pollen lights the water beneath a living canopy",
               "scenes": [
                 {
-                  "key": "palmstage",
-                  "ko": "야자 정원 저녁 음악회 무대 — 현악과 노래, 야자 잎 사이 등불",
-                  "en": "on the open-air stage of the palm garden at dusk as the evening concert begins, strings playing behind her and lanterns glowing between the tall palm fronds"
+                  "key": "lake",
+                  "ko": "나무 그늘 아래 중앙 호숫가",
+                  "en": "on a carved stone terrace beside the broad central garden lake, huge tropical trees framing the shimmering water"
                 },
                 {
-                  "key": "lakeboat",
-                  "ko": "호수 위 꽃잎 모양 작은 배 — 물에 비친 정원 등불",
-                  "en": "seated in a little petal-shaped rowing boat drifting on the park lake at twilight, the lamps of the garden paths mirrored on the still water"
+                  "key": "flowers",
+                  "ko": "꽃 정원 산책길",
+                  "en": "on a winding garden path bordered by flowering plants beneath a canopy of immense tropical trees"
                 },
                 {
-                  "key": "shadypath",
-                  "ko": "호숫가 큰 나무 그늘 길 — 이른 아침의 정자 시계탑",
-                  "en": "on the shady lakeside path in the cool early morning, huge old trees arching overhead and the small tiered pavilion clock tower with upturned eaves standing by the water"
+                  "key": "canopy",
+                  "ko": "오래된 나무 아래 쉼터",
+                  "en": "at an open resting terrace under spreading old trees, the quiet garden lake visible between the trunks"
                 }
               ],
               "look": {
                 "face": {
                   "face_shape": "heart",
-                  "eyes": "round_large",
+                  "eyes": "almond_wide",
                   "brows": "soft_round",
-                  "nose": "small_button",
+                  "nose": "straight_narrow",
                   "lips": "heart_full",
-                  "eye_color": "leaf_green",
-                  "age": "early_20s",
-                  "impression": "dreamy",
+                  "eye_color": "jade",
+                  "age": "mid_20s",
+                  "impression": "elegant",
                   "skin_tone": "warm_beige",
-                  "eye_size": "large",
+                  "eye_size": "medium",
                   "eye_tilt": "level",
-                  "mark": "blush",
-                  "expr": "soft_smile"
+                  "mark": "bare",
+                  "expr": "gentle"
                 },
                 "silhouette": {
-                  "body": "pear_curvy",
-                  "hair": "messy_bun",
-                  "hair_color": "phosphor_white",
+                  "body": "hourglass",
+                  "hair": "side_braid",
+                  "hair_color": "cedar",
                   "bangs": "parted"
                 },
-                "why": "야자 정원 저녁 음악회에서 노래하는 정원의 가희 — 방콕 판타지의 등불 물길지기(다이아몬드형 · 무지갯빛 은발 옆머리 · 버들 곡선)와 달리 부드럽고 꿈꾸는 사람. 어깨는 가늘고 엉덩이 · 허벅지가 풍성한 배 모양 곡선(pear_curvy) · 허리 아래까지 물결치는 긴 웨이브(long_wavy) · 옅은 초록빛이 은은히 도는 상아빛 흰머리(phosphor_white — 저녁 정원의 빛망울을 머금은 듯) · 가운데 가르마 앞머리(parted), 잎새 초록 눈(leaf_green). 하트형 얼굴 · 조금 둥근 아몬드 눈(round_large) · 둥근 눈썹 · 끝이 둥근 작은 코 · 도톰한 하트 입술, 따뜻한 베이지 피부(warm_beige)에 발그레한 볼(blush), 20대 초반의 몽환적인 인상(dreamy)에 옅은 미소(soft_smile). 실루엣은 음유시인(bard). 도시 판타지와 얼굴 칸 다섯이 다 다르다. · 2026-11-25 머리 다시 나눔(사용자 「도시공방에 세계컷 헤어스타일이랑 머리색 수정안도 같이 적용해줘」 — 헤어스타일 24가지 · 자연색 머리 2칸에 몰려 있었다): 헤어스타일 long_wavy → messy_bun"
+                "why": "호수 숲의 정원 수호자 — 태국인 성인 여성. 큰 나무의 그늘과 중앙 호수 물결을 의상 구조로 번역. 세 세계의 얼굴형·눈·눈썹·코·입술·체형·머리는 서로 다르고 방콕 본체와도 구별한다."
               },
               "hold": {
-                "en": "a small gilded lute strung with softly glowing strings"
+                "en": "a slim carved-wood staff cradling a clear teardrop crystal filled with a miniature ripple"
               },
               "motif": {
-                "ko": "야자 정원 가희 차림 — 짧은 망토 가장자리를 야자 잎 모양 금박 자수로 둘렀고, 호수 위 꽃잎 배를 닮은 꽃잎 겹 짧은 치마",
-                "en": "a short cape edged with gilded embroidery in the shape of palm fronds, and a short skirt of layered petal-shaped panels like the little rowing boats drifting on the park lake"
+                "ko": "호수 숲의 정원 수호자의 나뭇가지·호수 물결·꽃 세공 의상",
+                "en": "a fitted emerald silk bodice traced with gold branching veins, overlapping leaf panels opening into a lake-blue skirt, a translucent shoulder mantle shaped like a spreading tree canopy, tiny garden-flower enamel clasps and a clear lake-drop jewel at the waist"
+              },
+              "palette": {
+                "en": "deep leaf green, clear lake blue and pale flower ivory, with fine gold accents",
+                "hex": [
+                  "#246348",
+                  "#6AB6C8",
+                  "#F5E9CF"
+                ],
+                "why": "큰 나무·호수·꽃에서 고른 창작 의상색"
+              },
+              "own_vocab": {
+                "marks": [
+                  "layered gold-thread embroidery",
+                  "a branching jewel-set circlet",
+                  "a floor-sweeping leaf mantle",
+                  "gilded botanical filigree",
+                  "glowing enchanted lake-drop jewelry",
+                  "heavy silk brocade",
+                  "carved teak ornaments",
+                  "ivory flower enamel clasps"
+                ],
+                "costume": "COSTUME (fantasy): grand botanical regalia of layered silk brocade, gold-thread branching embroidery, a jewel-set circlet, a sweeping leaf mantle and enchanted lake-drop jewelry.",
+                "casual_world": {
+                  "en": "a city of a myth-world on a great river: teak wood on tall stilts and carved gables, gilded carving and glittering mirror-glass mosaic, glazed tiles in green and orange, woven rattan, silk and lacquer, lantern-light on the water and drifting lights, blossoms with softly glowing petals",
+                  "guard_en": "Let the place itself carry this world through its materials, fittings and objects; do not add the city's landmarks, the palace spires, the river barges or a skyline unless the place below names them."
+                }
               },
               "card_ko": {
-                "look": "상아빛 헝클 똥머리 · 배 곡선",
-                "motif": "야자잎 망토 · 꽃잎 치마"
+                "look": "밤갈색 옆땋은 머리 · 곡선",
+                "motif": "나무 그늘 · 호수 물결 · 꽃"
               },
-              "sil": "bard"
+              "sil": "elven_leaf"
             },
             "steampunk": {
               "ko": "가스등 동화 방콕의 첫 공공 공원 — 옛 박람회장 터에 놓인 너른 정원, 호수엔 놋쇠 외륜을 단 작은 보트들이 깨끗한 흰 김을 끌며 떠다니고, 호숫가엔 붉은 옻칠과 놋쇠의 겹처마 정자 시계탑, 나무 그늘 길엔 가스등과 아침 체조하는 사람들, 정원 가장자리엔 높은 창의 공공 도서관과 무도장",
