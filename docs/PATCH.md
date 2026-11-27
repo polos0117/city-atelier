@@ -12,6 +12,9 @@ Total output lines: 925
 
 
 
+## 2026-11-27 · claude · 지구본 Blender 모형 셋 적용(계획 Task 6)
+- 사용자 「blender 공방에 올라온 지구본 그림을 city 공방에 적용시켜줘」. blender-cloud-img 의 2026-11-27_city-globe-<세계>.glb 셋(blender-cloud scenes/city_globe.py · 검사 city_globe_check.py)을 그림 저장소 models/globe/<세계>.glb 로 옮겼다 — lib/globe.js 가 이미 그 자리를 읽어(WebGL 이 되면 SVG 뒤에 three.js 캔버스) 코드는 그대로. 노드 Globe · Stand(Stand 는 Globe 의 자식 아님) · Globe 회전 · 크기 · 위치 없음 · 반지름 1.000 · 압축 확장 없음 · 0.76~0.89MB 확인, 344×882 여섯 판(세계 × 밝기)에서 모형이 뜨고 조명 안 도시 서울 점이 한반도 위.
+
 ## 2026-11-27 · gpt · 룸피니 공원 스팀펑크 등록
 - data/img.json — 사용자가 고른 세계컷 1번과 해당 인물의 일상컷 10장을 등록기로 반영. 기존 등록 항목과 날짜는 보존.
 
