@@ -12,6 +12,9 @@ Total output lines: 925
 
 
 
+## 2026-11-28 · gpt · 아바나 사이버펑크 1번 대표컷 및 일상 등록
+- data/img.json · data/casual-index.json — 선택한 세계컷 1장, 일상컷 10장과 전용 직업컷 90번을 등록하고 기존 도감 항목을 보존.
+
 ## 2026-11-28 · gpt · 아바나 스팀펑크 대표컷 1번과 일상 묶음 등록
 - city-atelier-img/img/havana_steampunk* · records/havana/steampunk* — 선택한 세계컷 1장, 일상컷 10장, 직업컷 90번 1장과 생성·검수 기록을 등록.
 - data/img.json · data/casual-index.json — 그림 저장소 자동 등록으로 도감과 일상컷 색인에 반영. 생성된 이미지의 노출을 이유로 한 재생성 없이 원본 유지.
