@@ -10408,7 +10408,7 @@
                   "brows": "soft_round",
                   "nose": "straight_narrow",
                   "lips": "heart_full",
-                  "eye_color": "jade",
+                  "eye_color": "emerald",
                   "age": "mid_20s",
                   "impression": "elegant",
                   "skin_tone": "warm_beige",
@@ -15685,12 +15685,12 @@
               "expr": "playful"
             },
             "silhouette": {
-              "body": "hourglass",
-              "hair": "side_ponytail",
-              "hair_color": "smoky_lilac",
-              "bangs": "choppy"
+              "body": "curvy_athletic",
+              "hair": "pixie",
+              "hair_color": "blue_black",
+              "bangs": "none"
             },
-            "why": "두 세기 뒤 여름 축제(세계에서 가장 큰 공연 예술 축제)의 로열 마일을 행진하며 크리스털 백파이프를 부는 빛 백파이프 연주자 — 소리마다 타탄 빛 깃발에 보랏빛 물결을 보내는, 도발적이고 장난스러운 사람. 가슴 · 엉덩이가 둥글고 허리가 잘록한 모래시계(hourglass) · 한쪽 어깨로 넘긴 옆 포니테일(side_ponytail — 행진에 흔들림) · 엉겅퀴꽃과 언덕 헤더 같은 연기 낀 라일락 회색 머리(smoky_lilac — 다른 도시 · 랜드마크가 안 쓴 색) · 삐죽 앞머리(choppy) · 짧은 크롭 재킷과 끈 · 버클 하네스, 짧은 하의와 높은 부츠(cropped_jacket — 한 번만 쓰인 실루엣. 짧은 하의가 빛 타탄 킬트 치마)로 실루엣은 짧고 날렵하다. 다이아몬드형 얼굴 · 눈꼬리가 올라간 가는 눈 · 곧고 짙은 눈썹 · 곧고 가는 코 · 하트 꼴 도톰한 입술, 은은히 빛나는 푸른 눈(radium_blue), 올리브 피부(olive)에 빨간 입술(red_lip), 20대 중반, 도발적인 인상(provocative)에 장난스러운 표정(playful). 판타지(긴 얼굴 · 흑홍 바람머리 · 탄탄한 곡선 · 밝은 피부) · 스팀펑크(하트형 · 딸기 금발 단발 · 서양배 곡선 · 도자기빛 피부)와 얼굴 칸 다섯 · 머리 · 체형 · 피부가 다 다르다."
+            "why": "2026-11-27 검토 — 사용자가 고른 세계 그림이 GPT 시안이었는데 설계표에 반영이 안 돼 있었다(도감 설명 · 일상컷 머리 연출이 옛 설계를 따랐다). 고른 시안(그림 저장소 records/edinburgh/cyberpunk.kr_drawn_rim_dewy-ui.json generation.free_prompt)의 얼굴 · 머리 · 체형 · 실루엣으로 바꿈(얼굴 칸은 그대로 — 세 세계 다른 사람 규칙 · 일상컷은 고른 그림을 얼굴 기준으로 쓴다). 도시 상징(motif) · 소품(hold)은 시안도 그대로 썼다. 하트형 얼굴 · 처진 부드러운 눈 · 각진 눈썹 · 둥근 코끝 · 큐피드 입술, 헤이즐 눈, 따뜻한 베이지 피부, 날카롭고 강렬한 인상에 입 다문 작은 미소. 탄탄한 운동형 곡선 몸(curvy_athletic — 시안은 strong_curvy 였으나 판타지와 겹쳐 가장 가까운 열쇠로) · 관자놀이를 민 비대칭 짧은 픽시컷(pixie) · 차가운 남빛 도는 청흑 머리(blue_black) · 앞머리 없음. 큰 장갑과 목에 건 바이저의 몸에 붙는 라이더 점프슈트(racer_jumpsuit) — 앞으로 기운 빠른 실루엣, 등뼈 여밈과 비스듬한 헤링본 솔기가 로열 마일과 갈라지는 클로즈 골목을 옮겼다. (앞 설계: 두 세기 뒤 여름 축제(세계에서 가장 큰 공연 예술 축제)의 로열 마일을 행진하며 크리스털 백파이프를 부는 빛 백파이프 연주자 — 소리마다 타탄 빛 깃발에 보랏빛 물결을 보내는, 도발적이고 장난스러운 사람. 가슴 ·…)"
           },
           "hold": {
             "en": "a set of bagpipes with clear crystal drones and chanter glowing soft violet, the bag wrapped in glossy smart-fabric tartan"
@@ -15700,10 +15700,10 @@
             "en": "a short pleated kilt-skirt of fibre-optic tartan whose crossing bands glow violet, teal and red, worn under a cropped jacket with buckled harness straps; a small hip pouch of silver mesh hanging at the front like a sporran, and a thistle-shaped ear cuff glowing faint purple"
           },
           "card_ko": {
-            "look": "라일락 옆묶음 · 모래시계",
+            "look": "청흑 픽시컷 · 탄탄한 곡선",
             "motif": "빛 타탄 킬트 · 엉겅퀴"
           },
-          "sil": "cropped_jacket"
+          "sil": "racer_jumpsuit"
         }
       }
     },
@@ -15857,12 +15857,12 @@
               "expr": "proud"
             },
             "silhouette": {
-              "body": "curvy_athletic",
-              "hair": "double_buns",
-              "hair_color": "chestnut",
-              "bangs": "side_swept"
+              "body": "willowy_curvy",
+              "hair": "chignon",
+              "hair_color": "dark_auburn",
+              "bangs": "parted"
             },
-            "why": "호수 물을 끌어온 수로의 경사 철길에서 놋쇠 권양기로 배를 끌어올리는 수로 인클라인 기관사 — 장난기 많은 말괄량이에 제 손으로 도시에 불을 켠다는 자부심이 있는 사람. 탄탄하면서 가슴이 풍성하고 엉덩이가 둥근 몸(curvy_athletic — 권양기 손잡이를 돌리는 몸) · 머리 위 양쪽에 높이 틀어 올린 똥머리 둘(double_buns — 일하다 흐트러지지 않게) · 따뜻한 밤색 머리(chestnut — 자연색) · 옆으로 넘긴 앞머리(side_swept) · 두꺼운 가죽 작업 앞치마 · 걷어 올린 소매 · 공구 멜빵 · 한 팔의 큰 장갑(boiler_engineer)으로 실루엣이 현장 기술자답다. 둥근 얼굴 · 쌍꺼풀 없는 긴 눈 · 눈 위에 낮게 놓인 짙은 눈썹 · 끝이 둥글고 자연스러운 폭의 코 · 작은 활 모양 입술, 나트륨등 빛 노란 눈(sodium_yellow — 도시에 처음 켜진 전등 빛과 짝), 햇볕에 그은 금빛 도는 피부(golden_tan)에 입가 점(mole_lip), 20대 초반, 말괄량이 인상(boyish)에 입을 다문 뿌듯한 얼굴(proud). 판타지(달걀형 · 자두빛 바닥 긴 머리 · 풍만한 몸 · 흰 피부) · 사이버펑크(다이아몬드형 · 비취빛 큰 땋은머리 · 배형 굴곡 몸 · 따뜻한 베이지 피부)와 얼굴형 · 눈썹 · 코가 다르고 머리 · 체형 · 피부가 다 다르다. 도쿄 스팀펑크(다이쇼 하이칼라 점등원 — 하카마풍 치마 · 반묶음 리본)와 옷 꼴 · 머리 · 체형이 모두 다르다."
+            "why": "2026-11-27 검토 — 사용자가 고른 세계 그림이 GPT 시안이었는데 설계표에 반영이 안 돼 있었다(도감 설명 · 일상컷 머리 연출이 옛 설계를 따랐다). 고른 시안(그림 저장소 records/kyoto/steampunk.kr_drawn_rim_dewy-ui.json generation.free_prompt)의 얼굴 · 머리 · 체형 · 실루엣으로 바꿈(얼굴 칸은 그대로 — 세 세계 다른 사람 규칙 · 일상컷은 고른 그림을 얼굴 기준으로 쓴다). 도시 상징(motif) · 소품(hold)은 시안도 그대로 썼다. 달걀형 얼굴 · 처진 부드러운 눈 · 가는 아치 눈썹 · 살짝 들린 코 · 하트형 입술, 숲빛 초록 눈, 도자기빛 피부, 우아하고 세련된 인상에 입 다문 옅은 미소. 늘씬한 곡선 몸(willowy_curvy) · 가운데 가르마에 얼굴선 따라 가는 두 가닥을 내린 낮은 쪽머리(chignon) · 붉은 결 도는 짙은 적갈 머리(dark_auburn). 놋쇠 살대가 드러난 보디스와 작은 톱니 장식 단의 드레스(clockwork_bodice) — 보디스 살대는 수로 발전소 물레방아 날개, 층진 치마는 인클라인 배 받침대. (앞 설계: 호수 물을 끌어온 수로의 경사 철길에서 놋쇠 권양기로 배를 끌어올리는 수로 인클라인 기관사 — 장난기 많은 말괄량이에 제 손으로 도시에 불을 켠다는 자부심이 있는 사람. 탄탄하면서 가슴이 풍성하고 엉덩이가 둥근 몸(…)"
           },
           "hold": {
             "en": "a heavy brass winding crank with a polished oak grip, a few cherry petals caught in its gear teeth"
@@ -15872,10 +15872,10 @@
             "en": "a short work jacket of deep canal-blue with brass buttons shaped like little cupped water-turbine wheels, one brass gauntlet whose knuckles carry tiny flanged rail wheels like the incline's boat cradle, and enamel cherry blossoms pinned along her collar and tucked into her twin buns"
           },
           "card_ko": {
-            "look": "밤색 양 똥머리 · 탄탄 굴곡",
+            "look": "적갈 쪽머리 · 윌로우 곡선",
             "motif": "터빈 단추 · 벚꽃 레일 장갑"
           },
-          "sil": "boiler_engineer"
+          "sil": "clockwork_bodice"
         },
         "cyberpunk": {
           "ko": "두 세기 뒤 교토 — 높이 오르지 않고 낮게 남기로 한 먼 미래 도시, 천 년 묵은 옛 수도의 바둑판 길이 하늘에서 보면 부드러운 빛의 선으로 빛나고, 그대로 지킨 목조 상가 주택 줄의 고운 격자는 이제 따뜻한 빛으로 짜였으며, 그 사이로 공중 정원과 줄기가 은은히 빛나는 대숲, 큰 역은 도시 남쪽을 가로지르는 유리와 빛의 협곡으로 자랐고, 얕고 맑은 강 위엔 여름마다 빛의 마루가 떠오르며, 조용한 비행 차량들이 분지 위를 낮게 미끄러지고, 둘러싼 세 산이 맑은 별하늘 아래 어둡게 선다",
@@ -15914,12 +15914,12 @@
               "expr": "calm"
             },
             "silhouette": {
-              "body": "pear_curvy",
-              "hair": "giant_braid",
-              "hair_color": "jade_green",
+              "body": "hourglass",
+              "hair": "segmented_tail",
+              "hair_color": "jet_black",
               "bangs": "none"
             },
-            "why": "천이백 년 비단 직조 동네(니시진)의 빛 직조공 — 구멍 뚫린 무늬 카드로 베틀을 짜던 솜씨를 이어 빛의 실로 비단을 짜는 사람, 천 년 수도의 자존심이 서린 도도한 사람. 어깨가 가늘고 허리가 잘록하며 엉덩이 · 허벅지가 풍성하고 가슴도 풍만한 배형 굴곡 몸(pear_curvy) · 무릎까지 내려오는 아주 굵은 땋은머리 하나(giant_braid — 실을 엮는 직조의 꼴) · 연한 비취빛 머리(jade_green — 다른 도시가 안 쓴 색, 교토 말차의 연둣빛과 짝) · 앞머리 없이 이마를 드러냄(none) · 무늬가 천천히 흐르는 스마트 직물을 몸에 감아 입은 드레스(smart_wrap)로 실루엣이 부드럽게 감긴다. 다이아몬드형 얼굴 · 쌍꺼풀 없는 긴 눈 · 가늘게 휜 눈썹 · 끝이 살짝 들린 코 · 입꼬리가 쉽게 올라가는 입, 금 · 장밋빛 · 푸른빛으로 바뀌는 무지갯빛 눈(iridescent — 빛 비단의 결), 따뜻한 베이지 피부(warm_beige)에 날렵한 아이라인(winged_liner), 20대 중반, 도도한 인상(haughty)에 담담한 얼굴(calm). 판타지(달걀형 · 자두빛 바닥 긴 머리 · 풍만한 몸 · 흰 피부) · 스팀펑크(둥근 얼굴 · 밤색 양 똥머리 · 탄탄한 굴곡 몸 · 그은 피부)와 얼굴형 · 눈썹 · 코가 다르고 머리 · 체형 · 피부가 다 다르다. 도쿄 사이버펑크(아련한 노을분홍 울프컷 아이돌 · 홀로그램 부채 · 철탑 격자 빛 띠)와 옷 꼴 · 머리 · 인상이 모두 다르다."
+            "why": "2026-11-27 검토 — 사용자가 고른 세계 그림이 GPT 시안이었는데 설계표에 반영이 안 돼 있었다(도감 설명 · 일상컷 머리 연출이 옛 설계를 따랐다). 고른 시안(그림 저장소 records/kyoto/cyberpunk.kr_drawn_rim_dewy-ui.json generation.free_prompt)의 얼굴 · 머리 · 체형 · 실루엣으로 바꿈(얼굴 칸은 그대로 — 세 세계 다른 사람 규칙 · 일상컷은 고른 그림을 얼굴 기준으로 쓴다). 도시 상징(motif) · 소품(hold)은 시안도 그대로 썼다. 하트형 얼굴 · 아몬드 눈 · 곧은 눈썹 · 곧고 가는 코 · 큐피드 입술, 호박빛 눈, 도자기빛 피부, 우아하고 세련된 인상에 힘 뺀 얼굴. 모래시계 몸(hourglass) · 뿌리를 매끈히 넘기고 세 군데를 묶은 높은 포니테일(segmented_tail) · 윤기 나는 흑발(jet_black) · 이마를 드러냄. 몸에 붙는 바탕 위로 빛의 비단 자락이 드레스처럼 떠도는 실루엣(holo_gown) — 자락을 잇는 여밈이 니시진 베틀의 구멍 카드 무늬. (앞 설계: 천이백 년 비단 직조 동네(니시진)의 빛 직조공 — 구멍 뚫린 무늬 카드로 베틀을 짜던 솜씨를 이어 빛의 실로 비단을 짜는 사람, 천 년 수도의 자존심이 서린 도도한 사람. 어깨가 가늘고 허리가 잘록하며 엉덩이 · …)"
           },
           "hold": {
             "en": "a slender weaving shuttle of white ceramic and gold, trailing a glowing thread of light"
@@ -15929,10 +15929,10 @@
             "en": "a wrap dress of smart silk brocade where gold-thread flowers and drifting clouds slowly weave and re-weave themselves across the cloth, a long translucent sash over one shoulder running with rows of tiny glowing punched holes like the pattern cards of an old card-driven loom, and fine gold filaments threaded through her enormous braid"
           },
           "card_ko": {
-            "look": "비취빛 큰 땋은머리 · 배형",
+            "look": "흑발 마디 포니테일 · 모래시계",
             "motif": "구멍 카드 빛 띠 · 금란"
           },
-          "sil": "smart_wrap"
+          "sil": "holo_gown"
         }
       },
       "design_note": "설계 상태: 시안(claude, 2026-11-26) — 시험 그림 전. 사용자 「뭄바이,상하이,싱가포르를 빼고, 교토, 케이프타운, 모스크바로 5개 만들어줘.」(빈 · 에든버러 · 교토 · 케이프타운 · 모스크바 — 이 칸은 교토, 랜드마크 없음), 홍콩 · 베네치아 꼴을 따랐다. 세 사람 모두 일본인 성인 여성 — people.en 은 Japanese(주근깨 검사가 걸리게), 주근깨는 넣지 않았다(동양 쪽 규칙). 피부 · 얼굴은 look 이 정한다(판타지 흰 피부 fair · 스팀펑크 금빛 도는 그은 피부 golden_tan · 사이버펑크 따뜻한 베이지 warm_beige). 얼굴: 다른 도시 · 랜드마크 222명 모두와 칸 셋 이상 다른 꼴은 넷뿐이라 그 가운데 셋을 골랐다(판타지 달걀형 · 처진 눈 · 꺾인 눈썹 · 작은 코 · 넓은 입 / 스팀펑크 둥근 얼굴 · 홑꺼풀 긴 눈 · 낮은 짙은 눈썹 · 둥근 코 · 활 입술 / 사이버펑크 다이아몬드형 · 홑꺼풀 긴 눈 · 가는 아치 눈썹 · 들린 코 · 넓은 입) — 세 세계끼리 얼굴형 · 눈썹 · 코 셋이 모두 다르다(같은 때 설계하는 네 도시와는 견주지 못했다). 체형은 셋 다 굴곡형(풍만 voluptuous · 탄탄한 굴곡 curvy_athletic · 배형 굴곡 pear_curvy), 머리색은 자두빛 흑발 plum_black · 밤색 chestnut(자연색 — 아시아 도시는 검정 · 흑갈 쪽) · 비취빛 jade_green(아무 도시도 안 쓴 색), 머리 모양은 덜 쓰인 바닥 긴 머리 floor_length · 양 똥머리 double_buns · 큰 땋은머리 giant_braid, 인상은 새침 coquettish · 말괄량이 boyish · 도도 haughty. 도쿄와 또렷이 다르게: 도쿄 세 사람(은백 히메컷 · 가는 몸 · 무녀 기사 priestess / 삼나무빛 반묶음 · 작은 굴곡 · 다이쇼 하이칼라 lady_inventor / 노을분홍 울프컷 · 모래시계 · 아이돌 cyber_idol)과 머리 모양 · 머리색 · 체형 · 실루엣 열쇠가 하나도 겹치지 않고, 도쿄가 쓴 기모노풍 긴 소매 · 오비풍 띠 리본 · 하카마풍 치마 · 벚꽃 홀로그램 부채를 쓰지 않았다. 도쿄의 세계가 「바다 위 거대 도시 · 탑」이라면 교토는 「산에 둘린 분지의 바둑판 · 강 · 낮은 목조 거리」 — 사이버펑크도 높이 오르지 않고 낮게 남은 미래 도시(교토는 건물 높이를 묶어 둔다, https://en.wikipedia.org/wiki/Kyoto_Tower). 이야기 줄기는 「물과 비단의 천 년 수도」: 가모강은 교토 이름난 솜씨 교유젠 염색에 쓰인 물이다(https://en.wikipedia.org/wiki/Kamo_River), 유젠은 쌀풀 윤곽선 안을 붓으로 칠하고 끝을 번지게 물들이는 염색으로 칠보처럼 색이 나뉘고, 이름은 그것을 완성한 17세기 부채 화가에서 왔다(https://en.wikipedia.org/wiki/Y%C5%ABzen) → 판타지는 강가의 염색 마녀(옷은 그린 비단 드레스 · 부채 모양 빗 — 이름 · 실존 인물은 지시문에 안 쓴다). 천도로 기운 교토는 1885~1890년 비와호에서 물을 끌어오는 수로를 놓았고, 높이 36m 차를 배를 받침대 차에 실어 땅 위로 옮기는 경사 철길(인클라인 — 지금은 벚꽃 명소), 1891년 일본 첫 수력 발전소(펠턴 터빈)와 1895년 그 전기로 달린 일본 첫 전차를 낳았다(https://en.wikipedia.org/wiki/Lake_Biwa_Canal · https://en.wikipedia.org/wiki/Kyoto_Municipal_Transportation_Bureau) → 스팀펑크는 수로 인클라인 기관사(펠턴 바퀴 단추 · 레일 바퀴 장갑 · 벚꽃 핀). 니시진오리는 헤이안쿄 때부터 1,200년 넘게 짜 온 교토 비단 · 금란이고 1872년 유럽에서 자카드 베틀(구멍 뚫린 무늬 카드로 짜는 베틀)과 날실 북을 들였다(https://en.wikipedia.org/wiki/Nishijin-ori) → 사이버펑크는 두 세기 뒤 빛의 실로 금란을 짜는 빛 직조공(스마트 금란 랩 드레스 · 구멍 카드 빛 띠 · 흰 세라믹 북). 도시 상징은 옷 · 장신구 한두 가지로만 실었고 사람을 건물 · 조각상으로 꾸미지 않았다. 사실 근거: 위도 · 경도 35.01 · 135.77(https://en.wikipedia.org/wiki/Kyoto — 35.0116 · 135.7681), 세 방향이 산(히가시야마 · 기타야마 · 니시야마)인 분지 · 동쪽 가모강 · 덥고 습한 여름과 가끔 눈 오는 겨울 · 6월 중순~7월 말 장마 · 여름 · 가을 태풍 비(https://en.wikipedia.org/wiki/Kyoto), 794년 수도 · 격자 도시 · 1869년까지(https://en.wikipedia.org/wiki/Heian-ky%C5%8D), 좁은 정면 · 나무 격자(고시) · 안뜰(쓰보니와)의 교마치야(https://en.wikipedia.org/wiki/Machiya), 1997년 유리 · 강철 미래풍 역 건물(https://en.wikipedia.org/wiki/Ky%C5%8Dto_Station), 가을 단풍 · 봄 벚꽃의 아라시야마(https://en.wikipedia.org/wiki/Arashiyama). 피한 것: 교토 명소의 대부분인 절 · 신사(금각사 · 기요미즈데라 · 후시미 이나리의 도리이 · 탑 · 철학의 길 둘레 절)와 신사 축제(기온 마쓰리 · 아오이 마쓰리 · 지다이 마쓰리 · 다이몬지 오쿠리비)는 무늬 · 장면에 싣지 않았고, 게이코 · 마이코는 지금도 일하는 직업이라 그 차림을 입히지 않았으며(기온 · 폰토초는 「등불 골목 · 강가 음식점 거리」로만), 동물도 쓰지 않았다(아라시야마 원숭이 공원 · 가모강 거북 징검돌 뺐다). 지시문에 상표 · 사유 건물 · 실존 인물 이름은 쓰지 않는다 — 게임 회사(본사가 교토) · 전자 회사 · 술 회사 이름, 교토 타워(사유 건물, 지금 이름에 회사명), 니시키 시장(2005년 상표 등록 — 「좁은 지붕 덮인 시장 골목」 으로), 역 설계자 · 수로 기사 · 유젠 화가 · 천황 이름 등. 판타지 · 스팀펑크엔 공용 금지 낱말 car · machinery · skyscraper 가 있어 「carriage」 · 「streetcar」 · 「power house」 로 쓴다. 판타지만 own_vocab.casual_world(공용 「서양 신화 세계」 대신 동쪽 신화 세계의 왕도 — 검게 닦은 나무 · 고운 나무 격자 · 노송나무 · 회색 기와 · 그린 비단 · 종이 등불). heritage 는 japan(유카타 · 기모노).",

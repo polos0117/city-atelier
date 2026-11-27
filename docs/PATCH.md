@@ -12,6 +12,10 @@ Total output lines: 925
 
 
 
+## 2026-11-27 · claude · 새 도시 다섯 검토 — 고른 GPT 시안을 설계표에
+- data/city-design.json — 사용자 「도시 공방 추가 도시 생성 검토해줘」(빈 · 에든버러 · 교토 · 케이프타운 · 모스크바 — 세 세계 그림 · 일상 열한 장씩 다 나와 있다): 고른 세계 그림이 GPT 시안이었던 셋이 설계표에 반영이 안 돼 도감 설명 · 일상컷 머리 연출(짧은 머리에 긴 머리 연출)이 옛 설계를 따랐다 — 에든버러 사이버펑크(라일락 옆묶음 → 청흑 픽시컷 · 라이더 점프슈트 racer_jumpsuit, 체형은 판타지와 겹쳐 curvy_athletic), 교토 스팀펑크(밤색 양 똥머리 → 적갈 쪽머리 · 윌로우 곡선 · 태엽 보디스 clockwork_bodice), 교토 사이버펑크(비취 큰 땋은머리 → 흑발 마디 포니테일 segmented_tail · 모래시계 · 홀로그램 드레스 holo_gown). 얼굴 칸은 그대로(세 세계 다른 사람 규칙 — 일상컷은 고른 그림이 얼굴 기준). 도시 상징 · 소품은 시안도 그대로
+- data/city-design.json — 방콕 룸피니 공원 판타지 눈색 jade(어휘에 없어 지시문에 날 열쇠로 샜고 tests/look-spec.cjs 가 걸렸다) → emerald
+
 ## 2026-11-27 · claude · 지구본 Blender 모형 셋 적용(계획 Task 6)
 - 사용자 「blender 공방에 올라온 지구본 그림을 city 공방에 적용시켜줘」. blender-cloud-img 의 2026-11-27_city-globe-<세계>.glb 셋(blender-cloud scenes/city_globe.py · 검사 city_globe_check.py)을 그림 저장소 models/globe/<세계>.glb 로 옮겼다 — lib/globe.js 가 이미 그 자리를 읽어(WebGL 이 되면 SVG 뒤에 three.js 캔버스) 코드는 그대로. 노드 Globe · Stand(Stand 는 Globe 의 자식 아님) · Globe 회전 · 크기 · 위치 없음 · 반지름 1.000 · 압축 확장 없음 · 0.76~0.89MB 확인, 344×882 여섯 판(세계 × 밝기)에서 모형이 뜨고 조명 안 도시 서울 점이 한반도 위.
 
