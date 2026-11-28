@@ -9,6 +9,6 @@
 - 화면: [index.html](index.html)(지구본 → 도시 무대 → 한 장, 아래 탭 둘: 지구본 · 전체 도감) · [prompt.html](prompt.html)(생성기) — 주소는 `/city-atelier/`
 - 설계 · 계획: [docs/superpowers/specs](docs/superpowers/specs) · [docs/superpowers/plans](docs/superpowers/plans)
 - 뼈대: [DESIGN.md](DESIGN.md) · 작업 지침: [AGENTS.md](AGENTS.md) · 그림 규칙: [IMAGE_RULES.md](IMAGE_RULES.md) · 가져온 것: [docs/PORT_NOTES.md](docs/PORT_NOTES.md)
-- 그림 · 모형은 이 저장소에 두지 않는다 — 그림 저장소 `city-atelier-img`(polos0117/city-atelier-img — 올리는 법은 `IMAGE_RULES.md`)
+- 그림 · 모형은 이 저장소에 두지 않는다 — 그림 저장소 `city-atelier-img`(0 번 — 닫힘, 기록 · 잠금 · 모형) · `city-atelier-img-2`(1 번 — 새 그림, 2026-11-28). 올리는 법은 `IMAGE_RULES.md`
 
 읽히는 글자 · 숫자는 그리지 않는다. 비상업 팬작업이다.

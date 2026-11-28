@@ -12,6 +12,15 @@ Total output lines: 925
 
 
 
+## 2026-11-28 · claude · 새 그림은 둘째 그림 저장소(city-atelier-img-2)로
+- 사용자 「도시공방 이미지 저장소 바꿔줘. 2번으로」 — 첫 저장소가 약 1 GB(img 975 MB + records 33 MB)로 찼다
+- city-atelier-img-2(그림 저장소) — README · .nojekyll · .gitignore · 썸네일 워크플로(첫 저장소와 같은 꼴, 크기 경고는 img-3 을 가리킨다) · img/thumb/.gitkeep 를 넣어 열었다. city-atelier-img README 에 「img/ 닫힘」
+- lib/img.js — BASES 에 1 번(city-atelier-img-2). index.html · prompt.html img.js ?v=13
+- tools/register-images.py — SHARDS · EXTRA_DIRS 에 둘째(img-2). 새 이름은 열린 저장소(둘째)만 받고, 첫 저장소는 교체만
+- .github/workflows/register-images.yml · .gitignore — 둘째 저장소를 img-repo-2 로 받아 img-2 로 잇는다(못 받아도 등록은 돈다)
+- IMAGE_RULES.md(머리말 · 3 · 4절 — 저장소 표) · AGENTS.md · README.md · docs/IMAGE_AUTOMATION.md — 새 그림은 둘째에, 기록 · 잠금 · 배경 · 화풍 비교 · 지구본 모형은 첫 저장소 그대로
+- (허브 polos0117.github.io gallery-data.js — 도시 bases 둘)
+
 ## 2026-11-28 · gpt · 마라케시 스팀펑크 대표컷 3번과 일상 묶음 등록
 - 그림 저장소 — 선택한 GPT 설계 3번, 일상컷 1~10 및 물장수 직업컷 90번, 총 12장과 생성·검수·계획 기록을 추가. 선택 원본을 기준으로 얼굴과 머리색을 유지했고 재생성하지 않았다.
 - data/img.json · data/casual-index.json — 등록기와 색인 생성 결과로 해당 묶음을 추가하고 기존 도감 항목을 보존. 계획과 다른 구도는 QA에 남겼다.

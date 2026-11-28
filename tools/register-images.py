@@ -52,13 +52,14 @@ CASUAL_RECORD = re.compile(r"-casual\d+\.[a-z0-9_]+-ui\.json$")
 # 폴더 없이 파일 이름만 적는다 — 주소는 화면 쪽 lib/img.js 가 붙인다(where 로 저장소를 고른다).
 IMG_DIR = "img"
 # 그림 저장소는 여럿이 될 수 있다(원소 공방은 둘이 됐다). 한 Pages 사이트는 1 GB 까지라 차면 새 그림은 다음 저장소에 올린다.
-# 지금 도시 공방은 하나다 — 0 번이 IMG_DIR, 그 뒤가 EXTRA_DIRS 차례(지금은 없다) — lib/img.js 의 BASES 와 같은 차례다
+# 지금 도시 공방은 둘이다 — 0 번이 IMG_DIR, 그 뒤가 EXTRA_DIRS 차례(img-2) — lib/img.js 의 BASES 와 같은 차례다
 # (tests/img-shards.cjs 가 맞춰 본다). 저장소를 더할 때는 SHARDS 끝에 이름을, EXTRA_DIRS 끝에 img-2 · img-3 … 을 붙인다. 워크플로는 각 저장소의 img/ 를 이 이름으로 잇는다.
 # 어느 파일이 몇 번 저장소에 있는지는 img.json 의 where 에 적는다(0 번은 적지 않는다 — 옛 주소 그대로).
 # 새 그림은 "열린 저장소" 에만 받는다: 체크아웃에 있는 저장소 가운데 번호가 가장 큰 것.
 # 닫힌 저장소에는 이미 있는 이름의 교체만 받는다 — 새 이름이 오면 등록 전체를 멈춘다.
-SHARDS = ["city-atelier-img"]
-EXTRA_DIRS = []
+# 2026-11-28 둘 — city-atelier-img 는 약 1 GB 로 닫힘(교체만), city-atelier-img-2 열림(사용자 「도시공방 이미지 저장소 바꿔줘. 2번으로」)
+SHARDS = ["city-atelier-img", "city-atelier-img-2"]
+EXTRA_DIRS = ["img-2"]
 
 # 세계 그림 · 일상컷만 받는다. 성별은 _f 하나 · 이름은 소문자 — 남성 _m · 특별컷 · 연출컷 · 대문자는 "이름 꼴이 안 맞는다" 로 선다
 PAT = re.compile(r"^(.+)_f(?:_casual(\d+))?\.webp$")

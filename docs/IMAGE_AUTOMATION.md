@@ -43,7 +43,7 @@ GPT 설계 기록(2026-11-26 사용자 「꼴 맞추는게 나을거 같아 1-4 
 
 ## 1. 준비
 
-- `AGENTS.md` · `IMAGE_RULES.md` 를 먼저 읽는다. 코드(`city-atelier`)와 그림 저장소(`city-atelier-img` — 그림은 `img/`, 기록 · 잠금은 `records/`)를 **나란히**(같은 부모 폴더에) 받아 최신 `main` 으로 둔다 — 도구들이 `../city-atelier-img` 로 찾는다.
+- `AGENTS.md` · `IMAGE_RULES.md` 를 먼저 읽는다. 코드(`city-atelier`)와 그림 저장소 둘(`city-atelier-img` — 기록 · 잠금 `records/`, 옛 그림 · `city-atelier-img-2` — **새 그림 `img/`**, 2026-11-28 부터)을 **나란히**(같은 부모 폴더에) 받아 최신 `main` 으로 둔다 — 도구들이 `../city-atelier-img` 로 기록을 찾는다.
   남의 로컬 변경을 reset 하지 않는다.
 - Node 와 Python 3 + Pillow 가 있으면 된다. **브라우저는 쓰지 않는다** — 생성기 화면 대신 지시문 묶음(`tools/prompt-pack.cjs`)이 같은 글을 파일로 준다
   (`tests/prompt-pack-screen.cjs` 가 세계 그림 · 일상컷 자리를 실제 화면과 글자 하나까지 견준다).

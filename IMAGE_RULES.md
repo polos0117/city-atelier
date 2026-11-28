@@ -6,7 +6,7 @@
 생성 전, 올리기 전, 이름을 붙이기 전, 멈춘 작업을 다시 잇기 전에 읽는다. 등록은 올리면 자동이다 — 4절.
 **사람이 지켜보지 않는 GPT 세션은 [docs/IMAGE_AUTOMATION.md](docs/IMAGE_AUTOMATION.md) 를 같이 읽는다**(잠금 · 지시문 묶음 · 일상컷 계획기 · 검수).
 
-> 그림 저장소 `polos0117/city-atelier-img` 가 있다(2026-11-20, Pages 켬 · Actions 비밀 `CODE_REPO_TOKEN` 넣음). 기본 화풍은 `kr_drawn_rim_dewy`(`data/style.json`, 모델 `gpt-image-2.6-sunburst`). 설계가 끝난 도시는 지금 서울 하나다.
+> 그림 저장소는 둘이다 — `polos0117/city-atelier-img`(0 번, 2026-11-20 — 약 1 GB 로 찼다, **닫힘: 이미 있는 이름의 교체만**) · `polos0117/city-atelier-img-2`(1 번, 2026-11-28 열림 — **새 그림은 여기**, 사용자 「도시공방 이미지 저장소 바꿔줘. 2번으로」). 기록 · 잠금 · 배경 · 화풍 비교 · 지구본 모형은 첫 저장소 그대로. 기본 화풍은 `kr_drawn_rim_dewy`(`data/style.json`, 모델 `gpt-image-2.6-sunburst`). 설계가 끝난 도시는 지금 서울 하나다.
 
 ## 1. 반드시 지킬 것
 
@@ -59,8 +59,15 @@
 
 ## 3. 파일 이름과 자리
 
-그림은 **하나의 그림 저장소 `city-atelier-img` 의 `img/`** 에 올린다(코드 저장소에는 두지 않는다). 주소는 `https://polos0117.github.io/city-atelier-img/img/<파일>`, 썸네일은 `…/img/thumb/<파일>`(긴 변 512 · webp 72 — `tools/make-thumbs.py`, `lib/img.js` 의 `BASES[0]` · `IMG.imgURL` · `IMG.thumbURL`).
-기록(`records/`) · 잠금(`records/automation/claims/`) · 배경(`backgrounds/`) · 화풍 비교(`style-test/compare/`) · 지구본 모형(`models/globe/`)도 같은 저장소 안이다. 저장소가 차면(900 MB 를 넘으면 썸네일 워크플로가 경고) 둘째를 더한다 — `lib/img.js` 의 `BASES` · `tools/register-images.py` 의 `SHARDS` · `EXTRA_DIRS` · 등록 워크플로 · `.gitignore` 를 같이 고친다(`node tests/img-shards.cjs` 가 맞춰 본다).
+새 그림(webp)은 **둘째 그림 저장소 `city-atelier-img-2` 의 `img/`** 에 올린다(코드 저장소에는 두지 않는다 — 2026-11-28 부터). 첫 저장소 `city-atelier-img` 의 `img/` 는 닫혔다 — 이미 있는 이름의 교체만 받고, 새 이름이 오면 등록이 멈춘다. 같은 이름을 두 저장소에 두지 않는다.
+
+| 저장소 | 번호 | 받는 것 |
+|---|---|---|
+| `city-atelier-img` | 0(닫힘) | 옛 그림의 교체 · 기록(`records/`) · 잠금(`records/automation/claims/`) · 배경(`backgrounds/`) · 화풍 비교(`style-test/compare/`) · 지구본 모형(`models/globe/`) |
+| `city-atelier-img-2` | 1(열림) | 새 그림 `img/` 전부 |
+
+주소는 `https://polos0117.github.io/<저장소>/img/<파일>`, 썸네일은 `…/img/thumb/<파일>`(긴 변 512 · webp 72 — `tools/make-thumbs.py`, `lib/img.js` 의 `BASES` · `IMG.imgURL` · `IMG.thumbURL`). 어느 파일이 몇 번에 있는지는 등록기가 `data/img.json` 의 `where` 에 적는다(0 번은 안 적는다 — 옛 주소 그대로).
+저장소가 차면(900 MB 를 넘으면 썸네일 워크플로가 경고) 다음 것을 더한다 — `lib/img.js` 의 `BASES` · `tools/register-images.py` 의 `SHARDS` · `EXTRA_DIRS` · 등록 워크플로 · `.gitignore` 를 같이 고친다(`node tests/img-shards.cjs` 가 맞춰 본다).
 
 ```
 <도시>_<세계>_<화풍>_f.webp           세계 그림
@@ -81,13 +88,13 @@
 ## 4. 등록 — 올리면 자동이다
 
 1. 결과를 사람에게 보여 주고 "올릴까?" 를 묻는다(세계 그림은 네 장 가운데 고른 장만 — 1절).
-2. webp 로 바꿔 **`city-atelier-img` 의 `img/`** 에, 기록은 같은 저장소의 `records/` 에 일반 push 한다. 썸네일은 만들지 않는다.
+2. webp 로 바꿔 **`city-atelier-img-2` 의 `img/`** 에(옛 그림 교체면 그 파일이 있는 저장소에), 기록은 **첫 저장소** `city-atelier-img` 의 `records/` 에 일반 push 한다 — 그림 저장소 먼저. 썸네일은 만들지 않는다.
 3. 그림 저장소의 `썸네일` 워크플로(`.github/workflows/thumbs.yml`)가 코드 저장소의 `tools/make-thumbs.py` 로 `img/thumb/` 를 만들어 되커밋하고, Actions 비밀 `CODE_REPO_TOKEN` 으로 코드 저장소에 `repository_dispatch`(`images-updated`)를 보내 `그림 등록` 을 깨운다.
    뒤받침으로 `그림 등록` 은 한 시간마다(매시 41분 — GitHub 시간표는 자주 밀리고 빠진다) 스스로도 돈다. 기다리기 싫으면 코드 저장소 Actions 의 Run workflow.
 4. `그림 등록`(`.github/workflows/register-images.yml`)이 그림 저장소를 옆에 받아 `tools/register-images.py` 로 파일 이름을 읽어 `data/img.json` 에 적고 등록한 날(`added`)을 남겨 되커밋한다. 이름 꼴(3절)이 틀린 파일이 하나라도 있으면 아무것도 쓰지 않고 실패한다.
 5. `썸네일` 실행이 초록인지(「코드 저장소 깨우기」 단계에 「깨웠다」 notice), `그림 등록` 커밋이 생겼는지 본다.
 
-`data/img.json` 을 손으로 고치지 않는다. 자리에서 직접 돌리려면 그림 저장소를 옆에 받고 `ln -s ../city-atelier-img/img img` 뒤 `python3 tools/register-images.py --check` · `python3 tools/register-images.py`.
+`data/img.json` 을 손으로 고치지 않는다. 자리에서 직접 돌리려면 두 그림 저장소를 옆에 받고 `ln -s ../city-atelier-img/img img` · `ln -s ../city-atelier-img-2/img img-2` 뒤 `python3 tools/register-images.py --check` · `python3 tools/register-images.py`.
 
 ## 5. 중단과 재개
 
