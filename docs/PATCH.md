@@ -12,6 +12,10 @@ Total output lines: 925
 
 
 
+## 2026-11-28 · gpt · 레이캬비크 판타지 4번과 일상 묶음 등록
+- 그림 저장소 — 선택한 GPT 설계 4번, 일상 1~10과 해돌 등대지기 90번을 생성·검수 기록과 함께 추가했다. 선택 원본을 기준 이미지로 썼으며 계획 이탈은 QA에 남겼다.
+- data/img.json · data/casual-index.json — 등록기와 색인 생성기로 레이캬비크 판타지 12장을 반영하고 기존 항목을 보존한다.
+
 ## 2026-11-28 · claude · 새 그림은 둘째 그림 저장소(city-atelier-img-2)로
 - 사용자 「도시공방 이미지 저장소 바꿔줘. 2번으로」 — 첫 저장소가 약 1 GB(img 975 MB + records 33 MB)로 찼다
 - city-atelier-img-2(그림 저장소) — README · .nojekyll · .gitignore · 썸네일 워크플로(첫 저장소와 같은 꼴, 크기 경고는 img-3 을 가리킨다) · img/thumb/.gitkeep 를 넣어 열었다. city-atelier-img README 에 「img/ 닫힘」
